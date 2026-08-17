@@ -31,16 +31,28 @@
       "veroeffentlicht": "2026-08-17T08:17:39+00:00"
     },
     {
+      "anker": "**✓ Der Ort ist voller Katzen (17.08.).** Jens' Meldung dazu",
+      "minuten": 21,
+      "telegram": "2026-08-17T08:59:00+00:00",
+      "veroeffentlicht": "2026-08-17T09:19:42+00:00"
+    },
+    {
+      "anker": "**✓ Wir standen an einem Geldautomaten in Mersing (17.08.).*",
+      "minuten": 21,
+      "telegram": "2026-08-17T08:59:00+00:00",
+      "veroeffentlicht": "2026-08-17T09:19:42+00:00"
+    },
+    {
       "anker": "**✓ Im malaysischen Fernbus sitzt eine USB-Buchse am Platz (",
       "minuten": 17,
       "telegram": "2026-08-17T06:21:00+00:00",
       "veroeffentlicht": "2026-08-17T06:38:03+00:00"
     }
   ],
-  "gemessen": 6,
-  "juengste_minuten": 7,
-  "markiert": 6,
-  "median_minuten": 63,
+  "gemessen": 8,
+  "juengste_minuten": 21,
+  "markiert": 8,
+  "median_minuten": 40,
   "schnellste_minuten": 7,
   "stand": "2026-08-17"
 }
