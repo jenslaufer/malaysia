@@ -389,9 +389,24 @@ Lumpur (Pavilion, Suria KLCC) und am Flughafen KLIA.
 **○ Singtel hi!Tourist gibt es nur drei Stück pro Pass.** Danach ist der Pass ausgereizt und
 die nächste Karte muss auf jemand anderen laufen.
 
-**Offen, kommt noch:** ob die Singapur-eSIM in Malaysia trägt. Die Produktseite listet
-Malaysia im Datenpaket, die AGB widersprechen sich an der Stelle — entscheiden kann es nur
-das Netz vor Ort.
+**✓ Die Singapur-eSIM trägt in Malaysia — die Tabelle hatte recht, nicht der Kleingedruckte
+(17.08.).** Der Tarif ist `Singtel hi!Tourist eSIM`, S$15 (rund 10 Euro), **30 Tage, 500 GB**,
+und die Länderliste auf der Verkaufsseite nennt neben Singapur ausdrücklich Malaysia,
+Indonesien, Thailand und Hongkong. Genau das war vorher die offene Frage: dieselben AGB
+beschreiben unter 2.3 nur „local calls, local SMS, local data" — also eine reine
+Singapur-Karte. **Es gilt die Ländertabelle.** Gekauft und aktiviert wird sie vor der Reise
+online, installiert per QR-Code; registriert wird sie auf den Pass, und mehr als drei Karten
+nimmt ein Pass nicht.
+<!-- werkstatt: telegram=2026-08-17T10:58 -->
+
+**○ Was der Tarif nicht kann: telefonieren.** Auf den Touristenkarten sind Gespräche gesperrt,
+es laufen nur Daten. Für eine erreichbare Telefonnummer braucht die Gruppe also entweder eine
+deutsche Karte im Roaming oder eine lokale Karte auf einen zweiten Pass. Wer eine deutsche
+Behörde oder eine Bank anrufen muss, plant das mit ein — über Daten geht das nur, solange die
+Gegenstelle einen Messenger nimmt.
+
+**Offen, kommt noch:** wie das Netz auf Tioman und in Sabah trägt. Auf der Insel ist es
+erfahrungsgemäß dünn, und 500 GB nützen nichts, wo kein Mast steht.
 
 ---
 

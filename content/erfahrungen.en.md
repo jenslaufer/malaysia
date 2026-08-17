@@ -382,9 +382,22 @@ Lumpur (Pavilion, Suria KLCC) and at KLIA airport.
 **○ Singtel hi!Tourist is limited to three per passport.** After that the passport is used up
 and the next card has to go on somebody else's.
 
-**Open, still to come:** whether the Singapore eSIM works in Malaysia. The product page lists
-Malaysia in the data package, the terms contradict themselves on the point — only the network
-on the ground can settle it.
+**✓ The Singapore eSIM does work in Malaysia — the table was right, not the small print
+(17 Aug).** The plan is `Singtel hi!Tourist eSIM`, S$15 (about 10 euros), **30 days, 500 GB**,
+and the country list on the sales page names Malaysia, Indonesia, Thailand and Hong Kong
+alongside Singapore. That was exactly the open question: the same terms say under 2.3 only
+"local calls, local SMS, local data" — a Singapore-only card, in other words. **The country
+table is what holds.** You buy and activate it online before the trip and install it by QR
+code; it is registered against your passport, and one passport takes no more than three.
+<!-- werkstatt: telegram=2026-08-17T10:58 -->
+
+**○ What the plan cannot do: make calls.** Voice is barred on the tourist cards, data only. For
+a phone number that can be reached, the group needs either a home card in roaming or a local
+card on a second passport. If you have to call a bank or a government office, plan for it —
+over data it only works as long as the other end accepts a messenger.
+
+**Open, still to come:** how the network holds up on Tioman and in Sabah. On the island it is
+thin by all accounts, and 500 GB are worth nothing where there is no mast.
 
 ---
 
