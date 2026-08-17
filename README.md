@@ -58,12 +58,47 @@ und rendert `index.html`.
 python3 build.py            # Quelle holen + index.html bauen
 python3 build.py --no-sync  # nur aus content/erfahrungen.md bauen
 python3 build.py --check    # nichts schreiben, nur Datenschutz prüfen
-python3 tests/test_build.py # 33 Tests
+python3 tests/test_build.py # Tests (Zahl im Lauf, nicht hier — sie altert)
 ```
 
 Eine Markdown-Bibliothek wäre hier die falsche Wahl: sie macht aus dem Zeichen
 fetten Fließtext. Der Renderer in `build.py` kennt genau die Formen, die im
 Dokument vorkommen, und macht aus dem Zeichen Auszeichnung.
+
+## Benachrichtigungen: ein Feed, kein Push
+
+Auftrag Jens 2026-08-17 10:43: „Können wir Website Notifications einstellen, so
+dass Leute über Neuerungen informiert werden?"
+
+Browser-Push scheidet aus. Auf dem iPhone geht es nur, wenn der Leser die Seite
+vorher auf den Startbildschirm legt, und es braucht einen Server, der Pushes
+verschickt — diese Seite hat keinen. Atom braucht beides nicht: `feed.xml` liegt
+neben `index.html`, `en/feed.xml` neben der englischen Fassung.
+
+    python3 build.py       # baut beide Seiten und beide Feeds
+
+**Im Feed steht nur, was gemessen ist.** Ein Eintrag ohne Messung hätte kein
+Datum, und ein erfundenes wäre schlimmer als sein Fehlen — der Leser bekäme eine
+Meldung über etwas, das nicht passiert ist. Recherche (`○`) steht deshalb auf der
+Seite und nicht im Feed; gemeldet wird, was Jens erlebt hat. Gibt es **gar keine**
+Messung, wird nichts geschrieben und die alte Datei bleibt stehen: ein leerer Feed
+sieht bei jedem Leser aus wie eine ruhige Woche.
+
+**Die `id` hängt am Zeitstempel der Nachricht und am Abschnitt, nie am Text.**
+Ein Schlüssel aus dem Inhalt bricht, sobald der Inhalt sich ändert — dann meldet
+ein korrigierter Tippfehler denselben Eintrag ein zweites Mal. Der Abschnitt muss
+mit hinein, weil eine Nachricht mehrere Einträge auslösen kann: Jens schickte am
+17.08. um 10:21 drei Fotos, zwei Einträge trugen denselben Zeitstempel, und **zwei
+gleiche ids lassen den zweiten Eintrag bei jedem Leser verschwinden**. Gefunden im
+ausgelieferten Feed, nicht im Test. Doppelt zugestellt ist laut und heilbar, gar
+nicht zugestellt ist keins von beidem.
+
+`baue_feed` ruft `pruefe_privat` selbst auf, vorne auf der Quelle und hinten auf
+dem fertigen XML. Ein zweiter Ausgabeweg, der die Sperre nicht kennt, hätte die
+Datenschutzprüfung nicht umgangen, sondern verdoppelt — einmal mit, einmal ohne.
+
+E-Mail-Anmeldung ist der zweite Teil des Auftrags und noch nicht gebaut; sie
+braucht einen Mandanten auf launch-kit und läuft über dessen Lead-Capture.
 
 ## Fotos
 

@@ -361,6 +361,15 @@ tbody tr:hover { background: var(--flaeche); }
 
 .fuss .klein { font-size: .85rem; }
 
+/* Der Abo-Link ist der einzige Knopf der Seite — er darf gefunden werden,
+   ohne den Fuss in eine Aufforderung zu verwandeln. */
+.feed-link {
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+}
+
 a { color: var(--erlebt); }
 
 /* --- Schmale Geraete --- */

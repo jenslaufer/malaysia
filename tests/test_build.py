@@ -19,6 +19,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from PIL import Image
@@ -422,7 +423,7 @@ class TestEchteUmlaute(unittest.TestCase):
     UMSCHRIFT = [
         "prueft", "traegt", "laeuft", "veroeffentlich", "geschaetzt",
         "waehrend", "fuer ", "ueber ", "koennen", "muessen", "naechste",
-        "gepruef", "haelt", "faehrt", "gehoert",
+        "gepruef", "haelt", "faehrt", "gehoert", "eintraege",
     ]
 
     @staticmethod
@@ -459,6 +460,28 @@ class TestEchteUmlaute(unittest.TestCase):
         ).lower()
         for wort in self.UMSCHRIFT:
             self.assertNotIn(wort, klein, f"ASCII-Umschrift im Band: {wort!r}")
+
+    def test_feed_hat_keine_ascii_umschrift(self):
+        """Der Feed-Titel steht in jedem Leseprogramm — und stand am 17.08. falsch.
+
+        Geprueft werden nur die Felder, die ein Leser sieht. Die ids tragen den
+        Abschnitts-Slug, und der ist per Bauart ASCII-umgeschrieben — sie
+        mitzupruefen hiesse, den Test an einer Stelle rot zu machen, an der die
+        Umschrift richtig ist. Ein Test, der am falschen Ort misst, wird
+        abgeschaltet statt befolgt.
+        """
+        A = "{http://www.w3.org/2005/Atom}"
+        for pfad in (build.WURZEL / "feed.xml", build.WURZEL / "en" / "feed.xml"):
+            if not pfad.exists():
+                continue
+            wurzel = ET.fromstring(pfad.read_text(encoding="utf-8"))
+            sichtbar = [wurzel.findtext(A + "title"), wurzel.findtext(A + "subtitle")]
+            for e in wurzel.findall(A + "entry"):
+                sichtbar += [e.findtext(A + "title"), e.findtext(A + "content")]
+            klein = " ".join(t for t in sichtbar if t).lower()
+            for wort in self.UMSCHRIFT:
+                self.assertNotIn(wort, klein,
+                                 f"ASCII-Umschrift im Feed {pfad.name}: {wort!r}")
 
 
 
@@ -956,6 +979,204 @@ class TestPflegeblockLeaktNicht(unittest.TestCase):
             klein = self.sichtbar(pfad.read_text(encoding="utf-8"))
             for wort in self.INTERN:
                 self.assertNotIn(wort, klein, f"interner Pflegetext auf {pfad.name}: {wort!r}")
+
+
+class TestFeed(unittest.TestCase):
+    """Der Feed ist ein ZWEITER Ausgabeweg — und damit ein zweites Leck.
+
+    Jens 2026-08-17 10:43: "Können wir Website Notifications einstellen, so dass
+    Leute über Neuerungen informiert werden?" Browser-Push scheidet aus (auf dem
+    iPhone nur mit Seite-auf-Startbildschirm und mit Server), also Atom.
+
+    Die teure Stelle ist nicht das XML, sondern dass `pruefe_privat` bisher nur
+    im Weg nach `index.html` haengt. Ein zweiter Schreiber, der daran vorbeilaeuft,
+    haette die Datenschutzpruefung der Seite nicht umgangen, sondern verdoppelt —
+    einmal mit Pruefung, einmal ohne.
+    """
+
+    QUELLE = (
+        "# Titel\n\n"
+        "## Bezahlen\n\n"
+        "**✓ Im Bus geht kontaktlos.** Ohne Vorbereitung, Karte drauf.\n"
+        "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n\n"
+        "**✓ Am Automaten kam Geld heraus.** BSN, keine Gebuehr.\n"
+        "<!-- werkstatt: telegram=2026-08-17T09:25 -->\n\n"
+        "**○ Wechselstuben sollen guenstiger sein.** Nicht selbst geprueft.\n"
+    )
+
+    SPUREN = {
+        "2026-08-17T04:41:00+00:00": {
+            "telegram": "2026-08-17T04:41:00+00:00",
+            "veroeffentlicht": "2026-08-17T05:46:51+00:00",
+            "minuten": 66,
+        },
+        "2026-08-17T09:25:00+00:00": {
+            "telegram": "2026-08-17T09:25:00+00:00",
+            "veroeffentlicht": "2026-08-17T10:05:00+00:00",
+            "minuten": 40,
+        },
+    }
+
+    @contextlib.contextmanager
+    def messung(self, spuren):
+        alt = build.WERKSTATT
+        build.WERKSTATT = spuren
+        try:
+            yield
+        finally:
+            build.WERKSTATT = alt
+
+    def feed(self, md=None, spuren=None, sprache="de"):
+        with self.messung(self.SPUREN if spuren is None else spuren):
+            alt, build.SPRACHE = build.SPRACHE, sprache
+            try:
+                return build.baue_feed(self.QUELLE if md is None else md)
+            finally:
+                build.SPRACHE = alt
+
+    def test_feed_ist_wohlgeformtes_atom(self):
+        wurzel = ET.fromstring(self.feed())
+        self.assertTrue(wurzel.tag.endswith("}feed"), wurzel.tag)
+
+    def test_jede_gemessene_meldung_wird_ein_eintrag(self):
+        wurzel = ET.fromstring(self.feed())
+        self.assertEqual(2, len(wurzel.findall("{http://www.w3.org/2005/Atom}entry")))
+
+    def test_ohne_messung_kein_eintrag_und_kein_erfundenes_datum(self):
+        """Recherche hat kein Datum — also steht sie nicht im Feed.
+
+        Ein Eintrag ohne Messung braeuchte ein Datum, das niemand gemessen hat.
+        Ein erfundenes waere die schlechteste der drei Moeglichkeiten: der Leser
+        bekaeme eine Meldung ueber etwas, das nicht passiert ist.
+        """
+        xml = self.feed()
+        self.assertIn("Im Bus geht kontaktlos", xml)
+        self.assertNotIn("Wechselstuben", xml)
+
+    def test_ganz_ohne_messung_wird_gar_kein_feed_geschrieben(self):
+        """Ein leerer Feed liest sich wie ein ruhiger Tag, ist aber ein Ausfall.
+
+        Dieselbe Bauform wie eine Pruefung, die gar nicht laeuft und als
+        bestanden gilt. Ohne Messung gibt es kein Ergebnis, also auch keine
+        Datei — die alte bleibt stehen und luegt wenigstens nicht neu.
+        """
+        self.assertIsNone(self.feed(spuren={}))
+
+    def test_id_haengt_am_zeitstempel_nicht_am_text(self):
+        """Ein Schluessel aus dem Inhalt bricht, sobald der Inhalt sich aendert.
+
+        Genau dieser Fehler hat am 17.08. die Herkunftszeile der englischen
+        Seite gekostet (Anker = erste 60 Zeichen). Im Feed waere er teurer: eine
+        neue id heisst fuer jeden Leser "neuer Beitrag", also meldet ein
+        korrigierter Tippfehler denselben Eintrag ein zweites Mal.
+        """
+        vorher = ET.fromstring(self.feed())
+        geaendert = self.QUELLE.replace("Im Bus geht kontaktlos.",
+                                        "Im Bus geht kontaktlos bezahlen.")
+        nachher = ET.fromstring(self.feed(md=geaendert))
+        ids = lambda w: [e.findtext("{http://www.w3.org/2005/Atom}id")  # noqa: E731
+                         for e in w.findall("{http://www.w3.org/2005/Atom}entry")]
+        self.assertEqual(ids(vorher), ids(nachher))
+
+    def test_zwei_eintraege_aus_EINER_nachricht_bekommen_verschiedene_ids(self):
+        """Gefunden am 17.08. im ausgelieferten Feed, nicht im Test.
+
+        Jens schickte um 10:21 drei Fotos; zwei Eintraege tragen deshalb
+        denselben Telegram-Zeitstempel. Mit der Zeit allein als id waren beide
+        derselbe Beitrag — und ein Leseprogramm zeigt von zwei gleichen ids
+        genau einen an. Der zweite Eintrag erreicht dann **niemanden**, still
+        und dauerhaft.
+
+        Doppelt zugestellt ist laut und heilbar, gar nicht zugestellt ist keins
+        von beidem: die id darf sich lieber einmal zu oft aendern.
+        """
+        md = ("# Titel\n\n## Bezahlen\n\n"
+              "**✓ Erstes Bild.** Dazu ein Satz.\n"
+              "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n\n"
+              "**✓ Zweites Bild aus derselben Nachricht.** Noch ein Satz.\n"
+              "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n")
+        wurzel = ET.fromstring(self.feed(md=md))
+        ids = [e.findtext("{http://www.w3.org/2005/Atom}id")
+               for e in wurzel.findall("{http://www.w3.org/2005/Atom}entry")]
+        self.assertEqual(2, len(ids))
+        self.assertEqual(len(ids), len(set(ids)), f"doppelte id: {ids}")
+
+    def test_ausgelieferter_feed_hat_keine_doppelte_id(self):
+        """Gemessen an der Datei im Netz — die Faehigkeit sagt nichts ueber sie."""
+        for pfad in (build.WURZEL / "feed.xml", build.WURZEL / "en" / "feed.xml"):
+            if not pfad.exists():
+                continue
+            wurzel = ET.fromstring(pfad.read_text(encoding="utf-8"))
+            ids = [e.findtext("{http://www.w3.org/2005/Atom}id")
+                   for e in wurzel.findall("{http://www.w3.org/2005/Atom}entry")]
+            doppelt = {i for i in ids if ids.count(i) > 1}
+            self.assertFalse(doppelt, f"{pfad.name}: doppelte ids {doppelt}")
+
+    def test_neueste_meldung_steht_oben(self):
+        wurzel = ET.fromstring(self.feed())
+        daten = [e.findtext("{http://www.w3.org/2005/Atom}updated")
+                 for e in wurzel.findall("{http://www.w3.org/2005/Atom}entry")]
+        self.assertEqual(sorted(daten, reverse=True), daten)
+
+    def test_link_zeigt_auf_den_abschnitt_nicht_nur_auf_die_seite(self):
+        wurzel = ET.fromstring(self.feed())
+        erster = wurzel.find("{http://www.w3.org/2005/Atom}entry")
+        ziel = erster.find("{http://www.w3.org/2005/Atom}link").get("href")
+        self.assertTrue(ziel.endswith("#bezahlen"), ziel)
+
+    def test_englischer_feed_zeigt_auf_die_englische_seite(self):
+        wurzel = ET.fromstring(self.feed(sprache="en"))
+        erster = wurzel.find("{http://www.w3.org/2005/Atom}entry")
+        ziel = erster.find("{http://www.w3.org/2005/Atom}link").get("href")
+        self.assertIn("/en/", ziel)
+
+    def test_sonderzeichen_zerreissen_das_xml_nicht(self):
+        md = ("# Titel\n\n## Bezahlen\n\n"
+              "**✓ Karte & Bargeld <beides> geht.** Ein \"Satz\" dazu.\n"
+              "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n")
+        wurzel = ET.fromstring(self.feed(md=md))
+        titel = wurzel.find(".//{http://www.w3.org/2005/Atom}entry/"
+                            "{http://www.w3.org/2005/Atom}title").text
+        self.assertIn("Karte & Bargeld <beides> geht", titel)
+
+    def test_feed_bricht_bei_privaten_daten_genauso_ab_wie_die_seite(self):
+        """Der zweite Ausgabeweg darf die Sperre nicht umgehen."""
+        md = ("# Titel\n\n## Bezahlen\n\n"
+              "**✓ Reisepass C01X00T47 gescannt.** Ging schnell.\n"
+              "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n")
+        with self.assertRaises(build.PrivatException):
+            self.feed(md=md)
+
+    def test_gesperrtes_wort_erreicht_den_feed_nicht(self):
+        md = ("# Titel\n\n## Bezahlen\n\n"
+              "**✓ Die PIN lautet GEHEIMTOKEN4711.** Steht auf dem Zettel.\n"
+              "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n")
+        # klein geschrieben, weil `lade_sperrliste` jedes Wort klein ablegt und
+        # `pruefe_privat` gegen den kleingeschriebenen Text vergleicht. Ein
+        # grosses Token im Test prueft eine Liste, die es so nie gibt.
+        alt = build.GEHEIME_TOKEN
+        build.GEHEIME_TOKEN = ["geheimtoken4711"]
+        try:
+            with self.assertRaises(build.PrivatException):
+                self.feed(md=md)
+        finally:
+            build.GEHEIME_TOKEN = alt
+
+    def test_seite_meldet_den_feed_an_leseprogramme(self):
+        """Ohne diese Zeile findet kein Reader den Feed — er ist dann nur eine Datei."""
+        for sprache, ziel in build.ZIELE.items():
+            if not ziel.exists():
+                continue
+            seite = ziel.read_text(encoding="utf-8")
+            self.assertIn('type="application/atom+xml"', seite,
+                          f"{ziel.name} meldet keinen Feed")
+
+    def test_ausgelieferter_feed_ist_wohlgeformt(self):
+        """Gemessen wird die Datei, die im Netz liegt, nicht die Faehigkeit."""
+        for pfad in (build.WURZEL / "feed.xml", build.WURZEL / "en" / "feed.xml"):
+            if not pfad.exists():
+                continue
+            ET.fromstring(pfad.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

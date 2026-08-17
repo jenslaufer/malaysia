@@ -28,6 +28,7 @@ import re
 import shutil
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -919,6 +920,145 @@ def baue_seite(md: str) -> str:
     return seite
 
 
+# ---------------------------------------------------------------------- Feed
+
+FEED_DATEIEN = {"de": WURZEL / "feed.xml", "en": WURZEL / "en" / "feed.xml"}
+ATOM = "http://www.w3.org/2005/Atom"
+# Eine urn, kein http-Link: die id eines Atom-Eintrags ist ein Name, keine
+# Adresse. Zoege sie auf BASIS, muesste jeder Umzug der Seite jeden Eintrag bei
+# jedem Leser neu melden.
+FEED_ID_PRAEFIX = "urn:jenslaufer:malaysia:"
+
+
+def _feed_meldungen(md: str) -> list[tuple[str, str, str]]:
+    """(Abschnitts-Anker, Block, Telegram-Zeit) fuer jeden gemeldeten Eintrag.
+
+    Laeuft absichtlich denselben Weg wie `render_markdown` — Marker in Token,
+    dann Kommentare weg, dann an Leerzeilen trennen. Eine zweite, eigene
+    Zerlegung waere nach drei Eintraegen eine zweite Wahrheit darueber, was
+    ueberhaupt ein Eintrag ist.
+    """
+    md = MARKER_ZEIT.sub(r"@@WERKSTATT:\1@@", md)
+    md = strip_kommentare(strip_marker(md))
+    abschnitt, treffer = "", []
+    for block in re.split(r"\n\s*\n", md):
+        block = block.strip()
+        zeit = TOKEN.search(block)
+        telegram = zeit.group(1) if zeit else None
+        block = TOKEN.sub("", block).strip()
+        if block.startswith("## "):
+            abschnitt = slug(block[3:].strip())
+        elif re.match(r"^\*\*[✓○✗]\s", block):
+            treffer.append((abschnitt, block, telegram))
+    return treffer
+
+
+def _feed_messung(block: str, telegram: str | None) -> dict | None:
+    """Dieselbe Suche wie `_spur`: erst Textanker, dann Zeitstempel."""
+    daten = WERKSTATT.get(block.splitlines()[0].strip()[:ANKER_LAENGE])
+    if daten is None and telegram:
+        daten = WERKSTATT.get(_tg_schluessel(telegram))
+    if not daten or not daten.get("veroeffentlicht") or not daten.get("telegram"):
+        return None
+    return daten
+
+
+def _feed_titel(block: str) -> str:
+    """Der fette Vorspann eines Eintrags ist seine Ueberschrift."""
+    treffer = re.match(r"^\*\*[✓○✗]\s+(.*?)\*\*", block, flags=re.S)
+    rohtext = treffer.group(1) if treffer else block
+    return re.sub(r"\s+", " ", rohtext.replace("*", "").replace("`", "")).strip()
+
+
+def baue_feed(md: str) -> str | None:
+    """Atom-Feed der gemeldeten Eintraege — oder None, wenn nichts gemessen ist.
+
+    Auftrag Jens 2026-08-17 10:43: "Können wir Website Notifications einstellen,
+    so dass Leute über Neuerungen informiert werden?" Browser-Push scheidet aus
+    (auf dem iPhone nur ueber Seite-auf-Startbildschirm, und es braucht einen
+    Server, den diese Seite nicht hat). Atom braucht beides nicht.
+
+    **Nur gemessene Eintraege.** Ein Eintrag ohne Messung haette kein Datum, und
+    ein erfundenes waere schlimmer als sein Fehlen: der Leser bekaeme eine
+    Meldung ueber etwas, das nicht passiert ist. Recherche steht deshalb auf der
+    Seite und nicht im Feed — was gemeldet wird, ist, was Jens erlebt hat.
+
+    **Ohne jede Messung wird nichts geschrieben** (None). Ein leerer Feed sieht
+    aus wie eine ruhige Woche und ist ein Ausfall; die alte Datei bleibt dann
+    stehen und luegt wenigstens nicht neu.
+
+    Gebaut wird ueber ElementTree, nicht aus Zeichenketten: ein `&` im Text
+    zerreisst handgeschriebenes XML, und ein zerrissener Feed faellt bei jedem
+    Leser gleichzeitig aus, ohne dass hier etwas rot wird.
+    """
+    pruefe_privat(strip_kommentare(md))
+
+    eintraege, belegt = [], {}
+    for abschnitt, block, telegram in _feed_meldungen(md):
+        daten = _feed_messung(block, telegram)
+        if not daten:
+            continue
+        # Eine Nachricht kann mehrere Eintraege ausgeloest haben (drei Fotos um
+        # 10:21 am 17.08.). Der Zaehler laeuft deshalb je Paar aus Zeit und
+        # Abschnitt, nicht ueber das ganze Dokument: sonst verschiebt jede
+        # Umsortierung an einer anderen Stelle die ids hier mit.
+        schluessel = (_tg_schluessel(daten["telegram"]), abschnitt)
+        belegt[schluessel] = belegt.get(schluessel, 0) + 1
+        kennung = FEED_ID_PRAEFIX + f"{schluessel[0]}:{abschnitt}"
+        if belegt[schluessel] > 1:
+            kennung += f":{belegt[schluessel]}"
+        eintraege.append((daten, abschnitt, block, kennung))
+    if not eintraege:
+        return None
+    eintraege.sort(key=lambda e: e[0]["veroeffentlicht"], reverse=True)
+
+    seite = BASIS + ("en/" if SPRACHE == "en" else "")
+    ET.register_namespace("", ATOM)
+    feed = ET.Element(f"{{{ATOM}}}feed")
+    feed.set("{http://www.w3.org/XML/1998/namespace}lang", SPRACHE)
+    ET.SubElement(feed, f"{{{ATOM}}}title").text = _t(
+        "Singapur und Malaysia — was wirklich funktioniert hat",
+        "Singapore and Malaysia — what actually worked",
+    )
+    ET.SubElement(feed, f"{{{ATOM}}}subtitle").text = _t(
+        # Echte Umlaute: dieser Satz steht in jedem Leseprogramm sichtbar da.
+        # Die ASCII-Schreibweise ist ein Reflex aus dem Quelltext und war am
+        # 17.08. schon einmal der erste sichtbare Schnitzer auf der Seite.
+        "Neue Einträge, sobald sie auf der Seite stehen.",
+        "New entries, the moment they go live.",
+    )
+    ET.SubElement(feed, f"{{{ATOM}}}id").text = f"{FEED_ID_PRAEFIX}feed:{SPRACHE}"
+    ET.SubElement(feed, f"{{{ATOM}}}link", rel="alternate", type="text/html", href=seite)
+    ET.SubElement(feed, f"{{{ATOM}}}link", rel="self",
+                  type="application/atom+xml", href=seite + "feed.xml")
+    ET.SubElement(feed, f"{{{ATOM}}}updated").text = eintraege[0][0]["veroeffentlicht"]
+    ET.SubElement(ET.SubElement(feed, f"{{{ATOM}}}author"),
+                  f"{{{ATOM}}}name").text = "Jens Laufer"
+
+    for daten, abschnitt, block, kennung in eintraege:
+        eintrag = ET.SubElement(feed, f"{{{ATOM}}}entry")
+        ET.SubElement(eintrag, f"{{{ATOM}}}title").text = _feed_titel(block)
+        ET.SubElement(eintrag, f"{{{ATOM}}}link", rel="alternate", type="text/html",
+                      href=seite + (f"#{abschnitt}" if abschnitt else ""))
+        # Die id haengt am Zeitstempel der Nachricht und am Abschnitt, nie am
+        # Text. Ein Schluessel aus dem Inhalt bricht, sobald der Inhalt sich
+        # aendert — auf der Seite kostete das am 17.08. die Herkunftszeile der
+        # englischen Fassung, im Feed waere es teurer: neue id heisst fuer jeden
+        # Leser "neuer Beitrag", ein korrigierter Tippfehler meldete denselben
+        # Eintrag ein zweites Mal. Der Abschnitt muss mit hinein, weil eine
+        # Nachricht mehrere Eintraege ausloesen kann und zwei gleiche ids den
+        # zweiten Eintrag bei JEDEM Leser verschwinden lassen.
+        ET.SubElement(eintrag, f"{{{ATOM}}}id").text = kennung
+        ET.SubElement(eintrag, f"{{{ATOM}}}updated").text = daten["veroeffentlicht"]
+        ET.SubElement(eintrag, f"{{{ATOM}}}published").text = daten["telegram"]
+        inhalt = ET.SubElement(eintrag, f"{{{ATOM}}}content", type="html")
+        inhalt.text = f"<p>{inline(block)}</p>"
+
+    xml = ET.tostring(feed, encoding="unicode", xml_declaration=True)
+    pruefe_privat(xml)
+    return xml
+
+
 # ----------------------------------------------------------------------- CLI
 
 def lade_werkstatt() -> tuple[dict, dict]:
@@ -1022,6 +1162,22 @@ def main() -> int:
         # 500 Bytes — und eine Groessenangabe, die man gegen die ausgelieferte
         # Datei haelt, muss dieselbe Einheit haben wie die Datei.
         print(f"gebaut: {ziel} ({ziel.stat().st_size:,} Bytes)")
+
+        # Der Feed wird NACH der Seite geschrieben und nur, wenn es etwas zu
+        # melden gibt. Ohne Messung bleibt die alte Datei stehen: ein leerer
+        # Feed sieht bei jedem Leser aus wie eine ruhige Woche.
+        SPRACHE = sprache
+        xml = baue_feed(quellen[sprache])
+        feed_datei = FEED_DATEIEN[sprache]
+        if xml:
+            feed_datei.parent.mkdir(parents=True, exist_ok=True)
+            feed_datei.write_text(xml, encoding="utf-8")
+            anzahl = xml.count("<entry>")
+            print(f"gebaut: {feed_datei} ({anzahl} Meldungen, "
+                  f"{feed_datei.stat().st_size:,} Bytes)")
+        else:
+            print(f"feed.xml ({sprache}) NICHT geschrieben — keine Messung. "
+                  "Die alte Datei bleibt stehen.", file=sys.stderr)
 
     if args.og:
         for sprache in SPRACHEN:

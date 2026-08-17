@@ -287,6 +287,36 @@ village on the spot, you will be looking for your bags in the wrong bay.
 
 ---
 
+## Eating
+
+**✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
+breakfast (17 Aug).** Figures off the menu board, not estimated: nasi goreng, mee goreng,
+kuey teow goreng and mehoon goreng are **RM 6.50** each; with chicken RM 10.00, with beef
+RM 10.50, with mutton RM 11.50. Plain rice RM 2.50, vegetables RM 2.00, a fried egg
+RM 1.50. Roti canai **RM 1.50**, tosai RM 2.00, capati RM 2.50. Drinks run RM 1.50 to
+RM 3.50, teh tarik RM 2.00 hot and RM 2.50 cold — cold costs 50 sen more here, across the
+board. So breakfast of roti canai and teh tarik is **RM 3.50** (about €0.70), and dinner
+for four with a plate and a drink each is **RM 34 to RM 54** (€7 to €11). Takeaway adds
+**20 sen per box**; that is the only footnote on the board.
+<!-- werkstatt: telegram=2026-08-17T11:19 -->
+
+**○ "It is on the vegetarian side of the menu" and "it is vegetarian" are not the same
+thing at a mamak stall.** Meat-free on the board are nasi goreng, mee goreng, kuey teow
+goreng, mehoon goreng biasa, sayur-sayuran, telur goreng, telur dadar and the whole roti
+range (canai, planta, pisang, bom, tisu, naan, capati, tosai, puri kosong). Two things are
+nowhere on the board, though: **sambal almost always contains belacan**, that is shrimp
+paste, and **the wok is not washed between dishes**. If you eat strictly vegetarian, ask
+for "tanpa sambal" and lean towards roti and tosai rather than the fried dishes — those
+come off the griddle, not out of the wok.
+
+**○ Seven words are enough to read any mamak menu yourself.** *Ayam* chicken · *daging*
+beef · *kambing* mutton · *ikan* fish · *telur* egg · *sayur* vegetable · *goreng* fried.
+So "nasi goreng ayam" is fried rice with chicken, and "mee goreng" is fried noodles with
+nothing added. *Kosong* means empty, so without filling, *biasa* plain, *panas* hot and
+*sejuk* cold — the last two head the two price columns on the drinks board.
+
+---
+
 ## Paying
 
 **✓ On the bus from JB Sentral to Larkin you can pay contactless, by credit card and with

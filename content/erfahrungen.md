@@ -291,6 +291,38 @@ seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falsche
 
 ---
 
+## Essen
+
+**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
+Frühstück kostet RM 3,50 (17.08.).** Zahlen von der Anzeigetafel, nicht geschätzt: Nasi
+Goreng, Mee Goreng, Kuey Teow Goreng und Mehoon Goreng je **RM 6,50**; mit Hähnchen
+RM 10,00, mit Rind RM 10,50, mit Ziege RM 11,50. Reis pur RM 2,50, Gemüse RM 2,00, ein
+Spiegelei RM 1,50. Roti Canai **RM 1,50**, Tosai RM 2,00, Capati RM 2,50. Getränke
+RM 1,50 bis RM 3,50, Teh Tarik heiß RM 2,00 und kalt RM 2,50 — kalt kostet hier überall
+50 Sen mehr. Damit liegt ein Frühstück aus Roti Canai und Teh Tarik bei **RM 3,50**
+(rund 0,70 €) und ein Abendessen für vier mit je einem Teller und einem Getränk bei
+**RM 34 bis RM 54** (7 bis 11 €). Zum Mitnehmen kommen **20 Sen je Packung** dazu; das
+steht als einzige Fußnote auf der Tafel.
+<!-- werkstatt: telegram=2026-08-17T11:19 -->
+
+**○ „Steht auf der vegetarischen Seite" und „ist vegetarisch" sind an einem Mamak-Stand
+nicht dasselbe.** Ohne Fleisch auf der Karte sind Nasi Goreng, Mee Goreng, Kuey Teow
+Goreng, Mehoon Goreng Biasa, Sayur-Sayuran, Telur Goreng, Telur Dadar und die ganze
+Roti-Reihe (Canai, Planta, Pisang, Bom, Tisu, Naan, Capati, Tosai, Puri Kosong). Zwei
+Dinge stehen aber nirgends auf der Tafel: **Sambal enthält fast immer Belacan**, also
+Garnelenpaste, und **der Wok wird zwischen den Gerichten nicht gewaschen**. Wer streng
+vegetarisch isst, bestellt „tanpa sambal" und nimmt eher Roti und Tosai als Gebratenes —
+die kommen von der Platte, nicht aus dem Wok.
+
+**○ Sieben Wörter genügen, um jede Mamak-Karte selbst zu lesen.** *Ayam* Hähnchen ·
+*daging* Rind · *kambing* Ziege · *ikan* Fisch · *telur* Ei · *sayur* Gemüse ·
+*goreng* gebraten. „Nasi goreng ayam" ist damit gebratener Reis mit Hähnchen, „mee
+goreng" gebratene Nudeln ohne Zusatz. *Kosong* heißt leer, also ohne Füllung, *biasa*
+einfach, *panas* heiß und *sejuk* kalt — die letzten beiden stehen über den zwei
+Preisspalten bei den Getränken.
+
+---
+
 ## Bezahlen
 
 **✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit
