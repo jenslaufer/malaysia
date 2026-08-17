@@ -85,8 +85,6 @@ def karte(foto: Path, anzahl: int, median: int) -> str:
 <div class="inhalt">
   <div class="kicker">Familie unterwegs &middot; Reisebericht</div>
   <h1 class="titel">Singapur &amp; Malaysia&nbsp;2026</h1>
-  <p class="unter">Fähren, Geldautomaten und zu viele Katzen in Mersing. Was wir
-     selbst erlebt haben, steht mit Haken.</p>
   <div class="zahlen">
     <div class="zahl"><b>{anzahl}</b><span>Einträge</span></div>
     <div class="zahl"><b>{median} Min</b><span>von unterwegs bis online</span></div>
