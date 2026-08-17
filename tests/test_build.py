@@ -1179,5 +1179,28 @@ class TestFeed(unittest.TestCase):
             ET.fromstring(pfad.read_text(encoding="utf-8"))
 
 
+class TestSitemap(unittest.TestCase):
+    """Die Search Console meldete am 17.08. fuer beide Fassungen `URL is unknown
+    to Google` — die Seite stand in keiner sitemap der Domain. Geprueft wird
+    deshalb die ausgelieferte Datei, nicht die Faehigkeit, eine zu schreiben."""
+
+    def test_sitemap_nennt_beide_sprachfassungen(self):
+        pfad = build.WURZEL / "sitemap.xml"
+        self.assertTrue(pfad.exists(), "sitemap.xml fehlt — Google findet die Seite nicht")
+        wurzel = ET.fromstring(pfad.read_text(encoding="utf-8"))
+        ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+        adressen = {e.text for e in wurzel.iter(f"{ns}loc")}
+        self.assertIn(build.BASIS, adressen)
+        self.assertIn(build.BASIS + "en/", adressen)
+
+    def test_sitemap_nennt_keine_relative_adresse(self):
+        """Eine relative Adresse ist in einer sitemap ungueltig und wird still
+        verworfen — der Fehler sieht dann wie ein langsamer Crawler aus."""
+        wurzel = ET.fromstring((build.WURZEL / "sitemap.xml").read_text(encoding="utf-8"))
+        ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+        for e in wurzel.iter(f"{ns}loc"):
+            self.assertTrue(e.text.startswith("https://"), e.text)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

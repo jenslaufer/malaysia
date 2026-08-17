@@ -1179,6 +1179,19 @@ def main() -> int:
             print(f"feed.xml ({sprache}) NICHT geschrieben — keine Messung. "
                   "Die alte Datei bleibt stehen.", file=sys.stderr)
 
+    # Sitemap. Grund, am 17.08. bei Google selbst gemessen: die Search-Console
+    # meldet fuer beide Sprachfassungen `URL is unknown to Google` — die Seite
+    # liegt in einem eigenen Repo und stand deshalb in keiner sitemap der Domain.
+    # Ohne einen Weg dorthin holt Google sie nicht ab, wie gut der Text auch ist.
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for adresse in (BASIS, BASIS + "en/"):
+        sm.append(f"  <url><loc>{adresse}</loc>"
+                  f"<lastmod>{datetime.now(timezone.utc):%Y-%m-%d}</lastmod></url>")
+    sm.append("</urlset>")
+    (WURZEL / "sitemap.xml").write_text("\n".join(sm) + "\n", encoding="utf-8")
+    print(f"gebaut: sitemap.xml ({len(sm) - 3} Adressen)")
+
     if args.og:
         for sprache in SPRACHEN:
             SPRACHE = sprache
