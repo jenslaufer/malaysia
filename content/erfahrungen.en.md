@@ -59,9 +59,16 @@ from OpenStreetMap on 17 August, not checked on the ground.)
 
 Until 17 August this paragraph also carried the advice to use Maybank or Public Bank with a
 foreign card, on the grounds that Bank Rakyat and Bank Simpanan Nasional are built for Malaysian
-cards. **That was assumed, not measured** — the locations came from a database, the
-recommendation from nothing verifiable. It has been removed. What is measured stands under "In
-Mersing": a travel credit card worked, with no fee.
+cards. **That was assumed, not measured — and it was wrong.** The cash came out of a **Bank
+Simpanan Nasional** machine, which is to say the very bank this page had warned against. The
+sentence is gone.
+
+**And the error would have cost us later, because it points forward: Tioman has exactly one cash
+machine, and it is a BSN** (in Tekek, by the airstrip). Anyone who had believed the old advice
+would have arrived on the island expecting no access to cash at all, and would have had to
+withdraw accordingly in Mersing or hunt for a money changer. BSN is Malaysia's post office
+savings bank; it stands in small towns where none of the big banks does. That makes it more
+important to travellers, not less.
 
 **○ Tipping: nowhere in Singapore or Malaysia.** The reason is printed on the bill.
 Singapore: 10 % service charge + 9 % GST, announced on the menu as `++` after the price — so
@@ -172,12 +179,28 @@ same island and are constantly mixed up. So before touching a cat on Borneo, kno
 two you are standing in; and after a bite or a scratch the rule is the same everywhere: see a
 doctor straight away, do not wait.
 
-**✓ The cash machine in Mersing paid out, on a travel credit card and with no fee (17 Aug).**
+**✓ The BSN cash machine in Mersing paid out, on a travel credit card and with no fee (17 Aug).**
 This is the most useful line in the section, and it contradicts what we had assumed beforehand
-(see "Paying"): the card was not refused, and no foreign-card fee was charged. Anyone carrying a
-travel credit card without a foreign transaction charge needs no money changer for Mersing and
-does not have to stock up on cash in Johor Bahru.
+(see "Paying"): the card was not refused, no foreign-card fee was charged — and it happened at
+the very bank we had warned against. Anyone carrying a travel credit card without a foreign
+transaction charge needs no money changer for Mersing and does not have to stock up on cash in
+Johor Bahru.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
+
+**✓ RM500 was the amount, and that is tighter than it sounds (17 Aug).** **RM165** of it is
+already committed: RM105 marine park fee at the ferry counter in Mersing and RM60 tourist tax at
+the accommodation on Tioman. That leaves **RM335 for four people across three island days** —
+breakfast is included at the guesthouse, boat rides between the bays and a snorkelling trip are
+not. We had budgeted RM800–1,200 for those, but that figure is an estimate and carries no
+source. Anyone who would rather not find out tops up in Mersing while five banks still stand
+side by side; on the island there is exactly one machine, and an island machine can be empty.
+<!-- werkstatt: telegram=2026-08-17T09:36 -->
+
+**○ No fee is not the same as no interest.** On many credit cards a cash withdrawal counts as a
+cash advance and accrues interest from the day it is taken, even when no fee is charged; some
+travel cards waive both, others only the fee. That is written in the card terms, not on the
+machine. We did not look it up for our own card — it is the only point in this section we have
+not checked ourselves.
 
 ![A cash machine in Mersing, mid-transaction.](foto:2026-08-17_090006.jpg)
 ![A bank branch in the shophouse row in Mersing, scooters parked in front.](foto:2026-08-17_090008.jpg)

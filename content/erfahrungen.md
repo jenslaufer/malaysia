@@ -60,9 +60,16 @@ ist. (Standorte am 17.08. aus OpenStreetMap geholt, nicht vor Ort geprüft.)
 
 Hier stand bis zum 17.08. zusätzlich der Rat, mit einer ausländischen Karte zu Maybank oder
 Public Bank zu gehen, weil Bank Rakyat und Bank Simpanan Nasional auf malaysische Karten
-ausgelegt seien. **Das war nicht gemessen, sondern angenommen** — die Standorte kamen aus einer
-Datenbank, die Empfehlung aus nichts Belegbarem. Sie steht deshalb nicht mehr hier. Was
-gemessen ist, steht unter „In Mersing": eine Reisekreditkarte hat funktioniert, ohne Gebühr.
+ausgelegt seien. **Das war nicht gemessen, sondern angenommen — und es war falsch.** Geld kam
+an einem Automaten der **Bank Simpanan Nasional** heraus, also genau bei der Bank, von der hier
+abgeraten wurde. Der Satz ist deshalb gestrichen.
+
+**Und der Irrtum wäre teuer geworden, weil er nach vorn wirkt: auf Tioman gibt es genau einen
+Geldautomaten, und es ist eine BSN** (in Tekek, am Flugfeld). Wer dem alten Rat geglaubt hätte,
+wäre mit der Erwartung auf die Insel gefahren, dort gar nicht an Bargeld zu kommen — und hätte
+in Mersing entsprechend viel abheben oder eine Wechselstube suchen müssen. BSN ist die
+malaysische Post-Sparkasse; sie steht in kleinen Orten, in denen keine der großen Banken mehr
+sitzt. Das macht sie für Reisende eher wichtiger als unwichtiger.
 
 **○ Trinkgeld: in Singapur und Malaysia nirgends.** Der Grund steht auf der Rechnung.
 Singapur: 10 % Service Charge + 9 % GST, auf der Speisekarte als `++` hinter dem Preis
@@ -173,13 +180,28 @@ tollwutfrei. Die beiden Staaten liegen auf derselben Insel und werden ständig v
 Wer also auf Borneo eine Katze anfasst, sollte vorher wissen, in welchem der beiden er steht;
 und nach Biss oder Kratzer gilt überall dasselbe: sofort zum Arzt, nicht abwarten.
 
-**✓ Am Geldautomaten in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne Gebühr
-(17.08.).** Das ist die praktisch wichtigste Auskunft dieses Abschnitts, und sie widerspricht
-dem, was wir vorher angenommen hatten (siehe „Bezahlen"): weder die Karte wurde abgelehnt noch
-wurde eine Fremdkartengebühr fällig. Wer eine Reisekreditkarte ohne Auslandsentgelt dabeihat,
-braucht für Mersing keine Wechselstube und muss sich in Johor Bahru nicht mit Bargeld
-eindecken.
+**✓ Am Geldautomaten der BSN in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne
+Gebühr (17.08.).** Das ist die praktisch wichtigste Auskunft dieses Abschnitts, und sie
+widerspricht dem, was wir vorher angenommen hatten (siehe „Bezahlen"): weder wurde die Karte
+abgelehnt noch eine Fremdkartengebühr fällig — und ausgerechnet bei der Bank, von der wir hier
+abgeraten hatten. Wer eine Reisekreditkarte ohne Auslandsentgelt dabeihat, braucht für Mersing
+keine Wechselstube und muss sich in Johor Bahru nicht mit Bargeld eindecken.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
+
+**✓ RM500 waren es, und das ist knapper, als es klingt (17.08.).** Fest verplant sind davon
+**RM165**: RM105 Marine-Park-Gebühr am Fährschalter in Mersing und RM60 Touristensteuer in der
+Unterkunft auf Tioman. Bleiben **RM335 für vier Personen und drei Inseltage** — Frühstück ist
+in der Unterkunft enthalten, Bootsfahrten zwischen den Buchten und eine Schnorcheltour nicht.
+Wir hatten dafür vorher RM800–1.200 veranschlagt, allerdings geschätzt und ohne Quelle. Wer
+nicht darauf ankommen lassen will, hebt in Mersing nach, solange fünf Banken nebeneinander
+stehen; auf der Insel ist es genau einer, und ein Inselautomat kann leer sein.
+<!-- werkstatt: telegram=2026-08-17T09:36 -->
+
+**○ Gebührenfrei heißt nicht zinsfrei.** Bei vielen Kreditkarten ist eine Bargeldabhebung eine
+Barverfügung und wird ab dem Tag der Abhebung verzinst, auch wenn keine Gebühr anfällt — bei
+manchen Reisekarten ist beides erlassen, bei anderen nur die Gebühr. Das steht in den
+Kartenbedingungen, nicht am Automaten. Wir haben es für unsere Karte nicht nachgesehen; es ist
+der einzige Punkt in diesem Abschnitt, den wir nicht selbst geprüft haben.
 
 ![Ein Geldautomat in Mersing, mitten in einer laufenden Abfrage.](foto:2026-08-17_090006.jpg)
 ![Eine Bankfiliale in der Geschäftszeile von Mersing, davor geparkte Roller.](foto:2026-08-17_090008.jpg)
