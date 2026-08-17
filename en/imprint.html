@@ -431,6 +431,53 @@ tbody tr:hover { background: var(--flaeche); }
   text-underline-offset: .18em;
 }
 
+/* E-Mail-Anmeldung (#206 b). Klein und im Fuss, damit sie neben dem Feed-Link
+   ein zweiter Weg bleibt, keine Umwerbung. */
+.anmeldung { margin: .9rem 0 1.3rem; }
+.anmeldung-zeile { display: flex; flex-wrap: wrap; gap: .5rem; }
+.anmeldung-zeile input[type="email"] {
+  flex: 1 1 14rem;
+  font: inherit;
+  font-size: .92rem;
+  padding: .5rem .7rem;
+  border: 1px solid var(--linie);
+  border-radius: 6px;
+  background: var(--flaeche);
+  color: var(--tinte);
+}
+.anmeldung-zeile button {
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 500;
+  padding: .5rem 1.1rem;
+  color: var(--papier);
+  background: var(--erlebt);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.anmeldung-zeile button:hover { background: #1c4f3f; }
+.anmeldung-zeile button:disabled { opacity: .6; cursor: default; }
+.anmeldung-hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+.anmeldung-consent {
+  display: block;
+  margin-top: .5rem;
+  font-size: .82rem;
+  color: var(--tinte-leise);
+}
+.anmeldung-consent input { margin-right: .4rem; vertical-align: -.15em; }
+.anmeldung-status { color: var(--gescheitert); font-size: .85rem; margin: .4rem 0 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 a { color: var(--erlebt); }
 
 /* --- Schmale Geraete --- */

@@ -43,6 +43,17 @@ QUELLE = Path.home() / "repos" / "assistant" / "state" / "reise-erfahrungen-mala
 KOPIE = WURZEL / "content" / "erfahrungen.md"
 ZIEL = WURZEL / "index.html"
 
+# E-Mail-Anmeldung (#206 b). Mandant "reise" auf auth.solytics.de, ein
+# gemeinsames Segment fuer beide Sprachfassungen — es gibt noch keine
+# Kampagne, die nach Sprache trennen muesste. Die Adresse steht fest im
+# ausgelieferten launch-kit-Bundle, nicht geraten (17.08. gegen den echten
+# Endpunkt gemessen, CORS positiv). Anmeldung ist EINFACHES Opt-in: die
+# Plattform hat keinen Bestaetigungs-Link-Mechanismus, der Kontakt ist ab dem
+# Klick aktiv. Das steht so in der Datenschutzerklaerung, nicht schoener.
+REISE_TENANT = "reise"
+REISE_SEGMENT = "reise-updates"
+REISE_API = "https://auth.solytics.de"
+
 # Zwei Sprachen, zwei Quelldateien, EINE Messung (Jens 17.08. 07:59: "Dann
 # deutsch und englisch"). Die englische Fassung ist die, die Jens nicht liest —
 # ihr Rueckstand faellt also niemandem auf. Dagegen hilft kein Vorsatz, sondern
@@ -86,9 +97,14 @@ IMPRESSUM = {
 # Hosts, von denen diese Seite laden darf. Schriften und Leaflet liegen seit
 # dem 17.08. hier im Repo; die Kartenkacheln bleiben fremd, weil man eine
 # Weltkarte nicht mitliefert — deshalb laedt die Karte erst auf Klick.
+# auth.solytics.de ist die dritte Ausnahme: die E-Mail-Anmeldung im Fuss ruft
+# sie nur auf, wenn jemand das Formular abschickt — anders als Kacheln und
+# Schriften also nie beim blossen Aufruf der Seite, sondern erst nach einer
+# eigenen Handlung mit eigener Einwilligung.
 # Was hier steht, muss in der Datenschutzerklaerung stehen; ein Test haelt
 # beide zusammen.
-EXTERN_ERLAUBT: tuple[str, ...] = ("tile.openstreetmap.org", "www.openstreetmap.org")
+EXTERN_ERLAUBT: tuple[str, ...] = ("tile.openstreetmap.org", "www.openstreetmap.org",
+                                    "auth.solytics.de")
 
 # Welche Fassung gerade gebaut wird. Ein Modul-Global wie WERKSTATT und
 # GEHEIME_TOKEN daneben: der Rendercode reicht sonst durch ein Dutzend
@@ -987,7 +1003,25 @@ def _og_karte(summe: dict) -> str:
         karte = (karte.replace("Singapur und Malaysia", "Singapore and Malaysia")
                       .replace("was wirklich funktioniert hat", "what actually worked")
                       .replace('lang="de"', 'lang="en"'))
-    return karte.replace("{{FUSS}}", fuss)
+    # Die Adresse kommt aus BASIS, nicht aus der Vorlage. Sie stand dort als
+    # malaysia.jenslaufer.com — eine Subdomain, die nie angelegt wurde. Im HTML
+    # war ueberall die richtige Adresse, geteilt wird aber das Bild, und dort
+    # findet sie kein grep. Wer sie abtippt, landet nirgends (17.08. gemessen).
+    ersatz = {
+        "ADRESSE": BASIS.split("://", 1)[1].rstrip("/"),
+        "UNTERZEILE": _t(
+            "Reisenotizen, unterwegs per Telegram geschrieben und von einer "
+            "Maschine in Deutschland veröffentlicht.",
+            "Travel notes, written by phone on the road and published by a "
+            "machine back in Germany."),
+        "ERLEBT": _t("selbst erlebt", "seen ourselves"),
+        "RECHERCHE": _t("nachgeschlagen", "looked up"),
+        "GESCHEITERT": _t("hat nicht funktioniert", "did not work"),
+        "FUSS": fuss,
+    }
+    for name, wert in ersatz.items():
+        karte = karte.replace("{{" + name + "}}", wert)
+    return karte
 
 
 def baue_og_bild(summe: dict, ziel: Path = None) -> Path | None:

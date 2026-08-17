@@ -52,7 +52,57 @@
   <p>Stand {{STAND}}. Das Dokument wächst mit der Reise — was heute noch offen ist,
      steht in ein paar Tagen mit Datum hier.
      <a class="feed-link" href="feed.xml">Neue Einträge abonnieren</a> — als Feed,
-     ohne Anmeldung und ohne dass wir eine Adresse von Ihnen bekommen.</p>
+     ohne Anmeldung und ohne dass wir eine Adresse von Ihnen bekommen. Oder per
+     E-Mail, wenn Ihnen das lieber ist:</p>
+  <div class="anmeldung">
+    <form id="lk-anmeldung">
+      <div class="anmeldung-zeile">
+        <label for="anmeldung-email" class="sr-only">E-Mail-Adresse</label>
+        <input type="email" id="anmeldung-email" name="email" required
+               placeholder="E-Mail-Adresse" autocomplete="email">
+        <!-- Honeypot: Bots fuellen es aus, Menschen sehen es nie. -->
+        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true"
+               class="anmeldung-hp">
+        <button type="submit">Anmelden</button>
+      </div>
+      <label class="anmeldung-consent">
+        <input type="checkbox" required>
+        Ja, schickt mir eine E-Mail, wenn es neue Einträge gibt. Abmeldung
+        jederzeit über den Link in jeder Mail. Näheres in der
+        <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </label>
+      <p class="anmeldung-status" role="status" hidden></p>
+    </form>
+  </div>
+  <script>
+  (function () {
+    var form = document.getElementById('lk-anmeldung');
+    if (!form) return;
+    var status = form.querySelector('.anmeldung-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      var email = form.email.value;
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '…';
+      status.hidden = true;
+      fetch('https://auth.solytics.de/t/reise/marketing/public/lead-capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, segment: 'reise-updates', hp: form.hp.value })
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.innerHTML = '<p>Danke — neue Einträge kommen jetzt auch per E-Mail.</p>';
+      }).catch(function () {
+        status.textContent = 'Das hat leider nicht geklappt. Bitte versuchen Sie es noch einmal.';
+        status.hidden = false;
+        btn.disabled = false;
+        btn.textContent = label;
+      });
+    });
+  })();
+  </script>
   <!-- Der Hinweis auf die Maschine stand frueher auch hier. Er steht jetzt eine
        Sektion darueber im Autorblock; zweimal derselbe Satz liest sich, als
        haette es niemand gelesen. -->

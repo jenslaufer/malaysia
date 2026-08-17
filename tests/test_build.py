@@ -411,6 +411,72 @@ class TestVorschaubild(unittest.TestCase):
         self.assertNotIn("Minuten", karte)
 
 
+class TestKartenadresse(unittest.TestCase):
+    """Die Adresse auf der Vorschaukarte findet kein grep — sie steht im PNG.
+
+    Gefunden am 17.08.: die Karte warb fuer malaysia.jenslaufer.com, eine
+    Adresse ohne DNS-Eintrag. Jede Pruefung ueber HTML, Feed und sitemap war
+    gruen, weil dort ueberall die richtige Adresse steht; gelesen wird beim
+    Teilen aber das Bild. Wer sie abtippt, landet nirgends.
+    """
+
+    ERWARTET = build.BASIS.split("://", 1)[1].rstrip("/")
+
+    @contextlib.contextmanager
+    def sprache(self, wert):
+        alt, build.SPRACHE = build.SPRACHE, wert
+        try:
+            yield
+        finally:
+            build.SPRACHE = alt
+
+    def test_karte_zeigt_die_adresse_unter_der_die_seite_steht(self):
+        for wert in build.SPRACHEN:
+            with self.subTest(sprache=wert), self.sprache(wert):
+                self.assertIn(self.ERWARTET, build._og_karte({}))
+
+    def test_karte_nennt_keine_zweite_adresse_auf_dieser_domain(self):
+        muster = re.compile(r"[\w.-]*jenslaufer\.com[\w/.-]*")
+        for wert in build.SPRACHEN:
+            with self.subTest(sprache=wert), self.sprache(wert):
+                for gefunden in muster.findall(build._og_karte({})):
+                    self.assertEqual(
+                        self.ERWARTET, gefunden.rstrip("/"),
+                        f"Vorschaukarte nennt {gefunden!r}, erreichbar ist "
+                        f"{self.ERWARTET!r}")
+
+
+class TestKarteSpricht(unittest.TestCase):
+    """Die englische Vorschaukarte war zur Haelfte deutsch.
+
+    Belegt am 17.08. an der gerenderten Karte: `lang="en"`, Titel uebersetzt,
+    Unterzeile und Legende weiter deutsch. Sichtbar wird das genau dort, wo es
+    am meisten kostet — unter dem englischen LinkedIn-Post, den Fremde sehen.
+    """
+
+    DEUTSCH = ("selbst erlebt", "nachgeschlagen", "hat nicht funktioniert",
+               "Reisenotizen", "veröffentlicht")
+
+    def test_englische_karte_traegt_kein_deutsches_wort(self):
+        alt, build.SPRACHE = build.SPRACHE, "en"
+        try:
+            karte = build._og_karte({})
+        finally:
+            build.SPRACHE = alt
+        sichtbar = re.sub(r"<(style|script)\b.*?</\1>", " ", karte, flags=re.S | re.I)
+        for wort in self.DEUTSCH:
+            self.assertNotIn(wort, sichtbar)
+
+    def test_deutsche_karte_bleibt_deutsch(self):
+        alt, build.SPRACHE = build.SPRACHE, "de"
+        try:
+            karte = build._og_karte({})
+        finally:
+            build.SPRACHE = alt
+        self.assertIn("selbst erlebt", karte)
+        self.assertIn("Reisenotizen", karte)
+
+
 class TestEchteUmlaute(unittest.TestCase):
     """Auf der Seite stehen echte Umlaute, nie die ASCII-Umschrift.
 
@@ -1389,6 +1455,79 @@ class TestRechtsseiten(unittest.TestCase):
             with self.subTest(pfad=pfad):
                 self.assertTrue(datei.exists(), f"{pfad} fehlt")
                 self.assertGreater(datei.stat().st_size, 1500, pfad)
+
+
+class TestEmailAnmeldung(unittest.TestCase):
+    """#206 (b): E-Mail-Anmeldung im Fuss, ueber den launch-kit-Mandanten "reise".
+
+    Ein embedded CTA ohne die echte Endpunkt-Adresse zeigt einen falschen
+    "Danke" und verliert jeden Lead lautlos (die Solytics-Leck-Bauform,
+    2026-06-16) — deshalb wird hier die tatsaechlich ausgelieferte Adresse
+    geprueft, nicht nur, dass irgendein Formular da ist.
+    """
+
+    ENDPUNKT = "https://auth.solytics.de/t/reise/marketing/public/lead-capture"
+
+    def test_beide_seiten_rufen_den_echten_endpunkt_auf(self):
+        for sprache in build.SPRACHEN:
+            pfad = build.ZIELE[sprache]
+            if not pfad.exists():
+                self.skipTest(f"{pfad} noch nicht gebaut")
+            with self.subTest(sprache=sprache):
+                html = pfad.read_text(encoding="utf-8")
+                self.assertIn(self.ENDPUNKT, html)
+                self.assertIn('"segment": \'reise-updates\'', html.replace('  ', ' ').replace('\n', ' '))
+
+    def test_formular_hat_ein_pflicht_consent_und_einen_honeypot(self):
+        for sprache in build.SPRACHEN:
+            pfad = build.ZIELE[sprache]
+            if not pfad.exists():
+                self.skipTest(f"{pfad} noch nicht gebaut")
+            with self.subTest(sprache=sprache):
+                html = pfad.read_text(encoding="utf-8")
+                self.assertIn('<input type="checkbox" required>', html)
+                self.assertIn('name="hp"', html)
+                self.assertIn('name="email"', html)
+
+    def test_consent_verlinkt_die_eigene_datenschutzerklaerung(self):
+        de = build.ZIELE["de"]
+        en = build.ZIELE["en"]
+        if not de.exists() or not en.exists():
+            self.skipTest("Seiten noch nicht gebaut")
+        self.assertIn('href="datenschutz.html"', de.read_text(encoding="utf-8"))
+        self.assertIn('href="privacy.html"', en.read_text(encoding="utf-8"))
+
+    def test_platzhalter_ist_keine_email_adresse(self):
+        # Ein Platzhalter, der wie eine echte Adresse aussieht, wird vom
+        # eigenen Datenschutz-Waechter als private E-Mail gelesen und legt den
+        # ganzen Build lahm (17.08. selbst passiert: "ihre@adresse.de").
+        for sprache in build.SPRACHEN:
+            pfad = build.ZIELE[sprache]
+            if not pfad.exists():
+                self.skipTest(f"{pfad} noch nicht gebaut")
+            with self.subTest(sprache=sprache):
+                platzhalter = re.search(r'placeholder="([^"]*)"\s*autocomplete="email"',
+                                        pfad.read_text(encoding="utf-8"))
+                self.assertIsNotNone(platzhalter)
+                self.assertNotRegex(platzhalter.group(1), r"[\w.+-]+@[\w-]+\.[A-Za-z]{2,}")
+
+    def test_datenschutz_erklaert_die_anmeldung(self):
+        for sprache in build.SPRACHEN:
+            html = build.rendere_recht("datenschutz", sprache)
+            with self.subTest(sprache=sprache):
+                self.assertIn("auth.solytics.de", html)
+                self.assertIn("Amazon", html)
+                anker = "Art. 6" if sprache == "de" else "Art. 6"
+                self.assertIn(anker, html)
+
+    def test_datenschutz_ist_ehrlich_ueber_einfaches_optin(self):
+        # Die Plattform hat keinen Bestaetigungslink-Mechanismus (17.08. gegen
+        # den echten Mandanten gemessen: ein Testkontakt war ohne jeden
+        # Zwischenschritt sofort im Segment aktiv). Eine Erklaerung, die
+        # "Doppel-Opt-in" behauptet, waere eine erfundene Begruendung.
+        html = build.rendere_recht("datenschutz", "de")
+        self.assertNotIn("Doppel-Opt-in", html)
+        self.assertNotIn("Bestätigungslink", html.replace("Bestätigungs-Link", "Bestätigungslink"))
 
 
 if __name__ == "__main__":

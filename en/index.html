@@ -452,6 +452,53 @@ tbody tr:hover { background: var(--flaeche); }
   text-underline-offset: .18em;
 }
 
+/* E-Mail-Anmeldung (#206 b). Klein und im Fuss, damit sie neben dem Feed-Link
+   ein zweiter Weg bleibt, keine Umwerbung. */
+.anmeldung { margin: .9rem 0 1.3rem; }
+.anmeldung-zeile { display: flex; flex-wrap: wrap; gap: .5rem; }
+.anmeldung-zeile input[type="email"] {
+  flex: 1 1 14rem;
+  font: inherit;
+  font-size: .92rem;
+  padding: .5rem .7rem;
+  border: 1px solid var(--linie);
+  border-radius: 6px;
+  background: var(--flaeche);
+  color: var(--tinte);
+}
+.anmeldung-zeile button {
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 500;
+  padding: .5rem 1.1rem;
+  color: var(--papier);
+  background: var(--erlebt);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.anmeldung-zeile button:hover { background: #1c4f3f; }
+.anmeldung-zeile button:disabled { opacity: .6; cursor: default; }
+.anmeldung-hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+.anmeldung-consent {
+  display: block;
+  margin-top: .5rem;
+  font-size: .82rem;
+  color: var(--tinte-leise);
+}
+.anmeldung-consent input { margin-right: .4rem; vertical-align: -.15em; }
+.anmeldung-status { color: var(--gescheitert); font-size: .85rem; margin: .4rem 0 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 a { color: var(--erlebt); }
 
 /* --- Schmale Geraete --- */
@@ -997,7 +1044,57 @@ a whole travel day hangs on it. The ticket counts, not the order.</p>
   <p>As of 17 August 2026. The document grows as the trip goes on — what is still open
      today will be here in a few days with a date on it.
      <a class="feed-link" href="feed.xml">Subscribe to new entries</a> — a feed, no
-     sign-up, and we never see an address of yours.</p>
+     sign-up, and we never see an address of yours. Or by email, if you prefer
+     that:</p>
+  <div class="anmeldung">
+    <form id="lk-anmeldung">
+      <div class="anmeldung-zeile">
+        <label for="anmeldung-email" class="sr-only">Email address</label>
+        <input type="email" id="anmeldung-email" name="email" required
+               placeholder="Email address" autocomplete="email">
+        <!-- Honeypot: bots fill it, humans never see it. -->
+        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true"
+               class="anmeldung-hp">
+        <button type="submit">Sign up</button>
+      </div>
+      <label class="anmeldung-consent">
+        <input type="checkbox" required>
+        Yes, email me when there are new entries. Unsubscribe any time via the
+        link in every email. Details in the
+        <a href="privacy.html">privacy notice</a>.
+      </label>
+      <p class="anmeldung-status" role="status" hidden></p>
+    </form>
+  </div>
+  <script>
+  (function () {
+    var form = document.getElementById('lk-anmeldung');
+    if (!form) return;
+    var status = form.querySelector('.anmeldung-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button');
+      var email = form.email.value;
+      var label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '…';
+      status.hidden = true;
+      fetch('https://auth.solytics.de/t/reise/marketing/public/lead-capture', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, segment: 'reise-updates', hp: form.hp.value })
+      }).then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        form.innerHTML = '<p>Thanks — new entries now also arrive by email.</p>';
+      }).catch(function () {
+        status.textContent = 'That did not work. Please try again.';
+        status.hidden = false;
+        btn.disabled = false;
+        btn.textContent = label;
+      });
+    });
+  })();
+  </script>
   <!-- Der Hinweis auf die Maschine stand frueher auch hier. Er steht jetzt eine
        Sektion darueber im Autorblock; zweimal derselbe Satz liest sich, als
        haette es niemand gelesen. -->

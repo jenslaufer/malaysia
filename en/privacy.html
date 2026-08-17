@@ -431,6 +431,53 @@ tbody tr:hover { background: var(--flaeche); }
   text-underline-offset: .18em;
 }
 
+/* E-Mail-Anmeldung (#206 b). Klein und im Fuss, damit sie neben dem Feed-Link
+   ein zweiter Weg bleibt, keine Umwerbung. */
+.anmeldung { margin: .9rem 0 1.3rem; }
+.anmeldung-zeile { display: flex; flex-wrap: wrap; gap: .5rem; }
+.anmeldung-zeile input[type="email"] {
+  flex: 1 1 14rem;
+  font: inherit;
+  font-size: .92rem;
+  padding: .5rem .7rem;
+  border: 1px solid var(--linie);
+  border-radius: 6px;
+  background: var(--flaeche);
+  color: var(--tinte);
+}
+.anmeldung-zeile button {
+  font: inherit;
+  font-size: .92rem;
+  font-weight: 500;
+  padding: .5rem 1.1rem;
+  color: var(--papier);
+  background: var(--erlebt);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.anmeldung-zeile button:hover { background: #1c4f3f; }
+.anmeldung-zeile button:disabled { opacity: .6; cursor: default; }
+.anmeldung-hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+.anmeldung-consent {
+  display: block;
+  margin-top: .5rem;
+  font-size: .82rem;
+  color: var(--tinte-leise);
+}
+.anmeldung-consent input { margin-right: .4rem; vertical-align: -.15em; }
+.anmeldung-status { color: var(--gescheitert); font-size: .85rem; margin: .4rem 0 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 a { color: var(--erlebt); }
 
 /* --- Schmale Geraete --- */
@@ -547,8 +594,9 @@ a { color: var(--erlebt); }
 <main>
 <section class="recht">
 <p class="lead-klein">This notice explains, as required by Art. 13 GDPR, what happens
-   to personal data when you open this page. Very little does: no cookies, no login,
-   no forms, no analytics, no advertising.</p>
+   to personal data when you open this page. Very little does: no cookies, no
+   mandatory login, no analytics, no advertising. The one exception is the
+   email sign-up in the page footer, and that is optional.</p>
 
 <h2>Controller</h2>
 <p>
@@ -599,6 +647,23 @@ a { color: var(--erlebt); }
 <h2>Feed</h2>
 <p>New entries can be followed as an Atom feed. That is an ordinary file on the same
    server; we do not learn who fetches it, so no list of addresses comes about.</p>
+
+<h2>Email sign-up</h2>
+<p>If you enter an email address in the page footer and tick the box, you will
+   get a message whenever a new entry is published. We store the address you
+   enter, an optional name, and the time and source of the sign-up as proof of
+   consent. The request goes to auth.solytics.de, a launch-kit instance we run
+   ourselves (Solytics GmbH) — that server sees your IP address in the
+   process. This only happens if you submit the form, never merely from
+   opening the page. Sending itself runs through Amazon Simple Email Service
+   (Amazon Web Services, Inc., USA); the transfer relies on the EU-US Data
+   Privacy Framework, in which Amazon participates.</p>
+<p>The legal basis is your consent, Art. 6 (1) (a) GDPR. This is a simple
+   opt-in: unlike a confirmation-link procedure, the entry is active as soon
+   as you submit it — no confirmation email follows. We keep the address
+   until you unsubscribe — every email carries an unsubscribe link, or a
+   message to <a href="mailto:jens.laufer@solytics.de">jens.laufer@solytics.de</a> works just as
+   well.</p>
 
 <h2>Contacting us</h2>
 <p>If you send us an e-mail, we process your details in order to answer. The legal
