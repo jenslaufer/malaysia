@@ -71,6 +71,32 @@ WERKSTATT_KOPIE = WURZEL / "content" / "werkstatt.json"
 WERKSTATT: dict[str, dict] = {}
 WERKSTATT_SUMME: dict = {}
 
+# ---------------------------------------------------------------------- Fotos
+#
+# Die Bilder kommen ueber Telegram und liegen im PRIVATEN Assistenz-Repo. Von
+# dort werden sie nie kopiert, sondern neu geschrieben — der Unterschied ist der
+# ganze Punkt: `pruefe_privat` liest Text, und die Standortdaten eines Fotos
+# stehen in keinem Satz. Ein Bild mit GPS-Koordinaten laeuft an jeder
+# Textpruefung vorbei, ist auf der gerenderten Seite unsichtbar und sagt
+# Fremden, vor welchem Haus die Familie gerade steht. Telegram wirft das EXIF
+# beim Komprimieren zwar selbst weg (am 17.08. an allen zwoelf Bildern
+# gemessen) — aber das ist Telegrams Eigenschaft, nicht unsere: dasselbe Foto
+# als *Datei* geschickt behaelt alles. Also schreibt der Build jedes Bild neu.
+FOTO_QUELLE = Path.home() / "repos" / "assistant" / "state" / "attachments"
+FOTO_ZIEL = WURZEL / "fotos"
+FOTO_DATEN_DATEI = WURZEL / "content" / "fotos.json"
+FOTO_MAX_BREITE = 1280  # was Telegram liefert; hochrechnen kostet Bytes ohne Bildpunkte
+FOTO_QUALITAET = 82
+
+# dateiname -> {"name": slug, "blur": [[x, y, b, h], ...]}. Die Kaesten sind
+# RELATIV (0..1), damit sie das Verkleinern ueberleben; absolute Pixel zeigen
+# nach dem Skalieren woanders hin, und zwar lautlos.
+#
+# Von Hand gepflegt, und das ist Absicht: ein Erkenner, der ein Kennzeichen von
+# vier findet, liest sich wie Schutz und ist keiner. Eine Liste, die ich gegen
+# das gerenderte Bild pruefen kann, ist ehrlicher.
+FOTO_DATEN: dict[str, dict] = {}
+
 # ---------------------------------------------------------------- Datenschutz
 
 class PrivatException(Exception):
@@ -218,10 +244,18 @@ def slug(text: str) -> str:
 
 
 def inline(text: str) -> str:
-    """Escapen, dann **fett** und `code` aufloesen. Reihenfolge ist wichtig."""
+    """Escapen, dann `code`, **fett**, *kursiv*. Die Reihenfolge ist die Sache.
+
+    Fett besteht aus zwei Sternchen: wird kursiv zuerst aufgeloest, frisst es
+    die Haelfte jedes fetten Absatzanfangs — und jeder Eintrag dieser Seite
+    faengt mit einem an. Kursiv verlangt darum ein Zeichen, das kein Sternchen
+    und kein Leerraum ist, direkt hinter dem oeffnenden Stern; sonst wird aus
+    "3 * 4 Ringgit" eine Auszeichnung.
+    """
     t = html.escape(text, quote=False)
     t = re.sub(r"`([^`]+)`", r"<code>\1</code>", t)
     t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
+    t = re.sub(r"\*([^\s*][^*]*?)\*", r"<em>\1</em>", t)
     return t
 
 
@@ -281,6 +315,106 @@ def _spur(block: str, telegram: str = None) -> str:
     )
 
 
+FOTO = re.compile(r"^!\[(?P<text>[^\]]*)\]\(foto:(?P<datei>[^)\s]+)\)$")
+
+
+def lade_foto_daten(pfad: Path = None) -> dict:
+    """Liest content/fotos.json. Fehlt sie, gibt es keine Sperrkaesten."""
+    pfad = Path(pfad) if pfad else FOTO_DATEN_DATEI
+    try:
+        return json.loads(pfad.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def verarbeite_foto(datei: str) -> Path | None:
+    """Ein Telegram-Bild → ein veroeffentlichungsfaehiges JPEG. Oder None.
+
+    Drei Dinge passieren hier, und jedes hat einen Grund:
+
+    1. **Neu geschrieben, nie kopiert.** Damit faellt jeder Metadatenblock weg —
+       GPS, Geraet, Aufnahmezeit. Ein `shutil.copyfile` haette sie mitgenommen.
+    2. **Gesperrte Stellen weichgezeichnet**, bevor irgendetwas skaliert wird.
+       Auf der Strasse stehen Autos Fremder mit lesbaren Kennzeichen; die haben
+       auf einer Seite, die Jens beruflich verlinkt, nichts zu suchen.
+    3. **Auf FOTO_MAX_BREITE begrenzt, nie hochgerechnet.**
+
+    Fehlt die Quelle, kommt None zurueck und der Aufrufer laesst das Bild weg —
+    aber laut. Ein kaputtes `<img>` ist auf einer oeffentlichen Seite sichtbarer
+    Schaden, ein fehlender Absatz nicht.
+    """
+    from PIL import Image, ImageFilter
+
+    quelle = FOTO_QUELLE / datei
+    daten = FOTO_DATEN.get(datei, {})
+    name = daten.get("name") or Path(datei).stem
+    ziel = FOTO_ZIEL / f"{name}.jpg"
+
+    if not quelle.exists():
+        if ziel.exists():
+            return ziel  # schon veroeffentlicht; das Repo baut auch ohne Assistenz-Repo
+        print(f"ACHTUNG: Foto fehlt, Bild faellt weg: {datei}", file=sys.stderr)
+        return None
+
+    with Image.open(quelle) as bild:
+        bild = bild.convert("RGB")
+        breite, hoehe = bild.size
+        for x, y, b, h in daten.get("blur", []):
+            kasten = (int(x * breite), int(y * hoehe),
+                      int((x + b) * breite), int((y + h) * hoehe))
+            ausschnitt = bild.crop(kasten)
+            radius = max(6, int(min(kasten[2] - kasten[0], kasten[3] - kasten[1]) / 2.5))
+            bild.paste(ausschnitt.filter(ImageFilter.GaussianBlur(radius)), kasten)
+        if breite > FOTO_MAX_BREITE:
+            bild = bild.resize(
+                (FOTO_MAX_BREITE, round(hoehe * FOTO_MAX_BREITE / breite)),
+                Image.LANCZOS,
+            )
+        FOTO_ZIEL.mkdir(parents=True, exist_ok=True)
+        # Ohne exif=/icc_profile= schreibt Pillow vorhandene Bloecke wieder mit.
+        bild.save(ziel, "JPEG", quality=FOTO_QUALITAET, optimize=True,
+                  progressive=True, exif=b"", icc_profile=None)
+    return ziel
+
+
+def _figure(text: str, datei: str) -> str | None:
+    from PIL import Image
+
+    ziel = verarbeite_foto(datei)
+    if ziel is None:
+        return None
+    with Image.open(ziel) as bild:
+        breite, hoehe = bild.size
+    # In der Gruppe wird jedes Bild auf ein festes Seitenverhaeltnis
+    # geschnitten. Bei einem hochkanten Foto liegt der Inhalt dann oft oben —
+    # beim Geldautomaten die laufende Abfrage auf dem Schirm. Mittig
+    # zugeschnitten war das Bild noch da und seine Aussage weg.
+    position = FOTO_DATEN.get(datei, {}).get("position")
+    stil = f' style="--pos: {html.escape(position, quote=True)}"' if position else ""
+    return (
+        f'<figure class="foto"{stil}>'
+        f'<img src="fotos/{html.escape(ziel.name)}" width="{breite}" height="{hoehe}" '
+        f'alt="{html.escape(text, quote=True)}" loading="lazy" decoding="async">'
+        f"<figcaption>{inline(text)}</figcaption>"
+        "</figure>"
+    )
+
+
+def _fotos(block: str) -> str | None:
+    """Ein Absatz aus lauter Bildzeilen → ein Bild oder eine Gruppe."""
+    zeilen = [z.strip() for z in block.splitlines() if z.strip()]
+    treffer = [FOTO.match(z) for z in zeilen]
+    if not zeilen or not all(treffer):
+        return None
+    stuecke = [_figure(t.group("text"), t.group("datei")) for t in treffer]
+    stuecke = [s for s in stuecke if s]
+    if not stuecke:
+        return ""
+    if len(stuecke) == 1:
+        return stuecke[0]
+    return f'<div class="fotos fotos--{len(stuecke)}">' + "".join(stuecke) + "</div>"
+
+
 def _tabelle(block: str) -> str:
     zeilen = [z.strip() for z in block.splitlines() if z.strip()]
     zellen = [[c.strip() for c in z.strip("|").split("|")] for z in zeilen]
@@ -312,7 +446,11 @@ def render_markdown(md: str) -> str:
         block = TOKEN.sub("", block).strip()
         if not block or set(block) <= {"-"} and len(block) >= 3:
             continue
-        if block.startswith("## "):
+        bilder = _fotos(block)
+        if bilder is not None:
+            if bilder:
+                teile.append(bilder)
+        elif block.startswith("## "):
             titel = block[3:].strip()
             teile.append(f'<h2 id="{slug(titel)}">{inline(titel)}</h2>')
         elif block.startswith("# "):
@@ -337,14 +475,15 @@ def pruefe_deckung(deutsch: str, englisch: str) -> list[str]:
     veroeffentlicht trotzdem — eine Seite, die zu 90 % uebersetzt ist, ist
     besser als keine, aber sie darf nicht still 90 % sein.
     """
-    def zaehle(md: str) -> tuple[int, int]:
+    def zaehle(md: str) -> tuple[int, int, int]:
         ohne = strip_kommentare(strip_marker(md))
         abschnitte = len(re.findall(r"^## ", ohne, flags=re.M))
         eintraege = len(re.findall(r"^\*\*[✓○✗]", ohne, flags=re.M))
-        return abschnitte, eintraege
+        fotos = len(re.findall(r"^!\[[^\]]*\]\(foto:", ohne, flags=re.M))
+        return abschnitte, eintraege, fotos
 
-    de_abschnitte, de_eintraege = zaehle(deutsch)
-    en_abschnitte, en_eintraege = zaehle(englisch)
+    de_abschnitte, de_eintraege, de_fotos = zaehle(deutsch)
+    en_abschnitte, en_eintraege, en_fotos = zaehle(englisch)
     luecken = []
     if en_abschnitte < de_abschnitte:
         luecken.append(f"{de_abschnitte - en_abschnitte} Abschnitt(e) fehlen "
@@ -352,6 +491,11 @@ def pruefe_deckung(deutsch: str, englisch: str) -> list[str]:
     if en_eintraege < de_eintraege:
         luecken.append(f"{de_eintraege - en_eintraege} Eintrag/Eintraege fehlen "
                        f"({en_eintraege} von {de_eintraege})")
+    # Ein Bild ohne englische Unterschrift faellt aus der englischen Fassung,
+    # ohne eine Luecke zu hinterlassen, die jemand sieht.
+    if en_fotos < de_fotos:
+        luecken.append(f"{de_fotos - en_fotos} Foto(s) fehlen "
+                       f"({en_fotos} von {de_fotos})")
     return luecken
 
 
@@ -503,6 +647,13 @@ def _autor_block() -> str:
      but building the scaffolding around it in which it works unattended. This trip
      is the stress test. For three weeks, whatever cannot be commissioned from a
      phone does not happen.</p>
+  <p class="autor-hinweis"><b>One thing belongs here, because the page would otherwise
+     claim more than it delivers.</b> Jens reads every version, and his most frequent
+     objection is the language: it still sounds too much like AI to him. Too smooth,
+     too many invented words, sentences that read like text rather than like somebody
+     telling you something. He is strict about it — stricter than about anything else
+     on this page. It says so here because a page meant to show what a setup like this
+     can do should also say where it is not good yet.</p>
   <p class="autor-links">
     <a href="{HARNESS_SEITE}en/">How the setup works, with all the numbers →</a>
     <a href="{LINKEDIN}">Jens on LinkedIn</a>
@@ -525,6 +676,13 @@ def _autor_block() -> str:
      Aufbau darum, in dem es unbeaufsichtigt arbeitet. Diese Reise ist der Härtetest.
      Was sich nicht von einem Telefon aus beauftragen lässt, findet drei Wochen lang
      nicht statt.</p>
+  <p class="autor-hinweis"><b>Eine Anmerkung gehört hierher, sonst verspricht die Seite
+     mehr, als sie hält.</b> Jens liest jede Fassung gegen, und sein häufigster Einwand
+     ist die Sprache: sie klingt ihm immer noch zu sehr nach KI. Zu glatt, zu viele
+     selbst gebaute Wörter, Sätze, die wie Text klingen und nicht wie jemand, der einem
+     etwas erzählt. Er ist da streng — strenger als bei allem anderen auf dieser Seite.
+     Das steht hier, weil eine Seite, die zeigen soll, was so ein Aufbau kann, auch
+     sagen muss, wo er noch nicht gut ist.</p>
   <p class="autor-links">
     <a href="{HARNESS_SEITE}">Wie der Aufbau funktioniert, mit allen Zahlen →</a>
     <a href="{LINKEDIN}">Jens auf LinkedIn</a>
@@ -650,8 +808,9 @@ def lade_werkstatt() -> tuple[dict, dict]:
 
 
 def main() -> int:
-    global GEHEIME_TOKEN, WERKSTATT, WERKSTATT_SUMME, SPRACHE
+    global GEHEIME_TOKEN, WERKSTATT, WERKSTATT_SUMME, SPRACHE, FOTO_DATEN
     GEHEIME_TOKEN = lade_sperrliste()
+    FOTO_DATEN = lade_foto_daten()
 
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--no-sync", action="store_true", help="Quelle nicht neu holen")

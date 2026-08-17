@@ -424,6 +424,62 @@ a { color: var(--erlebt); }
 .sprachwechsel span { color: #8a8377; }
 .sprachwechsel a { color: #2f6b4f; text-decoration: none; border-bottom: 1px solid transparent; }
 .sprachwechsel a:hover { border-bottom-color: #2f6b4f; }
+
+/* --- Fotos ---
+   Sie stehen bewusst NICHT als Kachelwand oben auf der Seite. Das Zeichen vor
+   jedem Eintrag ist das Produkt dieser Seite; ein Bildteppich wuerde es
+   erschlagen. Ein Foto steht deshalb dort, wo es hingehoert: als Beleg unter
+   dem Eintrag, den es belegt, in derselben Satzbreite wie der Text. */
+
+.foto {
+  margin: 1.2rem 0 1.8rem;
+  padding: 0;
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  background: var(--papier-tief);
+}
+
+.foto figcaption {
+  margin-top: .5rem;
+  font-size: .84rem;
+  line-height: 1.45;
+  color: var(--tinte-leise);
+  padding-left: .1rem;
+}
+
+/* Mehrere Bilder aus einer Meldung: eine Reihe, gleiche Hoehe, damit sie als
+   eine Beobachtung lesbar sind und nicht als drei Ereignisse. */
+.fotos {
+  display: grid;
+  gap: .7rem;
+  margin: 1.2rem 0 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.fotos .foto { margin: 0; }
+.fotos .foto img { aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--pos, center); }
+.fotos .foto figcaption { font-size: .78rem; }
+
+@media (max-width: 560px) {
+  .fotos { grid-template-columns: 1fr; }
+  .fotos .foto img { aspect-ratio: 16 / 10; }
+}
+
+/* Die Anmerkung zur Sprache: Jens' eigener Einwand, sichtbar stehen gelassen.
+   Abgesetzt, damit sie nicht wie Fliesstext ueberlesen wird. */
+.autor-hinweis {
+  margin-top: 1.4rem;
+  padding: .9rem 1.1rem;
+  background: var(--papier-tief);
+  border-left: 3px solid var(--recherche);
+  border-radius: 2px;
+  font-size: .92rem;
+}
 </style>
 </head>
 <body>
@@ -447,7 +503,7 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 
 </header>
 
-<nav class="toc" aria-label="Abschnitte"><a href="#wie-das-dokument-zu-lesen-ist">Wie das Dokument zu lesen ist</a><a href="#bezahlen">Bezahlen</a><a href="#grenze-singapur-malaysia">Grenze Singapur → Malaysia</a><a href="#von-der-grenze-nach-mersing">Von der Grenze nach Mersing</a><a href="#unterwegs-in-singapur">Unterwegs in Singapur</a><a href="#strom-internet-telefon">Strom, Internet, Telefon</a><a href="#was-wir-vorher-falsch-geplant-hatten">Was wir vorher falsch geplant hatten</a><a href="#chronik">Chronik</a></nav>
+<nav class="toc" aria-label="Abschnitte"><a href="#wie-das-dokument-zu-lesen-ist">Wie das Dokument zu lesen ist</a><a href="#bezahlen">Bezahlen</a><a href="#grenze-singapur-malaysia">Grenze Singapur → Malaysia</a><a href="#von-der-grenze-nach-mersing">Von der Grenze nach Mersing</a><a href="#in-mersing">In Mersing</a><a href="#unterwegs-in-singapur">Unterwegs in Singapur</a><a href="#strom-internet-telefon">Strom, Internet, Telefon</a><a href="#was-wir-vorher-falsch-geplant-hatten">Was wir vorher falsch geplant hatten</a><a href="#chronik">Chronik</a></nav>
 
 <main>
 
@@ -593,6 +649,40 @@ kein Umstieg und keine zweite Fahrt.</p></div>
 Johor-Flagge an Zäunen, Masten und Hauswänden, auch in kleinen Orten. Der Nationalfeiertag
 Merdeka ist am 31. August, die Dekoration steht Wochen vorher — schöner Nebeneffekt für Fotos,
 und ein Hinweis darauf, dass Ende August mit vollen Straßen und Feiertagsverkehr zu rechnen ist.</p></div>
+<h2 id="in-mersing">In Mersing</h2>
+<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Ort ist voller Katzen (17.08.).</strong> Jens' Meldung dazu bestand aus einem Satz: „Wir
+lieben die vielen Katzen." Auf den Fotos sind es drei verschiedene Tiere an drei Stellen im
+Ortskern, alle satt, keines auf der Flucht: eine schwarze im Schatten unter einem Marktwagen,
+eine rot-weiße quer über die Fliesen gestreckt und schlafend, eine schwarz-weiße, die im
+Vorbeigehen kurz herüberschaut. Das ist keine Ausnahme dieses Tages — es ist das, wonach eine
+malaysische Kleinstadt aussieht.</p></div>
+<div class="fotos fotos--3"><figure class="foto"><img src="fotos/mersing-katze-marktwagen.jpg" width="1280" height="720" alt="Eine schwarze Katze liegt im Schatten unter einem Marktwagen." loading="lazy" decoding="async"><figcaption>Eine schwarze Katze liegt im Schatten unter einem Marktwagen.</figcaption></figure><figure class="foto"><img src="fotos/mersing-katze-fliesen.jpg" width="1280" height="720" alt="Eine rot-weiße Katze schläft ausgestreckt auf einem Fliesenboden." loading="lazy" decoding="async"><figcaption>Eine rot-weiße Katze schläft ausgestreckt auf einem Fliesenboden.</figcaption></figure><figure class="foto"><img src="fotos/mersing-katze-gehweg.jpg" width="1280" height="720" alt="Eine schwarz-weiße Katze läuft über das Kopfsteinpflaster am Straßenrand." loading="lazy" decoding="async"><figcaption>Eine schwarz-weiße Katze läuft über das Kopfsteinpflaster am Straßenrand.</figcaption></figure></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Streicheln ist hier harmlos — auf Borneo ist es das nicht, und zwar genau in dem Teil,
+den die wenigsten dafür halten.</strong> Die malaysische Halbinsel, also auch Johor und Mersing, gilt
+seit Juli 2013 als tollwutfrei; der letzte Fall beim Menschen war 1998. In <strong>Sarawak</strong> dagegen
+läuft seit 2017 ein Ausbruch, der bis heute Tote fordert: zwischen Januar und Mitte September
+2025 wurden dort 13.894 Tierbisse gemeldet, und <strong>59,7 % davon gingen auf Katzen zurück</strong>,
+nicht auf Hunde. <strong>Sabah</strong> — Sandakan, Kota Kinabalu, Kudat — gilt dagegen ebenfalls als
+tollwutfrei. Die beiden Staaten liegen auf derselben Insel und werden ständig verwechselt.
+Wer also auf Borneo eine Katze anfasst, sollte vorher wissen, in welchem der beiden er steht;
+und nach Biss oder Kratzer gilt überall dasselbe: sofort zum Arzt, nicht abwarten.</p></div>
+<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Wir standen an einem Geldautomaten in Mersing (17.08.).</strong> Damit ist der Absatz weiter oben
+über die fünf Banken im Ortskern zumindest halb bestätigt: es gibt dort einen erreichbaren
+Automaten, und er hat die Karte angenommen und eine Abfrage gestartet — mehr sagt das Foto
+nicht. <strong>Ob am Ende Geld herauskam, mit welcher Karte und zu welcher Gebühr, steht noch
+offen.</strong> Die Frage ist gestellt; sobald die Antwort da ist, steht hier ein ✓ oder ein ✗ mit
+Betrag statt dieses Satzes. So entsteht der Unterschied zwischen den Zeichen in diesem
+Dokument: erst die Erfahrung, dann der Haken.</p></div>
+<div class="fotos fotos--2"><figure class="foto" style="--pos: top"><img src="fotos/mersing-geldautomat.jpg" width="720" height="1280" alt="Ein Geldautomat in Mersing, mitten in einer laufenden Abfrage." loading="lazy" decoding="async"><figcaption>Ein Geldautomat in Mersing, mitten in einer laufenden Abfrage.</figcaption></figure><figure class="foto"><img src="fotos/mersing-bankenzeile.jpg" width="1280" height="720" alt="Eine Bankfiliale in der Geschäftszeile von Mersing, davor geparkte Roller." loading="lazy" decoding="async"><figcaption>Eine Bankfiliale in der Geschäftszeile von Mersing, davor geparkte Roller.</figcaption></figure></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Das auffällige leerstehende Gebäude im Ortskern war einmal ein Kino.</strong> Der Schriftzug
+über dem Eingang ist bis auf die Schatten der Buchstaben verschwunden, aber das letzte Wort
+endet erkennbar auf THEATRE, und der fensterlose Aufbau auf dem Dach ist der Turm, in dem bei
+alten Lichtspielhäusern die Technik saß. Den Namen gibt keine offene Quelle her. Eine Spur
+führt trotzdem weiter: In Mersing gibt es einen im Ort bekannten Nudelstand namens <em>Mee Goreng
+Panggung Wayang</em> — wörtlich „Kino-Nudeln" —, der der Überlieferung nach früher im Kino selbst
+stand; auf Google Maps zu finden als „Panggung Cafe Mersing". Ob es dieses Gebäude war, sagt
+das nicht.</p></div>
+<figure class="foto"><img src="fotos/mersing-altes-kino.jpg" width="1280" height="720" alt="Ein leerstehendes ehemaliges Kino im Ortskern von Mersing." loading="lazy" decoding="async"><figcaption>Ein leerstehendes ehemaliges Kino im Ortskern von Mersing.</figcaption></figure>
 <h2 id="unterwegs-in-singapur">Unterwegs in Singapur</h2>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben
 (16.08.).</strong> Gemessen zwischen „wir sind an der Jalan Besar" und „wir sind am Garten", also
@@ -604,8 +694,8 @@ der richtige Zug fährt aber <strong>Richtung Bukit Panjang</strong>, also schei
 Bahnsteig gehört der Blick auf die Stationsnummern, nicht auf die Himmelsrichtung. Ab
 Bayfront: Ausgang B, Unterführung, dann Dragonfly Bridge oder Meadow Bridge.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Zwei Lichtshows, beide gratis, beide ohne Ticket, 800 Meter auseinander.</strong>
-*Spectra* (Wasser, Licht, Laser) 20:00 und 21:00 an der Event Plaza am Marina Bay Sands,
-direkt am Stationsausgang. *Garden Rhapsody* (Supertrees) 19:45 und 20:45 im Supertree
+<em>Spectra</em> (Wasser, Licht, Laser) 20:00 und 21:00 an der Event Plaza am Marina Bay Sands,
+direkt am Stationsausgang. <em>Garden Rhapsody</em> (Supertrees) 19:45 und 20:45 im Supertree
 Grove. Je 15 Minuten. An einem Abend gehen beide: 20:00 Spectra, zehn Minuten Fußweg,
 20:45 Garden Rhapsody.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Vom Flughafen in die Stadt entscheidet das Gepäck, nicht der Preis.</strong> MRT S$2,20 pro
@@ -671,6 +761,13 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
      Aufbau darum, in dem es unbeaufsichtigt arbeitet. Diese Reise ist der Härtetest.
      Was sich nicht von einem Telefon aus beauftragen lässt, findet drei Wochen lang
      nicht statt.</p>
+  <p class="autor-hinweis"><b>Eine Anmerkung gehört hierher, sonst verspricht die Seite
+     mehr, als sie hält.</b> Jens liest jede Fassung gegen, und sein häufigster Einwand
+     ist die Sprache: sie klingt ihm immer noch zu sehr nach KI. Zu glatt, zu viele
+     selbst gebaute Wörter, Sätze, die wie Text klingen und nicht wie jemand, der einem
+     etwas erzählt. Er ist da streng — strenger als bei allem anderen auf dieser Seite.
+     Das steht hier, weil eine Seite, die zeigen soll, was so ein Aufbau kann, auch
+     sagen muss, wo er noch nicht gut ist.</p>
   <p class="autor-links">
     <a href="https://jenslaufer.com/harry/">Wie der Aufbau funktioniert, mit allen Zahlen →</a>
     <a href="https://www.linkedin.com/in/jenslaufer">Jens auf LinkedIn</a>

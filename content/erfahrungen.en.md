@@ -140,6 +140,54 @@ of August means busy roads and holiday traffic.
 
 ---
 
+## In Mersing
+
+**✓ The town is full of cats (17 Aug).** Jens's message about it was one sentence: "we love
+all the cats". The photographs show three different animals in three places in the town
+centre, all well fed, none of them running away: a black one in the shade under a market
+cart, a ginger-and-white one stretched out asleep across a tiled floor, a black-and-white one
+glancing over as it walks past. This is not a quirk of the day — it is what a small Malaysian
+town looks like.
+<!-- werkstatt: telegram=2026-08-17T08:59 -->
+
+![A black cat lying in the shade under a market cart.](foto:2026-08-17_085957.jpg)
+![A ginger-and-white cat asleep, stretched out across a tiled floor.](foto:2026-08-17_090000.jpg)
+![A black-and-white cat walking along the paving at the roadside.](foto:2026-08-17_090002.jpg)
+
+**○ Petting them is harmless here — on Borneo it is not, and not in the part most people
+assume.** Peninsular Malaysia, which includes Johor and Mersing, has been officially rabies-free
+since July 2013; the last human case was in 1998. **Sarawak**, by contrast, has had an ongoing
+outbreak since 2017 that is still killing people: between January and mid-September 2025 it
+recorded 13,894 animal bites, and **59.7 % of them came from cats**, not dogs. **Sabah** —
+Sandakan, Kota Kinabalu, Kudat — is likewise considered rabies-free. The two states sit on the
+same island and are constantly mixed up. So before touching a cat on Borneo, know which of the
+two you are standing in; and after a bite or a scratch the rule is the same everywhere: see a
+doctor straight away, do not wait.
+
+**✓ We stood at a cash machine in Mersing (17 Aug).** That much confirms half of the paragraph
+further up about the five banks in the town centre: there is a machine you can walk to, it
+accepted the card and started a transaction — the photograph says no more than that. **Whether
+cash actually came out, on which card and at what fee, is still open.** The question has gone
+back; as soon as there is an answer, a ✓ or a ✗ with the amount will stand here instead of this
+sentence. That is exactly what separates the marks in this document: the experience first, the
+tick afterwards.
+<!-- werkstatt: telegram=2026-08-17T08:59 -->
+
+![A cash machine in Mersing, mid-transaction.](foto:2026-08-17_090006.jpg)
+![A bank branch in the shophouse row in Mersing, scooters parked in front.](foto:2026-08-17_090008.jpg)
+
+**○ The conspicuous empty building in the town centre used to be a cinema.** The lettering
+above the entrance has worn away to the shadows of its letters, but the last word clearly ends
+in THEATRE, and the windowless block on the roof is the tower that held the projection and
+stage machinery of old picture houses. No open source gives up the name. One trail does lead
+on: Mersing has a locally famous noodle stall called *Mee Goreng Panggung Wayang* — literally
+"cinema fried noodles" — which by local account once stood inside the cinema itself; it is on
+Google Maps as "Panggung Cafe Mersing". That does not prove it was this building.
+
+![A derelict former cinema in the centre of Mersing.](foto:2026-08-17_090004.jpg)
+
+---
+
 ## Getting around Singapore
 
 **✓ From Jalan Besar to Gardens by the Bay: 33 minutes, at seven in the evening (16 Aug).**

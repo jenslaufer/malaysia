@@ -424,6 +424,62 @@ a { color: var(--erlebt); }
 .sprachwechsel span { color: #8a8377; }
 .sprachwechsel a { color: #2f6b4f; text-decoration: none; border-bottom: 1px solid transparent; }
 .sprachwechsel a:hover { border-bottom-color: #2f6b4f; }
+
+/* --- Fotos ---
+   Sie stehen bewusst NICHT als Kachelwand oben auf der Seite. Das Zeichen vor
+   jedem Eintrag ist das Produkt dieser Seite; ein Bildteppich wuerde es
+   erschlagen. Ein Foto steht deshalb dort, wo es hingehoert: als Beleg unter
+   dem Eintrag, den es belegt, in derselben Satzbreite wie der Text. */
+
+.foto {
+  margin: 1.2rem 0 1.8rem;
+  padding: 0;
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  background: var(--papier-tief);
+}
+
+.foto figcaption {
+  margin-top: .5rem;
+  font-size: .84rem;
+  line-height: 1.45;
+  color: var(--tinte-leise);
+  padding-left: .1rem;
+}
+
+/* Mehrere Bilder aus einer Meldung: eine Reihe, gleiche Hoehe, damit sie als
+   eine Beobachtung lesbar sind und nicht als drei Ereignisse. */
+.fotos {
+  display: grid;
+  gap: .7rem;
+  margin: 1.2rem 0 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.fotos .foto { margin: 0; }
+.fotos .foto img { aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--pos, center); }
+.fotos .foto figcaption { font-size: .78rem; }
+
+@media (max-width: 560px) {
+  .fotos { grid-template-columns: 1fr; }
+  .fotos .foto img { aspect-ratio: 16 / 10; }
+}
+
+/* Die Anmerkung zur Sprache: Jens' eigener Einwand, sichtbar stehen gelassen.
+   Abgesetzt, damit sie nicht wie Fliesstext ueberlesen wird. */
+.autor-hinweis {
+  margin-top: 1.4rem;
+  padding: .9rem 1.1rem;
+  background: var(--papier-tief);
+  border-left: 3px solid var(--recherche);
+  border-radius: 2px;
+  font-size: .92rem;
+}
 </style>
 </head>
 <body>
@@ -447,7 +503,7 @@ date on it — or as a failure, so that nobody tries it twice.</p>
 
 </header>
 
-<nav class="toc" aria-label="Sections"><a href="#how-to-read-this-document">How to read this document</a><a href="#paying">Paying</a><a href="#border-singapore-malaysia">Border Singapore → Malaysia</a><a href="#from-the-border-to-mersing">From the border to Mersing</a><a href="#getting-around-singapore">Getting around Singapore</a><a href="#power-internet-phone">Power, internet, phone</a><a href="#what-we-had-planned-wrong-beforehand">What we had planned wrong beforehand</a><a href="#timeline">Timeline</a></nav>
+<nav class="toc" aria-label="Sections"><a href="#how-to-read-this-document">How to read this document</a><a href="#paying">Paying</a><a href="#border-singapore-malaysia">Border Singapore → Malaysia</a><a href="#from-the-border-to-mersing">From the border to Mersing</a><a href="#in-mersing">In Mersing</a><a href="#getting-around-singapore">Getting around Singapore</a><a href="#power-internet-phone">Power, internet, phone</a><a href="#what-we-had-planned-wrong-beforehand">What we had planned wrong beforehand</a><a href="#timeline">Timeline</a></nav>
 
 <main>
 
@@ -591,6 +647,39 @@ bus and reaching the ferry counter there is no transfer and no second ride.</p><
 fences, poles and house walls, in small towns too. The national holiday, Merdeka, is on 31
 August and the decorations go up weeks ahead — good for photographs, and a warning that the end
 of August means busy roads and holiday traffic.</p></div>
+<h2 id="in-mersing">In Mersing</h2>
+<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The town is full of cats (17 Aug).</strong> Jens's message about it was one sentence: "we love
+all the cats". The photographs show three different animals in three places in the town
+centre, all well fed, none of them running away: a black one in the shade under a market
+cart, a ginger-and-white one stretched out asleep across a tiled floor, a black-and-white one
+glancing over as it walks past. This is not a quirk of the day — it is what a small Malaysian
+town looks like.</p></div>
+<div class="fotos fotos--3"><figure class="foto"><img src="fotos/mersing-katze-marktwagen.jpg" width="1280" height="720" alt="A black cat lying in the shade under a market cart." loading="lazy" decoding="async"><figcaption>A black cat lying in the shade under a market cart.</figcaption></figure><figure class="foto"><img src="fotos/mersing-katze-fliesen.jpg" width="1280" height="720" alt="A ginger-and-white cat asleep, stretched out across a tiled floor." loading="lazy" decoding="async"><figcaption>A ginger-and-white cat asleep, stretched out across a tiled floor.</figcaption></figure><figure class="foto"><img src="fotos/mersing-katze-gehweg.jpg" width="1280" height="720" alt="A black-and-white cat walking along the paving at the roadside." loading="lazy" decoding="async"><figcaption>A black-and-white cat walking along the paving at the roadside.</figcaption></figure></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Petting them is harmless here — on Borneo it is not, and not in the part most people
+assume.</strong> Peninsular Malaysia, which includes Johor and Mersing, has been officially rabies-free
+since July 2013; the last human case was in 1998. <strong>Sarawak</strong>, by contrast, has had an ongoing
+outbreak since 2017 that is still killing people: between January and mid-September 2025 it
+recorded 13,894 animal bites, and <strong>59.7 % of them came from cats</strong>, not dogs. <strong>Sabah</strong> —
+Sandakan, Kota Kinabalu, Kudat — is likewise considered rabies-free. The two states sit on the
+same island and are constantly mixed up. So before touching a cat on Borneo, know which of the
+two you are standing in; and after a bite or a scratch the rule is the same everywhere: see a
+doctor straight away, do not wait.</p></div>
+<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>We stood at a cash machine in Mersing (17 Aug).</strong> That much confirms half of the paragraph
+further up about the five banks in the town centre: there is a machine you can walk to, it
+accepted the card and started a transaction — the photograph says no more than that. <strong>Whether
+cash actually came out, on which card and at what fee, is still open.</strong> The question has gone
+back; as soon as there is an answer, a ✓ or a ✗ with the amount will stand here instead of this
+sentence. That is exactly what separates the marks in this document: the experience first, the
+tick afterwards.</p></div>
+<div class="fotos fotos--2"><figure class="foto" style="--pos: top"><img src="fotos/mersing-geldautomat.jpg" width="720" height="1280" alt="A cash machine in Mersing, mid-transaction." loading="lazy" decoding="async"><figcaption>A cash machine in Mersing, mid-transaction.</figcaption></figure><figure class="foto"><img src="fotos/mersing-bankenzeile.jpg" width="1280" height="720" alt="A bank branch in the shophouse row in Mersing, scooters parked in front." loading="lazy" decoding="async"><figcaption>A bank branch in the shophouse row in Mersing, scooters parked in front.</figcaption></figure></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The conspicuous empty building in the town centre used to be a cinema.</strong> The lettering
+above the entrance has worn away to the shadows of its letters, but the last word clearly ends
+in THEATRE, and the windowless block on the roof is the tower that held the projection and
+stage machinery of old picture houses. No open source gives up the name. One trail does lead
+on: Mersing has a locally famous noodle stall called <em>Mee Goreng Panggung Wayang</em> — literally
+"cinema fried noodles" — which by local account once stood inside the cinema itself; it is on
+Google Maps as "Panggung Cafe Mersing". That does not prove it was this building.</p></div>
+<figure class="foto"><img src="fotos/mersing-altes-kino.jpg" width="1280" height="720" alt="A derelict former cinema in the centre of Mersing." loading="lazy" decoding="async"><figcaption>A derelict former cinema in the centre of Mersing.</figcaption></figure>
 <h2 id="getting-around-singapore">Getting around Singapore</h2>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>From Jalan Besar to Gardens by the Bay: 33 minutes, at seven in the evening (16 Aug).</strong>
 Measured between "we're at Jalan Besar" and "we're at the garden", so including the walk to
@@ -601,8 +690,8 @@ train goes <strong>towards Bukit Panjang</strong>, which looks like north. On th
 station numbers, not at the compass. From Bayfront: exit B, underpass, then Dragonfly Bridge
 or Meadow Bridge.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Two light shows, both free, both without a ticket, 800 metres apart.</strong>
-*Spectra* (water, light, lasers) at 20:00 and 21:00 on the Event Plaza at Marina Bay Sands,
-right at the station exit. *Garden Rhapsody* (Supertrees) at 19:45 and 20:45 in the Supertree
+<em>Spectra</em> (water, light, lasers) at 20:00 and 21:00 on the Event Plaza at Marina Bay Sands,
+right at the station exit. <em>Garden Rhapsody</em> (Supertrees) at 19:45 and 20:45 in the Supertree
 Grove. Fifteen minutes each. You can do both in one evening: 20:00 Spectra, ten minutes' walk,
 20:45 Garden Rhapsody.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>From the airport into town, the luggage decides, not the price.</strong> MRT S$2.20 per person
@@ -667,6 +756,13 @@ a whole travel day hangs on it. The ticket counts, not the order.</p>
      but building the scaffolding around it in which it works unattended. This trip
      is the stress test. For three weeks, whatever cannot be commissioned from a
      phone does not happen.</p>
+  <p class="autor-hinweis"><b>One thing belongs here, because the page would otherwise
+     claim more than it delivers.</b> Jens reads every version, and his most frequent
+     objection is the language: it still sounds too much like AI to him. Too smooth,
+     too many invented words, sentences that read like text rather than like somebody
+     telling you something. He is strict about it — stricter than about anything else
+     on this page. It says so here because a page meant to show what a setup like this
+     can do should also say where it is not good yet.</p>
   <p class="autor-links">
     <a href="https://jenslaufer.com/harry/en/">How the setup works, with all the numbers →</a>
     <a href="https://www.linkedin.com/in/jenslaufer">Jens on LinkedIn</a>

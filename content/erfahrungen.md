@@ -141,6 +141,55 @@ und ein Hinweis darauf, dass Ende August mit vollen Straßen und Feiertagsverkeh
 
 ---
 
+## In Mersing
+
+**✓ Der Ort ist voller Katzen (17.08.).** Jens' Meldung dazu bestand aus einem Satz: „Wir
+lieben die vielen Katzen." Auf den Fotos sind es drei verschiedene Tiere an drei Stellen im
+Ortskern, alle satt, keines auf der Flucht: eine schwarze im Schatten unter einem Marktwagen,
+eine rot-weiße quer über die Fliesen gestreckt und schlafend, eine schwarz-weiße, die im
+Vorbeigehen kurz herüberschaut. Das ist keine Ausnahme dieses Tages — es ist das, wonach eine
+malaysische Kleinstadt aussieht.
+<!-- werkstatt: telegram=2026-08-17T08:59 -->
+
+![Eine schwarze Katze liegt im Schatten unter einem Marktwagen.](foto:2026-08-17_085957.jpg)
+![Eine rot-weiße Katze schläft ausgestreckt auf einem Fliesenboden.](foto:2026-08-17_090000.jpg)
+![Eine schwarz-weiße Katze läuft über das Kopfsteinpflaster am Straßenrand.](foto:2026-08-17_090002.jpg)
+
+**○ Streicheln ist hier harmlos — auf Borneo ist es das nicht, und zwar genau in dem Teil,
+den die wenigsten dafür halten.** Die malaysische Halbinsel, also auch Johor und Mersing, gilt
+seit Juli 2013 als tollwutfrei; der letzte Fall beim Menschen war 1998. In **Sarawak** dagegen
+läuft seit 2017 ein Ausbruch, der bis heute Tote fordert: zwischen Januar und Mitte September
+2025 wurden dort 13.894 Tierbisse gemeldet, und **59,7 % davon gingen auf Katzen zurück**,
+nicht auf Hunde. **Sabah** — Sandakan, Kota Kinabalu, Kudat — gilt dagegen ebenfalls als
+tollwutfrei. Die beiden Staaten liegen auf derselben Insel und werden ständig verwechselt.
+Wer also auf Borneo eine Katze anfasst, sollte vorher wissen, in welchem der beiden er steht;
+und nach Biss oder Kratzer gilt überall dasselbe: sofort zum Arzt, nicht abwarten.
+
+**✓ Wir standen an einem Geldautomaten in Mersing (17.08.).** Damit ist der Absatz weiter oben
+über die fünf Banken im Ortskern zumindest halb bestätigt: es gibt dort einen erreichbaren
+Automaten, und er hat die Karte angenommen und eine Abfrage gestartet — mehr sagt das Foto
+nicht. **Ob am Ende Geld herauskam, mit welcher Karte und zu welcher Gebühr, steht noch
+offen.** Die Frage ist gestellt; sobald die Antwort da ist, steht hier ein ✓ oder ein ✗ mit
+Betrag statt dieses Satzes. So entsteht der Unterschied zwischen den Zeichen in diesem
+Dokument: erst die Erfahrung, dann der Haken.
+<!-- werkstatt: telegram=2026-08-17T08:59 -->
+
+![Ein Geldautomat in Mersing, mitten in einer laufenden Abfrage.](foto:2026-08-17_090006.jpg)
+![Eine Bankfiliale in der Geschäftszeile von Mersing, davor geparkte Roller.](foto:2026-08-17_090008.jpg)
+
+**○ Das auffällige leerstehende Gebäude im Ortskern war einmal ein Kino.** Der Schriftzug
+über dem Eingang ist bis auf die Schatten der Buchstaben verschwunden, aber das letzte Wort
+endet erkennbar auf THEATRE, und der fensterlose Aufbau auf dem Dach ist der Turm, in dem bei
+alten Lichtspielhäusern die Technik saß. Den Namen gibt keine offene Quelle her. Eine Spur
+führt trotzdem weiter: In Mersing gibt es einen im Ort bekannten Nudelstand namens *Mee Goreng
+Panggung Wayang* — wörtlich „Kino-Nudeln" —, der der Überlieferung nach früher im Kino selbst
+stand; auf Google Maps zu finden als „Panggung Cafe Mersing". Ob es dieses Gebäude war, sagt
+das nicht.
+
+![Ein leerstehendes ehemaliges Kino im Ortskern von Mersing.](foto:2026-08-17_090004.jpg)
+
+---
+
 ## Unterwegs in Singapur
 
 **✓ Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben

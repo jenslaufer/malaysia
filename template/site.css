@@ -395,3 +395,59 @@ a { color: var(--erlebt); }
 .sprachwechsel span { color: #8a8377; }
 .sprachwechsel a { color: #2f6b4f; text-decoration: none; border-bottom: 1px solid transparent; }
 .sprachwechsel a:hover { border-bottom-color: #2f6b4f; }
+
+/* --- Fotos ---
+   Sie stehen bewusst NICHT als Kachelwand oben auf der Seite. Das Zeichen vor
+   jedem Eintrag ist das Produkt dieser Seite; ein Bildteppich wuerde es
+   erschlagen. Ein Foto steht deshalb dort, wo es hingehoert: als Beleg unter
+   dem Eintrag, den es belegt, in derselben Satzbreite wie der Text. */
+
+.foto {
+  margin: 1.2rem 0 1.8rem;
+  padding: 0;
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  background: var(--papier-tief);
+}
+
+.foto figcaption {
+  margin-top: .5rem;
+  font-size: .84rem;
+  line-height: 1.45;
+  color: var(--tinte-leise);
+  padding-left: .1rem;
+}
+
+/* Mehrere Bilder aus einer Meldung: eine Reihe, gleiche Hoehe, damit sie als
+   eine Beobachtung lesbar sind und nicht als drei Ereignisse. */
+.fotos {
+  display: grid;
+  gap: .7rem;
+  margin: 1.2rem 0 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.fotos .foto { margin: 0; }
+.fotos .foto img { aspect-ratio: 4 / 3; object-fit: cover; object-position: var(--pos, center); }
+.fotos .foto figcaption { font-size: .78rem; }
+
+@media (max-width: 560px) {
+  .fotos { grid-template-columns: 1fr; }
+  .fotos .foto img { aspect-ratio: 16 / 10; }
+}
+
+/* Die Anmerkung zur Sprache: Jens' eigener Einwand, sichtbar stehen gelassen.
+   Abgesetzt, damit sie nicht wie Fliesstext ueberlesen wird. */
+.autor-hinweis {
+  margin-top: 1.4rem;
+  padding: .9rem 1.1rem;
+  background: var(--papier-tief);
+  border-left: 3px solid var(--recherche);
+  border-radius: 2px;
+  font-size: .92rem;
+}

@@ -65,6 +65,41 @@ Eine Markdown-Bibliothek wäre hier die falsche Wahl: sie macht aus dem Zeichen
 fetten Fließtext. Der Renderer in `build.py` kennt genau die Formen, die im
 Dokument vorkommen, und macht aus dem Zeichen Auszeichnung.
 
+## Fotos
+
+Im Quelldokument steht eine Bildzeile als eigener Absatz:
+
+    ![Eine schwarze Katze liegt im Schatten unter einem Marktwagen.](foto:2026-08-17_085957.jpg)
+
+Mehrere Zeilen direkt untereinander werden **eine Gruppe** (Bilderreihe), eine
+einzelne Zeile ein Bild in Satzbreite. Der Dateiname ist der aus
+`state/attachments/` im Assistenz-Repo — also der, unter dem Telegram das Bild
+abgelegt hat. Was daraus veröffentlicht wird, steht in `content/fotos.json`:
+Zielname, Sperrkästen, Bildausschnitt.
+
+**Kopiert wird nie, es wird neu geschrieben.** Das ist der ganze Punkt:
+`pruefe_privat()` liest Text, und die Standortdaten eines Fotos stehen in
+keinem Satz. Ein Bild mit GPS-Koordinaten läuft an jeder Textprüfung vorbei,
+ist auf der gerenderten Seite unsichtbar und sagt Fremden, vor welchem Haus die
+Familie gerade steht. Telegram wirft das EXIF beim Komprimieren zwar selbst weg
+(am 17.08. an allen zwölf Bildern nachgemessen) — aber das ist Telegrams
+Eigenschaft, nicht unsere: dasselbe Foto **als Datei** geschickt behält alles.
+Also schreibt der Build jedes Bild neu, ohne EXIF, ohne Farbprofil, begrenzt auf
+1280 px.
+
+`blur` sind **relative** Kästen `[x, y, breite, höhe]` von 0 bis 1 — sie
+überleben das Verkleinern; absolute Pixel zeigen nach dem Skalieren woanders
+hin, und zwar lautlos. Darin liegen die Kfz-Kennzeichen Fremder und erkennbare
+Gesichter. Die Liste ist **von Hand gepflegt, und das ist Absicht**: ein
+Erkenner, der drei von vier Kennzeichen findet, liest sich wie Schutz und ist
+keiner. Nach jeder Änderung das Bild ansehen, nicht nur den Test — am 17.08.
+lagen drei von vier Kästen zu tief und ein ganzer Satz Roller-Kennzeichen war
+übersehen, sichtbar erst mit eingezeichneten Rahmen über dem Original.
+
+`position: "top"` steuert den Bildausschnitt in der Gruppe. Beim hochkanten Foto
+des Geldautomaten steht die Aussage — die laufende Abfrage auf dem Schirm —
+oben; mittig zugeschnitten war das Bild noch da und sein Inhalt weg.
+
 ## Datenschutz ist im Build verdrahtet, nicht im Kopf
 
 `pruefe_privat()` bricht den Build ab, wenn Passnummern, IBANs, E-Mail-Adressen,

@@ -12,10 +12,16 @@ Zwei Sorten Test, und die zweite ist die wichtigere:
 Lauf: python3 tests/test_build.py
 """
 
+import contextlib
+import io
 import re
+import shutil
 import sys
+import tempfile
 import unittest
 from pathlib import Path
+
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -530,6 +536,235 @@ Intro.
         build.SPRACHE = "en"
         with self.assertRaises(build.PrivatException):
             build.baue_seite(self.EN + "\n\nWrite to jens@example.com.\n")
+
+
+class TestFotos(unittest.TestCase):
+    """Ein Foto ist der Beleg hinter einem Haken — und die groesste Leckstelle.
+
+    Der Textwaechter `pruefe_privat` liest Text. Eine JPEG-Datei traegt ihre
+    Standortdaten im EXIF-Block, und der steht in keinem Satz: eine Datei mit
+    GPS-Koordinaten laeuft an jeder Textpruefung vorbei und ist auf der
+    gerenderten Seite unsichtbar. Genau die Sorte Fehler, die erst auffaellt,
+    wenn sie nicht mehr ruecknehmbar ist.
+    """
+
+    def setUp(self):
+        build.SPRACHE = "de"
+        self.tmp = tempfile.mkdtemp()
+        self.quelle = Path(self.tmp) / "quelle"
+        self.ziel = Path(self.tmp) / "fotos"
+        self.quelle.mkdir()
+        self.ziel.mkdir()
+        self._alt = (build.FOTO_QUELLE, build.FOTO_ZIEL, dict(build.FOTO_DATEN))
+        build.FOTO_QUELLE, build.FOTO_ZIEL = self.quelle, self.ziel
+        build.FOTO_DATEN = {}
+
+    def tearDown(self):
+        build.FOTO_QUELLE, build.FOTO_ZIEL, build.FOTO_DATEN = self._alt
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def _jpeg(self, name="bild.jpg", groesse=(1600, 900), gps=False):
+        """Ein Testfoto, auf Wunsch mit Standortdaten im EXIF."""
+        bild = Image.new("RGB", groesse)
+        for x in range(groesse[0]):  # Verlauf, damit Weichzeichnen messbar ist
+            for y in range(0, groesse[1], 4):
+                bild.putpixel((x, y), ((x * 7) % 256, (y * 13) % 256, 90))
+        exif = Image.Exif()
+        if gps:
+            # Mersing, ungefaehr — genau der Wert, der nie oeffentlich werden darf.
+            exif[0x8825] = {1: "N", 2: (2.0, 25.0, 52.0),
+                            3: "E", 4: (103.0, 50.0, 26.0)}
+            exif[0x010F] = "TestPhone"
+        pfad = self.quelle / name
+        bild.save(pfad, "JPEG", exif=exif)
+        return pfad
+
+    # ------------------------------------------------------- Der Datenschutz
+
+    def test_standortdaten_erreichen_die_seite_nicht(self):
+        """Das eigentliche Versprechen. Faellt der Test, faellt der Rest egal aus."""
+        self._jpeg("mit-gps.jpg", gps=True)
+        with Image.open(self.quelle / "mit-gps.jpg") as vorher:
+            self.assertTrue(vorher.getexif().get_ifd(0x8825),
+                            "die Vorlage muss GPS tragen, sonst prueft der Test nichts")
+        ziel = build.verarbeite_foto("mit-gps.jpg")
+        with Image.open(ziel) as nachher:
+            self.assertFalse(nachher.getexif().get_ifd(0x8825), "GPS im Ausgabebild")
+            self.assertFalse(dict(nachher.getexif()), "EXIF im Ausgabebild")
+
+    def test_kein_bild_wird_roh_durchgereicht(self):
+        """Kopieren wuerde EXIF mitkopieren. Es muss neu geschrieben werden."""
+        quelle = self._jpeg("roh.jpg", gps=True)
+        ziel = build.verarbeite_foto("roh.jpg")
+        self.assertNotEqual(quelle.read_bytes(), ziel.read_bytes())
+
+    def test_gesperrte_stellen_werden_unkenntlich(self):
+        """Kfz-Kennzeichen Fremder. Relative Koordinaten, damit sie das
+        Verkleinern ueberleben — absolute Pixel zeigen nach dem Skalieren
+        woanders hin, und zwar lautlos."""
+        self._jpeg("kennzeichen.jpg")
+        build.FOTO_DATEN = {"kennzeichen.jpg": {"blur": [[0.25, 0.5, 0.2, 0.1]]}}
+        ziel = build.verarbeite_foto("kennzeichen.jpg")
+        with Image.open(ziel) as bild:
+            b, h = bild.size
+            innen = bild.crop((int(0.30 * b), int(0.55 * h), int(0.40 * b), int(0.58 * h)))
+            aussen = bild.crop((int(0.70 * b), int(0.55 * h), int(0.80 * b), int(0.58 * h)))
+        self.assertLess(self._streuung(innen), self._streuung(aussen) / 2,
+                        "der gesperrte Bereich ist nicht weichgezeichnet")
+
+    @staticmethod
+    def _streuung(bild) -> float:
+        werte = list(bild.convert("L").getdata())
+        mittel = sum(werte) / len(werte)
+        return (sum((w - mittel) ** 2 for w in werte) / len(werte)) ** 0.5
+
+    def test_ohne_sperrliste_bleibt_das_bild_unveraendert_scharf(self):
+        """Gegenprobe: der Weichzeichner darf nicht immer anspringen."""
+        self._jpeg("scharf.jpg")
+        ziel = build.verarbeite_foto("scharf.jpg")
+        with Image.open(ziel) as bild:
+            b, h = bild.size
+            aus = bild.crop((int(0.30 * b), int(0.55 * h), int(0.40 * b), int(0.58 * h)))
+        self.assertGreater(self._streuung(aus), 10)
+
+    def test_quellpfad_steht_nicht_auf_der_seite(self):
+        self._jpeg("pfad.jpg")
+        html = build.render_markdown("![Eine Katze.](foto:pfad.jpg)")
+        self.assertNotIn("attachments", html)
+        self.assertNotIn(str(self.quelle), html)
+
+    # ----------------------------------------------------------- Das Rendern
+
+    def test_foto_wird_zu_figure_mit_unterschrift(self):
+        self._jpeg("katze.jpg")
+        html = build.render_markdown("![Eine schwarze Katze im Schatten.](foto:katze.jpg)")
+        self.assertIn("<figure", html)
+        self.assertIn("<figcaption>", html)
+        self.assertIn("Eine schwarze Katze im Schatten.", html)
+        self.assertRegex(html, r'src="fotos/[^"]+\.jpg"')
+
+    def test_bild_traegt_masse_und_alternativtext(self):
+        """Ohne width/height springt das Layout beim Laden."""
+        self._jpeg("masse.jpg", groesse=(1200, 800))
+        html = build.render_markdown("![Ein Geldautomat.](foto:masse.jpg)")
+        self.assertRegex(html, r'width="\d+"')
+        self.assertRegex(html, r'height="\d+"')
+        self.assertIn('alt="Ein Geldautomat."', html)
+        self.assertIn('loading="lazy"', html)
+
+    def test_mehrere_fotos_werden_eine_gruppe(self):
+        for n in ("a.jpg", "b.jpg", "c.jpg"):
+            self._jpeg(n)
+        html = build.render_markdown(
+            "![Erste.](foto:a.jpg)\n![Zweite.](foto:b.jpg)\n![Dritte.](foto:c.jpg)")
+        self.assertIn('class="fotos fotos--3"', html)
+        self.assertEqual(html.count("<figure"), 3)
+
+    def test_fehlendes_foto_bricht_nicht_ab_und_zeigt_keine_ruine(self):
+        """Ein kaputtes Bild ist auf einer oeffentlichen Seite sichtbarer
+        Schaden; ein fehlender Absatz ist es nicht. Also weg damit — aber
+        laut, nie stumm."""
+        fehler = io.StringIO()
+        with contextlib.redirect_stderr(fehler):
+            html = build.render_markdown("![Fehlt.](foto:gibtsnicht.jpg)")
+        self.assertNotIn("<img", html)
+        self.assertIn("gibtsnicht.jpg", fehler.getvalue())
+
+    def test_hochformat_behaelt_seinen_bildausschnitt(self):
+        """Im gerenderten Bild gefunden, im Quelltext unsichtbar.
+
+        Die Gruppe schneidet jedes Bild auf 4:3. Das Foto des Geldautomaten ist
+        hochkant, und der Satz, um den es geht — die laufende Abfrage auf dem
+        Schirm — steht oben. Zugeschnitten auf die Mitte zeigte es Tastatur und
+        sonst nichts: das Bild war noch da und sein Inhalt weg.
+        """
+        self._jpeg("hoch.jpg", groesse=(720, 1280))
+        self._jpeg("quer.jpg", groesse=(1280, 720))
+        build.FOTO_DATEN = {"hoch.jpg": {"position": "top"}}
+        html = build.render_markdown("![Hoch.](foto:hoch.jpg)\n![Quer.](foto:quer.jpg)")
+        self.assertIn("--pos: top", html)
+        self.assertEqual(html.count("--pos"), 1, "nur das erklaerte Bild bekommt eine Position")
+
+    def test_kursiv_wird_ausgezeichnet_statt_gedruckt(self):
+        """Sternchen standen woertlich auf der Seite: *Mee Goreng Panggung
+        Wayang* — der Renderer kannte nur **fett** und `code`."""
+        html = build.render_markdown("Ein Stand namens *Mee Goreng Panggung Wayang* im Ort.")
+        self.assertIn("<em>Mee Goreng Panggung Wayang</em>", html)
+        self.assertNotIn("*", html)
+
+    def test_fett_bleibt_fett_neben_kursiv(self):
+        """Die Reihenfolge ist die Falle: **fett** besteht aus zwei Sternchen,
+        also muss es zuerst aufgeloest werden, sonst frisst kursiv die Haelfte."""
+        html = build.render_markdown("**✓ Ein Haken (17.08.).** Dazu *ein Wort* kursiv.")
+        self.assertIn("<strong>", html)
+        self.assertIn("<em>ein Wort</em>", html)
+        self.assertNotIn("*", html)
+
+    def test_einzelner_stern_bleibt_stehen(self):
+        """Ein Sternchen ohne Partner ist kein Auszeichnungszeichen."""
+        html = build.render_markdown("Preis 3 * 4 Ringgit.")
+        self.assertNotIn("<em>", html)
+
+    def test_unterschrift_wird_escaped(self):
+        self._jpeg("escape.jpg")
+        html = build.render_markdown('![Ein <script>-Test & mehr.](foto:escape.jpg)')
+        self.assertNotIn("<script>", html)
+        self.assertIn("&amp;", html)
+
+    def test_bild_wird_nicht_hochgerechnet(self):
+        """Telegram liefert 1280 px. Auf 1600 aufblasen kostet Bytes ohne
+        einen einzigen zusaetzlichen Bildpunkt."""
+        self._jpeg("klein.jpg", groesse=(800, 600))
+        ziel = build.verarbeite_foto("klein.jpg")
+        with Image.open(ziel) as bild:
+            self.assertEqual(bild.size, (800, 600))
+
+    def test_grosses_bild_wird_begrenzt(self):
+        self._jpeg("gross.jpg", groesse=(4000, 3000))
+        ziel = build.verarbeite_foto("gross.jpg")
+        with Image.open(ziel) as bild:
+            self.assertLessEqual(bild.size[0], build.FOTO_MAX_BREITE)
+
+    # ------------------------------------------------- Rueckstand der Sprache
+
+    def test_deckungspruefung_zaehlt_auch_fotos(self):
+        """Die englische Fassung ist die, die Jens nicht liest. Verliert sie
+        ein Foto, faellt es niemandem auf."""
+        de = "## A\n\n![Eins.](foto:a.jpg)\n\n![Zwei.](foto:b.jpg)\n"
+        en = "## A\n\n![One.](foto:a.jpg)\n"
+        luecken = build.pruefe_deckung(de, en)
+        self.assertTrue(any("Foto" in l for l in luecken), luecken)
+
+    def test_gleichstand_meldet_nichts(self):
+        de = "## A\n\n![Eins.](foto:a.jpg)\n"
+        en = "## A\n\n![One.](foto:a.jpg)\n"
+        self.assertEqual(build.pruefe_deckung(de, en), [])
+
+
+class TestAusgelieferteFotos(unittest.TestCase):
+    """Gemessen wird am Artefakt auf der Platte, nicht am Generator.
+
+    Am 17.08. war jeder i18n-Test gruen, waehrend cv.jenslaufer.com drei Tage
+    lang jedem englischen Leser Deutsch ausgeliefert hat: die Tests prueften
+    die Faehigkeit zu rendern, nicht die ausgelieferte Datei.
+    """
+
+    def test_kein_ausgeliefertes_foto_traegt_exif(self):
+        fotos = sorted(build.FOTO_ZIEL.glob("*.jpg")) if build.FOTO_ZIEL.exists() else []
+        if not fotos:
+            self.skipTest("noch keine Fotos veroeffentlicht")
+        for pfad in fotos:
+            with Image.open(pfad) as bild:
+                self.assertFalse(dict(bild.getexif()), f"EXIF in {pfad.name}")
+                self.assertFalse(bild.getexif().get_ifd(0x8825), f"GPS in {pfad.name}")
+
+    def test_jedes_verlinkte_foto_liegt_auch_da(self):
+        for pfad in (build.ZIELE["de"], build.ZIELE["en"]):
+            if not pfad.exists():
+                continue
+            for treffer in re.findall(r'src="(fotos/[^"]+)"', pfad.read_text(encoding="utf-8")):
+                self.assertTrue((build.WURZEL / treffer).exists(),
+                                f"{treffer} ist verlinkt, liegt aber nicht im Repo")
 
 
 class TestPflegeblockLeaktNicht(unittest.TestCase):
