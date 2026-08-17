@@ -20,6 +20,7 @@ Tests: python3 tests/test_build.py
 """
 
 import argparse
+import hashlib
 import html
 import json
 import os
@@ -87,6 +88,24 @@ FOTO_ZIEL = WURZEL / "fotos"
 FOTO_DATEN_DATEI = WURZEL / "content" / "fotos.json"
 FOTO_MAX_BREITE = 1280  # was Telegram liefert; hochrechnen kostet Bytes ohne Bildpunkte
 FOTO_QUALITAET = 82
+
+# Zwei Breiten, drei Formate. Der Grund ist gemessen, nicht Geschmack: in der
+# Dreiergruppe ist ein Bild rund 200 px breit, in Satzbreite rund 640 — ein
+# 1280er JPEG fuer den Gruppenplatz sind Faktor sechs an Bildpunkten, die
+# niemand sieht. Am 17.08. wogen zwoelf Fotos so 1,75 MB.
+# Reihenfolge im <picture> = Rangfolge: der Browser nimmt die erste Quelle,
+# die er lesen kann, also muss die kleinste zuerst stehen.
+FOTO_BREITEN = (640, 1280)
+FOTO_FORMATE = (
+    ("avif", "AVIF", {"quality": 55}),
+    ("webp", "WEBP", {"quality": 80, "method": 6}),
+    ("jpg", "JPEG", {"quality": FOTO_QUALITAET, "optimize": True, "progressive": True}),
+)
+# Was der Browser fuer die Auswahl braucht: wie breit das Bild am Ende steht.
+# Ein gemeinsamer Wert waere fuer eines von beiden falsch, und zwar immer fuer
+# das kleinere — der Browser laedt dann die grosse Fassung in den Gruppenplatz.
+FOTO_SIZES_EINZELN = "(max-width: 46rem) 92vw, 640px"
+FOTO_SIZES_GRUPPE = "(max-width: 560px) 92vw, 220px"
 
 # dateiname -> {"name": slug, "blur": [[x, y, b, h], ...]}. Die Kaesten sind
 # RELATIV (0..1), damit sie das Verkleinern ueberleben; absolute Pixel zeigen
@@ -372,6 +391,10 @@ def verarbeite_foto(datei: str) -> Path | None:
         print(f"ACHTUNG: Foto fehlt, Bild faellt weg: {datei}", file=sys.stderr)
         return None
 
+    stempel = _foto_stempel(quelle, daten)
+    if _fassungen_aktuell(name, stempel):
+        return ziel
+
     with Image.open(quelle) as bild:
         bild = bild.convert("RGB")
         breite, hoehe = bild.size
@@ -387,13 +410,93 @@ def verarbeite_foto(datei: str) -> Path | None:
                 Image.LANCZOS,
             )
         FOTO_ZIEL.mkdir(parents=True, exist_ok=True)
-        # Ohne exif=/icc_profile= schreibt Pillow vorhandene Bloecke wieder mit.
-        bild.save(ziel, "JPEG", quality=FOTO_QUALITAET, optimize=True,
-                  progressive=True, exif=b"", icc_profile=None)
+        basis = bild.size[0]
+        for b in foto_breiten(basis):
+            fassung = bild if b == basis else bild.resize(
+                (b, round(bild.size[1] * b / basis)), Image.LANCZOS)
+            for endung, format_, optionen in FOTO_FORMATE:
+                pfad = fassungs_pfad(name, b, endung, basis)
+                # Ohne exif=/icc_profile= schreibt Pillow vorhandene Bloecke
+                # wieder mit — in jedes Format, nicht nur ins JPEG.
+                fassung.save(pfad, format_, exif=b"", icc_profile=None, **optionen)
+    _stempel_schreiben(name, stempel)
     return ziel
 
 
-def _figure(text: str, datei: str) -> str | None:
+def foto_breiten(basis: int) -> list[int]:
+    """Welche Breiten geschrieben werden. Nie ueber die Vorlage hinaus —
+    ein hochkantes Telegram-Bild ist 720 px breit, eine 1280er-Fassung davon
+    kostet Bytes ohne einen einzigen zusaetzlichen Bildpunkt."""
+    return sorted({b for b in FOTO_BREITEN if b < basis} | {basis})
+
+
+def fassungs_pfad(name: str, breite: int, endung: str, basis: int) -> Path:
+    """Die groesste JPEG-Fassung behaelt den Namen ohne Breite: sie ist die
+    Rueckfalldatei im `src`, und ein Browser ohne srcset-Verstaendnis kennt
+    nur sie."""
+    if endung == "jpg" and breite == basis:
+        return FOTO_ZIEL / f"{name}.jpg"
+    return FOTO_ZIEL / f"{name}-{breite}.{endung}"
+
+
+def _foto_stempel(quelle: Path, daten: dict) -> str:
+    """Alles, was das Ergebnis aendern darf, in einer Zeile. Der Zwischen-
+    speicher darf keinen Sperrkasten verschlucken: die Kaesten stehen deshalb
+    im Stempel, nicht nur die Datei."""
+    inhalt = quelle.read_bytes()
+    beschreibung = json.dumps(
+        [daten.get("blur", []), list(FOTO_BREITEN),
+         [(e, o) for e, _, o in FOTO_FORMATE]], sort_keys=True)
+    return hashlib.sha256(inhalt + beschreibung.encode()).hexdigest()
+
+
+def _stempel_datei() -> Path:
+    """Als Funktion, nicht als Konstante: FOTO_ZIEL wird im Test umgebogen,
+    und eine beim Import berechnete Konstante zeigte dann weiter in das echte
+    Repo — der Test haette den Zwischenspeicher der Seite beschrieben."""
+    return FOTO_ZIEL / ".fassungen.json"
+
+
+def _stempel_lesen() -> dict:
+    try:
+        return json.loads(_stempel_datei().read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _fassungen_aktuell(name: str, stempel: str) -> bool:
+    """Nur dann ueberspringen, wenn der Stempel stimmt UND jede Datei da ist.
+    AVIF kostet eine Viertelsekunde je Bild und Breite; ohne diese Pruefung
+    waechst jeder Build um eine Zeit, die niemand misst — mit einer Pruefung,
+    die nur den Stempel liest, faellt dafuer eine geloeschte Fassung nicht auf."""
+    if _stempel_lesen().get(name) != stempel:
+        return False
+    basis_datei = FOTO_ZIEL / f"{name}.jpg"
+    if not basis_datei.exists():
+        return False
+    from PIL import Image
+
+    with Image.open(basis_datei) as bild:
+        basis = bild.size[0]
+    return all(fassungs_pfad(name, b, e, basis).exists()
+               for b in foto_breiten(basis) for e, _, _ in FOTO_FORMATE)
+
+
+def _stempel_schreiben(name: str, stempel: str) -> None:
+    alle = _stempel_lesen()
+    alle[name] = stempel
+    FOTO_ZIEL.mkdir(parents=True, exist_ok=True)
+    _stempel_datei().write_text(
+        json.dumps(alle, indent=1, sort_keys=True), encoding="utf-8")
+
+
+def _srcset(name: str, endung: str, basis: int) -> str:
+    return ", ".join(
+        f"fotos/{fassungs_pfad(name, b, endung, basis).name} {b}w"
+        for b in foto_breiten(basis))
+
+
+def _figure(text: str, datei: str, gruppe: bool = False) -> str | None:
     from PIL import Image
 
     ziel = verarbeite_foto(datei)
@@ -407,10 +510,20 @@ def _figure(text: str, datei: str) -> str | None:
     # zugeschnitten war das Bild noch da und seine Aussage weg.
     position = FOTO_DATEN.get(datei, {}).get("position")
     stil = f' style="--pos: {html.escape(position, quote=True)}"' if position else ""
+    name = ziel.stem
+    sizes = FOTO_SIZES_GRUPPE if gruppe else FOTO_SIZES_EINZELN
+    quellen = "".join(
+        f'<source type="image/{endung}" srcset="{_srcset(name, endung, breite)}" '
+        f'sizes="{sizes}">'
+        for endung, _, _ in FOTO_FORMATE if endung != "jpg")
     return (
         f'<figure class="foto"{stil}>'
-        f'<img src="fotos/{html.escape(ziel.name)}" width="{breite}" height="{hoehe}" '
+        f"<picture>{quellen}"
+        f'<img src="fotos/{html.escape(ziel.name)}" '
+        f'srcset="{_srcset(name, "jpg", breite)}" sizes="{sizes}" '
+        f'width="{breite}" height="{hoehe}" '
         f'alt="{html.escape(text, quote=True)}" loading="lazy" decoding="async">'
+        "</picture>"
         f"<figcaption>{inline(text)}</figcaption>"
         "</figure>"
     )
@@ -422,7 +535,8 @@ def _fotos(block: str) -> str | None:
     treffer = [FOTO.match(z) for z in zeilen]
     if not zeilen or not all(treffer):
         return None
-    stuecke = [_figure(t.group("text"), t.group("datei")) for t in treffer]
+    gruppe = len(zeilen) > 1
+    stuecke = [_figure(t.group("text"), t.group("datei"), gruppe) for t in treffer]
     stuecke = [s for s in stuecke if s]
     if not stuecke:
         return ""

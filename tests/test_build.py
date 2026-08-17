@@ -803,6 +803,91 @@ class TestFotos(unittest.TestCase):
         self.assertEqual(build.pruefe_deckung(de, en), [])
 
 
+class TestBildgewicht(TestFotos):
+    """Was ausgeliefert wird, ist nicht die Datei, sondern das, was der
+    Browser laedt.
+
+    Zwoelf Fotos zu je 1280 px waren am 17.08. 1,75 MB — und zwar auch dort,
+    wo das Bild in der Dreiergruppe rund 200 px breit dargestellt wird. Das
+    ist Faktor sechs an Bildpunkten, die niemand sieht. Jedes Bild kommt
+    deshalb in zwei Breiten und drei Formaten; der Browser nimmt das
+    kleinste, das er lesen kann.
+    """
+
+    def test_jede_fassung_wird_geschrieben(self):
+        self._jpeg("fassungen.jpg", groesse=(1600, 900))
+        build.verarbeite_foto("fassungen.jpg")
+        for name in ("fassungen.jpg", "fassungen-640.jpg",
+                     "fassungen-640.avif", "fassungen-1280.avif",
+                     "fassungen-640.webp", "fassungen-1280.webp"):
+            self.assertTrue((self.ziel / name).exists(), f"{name} fehlt")
+
+    def test_moderne_formate_sind_kleiner_als_das_jpeg(self):
+        """Der ganze Zweck. Ist AVIF nicht kleiner, ist der Aufwand umsonst."""
+        self._jpeg("gewicht.jpg", groesse=(1600, 900))
+        build.verarbeite_foto("gewicht.jpg")
+        jpg = (self.ziel / "gewicht.jpg").stat().st_size
+        avif = (self.ziel / "gewicht-1280.avif").stat().st_size
+        self.assertLess(avif, jpg, "AVIF ist nicht kleiner als das JPEG")
+
+    def test_keine_fassung_wird_hochgerechnet(self):
+        """Ein hochkantes Telegram-Bild ist 720 px breit. Eine
+        1280er-Fassung davon kostet Bytes ohne einen Bildpunkt mehr."""
+        self._jpeg("hochkant.jpg", groesse=(720, 1280))
+        build.verarbeite_foto("hochkant.jpg")
+        self.assertFalse((self.ziel / "hochkant-1280.avif").exists(),
+                         "720 px breit, und trotzdem eine 1280er-Fassung")
+        self.assertTrue((self.ziel / "hochkant-640.avif").exists())
+
+    def test_bild_steht_in_einem_picture_mit_avif_zuerst(self):
+        self._jpeg("markup.jpg")
+        html = build.render_markdown("![Eine Katze.](foto:markup.jpg)")
+        self.assertIn("<picture>", html)
+        self.assertLess(html.index('type="image/avif"'), html.index('type="image/webp"'),
+                        "AVIF muss vor WebP stehen, sonst gewinnt nie das kleinere")
+        self.assertIn('src="fotos/markup.jpg"', html)
+        self.assertIn('loading="lazy"', html)
+
+    def test_srcset_nennt_beide_breiten_mit_w(self):
+        self._jpeg("srcset.jpg")
+        html = build.render_markdown("![Eine Katze.](foto:srcset.jpg)")
+        self.assertIn("fotos/srcset-640.avif 640w", html)
+        self.assertIn("fotos/srcset-1280.avif 1280w", html)
+
+    def test_gruppe_verlangt_ein_anderes_sizes_als_das_einzelbild(self):
+        """In der Dreiergruppe ist das Bild ein Fuenftel so breit wie in
+        Satzbreite. Ein gemeinsames `sizes` waere fuer eines von beiden
+        falsch — und zwar immer fuer das kleinere."""
+        self._jpeg("a.jpg")
+        self._jpeg("b.jpg")
+        einzeln = build.render_markdown("![Eins.](foto:a.jpg)")
+        gruppe = build.render_markdown("![Eins.](foto:a.jpg)\n![Zwei.](foto:b.jpg)")
+        self.assertNotEqual(
+            re.search(r'sizes="([^"]+)"', einzeln).group(1),
+            re.search(r'sizes="([^"]+)"', gruppe).group(1))
+
+    def test_zweiter_lauf_schreibt_nicht_neu(self):
+        """AVIF kostet eine Viertelsekunde je Bild und Breite. Ohne diesen
+        Test waechst jeder Build um die Zeit, die niemand misst."""
+        self._jpeg("cache.jpg")
+        build.verarbeite_foto("cache.jpg")
+        vorher = {p.name: p.stat().st_mtime_ns for p in self.ziel.iterdir()}
+        build.verarbeite_foto("cache.jpg")
+        nachher = {p.name: p.stat().st_mtime_ns for p in self.ziel.iterdir()}
+        self.assertEqual(vorher, nachher, "die Fassungen wurden neu geschrieben")
+
+    def test_geaenderter_sperrkasten_erzwingt_neubau(self):
+        """Die Gegenprobe zum Zwischenspeicher: ein neuer Sperrkasten muss
+        durchschlagen, sonst haelt der Cache ein Kennzeichen offen."""
+        self._jpeg("neubau.jpg")
+        build.verarbeite_foto("neubau.jpg")
+        vorher = (self.ziel / "neubau-640.avif").read_bytes()
+        build.FOTO_DATEN = {"neubau.jpg": {"blur": [[0.25, 0.5, 0.3, 0.2]]}}
+        build.verarbeite_foto("neubau.jpg")
+        self.assertNotEqual(vorher, (self.ziel / "neubau-640.avif").read_bytes(),
+                            "der Sperrkasten hat die kleine Fassung nicht erreicht")
+
+
 class TestAusgelieferteFotos(unittest.TestCase):
     """Gemessen wird am Artefakt auf der Platte, nicht am Generator.
 
@@ -812,7 +897,10 @@ class TestAusgelieferteFotos(unittest.TestCase):
     """
 
     def test_kein_ausgeliefertes_foto_traegt_exif(self):
-        fotos = sorted(build.FOTO_ZIEL.glob("*.jpg")) if build.FOTO_ZIEL.exists() else []
+        """Alle Formate, nicht nur JPEG: AVIF und WebP koennen EXIF genauso
+        tragen, und die kleine Fassung ist dieselbe Aufnahme."""
+        fotos = sorted(p for e in ("*.jpg", "*.avif", "*.webp")
+                       for p in build.FOTO_ZIEL.glob(e)) if build.FOTO_ZIEL.exists() else []
         if not fotos:
             self.skipTest("noch keine Fotos veroeffentlicht")
         for pfad in fotos:
@@ -821,10 +909,17 @@ class TestAusgelieferteFotos(unittest.TestCase):
                 self.assertFalse(bild.getexif().get_ifd(0x8825), f"GPS in {pfad.name}")
 
     def test_jedes_verlinkte_foto_liegt_auch_da(self):
+        """`src` UND `srcset`: ein fehlendes srcset-Bild ist der teurere
+        Fehler, weil der Browser es dem `src` vorzieht — die Seite zeigt dann
+        ein Loch, obwohl die Rueckfalldatei danebenliegt."""
         for pfad in (build.ZIELE["de"], build.ZIELE["en"]):
             if not pfad.exists():
                 continue
-            for treffer in re.findall(r'src="(fotos/[^"]+)"', pfad.read_text(encoding="utf-8")):
+            text = pfad.read_text(encoding="utf-8")
+            verlinkt = set(re.findall(r'src="(fotos/[^"]+)"', text))
+            for satz in re.findall(r'srcset="([^"]+)"', text):
+                verlinkt.update(t.strip().split()[0] for t in satz.split(","))
+            for treffer in sorted(verlinkt):
                 self.assertTrue((build.WURZEL / treffer).exists(),
                                 f"{treffer} ist verlinkt, liegt aber nicht im Repo")
 
