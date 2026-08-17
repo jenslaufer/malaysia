@@ -217,6 +217,72 @@ Google Maps as "Panggung Cafe Mersing". That does not prove it was this building
 
 ---
 
+## Mersing to Tioman — what has to be done before boarding
+
+A ferry is not a train. Between the terminal and the boat there are several counters, two of
+them cash only, and the departure time is not set by a timetable but by the tide. This section
+was written the evening before, which is why every point carries a ○ — what actually happened
+goes in here on 18 Aug.
+
+**○ The departure time follows the tide and changes every day.** Mersing's harbour basin is
+shallow; the ferry can only leave when there is enough water under it. The published August
+schedule therefore shows something different on every date: 08:30 and 13:00 on 15 Aug, only
+10:00 on 16 Aug, 10:30 and 15:00 on 17 Aug, 11:30 on 18 Aug. Anyone taking the departure time
+from a guidebook or from last week is planning against the moon — and the operator says itself
+that the schedule may change without notice. The second harbour, **Tanjung Gemok** (many
+bookings still carry its old name, Teluk Gading), is 40 kilometres north and does not have the
+problem, because the water there is deep enough. Both harbours serve Tioman, but only one of
+them is on your ticket.
+
+**○ Three counters, and the order is fixed.**
+
+1. **Ferry counter.** The online booking is exchanged for boarding passes. Every traveller's
+   passport is scanned and registered; one person cannot do it for the group.
+2. **Marine park counter.** Cash, on presentation of the ferry tickets. Keep the receipt: the
+   places to stay on Tioman ask for it at check-in, and it covers the whole stay.
+3. **Johor fee counter.** Its own counter and its own amount — see below.
+
+**○ The fees, and the one where the sources disagree.** The marine park fee is not in dispute:
+foreigners pay RM30 as adults and RM15 as a child aged 6 to 12, under 6 free, over 60 also
+RM15 (rates published by the Malaysian Department of Fisheries). For the four of us — three
+adults and a twelve-year-old — that is RM105. On top of it comes a **Johor national park fee
+of RM20 per adult**, explicitly charged only on departures from Mersing, not from Tanjung
+Gemok. For the child rate one source says RM5 and another RM10, so for us it is either RM65 or
+RM70. And the author of one very thorough guide writes that he never met it in practice. That
+is the reason to carry it in cash anyway: not being charged costs nothing, not having it costs
+you the ferry.
+
+**○ Both fees cash only — and there is no cash machine in the terminal.** The nearest ones are
+400 to 494 metres away, five to seven minutes on foot (calculated from OpenStreetMap
+coordinates, not paced out). Five banks stand next to each other there, and for anyone staying
+in the town centre the distances invert: from Jalan Abu Bakar it is 85 metres to Bank Simpanan
+Nasional and 90 to Public Bank. So you draw the cash before checking out, not on the way to
+the boat. Ask for small notes: the fee counters keep little change.
+
+**○ When you have to be there.** The ticket hall is open from 07:30 to 20:00. Check-in starts
+one hour before departure, boarding passes are sometimes handed out only 30 minutes before,
+and you should be standing on the pontoon 30 minutes before. The usual advice is 60 minutes
+off season and 90 during the school holidays. More than an hour and a half buys nothing,
+because nobody is at the counter before that.
+
+**○ The crew take your luggage as you board and ask where you are getting off.** On Tioman the
+boat calls at several villages — Genting, Paya, Tekek, ABC, Salang. If you cannot name your
+village on the spot, you will be looking for your bags in the wrong bay.
+
+**○ The order we are going to work through tomorrow — ferry at 11:30.**
+
+| Time | What |
+|---|---|
+| 09:00 | Draw cash, 85 metres from the door, at the machine that worked yesterday. Ask for small notes |
+| 09:45 | Check out (possible until 12:00, but the rest of the morning should not hang on it) |
+| 10:00 | At the terminal. Passports to hand, collect boarding passes |
+| 10:20 | Marine park fee in cash, receipt filed with the passports. Then the Johor fee, if it is charged |
+| 10:45 | Food and toilets — both at the terminal, neither on the boat |
+| 11:00 | On the pontoon. Hand over luggage, name the village: Tekek |
+| 11:30 | Cast off |
+
+---
+
 ## Getting around Singapore
 
 **✓ From Jalan Besar to Gardens by the Bay: 33 minutes, at seven in the evening (16 Aug).**

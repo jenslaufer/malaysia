@@ -49,16 +49,28 @@
       "veroeffentlicht": "2026-08-17T09:40:10+00:00"
     },
     {
+      "anker": "**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne T",
+      "minuten": 11,
+      "telegram": "2026-08-17T09:39:00+00:00",
+      "veroeffentlicht": "2026-08-17T09:50:10+00:00"
+    },
+    {
       "anker": "**✓ Im malaysischen Fernbus sitzt eine USB-Buchse am Platz (",
       "minuten": 17,
       "telegram": "2026-08-17T06:21:00+00:00",
       "veroeffentlicht": "2026-08-17T06:38:03+00:00"
+    },
+    {
+      "anker": "**✓ Im Fernbus hängen Überwachungskameras, und die Beschwerd",
+      "minuten": 13,
+      "telegram": "2026-08-17T09:37:00+00:00",
+      "veroeffentlicht": "2026-08-17T09:50:10+00:00"
     }
   ],
-  "gemessen": 9,
-  "juengste_minuten": 4,
-  "markiert": 9,
-  "median_minuten": 41,
+  "gemessen": 11,
+  "juengste_minuten": 11,
+  "markiert": 11,
+  "median_minuten": 21,
   "schnellste_minuten": 4,
   "stand": "2026-08-17"
 }

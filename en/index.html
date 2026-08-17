@@ -162,6 +162,18 @@ code {
 .legende li { margin-bottom: .6rem; }
 .legende li:last-child { margin-bottom: 0; }
 
+/* --- Nummerierte Schritte: stehen als Geschwister neben einem Eintrag und
+       muessen deshalb auf dessen Textkante sitzen (.entry padding-left) --- */
+
+.schritte {
+  margin: -.8rem 0 2rem;
+  padding-left: 2.4rem;
+}
+
+.schritte li { margin-bottom: .6rem; padding-left: .3rem; }
+.schritte li:last-child { margin-bottom: 0; }
+.schritte li::marker { color: var(--recherche); font-variant-numeric: tabular-nums; }
+
 /* --- Eintraege: das Zeichen traegt die Seite --- */
 
 .entry {
@@ -503,7 +515,7 @@ date on it — or as a failure, so that nobody tries it twice.</p>
 
 </header>
 
-<nav class="toc" aria-label="Sections"><a href="#how-to-read-this-document">How to read this document</a><a href="#paying">Paying</a><a href="#border-singapore-malaysia">Border Singapore → Malaysia</a><a href="#from-the-border-to-mersing">From the border to Mersing</a><a href="#in-mersing">In Mersing</a><a href="#getting-around-singapore">Getting around Singapore</a><a href="#power-internet-phone">Power, internet, phone</a><a href="#what-we-had-planned-wrong-beforehand">What we had planned wrong beforehand</a><a href="#timeline">Timeline</a></nav>
+<nav class="toc" aria-label="Sections"><a href="#how-to-read-this-document">How to read this document</a><a href="#paying">Paying</a><a href="#border-singapore-malaysia">Border Singapore → Malaysia</a><a href="#from-the-border-to-mersing">From the border to Mersing</a><a href="#in-mersing">In Mersing</a><a href="#mersing-to-tioman-what-has-to-be-done-before-boarding">Mersing to Tioman — what has to be done before boarding</a><a href="#getting-around-singapore">Getting around Singapore</a><a href="#power-internet-phone">Power, internet, phone</a><a href="#what-we-had-planned-wrong-beforehand">What we had planned wrong beforehand</a><a href="#timeline">Timeline</a></nav>
 
 <main>
 
@@ -514,9 +526,9 @@ date on it — or as a failure, so that nobody tries it twice.</p>
      it in, checks it for private data and rebuilds the page. Nobody sits in
      between — it is three in the morning in Germany when a bus leaves here.</p>
   <p class="werkstatt-zahlen">
-    <span><b>9</b> entries have come about this way</span>
-    <span>most recently <b>4 minutes</b> from message to here</span>
-    <span>median <b>41 minutes</b></span>
+    <span><b>11</b> entries have come about this way</span>
+    <span>most recently <b>11 minutes</b> from message to here</span>
+    <span>median <b>21 minutes</b></span>
   </p>
   <p class="werkstatt-fuss">The time under each lived-through entry is measured,
      not estimated: from Jens's message to the commit that published the entry.
@@ -704,6 +716,49 @@ on: Mersing has a locally famous noodle stall called <em>Mee Goreng Panggung Way
 "cinema fried noodles" — which by local account once stood inside the cinema itself; it is on
 Google Maps as "Panggung Cafe Mersing". That does not prove it was this building.</p></div>
 <figure class="foto"><img src="fotos/mersing-altes-kino.jpg" width="1280" height="720" alt="A derelict former cinema in the centre of Mersing." loading="lazy" decoding="async"><figcaption>A derelict former cinema in the centre of Mersing.</figcaption></figure>
+<h2 id="mersing-to-tioman-what-has-to-be-done-before-boarding">Mersing to Tioman — what has to be done before boarding</h2>
+<p>A ferry is not a train. Between the terminal and the boat there are several counters, two of
+them cash only, and the departure time is not set by a timetable but by the tide. This section
+was written the evening before, which is why every point carries a ○ — what actually happened
+goes in here on 18 Aug.</p>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The departure time follows the tide and changes every day.</strong> Mersing's harbour basin is
+shallow; the ferry can only leave when there is enough water under it. The published August
+schedule therefore shows something different on every date: 08:30 and 13:00 on 15 Aug, only
+10:00 on 16 Aug, 10:30 and 15:00 on 17 Aug, 11:30 on 18 Aug. Anyone taking the departure time
+from a guidebook or from last week is planning against the moon — and the operator says itself
+that the schedule may change without notice. The second harbour, <strong>Tanjung Gemok</strong> (many
+bookings still carry its old name, Teluk Gading), is 40 kilometres north and does not have the
+problem, because the water there is deep enough. Both harbours serve Tioman, but only one of
+them is on your ticket.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Three counters, and the order is fixed.</strong></p></div>
+<ol class="schritte"><li><strong>Ferry counter.</strong> The online booking is exchanged for boarding passes. Every traveller's
+   passport is scanned and registered; one person cannot do it for the group.</li><li><strong>Marine park counter.</strong> Cash, on presentation of the ferry tickets. Keep the receipt: the
+   places to stay on Tioman ask for it at check-in, and it covers the whole stay.</li><li><strong>Johor fee counter.</strong> Its own counter and its own amount — see below.</li></ol>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The fees, and the one where the sources disagree.</strong> The marine park fee is not in dispute:
+foreigners pay RM30 as adults and RM15 as a child aged 6 to 12, under 6 free, over 60 also
+RM15 (rates published by the Malaysian Department of Fisheries). For the four of us — three
+adults and a twelve-year-old — that is RM105. On top of it comes a <strong>Johor national park fee
+of RM20 per adult</strong>, explicitly charged only on departures from Mersing, not from Tanjung
+Gemok. For the child rate one source says RM5 and another RM10, so for us it is either RM65 or
+RM70. And the author of one very thorough guide writes that he never met it in practice. That
+is the reason to carry it in cash anyway: not being charged costs nothing, not having it costs
+you the ferry.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Both fees cash only — and there is no cash machine in the terminal.</strong> The nearest ones are
+400 to 494 metres away, five to seven minutes on foot (calculated from OpenStreetMap
+coordinates, not paced out). Five banks stand next to each other there, and for anyone staying
+in the town centre the distances invert: from Jalan Abu Bakar it is 85 metres to Bank Simpanan
+Nasional and 90 to Public Bank. So you draw the cash before checking out, not on the way to
+the boat. Ask for small notes: the fee counters keep little change.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>When you have to be there.</strong> The ticket hall is open from 07:30 to 20:00. Check-in starts
+one hour before departure, boarding passes are sometimes handed out only 30 minutes before,
+and you should be standing on the pontoon 30 minutes before. The usual advice is 60 minutes
+off season and 90 during the school holidays. More than an hour and a half buys nothing,
+because nobody is at the counter before that.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The crew take your luggage as you board and ask where you are getting off.</strong> On Tioman the
+boat calls at several villages — Genting, Paya, Tekek, ABC, Salang. If you cannot name your
+village on the spot, you will be looking for your bags in the wrong bay.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The order we are going to work through tomorrow — ferry at 11:30.</strong></p></div>
+<div class="table-wrap"><table><thead><tr><th>Time</th><th>What</th></tr></thead><tbody><tr><td>09:00</td><td>Draw cash, 85 metres from the door, at the machine that worked yesterday. Ask for small notes</td></tr><tr><td>09:45</td><td>Check out (possible until 12:00, but the rest of the morning should not hang on it)</td></tr><tr><td>10:00</td><td>At the terminal. Passports to hand, collect boarding passes</td></tr><tr><td>10:20</td><td>Marine park fee in cash, receipt filed with the passports. Then the Johor fee, if it is charged</td></tr><tr><td>10:45</td><td>Food and toilets — both at the terminal, neither on the boat</td></tr><tr><td>11:00</td><td>On the pontoon. Hand over luggage, name the village: Tekek</td></tr><tr><td>11:30</td><td>Cast off</td></tr></tbody></table></div>
 <h2 id="getting-around-singapore">Getting around Singapore</h2>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>From Jalan Besar to Gardens by the Bay: 33 minutes, at seven in the evening (16 Aug).</strong>
 Measured between "we're at Jalan Besar" and "we're at the garden", so including the walk to
@@ -719,7 +774,7 @@ plaza between the trees and a lot of people lie flat on their backs, because the
 upwards. You need no particular spot for a photograph — you need distance, because up close a
 single Supertree fills the entire frame. In the wide shot below a good number of umbrellas are
 up in the crowd, so the show carries on in the rain. (That is read off the picture, not
-something we reported.)</p></div>
+something we reported.)</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 09:39</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:50</span><span class="spur-dauer">11 min</span></p></div>
 <div class="fotos fotos--3"><figure class="foto"><img src="fotos/garden-rhapsody-supertrees-mbs.jpg" width="1280" height="720" alt="Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them." loading="lazy" decoding="async"><figcaption>Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them.</figcaption></figure><figure class="foto"><img src="fotos/garden-rhapsody-supertree-nah.jpg" width="1280" height="720" alt="A single Supertree from below, its canopy lit green from the inside." loading="lazy" decoding="async"><figcaption>A single Supertree from below, its canopy lit green from the inside.</figcaption></figure><figure class="foto"><img src="fotos/garden-rhapsody-menge.jpg" width="1280" height="720" alt="Three Supertrees in green light above the crowd in the Supertree Grove." loading="lazy" decoding="async"><figcaption>Three Supertrees in green light above the crowd in the Supertree Grove.</figcaption></figure></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The second light show is called <em>Spectra</em> and sits 800 metres away.</strong>
 Water, light and lasers, at 20:00 and 21:00 on the Event Plaza at Marina Bay Sands, right at
@@ -750,7 +805,7 @@ windscreen (17 Aug).</strong> Two dome cameras in the ceiling above the aisle, p
 the Malaysian transport ministry reading "Talian Aduan MOT" with a freephone number and a QR
 code. If you are wondering how regulated Malaysian long-distance coach travel is: regulated
 enough that the supervising authority puts its complaints desk in every passenger's line of
-sight. For a traveller that reads as reassuring rather than bureaucratic.</p></div>
+sight. For a traveller that reads as reassuring rather than bureaucratic.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 09:37</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:50</span><span class="spur-dauer">13 min</span></p></div>
 <figure class="foto"><img src="fotos/fernbus-kameras-beschwerdenummer.jpg" width="1280" height="720" alt="The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen." loading="lazy" decoding="async"><figcaption>The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen.</figcaption></figure>
 <div class="entry entry--gescheitert"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">did not work</span><p><strong>CelcomDigi could not be bought online.</strong> The order process broke reproducibly at the
 address entry. It works at a counter with the original passport; places to buy in Kuala

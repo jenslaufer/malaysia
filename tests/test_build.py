@@ -85,6 +85,36 @@ class TestStruktur(unittest.TestCase):
         self.assertIn("<ul", html)
         self.assertEqual(html.count("<li"), 2)
 
+    def test_nummerierte_liste_wird_liste(self):
+        # Gefunden am 17.08. am gerenderten Bild: der Renderer kannte "- ", aber
+        # nicht "1. ". Eine nummerierte Liste erreichte die Seite als EIN Absatz,
+        # mit den Ziffern als Fliesstext. Im Markdown sieht das richtig aus.
+        html = build.render_markdown("1. erster Schritt\n2. zweiter Schritt\n3. dritter")
+        self.assertIn("<ol", html)
+        self.assertEqual(html.count("<li"), 3)
+        self.assertNotIn("<p>1. erster Schritt", html)
+        # Die Ziffer setzt der Browser. Bleibt sie zusaetzlich im Text stehen, zeigt
+        # die Seite "1. 1. erster Schritt" — am 17.08. genau so passiert, und der
+        # Test darueber war dabei gruen.
+        self.assertIn("<li>erster Schritt</li>", html)
+        self.assertNotIn("<li>1.", html)
+
+    def test_nummerierte_liste_traegt_fortsetzungszeilen(self):
+        md = "1. erster Schritt,\n   in zwei Zeilen geschrieben.\n2. zweiter Schritt"
+        html = build.render_markdown(md)
+        self.assertEqual(html.count("<li"), 2)
+        self.assertIn("in zwei Zeilen geschrieben.", html)
+
+    def test_datum_am_satzanfang_ist_keine_liste(self):
+        # Gegenprobe, und sie ist der Grund fuer die enge Regel: auf Deutsch faengt
+        # ein Absatz oft mit einem Datum an. "18. August 2026 war ..." sieht fuer
+        # ein naives ^\d+\. wie ein Listenpunkt aus. Eine Liste beginnt deshalb bei
+        # 1. und braucht eine zweite Zeile mit 2.
+        html = build.render_markdown("18. August 2026 war der Tag der Ueberfahrt.")
+        self.assertNotIn("<ol", html)
+        html = build.render_markdown("1. Klasse faehrt nicht auf dieser Strecke.")
+        self.assertNotIn("<ol", html)
+
     def test_code_bleibt_code(self):
         html = build.render_markdown("Adresse `imigresen-online.imi.gov.my` eintippen.")
         self.assertIn("<code>imigresen-online.imi.gov.my</code>", html)

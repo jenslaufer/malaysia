@@ -133,6 +133,18 @@ code {
 .legende li { margin-bottom: .6rem; }
 .legende li:last-child { margin-bottom: 0; }
 
+/* --- Nummerierte Schritte: stehen als Geschwister neben einem Eintrag und
+       muessen deshalb auf dessen Textkante sitzen (.entry padding-left) --- */
+
+.schritte {
+  margin: -.8rem 0 2rem;
+  padding-left: 2.4rem;
+}
+
+.schritte li { margin-bottom: .6rem; padding-left: .3rem; }
+.schritte li:last-child { margin-bottom: 0; }
+.schritte li::marker { color: var(--recherche); font-variant-numeric: tabular-nums; }
+
 /* --- Eintraege: das Zeichen traegt die Seite --- */
 
 .entry {

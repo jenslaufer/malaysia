@@ -162,6 +162,18 @@ code {
 .legende li { margin-bottom: .6rem; }
 .legende li:last-child { margin-bottom: 0; }
 
+/* --- Nummerierte Schritte: stehen als Geschwister neben einem Eintrag und
+       muessen deshalb auf dessen Textkante sitzen (.entry padding-left) --- */
+
+.schritte {
+  margin: -.8rem 0 2rem;
+  padding-left: 2.4rem;
+}
+
+.schritte li { margin-bottom: .6rem; padding-left: .3rem; }
+.schritte li:last-child { margin-bottom: 0; }
+.schritte li::marker { color: var(--recherche); font-variant-numeric: tabular-nums; }
+
 /* --- Eintraege: das Zeichen traegt die Seite --- */
 
 .entry {
@@ -503,7 +515,7 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 
 </header>
 
-<nav class="toc" aria-label="Abschnitte"><a href="#wie-das-dokument-zu-lesen-ist">Wie das Dokument zu lesen ist</a><a href="#bezahlen">Bezahlen</a><a href="#grenze-singapur-malaysia">Grenze Singapur → Malaysia</a><a href="#von-der-grenze-nach-mersing">Von der Grenze nach Mersing</a><a href="#in-mersing">In Mersing</a><a href="#unterwegs-in-singapur">Unterwegs in Singapur</a><a href="#strom-internet-telefon">Strom, Internet, Telefon</a><a href="#was-wir-vorher-falsch-geplant-hatten">Was wir vorher falsch geplant hatten</a><a href="#chronik">Chronik</a></nav>
+<nav class="toc" aria-label="Abschnitte"><a href="#wie-das-dokument-zu-lesen-ist">Wie das Dokument zu lesen ist</a><a href="#bezahlen">Bezahlen</a><a href="#grenze-singapur-malaysia">Grenze Singapur → Malaysia</a><a href="#von-der-grenze-nach-mersing">Von der Grenze nach Mersing</a><a href="#in-mersing">In Mersing</a><a href="#von-mersing-nach-tioman-der-ablauf-vor-dem-einsteigen">Von Mersing nach Tioman — der Ablauf vor dem Einsteigen</a><a href="#unterwegs-in-singapur">Unterwegs in Singapur</a><a href="#strom-internet-telefon">Strom, Internet, Telefon</a><a href="#was-wir-vorher-falsch-geplant-hatten">Was wir vorher falsch geplant hatten</a><a href="#chronik">Chronik</a></nav>
 
 <main>
 
@@ -515,9 +527,9 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
      sitzt dazwischen — in Deutschland ist es drei Uhr nachts, wenn hier ein Bus
      fährt.</p>
   <p class="werkstatt-zahlen">
-    <span><b>9</b> Meldungen bisher so entstanden</span>
-    <span>zuletzt <b>4 Minuten</b> von der Nachricht bis hierher</span>
-    <span>Median <b>41 Minuten</b></span>
+    <span><b>11</b> Meldungen bisher so entstanden</span>
+    <span>zuletzt <b>11 Minuten</b> von der Nachricht bis hierher</span>
+    <span>Median <b>21 Minuten</b></span>
   </p>
   <p class="werkstatt-fuss">Die Zeit unter jedem selbst erlebten Eintrag ist
      gemessen, nicht geschätzt: von Jens' Nachricht bis zu dem Commit, der den
@@ -707,6 +719,52 @@ Panggung Wayang</em> — wörtlich „Kino-Nudeln" —, der der Überlieferung n
 stand; auf Google Maps zu finden als „Panggung Cafe Mersing". Ob es dieses Gebäude war, sagt
 das nicht.</p></div>
 <figure class="foto"><img src="fotos/mersing-altes-kino.jpg" width="1280" height="720" alt="Ein leerstehendes ehemaliges Kino im Ortskern von Mersing." loading="lazy" decoding="async"><figcaption>Ein leerstehendes ehemaliges Kino im Ortskern von Mersing.</figcaption></figure>
+<h2 id="von-mersing-nach-tioman-der-ablauf-vor-dem-einsteigen">Von Mersing nach Tioman — der Ablauf vor dem Einsteigen</h2>
+<p>Eine Fähre ist kein Zug. Zwischen dem Terminal und dem Boot liegen mehrere Schalter, zwei
+davon nehmen ausschließlich Bargeld, und die Abfahrtszeit steht nicht im Fahrplan, sondern
+im Tidenkalender. Dieser Abschnitt ist am Vorabend geschrieben und deshalb durchgehend mit
+○ gekennzeichnet — was davon morgen wirklich so war, steht am 18.08. hier.</p>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Die Abfahrtszeit hängt an der Tide und wechselt jeden Tag.</strong> Das Hafenbecken von Mersing
+ist flach; die Fähre kann nur ablegen, wenn genug Wasser darunter ist. Im veröffentlichten
+Augustplan steht deshalb an jedem Tag etwas anderes: am 15.08. 08:30 und 13:00, am 16.08. nur
+10:00, am 17.08. 10:30 und 15:00, am 18.08. 11:30. Wer die Abfahrtszeit aus einem Reiseführer
+oder von der Vorwoche übernimmt, plant an der Sache vorbei — und der Betreiber schreibt selbst
+dazu, der Plan könne sich ohne Ankündigung ändern. Der zweite Hafen, <strong>Tanjung Gemok</strong> (der
+alte Name Teluk Gading steht noch in vielen Buchungen), liegt 40 Kilometer nördlich und hat
+das Problem nicht, weil dort das Wasser tief genug ist. Beide Häfen fahren nach Tioman, aber
+nur einer steht auf dem eigenen Ticket.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Nacheinander abzuarbeiten sind drei Schalter, und die Reihenfolge ist vorgegeben.</strong></p></div>
+<ol class="schritte"><li><strong>Fährschalter.</strong> Die Onlinebuchung wird gegen Bordkarten getauscht. Die Pässe aller
+   Reisenden werden gescannt und registriert, es genügt nicht, dass einer für alle geht.</li><li><strong>Marine-Park-Schalter.</strong> Bar, gegen Vorlage der Fährtickets. Den Beleg aufheben: die
+   Unterkünfte auf Tioman fragen beim Einchecken danach, und er gilt für den ganzen
+   Aufenthalt.</li><li><strong>Schalter für die Johor-Gebühr.</strong> Eigener Schalter, eigener Betrag, siehe unten.</li></ol>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Die Gebühren — und die eine, bei der die Quellen auseinandergehen.</strong> Die
+Marine-Park-Gebühr ist unstrittig: Ausländer zahlen RM30 als Erwachsene und RM15 als Kind von
+6 bis 12 Jahren, unter 6 frei, Senioren ab 60 ebenfalls RM15 (Sätze des malaysischen
+Fischereiministeriums). Für uns vier — drei Erwachsene, ein Zwölfjähriger — sind das RM105.
+Dazu kommt eine <strong>Johor-Nationalparkgebühr von RM20 für Erwachsene</strong>, die ausdrücklich nur bei
+Abfahrt ab Mersing erhoben wird, nicht ab Tanjung Gemok. Beim Kindersatz nennt eine Quelle
+RM5, eine andere RM10; für uns wären es also RM65 oder RM70. Und der Autor eines sehr
+ausführlichen Führers schreibt, er sei ihr in der Praxis nie begegnet. Das ist der Grund, sie
+trotzdem in bar dabeizuhaben: nicht erhoben zu werden kostet nichts, sie nicht dabeizuhaben
+kostet die Fähre.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Beide Gebühren nur bar — und im Terminal steht kein Geldautomat.</strong> Die nächsten
+Bankautomaten sind 400 bis 494 Meter entfernt, also fünf bis sieben Minuten zu Fuß (aus den
+Koordinaten von OpenStreetMap gerechnet, nicht abgelaufen). Fünf Banken stehen dort
+nebeneinander, und für alle, die im Ortskern übernachten, dreht sich das Verhältnis um: von
+der Jalan Abu Bakar aus sind es zur Bank Simpanan Nasional 85 Meter und zur Public Bank 90 —
+das Geld holt man also vor dem Auschecken und nicht auf dem Weg zum Schiff. Kleine Scheine
+verlangen: die Kassen an den Gebührenschaltern haben wenig Wechselgeld.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Wann man dort sein muss.</strong> Die Ticket-Halle ist von 07:30 bis 20:00 geöffnet. Der
+Check-in beginnt eine Stunde vor Abfahrt, die Bordkarten gibt es je nach Andrang erst 30
+Minuten vorher, und am Steg sollte man 30 Minuten vor Abfahrt stehen. Empfohlen werden 60
+Minuten in ruhigen Zeiten und 90 in den Schulferien. Mehr als anderthalb Stunden bringen
+nichts, weil vorher niemand am Schalter sitzt.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Das Gepäck nimmt die Mannschaft beim Einsteigen ab und fragt, wo man aussteigt.</strong> Das
+Boot hält auf Tioman an mehreren Dörfern — Genting, Paya, Tekek, ABC, Salang. Wer den Namen
+seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falschen Bucht.</p></div>
+<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Die Reihenfolge, die wir morgen früh gehen — Fähre 11:30.</strong></p></div>
+<div class="table-wrap"><table><thead><tr><th>Zeit</th><th>Was</th></tr></thead><tbody><tr><td>09:00</td><td>Geld holen, 85 Meter vom Haus, an dem Automaten, der gestern funktioniert hat. Kleine Scheine mitnehmen</td></tr><tr><td>09:45</td><td>Auschecken (bis 12:00 möglich, aber der Rest des Vormittags soll nicht daran hängen)</td></tr><tr><td>10:00</td><td>Am Terminal. Pässe griffbereit, Bordkarten holen</td></tr><tr><td>10:20</td><td>Marine-Park-Gebühr bar, Beleg zu den Pässen. Danach die Johor-Gebühr, falls sie erhoben wird</td></tr><tr><td>10:45</td><td>Essen und Toilette — beides gibt es am Terminal, auf dem Boot nicht</td></tr><tr><td>11:00</td><td>Am Steg. Gepäck abgeben, Dorf nennen: Tekek</td></tr><tr><td>11:30</td><td>Ablegen</td></tr></tbody></table></div>
 <h2 id="unterwegs-in-singapur">Unterwegs in Singapur</h2>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben
 (16.08.).</strong> Gemessen zwischen „wir sind an der Jalan Besar" und „wir sind am Garten", also
@@ -723,7 +781,7 @@ sich auf dem Platz zwischen den Bäumen, viele legen sich flach hin, weil die Sh
 spielt. Wer ein Foto will, braucht keinen bestimmten Platz — aber Abstand, denn ein
 Supertree füllt aus der Nähe das ganze Bild. Auf dem Weitwinkelfoto unten stehen etliche
 aufgespannte Schirme in der Menge; die Show läuft also auch bei Regen weiter. (Das ist vom
-Bild abgelesen, nicht von uns berichtet.)</p></div>
+Bild abgelesen, nicht von uns berichtet.)</p><p class="spur"><span class="spur-von">Telegram 17.08. 09:39</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 09:50</span><span class="spur-dauer">11 Min</span></p></div>
 <div class="fotos fotos--3"><figure class="foto"><img src="fotos/garden-rhapsody-supertrees-mbs.jpg" width="1280" height="720" alt="Zwei Supertrees in grünem Licht, dahinter das Marina Bay Sands und der beleuchtete Skyway." loading="lazy" decoding="async"><figcaption>Zwei Supertrees in grünem Licht, dahinter das Marina Bay Sands und der beleuchtete Skyway.</figcaption></figure><figure class="foto"><img src="fotos/garden-rhapsody-supertree-nah.jpg" width="1280" height="720" alt="Ein einzelner Supertree von unten, die Krone von innen grün ausgeleuchtet." loading="lazy" decoding="async"><figcaption>Ein einzelner Supertree von unten, die Krone von innen grün ausgeleuchtet.</figcaption></figure><figure class="foto"><img src="fotos/garden-rhapsody-menge.jpg" width="1280" height="720" alt="Drei Supertrees in grünem Licht über der Zuschauermenge im Supertree Grove." loading="lazy" decoding="async"><figcaption>Drei Supertrees in grünem Licht über der Zuschauermenge im Supertree Grove.</figcaption></figure></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Die zweite Lichtshow heißt <em>Spectra</em> und liegt 800 Meter entfernt.</strong>
 Wasser, Licht und Laser, 20:00 und 21:00 an der Event Plaza am Marina Bay Sands, direkt am
@@ -755,7 +813,7 @@ Frontscheibe (17.08.).</strong> Zwei Kuppelkameras in der Decke über dem Mittel
 Aufkleber des malaysischen Verkehrsministeriums mit „Talian Aduan MOT", einer kostenlosen
 Nummer und einem QR-Code. Wer sich fragt, wie reguliert der malaysische Fernbusverkehr ist:
 so weit, dass die Aufsichtsbehörde ihre Beschwerdestelle im Blickfeld jedes Fahrgastes
-anbringen lässt. Für Reisende ist das eher beruhigend als bürokratisch.</p></div>
+anbringen lässt. Für Reisende ist das eher beruhigend als bürokratisch.</p><p class="spur"><span class="spur-von">Telegram 17.08. 09:37</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 09:50</span><span class="spur-dauer">13 Min</span></p></div>
 <figure class="foto"><img src="fotos/fernbus-kameras-beschwerdenummer.jpg" width="1280" height="720" alt="Blick nach vorn aus dem Fernbus auf eine malaysische Landstraße, an der Frontscheibe der Aufkleber der Beschwerdestelle." loading="lazy" decoding="async"><figcaption>Blick nach vorn aus dem Fernbus auf eine malaysische Landstraße, an der Frontscheibe der Aufkleber der Beschwerdestelle.</figcaption></figure>
 <div class="entry entry--gescheitert"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">hat nicht funktioniert</span><p><strong>CelcomDigi ließ sich online nicht kaufen.</strong> Der Bestellvorgang brach reproduzierbar bei
 der Adresseingabe ab. Am Schalter mit Pass im Original geht es; Kaufmöglichkeiten in Kuala

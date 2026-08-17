@@ -219,6 +219,75 @@ das nicht.
 
 ---
 
+## Von Mersing nach Tioman — der Ablauf vor dem Einsteigen
+
+Eine Fähre ist kein Zug. Zwischen dem Terminal und dem Boot liegen mehrere Schalter, zwei
+davon nehmen ausschließlich Bargeld, und die Abfahrtszeit steht nicht im Fahrplan, sondern
+im Tidenkalender. Dieser Abschnitt ist am Vorabend geschrieben und deshalb durchgehend mit
+○ gekennzeichnet — was davon morgen wirklich so war, steht am 18.08. hier.
+
+**○ Die Abfahrtszeit hängt an der Tide und wechselt jeden Tag.** Das Hafenbecken von Mersing
+ist flach; die Fähre kann nur ablegen, wenn genug Wasser darunter ist. Im veröffentlichten
+Augustplan steht deshalb an jedem Tag etwas anderes: am 15.08. 08:30 und 13:00, am 16.08. nur
+10:00, am 17.08. 10:30 und 15:00, am 18.08. 11:30. Wer die Abfahrtszeit aus einem Reiseführer
+oder von der Vorwoche übernimmt, plant an der Sache vorbei — und der Betreiber schreibt selbst
+dazu, der Plan könne sich ohne Ankündigung ändern. Der zweite Hafen, **Tanjung Gemok** (der
+alte Name Teluk Gading steht noch in vielen Buchungen), liegt 40 Kilometer nördlich und hat
+das Problem nicht, weil dort das Wasser tief genug ist. Beide Häfen fahren nach Tioman, aber
+nur einer steht auf dem eigenen Ticket.
+
+**○ Nacheinander abzuarbeiten sind drei Schalter, und die Reihenfolge ist vorgegeben.**
+
+1. **Fährschalter.** Die Onlinebuchung wird gegen Bordkarten getauscht. Die Pässe aller
+   Reisenden werden gescannt und registriert, es genügt nicht, dass einer für alle geht.
+2. **Marine-Park-Schalter.** Bar, gegen Vorlage der Fährtickets. Den Beleg aufheben: die
+   Unterkünfte auf Tioman fragen beim Einchecken danach, und er gilt für den ganzen
+   Aufenthalt.
+3. **Schalter für die Johor-Gebühr.** Eigener Schalter, eigener Betrag, siehe unten.
+
+**○ Die Gebühren — und die eine, bei der die Quellen auseinandergehen.** Die
+Marine-Park-Gebühr ist unstrittig: Ausländer zahlen RM30 als Erwachsene und RM15 als Kind von
+6 bis 12 Jahren, unter 6 frei, Senioren ab 60 ebenfalls RM15 (Sätze des malaysischen
+Fischereiministeriums). Für uns vier — drei Erwachsene, ein Zwölfjähriger — sind das RM105.
+Dazu kommt eine **Johor-Nationalparkgebühr von RM20 für Erwachsene**, die ausdrücklich nur bei
+Abfahrt ab Mersing erhoben wird, nicht ab Tanjung Gemok. Beim Kindersatz nennt eine Quelle
+RM5, eine andere RM10; für uns wären es also RM65 oder RM70. Und der Autor eines sehr
+ausführlichen Führers schreibt, er sei ihr in der Praxis nie begegnet. Das ist der Grund, sie
+trotzdem in bar dabeizuhaben: nicht erhoben zu werden kostet nichts, sie nicht dabeizuhaben
+kostet die Fähre.
+
+**○ Beide Gebühren nur bar — und im Terminal steht kein Geldautomat.** Die nächsten
+Bankautomaten sind 400 bis 494 Meter entfernt, also fünf bis sieben Minuten zu Fuß (aus den
+Koordinaten von OpenStreetMap gerechnet, nicht abgelaufen). Fünf Banken stehen dort
+nebeneinander, und für alle, die im Ortskern übernachten, dreht sich das Verhältnis um: von
+der Jalan Abu Bakar aus sind es zur Bank Simpanan Nasional 85 Meter und zur Public Bank 90 —
+das Geld holt man also vor dem Auschecken und nicht auf dem Weg zum Schiff. Kleine Scheine
+verlangen: die Kassen an den Gebührenschaltern haben wenig Wechselgeld.
+
+**○ Wann man dort sein muss.** Die Ticket-Halle ist von 07:30 bis 20:00 geöffnet. Der
+Check-in beginnt eine Stunde vor Abfahrt, die Bordkarten gibt es je nach Andrang erst 30
+Minuten vorher, und am Steg sollte man 30 Minuten vor Abfahrt stehen. Empfohlen werden 60
+Minuten in ruhigen Zeiten und 90 in den Schulferien. Mehr als anderthalb Stunden bringen
+nichts, weil vorher niemand am Schalter sitzt.
+
+**○ Das Gepäck nimmt die Mannschaft beim Einsteigen ab und fragt, wo man aussteigt.** Das
+Boot hält auf Tioman an mehreren Dörfern — Genting, Paya, Tekek, ABC, Salang. Wer den Namen
+seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falschen Bucht.
+
+**○ Die Reihenfolge, die wir morgen früh gehen — Fähre 11:30.**
+
+| Zeit | Was |
+|---|---|
+| 09:00 | Geld holen, 85 Meter vom Haus, an dem Automaten, der gestern funktioniert hat. Kleine Scheine mitnehmen |
+| 09:45 | Auschecken (bis 12:00 möglich, aber der Rest des Vormittags soll nicht daran hängen) |
+| 10:00 | Am Terminal. Pässe griffbereit, Bordkarten holen |
+| 10:20 | Marine-Park-Gebühr bar, Beleg zu den Pässen. Danach die Johor-Gebühr, falls sie erhoben wird |
+| 10:45 | Essen und Toilette — beides gibt es am Terminal, auf dem Boot nicht |
+| 11:00 | Am Steg. Gepäck abgeben, Dorf nennen: Tekek |
+| 11:30 | Ablegen |
+
+---
+
 ## Unterwegs in Singapur
 
 **✓ Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben

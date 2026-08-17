@@ -205,6 +205,9 @@ MARKER = re.compile(r"^[ \t]*<!--\s*werkstatt:.*?-->[ \t]*\n?", flags=re.M)
 # finden, und zwar still.
 MARKER_ZEIT = re.compile(r"[ \t]*<!--\s*werkstatt:\s*telegram=([0-9TZ:+\-]+)\s*-->[ \t]*")
 TOKEN = re.compile(r"@@WERKSTATT:([0-9TZ:+\-]+)@@")
+# Die Zaehlziffer eines Listenpunkts. Sie muss raus, bevor der Punkt ein <li>
+# wird — die Nummer setzt der Browser, sonst steht "1. 1." auf der Seite.
+ZIFFER = re.compile(r"^\d+\.[ \t]+")
 ANKER_LAENGE = 60
 
 
@@ -475,6 +478,15 @@ def render_markdown(md: str) -> str:
             punkte = re.split(r"\n(?=- )", block)
             li = "".join(f"<li>{inline(p[2:].strip())}</li>" for p in punkte)
             teile.append(f'<ul class="legende">{li}</ul>')
+        elif block.startswith("1. ") and re.search(r"^2\. ", block, re.M):
+            # Die Regel ist absichtlich eng: auf Deutsch beginnt ein Absatz oft mit
+            # einem Datum ("18. August 2026 war ..."), und ein naives ^\d+\. macht
+            # daraus eine Liste. Eine Aufzaehlung faengt bei 1. an und hat eine 2.
+            punkte = re.split(r"\n(?=\d+\. )", block)
+            li = "".join(
+                f"<li>{inline(ZIFFER.sub('', p).strip())}</li>" for p in punkte
+            )
+            teile.append(f'<ol class="schritte">{li}</ol>')
         else:
             teile.append(_eintrag(block, telegram) or f"<p>{inline(block)}</p>")
     return "\n".join(teile)
