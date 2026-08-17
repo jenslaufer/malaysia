@@ -61,6 +61,12 @@
       "veroeffentlicht": "2026-08-17T10:38:12+00:00"
     },
     {
+      "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
+      "minuten": 24,
+      "telegram": "2026-08-17T11:19:00+00:00",
+      "veroeffentlicht": "2026-08-17T11:42:46+00:00"
+    },
+    {
       "anker": "**✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahl",
       "minuten": 66,
       "telegram": "2026-08-17T04:41:00+00:00",
@@ -85,10 +91,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 14,
-  "juengste_minuten": 4,
-  "markiert": 14,
-  "median_minuten": 19,
+  "gemessen": 15,
+  "juengste_minuten": 24,
+  "markiert": 15,
+  "median_minuten": 21,
   "schnellste_minuten": 4,
   "stand": "2026-08-17"
 }
