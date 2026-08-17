@@ -987,7 +987,25 @@ def _og_karte(summe: dict) -> str:
         karte = (karte.replace("Singapur und Malaysia", "Singapore and Malaysia")
                       .replace("was wirklich funktioniert hat", "what actually worked")
                       .replace('lang="de"', 'lang="en"'))
-    return karte.replace("{{FUSS}}", fuss)
+    # Die Adresse kommt aus BASIS, nicht aus der Vorlage. Sie stand dort als
+    # malaysia.jenslaufer.com — eine Subdomain, die nie angelegt wurde. Im HTML
+    # war ueberall die richtige Adresse, geteilt wird aber das Bild, und dort
+    # findet sie kein grep. Wer sie abtippt, landet nirgends (17.08. gemessen).
+    ersatz = {
+        "ADRESSE": BASIS.split("://", 1)[1].rstrip("/"),
+        "UNTERZEILE": _t(
+            "Reisenotizen, unterwegs per Telegram geschrieben und von einer "
+            "Maschine in Deutschland veröffentlicht.",
+            "Travel notes, written by phone on the road and published by a "
+            "machine back in Germany."),
+        "ERLEBT": _t("selbst erlebt", "seen ourselves"),
+        "RECHERCHE": _t("nachgeschlagen", "looked up"),
+        "GESCHEITERT": _t("hat nicht funktioniert", "did not work"),
+        "FUSS": fuss,
+    }
+    for name, wert in ersatz.items():
+        karte = karte.replace("{{" + name + "}}", wert)
+    return karte
 
 
 def baue_og_bild(summe: dict, ziel: Path = None) -> Path | None:

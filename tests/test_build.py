@@ -411,6 +411,72 @@ class TestVorschaubild(unittest.TestCase):
         self.assertNotIn("Minuten", karte)
 
 
+class TestKartenadresse(unittest.TestCase):
+    """Die Adresse auf der Vorschaukarte findet kein grep — sie steht im PNG.
+
+    Gefunden am 17.08.: die Karte warb fuer malaysia.jenslaufer.com, eine
+    Adresse ohne DNS-Eintrag. Jede Pruefung ueber HTML, Feed und sitemap war
+    gruen, weil dort ueberall die richtige Adresse steht; gelesen wird beim
+    Teilen aber das Bild. Wer sie abtippt, landet nirgends.
+    """
+
+    ERWARTET = build.BASIS.split("://", 1)[1].rstrip("/")
+
+    @contextlib.contextmanager
+    def sprache(self, wert):
+        alt, build.SPRACHE = build.SPRACHE, wert
+        try:
+            yield
+        finally:
+            build.SPRACHE = alt
+
+    def test_karte_zeigt_die_adresse_unter_der_die_seite_steht(self):
+        for wert in build.SPRACHEN:
+            with self.subTest(sprache=wert), self.sprache(wert):
+                self.assertIn(self.ERWARTET, build._og_karte({}))
+
+    def test_karte_nennt_keine_zweite_adresse_auf_dieser_domain(self):
+        muster = re.compile(r"[\w.-]*jenslaufer\.com[\w/.-]*")
+        for wert in build.SPRACHEN:
+            with self.subTest(sprache=wert), self.sprache(wert):
+                for gefunden in muster.findall(build._og_karte({})):
+                    self.assertEqual(
+                        self.ERWARTET, gefunden.rstrip("/"),
+                        f"Vorschaukarte nennt {gefunden!r}, erreichbar ist "
+                        f"{self.ERWARTET!r}")
+
+
+class TestKarteSpricht(unittest.TestCase):
+    """Die englische Vorschaukarte war zur Haelfte deutsch.
+
+    Belegt am 17.08. an der gerenderten Karte: `lang="en"`, Titel uebersetzt,
+    Unterzeile und Legende weiter deutsch. Sichtbar wird das genau dort, wo es
+    am meisten kostet — unter dem englischen LinkedIn-Post, den Fremde sehen.
+    """
+
+    DEUTSCH = ("selbst erlebt", "nachgeschlagen", "hat nicht funktioniert",
+               "Reisenotizen", "veröffentlicht")
+
+    def test_englische_karte_traegt_kein_deutsches_wort(self):
+        alt, build.SPRACHE = build.SPRACHE, "en"
+        try:
+            karte = build._og_karte({})
+        finally:
+            build.SPRACHE = alt
+        sichtbar = re.sub(r"<(style|script)\b.*?</\1>", " ", karte, flags=re.S | re.I)
+        for wort in self.DEUTSCH:
+            self.assertNotIn(wort, sichtbar)
+
+    def test_deutsche_karte_bleibt_deutsch(self):
+        alt, build.SPRACHE = build.SPRACHE, "de"
+        try:
+            karte = build._og_karte({})
+        finally:
+            build.SPRACHE = alt
+        self.assertIn("selbst erlebt", karte)
+        self.assertIn("Reisenotizen", karte)
+
+
 class TestEchteUmlaute(unittest.TestCase):
     """Auf der Seite stehen echte Umlaute, nie die ASCII-Umschrift.
 
