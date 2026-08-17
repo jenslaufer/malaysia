@@ -509,7 +509,7 @@ Regeln beim Eintragen:
    Die Zeit ist der Zeitstempel SEINER Nachricht aus state/inbox.md, in UTC.
    Daraus misst tools/reise-werkstatt.py, wie lange es von der Nachricht bis zur
    veroeffentlichten Seite gedauert hat — das ist die Verbindung zwischen dieser
-   Seite und /harry/, und beide lesen dieselbe Messung.
+   Seite und /otto/, und beide lesen dieselbe Messung.
    NUR an gemeldete Eintraege. Ein abgeleiteter Wert (die 33 MRT-Minuten sind aus
    zwei Zeitstempeln gerechnet, nicht berichtet) bekommt KEINEN Marker, sonst
    misst die Zahl die eigene Rechenzeit statt der Reaktionszeit.
