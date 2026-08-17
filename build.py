@@ -25,11 +25,18 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parent
+
+# Wo die Seite ausgeliefert wird. Eine Zeile, damit og:image und canonical nicht
+# auseinanderlaufen — eine Vorschau, die ins Leere zeigt, ist schlimmer als keine.
+BASIS = "https://jenslaufer.com/malaysia/"
+HARNESS_SEITE = "https://jenslaufer.com/harry/"
+LINKEDIN = "https://www.linkedin.com/in/jenslaufer"
 QUELLE = Path.home() / "repos" / "assistant" / "state" / "reise-erfahrungen-malaysia-2026.md"
 KOPIE = WURZEL / "content" / "erfahrungen.md"
 ZIEL = WURZEL / "index.html"
@@ -355,6 +362,87 @@ def _werkstatt_band(summe: dict) -> str:
 """
 
 
+def _autor_block() -> str:
+    """Wer die Seite schreibt — und der Beruf, aus dem sie entstanden ist.
+
+    Zwei Leser, ein Block: wer die Reise liest, will wissen, wem er die Haken
+    glaubt; wer wissen will, wie eine Seite ohne Rechner entsteht, findet hier
+    den Weg zur Maschine. Preise stehen bewusst nicht hier — diese Seite geht an
+    Freunde und an Leute, die den Weg zur Larkin-Busstation suchen, und ein
+    Tagessatz zwischen Faehrzeiten entwertet den Rest der Seite.
+
+    Er steht auch dann, wenn die Reisemessung fehlt: nach dem 07.09. faellt das
+    Werkstatt-Band weg, die Auskunft, wer hier schreibt, bleibt noetig.
+    """
+    return f"""
+<section class="autor" aria-labelledby="autor-titel">
+  <h2 id="autor-titel">Wer das hier schreibt</h2>
+  <p>Wir sind zu viert unterwegs — drei Wochen Singapur, Halbinsel, Borneo. Getippt
+     hat diese Seite niemand von uns. Jens schickt unterwegs eine Telegram-Nachricht,
+     wenn etwas funktioniert hat; den Rest macht <a href="{HARNESS_SEITE}">Harry</a>,
+     ein Assistent auf einem Mini-PC in einem Keller in Karlstein am Main: nachsehen,
+     einordnen, gegen die bisherigen Notizen halten, auf private Daten prüfen, die
+     Seite neu bauen, veröffentlichen.</p>
+  <p>Das ist kein Kunststück nebenbei, sondern der Beruf. Jens Laufer arbeitet als
+     <b>Forward Deployed Engineer</b> — er bringt Modelle aus der Demo dorthin, wo
+     echte Daten, echte Abläufe und echte Ausfälle sind — und die Hälfte davon ist
+     inzwischen <b>Harness Engineering</b>: nicht das Modell bauen, sondern den
+     Aufbau darum, in dem es unbeaufsichtigt arbeitet. Diese Reise ist der Härtetest.
+     Was sich nicht von einem Telefon aus beauftragen lässt, findet drei Wochen lang
+     nicht statt.</p>
+  <p class="autor-links">
+    <a href="{HARNESS_SEITE}">Wie der Aufbau funktioniert, mit allen Zahlen →</a>
+    <a href="{LINKEDIN}">Jens auf LinkedIn</a>
+  </p>
+</section>
+"""
+
+
+def _og_karte(summe: dict) -> str:
+    """Die Vorschaukarte als HTML. Ohne Messung ohne Zahl — nie mit einer Null."""
+    karte = (WURZEL / "template" / "og.html").read_text(encoding="utf-8")
+    if summe.get("gemessen") and summe.get("juengste_minuten") is not None:
+        fuss = (
+            f"{summe['gemessen']} Meldungen von unterwegs &middot; zuletzt "
+            f"<em>{summe['juengste_minuten']} Minuten</em> von der Nachricht bis online"
+        )
+    else:
+        fuss = "Geschrieben unterwegs, gebaut in Deutschland"
+    return karte.replace("{{FUSS}}", fuss)
+
+
+def baue_og_bild(summe: dict, ziel: Path = None) -> Path | None:
+    """Rendert die Vorschaukarte (1200x630) mit Chromium.
+
+    Ohne Bild ist der geteilte Link in Telegram, WhatsApp und LinkedIn eine graue
+    Zeile — und geteilt wird diese Seite, dafuer ist sie da.
+    """
+    ziel = ziel or (WURZEL / "og.png")
+    karte = _og_karte(summe)
+    pruefe_privat(karte)
+
+    # Snap-Chromium darf weder nach /tmp noch in versteckte Ordner schreiben.
+    arbeit = Path.home() / "pdf-slim-work" / "malaysia"
+    arbeit.mkdir(parents=True, exist_ok=True)
+    quelle = arbeit / "og-karte.html"
+    quelle.write_text(karte, encoding="utf-8")
+
+    for programm in ("chromium", "chromium-browser", "google-chrome"):
+        try:
+            lauf = subprocess.run(
+                [programm, "--headless", "--disable-gpu", "--hide-scrollbars",
+                 "--window-size=1200,630", "--virtual-time-budget=8000",
+                 f"--screenshot={arbeit / 'og.png'}", f"file://{quelle}"],
+                capture_output=True, text=True, timeout=120,
+            )
+        except (OSError, subprocess.SubprocessError):
+            continue
+        if lauf.returncode == 0 and (arbeit / "og.png").exists():
+            ziel.write_bytes((arbeit / "og.png").read_bytes())
+            return ziel
+    return None
+
+
 def _inhaltsverzeichnis(rumpf: str) -> str:
     eintraege = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', rumpf, flags=re.S)
     if not eintraege:
@@ -373,7 +461,7 @@ def baue_seite(md: str) -> str:
     # Kopf ist alles bis zur ersten Ueberschrift zweiter Ordnung.
     schnitt = rumpf.find("<h2")
     kopf, rest = (rumpf[:schnitt], rumpf[schnitt:]) if schnitt > 0 else (rumpf, "")
-    rest = _werkstatt_band(WERKSTATT_SUMME) + _karte() + rest
+    rest = _werkstatt_band(WERKSTATT_SUMME) + _karte() + rest + _autor_block()
 
     vorlage = (WURZEL / "template" / "page.html").read_text(encoding="utf-8")
     css = (WURZEL / "template" / "site.css").read_text(encoding="utf-8")
@@ -384,6 +472,7 @@ def baue_seite(md: str) -> str:
         .replace("{{INHALT}}", rest)
         .replace("{{TOC}}", _inhaltsverzeichnis(rumpf))
         .replace("{{STAND}}", stand)
+        .replace("{{BASIS}}", BASIS)
     )
     pruefe_privat(seite)
     return seite
@@ -415,6 +504,8 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--no-sync", action="store_true", help="Quelle nicht neu holen")
     p.add_argument("--check", action="store_true", help="nur Datenschutz pruefen")
+    p.add_argument("--og", action="store_true",
+                   help="auch die Vorschaukarte og.png neu rendern (braucht Chromium)")
     args = p.parse_args()
 
     if not args.no_sync and QUELLE.exists():
@@ -459,6 +550,14 @@ def main() -> int:
 
     ZIEL.write_text(seite, encoding="utf-8")
     print(f"gebaut: {ZIEL} ({len(seite):,} Bytes)")
+
+    if args.og:
+        bild = baue_og_bild(WERKSTATT_SUMME)
+        if bild:
+            print(f"og.png: {bild.stat().st_size:,} B")
+        else:
+            print("og.png NICHT gebaut (kein Chromium?) — Vorschau bleibt alt.",
+                  file=sys.stderr)
     return 0
 
 

@@ -1,11 +1,18 @@
-# Reise-Erfahrungen — Singapur und Malaysia, August/September 2026
+# Singapur und Malaysia — was wirklich funktioniert hat
 
-Vier Personen: Jens, Nadine, Linn (16), Janne (12). 15.08.–07.09.2026.
-Frankfurt → Bahrain → Singapur → Johor Bahru → Mersing → Tioman → Kuala Lumpur →
-Sandakan → Kota Kinabalu → Kudat → Singapur → Frankfurt.
+Am Montag kurz nach zwölf standen wir zu viert auf der malaysischen Seite der Grenze,
+mit dem Gepäck für drei Wochen, und suchten den Weg zur Busstation Larkin. Fünf Kilometer,
+mit Koffern, in einem Land, dessen Bargeld wir uns erst dort besorgen wollten. Geraten wird
+einem an dieser Stelle überall zum Taxi. Es fuhr ein Bus, und bezahlt haben wir ihn
+kontaktlos mit derselben Kreditkarte wie zu Hause.
 
-Dieses Dokument sammelt, was auf der Reise **wirklich funktioniert hat** — zum Weitergeben
-an andere und als eigenes Nachschlagewerk für das nächste Mal.
+Genau solche Sätze sind der Zweck dieses Dokuments: die eine Auskunft, die einem eine
+Stunde und dreißig Euro spart und die vorher in keinem Reiseführer stand, den wir gelesen
+haben. Vier Personen, 15.08.–07.09.2026, Frankfurt → Bahrain → Singapur → Johor Bahru →
+Mersing → Tioman → Kuala Lumpur → Sandakan → Kota Kinabalu → Kudat → Singapur → Frankfurt.
+
+Es wächst mit der Reise. Was heute noch als offen dasteht, steht in ein paar Tagen mit
+Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.
 
 ## Wie das Dokument zu lesen ist
 

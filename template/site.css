@@ -250,6 +250,34 @@ code {
 
 .werkstatt a { color: var(--erlebt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
+/* --- Autorblock am Fuss ---
+   Bewusst kein Kasten: er schliesst den Text ab, statt ihn zu unterbrechen. */
+
+.autor {
+  max-width: var(--satz);
+  margin: 3.5rem auto 0;
+  padding: 2rem 1.5rem 0;
+  border-top: 2px solid var(--linie);
+}
+
+.autor h2 {
+  margin: 0 0 .8rem;
+  font-size: 1.25rem;
+  letter-spacing: -.01em;
+}
+
+.autor p { color: var(--tinte-leise); }
+
+.autor a { color: var(--erlebt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+.autor-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.8rem;
+  margin-top: 1.4rem;
+  font-size: .95rem;
+}
+
 /* --- Karte --- */
 
 .karte-block { margin: 0 0 1rem; }

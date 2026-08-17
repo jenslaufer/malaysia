@@ -9,7 +9,13 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Singapur und Malaysia — was wirklich funktioniert hat">
-<meta property="og:description" content="Reisenotizen mit einem Zeichen an jedem Punkt: selbst erlebt, nachgeschlagen oder gescheitert.">
+<meta property="og:description" content="Reisenotizen mit einem Zeichen an jedem Punkt: selbst erlebt, nachgeschlagen oder gescheitert. Unterwegs per Telegram geschrieben, von einer Maschine in Deutschland veröffentlicht.">
+<meta property="og:url" content="https://jenslaufer.com/malaysia/">
+<meta property="og:image" content="https://jenslaufer.com/malaysia/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jenslaufer.com/malaysia/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -269,6 +275,34 @@ code {
 
 .werkstatt a { color: var(--erlebt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
+/* --- Autorblock am Fuss ---
+   Bewusst kein Kasten: er schliesst den Text ab, statt ihn zu unterbrechen. */
+
+.autor {
+  max-width: var(--satz);
+  margin: 3.5rem auto 0;
+  padding: 2rem 1.5rem 0;
+  border-top: 2px solid var(--linie);
+}
+
+.autor h2 {
+  margin: 0 0 .8rem;
+  font-size: 1.25rem;
+  letter-spacing: -.01em;
+}
+
+.autor p { color: var(--tinte-leise); }
+
+.autor a { color: var(--erlebt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+.autor-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1.8rem;
+  margin-top: 1.4rem;
+  font-size: .95rem;
+}
+
 /* --- Karte --- */
 
 .karte-block { margin: 0 0 1rem; }
@@ -373,12 +407,18 @@ a { color: var(--erlebt); }
 
 <header class="kopf">
   <p class="kicker">Reisenotizen · August und September 2026</p>
-  <h1>Reise-Erfahrungen — Singapur und Malaysia, August/September 2026</h1>
-<p>Vier Personen: Jens, Nadine, Linn (16), Janne (12). 15.08.–07.09.2026.
-Frankfurt → Bahrain → Singapur → Johor Bahru → Mersing → Tioman → Kuala Lumpur →
-Sandakan → Kota Kinabalu → Kudat → Singapur → Frankfurt.</p>
-<p>Dieses Dokument sammelt, was auf der Reise <strong>wirklich funktioniert hat</strong> — zum Weitergeben
-an andere und als eigenes Nachschlagewerk für das nächste Mal.</p>
+  <h1>Singapur und Malaysia — was wirklich funktioniert hat</h1>
+<p>Am Montag kurz nach zwölf standen wir zu viert auf der malaysischen Seite der Grenze,
+mit dem Gepäck für drei Wochen, und suchten den Weg zur Busstation Larkin. Fünf Kilometer,
+mit Koffern, in einem Land, dessen Bargeld wir uns erst dort besorgen wollten. Geraten wird
+einem an dieser Stelle überall zum Taxi. Es fuhr ein Bus, und bezahlt haben wir ihn
+kontaktlos mit derselben Kreditkarte wie zu Hause.</p>
+<p>Genau solche Sätze sind der Zweck dieses Dokuments: die eine Auskunft, die einem eine
+Stunde und dreißig Euro spart und die vorher in keinem Reiseführer stand, den wir gelesen
+haben. Vier Personen, 15.08.–07.09.2026, Frankfurt → Bahrain → Singapur → Johor Bahru →
+Mersing → Tioman → Kuala Lumpur → Sandakan → Kota Kinabalu → Kudat → Singapur → Frankfurt.</p>
+<p>Es wächst mit der Reise. Was heute noch als offen dasteht, steht in ein paar Tagen mit
+Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 
 </header>
 
@@ -574,17 +614,38 @@ Tanjung Gemok, die Bordkarte sagt Mersing — 40 Kilometer auseinander, zwei ver
 Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht die Bestellung.</p>
 <h2 id="chronik">Chronik</h2>
 <div class="table-wrap"><table><thead><tr><th>Datum</th><th>Wo</th><th>Steht oben unter</th></tr></thead><tbody><tr><td>15.08.</td><td>Frankfurt → Bahrain (Zwischenstopp) → Singapur</td><td>Strom, Internet, Telefon</td></tr><tr><td>16.08.</td><td>Singapur, Little India · Gardens by the Bay</td><td>Unterwegs in Singapur</td></tr><tr><td>17.08.</td><td>Grenze nach Johor Bahru · Larkin Sentral · Bus nach Mersing</td><td>Grenze · Bezahlen</td></tr><tr><td>18.–21.08.</td><td>Tioman</td><td>—</td></tr><tr><td>22.–24.08.</td><td>Kuala Lumpur</td><td>—</td></tr><tr><td>25.–28.08.</td><td>Sandakan, Sabah</td><td>—</td></tr><tr><td>29.08.–03.09.</td><td>Kota Kinabalu</td><td>—</td></tr><tr><td>04.–05.09.</td><td>Kudat, Tip of Borneo</td><td>—</td></tr><tr><td>05.–07.09.</td><td>Singapur → Bahrain → Frankfurt</td><td>—</td></tr></tbody></table></div>
+<section class="autor" aria-labelledby="autor-titel">
+  <h2 id="autor-titel">Wer das hier schreibt</h2>
+  <p>Wir sind zu viert unterwegs — drei Wochen Singapur, Halbinsel, Borneo. Getippt
+     hat diese Seite niemand von uns. Jens schickt unterwegs eine Telegram-Nachricht,
+     wenn etwas funktioniert hat; den Rest macht <a href="https://jenslaufer.com/harry/">Harry</a>,
+     ein Assistent auf einem Mini-PC in einem Keller in Karlstein am Main: nachsehen,
+     einordnen, gegen die bisherigen Notizen halten, auf private Daten prüfen, die
+     Seite neu bauen, veröffentlichen.</p>
+  <p>Das ist kein Kunststück nebenbei, sondern der Beruf. Jens Laufer arbeitet als
+     <b>Forward Deployed Engineer</b> — er bringt Modelle aus der Demo dorthin, wo
+     echte Daten, echte Abläufe und echte Ausfälle sind — und die Hälfte davon ist
+     inzwischen <b>Harness Engineering</b>: nicht das Modell bauen, sondern den
+     Aufbau darum, in dem es unbeaufsichtigt arbeitet. Diese Reise ist der Härtetest.
+     Was sich nicht von einem Telefon aus beauftragen lässt, findet drei Wochen lang
+     nicht statt.</p>
+  <p class="autor-links">
+    <a href="https://jenslaufer.com/harry/">Wie der Aufbau funktioniert, mit allen Zahlen →</a>
+    <a href="https://www.linkedin.com/in/jenslaufer">Jens auf LinkedIn</a>
+  </p>
+</section>
+
 </main>
 
 <footer class="fuss">
   <p>Stand 17.08.2026. Das Dokument wächst mit der Reise — was heute noch offen ist,
      steht in ein paar Tagen mit Datum hier.</p>
+  <!-- Der Hinweis auf die Maschine stand frueher auch hier. Er steht jetzt eine
+       Sektion darueber im Autorblock; zweimal derselbe Satz liest sich, als
+       haette es niemand gelesen. -->
   <p class="klein">Private Angaben stehen bewusst nicht auf dieser Seite: keine
      Buchungsnummern, keine Ausweisdaten, keine Adressen unserer Unterkünfte.
      Kartendaten von OpenStreetMap.</p>
-  <p class="klein">Geschrieben unterwegs über Telegram, gepflegt von einem Assistenten
-     auf einem Mini-PC in Deutschland. <a href="https://jenslaufer.com/harry/">Wie das
-     funktioniert</a> · <a href="https://jenslaufer.com/">Jens Laufer</a></p>
 </footer>
 
 </body>

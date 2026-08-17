@@ -302,6 +302,78 @@ class TestWerkstattBand(unittest.TestCase):
         self.assertIn("/harry/", seite)
 
 
+class TestAutorblock(unittest.TestCase):
+    """Der Block am Fuss sagt, wer die Seite schreibt und was er beruflich macht.
+
+    Zwei Leser, ein Block. Wer die Reise liest, will wissen, wem er die Haken
+    glaubt. Wer wissen will, wie die Seite entsteht, findet hier den Beruf, der
+    dahintersteckt — und der ist der Grund, warum es diese Seite gibt.
+
+    Was hier NICHT hingehoert: Preise. Diese Seite geht an Freunde und an Leute,
+    die nach dem Weg zur Larkin-Busstation suchen. Ein Tagessatz zwischen
+    Faehrzeiten wuerde den Rest der Seite entwerten. Er steht auf /harry/.
+    """
+
+    def test_block_nennt_beide_rollen(self):
+        html = build._autor_block()
+        self.assertIn("Forward Deployed Engineer", html)
+        self.assertIn("Harness Engineer", html)
+
+    def test_block_nennt_keinen_preis(self):
+        html = build._autor_block()
+        self.assertNotIn("€", html)
+        self.assertNotIn("Tagessatz", html)
+
+    def test_block_verlinkt_die_harness_seite(self):
+        self.assertIn("/harry/", build._autor_block())
+
+    def test_block_steht_auf_der_gebauten_seite(self):
+        seite = build.baue_seite("# Titel\n\nVorspann.\n\n## Erstes\n\nEin Satz.\n")
+        self.assertIn("Forward Deployed Engineer", seite)
+
+    def test_block_steht_auch_ohne_messung_auf_der_seite(self):
+        # Das Werkstatt-Band faellt nach der Reise weg. Wer die Seite geschrieben
+        # hat, bleibt trotzdem eine Auskunft, die der Leser braucht.
+        vorher = build.WERKSTATT_SUMME
+        build.WERKSTATT_SUMME = {}
+        try:
+            seite = build.baue_seite("# Titel\n\nVorspann.\n\n## Erstes\n\nEin Satz.\n")
+        finally:
+            build.WERKSTATT_SUMME = vorher
+        self.assertIn("Forward Deployed Engineer", seite)
+
+
+class TestVorschaubild(unittest.TestCase):
+    """Geteilt wird die Vorschaukarte, nicht die Seite.
+
+    Ein Link ohne Bild ist in Telegram, WhatsApp und LinkedIn eine graue Zeile.
+    Ein og:image-Tag ohne Datei ist schlimmer als keins: die Vorschau bleibt
+    leer, und niemand sieht nach, warum.
+    """
+
+    def test_seite_verweist_auf_ein_vorschaubild(self):
+        seite = build.baue_seite("# Titel\n\nVorspann.\n\n## Erstes\n\nEin Satz.\n")
+        self.assertIn('property="og:image"', seite)
+        self.assertIn("og.png", seite)
+
+    def test_bild_liegt_wirklich_im_repo(self):
+        bild = build.WURZEL / "og.png"
+        self.assertTrue(bild.exists(), "og:image ist ausgezeichnet, aber og.png fehlt")
+        self.assertGreater(bild.stat().st_size, 5000, "og.png ist verdaechtig klein")
+
+    def test_adresse_ist_absolut(self):
+        # Ein relativer Pfad im og:image wird von keinem Vorschau-Dienst geladen.
+        seite = build.baue_seite("# Titel\n\nVorspann.\n\n## Erstes\n\nEin Satz.\n")
+        treffer = re.search(r'property="og:image" content="([^"]+)"', seite)
+        self.assertIsNotNone(treffer)
+        self.assertTrue(treffer.group(1).startswith("https://"))
+
+    def test_karte_traegt_keine_erfundene_zahl(self):
+        # Ohne Messung darf auf der Karte keine Minutenzahl stehen.
+        karte = build._og_karte({})
+        self.assertNotIn("Minuten", karte)
+
+
 class TestEchteUmlaute(unittest.TestCase):
     """Auf der Seite stehen echte Umlaute, nie die ASCII-Umschrift.
 

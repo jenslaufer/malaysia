@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px;
+    background: #faf7f2;
+    color: #1b1a17;
+    font-family: Inter, sans-serif;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 60px 70px 54px;
+    overflow: hidden;
+  }
+  .kicker {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 17px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #8a8276;
+  }
+  h1 {
+    font-family: Fraunces, Georgia, serif; font-weight: 600;
+    font-size: 96px; line-height: 0.98; letter-spacing: -0.035em;
+    margin: 22px 0 20px; max-width: 900px;
+  }
+  p.sub { font-size: 28px; line-height: 1.38; color: #56514a; max-width: 860px; }
+  .legende { display: flex; gap: 46px; border-top: 1px solid #e0d8c9; padding-top: 26px; }
+  .legende div { display: flex; align-items: baseline; gap: 13px; font-size: 21px; color: #56514a; }
+  .legende b {
+    font-family: Fraunces, Georgia, serif; font-size: 34px; font-weight: 600;
+    line-height: 1;
+  }
+  .erlebt b { color: #2f6b4f; }
+  .recherche b { color: #a8762c; }
+  .gescheitert b { color: #a33a2e; }
+  .fuss {
+    margin-top: 24px;
+    font-family: "JetBrains Mono", monospace; font-size: 19px; color: #8a8276;
+  }
+  .fuss em { font-style: normal; color: #2f6b4f; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div>
+    <p class="kicker">malaysia.jenslaufer.com</p>
+    <h1>Singapur und Malaysia — was wirklich funktioniert hat</h1>
+    <p class="sub">Reisenotizen, unterwegs per Telegram geschrieben und von einer
+       Maschine in Deutschland veröffentlicht.</p>
+  </div>
+  <div>
+    <div class="legende">
+      <div class="erlebt"><b>&#10003;</b> selbst erlebt</div>
+      <div class="recherche"><b>&#9675;</b> nachgeschlagen</div>
+      <div class="gescheitert"><b>&#10007;</b> hat nicht funktioniert</div>
+    </div>
+    <p class="fuss">{{FUSS}}</p>
+  </div>
+</body>
+</html>
