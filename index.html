@@ -21,12 +21,15 @@
 <link rel="alternate" hreflang="de" href="https://jenslaufer.com/malaysia/">
 <link rel="alternate" hreflang="en" href="https://jenslaufer.com/malaysia/en/">
 <link rel="alternate" hreflang="x-default" href="https://jenslaufer.com/malaysia/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<!-- Schriften und Leaflet selbst ausgeliefert, seit 17.08. Ein Link auf
+     fonts.googleapis.com oder unpkg.com traegt die IP jedes Lesers zu einem
+     Dritten, bevor er etwas anklicken konnte — unheilbar durch jede
+     Datenschutzzeile. Schriften erneuern: tools/webfonts-lokal.py (im
+     assistant-Repo). -->
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <!-- defer: laeuft vor DOMContentLoaded, also bevor der Karten-Code unten zugreift -->
-<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="vendor/leaflet/leaflet.js"></script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f6b4f'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='%23faf7f2' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>/* Singapur und Malaysia — Reisenotizen.
    Gestaltungsidee: das Zeichen vor jedem Eintrag ist der Inhalt. Es steht in
@@ -336,6 +339,56 @@ code {
 
 .leaflet-container { font: inherit; border-radius: 10px; }
 
+/* Die Tuer vor der Karte. Vor dem Klick geht keine Anfrage nach
+   openstreetmap.org — der Kasten sagt, warum, statt nur einen Knopf zu zeigen. */
+.karte-tuer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.karte-tuer p {
+  margin: 0;
+  max-width: 34ch;
+  font-size: .92rem;
+  color: var(--tinte-leise);
+}
+.karte-tuer button {
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 500;
+  padding: .55rem 1.2rem;
+  color: var(--papier);
+  background: var(--erlebt);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.karte-tuer button:hover { background: #1c4f3f; }
+
+/* --- Rechtsseiten ---
+
+   Impressum und Datenschutzerklaerung. Dieselbe Schrift, dieselbe Satzbreite,
+   nur kleinere Zwischentitel: es ist eine Auskunft, kein Kapitel. */
+
+.recht { max-width: var(--satz); margin: 0 auto; padding: 0 1.5rem 2rem; }
+.recht h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 2.1rem 0 .6rem;
+  border-top: 0;
+  padding-top: 0;
+}
+.recht h2:first-of-type { margin-top: 1rem; }
+.recht p { font-size: .97rem; }
+.recht .lead-klein { font-size: 1.05rem; color: var(--tinte-leise); }
+
 .stationen {
   margin: 0;
   padding-left: 1.3rem;
@@ -550,14 +603,25 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 <section class="karte-block" aria-labelledby="karte-titel">
   <h2 id="karte-titel">Die Route</h2>
   <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos. Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.</p>
-  <div id="karte" role="img" aria-label="Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo"></div>
+  <div id="karte" role="img" aria-label="Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo">
+    <div class="karte-tuer">
+      <p>Die Kartenbilder kommen von OpenStreetMap. Beim Laden erfährt openstreetmap.org Ihre IP-Adresse — deshalb erst auf Ihren Klick.</p>
+      <button type="button" id="karte-laden">Karte laden</button>
+    </div>
+  </div>
   <noscript><p class="hinweis">Die Karte braucht JavaScript. Die Stationen stehen als Liste darunter.</p></noscript>
   <ol class="stationen"><li><b>Singapur</b> <span>15.–17.08. · 05.–07.09.</span></li><li><b>Johor Bahru</b> <span>17.08. · Grenze und Larkin Sentral</span></li><li><b>Mersing</b> <span>17.–18.08. · Fährhafen nach Tioman</span></li><li><b>Tioman</b> <span>18.–21.08.</span></li><li><b>Kuala Lumpur</b> <span>22.–24.08.</span></li><li><b>Sandakan</b> <span>25.–28.08. · Sabah</span></li><li><b>Kota Kinabalu</b> <span>29.08.–03.09.</span></li><li><b>Kudat</b> <span>04.–05.09. · Tip of Borneo</span></li></ol>
 </section>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  // Die Kacheln sind der einzige Dritte, der auf dieser Seite bleibt — eine
+  // Weltkarte laesst sich nicht mitliefern. Also entscheidet der Leser: vor
+  // dem Klick geht keine Anfrage nach openstreetmap.org. Der Aufruf steht
+  // deshalb IN dieser Funktion und nirgends sonst.
+  function karteLaden() {
     var el = document.getElementById("karte");
     if (!el || typeof L === "undefined") return;
+    el.innerHTML = "";
+    el.removeAttribute("role");
     var orte = [
       ["Singapur", 1.3521, 103.8198, "15.–17.08. · 05.–07.09."],
       ["Johor Bahru", 1.4655, 103.7578, "17.08. · Grenze und Larkin Sentral"],
@@ -582,6 +646,10 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
     });
     L.polyline(linie, { color: "#1c4f3f", weight: 2, opacity: .45, dashArray: "5 6" }).addTo(karte);
     karte.fitBounds(L.latLngBounds(linie).pad(.12));
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var knopf = document.getElementById("karte-laden");
+    if (knopf) knopf.addEventListener("click", karteLaden);
   });
 </script>
 <h2 id="wie-das-dokument-zu-lesen-ist">Wie das Dokument zu lesen ist</h2>
@@ -950,6 +1018,8 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
      Buchungsnummern, keine Ausweisdaten, keine Adressen unserer Unterkünfte.
      Kartendaten von OpenStreetMap. <a href="en/" hreflang="en" lang="en">This page
      in English</a>.</p>
+  <p class="klein"><a href="impressum.html">Impressum</a> ·
+     <a href="datenschutz.html">Datenschutzerklärung</a></p>
 </footer>
 
 </body>

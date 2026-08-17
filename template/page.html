@@ -21,12 +21,15 @@
 <link rel="alternate" hreflang="de" href="{{BASIS}}">
 <link rel="alternate" hreflang="en" href="{{BASIS}}en/">
 <link rel="alternate" hreflang="x-default" href="{{BASIS}}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<!-- Schriften und Leaflet selbst ausgeliefert, seit 17.08. Ein Link auf
+     fonts.googleapis.com oder unpkg.com traegt die IP jedes Lesers zu einem
+     Dritten, bevor er etwas anklicken konnte — unheilbar durch jede
+     Datenschutzzeile. Schriften erneuern: tools/webfonts-lokal.py (im
+     assistant-Repo). -->
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <!-- defer: laeuft vor DOMContentLoaded, also bevor der Karten-Code unten zugreift -->
-<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="vendor/leaflet/leaflet.js"></script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f6b4f'/%3E%3Cpath d='M8 17l5 5 11-12' stroke='%23faf7f2' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>{{CSS}}</style>
 </head>
@@ -57,6 +60,8 @@
      Buchungsnummern, keine Ausweisdaten, keine Adressen unserer Unterkünfte.
      Kartendaten von OpenStreetMap. <a href="en/" hreflang="en" lang="en">This page
      in English</a>.</p>
+  <p class="klein"><a href="impressum.html">Impressum</a> ·
+     <a href="datenschutz.html">Datenschutzerklärung</a></p>
 </footer>
 
 </body>

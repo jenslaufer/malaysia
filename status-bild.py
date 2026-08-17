@@ -52,9 +52,7 @@ def messe() -> tuple[int, int]:
 
 def karte(foto: Path, anzahl: int, median: int) -> str:
     return f"""<!DOCTYPE html><html lang="de"><head><meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="fonts.css">
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   body {{ width: 1080px; height: 1920px; overflow: hidden;
@@ -85,10 +83,10 @@ def karte(foto: Path, anzahl: int, median: int) -> str:
 <div class="bild"><img src="{foto.as_uri()}" alt=""></div>
 <div class="schleier"></div>
 <div class="inhalt">
-  <div class="kicker">Reisebericht &middot; täglich neu</div>
-  <h1 class="titel">Singapur und Malaysia &mdash; was wirklich funktioniert&nbsp;hat</h1>
-  <p class="unter">Preise, Fährzeiten, Wege. Was wir selbst erlebt haben, steht
-     mit Haken. Was nur nachgeschlagen ist, steht als offen.</p>
+  <div class="kicker">Familie unterwegs &middot; Reisebericht</div>
+  <h1 class="titel">Malaysia und Singapur&nbsp;2026</h1>
+  <p class="unter">Fähren, Geldautomaten und zu viele Katzen in Mersing. Was wir
+     selbst erlebt haben, steht mit Haken.</p>
   <div class="zahlen">
     <div class="zahl"><b>{anzahl}</b><span>Einträge</span></div>
     <div class="zahl"><b>{median} Min</b><span>von unterwegs bis online</span></div>

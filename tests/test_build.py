@@ -1202,5 +1202,194 @@ class TestSitemap(unittest.TestCase):
             self.assertTrue(e.text.startswith("https://"), e.text)
 
 
+class TestFremdeRessourcen(unittest.TestCase):
+    """Was die Seite laedt, laedt sie beim Leser — vor jedem Klick.
+
+    Diese Seite lud bis zum 17.08. Schriften bei Google und Leaflet bei unpkg;
+    beides traegt die IP jedes Lesers zu einem Dritten, bevor er etwas
+    angeklickt hat, und keine Datenschutzzeile heilt das (LG Muenchen I,
+    20.01.2022 — 3 O 17493/20). Beides liegt jetzt hier.
+
+    Die Kartenkacheln bleiben fremd — die kann man nicht mitliefern. Deshalb
+    laedt die Karte erst auf Klick, und `EXTERN_ERLAUBT` ist die Tuer im
+    Waechter: ohne sie waere er derselbe Fehler wie die Adress-Sperre auf der
+    Schwester-Seite, die jeden Kontaktweg zugesperrt hat. Was durch die Tuer
+    geht, muss in der Datenschutzerklaerung stehen — der letzte Test hier haelt
+    beide zusammen.
+    """
+
+    def test_erkennt_eine_fremde_schrift(self):
+        # Positivkontrolle: ohne sie misst der Test unten nur, dass die Suche
+        # nichts findet — auch wenn sie gar nicht sucht.
+        fund = build.externe_ressourcen(
+            '<link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">')
+        self.assertEqual(len(fund), 1, fund)
+
+    def test_erkennt_skript_bild_und_css_adresse(self):
+        for schnipsel in ('<script src="https://unpkg.com/leaflet.js"></script>',
+                          '<img src="https://example.com/a.png">',
+                          '<style>body{background:url(https://example.com/b.png)}</style>',
+                          '<link rel="preconnect" href="https://fonts.gstatic.com">'):
+            with self.subTest(schnipsel=schnipsel):
+                self.assertTrue(build.externe_ressourcen(schnipsel), schnipsel)
+
+    def test_erkennt_eine_adresse_im_javascript(self):
+        # Die Kacheln laedt kein HTML-Attribut, sondern eine Zeile Javascript.
+        # Ein Waechter, der nur Attribute liest, meldet die Seite sauber und
+        # der Browser holt trotzdem bei einem Dritten.
+        self.assertTrue(build.externe_ressourcen(
+            '<script>L.tileLayer("https://tile.example.com/{z}/{x}.png")</script>'))
+
+    def test_anker_ist_keine_ressource(self):
+        self.assertEqual([], build.externe_ressourcen(
+            '<a href="https://jenslaufer.com/harry/">Harness</a>'))
+
+    def test_eigene_und_data_adressen_sind_keine_fremden(self):
+        self.assertEqual([], build.externe_ressourcen(
+            '<link rel="stylesheet" href="fonts/fonts.css">'
+            '<script src="vendor/leaflet/leaflet.js"></script>'
+            '<link rel="icon" href="data:image/svg+xml,%3Csvg%3E">'))
+
+    def test_beide_sprachfassungen_laden_nichts_ausser_der_karte(self):
+        for sprache in build.SPRACHEN:
+            pfad = build.ZIELE[sprache]
+            if not pfad.exists():
+                self.skipTest(f"{pfad} noch nicht gebaut")
+            with self.subTest(sprache=sprache):
+                self.assertEqual([], build.externe_ressourcen(
+                    pfad.read_text(encoding="utf-8")))
+
+    def test_pruefung_bricht_ab_statt_zu_melden(self):
+        with self.assertRaises(build.ExternException):
+            build.pruefe_extern('<script src="https://example.com/x.js"></script>')
+
+    def test_erlaubte_quelle_steht_in_der_datenschutzerklaerung(self):
+        self.assertTrue(build.EXTERN_ERLAUBT, "die Karte braucht eine Ausnahme")
+        for host in build.EXTERN_ERLAUBT:
+            for sprache in build.SPRACHEN:
+                with self.subTest(host=host, sprache=sprache):
+                    self.assertIn(host, build.rendere_recht("datenschutz", sprache),
+                                  f"{host} ist erlaubt, steht aber nicht in der "
+                                  f"Datenschutzerklaerung ({sprache})")
+
+
+class TestKarteLaedtErstAufKlick(unittest.TestCase):
+    """Die Kacheln kommen von OpenStreetMap — der einzige Dritte, der bleibt.
+
+    Er bleibt, weil man eine Weltkarte nicht mitliefert. Also entscheidet der
+    Leser: die Karte zeigt zuerst einen Knopf, und erst der Klick holt die
+    Kacheln. Vorher erfaehrt openstreetmap.org nichts von ihm.
+    """
+
+    def setUp(self):
+        build.SPRACHE = "de"
+        self.html = build._karte()
+
+    def tearDown(self):
+        build.SPRACHE = "de"
+
+    def test_die_kachel_adresse_steht_nicht_im_automatischen_teil(self):
+        # Der Aufruf muss HINTER dem Knopf liegen. Steht er im Startlauf,
+        # laedt die Karte trotz Knopf — und der Knopf ist dann Dekoration.
+        start = self.html.split("function karteLaden")[0]
+        self.assertNotIn("tile.openstreetmap.org", start)
+
+    def test_knopf_und_begruendung_stehen_da(self):
+        self.assertIn("karte-laden", self.html)
+        self.assertIn("openstreetmap.org", self.html)
+        self.assertIn("IP-Adresse", self.html)
+
+    def test_stationen_stehen_auch_ohne_karte_da(self):
+        # Der Knopf darf die Auskunft nicht wegsperren: wer nicht klickt, soll
+        # die Route trotzdem lesen koennen.
+        self.assertIn('<ol class="stationen">', self.html)
+        self.assertIn("Kota Kinabalu", self.html)
+
+    def test_englische_fassung_hat_den_englischen_knopftext(self):
+        build.SPRACHE = "en"
+        html = build._karte()
+        self.assertIn("Load map", html)
+        self.assertNotIn("Karte laden", html)
+
+
+class TestRechtsseiten(unittest.TestCase):
+    """Impressum und Datenschutzerklaerung, von Jens am 17.08. 12:32 bestellt.
+
+    Die Seite ist ein Marketing-Projekt fuer Jens' Arbeit als FDE (sein Wort,
+    06:59) und verlinkt die Angebotsseite — also kein rein privates Angebot.
+    Ein Impressum, das ein privater Blog nicht braucht, schadet nie; sein
+    Fehlen auf einer geschaeftsnahen Seite ist abmahnbar.
+    """
+
+    def test_impressum_traegt_alle_pflichtangaben(self):
+        for sprache in build.SPRACHEN:
+            html = build.rendere_recht("impressum", sprache)
+            sichtbar = re.sub(r"<[^>]+>", " ", html)
+            with self.subTest(sprache=sprache):
+                for feld in ("firma", "strasse", "ort", "vertreten",
+                             "registergericht", "registernummer", "ustid"):
+                    self.assertIn(build.IMPRESSUM[feld], sichtbar, feld)
+                self.assertIn(f"mailto:{build.KONTAKT}", html)
+
+    def test_impressum_nennt_das_geltende_gesetz(self):
+        html = build.rendere_recht("impressum", "de")
+        self.assertIn("DDG", html)
+        self.assertNotIn("TMG", html)
+        self.assertNotIn("RStV", html)
+
+    def test_datenschutz_traegt_die_pflichtinhalte(self):
+        for sprache in build.SPRACHEN:
+            html = build.rendere_recht("datenschutz", sprache)
+            with self.subTest(sprache=sprache):
+                for anker in ("Art. 13", "Art. 6", "Art. 15", "Art. 77",
+                              "GitHub", "Data Privacy Framework"):
+                    self.assertIn(anker, html, anker)
+
+    def test_datenschutz_nennt_die_fotos(self):
+        # Auf dieser Seite stehen Bilder von Menschen. Eine Erklaerung, die
+        # davon schweigt, beschreibt eine andere Seite.
+        for sprache in build.SPRACHEN:
+            html = build.rendere_recht("datenschutz", sprache).lower()
+            with self.subTest(sprache=sprache):
+                self.assertTrue("foto" in html or "photo" in html)
+
+    def test_rechtsseiten_laden_selbst_nichts_fremdes(self):
+        for art in build.RECHTSARTEN:
+            for sprache in build.SPRACHEN:
+                with self.subTest(art=art, sprache=sprache):
+                    self.assertEqual([], build.externe_ressourcen(
+                        build.rendere_recht(art, sprache), erlaubt=()))
+
+    def test_jede_seite_verlinkt_impressum_und_datenschutz(self):
+        for sprache in build.SPRACHEN:
+            pfad = build.ZIELE[sprache]
+            if not pfad.exists():
+                self.skipTest(f"{pfad} noch nicht gebaut")
+            html = pfad.read_text(encoding="utf-8")
+            for art in build.RECHTSARTEN:
+                ziel = Path(build.RECHTSSEITEN[(art, sprache)]).name
+                with self.subTest(sprache=sprache, art=art):
+                    self.assertIn(ziel, html)
+
+    def test_englische_fassung_ist_englisch(self):
+        for art in build.RECHTSARTEN:
+            klein = re.sub(r"<[^>]+>", " ",
+                           re.sub(r"<(style|script)\b.*?</\1>", " ",
+                                  build.rendere_recht(art, "en"), flags=re.S)).lower()
+            with self.subTest(art=art):
+                for wort in (r"\bund\b", r"\bnicht\b", r"\bwerden\b", r"\bkeine\b"):
+                    self.assertIsNone(re.search(wort, klein), f"{art}/en: {wort}")
+
+    def test_alle_vier_seiten_liegen_gebaut_auf_der_platte(self):
+        # Der Test misst das ARTEFAKT, nicht die Faehigkeit es zu rendern.
+        # Genau diese Unterscheidung hat am 14.08. drei Tage lang eine
+        # englische Seite verschwinden lassen, waehrend alle Tests gruen waren.
+        for pfad in build.RECHTSSEITEN.values():
+            datei = build.WURZEL / pfad
+            with self.subTest(pfad=pfad):
+                self.assertTrue(datei.exists(), f"{pfad} fehlt")
+                self.assertGreater(datei.stat().st_size, 1500, pfad)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
