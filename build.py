@@ -37,7 +37,7 @@ WURZEL = Path(__file__).resolve().parent
 # Wo die Seite ausgeliefert wird. Eine Zeile, damit og:image und canonical nicht
 # auseinanderlaufen — eine Vorschau, die ins Leere zeigt, ist schlimmer als keine.
 BASIS = "https://jenslaufer.com/malaysia/"
-HARNESS_SEITE = "https://jenslaufer.com/harry/"
+HARNESS_SEITE = "https://jenslaufer.com/otto/"
 LINKEDIN = "https://www.linkedin.com/in/jenslaufer"
 QUELLE = Path.home() / "repos" / "assistant" / "state" / "reise-erfahrungen-malaysia-2026.md"
 KOPIE = WURZEL / "content" / "erfahrungen.md"
@@ -181,7 +181,7 @@ MUSTER = [
 # stillschweigend durchlaesst, ist keiner.
 SPERRLISTE = Path(
     os.environ.get(
-        "HARRY_SPERRLISTE",
+        "OTTO_SPERRLISTE",
         Path.home() / "repos" / "assistant" / "state" / "oeffentlich-gesperrt.txt",
     )
 )
@@ -191,7 +191,7 @@ SPERRLISTE = Path(
 # nicht passieren.
 WARNLISTE = Path(
     os.environ.get(
-        "HARRY_WARNLISTE",
+        "OTTO_WARNLISTE",
         Path.home() / "repos" / "assistant" / "state" / "oeffentlich-warnung.txt",
     )
 )
@@ -231,7 +231,7 @@ def lade_sperrliste(pfad: Path = None) -> list[str]:
 # Die Grenze muss auf BEIDEN Seiten stehen: ohne die Vorschau nach links
 # entfernt `xjens.laufer@solytics.de` seinen eigenen Rumpf und laesst ein
 # nacktes `x` zurueck, das kein Muster mehr trifft — dieselbe Falle wie bei
-# harry am 17.08.
+# otto am 17.08.
 _ERLAUBTE_ADRESSE = re.compile(
     r"(?<![\w.+-])" + re.escape(KONTAKT) + r"(?![\w-]|\.\w)", re.I
 )
@@ -447,7 +447,7 @@ def _uhr(iso: str) -> str:
 def _spur(block: str, telegram: str = None) -> str:
     """Herkunftszeile unter einem Eintrag: Nachricht → veroeffentlicht → Dauer.
 
-    Das ist die eigentliche Verbindung zwischen dieser Seite und /harry/. Ein
+    Das ist die eigentliche Verbindung zwischen dieser Seite und /otto/. Ein
     Reisebericht mit einem Link auf eine Seite ueber Agenten behauptet etwas;
     ein Eintrag, der seine eigene Entstehungszeit mitfuehrt, belegt es.
 
@@ -872,7 +872,7 @@ def _werkstatt_band(summe: dict) -> str:
   </p>
   <p class="werkstatt-fuss">The time under each lived-through entry is measured,
      not estimated: from Jens's message to the commit that published the entry.
-     <a href="https://jenslaufer.com/harry/en/">How this is built and what else runs
+     <a href="https://jenslaufer.com/otto/en/">How this is built and what else runs
      on it →</a></p>
 </aside>
 """
@@ -891,7 +891,7 @@ def _werkstatt_band(summe: dict) -> str:
   </p>
   <p class="werkstatt-fuss">Die Zeit unter jedem selbst erlebten Eintrag ist
      gemessen, nicht geschätzt: von Jens' Nachricht bis zu dem Commit, der den
-     Eintrag veröffentlicht hat. <a href="https://jenslaufer.com/harry/">Wie das
+     Eintrag veröffentlicht hat. <a href="https://jenslaufer.com/otto/">Wie das
      gebaut ist und was sonst noch darauf läuft →</a></p>
 </aside>
 """
@@ -915,7 +915,7 @@ def _autor_block() -> str:
   <h2 id="autor-titel">Who writes this</h2>
   <p>There are four of us travelling — three weeks of Singapore, the peninsula and
      Borneo. None of us typed this page. Jens sends a Telegram message when
-     something has worked; the rest is done by <a href="{HARNESS_SEITE}en/">Harry</a>,
+     something has worked; the rest is done by <a href="{HARNESS_SEITE}en/">Otto</a>,
      an assistant on a mini-PC in a basement in Karlstein am Main, Germany: look it
      up, place it, hold it against the notes so far, check it for private data,
      rebuild the page, publish.</p>
@@ -944,7 +944,7 @@ def _autor_block() -> str:
   <h2 id="autor-titel">Wer das hier schreibt</h2>
   <p>Wir sind zu viert unterwegs — drei Wochen Singapur, Halbinsel, Borneo. Getippt
      hat diese Seite niemand von uns. Jens schickt unterwegs eine Telegram-Nachricht,
-     wenn etwas funktioniert hat; den Rest macht <a href="{HARNESS_SEITE}">Harry</a>,
+     wenn etwas funktioniert hat; den Rest macht <a href="{HARNESS_SEITE}">Otto</a>,
      ein Assistent auf einem Mini-PC in einem Keller in Karlstein am Main: nachsehen,
      einordnen, gegen die bisherigen Notizen halten, auf private Daten prüfen, die
      Seite neu bauen, veröffentlichen.</p>

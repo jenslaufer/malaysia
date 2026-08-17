@@ -18,11 +18,11 @@ als lauter Erfahrung, und **ein ✓ ohne Erlebnis entwertet jeden anderen Haken 
 Deshalb ist das Zeichen auch gestalterisch die Hauptsache: eigene Randspalte,
 eigene Farbe, keine Bildflächen, keine Kacheln.
 
-## Die Verbindung zu /harry/ ist eine Messung, kein Link
+## Die Verbindung zu /otto/ ist eine Messung, kein Link
 
 Die Seite ist zugleich Reisebericht und Arbeitsprobe: sie entsteht drei Wochen
 lang ausschließlich aus Telegram-Nachrichten, während Jens ohne Rechner
-unterwegs ist. Ein Link auf [jenslaufer.com/harry](https://jenslaufer.com/harry/)
+unterwegs ist. Ein Link auf [jenslaufer.com/otto](https://jenslaufer.com/otto/)
 würde das behaupten. Belegt wird es durch die Zeit, die unter jedem selbst
 erlebten Eintrag steht:
 

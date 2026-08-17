@@ -239,7 +239,7 @@ class TestSeite(unittest.TestCase):
 
 
 class TestWerkstattSpur(unittest.TestCase):
-    """Die Herkunftsspur ist die Verbindung zu /harry/.
+    """Die Herkunftsspur ist die Verbindung zu /otto/.
 
     Sie behauptet oeffentlich eine Reaktionszeit. Jede Art, sie zu schoenen oder
     stillschweigend zu verlieren, gehoert deshalb unter einen roten Test — und
@@ -306,7 +306,7 @@ class TestWerkstattSpur(unittest.TestCase):
 
 
 class TestWerkstattBand(unittest.TestCase):
-    """Das Band erklaert dem Leser, wie die Seite entsteht, und verlinkt /harry/."""
+    """Das Band erklaert dem Leser, wie die Seite entsteht, und verlinkt /otto/."""
 
     def test_band_nennt_zahlen_aus_der_messung(self):
         html = build._werkstatt_band(
@@ -320,7 +320,7 @@ class TestWerkstattBand(unittest.TestCase):
         html = build._werkstatt_band(
             {"gemessen": 5, "median_minuten": 66, "juengste_minuten": 17}
         )
-        self.assertIn("/harry/", html)
+        self.assertIn("/otto/", html)
 
     def test_ohne_messung_kein_band_statt_band_mit_nullen(self):
         # Lieber gar keine Aussage als "Median 0 Minuten".
@@ -336,7 +336,7 @@ class TestWerkstattBand(unittest.TestCase):
             "**✓ Etwas hat geklappt (17.08.).** Dazu ein Satz.\n"
             "<!-- werkstatt: telegram=2026-08-17T06:21 -->\n"
         )
-        self.assertIn("/harry/", seite)
+        self.assertIn("/otto/", seite)
 
 
 class TestAutorblock(unittest.TestCase):
@@ -348,7 +348,7 @@ class TestAutorblock(unittest.TestCase):
 
     Was hier NICHT hingehoert: Preise. Diese Seite geht an Freunde und an Leute,
     die nach dem Weg zur Larkin-Busstation suchen. Ein Tagessatz zwischen
-    Faehrzeiten wuerde den Rest der Seite entwerten. Er steht auf /harry/.
+    Faehrzeiten wuerde den Rest der Seite entwerten. Er steht auf /otto/.
     """
 
     def test_block_nennt_beide_rollen(self):
@@ -362,7 +362,7 @@ class TestAutorblock(unittest.TestCase):
         self.assertNotIn("Tagessatz", html)
 
     def test_block_verlinkt_die_harness_seite(self):
-        self.assertIn("/harry/", build._autor_block())
+        self.assertIn("/otto/", build._autor_block())
 
     def test_block_steht_auf_der_gebauten_seite(self):
         seite = build.baue_seite("# Titel\n\nVorspann.\n\n## Erstes\n\nEin Satz.\n")
@@ -1242,7 +1242,7 @@ class TestFremdeRessourcen(unittest.TestCase):
 
     def test_anker_ist_keine_ressource(self):
         self.assertEqual([], build.externe_ressourcen(
-            '<a href="https://jenslaufer.com/harry/">Harness</a>'))
+            '<a href="https://jenslaufer.com/otto/">Harness</a>'))
 
     def test_eigene_und_data_adressen_sind_keine_fremden(self):
         self.assertEqual([], build.externe_ressourcen(
