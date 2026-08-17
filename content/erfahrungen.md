@@ -194,6 +194,16 @@ das nicht.
 
 ![Ein leerstehendes ehemaliges Kino im Ortskern von Mersing.](foto:2026-08-17_090004.jpg)
 
+**✓ Am Spätnachmittag spielt sich der Ort an der Strandpromenade ab (17.08.).** Ein
+asphaltierter Weg zwischen Kokospalmen und Meer, Pavillons zum Sitzen, Spielgeräte, dahinter
+die Straße mit den Parkplätzen. Auf dem Foto gehen Familien spazieren, Kinder fahren Rad,
+an den Masten hängen schon die Flaggen für Merdeka. Wer in Mersing auf die Fähre wartet und
+nicht weiß, wohin: hierhin — es ist der Ort, an dem abends alle sind. (Vom Bild abgelesen,
+nicht von uns berichtet.)
+<!-- werkstatt: telegram=2026-08-17T10:21 -->
+
+![Die Strandpromenade von Mersing am Spätnachmittag: Kokospalmen, ein gepflasterter Weg, Pavillons und dahinter die Straße.](foto:2026-08-17_102114.jpg)
+
 ---
 
 ## Von Mersing nach Tioman — der Ablauf vor dem Einsteigen

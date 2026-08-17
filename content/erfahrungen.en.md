@@ -193,6 +193,16 @@ Google Maps as "Panggung Cafe Mersing". That does not prove it was this building
 
 ![A derelict former cinema in the centre of Mersing.](foto:2026-08-17_090004.jpg)
 
+**✓ In the late afternoon the town happens on the seafront promenade (17 Aug).** A paved
+path between coconut palms and the sea, pavilions to sit in, playground equipment, and
+behind it the road with the parking spaces. In the photo families are walking, children are
+cycling, and the flags for Merdeka are already up on the masts. If you are waiting for the
+ferry in Mersing and do not know where to go: here — this is where everyone is in the
+evening. (Read off the picture, not reported by us.)
+<!-- werkstatt: telegram=2026-08-17T10:21 -->
+
+![The seafront promenade in Mersing in the late afternoon: coconut palms, a paved path, pavilions and the road behind.](foto:2026-08-17_102114.jpg)
+
 ---
 
 ## Mersing to Tioman — what has to be done before boarding
