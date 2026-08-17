@@ -46,6 +46,15 @@ tourist tax at the accommodation. Around 35 euros together, in cash, before boar
 money changer does not. There is one inside the terminal at Larkin Sentral bus station in
 Johor Bahru (Tajmuhabath, 10:00–20:00).
 
+**○ Mersing has five banks with ATMs close together in the town centre.**
+Maybank, Bank Rakyat and Hong Leong Bank on Jalan Ismail, the main road; Public Bank and
+Bank Simpanan Nasional one street over on Jalan Sulaiman. All five sit within 250 metres,
+and every branch has its ATM in the lobby. With a foreign card go to Maybank or Public
+Bank — Bank Rakyat and Bank Simpanan Nasional are built for Malaysian cards. This matters
+because the Tioman marine park fee is payable in cash at the ferry counter and Mersing is
+the last town before it. (Locations pulled from OpenStreetMap on 17 August, not checked on
+the ground.)
+
 **○ Tipping: nowhere in Singapore or Malaysia.** The reason is printed on the bill.
 Singapore: 10 % service charge + 9 % GST, announced on the menu as `++` after the price — so
 roughly 20 % is added anyway. Malaysia: 10 % service charge + 6 % SST on food and drink. In a

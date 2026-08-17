@@ -47,6 +47,15 @@ Zusammen rund 35 Euro, bar, vor dem Einsteigen.
 Fremdkartengebühr an, bei der Wechselstube nicht. Am Busbahnhof Larkin Sentral in Johor
 Bahru gibt es eine im Terminal (Tajmuhabath, 10:00–20:00).
 
+**○ In Mersing stehen fünf Banken mit Geldautomat dicht beieinander im Ortskern.**
+Maybank, Bank Rakyat und Hong Leong Bank an der Jalan Ismail, der Hauptstraße; Public Bank
+und Bank Simpanan Nasional eine Straße weiter an der Jalan Sulaiman. Alle fünf liegen
+innerhalb von 250 Metern, jede Filiale hat ihren Automaten im Vorraum. Mit einer
+ausländischen Karte zu Maybank oder Public Bank gehen — Bank Rakyat und Bank Simpanan
+Nasional sind auf malaysische Karten ausgelegt. Wichtig, weil die Marine-Park-Gebühr für
+Tioman bar am Fährschalter fällig wird und Mersing der letzte Ort davor ist. (Standorte am
+17.08. aus OpenStreetMap geholt, nicht vor Ort geprüft.)
+
 **○ Trinkgeld: in Singapur und Malaysia nirgends.** Der Grund steht auf der Rechnung.
 Singapur: 10 % Service Charge + 9 % GST, auf der Speisekarte als `++` hinter dem Preis
 angekündigt — rund 20 % kommen also ohnehin oben drauf. Malaysia: 10 % Service Charge + 6 %
