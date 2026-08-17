@@ -426,5 +426,145 @@ class TestEchteUmlaute(unittest.TestCase):
 
 
 
+class TestZweisprachig(unittest.TestCase):
+    """Der Reisebericht auf Englisch — dieselbe Messung, zweite Quelldatei.
+
+    Die Gefahr ist nicht die Uebersetzung, sondern ihr Altern: die englische
+    Fassung ist die, die Jens nicht liest, also faellt ihr Rueckstand niemandem
+    auf. Deshalb misst der Build die Deckung und meldet sie laut.
+    """
+
+    DE = """# Titel
+
+Vorspann.
+
+## Bezahlen
+
+**✓ Im Bus geht kontaktlos (17.08.).** Ein Satz.
+<!-- werkstatt: telegram=2026-08-17T04:41 -->
+
+**○ Bargeld bleibt Pflicht.** Noch ein Satz.
+
+## Grenze
+
+**✗ Ging nicht.** Dritter Satz.
+"""
+
+    EN = """# Title
+
+Intro.
+
+## Paying
+
+**✓ Contactless works on the bus (17 Aug).** One sentence.
+<!-- werkstatt: telegram=2026-08-17T04:41 -->
+
+**○ Cash is still compulsory.** Another sentence.
+
+## Border
+
+**✗ Did not work.** Third sentence.
+"""
+
+    def setUp(self):
+        self.vorher = build.SPRACHE
+        self.werkstatt = build.WERKSTATT
+
+    def tearDown(self):
+        build.SPRACHE = self.vorher
+        build.WERKSTATT = self.werkstatt
+
+    def test_sprache_steuert_die_zeichenerklaerung(self):
+        build.SPRACHE = "de"
+        self.assertIn("selbst erlebt", build.render_markdown(self.DE))
+        build.SPRACHE = "en"
+        self.assertIn("we did it ourselves", build.render_markdown(self.EN))
+
+    def test_englische_seite_traegt_die_deutsche_messung(self):
+        # Die Herkunftszeile haengt an der Uhrzeit der Telegram-Nachricht, nicht
+        # am Text: der englische Absatz hat einen anderen Anker, und ueber den
+        # Anker gefunden wuerde er nichts finden — still.
+        build.WERKSTATT = {
+            "2026-08-17T04:41:00+00:00": {
+                "minuten": 66,
+                "telegram": "2026-08-17T04:41:00+00:00",
+                "veroeffentlicht": "2026-08-17T05:46:51+00:00",
+            }
+        }
+        build.SPRACHE = "en"
+        rumpf = build.render_markdown(self.EN)
+        self.assertIn("66", rumpf)
+        self.assertIn("min", rumpf)
+
+    def test_deckung_meldet_fehlende_abschnitte(self):
+        fehlt = self.EN.replace("## Border\n\n**✗ Did not work.** Third sentence.\n", "")
+        luecken = build.pruefe_deckung(self.DE, fehlt)
+        self.assertTrue(luecken, "fehlender Abschnitt wurde nicht gemeldet")
+
+    def test_deckung_schweigt_bei_gleichstand(self):
+        self.assertEqual(build.pruefe_deckung(self.DE, self.EN), [])
+
+    def test_englische_seite_hat_keine_deutschen_reste(self):
+        build.SPRACHE = "en"
+        seite = build.baue_seite(self.EN)
+        sichtbar = re.sub(r"<(style|script)\b.*?</\1>", " ", seite, flags=re.S | re.I)
+        sichtbar = re.sub(r"<!--.*?-->", " ", sichtbar, flags=re.S)
+        sichtbar = re.sub(r"<[^>]+>", " ", sichtbar).lower()
+        for muster in (r"\bund\b", r"\bnicht\b", r"\bsind\b", r"\bwir\b",
+                       r"selbst erlebt", r"nachgeschlagen", r"reisenotizen",
+                       r"die route", r"meldungen"):
+            self.assertIsNone(re.search(muster, sichtbar),
+                              f"deutscher Rest auf der englischen Seite: {muster}")
+
+    def test_englische_seite_zeigt_auf_die_deutsche(self):
+        build.SPRACHE = "en"
+        en = build.baue_seite(self.EN)
+        self.assertIn('hreflang="de"', en)
+        self.assertIn(f'rel="canonical" href="{build.BASIS}en/"', en)
+        build.SPRACHE = "de"
+        de = build.baue_seite(self.DE)
+        self.assertIn('hreflang="en"', de)
+        self.assertIn(f'rel="canonical" href="{build.BASIS}"', de)
+
+    def test_privatpruefung_gilt_auch_englisch(self):
+        build.SPRACHE = "en"
+        with self.assertRaises(build.PrivatException):
+            build.baue_seite(self.EN + "\n\nWrite to jens@example.com.\n")
+
+
+class TestPflegeblockLeaktNicht(unittest.TestCase):
+    """Ein Kommentar kann vorzeitig enden — und legt den Rest offen.
+
+    Gefunden am 17.08. an der englischen Quelle: im Pflegeblock stand die
+    Zeichenfolge, die einen HTML-Kommentar schliesst, als Beispiel im Fliesstext.
+    Alles danach — interne Regeln, Dateipfade — stand sichtbar auf der
+    oeffentlichen Seite. `strip_kommentare` hatte recht: der Kommentar WAR dort
+    zu Ende. Der Fehler ist im Quelltext, sichtbar wird er nur im Rendern.
+    """
+
+    INTERN = ["pflege", "state/memory/", "fuer die sitzung", "für die sitzung"]
+
+    @staticmethod
+    def sichtbar(seite: str) -> str:
+        ohne = re.sub(r"<(style|script)\b.*?</\1>", " ", seite, flags=re.S | re.I)
+        ohne = re.sub(r"<!--.*?-->", " ", ohne, flags=re.S)
+        return re.sub(r"<[^>]+>", " ", ohne).lower()
+
+    def test_frueh_geschlossener_kommentar_faellt_auf(self):
+        md = ("# Titel\n\nText.\n\n<!--\nPFLEGE — fuer die Sitzung.\n"
+              "Beispiel: ein Kommentar endet mit -->\nDanach: state/memory/geheim.md\n-->\n")
+        klein = self.sichtbar(build.render_markdown(md))
+        gefunden = [w for w in self.INTERN if w in klein]
+        self.assertTrue(gefunden, "der Leak muss auffallen, sonst prueft der Test nichts")
+
+    def test_beide_ausgelieferten_seiten_sind_sauber(self):
+        for pfad in (build.ZIELE["de"], build.ZIELE["en"]):
+            if not pfad.exists():
+                continue
+            klein = self.sichtbar(pfad.read_text(encoding="utf-8"))
+            for wort in self.INTERN:
+                self.assertNotIn(wort, klein, f"interner Pflegetext auf {pfad.name}: {wort!r}")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

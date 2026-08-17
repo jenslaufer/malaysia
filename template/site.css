@@ -376,3 +376,22 @@ a { color: var(--erlebt); }
   .entry--erlebt strong { color: #7cc39c; }
   .entry--gescheitert strong { color: #dd7a6b; }
 }
+
+/* ------------------------------------------------------------------ Sprache
+
+   Zwei Fassungen, eine Reise. Der Wechsel steht oben rechts und bleibt still —
+   wer die Seite in seiner Sprache aufmacht, soll nicht zuerst eine Sprachwahl
+   lesen muessen. */
+
+.sprachwechsel {
+  position: absolute;
+  top: 0; right: 0;
+  display: flex; gap: 0.9rem;
+  padding: 1rem 1.4rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sprachwechsel span { color: #8a8377; }
+.sprachwechsel a { color: #2f6b4f; text-decoration: none; border-bottom: 1px solid transparent; }
+.sprachwechsel a:hover { border-bottom-color: #2f6b4f; }

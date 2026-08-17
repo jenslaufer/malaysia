@@ -8,6 +8,7 @@
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_GB">
 <meta property="og:title" content="Singapur und Malaysia — was wirklich funktioniert hat">
 <meta property="og:description" content="Reisenotizen mit einem Zeichen an jedem Punkt: selbst erlebt, nachgeschlagen oder gescheitert. Unterwegs per Telegram geschrieben, von einer Maschine in Deutschland veröffentlicht.">
 <meta property="og:url" content="https://jenslaufer.com/malaysia/">
@@ -16,6 +17,9 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://jenslaufer.com/malaysia/">
+<link rel="alternate" hreflang="de" href="https://jenslaufer.com/malaysia/">
+<link rel="alternate" hreflang="en" href="https://jenslaufer.com/malaysia/en/">
+<link rel="alternate" hreflang="x-default" href="https://jenslaufer.com/malaysia/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -401,9 +405,30 @@ a { color: var(--erlebt); }
   .entry--erlebt strong { color: #7cc39c; }
   .entry--gescheitert strong { color: #dd7a6b; }
 }
+
+/* ------------------------------------------------------------------ Sprache
+
+   Zwei Fassungen, eine Reise. Der Wechsel steht oben rechts und bleibt still —
+   wer die Seite in seiner Sprache aufmacht, soll nicht zuerst eine Sprachwahl
+   lesen muessen. */
+
+.sprachwechsel {
+  position: absolute;
+  top: 0; right: 0;
+  display: flex; gap: 0.9rem;
+  padding: 1rem 1.4rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sprachwechsel span { color: #8a8377; }
+.sprachwechsel a { color: #2f6b4f; text-decoration: none; border-bottom: 1px solid transparent; }
+.sprachwechsel a:hover { border-bottom-color: #2f6b4f; }
 </style>
 </head>
 <body>
+
+<nav class="sprachwechsel" aria-label="Sprache"><span aria-current="true">Deutsch</span><a href="en/" hreflang="en" lang="en">English</a></nav>
 
 <header class="kopf">
   <p class="kicker">Reisenotizen · August und September 2026</p>
@@ -446,12 +471,9 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 
 <section class="karte-block" aria-labelledby="karte-titel">
   <h2 id="karte-titel">Die Route</h2>
-  <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos.
-     Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.</p>
-  <div id="karte" role="img" aria-label="Karte der Reiseroute von Singapur über
-       die Halbinsel bis nach Sabah auf Borneo"></div>
-  <noscript><p class="hinweis">Die Karte braucht JavaScript. Die Stationen stehen
-     als Liste darunter.</p></noscript>
+  <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos. Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.</p>
+  <div id="karte" role="img" aria-label="Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo"></div>
+  <noscript><p class="hinweis">Die Karte braucht JavaScript. Die Stationen stehen als Liste darunter.</p></noscript>
   <ol class="stationen"><li><b>Singapur</b> <span>15.–17.08. · 05.–07.09.</span></li><li><b>Johor Bahru</b> <span>17.08. · Grenze und Larkin Sentral</span></li><li><b>Mersing</b> <span>17.–18.08. · Fährhafen nach Tioman</span></li><li><b>Tioman</b> <span>18.–21.08.</span></li><li><b>Kuala Lumpur</b> <span>22.–24.08.</span></li><li><b>Sandakan</b> <span>25.–28.08. · Sabah</span></li><li><b>Kota Kinabalu</b> <span>29.08.–03.09.</span></li><li><b>Kudat</b> <span>04.–05.09. · Tip of Borneo</span></li></ol>
 </section>
 <script>
@@ -645,7 +667,8 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
        haette es niemand gelesen. -->
   <p class="klein">Private Angaben stehen bewusst nicht auf dieser Seite: keine
      Buchungsnummern, keine Ausweisdaten, keine Adressen unserer Unterkünfte.
-     Kartendaten von OpenStreetMap.</p>
+     Kartendaten von OpenStreetMap. <a href="en/" hreflang="en" lang="en">This page
+     in English</a>.</p>
 </footer>
 
 </body>

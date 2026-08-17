@@ -41,6 +41,25 @@ QUELLE = Path.home() / "repos" / "assistant" / "state" / "reise-erfahrungen-mala
 KOPIE = WURZEL / "content" / "erfahrungen.md"
 ZIEL = WURZEL / "index.html"
 
+# Zwei Sprachen, zwei Quelldateien, EINE Messung (Jens 17.08. 07:59: "Dann
+# deutsch und englisch"). Die englische Fassung ist die, die Jens nicht liest —
+# ihr Rueckstand faellt also niemandem auf. Dagegen hilft kein Vorsatz, sondern
+# `pruefe_deckung()`: der Build zaehlt beide Dateien und meldet die Luecke.
+SPRACHEN = ("de", "en")
+QUELLEN = {"de": QUELLE, "en": QUELLE.with_name(QUELLE.stem + ".en.md")}
+KOPIEN = {"de": KOPIE, "en": WURZEL / "content" / "erfahrungen.en.md"}
+ZIELE = {"de": ZIEL, "en": WURZEL / "en" / "index.html"}
+
+# Welche Fassung gerade gebaut wird. Ein Modul-Global wie WERKSTATT und
+# GEHEIME_TOKEN daneben: der Rendercode reicht sonst durch ein Dutzend
+# Funktionen einen Parameter, den nur drei davon lesen.
+SPRACHE = "de"
+
+
+def _t(de: str, en: str) -> str:
+    """Der Satz in der Sprache, die gerade gebaut wird."""
+    return en if SPRACHE == "en" else de
+
 # Herkunftsspur: wie lange von Jens' Telegram-Nachricht bis zu diesem Eintrag.
 # Gemessen wird sie nicht hier, sondern in tools/reise-werkstatt.py im
 # Assistenz-Repo — aus der git-Historie von content/erfahrungen.md. Der Build
@@ -143,11 +162,37 @@ ZEICHEN = {
     "✗": ("gescheitert", "hat nicht funktioniert"),
 }
 
+ZEICHEN_EN = {
+    "✓": ("erlebt", "we did it ourselves"),
+    "○": ("recherche", "looked up, not checked ourselves"),
+    "✗": ("gescheitert", "did not work"),
+}
+
 UMLAUTE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss"})
 
 
 MARKER = re.compile(r"^[ \t]*<!--\s*werkstatt:.*?-->[ \t]*\n?", flags=re.M)
+# Derselbe Marker, aber mit der Uhrzeit als Gruppe. Er wird vor dem Entfernen
+# aller Kommentare in ein Token umgeschrieben, damit die Herkunft den Weg durch
+# den Renderer ueberlebt: die englische Fassung hat einen anderen Text und
+# damit einen anderen Anker — ueber den Anker gefunden wuerde sie nichts
+# finden, und zwar still.
+MARKER_ZEIT = re.compile(r"[ \t]*<!--\s*werkstatt:\s*telegram=([0-9TZ:+\-]+)\s*-->[ \t]*")
+TOKEN = re.compile(r"@@WERKSTATT:([0-9TZ:+\-]+)@@")
 ANKER_LAENGE = 60
+
+
+def _tg_schluessel(iso: str) -> str:
+    """Ein Zeitstempel, zwei Schreibweisen — daraus einen Schluessel.
+
+    Im Dokument steht `2026-08-17T04:41`, in der Messung
+    `2026-08-17T04:41:00+00:00`. Ohne Normalisierung findet die englische Seite
+    ihre eigene Messung nicht und laesst die Herkunftszeile weg.
+    """
+    zeit = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    if zeit.tzinfo is None:
+        zeit = zeit.replace(tzinfo=timezone.utc)
+    return zeit.isoformat()
 
 
 def strip_marker(md: str) -> str:
@@ -180,16 +225,17 @@ def inline(text: str) -> str:
     return t
 
 
-def _eintrag(block: str) -> str | None:
+def _eintrag(block: str, telegram: str = None) -> str | None:
     """Absatz mit Zeichen → eigener Eintrag mit Zeichen in der Randspalte."""
     treffer = re.match(r"^\*\*([✓○✗])\s+(.*)$", block, flags=re.S)
     if treffer:
         zeichen = treffer.group(1)
-        klasse, label = ZEICHEN[zeichen]
+        klasse, label = (ZEICHEN_EN if SPRACHE == "en" else ZEICHEN)[zeichen]
         rest = "**" + treffer.group(2)
         glyph = html.escape(zeichen)
-    elif block.startswith("**Offen, kommt noch:**"):
-        zeichen, klasse, label = "…", "offen", "noch offen"
+    elif block.startswith(("**Offen, kommt noch:**", "**Open, still to come:**")):
+        zeichen, klasse = "…", "offen"
+        label = _t("noch offen", "still open")
         rest, glyph = block, "…"
     else:
         return None
@@ -198,17 +244,17 @@ def _eintrag(block: str) -> str | None:
         f'<span class="mark" aria-hidden="true">{glyph}</span>'
         f'<span class="mark-label">{label}</span>'
         f"<p>{inline(rest)}</p>"
-        f"{_spur(block)}"
+        f"{_spur(block, telegram)}"
         f"</div>"
     )
 
 
 def _uhr(iso: str) -> str:
     z = datetime.fromisoformat(iso)
-    return z.strftime("%d.%m. %H:%M")
+    return z.strftime("%d %b, %H:%M") if SPRACHE == "en" else z.strftime("%d.%m. %H:%M")
 
 
-def _spur(block: str) -> str:
+def _spur(block: str, telegram: str = None) -> str:
     """Herkunftszeile unter einem Eintrag: Nachricht → veroeffentlicht → Dauer.
 
     Das ist die eigentliche Verbindung zwischen dieser Seite und /harry/. Ein
@@ -220,14 +266,17 @@ def _spur(block: str) -> str:
     """
     anker = block.splitlines()[0].strip()[:ANKER_LAENGE]
     daten = WERKSTATT.get(anker)
+    if daten is None and telegram:
+        daten = WERKSTATT.get(_tg_schluessel(telegram))
     if not daten or daten.get("minuten") is None:
         return ""
     return (
         '<p class="spur">'
         f'<span class="spur-von">Telegram {html.escape(_uhr(daten["telegram"]))}</span>'
         f'<span class="spur-pfeil" aria-hidden="true">→</span>'
-        f'<span class="spur-bis">auf dieser Seite {html.escape(_uhr(daten["veroeffentlicht"]))}</span>'
-        f'<span class="spur-dauer">{daten["minuten"]} Min</span>'
+        f'<span class="spur-bis">{_t("auf dieser Seite", "live on this page")} '
+        f'{html.escape(_uhr(daten["veroeffentlicht"]))}</span>'
+        f'<span class="spur-dauer">{daten["minuten"]} {_t("Min", "min")}</span>'
         "</p>"
     )
 
@@ -249,10 +298,18 @@ def _tabelle(block: str) -> str:
 
 def render_markdown(md: str) -> str:
     """Markdown → HTML-Rumpf. Kennt genau die Formen, die im Dokument vorkommen."""
+    # Der Herkunftsmarker wird ZUERST in ein Token umgeschrieben und erst danach
+    # werden alle Kommentare entfernt. Andersherum verschwindet mit dem
+    # Pflegeblock am Dateiende auch die Uhrzeit, an der die englische Fassung
+    # ihre Messung wiederfindet.
+    md = MARKER_ZEIT.sub(r"@@WERKSTATT:\1@@", md)
     md = strip_kommentare(strip_marker(md))
     teile = []
     for block in re.split(r"\n\s*\n", md):
         block = block.strip()
+        zeit = TOKEN.search(block)
+        telegram = zeit.group(1) if zeit else None
+        block = TOKEN.sub("", block).strip()
         if not block or set(block) <= {"-"} and len(block) >= 3:
             continue
         if block.startswith("## "):
@@ -268,41 +325,77 @@ def render_markdown(md: str) -> str:
             li = "".join(f"<li>{inline(p[2:].strip())}</li>" for p in punkte)
             teile.append(f'<ul class="legende">{li}</ul>')
         else:
-            teile.append(_eintrag(block) or f"<p>{inline(block)}</p>")
+            teile.append(_eintrag(block, telegram) or f"<p>{inline(block)}</p>")
     return "\n".join(teile)
+
+
+def pruefe_deckung(deutsch: str, englisch: str) -> list[str]:
+    """Was in der deutschen Fassung steht und in der englischen fehlt.
+
+    Gezaehlt werden Abschnitte und Eintraege, nicht Woerter: ein Rueckstand
+    zeigt sich als fehlender Eintrag, nicht als kuerzerer Satz. Der Build
+    veroeffentlicht trotzdem — eine Seite, die zu 90 % uebersetzt ist, ist
+    besser als keine, aber sie darf nicht still 90 % sein.
+    """
+    def zaehle(md: str) -> tuple[int, int]:
+        ohne = strip_kommentare(strip_marker(md))
+        abschnitte = len(re.findall(r"^## ", ohne, flags=re.M))
+        eintraege = len(re.findall(r"^\*\*[✓○✗]", ohne, flags=re.M))
+        return abschnitte, eintraege
+
+    de_abschnitte, de_eintraege = zaehle(deutsch)
+    en_abschnitte, en_eintraege = zaehle(englisch)
+    luecken = []
+    if en_abschnitte < de_abschnitte:
+        luecken.append(f"{de_abschnitte - en_abschnitte} Abschnitt(e) fehlen "
+                       f"({en_abschnitte} von {de_abschnitte})")
+    if en_eintraege < de_eintraege:
+        luecken.append(f"{de_eintraege - en_eintraege} Eintrag/Eintraege fehlen "
+                       f"({en_eintraege} von {de_eintraege})")
+    return luecken
 
 
 # ---------------------------------------------------------------------- Seite
 
 STATIONEN = [
-    ("Singapur", 1.3521, 103.8198, "15.–17.08. · 05.–07.09."),
-    ("Johor Bahru", 1.4655, 103.7578, "17.08. · Grenze und Larkin Sentral"),
-    ("Mersing", 2.4312, 103.8405, "17.–18.08. · Fährhafen nach Tioman"),
-    ("Tioman", 2.8167, 104.1667, "18.–21.08."),
-    ("Kuala Lumpur", 3.1390, 101.6869, "22.–24.08."),
-    ("Sandakan", 5.8402, 118.1179, "25.–28.08. · Sabah"),
-    ("Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09."),
-    ("Kudat", 6.8837, 116.8378, "04.–05.09. · Tip of Borneo"),
+    ("Singapur", 1.3521, 103.8198, "15.–17.08. · 05.–07.09.",
+     "15–17 Aug · 5–7 Sep"),
+    ("Johor Bahru", 1.4655, 103.7578, "17.08. · Grenze und Larkin Sentral",
+     "17 Aug · border and Larkin Sentral"),
+    ("Mersing", 2.4312, 103.8405, "17.–18.08. · Fährhafen nach Tioman",
+     "17–18 Aug · ferry port for Tioman"),
+    ("Tioman", 2.8167, 104.1667, "18.–21.08.", "18–21 Aug"),
+    ("Kuala Lumpur", 3.1390, 101.6869, "22.–24.08.", "22–24 Aug"),
+    ("Sandakan", 5.8402, 118.1179, "25.–28.08. · Sabah", "25–28 Aug · Sabah"),
+    ("Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09.", "29 Aug – 3 Sep"),
+    ("Kudat", 6.8837, 116.8378, "04.–05.09. · Tip of Borneo",
+     "4–5 Sep · Tip of Borneo"),
 ]
 
 
 def _karte() -> str:
+    stationen = [(name, lat, lon, _t(de, en)) for name, lat, lon, de, en in STATIONEN]
     punkte = ",\n      ".join(
-        f'["{name}", {lat}, {lon}, "{note}"]' for name, lat, lon, note in STATIONEN
+        f'["{name}", {lat}, {lon}, "{note}"]' for name, lat, lon, note in stationen
     )
     liste = "".join(
         f"<li><b>{html.escape(name)}</b> <span>{html.escape(note)}</span></li>"
-        for name, _, _, note in STATIONEN
+        for name, _, _, note in stationen
     )
     return f"""
 <section class="karte-block" aria-labelledby="karte-titel">
-  <h2 id="karte-titel">Die Route</h2>
-  <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos.
-     Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.</p>
-  <div id="karte" role="img" aria-label="Karte der Reiseroute von Singapur über
-       die Halbinsel bis nach Sabah auf Borneo"></div>
-  <noscript><p class="hinweis">Die Karte braucht JavaScript. Die Stationen stehen
-     als Liste darunter.</p></noscript>
+  <h2 id="karte-titel">{_t("Die Route", "The route")}</h2>
+  <p class="karte-intro">{_t(
+     "Acht Stationen zwischen Singapur und dem Norden Borneos. "
+     "Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.",
+     "Eight stops between Singapore and the north of Borneo. The journey out via "
+     "Frankfurt and Bahrain lies outside the frame.")}</p>
+  <div id="karte" role="img" aria-label="{_t(
+       'Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo',
+       'Map of the route from Singapore across the peninsula to Sabah on Borneo')}"></div>
+  <noscript><p class="hinweis">{_t(
+     "Die Karte braucht JavaScript. Die Stationen stehen als Liste darunter.",
+     "The map needs JavaScript. The stops are listed below it.")}</p></noscript>
   <ol class="stationen">{liste}</ol>
 </section>
 <script>
@@ -341,6 +434,25 @@ def _werkstatt_band(summe: dict) -> str:
     """
     if not summe.get("gemessen"):
         return ""
+    if SPRACHE == "en":
+        return f"""
+<aside class="werkstatt" aria-labelledby="werkstatt-titel">
+  <h2 id="werkstatt-titel">No human maintains this page</h2>
+  <p>We are on the road, with a phone and no computer. What stands here is sent
+     by Jens as a Telegram message; an assistant on a mini-PC in Germany writes
+     it in, checks it for private data and rebuilds the page. Nobody sits in
+     between — it is three in the morning in Germany when a bus leaves here.</p>
+  <p class="werkstatt-zahlen">
+    <span><b>{summe['gemessen']}</b> entries have come about this way</span>
+    <span>most recently <b>{summe['juengste_minuten']} minutes</b> from message to here</span>
+    <span>median <b>{summe['median_minuten']} minutes</b></span>
+  </p>
+  <p class="werkstatt-fuss">The time under each lived-through entry is measured,
+     not estimated: from Jens's message to the commit that published the entry.
+     <a href="https://jenslaufer.com/harry/en/">How this is built and what else runs
+     on it →</a></p>
+</aside>
+"""
     return f"""
 <aside class="werkstatt" aria-labelledby="werkstatt-titel">
   <h2 id="werkstatt-titel">Diese Seite pflegt kein Mensch</h2>
@@ -374,6 +486,29 @@ def _autor_block() -> str:
     Er steht auch dann, wenn die Reisemessung fehlt: nach dem 07.09. faellt das
     Werkstatt-Band weg, die Auskunft, wer hier schreibt, bleibt noetig.
     """
+    if SPRACHE == "en":
+        return f"""
+<section class="autor" aria-labelledby="autor-titel">
+  <h2 id="autor-titel">Who writes this</h2>
+  <p>There are four of us travelling — three weeks of Singapore, the peninsula and
+     Borneo. None of us typed this page. Jens sends a Telegram message when
+     something has worked; the rest is done by <a href="{HARNESS_SEITE}en/">Harry</a>,
+     an assistant on a mini-PC in a basement in Karlstein am Main, Germany: look it
+     up, place it, hold it against the notes so far, check it for private data,
+     rebuild the page, publish.</p>
+  <p>That is not a party trick on the side, it is the job. Jens Laufer works as a
+     <b>Forward Deployed Engineer</b> — he takes models out of the demo and into
+     the place where the real data, the real workflows and the real failures are —
+     and half of that by now is <b>Harness Engineering</b>: not building the model,
+     but building the scaffolding around it in which it works unattended. This trip
+     is the stress test. For three weeks, whatever cannot be commissioned from a
+     phone does not happen.</p>
+  <p class="autor-links">
+    <a href="{HARNESS_SEITE}en/">How the setup works, with all the numbers →</a>
+    <a href="{LINKEDIN}">Jens on LinkedIn</a>
+  </p>
+</section>
+"""
     return f"""
 <section class="autor" aria-labelledby="autor-titel">
   <h2 id="autor-titel">Wer das hier schreibt</h2>
@@ -402,12 +537,19 @@ def _og_karte(summe: dict) -> str:
     """Die Vorschaukarte als HTML. Ohne Messung ohne Zahl — nie mit einer Null."""
     karte = (WURZEL / "template" / "og.html").read_text(encoding="utf-8")
     if summe.get("gemessen") and summe.get("juengste_minuten") is not None:
-        fuss = (
+        fuss = _t(
             f"{summe['gemessen']} Meldungen von unterwegs &middot; zuletzt "
-            f"<em>{summe['juengste_minuten']} Minuten</em> von der Nachricht bis online"
+            f"<em>{summe['juengste_minuten']} Minuten</em> von der Nachricht bis online",
+            f"{summe['gemessen']} entries sent from the road &middot; most recently "
+            f"<em>{summe['juengste_minuten']} minutes</em> from message to live",
         )
     else:
-        fuss = "Geschrieben unterwegs, gebaut in Deutschland"
+        fuss = _t("Geschrieben unterwegs, gebaut in Deutschland",
+                  "Written on the road, built in Germany")
+    if SPRACHE == "en":
+        karte = (karte.replace("Singapur und Malaysia", "Singapore and Malaysia")
+                      .replace("was wirklich funktioniert hat", "what actually worked")
+                      .replace('lang="de"', 'lang="en"'))
     return karte.replace("{{FUSS}}", fuss)
 
 
@@ -417,12 +559,13 @@ def baue_og_bild(summe: dict, ziel: Path = None) -> Path | None:
     Ohne Bild ist der geteilte Link in Telegram, WhatsApp und LinkedIn eine graue
     Zeile — und geteilt wird diese Seite, dafuer ist sie da.
     """
-    ziel = ziel or (WURZEL / "og.png")
+    ziel = ziel or (WURZEL / ("og.png" if SPRACHE == "de" else "en/og.png"))
+    ziel.parent.mkdir(parents=True, exist_ok=True)
     karte = _og_karte(summe)
     pruefe_privat(karte)
 
     # Snap-Chromium darf weder nach /tmp noch in versteckte Ordner schreiben.
-    arbeit = Path.home() / "pdf-slim-work" / "malaysia"
+    arbeit = Path.home() / "pdf-slim-work" / "malaysia" / SPRACHE
     arbeit.mkdir(parents=True, exist_ok=True)
     quelle = arbeit / "og-karte.html"
     quelle.write_text(karte, encoding="utf-8")
@@ -451,7 +594,7 @@ def _inhaltsverzeichnis(rumpf: str) -> str:
         f'<a href="#{ident}">{re.sub(r"<[^>]+>", "", titel)}</a>'
         for ident, titel in eintraege
     )
-    return f'<nav class="toc" aria-label="Abschnitte">{links}</nav>'
+    return f'<nav class="toc" aria-label="{_t("Abschnitte", "Sections")}">{links}</nav>'
 
 
 def baue_seite(md: str) -> str:
@@ -463,9 +606,10 @@ def baue_seite(md: str) -> str:
     kopf, rest = (rumpf[:schnitt], rumpf[schnitt:]) if schnitt > 0 else (rumpf, "")
     rest = _werkstatt_band(WERKSTATT_SUMME) + _karte() + rest + _autor_block()
 
-    vorlage = (WURZEL / "template" / "page.html").read_text(encoding="utf-8")
+    vorlage = (WURZEL / "template" / _t("page.html", "page.en.html")).read_text(encoding="utf-8")
     css = (WURZEL / "template" / "site.css").read_text(encoding="utf-8")
-    stand = datetime.now(timezone.utc).strftime("%d.%m.%Y")
+    heute = datetime.now(timezone.utc)
+    stand = heute.strftime("%d %B %Y") if SPRACHE == "en" else heute.strftime("%d.%m.%Y")
     seite = (
         vorlage.replace("{{CSS}}", css)
         .replace("{{KOPF}}", kopf)
@@ -491,14 +635,22 @@ def lade_werkstatt() -> tuple[dict, dict]:
         daten = json.loads(WERKSTATT_KOPIE.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return {}, {}
-    spuren = {e["anker"]: e for e in daten.get("eintraege", []) if e.get("anker")}
+    # Zwei Schluessel je Eintrag: der Textanker fuer die deutsche Fassung, die
+    # Uhrzeit der Telegram-Nachricht fuer jede andere. Ein uebersetzter Absatz
+    # hat einen anderen Anker und faende sonst seine eigene Messung nicht.
+    spuren = {}
+    for e in daten.get("eintraege", []):
+        if e.get("anker"):
+            spuren[e["anker"]] = e
+        if e.get("telegram"):
+            spuren[_tg_schluessel(e["telegram"])] = e
     summe = {k: daten.get(k) for k in
              ("gemessen", "markiert", "median_minuten", "juengste_minuten")}
     return spuren, summe
 
 
 def main() -> int:
-    global GEHEIME_TOKEN, WERKSTATT, WERKSTATT_SUMME
+    global GEHEIME_TOKEN, WERKSTATT, WERKSTATT_SUMME, SPRACHE
     GEHEIME_TOKEN = lade_sperrliste()
 
     p = argparse.ArgumentParser(description=__doc__)
@@ -508,15 +660,17 @@ def main() -> int:
                    help="auch die Vorschaukarte og.png neu rendern (braucht Chromium)")
     args = p.parse_args()
 
-    if not args.no_sync and QUELLE.exists():
-        KOPIE.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(QUELLE, KOPIE)
-        print(f"Quelle geholt: {QUELLE}")
-        if WERKSTATT_QUELLE.exists():
-            shutil.copyfile(WERKSTATT_QUELLE, WERKSTATT_KOPIE)
-    elif not KOPIE.exists():
-        print(f"FEHLER: weder {QUELLE} noch {KOPIE} vorhanden", file=sys.stderr)
-        return 2
+    for sprache in SPRACHEN:
+        quelle, kopie = QUELLEN[sprache], KOPIEN[sprache]
+        if not args.no_sync and quelle.exists():
+            kopie.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(quelle, kopie)
+            print(f"Quelle geholt ({sprache}): {quelle}")
+        elif not kopie.exists():
+            print(f"FEHLER: weder {quelle} noch {kopie} vorhanden", file=sys.stderr)
+            return 2
+    if not args.no_sync and WERKSTATT_QUELLE.exists():
+        shutil.copyfile(WERKSTATT_QUELLE, WERKSTATT_KOPIE)
 
     WERKSTATT, WERKSTATT_SUMME = lade_werkstatt()
     if WERKSTATT_SUMME.get("gemessen"):
@@ -527,38 +681,57 @@ def main() -> int:
     else:
         print("Herkunft: keine Messung (tools/reise-werkstatt.py laeuft im Assistenz-Repo)")
 
-    md = KOPIE.read_text(encoding="utf-8")
-    try:
-        seite = baue_seite(md)
-    except PrivatException as e:
-        print(f"ABBRUCH — {e}", file=sys.stderr)
-        print("Nichts geschrieben. Den Satz im Quelldokument entfernen.", file=sys.stderr)
-        return 1
+    quellen = {s: KOPIEN[s].read_text(encoding="utf-8") for s in SPRACHEN}
 
-    namen = warne_namen(seite)
-    if namen:
-        print(
-            "ACHTUNG: Namen aus der Warnliste stehen auf der oeffentlichen Seite: "
-            + ", ".join(namen)
-            + ". Kein Abbruch — wer hier vorkommt, entscheidet Jens.",
-            file=sys.stderr,
-        )
+    # Die englische Fassung altert unbemerkt, weil Jens sie nicht liest. Also
+    # zaehlt der Build sie gegen die deutsche und sagt es laut. Kein Abbruch:
+    # eine Seite, der ein Eintrag fehlt, ist besser als keine — sie darf nur
+    # nicht still unvollstaendig sein.
+    luecken = pruefe_deckung(quellen["de"], quellen["en"])
+    if luecken:
+        print("ACHTUNG: die englische Fassung haengt zurueck — " + "; ".join(luecken)
+              + f". Nachtragen in {QUELLEN['en']}", file=sys.stderr)
+
+    seiten = {}
+    for sprache in SPRACHEN:
+        SPRACHE = sprache
+        try:
+            seiten[sprache] = baue_seite(quellen[sprache])
+        except PrivatException as e:
+            print(f"ABBRUCH ({sprache}) — {e}", file=sys.stderr)
+            print("Nichts geschrieben. Den Satz im Quelldokument entfernen.", file=sys.stderr)
+            return 1
+        namen = warne_namen(seiten[sprache])
+        if namen:
+            print(
+                f"ACHTUNG ({sprache}): Namen aus der Warnliste stehen auf der "
+                "oeffentlichen Seite: " + ", ".join(namen)
+                + ". Kein Abbruch — wer hier vorkommt, entscheidet Jens.",
+                file=sys.stderr,
+            )
 
     if args.check:
-        print("Datenschutz: keine harte Sperre getroffen. (--check schreibt nichts)")
-        return 0
+        print("Datenschutz (de + en): keine harte Sperre getroffen. "
+              "(--check schreibt nichts)")
+        return 1 if luecken else 0
 
-    ZIEL.write_text(seite, encoding="utf-8")
-    print(f"gebaut: {ZIEL} ({len(seite):,} Bytes)")
+    for sprache in SPRACHEN:
+        ziel = ZIELE[sprache]
+        ziel.parent.mkdir(parents=True, exist_ok=True)
+        ziel.write_text(seiten[sprache], encoding="utf-8")
+        print(f"gebaut: {ziel} ({len(seiten[sprache]):,} Bytes)")
 
     if args.og:
-        bild = baue_og_bild(WERKSTATT_SUMME)
-        if bild:
-            print(f"og.png: {bild.stat().st_size:,} B")
-        else:
-            print("og.png NICHT gebaut (kein Chromium?) — Vorschau bleibt alt.",
-                  file=sys.stderr)
-    return 0
+        for sprache in SPRACHEN:
+            SPRACHE = sprache
+            bild = baue_og_bild(WERKSTATT_SUMME)
+            if bild:
+                print(f"{bild.relative_to(WURZEL)}: {bild.stat().st_size:,} B")
+            else:
+                print(f"og.png ({sprache}) NICHT gebaut (kein Chromium?) — "
+                      "Vorschau bleibt alt.", file=sys.stderr)
+    SPRACHE = "de"
+    return 1 if luecken else 0
 
 
 if __name__ == "__main__":
