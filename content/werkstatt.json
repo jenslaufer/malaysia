@@ -49,6 +49,12 @@
       "veroeffentlicht": "2026-08-17T09:40:10+00:00"
     },
     {
+      "anker": "**✓ Und so sieht das aus (17.08., 18:20 Ortszeit).** Am Aben",
+      "minuten": 17,
+      "telegram": "2026-08-17T10:21:00+00:00",
+      "veroeffentlicht": "2026-08-17T10:38:12+00:00"
+    },
+    {
       "anker": "**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne T",
       "minuten": 11,
       "telegram": "2026-08-17T09:39:00+00:00",
@@ -67,10 +73,10 @@
       "veroeffentlicht": "2026-08-17T09:50:10+00:00"
     }
   ],
-  "gemessen": 11,
-  "juengste_minuten": 11,
-  "markiert": 11,
-  "median_minuten": 21,
+  "gemessen": 12,
+  "juengste_minuten": 17,
+  "markiert": 12,
+  "median_minuten": 19,
   "schnellste_minuten": 4,
   "stand": "2026-08-17"
 }
