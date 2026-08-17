@@ -236,6 +236,22 @@ alte Name Teluk Gading steht noch in vielen Buchungen), liegt 40 Kilometer nörd
 das Problem nicht, weil dort das Wasser tief genug ist. Beide Häfen fahren nach Tioman, aber
 nur einer steht auf dem eigenen Ticket.
 
+**✓ Und so sieht das aus (17.08., 18:20 Ortszeit).** Am Abend vor der Überfahrt lagen die
+kleinen Boote am gegenüberliegenden Ufer im Schlick, während die beiden großen Boote am Steg
+noch schwammen. Das ist kein Wetterschaden und kein schlechter Tag — das ist der normale
+Tidenhub, und es ist der Grund, warum die Abfahrtszeit in Mersing jeden Tag eine andere ist.
+Wer dieses Bild vor Augen hat, versteht den Fahrplan sofort.
+<!-- werkstatt: telegram=2026-08-17T10:21 -->
+
+![Der Hafen von Mersing bei Niedrigwasser: kleine Boote liegen am Ufer im Schlick, zwei größere Boote liegen am Steg im Wasser.](foto:2026-08-17_102109.jpg)
+
+**○ Am selben Kai sitzt das Jabatan Laut, die malaysische Seefahrtbehörde.** Das Gebäude mit
+dem grünen Türmchen steht direkt an der Flussmündung. Für Reisende ist es kein Anlaufpunkt —
+es ist aber der Beleg dafür, dass hier nicht nur Ausflugsboote liegen: Mersing ist ein
+Arbeitshafen mit Fischerei, und der Fährbetrieb teilt sich das Wasser mit ihr.
+
+![Blick vom Kai auf die Flussmündung von Mersing, links das Gebäude der Seefahrtbehörde, am gegenüberliegenden Ufer Fischerboote.](foto:2026-08-17_102111.jpg)
+
 **○ Nacheinander abzuarbeiten sind drei Schalter, und die Reihenfolge ist vorgegeben.**
 
 1. **Fährschalter.** Die Onlinebuchung wird gegen Bordkarten getauscht. Die Pässe aller

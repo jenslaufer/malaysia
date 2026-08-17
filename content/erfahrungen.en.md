@@ -234,6 +234,22 @@ bookings still carry its old name, Teluk Gading), is 40 kilometres north and doe
 problem, because the water there is deep enough. Both harbours serve Tioman, but only one of
 them is on your ticket.
 
+**✓ And this is what it looks like (17 Aug, 18:20 local).** On the evening before the
+crossing the small boats on the far bank were sitting in the mud while the two larger boats at
+the pontoon were still afloat. That is not storm damage and not a bad day — it is the ordinary
+tidal range, and it is the reason the departure time in Mersing is different every day. Once
+you have seen it, the timetable explains itself.
+<!-- werkstatt: telegram=2026-08-17T10:21 -->
+
+![Mersing harbour at low water: small boats lying in the mud along the bank, two larger boats still afloat at the pontoon.](foto:2026-08-17_102109.jpg)
+
+**○ The Jabatan Laut, Malaysia's marine department, sits on the same quay.** The building with
+the small green tower stands right at the river mouth. It is not a place travellers need — but
+it does show that these are not only pleasure boats: Mersing is a working harbour with a
+fishing fleet, and the ferries share the water with it.
+
+![View from the quay across the mouth of the Mersing river, the marine department building on the left, fishing boats along the far bank.](foto:2026-08-17_102111.jpg)
+
 **○ Three counters, and the order is fixed.**
 
 1. **Ferry counter.** The online booking is exchanged for boarding passes. Every traveller's
