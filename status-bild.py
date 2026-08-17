@@ -84,7 +84,7 @@ def karte(foto: Path, anzahl: int, median: int) -> str:
 <div class="schleier"></div>
 <div class="inhalt">
   <div class="kicker">Familie unterwegs &middot; Reisebericht</div>
-  <h1 class="titel">Malaysia und Singapur&nbsp;2026</h1>
+  <h1 class="titel">Singapur &amp; Malaysia&nbsp;2026</h1>
   <p class="unter">Fähren, Geldautomaten und zu viele Katzen in Mersing. Was wir
      selbst erlebt haben, steht mit Haken.</p>
   <div class="zahlen">
