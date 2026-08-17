@@ -878,7 +878,11 @@ def main() -> int:
         ziel = ZIELE[sprache]
         ziel.parent.mkdir(parents=True, exist_ok=True)
         ziel.write_text(seiten[sprache], encoding="utf-8")
-        print(f"gebaut: {ziel} ({len(seiten[sprache]):,} Bytes)")
+        # ziel.stat(), nicht len(): len() zaehlt Zeichen. Auf einer deutschen
+        # Seite voller Umlaute, Pfeile und Haken liegen zwischen beiden ueber
+        # 500 Bytes — und eine Groessenangabe, die man gegen die ausgelieferte
+        # Datei haelt, muss dieselbe Einheit haben wie die Datei.
+        print(f"gebaut: {ziel} ({ziel.stat().st_size:,} Bytes)")
 
     if args.og:
         for sprache in SPRACHEN:
