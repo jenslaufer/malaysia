@@ -25,6 +25,12 @@
       "veroeffentlicht": "2026-08-17T05:46:51+00:00"
     },
     {
+      "anker": "**✓ Von der Grenze bis zum Fährterminal in Mersing: gut vier",
+      "minuten": null,
+      "telegram": "2026-08-17T08:11:00+00:00",
+      "veroeffentlicht": null
+    },
+    {
       "anker": "**✓ Im malaysischen Fernbus sitzt eine USB-Buchse am Platz (",
       "minuten": 17,
       "telegram": "2026-08-17T06:21:00+00:00",
@@ -33,7 +39,7 @@
   ],
   "gemessen": 5,
   "juengste_minuten": 17,
-  "markiert": 5,
+  "markiert": 6,
   "median_minuten": 66,
   "schnellste_minuten": 17,
   "stand": "2026-08-17"

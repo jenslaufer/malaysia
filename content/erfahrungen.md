@@ -113,6 +113,25 @@ nur `eservices.ica.gov.sg/sgarrivalcard` oder die MyICA-App.
 
 ---
 
+## Von der Grenze nach Mersing
+
+**✓ Von der Grenze bis zum Fährterminal in Mersing: gut vier Stunden (17.08.).** Gemessen
+zwischen „wir sind durch die Kontrolle" um 12:01 Ortszeit und dem Foto vom Fährterminal um
+16:11 — darin steckt alles: der Weg nach Larkin, das Warten und die Fahrt. Wer die Fähre nach
+Tioman am selben Tag noch erreichen will, plant für diese Strecke einen halben Tag ein.
+<!-- werkstatt: telegram=2026-08-17T08:11 -->
+
+**✓ Der Fernbus hält direkt am Fährterminal Plaza D'Jeti (17.08.).** Terminal, Ticketschalter,
+Läden und Busvorfahrt liegen auf demselben Platz; zwischen Aussteigen und Fährschalter liegt
+kein Umstieg und keine zweite Fahrt.
+
+**✓ Mitte August hängt in Johor überall Flaggenschmuck (17.08.).** Malaysische Flaggen und die
+Johor-Flagge an Zäunen, Masten und Hauswänden, auch in kleinen Orten. Der Nationalfeiertag
+Merdeka ist am 31. August, die Dekoration steht Wochen vorher — schöner Nebeneffekt für Fotos,
+und ein Hinweis darauf, dass Ende August mit vollen Straßen und Feiertagsverkehr zu rechnen ist.
+
+---
+
 ## Unterwegs in Singapur
 
 **✓ Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben

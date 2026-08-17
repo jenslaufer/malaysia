@@ -112,6 +112,25 @@ you enter twice, you need it twice. Free, at the earliest 3 days ahead, only
 
 ---
 
+## From the border to Mersing
+
+**✓ From the border to the ferry terminal in Mersing: a good four hours (17 Aug).** Measured
+between "we're through the control" at 12:01 local time and the photo of the ferry terminal at
+16:11 — that covers everything: the way to Larkin, the waiting and the ride itself. If you want
+to catch the ferry to Tioman on the same day, budget half a day for this leg.
+<!-- werkstatt: telegram=2026-08-17T08:11 -->
+
+**✓ The long-distance bus stops right at the Plaza D'Jeti ferry terminal (17 Aug).** Terminal,
+ticket counters, shops and the bus forecourt are all on the same square; between getting off the
+bus and reaching the ferry counter there is no transfer and no second ride.
+
+**✓ In mid-August Johor is covered in flags (17 Aug).** Malaysian flags and the Johor flag on
+fences, poles and house walls, in small towns too. The national holiday, Merdeka, is on 31
+August and the decorations go up weeks ahead — good for photographs, and a warning that the end
+of August means busy roads and holiday traffic.
+
+---
+
 ## Getting around Singapore
 
 **✓ From Jalan Besar to Gardens by the Bay: 33 minutes, at seven in the evening (16 Aug).**
