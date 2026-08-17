@@ -114,10 +114,28 @@ class TestDatenschutz(unittest.TestCase):
         with self.assertRaises(build.PrivatException):
             build.pruefe_privat("Anruf unter +60 88 448 409 genuegt.")
 
-    def test_mdac_pin_stoppt_den_build(self):
-        """Der PIN aus der Einreisekarte ist personenbezogen."""
-        with self.assertRaises(build.PrivatException):
-            build.pruefe_privat("MDAC-PIN yV7P7RyK vorzeigen.")
+    def test_gesperrtes_wort_stoppt_den_build(self):
+        """Codes und Namen faengt kein Muster — dafuer gibt es die Liste.
+        Sie liegt ausserhalb dieses public-Repos, deshalb wird sie hier
+        fuer den Test gesetzt statt importiert."""
+        vorher = build.GEHEIME_TOKEN
+        build.GEHEIME_TOKEN = ["gesperrtesbeispiel"]
+        try:
+            with self.assertRaises(build.PrivatException):
+                build.pruefe_privat("PIN GesperrtesBeispiel vorzeigen.")
+        finally:
+            build.GEHEIME_TOKEN = vorher
+
+    def test_sperrliste_liegt_nicht_in_diesem_repo(self):
+        """Eine Sperrliste im public-Repo veroeffentlicht, was sie schuetzt —
+        genau so lag die MDAC-PIN am 17.08. hier im Klartext."""
+        self.assertNotIn(str(Path(__file__).resolve().parent.parent), str(build.SPERRLISTE))
+
+    def test_fehlende_sperrliste_bricht_ab(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(build.PrivatException):
+                build.lade_sperrliste(Path(tmp) / "weg.txt")
 
     def test_die_fehlermeldung_nennt_den_fund(self):
         try:

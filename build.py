@@ -21,6 +21,7 @@ Tests: python3 tests/test_build.py
 
 import argparse
 import html
+import os
 import re
 import shutil
 import sys
@@ -50,17 +51,65 @@ MUSTER = [
 ]
 
 # Woertliche Zeichenketten, die kein Muster fangen kann: Buchungscodes, PINs,
-# Zugangsdaten. Hier eintragen, sobald eine neue dazukommt.
-GEHEIME_TOKEN = [
-    "yV7P7RyK",          # MDAC-PIN
-]
+# Namen, Betraege. Die Liste liegt bewusst NICHT hier, sondern im privaten
+# Assistenz-Repo — dieses Repo ist public, und eine Sperrliste ist per
+# Definition eine Liste genau der Woerter, die niemand sehen soll. Genau so
+# stand die MDAC-PIN einen Tag lang in diesem Build (17.08. gefunden).
+# Fehlt oder leer -> Abbruch; ein Schutz, der bei fehlender Datei
+# stillschweigend durchlaesst, ist keiner.
+SPERRLISTE = Path(
+    os.environ.get(
+        "HARRY_SPERRLISTE",
+        Path.home() / "repos" / "assistant" / "state" / "oeffentlich-gesperrt.txt",
+    )
+)
+
+# Warnliste: KEIN Abbruch, nur eine Meldung. Die Reise-Seite geht bewusst an
+# Freunde, also entscheidet Jens, wer dort vorkommt — aber unbemerkt soll es
+# nicht passieren.
+WARNLISTE = Path(
+    os.environ.get(
+        "HARRY_WARNLISTE",
+        Path.home() / "repos" / "assistant" / "state" / "oeffentlich-warnung.txt",
+    )
+)
+
+GEHEIME_TOKEN: list[str] = []
+
+
+def warne_namen(text: str) -> list[str]:
+    """Nennt gefundene Namen aus der Warnliste, bricht aber nicht ab."""
+    if not WARNLISTE.exists():
+        return []
+    klein = text.lower()
+    return [w for w in lade_sperrliste(WARNLISTE) if w in klein]
+
+
+def lade_sperrliste(pfad: Path = None) -> list[str]:
+    """Liest die Sperrliste. Fehlt oder leer -> PrivatException."""
+    pfad = Path(pfad) if pfad else SPERRLISTE
+    try:
+        roh = pfad.read_text(encoding="utf-8")
+    except OSError as fehler:
+        raise PrivatException(
+            f"Sperrliste nicht lesbar ({pfad}): ohne sie prueft der Build nur "
+            "Muster, keine Namen und keine Codes — das ist zu wenig."
+        ) from fehler
+    woerter = [
+        z.strip().lower() for z in roh.splitlines()
+        if z.strip() and not z.lstrip().startswith("#")
+    ]
+    if not woerter:
+        raise PrivatException(f"Sperrliste ist leer ({pfad}).")
+    return woerter
 
 
 def pruefe_privat(text: str) -> None:
     """Wirft PrivatException, wenn etwas Personenbezogenes im Text steht."""
+    klein = text.lower()
     for token in GEHEIME_TOKEN:
-        if token in text:
-            raise PrivatException(f"privates Token im Text: {token}")
+        if token in klein:
+            raise PrivatException("gesperrtes Wort im Text (Liste ausserhalb des Repos)")
     for muster, name in MUSTER:
         treffer = re.search(muster, text)
         if treffer:
@@ -255,6 +304,9 @@ def baue_seite(md: str) -> str:
 # ----------------------------------------------------------------------- CLI
 
 def main() -> int:
+    global GEHEIME_TOKEN
+    GEHEIME_TOKEN = lade_sperrliste()
+
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--no-sync", action="store_true", help="Quelle nicht neu holen")
     p.add_argument("--check", action="store_true", help="nur Datenschutz pruefen")
@@ -276,8 +328,17 @@ def main() -> int:
         print("Nichts geschrieben. Den Satz im Quelldokument entfernen.", file=sys.stderr)
         return 1
 
+    namen = warne_namen(seite)
+    if namen:
+        print(
+            "ACHTUNG: Namen aus der Warnliste stehen auf der oeffentlichen Seite: "
+            + ", ".join(namen)
+            + ". Kein Abbruch — wer hier vorkommt, entscheidet Jens.",
+            file=sys.stderr,
+        )
+
     if args.check:
-        print("Datenschutz: sauber. (--check schreibt nichts)")
+        print("Datenschutz: keine harte Sperre getroffen. (--check schreibt nichts)")
         return 0
 
     ZIEL.write_text(seite, encoding="utf-8")
