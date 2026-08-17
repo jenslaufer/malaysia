@@ -142,6 +142,12 @@ Elektronikladen.
 an den Gates eingebaut**, USB direkt am Platz — dafür braucht es keinen Adapter. Davor, im
 öffentlichen Bereich, gibt es nur normale Steckdosen. WLAN `BIA Free WiFi`, ohne Anmeldung.
 
+**✓ Im malaysischen Fernbus sitzt eine USB-Buchse am Platz (17.08.).** Zwei USB-A-Anschlüsse,
+eingelassen in die Seitenverkleidung unter der Armlehne, also unterhalb der Sitzfläche und
+nicht auf Augenhöhe — man findet sie nur, wenn man danach sucht. Ein eigenes Kabel gehört
+deshalb ins Handgepäck und nicht in den Koffer im Laderaum. Gemeldet wurde die Buchse mit
+Foto aus einem Bus ab Larkin Sentral; welche Linie es genau war, steht nicht fest.
+
 **✗ CelcomDigi ließ sich online nicht kaufen.** Der Bestellvorgang brach reproduzierbar bei
 der Adresseingabe ab. Am Schalter mit Pass im Original geht es; Kaufmöglichkeiten in Kuala
 Lumpur (Pavilion, Suria KLCC) und am Flughafen KLIA.
