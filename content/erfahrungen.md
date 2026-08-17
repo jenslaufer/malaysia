@@ -26,66 +26,43 @@ Jeder Punkt trägt ein Zeichen. Das ist der wichtigste Teil des Dokuments:
 Ein Reisebericht, der beides vermischt, ist nichts wert: der Leser kann dann bei keinem
 einzigen Satz mehr sagen, ob dahinter eine Erfahrung steht oder eine Internetseite.
 
----
+## Unterwegs in Singapur
 
-## Bezahlen
+**✓ Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben
+(16.08.).** Gemessen zwischen „wir sind an der Jalan Besar" und „wir sind am Garten", also
+inklusive Weg zur Station und Fußweg am Ende. Mit der MRT, Downtown Line, sechs Stationen
+bis Bayfront.
 
-**✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit
-Google Pay (17.08.).** Beides wurde angenommen, ohne Vorbereitung und ohne lokale
-Verkehrskarte. Das ist die praktisch wichtigste Erfahrung des Tages: für den Weg vom
-Grenzgebäude zum Fernbusbahnhof braucht man weder Ringgit in bar noch eine App, und der Bus
-ist deutlich billiger als das Taxi, zu dem einem sonst geraten wird.
-<!-- werkstatt: telegram=2026-08-17T04:41 -->
+**○ Die Fahrtrichtung ist die Stolperstelle, und sie kostet den Anschluss.** Die Downtown
+Line fährt einen Bogen: Bayfront (DT16) liegt geografisch südlich von Jalan Besar (DT22),
+der richtige Zug fährt aber **Richtung Bukit Panjang**, also scheinbar nach Norden. Auf den
+Bahnsteig gehört der Blick auf die Stationsnummern, nicht auf die Himmelsrichtung. Ab
+Bayfront: Ausgang B, Unterführung, dann Dragonfly Bridge oder Meadow Bridge.
 
-**○ In Malaysia bleibt Bargeld trotzdem Pflicht — aber für andere Dinge.**
-Behördengebühren und kleine Stände nehmen es nicht anders. Fest eingeplant für Tioman:
-RM105 Marine-Park-Gebühr am Fährschalter in Mersing (Erwachsene RM30, Kinder 6–12 RM15,
-Quelle: malaysisches Fischereiministerium) und RM60 Touristensteuer in der Unterkunft.
-Zusammen rund 35 Euro, bar, vor dem Einsteigen.
+**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach
+darunter (16.08.).** Keine Absperrung, keine Reihen, kein Einlass: die Zuschauer verteilen
+sich auf dem Platz zwischen den Bäumen, viele legen sich flach hin, weil die Show nach oben
+spielt. Wer ein Foto will, braucht keinen bestimmten Platz — aber Abstand, denn ein
+Supertree füllt aus der Nähe das ganze Bild. Auf dem Weitwinkelfoto unten stehen etliche
+aufgespannte Schirme in der Menge; die Show läuft also auch bei Regen weiter. (Das ist vom
+Bild abgelesen, nicht von uns berichtet.)
+<!-- werkstatt: telegram=2026-08-17T09:39 -->
 
-**✗ „Wechselstube schlägt Geldautomat" — das galt bei uns nicht (17.08.).** Der Satz stand hier
-bis zum 17. August als Empfehlung: in Malaysia falle am Automaten eine Fremdkartengebühr an, in
-der Wechselstube nicht. Am selben Tag kam in Mersing mit einer Reisekreditkarte Geld heraus,
-**ohne jede Gebühr**. Die Regel hängt also nicht am Land, sondern an der Karte — und wer eine
-ohne Auslandsentgelt hat, sollte sich davon keinen Umweg aufschwatzen lassen. Wechselstuben gibt
-es trotzdem, etwa im Terminal von Larkin Sentral in Johor Bahru (Tajmuhabath, 10:00–20:00); mit
-Bargeld aus Deutschland sind sie der bessere Weg als der Automat, mit der richtigen Karte nicht.
+![Zwei Supertrees in grünem Licht, dahinter das Marina Bay Sands und der beleuchtete Skyway.](foto:2026-08-17_093911.jpg)
+![Ein einzelner Supertree von unten, die Krone von innen grün ausgeleuchtet.](foto:2026-08-17_093914.jpg)
+![Drei Supertrees in grünem Licht über der Zuschauermenge im Supertree Grove.](foto:2026-08-17_093916.jpg)
 
-**○ In Mersing stehen fünf Banken mit Geldautomat dicht beieinander im Ortskern.**
-Maybank, Bank Rakyat und Hong Leong Bank an der Jalan Ismail, der Hauptstraße; Public Bank
-und Bank Simpanan Nasional eine Straße weiter an der Jalan Sulaiman. Alle fünf liegen
-innerhalb von 250 Metern, jede Filiale hat ihren Automaten im Vorraum. Wichtig, weil die
-Marine-Park-Gebühr für Tioman bar am Fährschalter fällig wird und Mersing der letzte Ort davor
-ist. (Standorte am 17.08. aus OpenStreetMap geholt, nicht vor Ort geprüft.)
+**○ Die zweite Lichtshow heißt *Spectra* und liegt 800 Meter entfernt.**
+Wasser, Licht und Laser, 20:00 und 21:00 an der Event Plaza am Marina Bay Sands, direkt am
+Stationsausgang; *Garden Rhapsody* läuft 19:45 und 20:45. Je 15 Minuten. An einem Abend
+gehen beide: 20:00 Spectra, zehn Minuten Fußweg, 20:45 Garden Rhapsody. Wir waren nur bei
+*Garden Rhapsody* — was hier zu Spectra steht, ist Recherche geblieben.
 
-Hier stand bis zum 17.08. zusätzlich der Rat, mit einer ausländischen Karte zu Maybank oder
-Public Bank zu gehen, weil Bank Rakyat und Bank Simpanan Nasional auf malaysische Karten
-ausgelegt seien. **Das war nicht gemessen, sondern angenommen — und es war falsch.** Geld kam
-an einem Automaten der **Bank Simpanan Nasional** heraus, also genau bei der Bank, von der hier
-abgeraten wurde. Der Satz ist deshalb gestrichen.
-
-**Und der Irrtum wäre teuer geworden, weil er nach vorn wirkt: auf Tioman gibt es genau einen
-Geldautomaten, und es ist eine BSN** (in Tekek, am Flugfeld). Wer dem alten Rat geglaubt hätte,
-wäre mit der Erwartung auf die Insel gefahren, dort gar nicht an Bargeld zu kommen — und hätte
-in Mersing entsprechend viel abheben oder eine Wechselstube suchen müssen. BSN ist die
-malaysische Post-Sparkasse; sie steht in kleinen Orten, in denen keine der großen Banken mehr
-sitzt. Das macht sie für Reisende eher wichtiger als unwichtiger.
-
-**○ Trinkgeld: in Singapur und Malaysia nirgends.** Der Grund steht auf der Rechnung.
-Singapur: 10 % Service Charge + 9 % GST, auf der Speisekarte als `++` hinter dem Preis
-angekündigt — rund 20 % kommen also ohnehin oben drauf. Malaysia: 10 % Service Charge + 6 %
-SST auf Essen und Getränke. Im Hawker Centre und am Straßenstand gibt es weder das eine noch
-das andere, dort zahlt man den Preis, der dransteht. Taxifahrer erwarten nichts —
-ComfortDelGro schreibt selbst auf seiner Seite „you are not expected to tip your driver".
-Am Flughafen Changi darf das Personal gar nichts annehmen.
-
-**○ Achtung bei alten Reiseführern:** die Steuersätze sind frisch. Singapurs GST ist erst
-seit dem 01.01.2024 bei 9 % (vorher 8 %). In Malaysia stieg die allgemeine Dienstleistungs-
-steuer 03/2024 auf 8 %, Essen und Getränke blieben bei 6 % — auch nach der Erweiterung
-07/2025. Wer 8 % für Restaurants liest, liest eine falsche Zahl.
-
-**Offen, kommt noch:** ob Karte auch beim Fährticket, in Läden auf Tioman und bei den
-Touren in Sabah geht.
+**○ Vom Flughafen in die Stadt entscheidet das Gepäck, nicht der Preis.** MRT S$2,20 pro
+Person (45–50 min, zwei Umstiege), Taxi S$25–45 inklusive S$6 Flughafenzuschlag, am
+Festpreisschalter ein Sechssitzer für S$75. Ein normales Taxi fasst vier Personen, aber
+keine vier Koffer für drei Wochen — dann sind es zwei Wagen oder ein Sechssitzer, und der
+reine Preisvergleich rät falsch.
 
 ---
 
@@ -105,7 +82,7 @@ Ort, von dem aus es weitergeht — Bus, Taxi, Zug, alles dort. Man muss niemande
 **✓ Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg (17.08.).**
 Larkin Sentral ist der Fernbusbahnhof, von dem es weiter ins Land geht — vom Grenzgebäude
 sind es rund 5 Kilometer. Der Bus ab JB Sentral nimmt kontaktlos Karte und Google Pay, siehe
-oben. Empfohlen wird einem meist ein Grab für etwa RM20; der Bus tut dasselbe für einen
+„Bezahlen“ weiter unten. Empfohlen wird einem meist ein Grab für etwa RM20; der Bus tut dasselbe für einen
 Bruchteil.
 <!-- werkstatt: telegram=2026-08-17T04:47 -->
 
@@ -304,43 +281,64 @@ seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falsche
 
 ---
 
-## Unterwegs in Singapur
+## Bezahlen
 
-**✓ Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben
-(16.08.).** Gemessen zwischen „wir sind an der Jalan Besar" und „wir sind am Garten", also
-inklusive Weg zur Station und Fußweg am Ende. Mit der MRT, Downtown Line, sechs Stationen
-bis Bayfront.
+**✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit
+Google Pay (17.08.).** Beides wurde angenommen, ohne Vorbereitung und ohne lokale
+Verkehrskarte. Das ist die praktisch wichtigste Erfahrung des Tages: für den Weg vom
+Grenzgebäude zum Fernbusbahnhof braucht man weder Ringgit in bar noch eine App, und der Bus
+ist deutlich billiger als das Taxi, zu dem einem sonst geraten wird.
+<!-- werkstatt: telegram=2026-08-17T04:41 -->
 
-**○ Die Fahrtrichtung ist die Stolperstelle, und sie kostet den Anschluss.** Die Downtown
-Line fährt einen Bogen: Bayfront (DT16) liegt geografisch südlich von Jalan Besar (DT22),
-der richtige Zug fährt aber **Richtung Bukit Panjang**, also scheinbar nach Norden. Auf den
-Bahnsteig gehört der Blick auf die Stationsnummern, nicht auf die Himmelsrichtung. Ab
-Bayfront: Ausgang B, Unterführung, dann Dragonfly Bridge oder Meadow Bridge.
+**○ In Malaysia bleibt Bargeld trotzdem Pflicht — aber für andere Dinge.**
+Behördengebühren und kleine Stände nehmen es nicht anders. Fest eingeplant für Tioman:
+RM105 Marine-Park-Gebühr am Fährschalter in Mersing (Erwachsene RM30, Kinder 6–12 RM15,
+Quelle: malaysisches Fischereiministerium) und RM60 Touristensteuer in der Unterkunft.
+Zusammen rund 35 Euro, bar, vor dem Einsteigen.
 
-**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach
-darunter (16.08.).** Keine Absperrung, keine Reihen, kein Einlass: die Zuschauer verteilen
-sich auf dem Platz zwischen den Bäumen, viele legen sich flach hin, weil die Show nach oben
-spielt. Wer ein Foto will, braucht keinen bestimmten Platz — aber Abstand, denn ein
-Supertree füllt aus der Nähe das ganze Bild. Auf dem Weitwinkelfoto unten stehen etliche
-aufgespannte Schirme in der Menge; die Show läuft also auch bei Regen weiter. (Das ist vom
-Bild abgelesen, nicht von uns berichtet.)
-<!-- werkstatt: telegram=2026-08-17T09:39 -->
+**✗ „Wechselstube schlägt Geldautomat" — das galt bei uns nicht (17.08.).** Der Satz stand hier
+bis zum 17. August als Empfehlung: in Malaysia falle am Automaten eine Fremdkartengebühr an, in
+der Wechselstube nicht. Am selben Tag kam in Mersing mit einer Reisekreditkarte Geld heraus,
+**ohne jede Gebühr**. Die Regel hängt also nicht am Land, sondern an der Karte — und wer eine
+ohne Auslandsentgelt hat, sollte sich davon keinen Umweg aufschwatzen lassen. Wechselstuben gibt
+es trotzdem, etwa im Terminal von Larkin Sentral in Johor Bahru (Tajmuhabath, 10:00–20:00); mit
+Bargeld aus Deutschland sind sie der bessere Weg als der Automat, mit der richtigen Karte nicht.
 
-![Zwei Supertrees in grünem Licht, dahinter das Marina Bay Sands und der beleuchtete Skyway.](foto:2026-08-17_093911.jpg)
-![Ein einzelner Supertree von unten, die Krone von innen grün ausgeleuchtet.](foto:2026-08-17_093914.jpg)
-![Drei Supertrees in grünem Licht über der Zuschauermenge im Supertree Grove.](foto:2026-08-17_093916.jpg)
+**○ In Mersing stehen fünf Banken mit Geldautomat dicht beieinander im Ortskern.**
+Maybank, Bank Rakyat und Hong Leong Bank an der Jalan Ismail, der Hauptstraße; Public Bank
+und Bank Simpanan Nasional eine Straße weiter an der Jalan Sulaiman. Alle fünf liegen
+innerhalb von 250 Metern, jede Filiale hat ihren Automaten im Vorraum. Wichtig, weil die
+Marine-Park-Gebühr für Tioman bar am Fährschalter fällig wird und Mersing der letzte Ort davor
+ist. (Standorte am 17.08. aus OpenStreetMap geholt, nicht vor Ort geprüft.)
 
-**○ Die zweite Lichtshow heißt *Spectra* und liegt 800 Meter entfernt.**
-Wasser, Licht und Laser, 20:00 und 21:00 an der Event Plaza am Marina Bay Sands, direkt am
-Stationsausgang; *Garden Rhapsody* läuft 19:45 und 20:45. Je 15 Minuten. An einem Abend
-gehen beide: 20:00 Spectra, zehn Minuten Fußweg, 20:45 Garden Rhapsody. Wir waren nur bei
-*Garden Rhapsody* — was hier zu Spectra steht, ist Recherche geblieben.
+Hier stand bis zum 17.08. zusätzlich der Rat, mit einer ausländischen Karte zu Maybank oder
+Public Bank zu gehen, weil Bank Rakyat und Bank Simpanan Nasional auf malaysische Karten
+ausgelegt seien. **Das war nicht gemessen, sondern angenommen — und es war falsch.** Geld kam
+an einem Automaten der **Bank Simpanan Nasional** heraus, also genau bei der Bank, von der hier
+abgeraten wurde. Der Satz ist deshalb gestrichen.
 
-**○ Vom Flughafen in die Stadt entscheidet das Gepäck, nicht der Preis.** MRT S$2,20 pro
-Person (45–50 min, zwei Umstiege), Taxi S$25–45 inklusive S$6 Flughafenzuschlag, am
-Festpreisschalter ein Sechssitzer für S$75. Ein normales Taxi fasst vier Personen, aber
-keine vier Koffer für drei Wochen — dann sind es zwei Wagen oder ein Sechssitzer, und der
-reine Preisvergleich rät falsch.
+**Und der Irrtum wäre teuer geworden, weil er nach vorn wirkt: auf Tioman gibt es genau einen
+Geldautomaten, und es ist eine BSN** (in Tekek, am Flugfeld). Wer dem alten Rat geglaubt hätte,
+wäre mit der Erwartung auf die Insel gefahren, dort gar nicht an Bargeld zu kommen — und hätte
+in Mersing entsprechend viel abheben oder eine Wechselstube suchen müssen. BSN ist die
+malaysische Post-Sparkasse; sie steht in kleinen Orten, in denen keine der großen Banken mehr
+sitzt. Das macht sie für Reisende eher wichtiger als unwichtiger.
+
+**○ Trinkgeld: in Singapur und Malaysia nirgends.** Der Grund steht auf der Rechnung.
+Singapur: 10 % Service Charge + 9 % GST, auf der Speisekarte als `++` hinter dem Preis
+angekündigt — rund 20 % kommen also ohnehin oben drauf. Malaysia: 10 % Service Charge + 6 %
+SST auf Essen und Getränke. Im Hawker Centre und am Straßenstand gibt es weder das eine noch
+das andere, dort zahlt man den Preis, der dransteht. Taxifahrer erwarten nichts —
+ComfortDelGro schreibt selbst auf seiner Seite „you are not expected to tip your driver".
+Am Flughafen Changi darf das Personal gar nichts annehmen.
+
+**○ Achtung bei alten Reiseführern:** die Steuersätze sind frisch. Singapurs GST ist erst
+seit dem 01.01.2024 bei 9 % (vorher 8 %). In Malaysia stieg die allgemeine Dienstleistungs-
+steuer 03/2024 auf 8 %, Essen und Getränke blieben bei 6 % — auch nach der Erweiterung
+07/2025. Wer 8 % für Restaurants liest, liest eine falsche Zahl.
+
+**Offen, kommt noch:** ob Karte auch beim Fährticket, in Läden auf Tioman und bei den
+Touren in Sabah geht.
 
 ---
 
