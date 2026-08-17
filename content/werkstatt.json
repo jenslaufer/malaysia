@@ -1,10 +1,10 @@
 {
   "eintraege": [
     {
-      "anker": "**✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahl",
-      "minuten": 66,
-      "telegram": "2026-08-17T04:41:00+00:00",
-      "veroeffentlicht": "2026-08-17T05:46:51+00:00"
+      "anker": "**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne T",
+      "minuten": 11,
+      "telegram": "2026-08-17T09:39:00+00:00",
+      "veroeffentlicht": "2026-08-17T09:50:10+00:00"
     },
     {
       "anker": "**✓ An einem Montagvormittag waren wir gegen 12:00 Ortszeit ",
@@ -49,16 +49,22 @@
       "veroeffentlicht": "2026-08-17T09:40:10+00:00"
     },
     {
+      "anker": "**✓ Am Spätnachmittag spielt sich der Ort an der Strandprome",
+      "minuten": 37,
+      "telegram": "2026-08-17T10:21:00+00:00",
+      "veroeffentlicht": "2026-08-17T10:58:26+00:00"
+    },
+    {
       "anker": "**✓ Und so sieht das aus (17.08., 18:20 Ortszeit).** Am Aben",
       "minuten": 17,
       "telegram": "2026-08-17T10:21:00+00:00",
       "veroeffentlicht": "2026-08-17T10:38:12+00:00"
     },
     {
-      "anker": "**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne T",
-      "minuten": 11,
-      "telegram": "2026-08-17T09:39:00+00:00",
-      "veroeffentlicht": "2026-08-17T09:50:10+00:00"
+      "anker": "**✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahl",
+      "minuten": 66,
+      "telegram": "2026-08-17T04:41:00+00:00",
+      "veroeffentlicht": "2026-08-17T05:46:51+00:00"
     },
     {
       "anker": "**✓ Im malaysischen Fernbus sitzt eine USB-Buchse am Platz (",
@@ -71,11 +77,17 @@
       "minuten": 13,
       "telegram": "2026-08-17T09:37:00+00:00",
       "veroeffentlicht": "2026-08-17T09:50:10+00:00"
+    },
+    {
+      "anker": "**✓ Die Singapur-eSIM trägt in Malaysia — die Tabelle hatte ",
+      "minuten": 4,
+      "telegram": "2026-08-17T10:58:00+00:00",
+      "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 12,
-  "juengste_minuten": 17,
-  "markiert": 12,
+  "gemessen": 14,
+  "juengste_minuten": 4,
+  "markiert": 14,
   "median_minuten": 19,
   "schnellste_minuten": 4,
   "stand": "2026-08-17"
