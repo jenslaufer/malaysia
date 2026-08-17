@@ -43,18 +43,26 @@ RM105 Marine-Park-Gebühr am Fährschalter in Mersing (Erwachsene RM30, Kinder 6
 Quelle: malaysisches Fischereiministerium) und RM60 Touristensteuer in der Unterkunft.
 Zusammen rund 35 Euro, bar, vor dem Einsteigen.
 
-**○ Wechselstube schlägt Geldautomat.** In Malaysia fällt beim Automaten die
-Fremdkartengebühr an, bei der Wechselstube nicht. Am Busbahnhof Larkin Sentral in Johor
-Bahru gibt es eine im Terminal (Tajmuhabath, 10:00–20:00).
+**✗ „Wechselstube schlägt Geldautomat" — das galt bei uns nicht (17.08.).** Der Satz stand hier
+bis zum 17. August als Empfehlung: in Malaysia falle am Automaten eine Fremdkartengebühr an, in
+der Wechselstube nicht. Am selben Tag kam in Mersing mit einer Reisekreditkarte Geld heraus,
+**ohne jede Gebühr**. Die Regel hängt also nicht am Land, sondern an der Karte — und wer eine
+ohne Auslandsentgelt hat, sollte sich davon keinen Umweg aufschwatzen lassen. Wechselstuben gibt
+es trotzdem, etwa im Terminal von Larkin Sentral in Johor Bahru (Tajmuhabath, 10:00–20:00); mit
+Bargeld aus Deutschland sind sie der bessere Weg als der Automat, mit der richtigen Karte nicht.
 
 **○ In Mersing stehen fünf Banken mit Geldautomat dicht beieinander im Ortskern.**
 Maybank, Bank Rakyat und Hong Leong Bank an der Jalan Ismail, der Hauptstraße; Public Bank
 und Bank Simpanan Nasional eine Straße weiter an der Jalan Sulaiman. Alle fünf liegen
-innerhalb von 250 Metern, jede Filiale hat ihren Automaten im Vorraum. Mit einer
-ausländischen Karte zu Maybank oder Public Bank gehen — Bank Rakyat und Bank Simpanan
-Nasional sind auf malaysische Karten ausgelegt. Wichtig, weil die Marine-Park-Gebühr für
-Tioman bar am Fährschalter fällig wird und Mersing der letzte Ort davor ist. (Standorte am
-17.08. aus OpenStreetMap geholt, nicht vor Ort geprüft.)
+innerhalb von 250 Metern, jede Filiale hat ihren Automaten im Vorraum. Wichtig, weil die
+Marine-Park-Gebühr für Tioman bar am Fährschalter fällig wird und Mersing der letzte Ort davor
+ist. (Standorte am 17.08. aus OpenStreetMap geholt, nicht vor Ort geprüft.)
+
+Hier stand bis zum 17.08. zusätzlich der Rat, mit einer ausländischen Karte zu Maybank oder
+Public Bank zu gehen, weil Bank Rakyat und Bank Simpanan Nasional auf malaysische Karten
+ausgelegt seien. **Das war nicht gemessen, sondern angenommen** — die Standorte kamen aus einer
+Datenbank, die Empfehlung aus nichts Belegbarem. Sie steht deshalb nicht mehr hier. Was
+gemessen ist, steht unter „In Mersing": eine Reisekreditkarte hat funktioniert, ohne Gebühr.
 
 **○ Trinkgeld: in Singapur und Malaysia nirgends.** Der Grund steht auf der Rechnung.
 Singapur: 10 % Service Charge + 9 % GST, auf der Speisekarte als `++` hinter dem Preis
@@ -165,13 +173,12 @@ tollwutfrei. Die beiden Staaten liegen auf derselben Insel und werden ständig v
 Wer also auf Borneo eine Katze anfasst, sollte vorher wissen, in welchem der beiden er steht;
 und nach Biss oder Kratzer gilt überall dasselbe: sofort zum Arzt, nicht abwarten.
 
-**✓ Wir standen an einem Geldautomaten in Mersing (17.08.).** Damit ist der Absatz weiter oben
-über die fünf Banken im Ortskern zumindest halb bestätigt: es gibt dort einen erreichbaren
-Automaten, und er hat die Karte angenommen und eine Abfrage gestartet — mehr sagt das Foto
-nicht. **Ob am Ende Geld herauskam, mit welcher Karte und zu welcher Gebühr, steht noch
-offen.** Die Frage ist gestellt; sobald die Antwort da ist, steht hier ein ✓ oder ein ✗ mit
-Betrag statt dieses Satzes. So entsteht der Unterschied zwischen den Zeichen in diesem
-Dokument: erst die Erfahrung, dann der Haken.
+**✓ Am Geldautomaten in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne Gebühr
+(17.08.).** Das ist die praktisch wichtigste Auskunft dieses Abschnitts, und sie widerspricht
+dem, was wir vorher angenommen hatten (siehe „Bezahlen"): weder die Karte wurde abgelehnt noch
+wurde eine Fremdkartengebühr fällig. Wer eine Reisekreditkarte ohne Auslandsentgelt dabeihat,
+braucht für Mersing keine Wechselstube und muss sich in Johor Bahru nicht mit Bargeld
+eindecken.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
 
 ![Ein Geldautomat in Mersing, mitten in einer laufenden Abfrage.](foto:2026-08-17_090006.jpg)
