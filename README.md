@@ -18,6 +18,32 @@ als lauter Erfahrung, und **ein ✓ ohne Erlebnis entwertet jeden anderen Haken 
 Deshalb ist das Zeichen auch gestalterisch die Hauptsache: eigene Randspalte,
 eigene Farbe, keine Bildflächen, keine Kacheln.
 
+## Die Verbindung zu /harry/ ist eine Messung, kein Link
+
+Die Seite ist zugleich Reisebericht und Arbeitsprobe: sie entsteht drei Wochen
+lang ausschließlich aus Telegram-Nachrichten, während Jens ohne Rechner
+unterwegs ist. Ein Link auf [jenslaufer.com/harry](https://jenslaufer.com/harry/)
+würde das behaupten. Belegt wird es durch die Zeit, die unter jedem selbst
+erlebten Eintrag steht:
+
+    Telegram 17.08. 04:41  →  auf dieser Seite 17.08. 05:46   66 Min
+
+Herkunft steht im Quelldokument, direkt unter dem Eintrag und ohne Leerzeile:
+
+    <!-- werkstatt: telegram=2026-08-17T06:21 -->
+
+Gemessen wird nicht hier, sondern in `~/repos/assistant/tools/reise-werkstatt.py`:
+Telegram-Zeitstempel gegen den **ersten Commit dieses Repos**, der den Eintrag
+in `content/erfahrungen.md` gebracht hat. Der Build holt nur das Ergebnis nach
+`content/werkstatt.json`. Beide Seiten lesen dieselbe Datei — zwei Seiten mit
+zwei eigenen Zahlen wären nach einer Woche zwei verschiedene Zahlen.
+
+Der Marker gehört **nur** an Einträge, die Jens selbst gemeldet hat. Ein aus
+zwei Zeitstempeln abgeleiteter Wert (die 33 MRT-Minuten) bekommt keinen, sonst
+misst die Zahl die eigene Rechenzeit statt der Reaktionszeit. Fehlt die Messung,
+fällt die Zeile weg und das Band verschwindet — eine 0 wäre die schnellste Zahl
+der Seite und hieße „nicht gemessen".
+
 ## Quelle und Build
 
 Die Inhalte werden **nicht hier** gepflegt, sondern in
@@ -42,11 +68,22 @@ Dokument vorkommen, und macht aus dem Zeichen Auszeichnung.
 ## Datenschutz ist im Build verdrahtet, nicht im Kopf
 
 `pruefe_privat()` bricht den Build ab, wenn Passnummern, IBANs, E-Mail-Adressen,
-Telefonnummern oder ein Token aus `GEHEIME_TOKEN` im Text stehen. Es wird dann
-**nichts** geschrieben — lieber ein Fehlalarm als eine Passnummer im Netz.
-HTML-Kommentare (der Pflegeblock am Fuß des Quelldokuments) erreichen die Seite nie.
+Telefonnummern oder ein gesperrtes Wort im Text stehen. Es wird dann **nichts**
+geschrieben — lieber ein Fehlalarm als eine Passnummer im Netz. HTML-Kommentare
+(der Pflegeblock am Fuß des Quelldokuments) erreichen die Seite nie.
 
-Neue Buchungscodes oder PINs gehören in `GEHEIME_TOKEN` in `build.py`.
+**Die Sperrliste liegt bewusst nicht in diesem Repo**, sondern in
+`~/repos/assistant/state/oeffentlich-gesperrt.txt`. Dieses Repo ist public, und
+eine Sperrliste ist per Definition die Liste genau der Wörter, die niemand sehen
+soll — sie neben die Seite zu legen, veröffentlicht sie. Genau so stand hier am
+17.08. einen Tag lang die MDAC-PIN im Klartext, im Schutzcode selbst. Fehlt oder
+leer → Abbruch. Neue Buchungscodes und PINs gehören in diese Datei.
+
+Daneben `state/oeffentlich-warnung.txt`: **nur Meldung, kein Abbruch**. Sie
+enthält die Familiennamen. Ein Abbruch hätte die Seite stillgelegt, für die eine
+laufende Routine schreibt, und wer auf einer Familienseite vorkommt, entscheidet
+Jens (offen als `#204`). Ein Wächter, dessen einzige Antwort „Abbruch" ist, wird
+umgangen.
 
 ## Ausliefern
 

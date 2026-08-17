@@ -1,0 +1,40 @@
+{
+  "eintraege": [
+    {
+      "anker": "**✓ Im Bus von JB Sentral nach Larkin geht kontaktlos bezahl",
+      "minuten": 66,
+      "telegram": "2026-08-17T04:41:00+00:00",
+      "veroeffentlicht": "2026-08-17T05:46:51+00:00"
+    },
+    {
+      "anker": "**✓ An einem Montagvormittag waren wir gegen 12:00 Ortszeit ",
+      "minuten": 106,
+      "telegram": "2026-08-17T04:01:00+00:00",
+      "veroeffentlicht": "2026-08-17T05:46:51+00:00"
+    },
+    {
+      "anker": "**✓ In der Grenzhalle hängt die Wegweisung schon.** Nach der",
+      "minuten": 103,
+      "telegram": "2026-08-17T04:04:00+00:00",
+      "veroeffentlicht": "2026-08-17T05:46:51+00:00"
+    },
+    {
+      "anker": "**✓ Von JB Sentral nach Larkin fährt ein Bus, und der ist de",
+      "minuten": 60,
+      "telegram": "2026-08-17T04:47:00+00:00",
+      "veroeffentlicht": "2026-08-17T05:46:51+00:00"
+    },
+    {
+      "anker": "**✓ Im malaysischen Fernbus sitzt eine USB-Buchse am Platz (",
+      "minuten": 17,
+      "telegram": "2026-08-17T06:21:00+00:00",
+      "veroeffentlicht": "2026-08-17T06:38:03+00:00"
+    }
+  ],
+  "gemessen": 5,
+  "juengste_minuten": 17,
+  "markiert": 5,
+  "median_minuten": 66,
+  "schnellste_minuten": 17,
+  "stand": "2026-08-17"
+}

@@ -184,6 +184,72 @@ code {
 }
 .entry--offen .mark { left: -.85rem; width: 1.5rem; height: 1.5rem; }
 
+/* --- Herkunftsspur unter einem Eintrag ---
+   Sie steht bewusst leise: der Reisetext ist die Hauptsache, die Entstehungszeit
+   der Beleg daneben. Monospace, weil es Messwerte sind und keine Prosa. */
+
+.spur {
+  margin: .55rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .1rem .5rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: .74rem;
+  letter-spacing: .01em;
+  color: var(--tinte-leise);
+}
+
+.spur-pfeil { opacity: .55; }
+
+.spur-dauer {
+  color: var(--erlebt);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: .04rem .45rem;
+  font-weight: 600;
+}
+
+/* --- Werkstatt-Band ---
+   Der einzige Kasten der Seite. Er darf einer sein, weil er als Einziges nicht
+   von der Reise handelt, sondern davon, wie die Reise hierher kommt. */
+
+.werkstatt {
+  margin: 0 0 2.6rem;
+  padding: 1.6rem 1.7rem 1.4rem;
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-left: 3px solid var(--erlebt);
+  border-radius: 4px;
+}
+
+.werkstatt h2 {
+  margin: 0 0 .6rem;
+  font-size: 1.18rem;
+  letter-spacing: -.01em;
+}
+
+.werkstatt p { margin: 0 0 .8rem; color: var(--tinte-leise); }
+
+.werkstatt-zahlen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.6rem;
+  padding: .85rem 0;
+  border-top: 1px solid var(--linie);
+  border-bottom: 1px solid var(--linie);
+  font-size: .88rem;
+}
+
+.werkstatt-zahlen b {
+  color: var(--tinte);
+  font-variant-numeric: tabular-nums;
+}
+
+.werkstatt-fuss { font-size: .88rem; margin-bottom: 0 !important; }
+
+.werkstatt a { color: var(--erlebt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
 /* --- Karte --- */
 
 .karte-block { margin: 0 0 1rem; }

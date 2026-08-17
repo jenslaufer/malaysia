@@ -28,6 +28,7 @@ Google Pay (17.08.).** Beides wurde angenommen, ohne Vorbereitung und ohne lokal
 Verkehrskarte. Das ist die praktisch wichtigste Erfahrung des Tages: für den Weg vom
 Grenzgebäude zum Fernbusbahnhof braucht man weder Ringgit in bar noch eine App, und der Bus
 ist deutlich billiger als das Taxi, zu dem einem sonst geraten wird.
+<!-- werkstatt: telegram=2026-08-17T04:41 -->
 
 **○ In Malaysia bleibt Bargeld trotzdem Pflicht — aber für andere Dinge.**
 Behördengebühren und kleine Stände nehmen es nicht anders. Fest eingeplant für Tioman:
@@ -63,16 +64,19 @@ Touren in Sabah geht.
 (17.08.).** Losgefahren sind wir in Little India. Wie lange die Kontrolle selbst gedauert
 hat, ist nicht mitgeschrieben — die Erfahrung anderer ist, dass die Zeit fast vollständig
 für das Anstehen draufgeht und nicht für die Strecke; der Causeway ist gut einen Kilometer lang.
+<!-- werkstatt: telegram=2026-08-17T04:01 -->
 
 **✓ In der Grenzhalle hängt die Wegweisung schon.** Nach der Kontrolle steht man vor
 Schildern `↑ JB Sentral`. JB Sentral ist der Bahnhof direkt neben dem Grenzgebäude und der
 Ort, von dem aus es weitergeht — Bus, Taxi, Zug, alles dort. Man muss niemanden fragen.
+<!-- werkstatt: telegram=2026-08-17T04:04 -->
 
 **✓ Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg (17.08.).**
 Larkin Sentral ist der Fernbusbahnhof, von dem es weiter ins Land geht — vom Grenzgebäude
 sind es rund 5 Kilometer. Der Bus ab JB Sentral nimmt kontaktlos Karte und Google Pay, siehe
 oben. Empfohlen wird einem meist ein Grab für etwa RM20; der Bus tut dasselbe für einen
 Bruchteil.
+<!-- werkstatt: telegram=2026-08-17T04:47 -->
 
 **○ Ein Grab lässt sich am Grenzgebäude selbst nicht bestellen.** Der Abholpunkt wäre das
 Erdgeschoss von JB Sentral nebenan. Wer in der Halle die App aufmacht, findet keinen Wagen.
@@ -147,6 +151,7 @@ eingelassen in die Seitenverkleidung unter der Armlehne, also unterhalb der Sitz
 nicht auf Augenhöhe — man findet sie nur, wenn man danach sucht. Ein eigenes Kabel gehört
 deshalb ins Handgepäck und nicht in den Koffer im Laderaum. Gemeldet wurde die Buchse mit
 Foto aus einem Bus ab Larkin Sentral; welche Linie es genau war, steht nicht fest.
+<!-- werkstatt: telegram=2026-08-17T06:21 -->
 
 **✗ CelcomDigi ließ sich online nicht kaufen.** Der Bestellvorgang brach reproduzierbar bei
 der Adresseingabe ab. Am Schalter mit Pass im Original geht es; Kaufmöglichkeiten in Kuala
@@ -220,6 +225,20 @@ Regeln beim Eintragen:
    danebenzustellen.
 5. Belege (Buchungsnummern, Drive-IDs, Adressen) gehoeren NICHT hierhin, sondern in
    state/memory/reise-malaysia-dokumente.md. Dieses Dokument geht an Fremde.
+6. HERKUNFT: unter jeden Eintrag, den Jens selbst gemeldet hat, gehoert direkt
+   unter den Absatz und OHNE Leerzeile davor:
+
+       <!-- werkstatt: telegram=YYYY-MM-DDTHH:MM -->
+
+   Die Zeit ist der Zeitstempel SEINER Nachricht aus state/inbox.md, in UTC.
+   Daraus misst tools/reise-werkstatt.py, wie lange es von der Nachricht bis zur
+   veroeffentlichten Seite gedauert hat — das ist die Verbindung zwischen dieser
+   Seite und /harry/, und beide lesen dieselbe Messung.
+   NUR an gemeldete Eintraege. Ein abgeleiteter Wert (die 33 MRT-Minuten sind aus
+   zwei Zeitstempeln gerechnet, nicht berichtet) bekommt KEINEN Marker, sonst
+   misst die Zahl die eigene Rechenzeit statt der Reaktionszeit.
+   Kamen zwei Nachrichten, gilt die, die den Eintrag ausgeloest hat — nicht die
+   spaetere, die ihn vervollstaendigt hat; sonst faellt die Zahl zu guenstig aus.
 
 Rendern als PDF (erst auf Ansage von Jens): tools/pdf-slim.py, siehe CLAUDE.md.
 -->

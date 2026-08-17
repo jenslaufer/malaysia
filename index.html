@@ -203,6 +203,72 @@ code {
 }
 .entry--offen .mark { left: -.85rem; width: 1.5rem; height: 1.5rem; }
 
+/* --- Herkunftsspur unter einem Eintrag ---
+   Sie steht bewusst leise: der Reisetext ist die Hauptsache, die Entstehungszeit
+   der Beleg daneben. Monospace, weil es Messwerte sind und keine Prosa. */
+
+.spur {
+  margin: .55rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .1rem .5rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: .74rem;
+  letter-spacing: .01em;
+  color: var(--tinte-leise);
+}
+
+.spur-pfeil { opacity: .55; }
+
+.spur-dauer {
+  color: var(--erlebt);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: .04rem .45rem;
+  font-weight: 600;
+}
+
+/* --- Werkstatt-Band ---
+   Der einzige Kasten der Seite. Er darf einer sein, weil er als Einziges nicht
+   von der Reise handelt, sondern davon, wie die Reise hierher kommt. */
+
+.werkstatt {
+  margin: 0 0 2.6rem;
+  padding: 1.6rem 1.7rem 1.4rem;
+  background: var(--flaeche);
+  border: 1px solid var(--linie);
+  border-left: 3px solid var(--erlebt);
+  border-radius: 4px;
+}
+
+.werkstatt h2 {
+  margin: 0 0 .6rem;
+  font-size: 1.18rem;
+  letter-spacing: -.01em;
+}
+
+.werkstatt p { margin: 0 0 .8rem; color: var(--tinte-leise); }
+
+.werkstatt-zahlen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.6rem;
+  padding: .85rem 0;
+  border-top: 1px solid var(--linie);
+  border-bottom: 1px solid var(--linie);
+  font-size: .88rem;
+}
+
+.werkstatt-zahlen b {
+  color: var(--tinte);
+  font-variant-numeric: tabular-nums;
+}
+
+.werkstatt-fuss { font-size: .88rem; margin-bottom: 0 !important; }
+
+.werkstatt a { color: var(--erlebt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
 /* --- Karte --- */
 
 .karte-block { margin: 0 0 1rem; }
@@ -320,6 +386,24 @@ an andere und als eigenes Nachschlagewerk für das nächste Mal.</p>
 
 <main>
 
+<aside class="werkstatt" aria-labelledby="werkstatt-titel">
+  <h2 id="werkstatt-titel">Diese Seite pflegt kein Mensch</h2>
+  <p>Wir sind unterwegs, mit Telefon und ohne Rechner. Was hier steht, schickt
+     Jens als Telegram-Nachricht; ein Assistent auf einem Mini-PC in Deutschland
+     trägt es ein, prüft es auf private Daten und baut die Seite neu. Niemand
+     sitzt dazwischen — in Deutschland ist es drei Uhr nachts, wenn hier ein Bus
+     fährt.</p>
+  <p class="werkstatt-zahlen">
+    <span><b>5</b> Meldungen bisher so entstanden</span>
+    <span>zuletzt <b>17 Minuten</b> von der Nachricht bis hierher</span>
+    <span>Median <b>66 Minuten</b></span>
+  </p>
+  <p class="werkstatt-fuss">Die Zeit unter jedem selbst erlebten Eintrag ist
+     gemessen, nicht geschätzt: von Jens' Nachricht bis zu dem Commit, der den
+     Eintrag veröffentlicht hat. <a href="https://jenslaufer.com/harry/">Wie das
+     gebaut ist und was sonst noch darauf läuft →</a></p>
+</aside>
+
 <section class="karte-block" aria-labelledby="karte-titel">
   <h2 id="karte-titel">Die Route</h2>
   <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos.
@@ -371,7 +455,7 @@ einzigen Satz mehr sagen, ob dahinter eine Erfahrung steht oder eine Internetsei
 Google Pay (17.08.).</strong> Beides wurde angenommen, ohne Vorbereitung und ohne lokale
 Verkehrskarte. Das ist die praktisch wichtigste Erfahrung des Tages: für den Weg vom
 Grenzgebäude zum Fernbusbahnhof braucht man weder Ringgit in bar noch eine App, und der Bus
-ist deutlich billiger als das Taxi, zu dem einem sonst geraten wird.</p></div>
+ist deutlich billiger als das Taxi, zu dem einem sonst geraten wird.</p><p class="spur"><span class="spur-von">Telegram 17.08. 04:41</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 05:46</span><span class="spur-dauer">66 Min</span></p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>In Malaysia bleibt Bargeld trotzdem Pflicht — aber für andere Dinge.</strong>
 Behördengebühren und kleine Stände nehmen es nicht anders. Fest eingeplant für Tioman:
 RM105 Marine-Park-Gebühr am Fährschalter in Mersing (Erwachsene RM30, Kinder 6–12 RM15,
@@ -397,15 +481,15 @@ Touren in Sabah geht.</p></div>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>An einem Montagvormittag waren wir gegen 12:00 Ortszeit auf malaysischer Seite durch
 (17.08.).</strong> Losgefahren sind wir in Little India. Wie lange die Kontrolle selbst gedauert
 hat, ist nicht mitgeschrieben — die Erfahrung anderer ist, dass die Zeit fast vollständig
-für das Anstehen draufgeht und nicht für die Strecke; der Causeway ist gut einen Kilometer lang.</p></div>
+für das Anstehen draufgeht und nicht für die Strecke; der Causeway ist gut einen Kilometer lang.</p><p class="spur"><span class="spur-von">Telegram 17.08. 04:01</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 05:46</span><span class="spur-dauer">106 Min</span></p></div>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>In der Grenzhalle hängt die Wegweisung schon.</strong> Nach der Kontrolle steht man vor
 Schildern <code>↑ JB Sentral</code>. JB Sentral ist der Bahnhof direkt neben dem Grenzgebäude und der
-Ort, von dem aus es weitergeht — Bus, Taxi, Zug, alles dort. Man muss niemanden fragen.</p></div>
+Ort, von dem aus es weitergeht — Bus, Taxi, Zug, alles dort. Man muss niemanden fragen.</p><p class="spur"><span class="spur-von">Telegram 17.08. 04:04</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 05:46</span><span class="spur-dauer">103 Min</span></p></div>
 <div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg (17.08.).</strong>
 Larkin Sentral ist der Fernbusbahnhof, von dem es weiter ins Land geht — vom Grenzgebäude
 sind es rund 5 Kilometer. Der Bus ab JB Sentral nimmt kontaktlos Karte und Google Pay, siehe
 oben. Empfohlen wird einem meist ein Grab für etwa RM20; der Bus tut dasselbe für einen
-Bruchteil.</p></div>
+Bruchteil.</p><p class="spur"><span class="spur-von">Telegram 17.08. 04:47</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 05:46</span><span class="spur-dauer">60 Min</span></p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Ein Grab lässt sich am Grenzgebäude selbst nicht bestellen.</strong> Der Abholpunkt wäre das
 Erdgeschoss von JB Sentral nebenan. Wer in der Halle die App aufmacht, findet keinen Wagen.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Zu Fuß über den Causeway ist auf malaysischer Seite verboten</strong> (RM300–2000, Schilder
@@ -461,7 +545,7 @@ an den Gates eingebaut</strong>, USB direkt am Platz — dafür braucht es keine
 eingelassen in die Seitenverkleidung unter der Armlehne, also unterhalb der Sitzfläche und
 nicht auf Augenhöhe — man findet sie nur, wenn man danach sucht. Ein eigenes Kabel gehört
 deshalb ins Handgepäck und nicht in den Koffer im Laderaum. Gemeldet wurde die Buchse mit
-Foto aus einem Bus ab Larkin Sentral; welche Linie es genau war, steht nicht fest.</p></div>
+Foto aus einem Bus ab Larkin Sentral; welche Linie es genau war, steht nicht fest.</p><p class="spur"><span class="spur-von">Telegram 17.08. 06:21</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 06:38</span><span class="spur-dauer">17 Min</span></p></div>
 <div class="entry entry--gescheitert"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">hat nicht funktioniert</span><p><strong>CelcomDigi ließ sich online nicht kaufen.</strong> Der Bestellvorgang brach reproduzierbar bei
 der Adresseingabe ab. Am Schalter mit Pass im Original geht es; Kaufmöglichkeiten in Kuala
 Lumpur (Pavilion, Suria KLCC) und am Flughafen KLIA.</p></div>
@@ -498,6 +582,9 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
   <p class="klein">Private Angaben stehen bewusst nicht auf dieser Seite: keine
      Buchungsnummern, keine Ausweisdaten, keine Adressen unserer Unterkünfte.
      Kartendaten von OpenStreetMap.</p>
+  <p class="klein">Geschrieben unterwegs über Telegram, gepflegt von einem Assistenten
+     auf einem Mini-PC in Deutschland. <a href="https://jenslaufer.com/harry/">Wie das
+     funktioniert</a> · <a href="https://jenslaufer.com/">Jens Laufer</a></p>
 </footer>
 
 </body>

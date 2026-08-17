@@ -12,6 +12,7 @@ Zwei Sorten Test, und die zweite ist die wichtigere:
 Lauf: python3 tests/test_build.py
 """
 
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -198,6 +199,159 @@ class TestSeite(unittest.TestCase):
 
     def test_stand_datum_steht_drauf(self):
         self.assertIn("Stand", self.seite)
+
+
+class TestWerkstattSpur(unittest.TestCase):
+    """Die Herkunftsspur ist die Verbindung zu /harry/.
+
+    Sie behauptet oeffentlich eine Reaktionszeit. Jede Art, sie zu schoenen oder
+    stillschweigend zu verlieren, gehoert deshalb unter einen roten Test — und
+    die teuerste ist die stille: ein Marker, der nicht gefunden wird, laesst den
+    Eintrag einfach ohne Spur stehen und faellt niemandem auf.
+    """
+
+    MD = (
+        "**✓ Im Fernbus sitzt eine USB-Buchse (17.08.).** Zwei Anschluesse.\n"
+        "<!-- werkstatt: telegram=2026-08-17T06:21 -->"
+    )
+    SPUR = {
+        "**✓ Im Fernbus sitzt eine USB-Buchse (17.08.).** Zwei Anschl": {
+            "telegram": "2026-08-17T06:21:00+00:00",
+            "veroeffentlicht": "2026-08-17T06:38:00+00:00",
+            "minuten": 17,
+        }
+    }
+
+    def setUp(self):
+        self._alt = build.WERKSTATT
+        build.WERKSTATT = dict(self.SPUR)
+
+    def tearDown(self):
+        build.WERKSTATT = self._alt
+
+    def test_spur_wird_unter_den_eintrag_gerendert(self):
+        html = build.render_markdown(self.MD)
+        self.assertIn('class="spur"', html)
+        self.assertIn("17", html)
+
+    def test_marker_erreicht_die_seite_nie_als_text(self):
+        # Ein durchgereichter HTML-Kommentar waere im Quelltext der Seite
+        # sichtbar und die Zeit dort ungerahmt lesbar.
+        html = build.render_markdown(self.MD)
+        self.assertNotIn("werkstatt:", html)
+        self.assertNotIn("<!--", html)
+
+    def test_eintrag_ohne_spur_bekommt_keine_leere_zeile(self):
+        html = build.render_markdown("**✓ Etwas anderes.** Ohne Marker.")
+        self.assertNotIn('class="spur"', html)
+
+    def test_zeichen_und_text_bleiben_trotz_marker_intakt(self):
+        html = build.render_markdown(self.MD)
+        self.assertIn('class="entry entry--erlebt"', html)
+        self.assertIn("Zwei Anschluesse", html)
+        self.assertIn('<span class="mark" aria-hidden="true">✓</span>', html)
+
+    def test_pflegeblock_wird_weiter_entfernt(self):
+        html = build.render_markdown(
+            self.MD + "\n\n<!--\nPFLEGE - interner Block.\n-->\n"
+        )
+        self.assertNotIn("PFLEGE", html)
+
+    def test_ungemessener_eintrag_zeigt_keine_zahl(self):
+        # Fehlt die Veroeffentlichung, waere "0 Minuten" die schnellste Zahl der
+        # Seite und hiesse in Wahrheit "nicht gemessen".
+        build.WERKSTATT = {
+            k: {**v, "veroeffentlicht": None, "minuten": None}
+            for k, v in self.SPUR.items()
+        }
+        html = build.render_markdown(self.MD)
+        self.assertNotIn('class="spur"', html)
+
+
+class TestWerkstattBand(unittest.TestCase):
+    """Das Band erklaert dem Leser, wie die Seite entsteht, und verlinkt /harry/."""
+
+    def test_band_nennt_zahlen_aus_der_messung(self):
+        html = build._werkstatt_band(
+            {"gemessen": 5, "median_minuten": 66, "juengste_minuten": 17}
+        )
+        self.assertIn("5", html)
+        self.assertIn("66", html)
+        self.assertIn("17", html)
+
+    def test_band_verlinkt_die_harness_seite(self):
+        html = build._werkstatt_band(
+            {"gemessen": 5, "median_minuten": 66, "juengste_minuten": 17}
+        )
+        self.assertIn("/harry/", html)
+
+    def test_ohne_messung_kein_band_statt_band_mit_nullen(self):
+        # Lieber gar keine Aussage als "Median 0 Minuten".
+        self.assertEqual(
+            build._werkstatt_band({"gemessen": 0, "median_minuten": None,
+                                   "juengste_minuten": None}),
+            "",
+        )
+
+    def test_band_steht_auf_der_gebauten_seite(self):
+        seite = build.baue_seite(
+            "# Titel\n\nVorspann.\n\n## Erstes\n\n"
+            "**✓ Etwas hat geklappt (17.08.).** Dazu ein Satz.\n"
+            "<!-- werkstatt: telegram=2026-08-17T06:21 -->\n"
+        )
+        self.assertIn("/harry/", seite)
+
+
+class TestEchteUmlaute(unittest.TestCase):
+    """Auf der Seite stehen echte Umlaute, nie die ASCII-Umschrift.
+
+    Der Fehler ist ein Werkzeug-Reflex aus dem Python-Quelltext und faellt beim
+    Lesen kaum auf — "prueft" liest sich fast wie "prueft". Auf einer deutschen
+    Seite, die als Arbeitsprobe dient, ist es der erste sichtbare Schnitzer.
+    Gefunden am 17.08. im Werkstatt-Band, nachdem die Seite gerendert wurde.
+    """
+
+    UMSCHRIFT = [
+        "prueft", "traegt", "laeuft", "veroeffentlich", "geschaetzt",
+        "waehrend", "fuer ", "ueber ", "koennen", "muessen", "naechste",
+        "gepruef", "haelt", "faehrt", "gehoert",
+    ]
+
+    @staticmethod
+    def sichtbar(seite: str) -> str:
+        """Nur was der Leser sieht. CSS- und JS-Kommentare zaehlen nicht.
+
+        Der erste Entwurf dieses Tests pruefte das ganze Dokument und schlug an
+        einem Kommentar im Stylesheet an — also an Text, den niemand liest. Ein
+        Test, der am falschen Ort misst, wird abgeschaltet statt befolgt.
+        """
+        ohne = re.sub(r"<(style|script)\b.*?</\1>", " ", seite, flags=re.S | re.I)
+        ohne = re.sub(r"<!--.*?-->", " ", ohne, flags=re.S)
+        return re.sub(r"<[^>]+>", " ", ohne).lower()
+
+    def test_gebaute_seite_hat_keine_ascii_umschrift(self):
+        seite = build.baue_seite(
+            "# Titel\n\nVorspann.\n\n## Erstes\n\n"
+            "**✓ Etwas hat geklappt (17.08.).** Dazu ein Satz.\n"
+            "<!-- werkstatt: telegram=2026-08-17T06:21 -->\n"
+        )
+        klein = self.sichtbar(seite)
+        for wort in self.UMSCHRIFT:
+            self.assertNotIn(wort, klein, f"ASCII-Umschrift auf der Seite: {wort!r}")
+
+    def test_echtes_dokument_hat_keine_ascii_umschrift(self):
+        """Positivkontrolle am wirklich ausgelieferten Text, nicht am Beispiel."""
+        klein = self.sichtbar(build.ZIEL.read_text(encoding="utf-8"))
+        for wort in self.UMSCHRIFT:
+            self.assertNotIn(wort, klein, f"ASCII-Umschrift auf der Seite: {wort!r}")
+
+    def test_band_hat_keine_ascii_umschrift(self):
+        klein = build._werkstatt_band(
+            {"gemessen": 5, "median_minuten": 66, "juengste_minuten": 17}
+        ).lower()
+        for wort in self.UMSCHRIFT:
+            self.assertNotIn(wort, klein, f"ASCII-Umschrift im Band: {wort!r}")
+
 
 
 if __name__ == "__main__":
