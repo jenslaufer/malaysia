@@ -705,6 +705,38 @@ class TestFotos(unittest.TestCase):
         html = build.render_markdown("Preis 3 * 4 Ringgit.")
         self.assertNotIn("<em>", html)
 
+    def test_kursiv_innerhalb_von_fett(self):
+        """Gefunden am 17.08. im gerenderten Bild, nicht im Test: der
+        Eintragstitel `**✓ *Garden Rhapsody* im Supertree Grove.**` stand mit
+        zwei sichtbaren Sternchen auf der Seite. Ursache: das Fett-Muster
+        verbot Sternchen im Inneren, also fand es sein Paar nie — und ein
+        Muster, das nur Gueltiges trifft, macht aus einem Fehler eine
+        Abwesenheit. Genau die Bauform, mit der ein Werktitel geschrieben
+        wird, war damit die eine, die nicht ging."""
+        html = build.render_markdown("**✓ *Garden Rhapsody* im Supertree Grove (16.08.).** Frei.")
+        self.assertIn("<strong>", html)
+        self.assertIn("<em>Garden Rhapsody</em>", html)
+        self.assertNotIn("*", html)
+
+    def test_fett_ueber_zwei_zeilen(self):
+        """Der Eintragstitel laeuft im Quelltext fast immer ueber den
+        Zeilenumbruch — die Quelle ist auf 95 Zeichen umbrochen. Das alte
+        Muster `[^*]+` traf den Umbruch mit, ein naives `.+?` nicht: die
+        Reparatur des kursiv-in-fett-Falls hat diesen Fall zuerst zerbrochen,
+        und wieder hat es nur das gerenderte Bild gezeigt."""
+        html = build.render_markdown("**✓ Ein Titel, der ueber die Zeile\nlaeuft (17.08.).** Text.")
+        self.assertIn("<strong>", html)
+        self.assertNotIn("*", html)
+
+    def test_zwei_fette_stellen_bleiben_getrennt(self):
+        """Die Reparatur darf nicht ins andere Extrem kippen: ein gieriges
+        Fett-Muster wuerde von der ersten bis zur LETZTEN Sternchenfolge
+        greifen und den Text dazwischen mitschlucken."""
+        html = build.render_markdown("**eins** dazwischen **zwei**")
+        self.assertIn("<strong>eins</strong>", html)
+        self.assertIn("<strong>zwei</strong>", html)
+        self.assertEqual(html.count("<strong>"), 2)
+
     def test_unterschrift_wird_escaped(self):
         self._jpeg("escape.jpg")
         html = build.render_markdown('![Ein <script>-Test & mehr.](foto:escape.jpg)')

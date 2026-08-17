@@ -229,11 +229,24 @@ train goes **towards Bukit Panjang**, which looks like north. On the platform, l
 station numbers, not at the compass. From Bayfront: exit B, underpass, then Dragonfly Bridge
 or Meadow Bridge.
 
-**○ Two light shows, both free, both without a ticket, 800 metres apart.**
-*Spectra* (water, light, lasers) at 20:00 and 21:00 on the Event Plaza at Marina Bay Sands,
-right at the station exit. *Garden Rhapsody* (Supertrees) at 19:45 and 20:45 in the Supertree
-Grove. Fifteen minutes each. You can do both in one evening: 20:00 Spectra, ten minutes' walk,
-20:45 Garden Rhapsody.
+**✓ *Garden Rhapsody* in the Supertree Grove — free, no ticket, and you simply stand
+underneath it (16 Aug).** No barriers, no rows, no admission: the audience spreads across the
+plaza between the trees and a lot of people lie flat on their backs, because the show plays
+upwards. You need no particular spot for a photograph — you need distance, because up close a
+single Supertree fills the entire frame. In the wide shot below a good number of umbrellas are
+up in the crowd, so the show carries on in the rain. (That is read off the picture, not
+something we reported.)
+<!-- werkstatt: telegram=2026-08-17T09:39 -->
+
+![Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them.](foto:2026-08-17_093911.jpg)
+![A single Supertree from below, its canopy lit green from the inside.](foto:2026-08-17_093914.jpg)
+![Three Supertrees in green light above the crowd in the Supertree Grove.](foto:2026-08-17_093916.jpg)
+
+**○ The second light show is called *Spectra* and sits 800 metres away.**
+Water, light and lasers, at 20:00 and 21:00 on the Event Plaza at Marina Bay Sands, right at
+the station exit; *Garden Rhapsody* runs at 19:45 and 20:45. Fifteen minutes each. You can do
+both in one evening: 20:00 Spectra, ten minutes' walk, 20:45 Garden Rhapsody. We only went to
+*Garden Rhapsody* — what stands here about Spectra has stayed research.
 
 **○ From the airport into town, the luggage decides, not the price.** MRT S$2.20 per person
 (45–50 min, two changes), taxi S$25–45 including the S$6 airport surcharge, a six-seater from
@@ -261,6 +274,16 @@ only find them if you go looking. Which means your own cable belongs in your han
 not in the suitcase in the hold. The socket was reported with a photo from a bus leaving
 Larkin Sentral; exactly which line it was is not established.
 <!-- werkstatt: telegram=2026-08-17T06:21 -->
+
+**✓ There are CCTV cameras in the coach, and the complaints number is stuck to the
+windscreen (17 Aug).** Two dome cameras in the ceiling above the aisle, plus a sticker from
+the Malaysian transport ministry reading "Talian Aduan MOT" with a freephone number and a QR
+code. If you are wondering how regulated Malaysian long-distance coach travel is: regulated
+enough that the supervising authority puts its complaints desk in every passenger's line of
+sight. For a traveller that reads as reassuring rather than bureaucratic.
+<!-- werkstatt: telegram=2026-08-17T09:37 -->
+
+![The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen.](foto:2026-08-17_093758.jpg)
 
 **✗ CelcomDigi could not be bought online.** The order process broke reproducibly at the
 address entry. It works at a counter with the original passport; places to buy in Kuala

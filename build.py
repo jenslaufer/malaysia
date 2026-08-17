@@ -251,10 +251,23 @@ def inline(text: str) -> str:
     faengt mit einem an. Kursiv verlangt darum ein Zeichen, das kein Sternchen
     und kein Leerraum ist, direkt hinter dem oeffnenden Stern; sonst wird aus
     "3 * 4 Ringgit" eine Auszeichnung.
+
+    Fett darf Kursives ENTHALTEN. Das Muster verbot vorher jedes Sternchen im
+    Inneren und fand sein Paar deshalb nie, wenn ein Werktitel darin stand:
+    `**✓ *Garden Rhapsody* im Supertree Grove.**` stand am 17.08. mit zwei
+    sichtbaren Sternchen auf der Seite — kein Fehler, keine leere Zeile, nur
+    die Auszeichnung weg. Gefunden im gerenderten Bild, nicht im Test.
+    Nicht-gierig (`.+?`) ist dabei die tragende Stelle: gierig wuerde
+    "**eins** dazwischen **zwei**" zu einem einzigen fetten Block. Und
+    `re.S` ist die zweite: die Quelle ist auf 95 Zeichen umbrochen, fast
+    jeder Eintragstitel laeuft also ueber den Zeilenumbruch. Das alte
+    `[^*]+` traf ihn beilaeufig mit — eine negierte Klasse schliesst den
+    Umbruch ein, ein blankes `.` nicht. Die erste Fassung der Reparatur hat
+    genau daran den haeufigsten Fall zerbrochen, um den seltenen zu heilen.
     """
     t = html.escape(text, quote=False)
     t = re.sub(r"`([^`]+)`", r"<code>\1</code>", t)
-    t = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", t)
+    t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t, flags=re.S)
     t = re.sub(r"\*([^\s*][^*]*?)\*", r"<em>\1</em>", t)
     return t
 

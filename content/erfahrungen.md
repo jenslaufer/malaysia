@@ -232,11 +232,24 @@ der richtige Zug fährt aber **Richtung Bukit Panjang**, also scheinbar nach Nor
 Bahnsteig gehört der Blick auf die Stationsnummern, nicht auf die Himmelsrichtung. Ab
 Bayfront: Ausgang B, Unterführung, dann Dragonfly Bridge oder Meadow Bridge.
 
-**○ Zwei Lichtshows, beide gratis, beide ohne Ticket, 800 Meter auseinander.**
-*Spectra* (Wasser, Licht, Laser) 20:00 und 21:00 an der Event Plaza am Marina Bay Sands,
-direkt am Stationsausgang. *Garden Rhapsody* (Supertrees) 19:45 und 20:45 im Supertree
-Grove. Je 15 Minuten. An einem Abend gehen beide: 20:00 Spectra, zehn Minuten Fußweg,
-20:45 Garden Rhapsody.
+**✓ *Garden Rhapsody* im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach
+darunter (16.08.).** Keine Absperrung, keine Reihen, kein Einlass: die Zuschauer verteilen
+sich auf dem Platz zwischen den Bäumen, viele legen sich flach hin, weil die Show nach oben
+spielt. Wer ein Foto will, braucht keinen bestimmten Platz — aber Abstand, denn ein
+Supertree füllt aus der Nähe das ganze Bild. Auf dem Weitwinkelfoto unten stehen etliche
+aufgespannte Schirme in der Menge; die Show läuft also auch bei Regen weiter. (Das ist vom
+Bild abgelesen, nicht von uns berichtet.)
+<!-- werkstatt: telegram=2026-08-17T09:39 -->
+
+![Zwei Supertrees in grünem Licht, dahinter das Marina Bay Sands und der beleuchtete Skyway.](foto:2026-08-17_093911.jpg)
+![Ein einzelner Supertree von unten, die Krone von innen grün ausgeleuchtet.](foto:2026-08-17_093914.jpg)
+![Drei Supertrees in grünem Licht über der Zuschauermenge im Supertree Grove.](foto:2026-08-17_093916.jpg)
+
+**○ Die zweite Lichtshow heißt *Spectra* und liegt 800 Meter entfernt.**
+Wasser, Licht und Laser, 20:00 und 21:00 an der Event Plaza am Marina Bay Sands, direkt am
+Stationsausgang; *Garden Rhapsody* läuft 19:45 und 20:45. Je 15 Minuten. An einem Abend
+gehen beide: 20:00 Spectra, zehn Minuten Fußweg, 20:45 Garden Rhapsody. Wir waren nur bei
+*Garden Rhapsody* — was hier zu Spectra steht, ist Recherche geblieben.
 
 **○ Vom Flughafen in die Stadt entscheidet das Gepäck, nicht der Preis.** MRT S$2,20 pro
 Person (45–50 min, zwei Umstiege), Taxi S$25–45 inklusive S$6 Flughafenzuschlag, am
@@ -265,6 +278,16 @@ nicht auf Augenhöhe — man findet sie nur, wenn man danach sucht. Ein eigenes 
 deshalb ins Handgepäck und nicht in den Koffer im Laderaum. Gemeldet wurde die Buchse mit
 Foto aus einem Bus ab Larkin Sentral; welche Linie es genau war, steht nicht fest.
 <!-- werkstatt: telegram=2026-08-17T06:21 -->
+
+**✓ Im Fernbus hängen Überwachungskameras, und die Beschwerdenummer klebt an der
+Frontscheibe (17.08.).** Zwei Kuppelkameras in der Decke über dem Mittelgang, dazu ein
+Aufkleber des malaysischen Verkehrsministeriums mit „Talian Aduan MOT", einer kostenlosen
+Nummer und einem QR-Code. Wer sich fragt, wie reguliert der malaysische Fernbusverkehr ist:
+so weit, dass die Aufsichtsbehörde ihre Beschwerdestelle im Blickfeld jedes Fahrgastes
+anbringen lässt. Für Reisende ist das eher beruhigend als bürokratisch.
+<!-- werkstatt: telegram=2026-08-17T09:37 -->
+
+![Blick nach vorn aus dem Fernbus auf eine malaysische Landstraße, an der Frontscheibe der Aufkleber der Beschwerdestelle.](foto:2026-08-17_093758.jpg)
 
 **✗ CelcomDigi ließ sich online nicht kaufen.** Der Bestellvorgang brach reproduzierbar bei
 der Adresseingabe ab. Am Schalter mit Pass im Original geht es; Kaufmöglichkeiten in Kuala
