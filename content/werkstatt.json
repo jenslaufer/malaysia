@@ -122,9 +122,9 @@
     },
     {
       "anker": "**✓ In den Nadelbäumen am Ufer von Tekek hängen Flughunde, u",
-      "minuten": null,
+      "minuten": 8,
       "telegram": "2026-08-18T10:30:00+00:00",
-      "veroeffentlicht": null
+      "veroeffentlicht": "2026-08-18T10:37:34+00:00"
     },
     {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
@@ -157,10 +157,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 25,
-  "juengste_minuten": 6,
+  "gemessen": 26,
+  "juengste_minuten": 8,
   "markiert": 26,
-  "median_minuten": 17,
+  "median_minuten": 15,
   "schnellste_minuten": 4,
   "stand": "2026-08-18"
 }
