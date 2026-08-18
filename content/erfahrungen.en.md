@@ -290,6 +290,33 @@ because nobody is at the counter before that.
 boat calls at several villages — Genting, Paya, Tekek, ABC, Salang. If you cannot name your
 village on the spot, you will be looking for your bags in the wrong bay.
 
+**✓ The waiting hall is an open pavilion, not a building (18.08.).** A tiled roof on posts,
+open at the sides, ceiling fans overhead, fixed rows of seats, two screens with the
+departures. There is no air conditioning here and there cannot be — anyone counting on a
+cooled hall is dressed wrong for the midday wait. The shade is the whole offer, and it is
+enough.
+<!-- werkstatt: telegram=2026-08-18T03:32 -->
+
+![The open waiting hall of the Mersing ferry terminal: tiled roof on posts, ceiling fans, rows of blue seats, waiting passengers.](foto:2026-08-18_033236.jpg)
+
+**✓ You board from the pontoon, right alongside the hull (18.08.).** The queue stands under a
+canopy, everyone still carrying their own luggage. The boat is a catamaran and the operator
+is **Cataferry** — the name is painted in large letters on the side, so you can tell from the
+pontoon whether you are standing at the right boat.
+<!-- werkstatt: telegram=2026-08-18T03:32 -->
+
+![The boarding queue on the pontoon in Mersing, with the Cataferry catamaran alongside.](foto:2026-08-18_033254.jpg)
+
+**✓ You travel in an enclosed cabin, not on deck (18.08.).** Airline-style seating, screens on
+the bulkhead, a board on the wall listing the forbidden items. A safety video about the life
+jackets runs before departure. Whatever you need during the crossing therefore belongs in the
+bag at your seat, not in the luggage you hand over as you board. **At 11:32 local time we were
+in our seats**, with departure scheduled for 11:30 — the timings in the table below held all
+the way to the seat.
+<!-- werkstatt: telegram=2026-08-18T03:32 -->
+
+![View forward inside the ferry cabin: airline-style rows of seats, a screen showing the safety video, next to it a sign listing forbidden items.](foto:2026-08-18_033252.jpg)
+
 **○ The order we are going to work through tomorrow — ferry at 11:30.**
 
 | Time | What |

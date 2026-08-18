@@ -295,6 +295,33 @@ nichts, weil vorher niemand am Schalter sitzt.
 Boot hält auf Tioman an mehreren Dörfern — Genting, Paya, Tekek, ABC, Salang. Wer den Namen
 seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falschen Bucht.
 
+**✓ Die Wartehalle ist ein offener Pavillon, kein Gebäude (18.08.).** Ein Ziegeldach auf
+Stützen, an den Seiten offen, Deckenventilatoren unter dem Dach, feste Stuhlreihen, zwei
+Bildschirme mit den Abfahrten. Klimaanlage gibt es hier nicht und kann es nicht geben — wer
+sich auf eine gekühlte Halle einstellt, wartet in der Mittagshitze falsch angezogen. Der
+Schatten ist das ganze Angebot, und er reicht.
+<!-- werkstatt: telegram=2026-08-18T03:32 -->
+
+![Die offene Wartehalle des Fährterminals in Mersing: Ziegeldach auf Stützen, Deckenventilatoren, blaue Stuhlreihen, wartende Reisende.](foto:2026-08-18_033236.jpg)
+
+**✓ Eingestiegen wird vom Steg aus, direkt neben dem Rumpf (18.08.).** Die Schlange steht
+unter einem Vordach, jeder mit seinem Gepäck am Körper. Das Boot ist ein Katamaran, der
+Betreiber heißt **Cataferry** — der Name steht in großen Buchstaben an der Bordwand, und
+damit weiß man am Steg, ob man vor dem richtigen Boot steht.
+<!-- werkstatt: telegram=2026-08-18T03:32 -->
+
+![Die Warteschlange auf dem Steg in Mersing, davor der Katamaran mit dem Schriftzug Cataferry.](foto:2026-08-18_033254.jpg)
+
+**✓ Gefahren wird in einer geschlossenen Kabine, nicht an Deck (18.08.).** Bestuhlung wie im
+Flugzeug, Bildschirme an der Trennwand, an der Wand eine Tafel mit den verbotenen
+Gegenständen. Vor dem Ablegen läuft ein Sicherheitsvideo mit den Schwimmwesten. Was man
+unterwegs braucht, gehört deshalb in die Tasche am Sitz und nicht in das Gepäck, das beim
+Einsteigen abgegeben wird. **Um 11:32 Ortszeit saßen wir an Bord**, geplant war die Abfahrt
+um 11:30 — die Zeiten aus der Tabelle unten haben bis zum Sitzplatz getragen.
+<!-- werkstatt: telegram=2026-08-18T03:32 -->
+
+![Blick nach vorn in der Kabine der Fähre: Sitzreihen wie im Flugzeug, ein Bildschirm mit dem Sicherheitsvideo, daneben ein Schild mit verbotenen Gegenständen.](foto:2026-08-18_033252.jpg)
+
 **○ Die Reihenfolge, die wir morgen früh gehen — Fähre 11:30.**
 
 | Zeit | Was |
