@@ -239,5 +239,33 @@
   "2026-08-18_033252.jpg": {
     "name": "cataferry-kabine-sicherheitsvideo",
     "_blur": "keine Kaesten: nur Hinterkoepfe, kein Gesicht im Bild"
+  },
+  "2026-08-18_065629.jpg": {
+    "name": "tioman-bucht-strand",
+    "_blur": "keine Kaesten: keine Person im Bild, der Steg liegt am anderen Ende der Bucht"
+  },
+  "2026-08-18_065631.jpg": {
+    "name": "tioman-strandchalets",
+    "_blur": "Name der Unterkunft (sie wohnen dort bis 21.08.), dazu zwei erkennbare Personen an den Tischen rechts",
+    "blur": [
+      [
+        0.82,
+        0.15,
+        0.15,
+        0.13
+      ],
+      [
+        0.905,
+        0.425,
+        0.042,
+        0.06
+      ],
+      [
+        0.972,
+        0.452,
+        0.028,
+        0.05
+      ]
+    ]
   }
 }

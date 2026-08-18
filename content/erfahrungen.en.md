@@ -333,8 +333,31 @@ the way to the seat.
 
 ## On Tioman — what we expect to find
 
-Written before we arrived, so all of it is ○. What turns out to be true goes here once we have
-seen it.
+This section was written before we arrived, so almost all of it is still ○. What we have seen
+for ourselves since 18 August stands at the top with ✓; the ○ lines below are still waiting to
+be checked.
+
+**✓ The place we stay sits directly on the sand (18.08.).** Not a hotel building but a row of
+white cabins side by side, each with its own door onto the beach. Between the bottom step and
+the water there are a few paces of sand and no road. Kayaks lie in front of the doors for
+guests, and hand-painted signs on a tree point towards breakfast and showers. Anyone expecting
+a lobby and a reception desk will look in vain: the door of the cabin is the entrance.
+<!-- werkstatt: telegram=2026-08-18T06:56 -->
+
+![A row of white beach cabins under palms and trees, a kayak on the sand in front of them, the shallow turquoise water of the bay on the left.](foto:2026-08-18_065631.jpg)
+
+**✓ The bay is shallow and calm, and the jetty at the far end is in sight (18.08.).** Bright
+water without waves, clear a long way out, forested hills running down to the shore behind it.
+A hammock hangs between two posts at the waterline. Just before 3 pm local time the beach was
+empty. At the far end of the bay stands a long jetty with a few roofs in front of it — from
+here that is all one can make out.
+<!-- werkstatt: telegram=2026-08-18T06:56 -->
+
+![A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay.](foto:2026-08-18_065629.jpg)
+
+**Still open:** what the marine park fee at the ferry counter actually cost, whether the
+receipt was asked for at check-in, and how one gets from the jetty to the cabins — on foot or
+by boat.
 
 **○ Tekek is the village with the infrastructure, and the whole island hangs off it.** There is
 exactly one cash machine on Tioman, a BSN, just around the corner from the airstrip in Tekek.

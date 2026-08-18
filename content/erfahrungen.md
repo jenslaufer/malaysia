@@ -338,8 +338,31 @@ um 11:30 — die Zeiten aus der Tabelle unten haben bis zum Sitzplatz getragen.
 
 ## Auf Tioman — was uns dort erwartet
 
-Geschrieben vor der Ankunft, deshalb durchgehend ○. Was davon stimmt, steht hier, sobald wir
-es gesehen haben.
+Der Abschnitt entstand vor der Ankunft, deshalb steht darin fast überall ○. Was wir seit dem
+18. August selbst gesehen haben, steht oben mit ✓; die ○-Sätze darunter warten weiter auf ihre
+Prüfung.
+
+**✓ Die Unterkunft steht direkt auf dem Sand (18.08.).** Kein Hotelgebäude, sondern eine Reihe
+weißer Häuschen nebeneinander, jedes mit eigener Tür zum Strand. Zwischen der letzten Stufe und
+dem Wasser liegen ein paar Schritte Sand und keine Straße. Vor den Türen liegen Kajaks für die
+Gäste, an einem Baum hängen handgemalte Schilder Richtung Frühstück und Dusche. Wer eine Lobby
+und einen Empfangstresen erwartet, sucht vergeblich: die Tür des Häuschens ist der Eingang.
+<!-- werkstatt: telegram=2026-08-18T06:56 -->
+
+![Eine Reihe weißer Strandhäuschen unter Palmen und Bäumen, davor ein Kajak auf dem Sand, links das flache türkisfarbene Wasser der Bucht.](foto:2026-08-18_065631.jpg)
+
+**✓ Die Bucht ist flach und ruhig, der Steg liegt am anderen Ende in Sichtweite (18.08.).**
+Helles Wasser ohne Wellen, klar bis weit hinaus, dahinter bewaldete Hügel bis ans Ufer. Am
+Wasserrand hängt eine Hängematte zwischen zwei Pfosten. Kurz vor 15 Uhr Ortszeit war der
+Strand leer. Am anderen Ende der Bucht steht ein langer Steg, davor ein paar Dächer — mehr ist
+von hier aus nicht zu erkennen.
+<!-- werkstatt: telegram=2026-08-18T06:56 -->
+
+![Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg.](foto:2026-08-18_065629.jpg)
+
+**Offen, kommt noch:** was die Marine-Park-Gebühr am Fährschalter tatsächlich gekostet hat, ob
+der Beleg beim Einchecken verlangt wurde, und wie man vom Steg zur Unterkunft kommt — zu Fuß
+oder mit dem Boot.
 
 **○ Tekek ist das Dorf mit der Infrastruktur — und die ganze Insel hängt daran.** Es gibt auf
 Tioman genau einen Geldautomaten, eine BSN, gleich um die Ecke vom Flugfeld in Tekek. Dazu
