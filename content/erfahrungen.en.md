@@ -244,14 +244,14 @@ fishing fleet, and the ferries share the water with it.
    passport is scanned and registered; one person cannot do it for the group.
 2. **Marine park counter.** Cash, on presentation of the ferry tickets. Keep the receipt: the
    places to stay on Tioman ask for it at check-in, and it covers the whole stay.
-3. **Johor fee counter.** Its own counter and its own amount — see below.
+3. **Johor fee counter.** Its own counter and its own amount — although on 18 Aug it was not
+   charged at all, see below.
 
 **✓ The fees are not collected in the terminal but in an office near the jetty (18.08.).**
 Jens reported it on the morning of the crossing: the office sits away from the terminal
 building, with a pavilion in front of it — that is how you find it. So the boarding passes come
-from one place and the fees are paid at another. That is an extra walk, and it is not in our
-plan further down. Which of the fees are collected there together, and what it came to in the
-end, goes here as soon as it is reported.
+from one place and the fees are paid at another. That is an extra walk, and it was not in our
+plan further down. Which fee is charged there is two paragraphs on; the amount is still open.
 <!-- werkstatt: telegram=2026-08-18T02:12 -->
 
 **○ The fees, and the one where the sources disagree.** The marine park fee is not in dispute:
@@ -263,6 +263,15 @@ Gemok. For the child rate one source says RM5 and another RM10, so for us it is 
 RM70. And the author of one very thorough guide writes that he never met it in practice. That
 is the reason to carry it in cash anyway: not being charged costs nothing, not having it costs
 you the ferry.
+
+**✓ Only the marine park fee was charged (18 Aug).** That settles the question the sources
+disagree about in the paragraph above: at the office by the jetty the marine park fee was the
+only thing collected — no second amount and no second counter. The author of the guide who
+wrote that he never met the Johor fee in practice turns out to be right. We would still carry
+it in cash: one Tuesday morning in August does not overturn a published schedule of fees, it
+only shows that on that day, at that spot, nobody collected it. What the marine park fee came
+to in the end goes here as soon as it is reported.
+<!-- werkstatt: telegram=2026-08-18T02:19 -->
 
 **○ Both fees cash only — and there is no cash machine in the terminal.** The nearest ones are
 400 to 494 metres away, five to seven minutes on foot (calculated from OpenStreetMap
@@ -288,7 +297,7 @@ village on the spot, you will be looking for your bags in the wrong bay.
 | 09:00 | Draw cash, 85 metres from the door, at the machine that worked yesterday. Ask for small notes |
 | 09:45 | Check out (possible until 12:00, but the rest of the morning should not hang on it) |
 | 10:00 | At the terminal. Passports to hand, collect boarding passes |
-| 10:20 | Marine park fee in cash, receipt filed with the passports. Then the Johor fee, if it is charged |
+| 10:20 | To the office by the jetty, the one with the pavilion in front: marine park fee in cash, receipt filed with the passports. The Johor fee was not asked for |
 | 10:45 | Food and toilets — both at the terminal, neither on the boat |
 | 11:00 | On the pontoon. Hand over luggage, name the village: Tekek |
 | 11:30 | Cast off |

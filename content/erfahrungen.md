@@ -246,14 +246,15 @@ Arbeitshafen mit Fischerei, und der Fährbetrieb teilt sich das Wasser mit ihr.
 2. **Marine-Park-Schalter.** Bar, gegen Vorlage der Fährtickets. Den Beleg aufheben: die
    Unterkünfte auf Tioman fragen beim Einchecken danach, und er gilt für den ganzen
    Aufenthalt.
-3. **Schalter für die Johor-Gebühr.** Eigener Schalter, eigener Betrag, siehe unten.
+3. **Schalter für die Johor-Gebühr.** Eigener Schalter, eigener Betrag — am 18.08. wurde sie
+   allerdings nicht erhoben, siehe unten.
 
 **✓ Kassiert wird nicht im Terminal, sondern in einem Büro in der Nähe der Anlegestelle
 (18.08.).** Jens hat es am Morgen der Überfahrt gemeldet: das Büro liegt abseits des
 Terminalgebäudes, davor steht ein Pavillon — daran ist es zu erkennen. Die Bordkarten gibt es
 also an der einen Stelle, gezahlt wird an der anderen. Das ist ein zusätzlicher Weg, und in
-unserer Planung weiter unten steht er nicht. Welche der Gebühren dort zusammen kassiert werden
-und wie viel es am Ende war, steht hier, sobald es gemeldet ist.
+unserer Planung weiter unten stand er nicht. Welche Gebühr dort verlangt wird, steht zwei
+Absätze weiter; der Betrag steht noch aus.
 <!-- werkstatt: telegram=2026-08-18T02:12 -->
 
 **○ Die Gebühren — und die eine, bei der die Quellen auseinandergehen.** Die
@@ -266,6 +267,15 @@ RM5, eine andere RM10; für uns wären es also RM65 oder RM70. Und der Autor ein
 ausführlichen Führers schreibt, er sei ihr in der Praxis nie begegnet. Das ist der Grund, sie
 trotzdem in bar dabeizuhaben: nicht erhoben zu werden kostet nichts, sie nicht dabeizuhaben
 kostet die Fähre.
+
+**✓ Erhoben wurde nur die Marine-Park-Gebühr (18.08.).** Damit ist die Frage entschieden, bei
+der die Quellen im Absatz darüber auseinandergehen: Im Büro an der Anlegestelle wurde allein
+die Marine-Park-Gebühr kassiert, kein zweiter Betrag und kein zweiter Schalter. Der Autor, der
+schrieb, er sei der Johor-Gebühr in der Praxis nie begegnet, behält also recht. Wir würden sie
+trotzdem weiter in bar dabeihaben — ein Dienstagvormittag im August widerlegt keine
+Gebührenordnung, er zeigt nur, dass an diesem Tag an dieser Stelle nicht kassiert wurde. Was
+die Marine-Park-Gebühr am Ende gekostet hat, steht hier, sobald es gemeldet ist.
+<!-- werkstatt: telegram=2026-08-18T02:19 -->
 
 **○ Beide Gebühren nur bar — und im Terminal steht kein Geldautomat.** Die nächsten
 Bankautomaten sind 400 bis 494 Meter entfernt, also fünf bis sieben Minuten zu Fuß (aus den
@@ -292,7 +302,7 @@ seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falsche
 | 09:00 | Geld holen, 85 Meter vom Haus, an dem Automaten, der gestern funktioniert hat. Kleine Scheine mitnehmen |
 | 09:45 | Auschecken (bis 12:00 möglich, aber der Rest des Vormittags soll nicht daran hängen) |
 | 10:00 | Am Terminal. Pässe griffbereit, Bordkarten holen |
-| 10:20 | Marine-Park-Gebühr bar, Beleg zu den Pässen. Danach die Johor-Gebühr, falls sie erhoben wird |
+| 10:20 | Ins Büro an der Anlegestelle, erkennbar am Pavillon davor: Marine-Park-Gebühr bar, Beleg zu den Pässen. Die Johor-Gebühr wurde nicht verlangt |
 | 10:45 | Essen und Toilette — beides gibt es am Terminal, auf dem Boot nicht |
 | 11:00 | Am Steg. Gepäck abgeben, Dorf nennen: Tekek |
 | 11:30 | Ablegen |
