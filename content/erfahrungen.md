@@ -360,6 +360,30 @@ von hier aus nicht zu erkennen.
 
 ![Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg.](foto:2026-08-18_065629.jpg)
 
+**✓ Der Regenwald steht direkt hinter den Häusern (18.08.).** Hinter der Häuserzeile am
+Dorfrand steigt der Hang sofort an, dicht bewachsen bis zum Grat, und aus dem Blätterdach ragen
+einzelne hohe Bäume heraus. Zwischen dem letzten Dach und dem Wald liegt weder Feld noch Garten.
+Wer auf der Dorfstraße steht, hat auf der einen Seite Wellblechdächer und auf der anderen den
+Wald.
+<!-- werkstatt: telegram=2026-08-18T09:43 -->
+
+![Bewaldeter Hang direkt hinter einer Reihe kleiner Häuser mit Blechdächern, davor Sandfläche, Bänke und Stromleitungen.](foto:2026-08-18_094311.jpg)
+
+**✓ Die Dorfstraße ist ein Betonstreifen, und viel fährt darauf nicht (18.08.).** Eine Fahrspur
+breit, an den Rändern orange-weiße Plastikbaken, dazwischen kleine Läden unter Blechdächern, ein
+blaues Pavillonzelt mit einer Kühltruhe davor und eine Brücke mit weißem Geländer. Unterwegs
+waren ein Roller, eine Ziege quer über die Fahrbahn und ein einzelner Pick-up mit Firmenaufkleber
+an der Tür. An Masten und Zäunen hängen Malaysia-Flaggen.
+<!-- werkstatt: telegram=2026-08-18T09:43 -->
+
+![Dorfstraße aus Beton, ein Roller fährt Richtung Brücke, eine Ziege überquert die Fahrbahn, links Läden unter Blechdächern, dahinter der bewaldete Hang.](foto:2026-08-18_094309.jpg)
+![Blick die Dorfstraße hinunter zur Brücke mit weißem Geländer, rechts ein blaues Pavillonzelt mit Malaysia-Flagge, links Läden und Bananenstauden.](foto:2026-08-18_094304.jpg)
+![Derselbe Blick, im Vordergrund rechts ein schwarzer Pick-up mit Firmenaufkleber an der Tür.](foto:2026-08-18_094307.jpg)
+
+**○ Die Flaggen hängen wegen des Monats.** Malaysia feiert am 31. August den Unabhängigkeitstag,
+Hari Merdeka; im ganzen August hängen Landes- und Bundesstaatsflaggen an Häusern, Zäunen und
+Straßenmasten. An diesem Tag sind wir in Kota Kinabalu.
+
 **Offen, kommt noch:** was die Marine-Park-Gebühr am Fährschalter tatsächlich gekostet hat, ob
 der Beleg beim Einchecken verlangt wurde, und wie man vom Steg zur Unterkunft kommt — zu Fuß
 oder mit dem Boot.

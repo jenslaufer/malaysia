@@ -355,6 +355,30 @@ here that is all one can make out.
 
 ![A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay.](foto:2026-08-18_065629.jpg)
 
+**✓ The rainforest starts right behind the houses (18.08.).** Behind the row of houses at the
+edge of the village the slope rises straight away, densely overgrown up to the ridge, with single
+tall trees standing out above the canopy. Between the last roof and the forest there is neither a
+field nor a garden. Stand on the village road and you have corrugated iron roofs on one side and
+the forest on the other.
+<!-- werkstatt: telegram=2026-08-18T09:43 -->
+
+![A forested slope directly behind a row of small houses with metal roofs, with sand, benches and power lines in front of them.](foto:2026-08-18_094311.jpg)
+
+**✓ The village road is a concrete strip, and not much drives along it (18.08.).** One lane wide,
+orange and white plastic barriers along the edges, small shops under metal roofs between them, a
+blue gazebo with a chest freezer in front of it and a bridge with a white railing. On the road:
+one scooter, a goat crossing it, and a single pickup with a company decal on the door. Malaysian
+flags hang from poles and fences.
+<!-- werkstatt: telegram=2026-08-18T09:43 -->
+
+![A concrete village road, a scooter riding towards the bridge, a goat crossing, shops under metal roofs on the left and the forested slope behind.](foto:2026-08-18_094309.jpg)
+![Looking down the village road towards the bridge with its white railing, a blue gazebo with a Malaysian flag on the right, shops and banana plants on the left.](foto:2026-08-18_094304.jpg)
+![The same view, with a black pickup carrying a company decal on its door in the right foreground.](foto:2026-08-18_094307.jpg)
+
+**○ The flags are up because of the month.** Malaysia celebrates its independence day, Hari
+Merdeka, on 31 August; throughout August national and state flags hang from houses, fences and
+street poles. On that day we will be in Kota Kinabalu.
+
 **Still open:** what the marine park fee at the ferry counter actually cost, whether the
 receipt was asked for at check-in, and how one gets from the jetty to the cabins — on foot or
 by boat.
