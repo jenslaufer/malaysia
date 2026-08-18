@@ -73,6 +73,24 @@
       "veroeffentlicht": "2026-08-18T02:39:10+00:00"
     },
     {
+      "anker": "**✓ Die Wartehalle ist ein offener Pavillon, kein Gebäude (1",
+      "minuten": 9,
+      "telegram": "2026-08-18T03:32:00+00:00",
+      "veroeffentlicht": "2026-08-18T03:41:11+00:00"
+    },
+    {
+      "anker": "**✓ Eingestiegen wird vom Steg aus, direkt neben dem Rumpf (",
+      "minuten": 9,
+      "telegram": "2026-08-18T03:32:00+00:00",
+      "veroeffentlicht": "2026-08-18T03:41:11+00:00"
+    },
+    {
+      "anker": "**✓ Gefahren wird in einer geschlossenen Kabine, nicht an De",
+      "minuten": 9,
+      "telegram": "2026-08-18T03:32:00+00:00",
+      "veroeffentlicht": "2026-08-18T03:41:11+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -103,10 +121,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 17,
-  "juengste_minuten": 20,
-  "markiert": 17,
-  "median_minuten": 20,
+  "gemessen": 20,
+  "juengste_minuten": 9,
+  "markiert": 20,
+  "median_minuten": 17,
   "schnellste_minuten": 4,
   "stand": "2026-08-18"
 }
