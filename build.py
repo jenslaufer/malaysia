@@ -429,8 +429,19 @@ def _eintrag(block: str, telegram: str = None) -> str | None:
         rest, glyph = block, "…"
     else:
         return None
+    # Die Marke haengt am Zeitstempel der Nachricht, nie am Text: ein Schluessel
+    # aus dem Inhalt bricht, sobald ein Tippfehler behoben wird, und dann zeigt
+    # der Block "Zuletzt" ins Leere. Eine Nachricht kann mehrere Eintraege
+    # ausloesen (17.08., drei Fotos), deshalb der Zaehler.
+    daten = _messung(block, telegram)
+    marke = ""
+    if daten:
+        schluessel = slug(daten["telegram"][:16])
+        MARKEN[schluessel] = MARKEN.get(schluessel, 0) + 1
+        marke = (f' id="eintrag-{schluessel}-{MARKEN[schluessel]}"'
+                 f' data-telegram="{html.escape(daten["telegram"], quote=True)}"')
     return (
-        f'<div class="entry entry--{klasse}">'
+        f'<div class="entry entry--{klasse}"{marke}>'
         f'<span class="mark" aria-hidden="true">{glyph}</span>'
         f'<span class="mark-label">{label}</span>'
         f"<p>{inline(rest)}</p>"
@@ -444,6 +455,25 @@ def _uhr(iso: str) -> str:
     return z.strftime("%d %b, %H:%M") if SPRACHE == "en" else z.strftime("%d.%m. %H:%M")
 
 
+MARKEN: dict[str, int] = {}
+
+
+def _messung(block: str, telegram: str = None) -> dict | None:
+    """Die Messung zu einem Block — ueber den Textanker, sonst ueber die Uhrzeit.
+
+    Eine Stelle, weil zwei Leser: die Herkunftszeile unter dem Eintrag und die
+    Sprungmarke, an der der Block "Zuletzt" ihn wiederfindet. Getrennt aufgeloest
+    bekaeme ein Eintrag eine Marke ohne Herkunft oder umgekehrt — und zwar still.
+    """
+    anker = block.splitlines()[0].strip()[:ANKER_LAENGE]
+    daten = WERKSTATT.get(anker)
+    if daten is None and telegram:
+        daten = WERKSTATT.get(_tg_schluessel(telegram))
+    if not daten or daten.get("minuten") is None:
+        return None
+    return daten
+
+
 def _spur(block: str, telegram: str = None) -> str:
     """Herkunftszeile unter einem Eintrag: Nachricht → veroeffentlicht → Dauer.
 
@@ -454,11 +484,8 @@ def _spur(block: str, telegram: str = None) -> str:
     Ohne Messung wird gar nichts gerendert — eine leere oder auf 0 gesetzte
     Dauer waere die schnellste Zahl der Seite und hiesse "nicht gemessen".
     """
-    anker = block.splitlines()[0].strip()[:ANKER_LAENGE]
-    daten = WERKSTATT.get(anker)
-    if daten is None and telegram:
-        daten = WERKSTATT.get(_tg_schluessel(telegram))
-    if not daten or daten.get("minuten") is None:
+    daten = _messung(block, telegram)
+    if not daten:
         return ""
     return (
         '<p class="spur">'
@@ -611,9 +638,24 @@ def _stempel_schreiben(name: str, stempel: str) -> None:
         json.dumps(alle, indent=1, sort_keys=True), encoding="utf-8")
 
 
+def _fotopfad(datei: str) -> str:
+    """Bildadresse relativ zur Seite, die sie laedt.
+
+    Die Bilder liegen EINMAL unter `/malaysia/fotos/`. Die deutsche Seite liegt
+    daneben, die englische eine Ebene tiefer unter `/malaysia/en/`. Ein
+    relatives `fotos/…` zeigt von dort auf `/malaysia/en/fotos/…` und damit ins
+    Leere — 144 Adressen, jede live ein 404, gefunden erst am 18.08.
+
+    Warum es so lange unsichtbar war: die Tests verglichen erzeugte Zeichenketten
+    miteinander, und eine Zeichenkette kann nicht 404 sein. Geprueft wird deshalb
+    jetzt gegen die Platte (`TestBildpfadeEnglisch`), nicht gegen das Muster.
+    """
+    return ("../" if SPRACHE == "en" else "") + f"fotos/{datei}"
+
+
 def _srcset(name: str, endung: str, basis: int) -> str:
     return ", ".join(
-        f"fotos/{fassungs_pfad(name, b, endung, basis).name} {b}w"
+        f"{_fotopfad(fassungs_pfad(name, b, endung, basis).name)} {b}w"
         for b in foto_breiten(basis))
 
 
@@ -640,7 +682,7 @@ def _figure(text: str, datei: str, gruppe: bool = False) -> str | None:
     return (
         f'<figure class="foto"{stil}>'
         f"<picture>{quellen}"
-        f'<img src="fotos/{html.escape(ziel.name)}" '
+        f'<img src="{html.escape(_fotopfad(ziel.name))}" ' 
         f'srcset="{_srcset(name, "jpg", breite)}" sizes="{sizes}" '
         f'width="{breite}" height="{hoehe}" '
         f'alt="{html.escape(text, quote=True)}" loading="lazy" decoding="async">'
@@ -689,6 +731,7 @@ def render_markdown(md: str) -> str:
     # ihre Messung wiederfindet.
     md = MARKER_ZEIT.sub(r"@@WERKSTATT:\1@@", md)
     md = strip_kommentare(strip_marker(md))
+    MARKEN.clear()  # sonst zaehlt die englische Fassung auf der deutschen weiter
     teile = []
     for block in re.split(r"\n\s*\n", md):
         block = block.strip()
@@ -725,6 +768,139 @@ def render_markdown(md: str) -> str:
         else:
             teile.append(_eintrag(block, telegram) or f"<p>{inline(block)}</p>")
     return "\n".join(teile)
+
+
+# ------------------------------------------------- Zuletzt + Recherche falten
+#
+# Beides geht auf eine Frage von Jens zurueck (18.08. 09:44): "Sollten wir den
+# Reiseblog nicht spannender gestalten?" Die Antwort war keine Design-Frage,
+# sondern eine Sortier-Frage — der Text bleibt in beiden Umbauten unveraendert.
+
+EINTRAG_ZEILE = re.compile(
+    r'^<div class="entry entry--(?P<art>[a-z]+)"'
+    r'(?: id="(?P<id>[^"]+)")?(?: data-telegram="(?P<zeit>[^"]+)")?>'
+)
+
+# Ein Block ist NICHT eine Zeile. Die Absaetze im Quelldokument sind umbrochen,
+# und `inline()` laesst den Umbruch stehen — ein Eintrag ist im Rumpf im Schnitt
+# sechs Zeilen lang. Eine zeilenweise Faltung fand deshalb auf der echten Seite
+# null zusammenhaengende Laeufe, waehrend sie an einzeiligen Testdaten gruen war
+# (18.08., gefunden vom Test gegen die ausgelieferte Datei, nicht vom Renderer).
+#
+# Die Liste ist eine Positivliste und darf es sein: `render_markdown` ist der
+# einzige Erzeuger dieses Rumpfs. Eine Regel "Zeile beginnt mit <" waere falsch —
+# gemessen beginnen Fortsetzungszeilen unter anderem mit <em> und <code>.
+BLOCK_START = re.compile(
+    r'\n(?=<(?:h1>|h2 id=|p>|div class="(?:entry |fotos |table-wrap")'
+    r'|figure class="foto"|ul class="legende"|ol class="schritte"))'
+)
+
+
+def _bloecke(rumpf: str) -> list[str]:
+    """Den gerenderten Rumpf wieder in die Bloecke zerlegen, aus denen er entstand."""
+    return BLOCK_START.split(rumpf)
+STARK = re.compile(r"<strong>(.*?)</strong>", flags=re.S)
+# Im Eintrag gehoert das Datum in den Satz. Im Block "Zuletzt" steht es in
+# einer eigenen Spalte daneben — zweimal dasselbe Datum in einer Zeile liest
+# sich wie ein Fehler.
+TITEL_DATUM = re.compile(r"\s*\((?:\d{1,2}\.\d{1,2}\.|\d{1,2} \w{3})\)\.?\s*$")
+MINIATUR = re.compile(r'fotos/([a-z0-9-]+)-640\.jpg')
+
+
+def _zuletzt(rumpf: str, anzahl: int = 5) -> str:
+    """Die juengsten selbst erlebten Meldungen, ganz oben.
+
+    Der Grund ist gemessen, nicht geraten: die frischen Eintraege liegen in
+    ihren Themenabschnitten (Essen, Bezahlen, Strom), und wer nach zwei Tagen
+    wiederkommt, findet nicht, was neu ist — er muesste die ganze Seite lesen.
+
+    Aufgenommen wird nur, was Jens selbst gemeldet hat (`✓` MIT Messung).
+    Recherche hat kein Datum, an dem sie "neu" waere; ein erfundenes waere
+    schlimmer als ihr Fehlen — dieselbe Regel wie im Feed.
+    """
+    bloecke = _bloecke(rumpf)
+    treffer = []
+    for i, block in enumerate(bloecke):
+        m = EINTRAG_ZEILE.match(block)
+        if not m or m.group("art") != "erlebt" or not m.group("id"):
+            continue
+        titel = STARK.search(block)
+        if not titel:
+            continue
+        # Das Bild zum Eintrag steht im FOLGENDEN Block, nie im Eintrag selbst.
+        naechster = bloecke[i + 1] if i + 1 < len(bloecke) else ""
+        bild = MINIATUR.search(naechster) if naechster.startswith(
+            ('<figure class="foto"', '<div class="fotos ')) else None
+        treffer.append({
+            "id": m.group("id"), "zeit": m.group("zeit"),
+            "titel": TITEL_DATUM.sub("", titel.group(1).strip()).rstrip(" .") + ".",
+            "bild": bild.group(1) if bild else None,
+        })
+    if not treffer:
+        return ""
+    treffer.sort(key=lambda e: e["zeit"], reverse=True)
+
+    posten = []
+    for e in treffer[:anzahl]:
+        datum = _uhr(e["zeit"]).split(",")[0].strip() if SPRACHE == "en" else \
+            _uhr(e["zeit"]).split(" ")[0].strip()
+        vorschau = (
+            f'<img class="zuletzt-bild" src="{_fotopfad(e["bild"] + "-640.jpg")}" alt="" ' 
+            f'loading="lazy" decoding="async" width="640" height="360">'
+            if e["bild"] else ""
+        )
+        posten.append(
+            f'<li class="zuletzt-posten"><a href="#{e["id"]}">{vorschau}'
+            f'<span class="zuletzt-datum">{html.escape(datum)}</span>'
+            f'<span class="zuletzt-titel">{e["titel"]}</span></a></li>'
+        )
+    return (
+        f'<section id="zuletzt" class="zuletzt" aria-label="'
+        f'{_t("Zuletzt erlebt", "Latest from the road")}">'
+        f'<h2 class="zuletzt-kopf">{_t("Zuletzt", "Latest")}</h2>'
+        f'<ol class="zuletzt-liste">{"".join(posten)}</ol></section>'
+    )
+
+
+def falte_recherche(rumpf: str, ab: int = 2) -> str:
+    """Zusammenhaengende `○`-Eintraege in einen aufklappbaren Kasten.
+
+    Die Seite verspricht "was wirklich funktioniert hat" und bestand am
+    18.08. aus 37 nachgeschlagenen gegen 28 erlebten Eintraegen — die
+    Recherche trug die Seite, nicht das Erlebte. Eingeklappt kehrt sich das
+    um, ohne dass ein Satz verschwindet: der Text steht im `<details>` und
+    ist einen Klick entfernt, ohne JavaScript.
+
+    Ein einzelner `○` bekommt KEINEN Kasten (`ab=2`): ein Kasten um einen
+    Eintrag kostet einen Klick und spart keine Zeile.
+    """
+    aus, lauf = [], []
+
+    def schliessen():
+        if not lauf:
+            return
+        if len(lauf) < ab:
+            aus.extend(lauf)
+        else:
+            wort = _t(
+                f"{len(lauf)} nachgeschlagene Notizen — nicht selbst geprüft",
+                f"{len(lauf)} looked-up notes — not checked ourselves",
+            )
+            aus.append(
+                f'<details class="recherche-box"><summary>{html.escape(wort)}'
+                f"</summary>" + "".join(lauf) + "</details>"
+            )
+        lauf.clear()
+
+    for block in _bloecke(rumpf):
+        m = EINTRAG_ZEILE.match(block)
+        if m and m.group("art") == "recherche":
+            lauf.append(block)
+        else:
+            schliessen()
+            aus.append(block)
+    schliessen()
+    return "\n".join(aus)
 
 
 def pruefe_deckung(deutsch: str, englisch: str) -> list[str]:
@@ -1065,7 +1241,8 @@ def baue_seite(md: str) -> str:
     # Kopf ist alles bis zur ersten Ueberschrift zweiter Ordnung.
     schnitt = rumpf.find("<h2")
     kopf, rest = (rumpf[:schnitt], rumpf[schnitt:]) if schnitt > 0 else (rumpf, "")
-    rest = _werkstatt_band(WERKSTATT_SUMME) + _karte() + rest + _autor_block()
+    rest = (_zuletzt(rumpf) + _werkstatt_band(WERKSTATT_SUMME) + _karte()
+            + falte_recherche(rest) + _autor_block())
 
     vorlage = (WURZEL / "template" / _t("page.html", "page.en.html")).read_text(encoding="utf-8")
     css = (WURZEL / "template" / "site.css").read_text(encoding="utf-8")

@@ -433,6 +433,126 @@ tbody tr:hover { background: var(--flaeche); }
 
 a { color: var(--erlebt); }
 
+/* --- Zuletzt: was seit dem letzten Besuch dazugekommen ist ---------------
+
+   Die Seite waechst taeglich, und die frischen Eintraege liegen in ihren
+   Themenabschnitten. Ohne diesen Block muesste ein Wiederkehrer alles lesen,
+   um das Neue zu finden. Bewusst eine Liste und keine Kachelwand: die
+   Randspalte mit dem Zeichen traegt die Seite, hier soll nichts konkurrieren. */
+
+.zuletzt {
+  max-width: var(--satz);
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.zuletzt-kopf {
+  margin: 0 0 .9rem;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--tinte-leise);
+}
+
+.zuletzt-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--linie);
+}
+
+.zuletzt-posten { border-bottom: 1px solid var(--linie); }
+
+.zuletzt-posten a {
+  display: grid;
+  grid-template-columns: 4.5rem 4.2rem 1fr;
+  gap: .9rem;
+  align-items: center;
+  padding: .7rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.zuletzt-bild {
+  width: 4.5rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Ohne Bild bleibt die Spalte leer, damit Datum und Satz auf einer Kante
+   stehen — eine springende Textkante liest sich wie ein Fehler. */
+.zuletzt-posten a:not(:has(.zuletzt-bild)) { grid-template-columns: 4.5rem 4.2rem 1fr; }
+.zuletzt-posten a:not(:has(.zuletzt-bild)) .zuletzt-datum { grid-column: 2; }
+.zuletzt-posten a:not(:has(.zuletzt-bild)) .zuletzt-titel { grid-column: 3; }
+
+.zuletzt-datum {
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--tinte-leise);
+}
+
+.zuletzt-titel {
+  font-size: .95rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.zuletzt-posten a:hover .zuletzt-titel { color: var(--erlebt); }
+
+/* Sprungziel nicht unter den Fensterrand schieben. */
+.entry[id] { scroll-margin-top: 1.5rem; }
+
+/* --- Recherche einklappen ------------------------------------------------
+
+   37 nachgeschlagene gegen 28 erlebte Eintraege: die Seite verspricht "was
+   wirklich funktioniert hat" und bestand mehrheitlich aus Vorher-Gelesenem.
+   Der Text bleibt vollstaendig — er ist einen Klick entfernt, ohne
+   JavaScript, und im ausgedruckten Zustand ohnehin offen. */
+
+.recherche-box {
+  max-width: var(--satz);
+  margin: 1.4rem auto;
+  padding: 0 1.5rem;
+}
+
+.recherche-box > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .5rem .8rem;
+  font-size: .82rem;
+  color: var(--tinte-leise);
+  background: var(--papier-tief);
+  border: 1px solid var(--linie);
+  border-left: 3px solid var(--recherche);
+  border-radius: 2px;
+}
+
+.recherche-box > summary::-webkit-details-marker { display: none; }
+
+.recherche-box > summary::before {
+  content: "▸";
+  color: var(--recherche);
+  font-size: .9em;
+}
+
+.recherche-box[open] > summary::before { content: "▾"; }
+.recherche-box > summary:hover { color: var(--tinte); }
+.recherche-box[open] > summary { margin-bottom: .6rem; }
+
+/* Die Eintraege im Kasten bringen ihre eigene Randspalte mit. */
+.recherche-box .entry { margin-left: 0; margin-right: 0; padding-left: 2.4rem; }
+
+@media print { .recherche-box > summary { display: none; } }
+
 /* --- Schmale Geraete --- */
 
 @media (max-width: 560px) {
@@ -457,6 +577,7 @@ a { color: var(--erlebt); }
   }
   .entry--erlebt strong { color: #7cc39c; }
   .entry--gescheitert strong { color: #dd7a6b; }
+  .zuletzt-bild { filter: brightness(.88); }
 }
 
 /* ------------------------------------------------------------------ Sprache

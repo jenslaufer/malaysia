@@ -1000,17 +1000,30 @@ class TestAusgelieferteFotos(unittest.TestCase):
     def test_jedes_verlinkte_foto_liegt_auch_da(self):
         """`src` UND `srcset`: ein fehlendes srcset-Bild ist der teurere
         Fehler, weil der Browser es dem `src` vorzieht — die Seite zeigt dann
-        ein Loch, obwohl die Rueckfalldatei danebenliegt."""
+        ein Loch, obwohl die Rueckfalldatei danebenliegt.
+
+        **Aufgeloest wird gegen den Ordner der SEITE, nicht gegen die Wurzel**
+        (18.08.). Vorher lief beides gegen `build.WURZEL`: `fotos/x.jpg` aus
+        `en/index.html` fand die Datei im Wurzelordner, waehrend der Browser
+        sie unter `/malaysia/en/fotos/` suchte und 404 bekam. Der Test bewies
+        die Existenz der Datei — nicht, dass der Verweis von dort aus traegt.
+        Ein relativer Pfad hat ohne seinen Ausgangspunkt keine Bedeutung.
+        """
+        gemessen = 0
         for pfad in (build.ZIELE["de"], build.ZIELE["en"]):
             if not pfad.exists():
                 continue
             text = pfad.read_text(encoding="utf-8")
-            verlinkt = set(re.findall(r'src="(fotos/[^"]+)"', text))
+            verlinkt = set(re.findall(r'src="([^"]*fotos/[^"]+)"', text))
             for satz in re.findall(r'srcset="([^"]+)"', text):
-                verlinkt.update(t.strip().split()[0] for t in satz.split(","))
+                verlinkt.update(t.strip().split()[0] for t in satz.split(",")
+                                if "fotos/" in t)
             for treffer in sorted(verlinkt):
-                self.assertTrue((build.WURZEL / treffer).exists(),
-                                f"{treffer} ist verlinkt, liegt aber nicht im Repo")
+                gemessen += 1
+                self.assertTrue((pfad.parent / treffer).resolve().exists(),
+                                f"{treffer} ist aus {pfad.name} verlinkt, "
+                                f"liegt von dort aus aber nicht da")
+        self.assertGreater(gemessen, 0, "keine Bildadresse geprueft — Test misst nichts")
 
 
 class TestPflegeblockLeaktNicht(unittest.TestCase):
@@ -1455,6 +1468,222 @@ class TestRechtsseiten(unittest.TestCase):
             with self.subTest(pfad=pfad):
                 self.assertTrue(datei.exists(), f"{pfad} fehlt")
                 self.assertGreater(datei.stat().st_size, 1500, pfad)
+
+
+
+
+class TestBildpfadeEnglisch(unittest.TestCase):
+    """Gefunden am 18.08.: JEDES Foto der englischen Seite war live ein 404.
+
+    Die englische Fassung liegt unter `/malaysia/en/`, die Bilder unter
+    `/malaysia/fotos/`. Ein relatives `fotos/…` zeigt von dort auf
+    `/malaysia/en/fotos/…` — das gibt es nicht. Der Fehler war unsichtbar:
+    die Tests bauten Strings, der Browser lud nichts nach, und Jens liest die
+    englische Fassung nicht. Gemessen mit curl gegen die ausgelieferte Seite:
+    144 verschiedene Bildadressen, alle 404.
+    """
+
+    def setUp(self):
+        self.sprache = build.SPRACHE
+        build.FOTO_DATEN = build.lade_foto_daten()
+
+    def tearDown(self):
+        build.SPRACHE = self.sprache
+
+    def test_deutsche_fassung_bleibt_relativ(self):
+        build.SPRACHE = "de"
+        self.assertEqual(build._fotopfad("a-640.jpg"), "fotos/a-640.jpg")
+
+    def test_englische_fassung_geht_eine_ebene_hoch(self):
+        build.SPRACHE = "en"
+        self.assertEqual(build._fotopfad("a-640.jpg"), "../fotos/a-640.jpg")
+
+    def test_kein_bild_der_ausgelieferten_englischen_seite_zeigt_ins_leere(self):
+        en = (build.WURZEL / "en" / "index.html").read_text(encoding="utf-8")
+        adressen = set(re.findall(r'(?:src|srcset)="([^"]+)"', en))
+        einzeln = set()
+        for a in adressen:
+            for teil in a.split(","):
+                pfad = teil.strip().split(" ")[0]
+                if "fotos/" in pfad:
+                    einzeln.add(pfad)
+        self.assertTrue(einzeln, "keine Bilder gefunden — Test misst nichts")
+        for pfad in sorted(einzeln):
+            self.assertTrue(pfad.startswith("../fotos/"), f"zeigt ins Leere: {pfad}")
+            ziel = build.WURZEL / "en" / pfad
+            self.assertTrue(ziel.resolve().exists(), f"Datei fehlt: {pfad}")
+
+
+class TestZuletzt(unittest.TestCase):
+    """Umbau 1 (Jens 2026-08-18 09:44, „spannender gestalten").
+
+    Die frischen Eintraege liegen in ihren Themenabschnitten begraben. Wer nach
+    zwei Tagen wiederkommt, findet nicht, was neu ist. Der Block steht ganz
+    oben und nennt die letzten selbst erlebten Meldungen.
+    """
+
+    QUELLE = (
+        "# Titel\n\nEinleitung.\n\n"
+        "## Alt\n\n"
+        "**✓ Erster Eintrag (16.08.).** Text eins.\n"
+        "<!-- werkstatt: telegram=2026-08-16T08:00 -->\n\n"
+        "**○ Nachgeschlagen.** Nur Recherche, gehoert nie in den Block.\n\n"
+        "## Neu\n\n"
+        "**✓ Zweiter Eintrag (17.08.).** Text zwei.\n"
+        "<!-- werkstatt: telegram=2026-08-17T09:00 -->\n\n"
+        "**✓ Dritter Eintrag (18.08.).** Text drei.\n"
+        "<!-- werkstatt: telegram=2026-08-18T10:30 -->\n"
+    )
+
+    def setUp(self):
+        self.alt = dict(build.WERKSTATT)
+        build.WERKSTATT.update({
+            "2026-08-16T08:00:00+00:00": {
+                "telegram": "2026-08-16T08:00:00+00:00",
+                "veroeffentlicht": "2026-08-16T08:10:00+00:00", "minuten": 10},
+            "2026-08-17T09:00:00+00:00": {
+                "telegram": "2026-08-17T09:00:00+00:00",
+                "veroeffentlicht": "2026-08-17T09:07:00+00:00", "minuten": 7},
+            "2026-08-18T10:30:00+00:00": {
+                "telegram": "2026-08-18T10:30:00+00:00",
+                "veroeffentlicht": "2026-08-18T10:37:00+00:00", "minuten": 7},
+        })
+
+    def tearDown(self):
+        build.WERKSTATT.clear()
+        build.WERKSTATT.update(self.alt)
+
+    def test_gemessener_eintrag_bekommt_eine_sprungmarke(self):
+        html = build.render_markdown(self.QUELLE)
+        self.assertRegex(html, r'<div class="entry entry--erlebt" id="[^"]+"')
+
+    def test_die_sprungmarke_haengt_am_zeitstempel_nicht_am_text(self):
+        """Ein Schluessel aus dem Text bricht, sobald ein Tippfehler behoben wird."""
+        a = build.render_markdown(self.QUELLE)
+        b = build.render_markdown(self.QUELLE.replace("Text drei.", "Text drei, korrigiert."))
+        marken = re.findall(r'id="(eintrag-[^"]+)"', a)
+        self.assertEqual(len(marken), 3, "ohne Marken vergleicht der Test zwei leere Listen")
+        self.assertEqual(marken, re.findall(r'id="(eintrag-[^"]+)"', b))
+
+    def test_neueste_meldung_steht_im_block_ganz_oben(self):
+        block = build._zuletzt(build.render_markdown(self.QUELLE))
+        reihenfolge = re.findall(r"(Erster|Zweiter|Dritter) Eintrag", block)
+        self.assertEqual(reihenfolge, ["Dritter", "Zweiter", "Erster"])
+
+    def test_datum_steht_einmal_nicht_zweimal(self):
+        """Das Datum hat im Block eine eigene Spalte — im Satz waere es doppelt."""
+        block = build._zuletzt(build.render_markdown(self.QUELLE))
+        self.assertIn("Dritter Eintrag.", block)
+        self.assertNotIn("Dritter Eintrag (18.08.).", block)
+
+    def test_recherche_kommt_nicht_in_den_block(self):
+        block = build._zuletzt(build.render_markdown(self.QUELLE))
+        self.assertNotIn("Nachgeschlagen", block)
+
+    def test_block_verlinkt_auf_den_eintrag_selbst(self):
+        rumpf = build.render_markdown(self.QUELLE)
+        block = build._zuletzt(rumpf)
+        for ziel in re.findall(r'href="#(eintrag-[^"]+)"', block):
+            self.assertIn(f'id="{ziel}"', rumpf)
+        self.assertTrue(re.findall(r'href="#(eintrag-[^"]+)"', block))
+
+    def test_ohne_messung_gar_kein_block(self):
+        """Eine Seite ohne gemessene Meldung bekommt keine leere Ueberschrift."""
+        self.assertEqual(build._zuletzt(build.render_markdown(
+            "## Nur Recherche\n\n**○ Nachgeschlagen.** Text.\n")), "")
+
+    def test_block_deckelt_die_zahl(self):
+        viele = "# T\n\n## A\n\n" + "\n\n".join(
+            f"**✓ Meldung {i} (18.08.).** Text.\n<!-- werkstatt: telegram=2026-08-18T{i:02d}:00 -->"
+            for i in range(1, 9))
+        for i in range(1, 9):
+            build.WERKSTATT[f"2026-08-18T{i:02d}:00:00+00:00"] = {
+                "telegram": f"2026-08-18T{i:02d}:00:00+00:00",
+                "veroeffentlicht": f"2026-08-18T{i:02d}:10:00+00:00", "minuten": 10}
+        block = build._zuletzt(build.render_markdown(viele))
+        self.assertEqual(len(re.findall(r'href="#eintrag-', block)), 5)
+
+
+class TestRechercheFaltung(unittest.TestCase):
+    """Umbau 3 (Jens 2026-08-18 09:44).
+
+    37 ○ gegen 28 ✓: die Seite verspricht „was wirklich funktioniert hat" und
+    besteht mehrheitlich aus Vorher-Gelesenem. Eingeklappt traegt das Erlebte
+    die Seite — der Text bleibt, er ist einen Klick entfernt.
+    """
+
+    def test_mehrere_recherchen_hintereinander_werden_ein_kasten(self):
+        html = build.falte_recherche(build.render_markdown(
+            "## A\n\n**○ Eins.** Text.\n\n**○ Zwei.** Text.\n\n**○ Drei.** Text.\n"))
+        self.assertEqual(html.count("<details"), 1)
+        self.assertEqual(html.count('entry--recherche'), 3)
+
+    def test_der_kasten_nennt_die_anzahl(self):
+        html = build.falte_recherche(build.render_markdown(
+            "## A\n\n**○ Eins.** Text.\n\n**○ Zwei.** Text.\n"))
+        self.assertRegex(html, r"<summary[^>]*>[^<]*2[^<]*</summary>")
+
+    def test_ein_erlebter_eintrag_trennt_zwei_kaesten(self):
+        html = build.falte_recherche(build.render_markdown(
+            "## A\n\n**○ Eins.** Text.\n\n**○ Zwei.** Text.\n\n"
+            "**✓ Erlebt.** Text.\n\n**○ Drei.** Text.\n\n**○ Vier.** Text.\n"))
+        self.assertEqual(html.count("<details"), 2)
+
+    def test_eine_ueberschrift_trennt_zwei_kaesten(self):
+        html = build.falte_recherche(build.render_markdown(
+            "## A\n\n**○ Eins.** Text.\n\n**○ Zwei.** Text.\n\n"
+            "## B\n\n**○ Drei.** Text.\n\n**○ Vier.** Text.\n"))
+        self.assertEqual(html.count("<details"), 2)
+
+    def test_eine_einzelne_recherche_bekommt_keinen_kasten(self):
+        """Ein Kasten um einen Eintrag kostet einen Klick und spart nichts."""
+        html = build.falte_recherche(build.render_markdown(
+            "## A\n\n**✓ Erlebt.** Text.\n\n**○ Allein.** Text.\n\n**✓ Wieder.** Text.\n"))
+        self.assertNotIn("<details", html)
+
+    def test_erlebtes_wird_nie_eingeklappt(self):
+        roh = build.render_markdown(
+            "## A\n\n**✓ Eins.** Text.\n\n**✓ Zwei.** Text.\n\n**✗ Drei.** Text.\n")
+        self.assertNotIn("<details", build.falte_recherche(roh))
+
+    def test_kein_zeichen_geht_verloren(self):
+        roh = build.render_markdown(
+            "## A\n\n**○ Eins.** Text.\n\n**○ Zwei.** Text.\n\n**✓ Drei.** Text.\n")
+        gefaltet = build.falte_recherche(roh)
+        for wort in ("Eins", "Zwei", "Drei"):
+            self.assertIn(wort, gefaltet)
+
+    def test_umbrochene_absaetze_werden_trotzdem_gefaltet(self):
+        """Der Fehler vom 18.08.: ein Block ist NICHT eine Zeile.
+
+        Die Absaetze im Quelldokument sind umbrochen und `inline()` laesst den
+        Umbruch stehen. Die erste Fassung faltete zeilenweise — an einzeiligen
+        Testdaten gruen, auf der echten Seite null Kaesten. Dieser Test haelt
+        die Faltung an mehrzeiligen Eintraegen fest.
+        """
+        md = ("## A\n\n"
+              "**○ Erste Notiz.** Ein Satz, der im Quelldokument\n"
+              "ueber drei Zeilen laeuft, weil das Dokument umbrochen\n"
+              "geschrieben ist.\n\n"
+              "**○ Zweite Notiz.** Auch diese hier laeuft\n"
+              "ueber mehrere Zeilen.\n")
+        roh = build.render_markdown(md)
+        self.assertGreater(roh.count("\n"), 3, "Testdaten sind nicht mehrzeilig")
+        html = build.falte_recherche(roh)
+        self.assertEqual(html.count("<details"), 1)
+        self.assertIn("Erste Notiz", html)
+        self.assertIn("Zweite Notiz", html)
+
+    def test_die_ausgelieferte_seite_klappt_die_recherche_ein(self):
+        seite = (build.WURZEL / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<details", seite)
+        self.assertIn('id="zuletzt"', seite)
+
+    def test_beide_sprachfassungen_haben_beides(self):
+        en = (build.WURZEL / "en" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<details", en)
+        self.assertIn('id="zuletzt"', en)
+
 
 
 if __name__ == "__main__":

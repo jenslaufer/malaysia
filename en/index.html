@@ -454,6 +454,126 @@ tbody tr:hover { background: var(--flaeche); }
 
 a { color: var(--erlebt); }
 
+/* --- Zuletzt: was seit dem letzten Besuch dazugekommen ist ---------------
+
+   Die Seite waechst taeglich, und die frischen Eintraege liegen in ihren
+   Themenabschnitten. Ohne diesen Block muesste ein Wiederkehrer alles lesen,
+   um das Neue zu finden. Bewusst eine Liste und keine Kachelwand: die
+   Randspalte mit dem Zeichen traegt die Seite, hier soll nichts konkurrieren. */
+
+.zuletzt {
+  max-width: var(--satz);
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.zuletzt-kopf {
+  margin: 0 0 .9rem;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--tinte-leise);
+}
+
+.zuletzt-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--linie);
+}
+
+.zuletzt-posten { border-bottom: 1px solid var(--linie); }
+
+.zuletzt-posten a {
+  display: grid;
+  grid-template-columns: 4.5rem 4.2rem 1fr;
+  gap: .9rem;
+  align-items: center;
+  padding: .7rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.zuletzt-bild {
+  width: 4.5rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+/* Ohne Bild bleibt die Spalte leer, damit Datum und Satz auf einer Kante
+   stehen — eine springende Textkante liest sich wie ein Fehler. */
+.zuletzt-posten a:not(:has(.zuletzt-bild)) { grid-template-columns: 4.5rem 4.2rem 1fr; }
+.zuletzt-posten a:not(:has(.zuletzt-bild)) .zuletzt-datum { grid-column: 2; }
+.zuletzt-posten a:not(:has(.zuletzt-bild)) .zuletzt-titel { grid-column: 3; }
+
+.zuletzt-datum {
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--tinte-leise);
+}
+
+.zuletzt-titel {
+  font-size: .95rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.zuletzt-posten a:hover .zuletzt-titel { color: var(--erlebt); }
+
+/* Sprungziel nicht unter den Fensterrand schieben. */
+.entry[id] { scroll-margin-top: 1.5rem; }
+
+/* --- Recherche einklappen ------------------------------------------------
+
+   37 nachgeschlagene gegen 28 erlebte Eintraege: die Seite verspricht "was
+   wirklich funktioniert hat" und bestand mehrheitlich aus Vorher-Gelesenem.
+   Der Text bleibt vollstaendig — er ist einen Klick entfernt, ohne
+   JavaScript, und im ausgedruckten Zustand ohnehin offen. */
+
+.recherche-box {
+  max-width: var(--satz);
+  margin: 1.4rem auto;
+  padding: 0 1.5rem;
+}
+
+.recherche-box > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .5rem .8rem;
+  font-size: .82rem;
+  color: var(--tinte-leise);
+  background: var(--papier-tief);
+  border: 1px solid var(--linie);
+  border-left: 3px solid var(--recherche);
+  border-radius: 2px;
+}
+
+.recherche-box > summary::-webkit-details-marker { display: none; }
+
+.recherche-box > summary::before {
+  content: "▸";
+  color: var(--recherche);
+  font-size: .9em;
+}
+
+.recherche-box[open] > summary::before { content: "▾"; }
+.recherche-box > summary:hover { color: var(--tinte); }
+.recherche-box[open] > summary { margin-bottom: .6rem; }
+
+/* Die Eintraege im Kasten bringen ihre eigene Randspalte mit. */
+.recherche-box .entry { margin-left: 0; margin-right: 0; padding-left: 2.4rem; }
+
+@media print { .recherche-box > summary { display: none; } }
+
 /* --- Schmale Geraete --- */
 
 @media (max-width: 560px) {
@@ -478,6 +598,7 @@ a { color: var(--erlebt); }
   }
   .entry--erlebt strong { color: #7cc39c; }
   .entry--gescheitert strong { color: #dd7a6b; }
+  .zuletzt-bild { filter: brightness(.88); }
 }
 
 /* ------------------------------------------------------------------ Sprache
@@ -580,7 +701,7 @@ date on it — or as a failure, so that nobody tries it twice.</p>
 <nav class="toc" aria-label="Sections"><a href="#how-to-read-this-document">How to read this document</a><a href="#getting-around-singapore">Getting around Singapore</a><a href="#border-singapore-malaysia">Border Singapore → Malaysia</a><a href="#from-the-border-to-mersing">From the border to Mersing</a><a href="#in-mersing">In Mersing</a><a href="#mersing-to-tioman-what-has-to-be-done-before-boarding">Mersing to Tioman — what has to be done before boarding</a><a href="#on-tioman-what-we-expect-to-find">On Tioman — what we expect to find</a><a href="#eating">Eating</a><a href="#paying">Paying</a><a href="#power-internet-phone">Power, internet, phone</a><a href="#what-we-had-planned-wrong-beforehand">What we had planned wrong beforehand</a><a href="#timeline">Timeline</a></nav>
 
 <main>
-
+<section id="zuletzt" class="zuletzt" aria-label="Latest from the road"><h2 class="zuletzt-kopf">Latest</h2><ol class="zuletzt-liste"><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t10-30-1"><img class="zuletzt-bild" src="../fotos/tioman-flughunde-tekek-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">Flying foxes hang in the needle trees along the shore in Tekek, dozens of them.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t10-18-1"><img class="zuletzt-bild" src="../fotos/tioman-uebersichtstafel-tekek-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">A board on the waterfront in Tekek sorts the whole island at a glance.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t09-43-1"><img class="zuletzt-bild" src="../fotos/tioman-regenwald-hinter-dem-dorf-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The rainforest starts right behind the houses of Tekek.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t09-43-2"><img class="zuletzt-bild" src="../fotos/tioman-dorfstrasse-roller-ziege-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The village road in Tekek is a concrete strip, and not much drives along it.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t06-56-1"><img class="zuletzt-bild" src="../fotos/tioman-strandchalets-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The place we stay sits directly on the sand.</span></a></li></ol></section>
 <aside class="werkstatt" aria-labelledby="werkstatt-titel">
   <h2 id="werkstatt-titel">No human maintains this page</h2>
   <p>We are on the road, with a phone and no computer. What stands here is sent
@@ -665,61 +786,56 @@ runs in an arc: Bayfront (DT16) lies geographically south of Jalan Besar (DT22),
 train goes <strong>towards Bukit Panjang</strong>, which looks like north. On the platform, look at the
 station numbers, not at the compass. From Bayfront: exit B, underpass, then Dragonfly Bridge
 or Meadow Bridge.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong><em>Garden Rhapsody</em> in the Supertree Grove — free, no ticket, and you simply stand
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-39-1" data-telegram="2026-08-17T09:39:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong><em>Garden Rhapsody</em> in the Supertree Grove — free, no ticket, and you simply stand
 underneath it (16 Aug).</strong> No barriers, no rows, no admission: the audience spreads across the
 plaza between the trees and a lot of people lie flat on their backs, because the show plays
 upwards. You need no particular spot for a photograph — you need distance, because up close a
 single Supertree fills the entire frame. In the wide shot below a good number of umbrellas are
 up in the crowd, so the show carries on in the rain. (That is read off the picture, not
 something we reported.)</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 09:39</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:50</span><span class="spur-dauer">11 min</span></p></div>
-<div class="fotos fotos--3"><figure class="foto"><picture><source type="image/avif" srcset="fotos/garden-rhapsody-supertrees-mbs-640.avif 640w, fotos/garden-rhapsody-supertrees-mbs-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/garden-rhapsody-supertrees-mbs-640.webp 640w, fotos/garden-rhapsody-supertrees-mbs-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/garden-rhapsody-supertrees-mbs.jpg" srcset="fotos/garden-rhapsody-supertrees-mbs-640.jpg 640w, fotos/garden-rhapsody-supertrees-mbs.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them." loading="lazy" decoding="async"></picture><figcaption>Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/garden-rhapsody-supertree-nah-640.avif 640w, fotos/garden-rhapsody-supertree-nah-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/garden-rhapsody-supertree-nah-640.webp 640w, fotos/garden-rhapsody-supertree-nah-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/garden-rhapsody-supertree-nah.jpg" srcset="fotos/garden-rhapsody-supertree-nah-640.jpg 640w, fotos/garden-rhapsody-supertree-nah.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A single Supertree from below, its canopy lit green from the inside." loading="lazy" decoding="async"></picture><figcaption>A single Supertree from below, its canopy lit green from the inside.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/garden-rhapsody-menge-640.avif 640w, fotos/garden-rhapsody-menge-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/garden-rhapsody-menge-640.webp 640w, fotos/garden-rhapsody-menge-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/garden-rhapsody-menge.jpg" srcset="fotos/garden-rhapsody-menge-640.jpg 640w, fotos/garden-rhapsody-menge.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="Three Supertrees in green light above the crowd in the Supertree Grove." loading="lazy" decoding="async"></picture><figcaption>Three Supertrees in green light above the crowd in the Supertree Grove.</figcaption></figure></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The second light show is called <em>Spectra</em> and sits 800 metres away.</strong>
+<div class="fotos fotos--3"><figure class="foto"><picture><source type="image/avif" srcset="../fotos/garden-rhapsody-supertrees-mbs-640.avif 640w, ../fotos/garden-rhapsody-supertrees-mbs-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/garden-rhapsody-supertrees-mbs-640.webp 640w, ../fotos/garden-rhapsody-supertrees-mbs-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/garden-rhapsody-supertrees-mbs.jpg" srcset="../fotos/garden-rhapsody-supertrees-mbs-640.jpg 640w, ../fotos/garden-rhapsody-supertrees-mbs.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them." loading="lazy" decoding="async"></picture><figcaption>Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/garden-rhapsody-supertree-nah-640.avif 640w, ../fotos/garden-rhapsody-supertree-nah-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/garden-rhapsody-supertree-nah-640.webp 640w, ../fotos/garden-rhapsody-supertree-nah-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/garden-rhapsody-supertree-nah.jpg" srcset="../fotos/garden-rhapsody-supertree-nah-640.jpg 640w, ../fotos/garden-rhapsody-supertree-nah.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A single Supertree from below, its canopy lit green from the inside." loading="lazy" decoding="async"></picture><figcaption>A single Supertree from below, its canopy lit green from the inside.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/garden-rhapsody-menge-640.avif 640w, ../fotos/garden-rhapsody-menge-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/garden-rhapsody-menge-640.webp 640w, ../fotos/garden-rhapsody-menge-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/garden-rhapsody-menge.jpg" srcset="../fotos/garden-rhapsody-menge-640.jpg 640w, ../fotos/garden-rhapsody-menge.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="Three Supertrees in green light above the crowd in the Supertree Grove." loading="lazy" decoding="async"></picture><figcaption>Three Supertrees in green light above the crowd in the Supertree Grove.</figcaption></figure></div>
+<details class="recherche-box"><summary>2 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The second light show is called <em>Spectra</em> and sits 800 metres away.</strong>
 Water, light and lasers, at 20:00 and 21:00 on the Event Plaza at Marina Bay Sands, right at
 the station exit; <em>Garden Rhapsody</em> runs at 19:45 and 20:45. Fifteen minutes each. You can do
 both in one evening: 20:00 Spectra, ten minutes' walk, 20:45 Garden Rhapsody. We only went to
-<em>Garden Rhapsody</em> — what stands here about Spectra has stayed research.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>From the airport into town, the luggage decides, not the price.</strong> MRT S$2.20 per person
+<em>Garden Rhapsody</em> — what stands here about Spectra has stayed research.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>From the airport into town, the luggage decides, not the price.</strong> MRT S$2.20 per person
 (45–50 min, two changes), taxi S$25–45 including the S$6 airport surcharge, a six-seater from
 the fixed-price counter for S$75. A normal taxi seats four people but does not take four
 suitcases for three weeks — then it is two cars or a six-seater, and comparing fares alone
-gives you the wrong answer.</p></div>
+gives you the wrong answer.</p></div></details>
 <h2 id="border-singapore-malaysia">Border Singapore → Malaysia</h2>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>On a Monday morning we were through on the Malaysian side by about 12:00 local time
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-01-1" data-telegram="2026-08-17T04:01:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>On a Monday morning we were through on the Malaysian side by about 12:00 local time
 (17 Aug).</strong> We set off from Little India. How long the control itself took is not recorded —
 other people's experience is that almost all of the time goes on queueing rather than on the
 distance; the Causeway is a good kilometre long.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 04:01</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 05:46</span><span class="spur-dauer">106 min</span></p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The signage in the border hall is already there.</strong> After the control you stand in front of
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-04-1" data-telegram="2026-08-17T04:04:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The signage in the border hall is already there.</strong> After the control you stand in front of
 signs reading <code>↑ JB Sentral</code>. JB Sentral is the station directly next to the border building
 and the place everything continues from — bus, taxi, train, all of it there. You do not have
 to ask anyone.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 04:04</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 05:46</span><span class="spur-dauer">103 min</span></p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>A bus runs from JB Sentral to Larkin, and it is the easiest way (17 Aug).</strong> Larkin
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-47-1" data-telegram="2026-08-17T04:47:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>A bus runs from JB Sentral to Larkin, and it is the easiest way (17 Aug).</strong> Larkin
 Sentral is the long-distance bus station from which you go on into the country — about 5
 kilometres from the border building. The bus from JB Sentral takes contactless cards and
 Google Pay, see “Paying” below. What you will usually be recommended is a Grab for around RM20; the
 bus does the same thing for a fraction of it.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 04:47</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 05:46</span><span class="spur-dauer">60 min</span></p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>You cannot order a Grab at the border building itself.</strong> The pick-up point would be the
-ground floor of JB Sentral next door. Open the app inside the hall and you will find no car.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Walking across the Causeway is illegal on the Malaysian side</strong> (RM300–2000, signs since
+<details class="recherche-box"><summary>5 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>You cannot order a Grab at the border building itself.</strong> The pick-up point would be the
+ground floor of JB Sentral next door. Open the app inside the hall and you will find no car.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Walking across the Causeway is illegal on the Malaysian side</strong> (RM300–2000, signs since
 April 2026). Singapore does not forbid it, but you would be entering the other side — so it
-is not an option, however short the walk looks on the map.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Going through by car remains the most comfortable variant with luggage.</strong> Grab has been
+is not an option, however short the walk looks on the map.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Going through by car remains the most comfortable variant with luggage.</strong> Grab has been
 crossing the border under its own licence since 4 May 2026 (<code>SG&gt;JB (Beta)</code> in the app, book
 6 hours to 7 days ahead). In the car everyone stays seated at both controls, passports go
 through the window, fingerprint and face scan happen in the vehicle, the luggage stays in the
 boot. On the bus you get out twice with everything you own. A six-seater is around S$120 = 81
-euros from the hotel door to Larkin Sentral.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The Malaysia Digital Arrival Card (MDAC) is compulsory at the land border too.</strong> There is
+euros from the hotel door to Larkin Sentral.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The Malaysia Digital Arrival Card (MDAC) is compulsory at the land border too.</strong> There is
 no exemption for Germans, it is free, available at the earliest 3 days before arrival, and
 only at <code>imigresen-online.imi.gov.my/mdac/main</code> — <strong>paid imitations rank above it on Google</strong>,
 so type the address rather than clicking a search result. You need your passport, the arrival
 date, the Malaysian accommodation address, an email address and a phone number.
 The trap when reading up on it: almost every hit for "MDAC exemption" is about <strong>Singaporeans</strong>
-and reads like an all-clear for everybody.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Singapore has the same thing (SG Arrival Card), and it applies per entry.</strong> If, like us,
+and reads like an all-clear for everybody.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Singapore has the same thing (SG Arrival Card), and it applies per entry.</strong> If, like us,
 you enter twice, you need it twice. Free, at the earliest 3 days ahead, only
-<code>eservices.ica.gov.sg/sgarrivalcard</code> or the MyICA app.</p></div>
+<code>eservices.ica.gov.sg/sgarrivalcard</code> or the MyICA app.</p></div></details>
 <h2 id="from-the-border-to-mersing">From the border to Mersing</h2>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>From the border to the ferry terminal in Mersing: a good four hours (17 Aug).</strong> Measured
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-11-1" data-telegram="2026-08-17T08:11:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>From the border to the ferry terminal in Mersing: a good four hours (17 Aug).</strong> Measured
 between "we're through the control" at 12:01 local time and the photo of the ferry terminal at
 16:11 — that covers everything: the way to Larkin, the waiting and the ride itself. If you want
 to catch the ferry to Tioman on the same day, budget half a day for this leg.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 08:11</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 08:17</span><span class="spur-dauer">7 min</span></p></div>
@@ -731,13 +847,13 @@ fences, poles and house walls, in small towns too. The national holiday, Merdeka
 August and the decorations go up weeks ahead — good for photographs, and a warning that the end
 of August means busy roads and holiday traffic.</p></div>
 <h2 id="in-mersing">In Mersing</h2>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The town is full of cats (17 Aug).</strong> Jens's message about it was one sentence: "we love
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-59-1" data-telegram="2026-08-17T08:59:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The town is full of cats (17 Aug).</strong> Jens's message about it was one sentence: "we love
 all the cats". The photographs show three different animals in three places in the town
 centre, all well fed, none of them running away: a black one in the shade under a market
 cart, a ginger-and-white one stretched out asleep across a tiled floor, a black-and-white one
 glancing over as it walks past. This is not a quirk of the day — it is what a small Malaysian
 town looks like.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 08:59</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:40</span><span class="spur-dauer">41 min</span></p></div>
-<div class="fotos fotos--3"><figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-katze-marktwagen-640.avif 640w, fotos/mersing-katze-marktwagen-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/mersing-katze-marktwagen-640.webp 640w, fotos/mersing-katze-marktwagen-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/mersing-katze-marktwagen.jpg" srcset="fotos/mersing-katze-marktwagen-640.jpg 640w, fotos/mersing-katze-marktwagen.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A black cat lying in the shade under a market cart." loading="lazy" decoding="async"></picture><figcaption>A black cat lying in the shade under a market cart.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-katze-fliesen-640.avif 640w, fotos/mersing-katze-fliesen-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/mersing-katze-fliesen-640.webp 640w, fotos/mersing-katze-fliesen-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/mersing-katze-fliesen.jpg" srcset="fotos/mersing-katze-fliesen-640.jpg 640w, fotos/mersing-katze-fliesen.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A ginger-and-white cat asleep, stretched out across a tiled floor." loading="lazy" decoding="async"></picture><figcaption>A ginger-and-white cat asleep, stretched out across a tiled floor.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-katze-gehweg-640.avif 640w, fotos/mersing-katze-gehweg-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/mersing-katze-gehweg-640.webp 640w, fotos/mersing-katze-gehweg-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/mersing-katze-gehweg.jpg" srcset="fotos/mersing-katze-gehweg-640.jpg 640w, fotos/mersing-katze-gehweg.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A black-and-white cat walking along the paving at the roadside." loading="lazy" decoding="async"></picture><figcaption>A black-and-white cat walking along the paving at the roadside.</figcaption></figure></div>
+<div class="fotos fotos--3"><figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-katze-marktwagen-640.avif 640w, ../fotos/mersing-katze-marktwagen-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/mersing-katze-marktwagen-640.webp 640w, ../fotos/mersing-katze-marktwagen-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/mersing-katze-marktwagen.jpg" srcset="../fotos/mersing-katze-marktwagen-640.jpg 640w, ../fotos/mersing-katze-marktwagen.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A black cat lying in the shade under a market cart." loading="lazy" decoding="async"></picture><figcaption>A black cat lying in the shade under a market cart.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-katze-fliesen-640.avif 640w, ../fotos/mersing-katze-fliesen-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/mersing-katze-fliesen-640.webp 640w, ../fotos/mersing-katze-fliesen-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/mersing-katze-fliesen.jpg" srcset="../fotos/mersing-katze-fliesen-640.jpg 640w, ../fotos/mersing-katze-fliesen.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A ginger-and-white cat asleep, stretched out across a tiled floor." loading="lazy" decoding="async"></picture><figcaption>A ginger-and-white cat asleep, stretched out across a tiled floor.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-katze-gehweg-640.avif 640w, ../fotos/mersing-katze-gehweg-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/mersing-katze-gehweg-640.webp 640w, ../fotos/mersing-katze-gehweg-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/mersing-katze-gehweg.jpg" srcset="../fotos/mersing-katze-gehweg-640.jpg 640w, ../fotos/mersing-katze-gehweg.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A black-and-white cat walking along the paving at the roadside." loading="lazy" decoding="async"></picture><figcaption>A black-and-white cat walking along the paving at the roadside.</figcaption></figure></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Petting them is harmless here — on Borneo it is not, and not in the part most people
 assume.</strong> Peninsular Malaysia, which includes Johor and Mersing, has been officially rabies-free
 since July 2013; the last human case was in 1998. <strong>Sarawak</strong>, by contrast, has had an ongoing
@@ -747,13 +863,13 @@ Sandakan, Kota Kinabalu, Kudat — is likewise considered rabies-free. The two s
 same island and are constantly mixed up. So before touching a cat on Borneo, know which of the
 two you are standing in; and after a bite or a scratch the rule is the same everywhere: see a
 doctor straight away, do not wait.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The BSN cash machine in Mersing paid out, on a travel credit card and with no fee (17 Aug).</strong>
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-59-2" data-telegram="2026-08-17T08:59:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The BSN cash machine in Mersing paid out, on a travel credit card and with no fee (17 Aug).</strong>
 This is the most useful line in the section, and it contradicts what we had assumed beforehand
 (see "Paying"): the card was not refused, no foreign-card fee was charged — and it happened at
 the very bank we had warned against. Anyone carrying a travel credit card without a foreign
 transaction charge needs no money changer for Mersing and does not have to stock up on cash in
 Johor Bahru.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 08:59</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:40</span><span class="spur-dauer">41 min</span></p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>RM500 was the amount, and that is tighter than it sounds (17 Aug).</strong> <strong>RM165</strong> of it is
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-36-1" data-telegram="2026-08-17T09:36:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>RM500 was the amount, and that is tighter than it sounds (17 Aug).</strong> <strong>RM165</strong> of it is
 already committed: RM105 marine park fee at the ferry counter in Mersing and RM60 tourist tax at
 the accommodation on Tioman. That leaves <strong>RM335 for four people across three island days</strong> —
 breakfast is included at the guesthouse, boat rides between the bays and a snorkelling trip are
@@ -765,7 +881,7 @@ cash advance and accrues interest from the day it is taken, even when no fee is 
 travel cards waive both, others only the fee. That is written in the card terms, not on the
 machine. We did not look it up for our own card — it is the only point in this section we have
 not checked ourselves.</p></div>
-<div class="fotos fotos--2"><figure class="foto" style="--pos: top"><picture><source type="image/avif" srcset="fotos/mersing-geldautomat-640.avif 640w, fotos/mersing-geldautomat-720.avif 720w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/mersing-geldautomat-640.webp 640w, fotos/mersing-geldautomat-720.webp 720w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/mersing-geldautomat.jpg" srcset="fotos/mersing-geldautomat-640.jpg 640w, fotos/mersing-geldautomat.jpg 720w" sizes="(max-width: 560px) 92vw, 220px" width="720" height="1280" alt="A cash machine in Mersing, mid-transaction." loading="lazy" decoding="async"></picture><figcaption>A cash machine in Mersing, mid-transaction.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-bankenzeile-640.avif 640w, fotos/mersing-bankenzeile-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/mersing-bankenzeile-640.webp 640w, fotos/mersing-bankenzeile-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/mersing-bankenzeile.jpg" srcset="fotos/mersing-bankenzeile-640.jpg 640w, fotos/mersing-bankenzeile.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A bank branch in the shophouse row in Mersing, scooters parked in front." loading="lazy" decoding="async"></picture><figcaption>A bank branch in the shophouse row in Mersing, scooters parked in front.</figcaption></figure></div>
+<div class="fotos fotos--2"><figure class="foto" style="--pos: top"><picture><source type="image/avif" srcset="../fotos/mersing-geldautomat-640.avif 640w, ../fotos/mersing-geldautomat-720.avif 720w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/mersing-geldautomat-640.webp 640w, ../fotos/mersing-geldautomat-720.webp 720w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/mersing-geldautomat.jpg" srcset="../fotos/mersing-geldautomat-640.jpg 640w, ../fotos/mersing-geldautomat.jpg 720w" sizes="(max-width: 560px) 92vw, 220px" width="720" height="1280" alt="A cash machine in Mersing, mid-transaction." loading="lazy" decoding="async"></picture><figcaption>A cash machine in Mersing, mid-transaction.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-bankenzeile-640.avif 640w, ../fotos/mersing-bankenzeile-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/mersing-bankenzeile-640.webp 640w, ../fotos/mersing-bankenzeile-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/mersing-bankenzeile.jpg" srcset="../fotos/mersing-bankenzeile-640.jpg 640w, ../fotos/mersing-bankenzeile.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A bank branch in the shophouse row in Mersing, scooters parked in front." loading="lazy" decoding="async"></picture><figcaption>A bank branch in the shophouse row in Mersing, scooters parked in front.</figcaption></figure></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The conspicuous empty building in the town centre used to be a cinema.</strong> The lettering
 above the entrance has worn away to the shadows of its letters, but the last word clearly ends
 in THEATRE, and the windowless block on the roof is the tower that held the projection and
@@ -773,14 +889,14 @@ stage machinery of old picture houses. No open source gives up the name. One tra
 on: Mersing has a locally famous noodle stall called <em>Mee Goreng Panggung Wayang</em> — literally
 "cinema fried noodles" — which by local account once stood inside the cinema itself; it is on
 Google Maps as "Panggung Cafe Mersing". That does not prove it was this building.</p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-altes-kino-640.avif 640w, fotos/mersing-altes-kino-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-altes-kino-640.webp 640w, fotos/mersing-altes-kino-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-altes-kino.jpg" srcset="fotos/mersing-altes-kino-640.jpg 640w, fotos/mersing-altes-kino.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A derelict former cinema in the centre of Mersing." loading="lazy" decoding="async"></picture><figcaption>A derelict former cinema in the centre of Mersing.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>In the late afternoon the town happens on the seafront promenade (17 Aug).</strong> A paved
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-altes-kino-640.avif 640w, ../fotos/mersing-altes-kino-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/mersing-altes-kino-640.webp 640w, ../fotos/mersing-altes-kino-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/mersing-altes-kino.jpg" srcset="../fotos/mersing-altes-kino-640.jpg 640w, ../fotos/mersing-altes-kino.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A derelict former cinema in the centre of Mersing." loading="lazy" decoding="async"></picture><figcaption>A derelict former cinema in the centre of Mersing.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-21-1" data-telegram="2026-08-17T10:21:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>In the late afternoon the town happens on the seafront promenade (17 Aug).</strong> A paved
 path between coconut palms and the sea, pavilions to sit in, playground equipment, and
 behind it the road with the parking spaces. In the photo families are walking, children are
 cycling, and the flags for Merdeka are already up on the masts. If you are waiting for the
 ferry in Mersing and do not know where to go: here — this is where everyone is in the
 evening. (Read off the picture, not reported by us.)</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 10:21</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 10:38</span><span class="spur-dauer">17 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-strandpromenade-640.avif 640w, fotos/mersing-strandpromenade-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-strandpromenade-640.webp 640w, fotos/mersing-strandpromenade-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-strandpromenade.jpg" srcset="fotos/mersing-strandpromenade-640.jpg 640w, fotos/mersing-strandpromenade.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The seafront promenade in Mersing in the late afternoon: coconut palms, a paved path, pavilions and the road behind." loading="lazy" decoding="async"></picture><figcaption>The seafront promenade in Mersing in the late afternoon: coconut palms, a paved path, pavilions and the road behind.</figcaption></figure>
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-strandpromenade-640.avif 640w, ../fotos/mersing-strandpromenade-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/mersing-strandpromenade-640.webp 640w, ../fotos/mersing-strandpromenade-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/mersing-strandpromenade.jpg" srcset="../fotos/mersing-strandpromenade-640.jpg 640w, ../fotos/mersing-strandpromenade.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The seafront promenade in Mersing in the late afternoon: coconut palms, a paved path, pavilions and the road behind." loading="lazy" decoding="async"></picture><figcaption>The seafront promenade in Mersing in the late afternoon: coconut palms, a paved path, pavilions and the road behind.</figcaption></figure>
 <h2 id="mersing-to-tioman-what-has-to-be-done-before-boarding">Mersing to Tioman — what has to be done before boarding</h2>
 <p>A ferry is not a train. Between the terminal and the boat there are several counters, two of
 them cash only, and the departure time is not set by a timetable but by the tide. This section
@@ -795,23 +911,23 @@ that the schedule may change without notice. The second harbour, <strong>Tanjung
 bookings still carry its old name, Teluk Gading), is 40 kilometres north and does not have the
 problem, because the water there is deep enough. Both harbours serve Tioman, but only one of
 them is on your ticket.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>And this is what it looks like (17 Aug, 18:20 local).</strong> On the evening before the
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-21-2" data-telegram="2026-08-17T10:21:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>And this is what it looks like (17 Aug, 18:20 local).</strong> On the evening before the
 crossing the small boats on the far bank were sitting in the mud while the two larger boats at
 the pontoon were still afloat. That is not storm damage and not a bad day — it is the ordinary
 tidal range, and it is the reason the departure time in Mersing is different every day. Once
 you have seen it, the timetable explains itself.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 10:21</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 10:38</span><span class="spur-dauer">17 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-hafen-niedrigwasser-640.avif 640w, fotos/mersing-hafen-niedrigwasser-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-hafen-niedrigwasser-640.webp 640w, fotos/mersing-hafen-niedrigwasser-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-hafen-niedrigwasser.jpg" srcset="fotos/mersing-hafen-niedrigwasser-640.jpg 640w, fotos/mersing-hafen-niedrigwasser.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Mersing harbour at low water: small boats lying in the mud along the bank, two larger boats still afloat at the pontoon." loading="lazy" decoding="async"></picture><figcaption>Mersing harbour at low water: small boats lying in the mud along the bank, two larger boats still afloat at the pontoon.</figcaption></figure>
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-hafen-niedrigwasser-640.avif 640w, ../fotos/mersing-hafen-niedrigwasser-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/mersing-hafen-niedrigwasser-640.webp 640w, ../fotos/mersing-hafen-niedrigwasser-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/mersing-hafen-niedrigwasser.jpg" srcset="../fotos/mersing-hafen-niedrigwasser-640.jpg 640w, ../fotos/mersing-hafen-niedrigwasser.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Mersing harbour at low water: small boats lying in the mud along the bank, two larger boats still afloat at the pontoon." loading="lazy" decoding="async"></picture><figcaption>Mersing harbour at low water: small boats lying in the mud along the bank, two larger boats still afloat at the pontoon.</figcaption></figure>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The Jabatan Laut, Malaysia's marine department, sits on the same quay.</strong> The building with
 the small green tower stands right at the river mouth. It is not a place travellers need — but
 it does show that these are not only pleasure boats: Mersing is a working harbour with a
 fishing fleet, and the ferries share the water with it.</p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-jabatan-laut-640.avif 640w, fotos/mersing-jabatan-laut-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-jabatan-laut-640.webp 640w, fotos/mersing-jabatan-laut-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-jabatan-laut.jpg" srcset="fotos/mersing-jabatan-laut-640.jpg 640w, fotos/mersing-jabatan-laut.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="View from the quay across the mouth of the Mersing river, the marine department building on the left, fishing boats along the far bank." loading="lazy" decoding="async"></picture><figcaption>View from the quay across the mouth of the Mersing river, the marine department building on the left, fishing boats along the far bank.</figcaption></figure>
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-jabatan-laut-640.avif 640w, ../fotos/mersing-jabatan-laut-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/mersing-jabatan-laut-640.webp 640w, ../fotos/mersing-jabatan-laut-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/mersing-jabatan-laut.jpg" srcset="../fotos/mersing-jabatan-laut-640.jpg 640w, ../fotos/mersing-jabatan-laut.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="View from the quay across the mouth of the Mersing river, the marine department building on the left, fishing boats along the far bank." loading="lazy" decoding="async"></picture><figcaption>View from the quay across the mouth of the Mersing river, the marine department building on the left, fishing boats along the far bank.</figcaption></figure>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Three counters, and the order is fixed.</strong></p></div>
 <ol class="schritte"><li><strong>Ferry counter.</strong> The online booking is exchanged for boarding passes. Every traveller's
    passport is scanned and registered; one person cannot do it for the group.</li><li><strong>Marine park counter.</strong> Cash, on presentation of the ferry tickets. Keep the receipt: the
    places to stay on Tioman ask for it at check-in, and it covers the whole stay.</li><li><strong>Johor fee counter.</strong> Its own counter and its own amount — although on 18 Aug it was not
    charged at all, see below.</li></ol>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The fees are not collected in the terminal but in an office near the jetty (18.08.).</strong>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t02-12-1" data-telegram="2026-08-18T02:12:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The fees are not collected in the terminal but in an office near the jetty (18.08.).</strong>
 Jens reported it on the morning of the crossing: the office sits away from the terminal
 building, with a pavilion in front of it — that is how you find it. So the boarding passes come
 from one place and the fees are paid at another. That is an extra walk, and it was not in our
@@ -825,79 +941,77 @@ Gemok. For the child rate one source says RM5 and another RM10, so for us it is 
 RM70. And the author of one very thorough guide writes that he never met it in practice. That
 is the reason to carry it in cash anyway: not being charged costs nothing, not having it costs
 you the ferry.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>Only the marine park fee was charged (18 Aug).</strong> That settles the question the sources
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t02-19-1" data-telegram="2026-08-18T02:19:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>Only the marine park fee was charged (18 Aug).</strong> That settles the question the sources
 disagree about in the paragraph above: at the office by the jetty the marine park fee was the
 only thing collected — no second amount and no second counter. The author of the guide who
 wrote that he never met the Johor fee in practice turns out to be right. We would still carry
 it in cash: one Tuesday morning in August does not overturn a published schedule of fees, it
 only shows that on that day, at that spot, nobody collected it. What the marine park fee came
 to in the end goes here as soon as it is reported.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 02:19</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 02:39</span><span class="spur-dauer">20 min</span></p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Both fees cash only — and there is no cash machine in the terminal.</strong> The nearest ones are
+<details class="recherche-box"><summary>3 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Both fees cash only — and there is no cash machine in the terminal.</strong> The nearest ones are
 400 to 494 metres away, five to seven minutes on foot (calculated from OpenStreetMap
 coordinates, not paced out). Five banks stand next to each other there, and for anyone staying
 in the town centre the distances invert: from Jalan Abu Bakar it is 85 metres to Bank Simpanan
 Nasional and 90 to Public Bank. So you draw the cash before checking out, not on the way to
-the boat. Ask for small notes: the fee counters keep little change.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>When you have to be there.</strong> The ticket hall is open from 07:30 to 20:00. Check-in starts
+the boat. Ask for small notes: the fee counters keep little change.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>When you have to be there.</strong> The ticket hall is open from 07:30 to 20:00. Check-in starts
 one hour before departure, boarding passes are sometimes handed out only 30 minutes before,
 and you should be standing on the pontoon 30 minutes before. The usual advice is 60 minutes
 off season and 90 during the school holidays. More than an hour and a half buys nothing,
-because nobody is at the counter before that.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The crew take your luggage as you board and ask where you are getting off.</strong> On Tioman the
+because nobody is at the counter before that.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The crew take your luggage as you board and ask where you are getting off.</strong> On Tioman the
 boat calls at several villages — Genting, Paya, Tekek, ABC, Salang. If you cannot name your
-village on the spot, you will be looking for your bags in the wrong bay.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The waiting hall is an open pavilion, not a building (18.08.).</strong> A tiled roof on posts,
+village on the spot, you will be looking for your bags in the wrong bay.</p></div></details>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-1" data-telegram="2026-08-18T03:32:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The waiting hall is an open pavilion, not a building (18.08.).</strong> A tiled roof on posts,
 open at the sides, ceiling fans overhead, fixed rows of seats, two screens with the
 departures. There is no air conditioning here and there cannot be — anyone counting on a
 cooled hall is dressed wrong for the midday wait. The shade is the whole offer, and it is
 enough.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 03:32</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 03:41</span><span class="spur-dauer">9 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-faehrterminal-wartehalle-640.avif 640w, fotos/mersing-faehrterminal-wartehalle-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-faehrterminal-wartehalle-640.webp 640w, fotos/mersing-faehrterminal-wartehalle-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-faehrterminal-wartehalle.jpg" srcset="fotos/mersing-faehrterminal-wartehalle-640.jpg 640w, fotos/mersing-faehrterminal-wartehalle.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The open waiting hall of the Mersing ferry terminal: tiled roof on posts, ceiling fans, rows of blue seats, waiting passengers." loading="lazy" decoding="async"></picture><figcaption>The open waiting hall of the Mersing ferry terminal: tiled roof on posts, ceiling fans, rows of blue seats, waiting passengers.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>You board from the pontoon, right alongside the hull (18.08.).</strong> The queue stands under a
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-faehrterminal-wartehalle-640.avif 640w, ../fotos/mersing-faehrterminal-wartehalle-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/mersing-faehrterminal-wartehalle-640.webp 640w, ../fotos/mersing-faehrterminal-wartehalle-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/mersing-faehrterminal-wartehalle.jpg" srcset="../fotos/mersing-faehrterminal-wartehalle-640.jpg 640w, ../fotos/mersing-faehrterminal-wartehalle.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The open waiting hall of the Mersing ferry terminal: tiled roof on posts, ceiling fans, rows of blue seats, waiting passengers." loading="lazy" decoding="async"></picture><figcaption>The open waiting hall of the Mersing ferry terminal: tiled roof on posts, ceiling fans, rows of blue seats, waiting passengers.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-2" data-telegram="2026-08-18T03:32:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>You board from the pontoon, right alongside the hull (18.08.).</strong> The queue stands under a
 canopy, everyone still carrying their own luggage. The boat is a catamaran and the operator
 is <strong>Cataferry</strong> — the name is painted in large letters on the side, so you can tell from the
 pontoon whether you are standing at the right boat.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 03:32</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 03:41</span><span class="spur-dauer">9 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-einsteigen-cataferry-640.avif 640w, fotos/mersing-einsteigen-cataferry-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-einsteigen-cataferry-640.webp 640w, fotos/mersing-einsteigen-cataferry-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-einsteigen-cataferry.jpg" srcset="fotos/mersing-einsteigen-cataferry-640.jpg 640w, fotos/mersing-einsteigen-cataferry.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The boarding queue on the pontoon in Mersing, with the Cataferry catamaran alongside." loading="lazy" decoding="async"></picture><figcaption>The boarding queue on the pontoon in Mersing, with the Cataferry catamaran alongside.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>You travel in an enclosed cabin, not on deck (18.08.).</strong> Airline-style seating, screens on
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/mersing-einsteigen-cataferry-640.avif 640w, ../fotos/mersing-einsteigen-cataferry-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/mersing-einsteigen-cataferry-640.webp 640w, ../fotos/mersing-einsteigen-cataferry-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/mersing-einsteigen-cataferry.jpg" srcset="../fotos/mersing-einsteigen-cataferry-640.jpg 640w, ../fotos/mersing-einsteigen-cataferry.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The boarding queue on the pontoon in Mersing, with the Cataferry catamaran alongside." loading="lazy" decoding="async"></picture><figcaption>The boarding queue on the pontoon in Mersing, with the Cataferry catamaran alongside.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-3" data-telegram="2026-08-18T03:32:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>You travel in an enclosed cabin, not on deck (18.08.).</strong> Airline-style seating, screens on
 the bulkhead, a board on the wall listing the forbidden items. A safety video about the life
 jackets runs before departure. Whatever you need during the crossing therefore belongs in the
 bag at your seat, not in the luggage you hand over as you board. <strong>At 11:32 local time we were
 in our seats</strong>, with departure scheduled for 11:30 — the timings in the table below held all
 the way to the seat.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 03:32</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 03:41</span><span class="spur-dauer">9 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/cataferry-kabine-sicherheitsvideo-640.avif 640w, fotos/cataferry-kabine-sicherheitsvideo-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/cataferry-kabine-sicherheitsvideo-640.webp 640w, fotos/cataferry-kabine-sicherheitsvideo-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/cataferry-kabine-sicherheitsvideo.jpg" srcset="fotos/cataferry-kabine-sicherheitsvideo-640.jpg 640w, fotos/cataferry-kabine-sicherheitsvideo.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="View forward inside the ferry cabin: airline-style rows of seats, a screen showing the safety video, next to it a sign listing forbidden items." loading="lazy" decoding="async"></picture><figcaption>View forward inside the ferry cabin: airline-style rows of seats, a screen showing the safety video, next to it a sign listing forbidden items.</figcaption></figure>
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/cataferry-kabine-sicherheitsvideo-640.avif 640w, ../fotos/cataferry-kabine-sicherheitsvideo-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/cataferry-kabine-sicherheitsvideo-640.webp 640w, ../fotos/cataferry-kabine-sicherheitsvideo-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/cataferry-kabine-sicherheitsvideo.jpg" srcset="../fotos/cataferry-kabine-sicherheitsvideo-640.jpg 640w, ../fotos/cataferry-kabine-sicherheitsvideo.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="View forward inside the ferry cabin: airline-style rows of seats, a screen showing the safety video, next to it a sign listing forbidden items." loading="lazy" decoding="async"></picture><figcaption>View forward inside the ferry cabin: airline-style rows of seats, a screen showing the safety video, next to it a sign listing forbidden items.</figcaption></figure>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The order we are going to work through tomorrow — ferry at 11:30.</strong></p></div>
 <div class="table-wrap"><table><thead><tr><th>Time</th><th>What</th></tr></thead><tbody><tr><td>09:00</td><td>Draw cash, 85 metres from the door, at the machine that worked yesterday. Ask for small notes</td></tr><tr><td>09:45</td><td>Check out (possible until 12:00, but the rest of the morning should not hang on it)</td></tr><tr><td>10:00</td><td>At the terminal. Passports to hand, collect boarding passes</td></tr><tr><td>10:20</td><td>To the office by the jetty, the one with the pavilion in front: marine park fee in cash, receipt filed with the passports. The Johor fee was not asked for</td></tr><tr><td>10:45</td><td>Food and toilets — both at the terminal, neither on the boat</td></tr><tr><td>11:00</td><td>On the pontoon. Hand over luggage, name the village: Tekek</td></tr><tr><td>11:30</td><td>Cast off</td></tr></tbody></table></div>
 <h2 id="on-tioman-what-we-expect-to-find">On Tioman — what we expect to find</h2>
 <p>This section was written before we arrived, so almost all of it is still ○. What we have seen
 for ourselves since 18 August stands at the top with ✓; the ○ lines below are still waiting to
 be checked.</p>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The place we stay sits directly on the sand (18.08.).</strong> Not a hotel building but a row of
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t06-56-1" data-telegram="2026-08-18T06:56:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The place we stay sits directly on the sand (18.08.).</strong> Not a hotel building but a row of
 white cabins side by side, each with its own door onto the beach. Between the bottom step and
 the water there are a few paces of sand and no road. Kayaks lie in front of the doors for
 guests, and hand-painted signs on a tree point towards breakfast and showers. Anyone expecting
 a lobby and a reception desk will look in vain: the door of the cabin is the entrance.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 06:56</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 07:03</span><span class="spur-dauer">7 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-strandchalets-640.avif 640w, fotos/tioman-strandchalets-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-strandchalets-640.webp 640w, fotos/tioman-strandchalets-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-strandchalets.jpg" srcset="fotos/tioman-strandchalets-640.jpg 640w, fotos/tioman-strandchalets.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A row of white beach cabins under palms and trees, a kayak on the sand in front of them, the shallow turquoise water of the bay on the left." loading="lazy" decoding="async"></picture><figcaption>A row of white beach cabins under palms and trees, a kayak on the sand in front of them, the shallow turquoise water of the bay on the left.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The bay is shallow and calm, and the jetty at the far end is in sight (18.08.).</strong> Bright
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-strandchalets-640.avif 640w, ../fotos/tioman-strandchalets-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/tioman-strandchalets-640.webp 640w, ../fotos/tioman-strandchalets-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/tioman-strandchalets.jpg" srcset="../fotos/tioman-strandchalets-640.jpg 640w, ../fotos/tioman-strandchalets.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A row of white beach cabins under palms and trees, a kayak on the sand in front of them, the shallow turquoise water of the bay on the left." loading="lazy" decoding="async"></picture><figcaption>A row of white beach cabins under palms and trees, a kayak on the sand in front of them, the shallow turquoise water of the bay on the left.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t06-56-2" data-telegram="2026-08-18T06:56:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The bay is shallow and calm, and the jetty at the far end is in sight (18.08.).</strong> Bright
 water without waves, clear a long way out, forested hills running down to the shore behind it.
 A hammock hangs between two posts at the waterline. Just before 3 pm local time the beach was
 empty. At the far end of the bay stands a long jetty with a few roofs in front of it — from
 here that is all one can make out.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 06:56</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 07:03</span><span class="spur-dauer">7 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-bucht-strand-640.avif 640w, fotos/tioman-bucht-strand-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-bucht-strand-640.webp 640w, fotos/tioman-bucht-strand-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-bucht-strand.jpg" srcset="fotos/tioman-bucht-strand-640.jpg 640w, fotos/tioman-bucht-strand.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay." loading="lazy" decoding="async"></picture><figcaption>A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The rainforest starts right behind the houses of Tekek (18.08.).</strong> Behind the row of houses
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-bucht-strand-640.avif 640w, ../fotos/tioman-bucht-strand-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/tioman-bucht-strand-640.webp 640w, ../fotos/tioman-bucht-strand-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/tioman-bucht-strand.jpg" srcset="../fotos/tioman-bucht-strand-640.jpg 640w, ../fotos/tioman-bucht-strand.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay." loading="lazy" decoding="async"></picture><figcaption>A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t09-43-1" data-telegram="2026-08-18T09:43:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The rainforest starts right behind the houses of Tekek (18.08.).</strong> Behind the row of houses
 at the edge of the village the slope rises straight away, densely overgrown up to the ridge, with single
 tall trees standing out above the canopy. Between the last roof and the forest there is neither a
 field nor a garden. Stand on the village road and you have corrugated iron roofs on one side and
 the forest on the other.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 09:43</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 10:07</span><span class="spur-dauer">24 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-regenwald-hinter-dem-dorf-640.avif 640w, fotos/tioman-regenwald-hinter-dem-dorf-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-regenwald-hinter-dem-dorf-640.webp 640w, fotos/tioman-regenwald-hinter-dem-dorf-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-regenwald-hinter-dem-dorf.jpg" srcset="fotos/tioman-regenwald-hinter-dem-dorf-640.jpg 640w, fotos/tioman-regenwald-hinter-dem-dorf.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A forested slope directly behind a row of small houses with metal roofs, with sand, benches and power lines in front of them." loading="lazy" decoding="async"></picture><figcaption>A forested slope directly behind a row of small houses with metal roofs, with sand, benches and power lines in front of them.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The village road in Tekek is a concrete strip, and not much drives along it (18.08.).</strong> One lane wide,
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-regenwald-hinter-dem-dorf-640.avif 640w, ../fotos/tioman-regenwald-hinter-dem-dorf-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/tioman-regenwald-hinter-dem-dorf-640.webp 640w, ../fotos/tioman-regenwald-hinter-dem-dorf-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/tioman-regenwald-hinter-dem-dorf.jpg" srcset="../fotos/tioman-regenwald-hinter-dem-dorf-640.jpg 640w, ../fotos/tioman-regenwald-hinter-dem-dorf.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="A forested slope directly behind a row of small houses with metal roofs, with sand, benches and power lines in front of them." loading="lazy" decoding="async"></picture><figcaption>A forested slope directly behind a row of small houses with metal roofs, with sand, benches and power lines in front of them.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t09-43-2" data-telegram="2026-08-18T09:43:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The village road in Tekek is a concrete strip, and not much drives along it (18.08.).</strong> One lane wide,
 orange and white plastic barriers along the edges, small shops under metal roofs between them, a
 blue gazebo with a chest freezer in front of it and a bridge with a white railing. On the road:
 one scooter, a goat crossing it, and a single pickup with a company decal on the door. Malaysian
 flags hang from poles and fences.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 09:43</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 10:07</span><span class="spur-dauer">24 min</span></p></div>
-<div class="fotos fotos--3"><figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-dorfstrasse-roller-ziege-640.avif 640w, fotos/tioman-dorfstrasse-roller-ziege-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/tioman-dorfstrasse-roller-ziege-640.webp 640w, fotos/tioman-dorfstrasse-roller-ziege-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/tioman-dorfstrasse-roller-ziege.jpg" srcset="fotos/tioman-dorfstrasse-roller-ziege-640.jpg 640w, fotos/tioman-dorfstrasse-roller-ziege.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A concrete village road, a scooter riding towards the bridge, a goat crossing, shops under metal roofs on the left and the forested slope behind." loading="lazy" decoding="async"></picture><figcaption>A concrete village road, a scooter riding towards the bridge, a goat crossing, shops under metal roofs on the left and the forested slope behind.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-dorfstrasse-bruecke-640.avif 640w, fotos/tioman-dorfstrasse-bruecke-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/tioman-dorfstrasse-bruecke-640.webp 640w, fotos/tioman-dorfstrasse-bruecke-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/tioman-dorfstrasse-bruecke.jpg" srcset="fotos/tioman-dorfstrasse-bruecke-640.jpg 640w, fotos/tioman-dorfstrasse-bruecke.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="Looking down the village road towards the bridge with its white railing, a blue gazebo with a Malaysian flag on the right, shops and banana plants on the left." loading="lazy" decoding="async"></picture><figcaption>Looking down the village road towards the bridge with its white railing, a blue gazebo with a Malaysian flag on the right, shops and banana plants on the left.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-dorfstrasse-pickup-640.avif 640w, fotos/tioman-dorfstrasse-pickup-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="fotos/tioman-dorfstrasse-pickup-640.webp 640w, fotos/tioman-dorfstrasse-pickup-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="fotos/tioman-dorfstrasse-pickup.jpg" srcset="fotos/tioman-dorfstrasse-pickup-640.jpg 640w, fotos/tioman-dorfstrasse-pickup.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="The same view, with a black pickup carrying a company decal on its door in the right foreground." loading="lazy" decoding="async"></picture><figcaption>The same view, with a black pickup carrying a company decal on its door in the right foreground.</figcaption></figure></div>
+<div class="fotos fotos--3"><figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-dorfstrasse-roller-ziege-640.avif 640w, ../fotos/tioman-dorfstrasse-roller-ziege-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/tioman-dorfstrasse-roller-ziege-640.webp 640w, ../fotos/tioman-dorfstrasse-roller-ziege-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/tioman-dorfstrasse-roller-ziege.jpg" srcset="../fotos/tioman-dorfstrasse-roller-ziege-640.jpg 640w, ../fotos/tioman-dorfstrasse-roller-ziege.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="A concrete village road, a scooter riding towards the bridge, a goat crossing, shops under metal roofs on the left and the forested slope behind." loading="lazy" decoding="async"></picture><figcaption>A concrete village road, a scooter riding towards the bridge, a goat crossing, shops under metal roofs on the left and the forested slope behind.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-dorfstrasse-bruecke-640.avif 640w, ../fotos/tioman-dorfstrasse-bruecke-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/tioman-dorfstrasse-bruecke-640.webp 640w, ../fotos/tioman-dorfstrasse-bruecke-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/tioman-dorfstrasse-bruecke.jpg" srcset="../fotos/tioman-dorfstrasse-bruecke-640.jpg 640w, ../fotos/tioman-dorfstrasse-bruecke.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="Looking down the village road towards the bridge with its white railing, a blue gazebo with a Malaysian flag on the right, shops and banana plants on the left." loading="lazy" decoding="async"></picture><figcaption>Looking down the village road towards the bridge with its white railing, a blue gazebo with a Malaysian flag on the right, shops and banana plants on the left.</figcaption></figure><figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-dorfstrasse-pickup-640.avif 640w, ../fotos/tioman-dorfstrasse-pickup-1280.avif 1280w" sizes="(max-width: 560px) 92vw, 220px"><source type="image/webp" srcset="../fotos/tioman-dorfstrasse-pickup-640.webp 640w, ../fotos/tioman-dorfstrasse-pickup-1280.webp 1280w" sizes="(max-width: 560px) 92vw, 220px"><img src="../fotos/tioman-dorfstrasse-pickup.jpg" srcset="../fotos/tioman-dorfstrasse-pickup-640.jpg 640w, ../fotos/tioman-dorfstrasse-pickup.jpg 1280w" sizes="(max-width: 560px) 92vw, 220px" width="1280" height="720" alt="The same view, with a black pickup carrying a company decal on its door in the right foreground." loading="lazy" decoding="async"></picture><figcaption>The same view, with a black pickup carrying a company decal on its door in the right foreground.</figcaption></figure></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The flags are up because of the month.</strong> Malaysia celebrates its independence day, Hari
 Merdeka, on 31 August; throughout August national and state flags hang from houses, fences and
 street poles. On that day we will be in Kota Kinabalu.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>A board on the waterfront in Tekek sorts the whole island at a glance (18 Aug).</strong> A blue
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t10-18-1" data-telegram="2026-08-18T10:18:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>A board on the waterfront in Tekek sorts the whole island at a glance (18 Aug).</strong> A blue
 frame with "Pulau Tioman" down the side in large letters, holding a drawn map with one box per
 village. Tekek: the marina, the marine park centre, a golf course, the jungle path across the
 island to Juara, and a zip line at Keluang. Salang in the far north: a whale rock sculpture and
@@ -906,41 +1020,38 @@ sea: two waterfalls, a viewpoint, a surf school. Nipah and Mukut in the south: a
 the Asah waterfall and a via ferrata on Gunung Nenek Semukut. Between the villages lie the dive
 islands — Chebeh, Tulai, Labas, Sepoi, Soyak, Renggis, Jahat — each marked with a diver or
 snorkel symbol. Whether any of it holds up goes here once we have seen it ourselves.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 10:18</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 10:24</span><span class="spur-dauer">6 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-uebersichtstafel-tekek-640.avif 640w, fotos/tioman-uebersichtstafel-tekek-720.avif 720w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-uebersichtstafel-tekek-640.webp 640w, fotos/tioman-uebersichtstafel-tekek-720.webp 720w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-uebersichtstafel-tekek.jpg" srcset="fotos/tioman-uebersichtstafel-tekek-640.jpg 640w, fotos/tioman-uebersichtstafel-tekek.jpg 720w" sizes="(max-width: 46rem) 92vw, 640px" width="720" height="1280" alt="Blue information board on the waterfront path reading &quot;Pulau Tioman&quot;; inside it a drawn island map with villages, dive sites and activity lists." loading="lazy" decoding="async"></picture><figcaption>Blue information board on the waterfront path reading "Pulau Tioman"; inside it a drawn island map with villages, dive sites and activity lists.</figcaption></figure>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>Flying foxes hang in the needle trees along the shore in Tekek, dozens of them (18 Aug).</strong>
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-uebersichtstafel-tekek-640.avif 640w, ../fotos/tioman-uebersichtstafel-tekek-720.avif 720w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/tioman-uebersichtstafel-tekek-640.webp 640w, ../fotos/tioman-uebersichtstafel-tekek-720.webp 720w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/tioman-uebersichtstafel-tekek.jpg" srcset="../fotos/tioman-uebersichtstafel-tekek-640.jpg 640w, ../fotos/tioman-uebersichtstafel-tekek.jpg 720w" sizes="(max-width: 46rem) 92vw, 640px" width="720" height="1280" alt="Blue information board on the waterfront path reading &quot;Pulau Tioman&quot;; inside it a drawn island map with villages, dive sites and activity lists." loading="lazy" decoding="async"></picture><figcaption>Blue information board on the waterfront path reading "Pulau Tioman"; inside it a drawn island map with villages, dive sites and activity lists.</figcaption></figure>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t10-30-1" data-telegram="2026-08-18T10:30:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>Flying foxes hang in the needle trees along the shore in Tekek, dozens of them (18 Aug).</strong>
 Just before half past six in the evening, a good hour before sunset, they are still there:
 dark bundles on the thin branches, head down, each wrapped in its own wings, three or four
 side by side on some boughs. More than sixty can be counted individually in the enlarged
 crops; where they hang densely they merge into one another, so the colony is larger. The strip
 of trees stands between the concrete path and the sand, with the beach behind it. From the
 path you only see them if you look up — from below they are shadows in the branches.</p><p class="spur"><span class="spur-von">Telegram 18 Aug, 10:30</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 18 Aug, 10:37</span><span class="spur-dauer">8 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-flughunde-tekek-640.avif 640w, fotos/tioman-flughunde-tekek-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-flughunde-tekek-640.webp 640w, fotos/tioman-flughunde-tekek-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-flughunde-tekek.jpg" srcset="fotos/tioman-flughunde-tekek-640.jpg 640w, fotos/tioman-flughunde-tekek.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Needle trees on the beach at Tekek with dozens of dark flying foxes hanging head down among the branches; behind them a concrete path and the sandy beach." loading="lazy" decoding="async"></picture><figcaption>Needle trees on the beach at Tekek with dozens of dark flying foxes hanging head down among the branches; behind them a concrete path and the sandy beach.</figcaption></figure>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>They are island flying foxes, and this strip of trees is one of only two roosts on the
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/tioman-flughunde-tekek-640.avif 640w, ../fotos/tioman-flughunde-tekek-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/tioman-flughunde-tekek-640.webp 640w, ../fotos/tioman-flughunde-tekek-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/tioman-flughunde-tekek.jpg" srcset="../fotos/tioman-flughunde-tekek-640.jpg 640w, ../fotos/tioman-flughunde-tekek.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Needle trees on the beach at Tekek with dozens of dark flying foxes hanging head down among the branches; behind them a concrete path and the sandy beach." loading="lazy" decoding="async"></picture><figcaption>Needle trees on the beach at Tekek with dozens of dark flying foxes hanging head down among the branches; behind them a concrete path and the sandy beach.</figcaption></figure>
+<details class="recherche-box"><summary>3 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>They are island flying foxes, and this strip of trees is one of only two roosts on the
 whole island.</strong> The species on Tioman is <em>Pteropus hypomelanus</em>, the island flying fox. A count
 running from March to October 2015 found the animals in exactly two places: Tekek and Juara.
 It came to 675–1,033 animals in Juara and 2,178–5,385 for the entire island, so the larger
 share hangs here. The international red list rates the species as not threatened, the
 Malaysian one as endangered, and the population is falling. Which species hangs there is not
-settled by the photograph but taken from the study (Aziz et al., <em>Human Ecology</em> 2017).</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>These animals pollinate durian — and it was proved for the first time on this island.</strong>
+settled by the photograph but taken from the study (Aziz et al., <em>Human Ecology</em> 2017).</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>These animals pollinate durian — and it was proved for the first time on this island.</strong>
 In Juara, on the other side of Tioman, nineteen camera traps hung in four flowering durian
 trees from April to July 2015. The flying foxes drink the nectar without destroying the
 flower, and they work above six metres, where the smaller nectar bats do not reach. The trees
 with the most flying fox visits bore ripe fruit; those with few did not. Many farmers treat
 the animals as pests because they sit in the blossom; in fact the harvest depends on them
-(Aziz et al., <em>Ecology and Evolution</em> 2017).</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Do not touch a flying fox, not even a dead one.</strong> That is the only rule needed, and it
-holds for every bat everywhere. Looking, photographing and walking underneath is harmless.</p></div>
+(Aziz et al., <em>Ecology and Evolution</em> 2017).</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Do not touch a flying fox, not even a dead one.</strong> That is the only rule needed, and it
+holds for every bat everywhere. Looking, photographing and walking underneath is harmless.</p></div></details>
 <p><strong>Still open:</strong> what the marine park fee at the ferry counter actually cost, whether the
 receipt was asked for at check-in, and how one gets from the jetty to the cabins — on foot or
 by boat.</p>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Tekek is the village with the infrastructure, and the whole island hangs off it.</strong> There is
+<details class="recherche-box"><summary>7 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Tekek is the village with the infrastructure, and the whole island hangs off it.</strong> There is
 exactly one cash machine on Tioman, a BSN, just around the corner from the airstrip in Tekek.
 The bank, a small clinic, the police, a money changer, the marine park information centre and
 the large duty-free shops are all there too. Staying in any other bay means taking a boat for
 each of those. That is the practical reason to sleep in Tekek, and it has nothing to do with
-the beach.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>"Tioman is cashless" is true — and it does not help us.</strong> The island switched over
+the beach.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>"Tioman is cashless" is true — and it does not help us.</strong> The island switched over
 officially on 7 August 2023: BSN brought QR codes, card terminals and banking agents (<em>Ejen
 Bank BSN</em>) to the villages, and the bank now writes that nearly every purchase runs that way.
 The rails behind it are Malaysian, though — DuitNow QR, a Malaysian debit card, a bank
@@ -950,31 +1061,26 @@ Mastercard and pay DuitNow codes with it, <strong>was discontinued on 31 Decembe
 how-to articles are still online and read as current. And the Alipay+ tie-in only connects
 Asian wallets (AlipayHK, GCash, Kakao Pay, TrueMoney), no European ones. That leaves us two
 ways: card terminals where they exist, and the single ATM in Tekek. Anyone who reads the
-headline and packs less cash because of it draws exactly the wrong conclusion.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The island has been duty-free since 2002.</strong> Alcohol, tobacco and chocolate cost
+headline and packs less cash because of it draws exactly the wrong conclusion.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The island has been duty-free since 2002.</strong> Alcohol, tobacco and chocolate cost
 considerably less than on the mainland — up to 50 per cent is the figure quoted. The largest
 shop is in Tekek. What you are allowed to carry back to the mainland is not stated in any
-source we read, so we are not counting on an allowance.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>There is no through road between the villages.</strong> That leaves three ways: the coastal paths
+source we read, so we are not counting on an allowance.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>There is no through road between the villages.</strong> That leaves three ways: the coastal paths
 on foot, a bicycle, or a sea taxi. Tekek to ABC (Air Batang) is 3.5 kilometres of flat path,
 about 30 minutes; a promenade was built for it in 2017 and it runs along a protected
 snorkelling area, so you see fish from the path itself. A sea taxi to ABC or Salang costs RM25
 to RM30, up to RM60 over longer distances, priced per person and negotiable. Small boats do not
-carry a card reader.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The network is better than the island's reputation, but not everywhere.</strong> Since 2023 all
+carry a card reader.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The network is better than the island's reputation, but not everywhere.</strong> Since 2023 all
 four Malaysian networks report 4G in every village, and an undersea cable has run to Tekek
 since 2018. Tioman is still a forested ridge, though: there are dead spots behind the hills and
-in the remote bays, and they do not disappear because the coverage is officially complete.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The return runs on the same mechanics as the outward leg.</strong> Check-in one hour before
+in the remote bays, and they do not disappear because the coverage is officially complete.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>The return runs on the same mechanics as the outward leg.</strong> Check-in one hour before
 departure, the counter closes 30 minutes before, boarding pass against passport, be on the
 pontoon 30 minutes before. Tekek is only one of five piers on the island; the boat calls at the
 bays in turn, and a delay at one pier lands on everyone after it. The tide that moves the
 Mersing timetable every day moves the return as well — ask the day before is the advice every
-source here gives, and it costs nothing.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Do not pack the marine park receipt in the suitcase.</strong> It is asked for at check-in where
-you stay, and it covers the whole visit.</p></div>
+source here gives, and it costs nothing.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Do not pack the marine park receipt in the suitcase.</strong> It is asked for at check-in where
+you stay, and it covers the whole visit.</p></div></details>
 <h2 id="eating">Eating</h2>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t11-19-1" data-telegram="2026-08-17T11:19:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
 breakfast (17 Aug).</strong> Figures off the menu board, not estimated: nasi goreng, mee goreng,
 kuey teow goreng and mehoon goreng are <strong>RM 6.50</strong> each; with chicken RM 10.00, with beef
 RM 10.50, with mutton RM 11.50. Plain rice RM 2.50, vegetables RM 2.00, a fried egg
@@ -983,21 +1089,20 @@ RM 3.50, teh tarik RM 2.00 hot and RM 2.50 cold — cold costs 50 sen more here,
 board. So breakfast of roti canai and teh tarik is <strong>RM 3.50</strong> (about €0.70), and dinner
 for four with a plate and a drink each is <strong>RM 34 to RM 54</strong> (€7 to €11). Takeaway adds
 <strong>20 sen per box</strong>; that is the only footnote on the board.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 11:19</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 11:42</span><span class="spur-dauer">24 min</span></p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>"It is on the vegetarian side of the menu" and "it is vegetarian" are not the same
+<details class="recherche-box"><summary>2 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>"It is on the vegetarian side of the menu" and "it is vegetarian" are not the same
 thing at a mamak stall.</strong> Meat-free on the board are nasi goreng, mee goreng, kuey teow
 goreng, mehoon goreng biasa, sayur-sayuran, telur goreng, telur dadar and the whole roti
 range (canai, planta, pisang, bom, tisu, naan, capati, tosai, puri kosong). Two things are
 nowhere on the board, though: <strong>sambal almost always contains belacan</strong>, that is shrimp
 paste, and <strong>the wok is not washed between dishes</strong>. If you eat strictly vegetarian, ask
 for "tanpa sambal" and lean towards roti and tosai rather than the fried dishes — those
-come off the griddle, not out of the wok.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Seven words are enough to read any mamak menu yourself.</strong> <em>Ayam</em> chicken · <em>daging</em>
+come off the griddle, not out of the wok.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Seven words are enough to read any mamak menu yourself.</strong> <em>Ayam</em> chicken · <em>daging</em>
 beef · <em>kambing</em> mutton · <em>ikan</em> fish · <em>telur</em> egg · <em>sayur</em> vegetable · <em>goreng</em> fried.
 So "nasi goreng ayam" is fried rice with chicken, and "mee goreng" is fried noodles with
 nothing added. <em>Kosong</em> means empty, so without filling, <em>biasa</em> plain, <em>panas</em> hot and
-<em>sejuk</em> cold — the last two head the two price columns on the drinks board.</p></div>
+<em>sejuk</em> cold — the last two head the two price columns on the drinks board.</p></div></details>
 <h2 id="paying">Paying</h2>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>On the bus from JB Sentral to Larkin you can pay contactless, by credit card and with
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-41-1" data-telegram="2026-08-17T04:41:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>On the bus from JB Sentral to Larkin you can pay contactless, by credit card and with
 Google Pay (17 Aug).</strong> Both were accepted, with no preparation and no local transit card.
 That is the practically most useful thing we learned that day: for the stretch from the
 border building to the long-distance bus station you need neither ringgit in cash nor an
@@ -1030,45 +1135,43 @@ would have arrived on the island expecting no access to cash at all, and would h
 withdraw accordingly in Mersing or hunt for a money changer. BSN is Malaysia's post office
 savings bank; it stands in small towns where none of the big banks does. That makes it more
 important to travellers, not less.</p>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Tipping: nowhere in Singapore or Malaysia.</strong> The reason is printed on the bill.
+<details class="recherche-box"><summary>2 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Tipping: nowhere in Singapore or Malaysia.</strong> The reason is printed on the bill.
 Singapore: 10 % service charge + 9 % GST, announced on the menu as <code>++</code> after the price — so
 roughly 20 % is added anyway. Malaysia: 10 % service charge + 6 % SST on food and drink. In a
 hawker centre or at a street stall there is neither, and you pay the price on the sign. Taxi
 drivers expect nothing — ComfortDelGro writes on its own site that "you are not expected to
-tip your driver". At Changi airport staff are not allowed to accept anything at all.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Careful with older guidebooks:</strong> the tax rates are recent. Singapore's GST has only been
+tip your driver". At Changi airport staff are not allowed to accept anything at all.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Careful with older guidebooks:</strong> the tax rates are recent. Singapore's GST has only been
 at 9 % since 1 Jan 2024 (8 % before that). In Malaysia the general service tax rose to 8 % in
 March 2024, while food and drink stayed at 6 % — including after the extension in July 2025.
-Anyone reading 8 % for restaurants is reading a wrong number.</p></div>
+Anyone reading 8 % for restaurants is reading a wrong number.</p></div></details>
 <div class="entry entry--offen"><span class="mark" aria-hidden="true">…</span><span class="mark-label">still open</span><p><strong>Open, still to come:</strong> whether cards also work for the ferry ticket, in shops on Tioman and
 for the tours in Sabah.</p></div>
 <h2 id="power-internet-phone">Power, internet, phone</h2>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Bahrain, Singapore and Malaysia all use type G</strong> — the British plug with three flat pins.
+<details class="recherche-box"><summary>2 looked-up notes — not checked ourselves</summary><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Bahrain, Singapore and Malaysia all use type G</strong> — the British plug with three flat pins.
 A German Schuko plug fits the wall in none of the three. Voltage 230 V (Bahrain, Singapore)
 and 240 V (Malaysia), 50 Hz everywhere. Without an adapter it is three weeks of power bank,
 and you only notice on the first evening, when all four devices are flat. Adapters are
-available in duty-free in Bahrain, at Changi and in any Malaysian electronics shop.</p></div>
-<div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>At Bahrain airport there are charging points built into the seating rows at the gates</strong>,
+available in duty-free in Bahrain, at Changi and in any Malaysian electronics shop.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>At Bahrain airport there are charging points built into the seating rows at the gates</strong>,
 past security, USB right at the seat — no adapter needed for those. Before security, in the
-public area, there are only ordinary sockets. Wi-Fi <code>BIA Free WiFi</code>, no registration.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>Malaysian long-distance buses have a USB socket at the seat (17 Aug).</strong> Two USB-A ports,
+public area, there are only ordinary sockets. Wi-Fi <code>BIA Free WiFi</code>, no registration.</p></div></details>
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t06-21-1" data-telegram="2026-08-17T06:21:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>Malaysian long-distance buses have a USB socket at the seat (17 Aug).</strong> Two USB-A ports,
 set into the side panel under the armrest, so below seat level and not at eye height — you
 only find them if you go looking. Which means your own cable belongs in your hand luggage and
 not in the suitcase in the hold. The socket was reported with a photo from a bus leaving
 Larkin Sentral; exactly which line it was is not established.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 06:21</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 06:38</span><span class="spur-dauer">17 min</span></p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>There are CCTV cameras in the coach, and the complaints number is stuck to the
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-37-1" data-telegram="2026-08-17T09:37:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>There are CCTV cameras in the coach, and the complaints number is stuck to the
 windscreen (17 Aug).</strong> Two dome cameras in the ceiling above the aisle, plus a sticker from
 the Malaysian transport ministry reading "Talian Aduan MOT" with a freephone number and a QR
 code. If you are wondering how regulated Malaysian long-distance coach travel is: regulated
 enough that the supervising authority puts its complaints desk in every passenger's line of
 sight. For a traveller that reads as reassuring rather than bureaucratic.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 09:37</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:50</span><span class="spur-dauer">13 min</span></p></div>
-<figure class="foto"><picture><source type="image/avif" srcset="fotos/fernbus-kameras-beschwerdenummer-640.avif 640w, fotos/fernbus-kameras-beschwerdenummer-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/fernbus-kameras-beschwerdenummer-640.webp 640w, fotos/fernbus-kameras-beschwerdenummer-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/fernbus-kameras-beschwerdenummer.jpg" srcset="fotos/fernbus-kameras-beschwerdenummer-640.jpg 640w, fotos/fernbus-kameras-beschwerdenummer.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen." loading="lazy" decoding="async"></picture><figcaption>The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen.</figcaption></figure>
+<figure class="foto"><picture><source type="image/avif" srcset="../fotos/fernbus-kameras-beschwerdenummer-640.avif 640w, ../fotos/fernbus-kameras-beschwerdenummer-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/fernbus-kameras-beschwerdenummer-640.webp 640w, ../fotos/fernbus-kameras-beschwerdenummer-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/fernbus-kameras-beschwerdenummer.jpg" srcset="../fotos/fernbus-kameras-beschwerdenummer-640.jpg 640w, ../fotos/fernbus-kameras-beschwerdenummer.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen." loading="lazy" decoding="async"></picture><figcaption>The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen.</figcaption></figure>
 <div class="entry entry--gescheitert"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">did not work</span><p><strong>CelcomDigi could not be bought online.</strong> The order process broke reproducibly at the
 address entry. It works at a counter with the original passport; places to buy in Kuala
 Lumpur (Pavilion, Suria KLCC) and at KLIA airport.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Singtel hi!Tourist is limited to three per passport.</strong> After that the passport is used up
 and the next card has to go on somebody else's.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The Singapore eSIM does work in Malaysia — the table was right, not the small print
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-58-1" data-telegram="2026-08-17T10:58:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">we did it ourselves</span><p><strong>The Singapore eSIM does work in Malaysia — the table was right, not the small print
 (17 Aug).</strong> The plan is <code>Singtel hi!Tourist eSIM</code>, S$15 (about 10 euros), <strong>30 days, 500 GB</strong>,
 and the country list on the sales page names Malaysia, Indonesia, Thailand and Hong Kong
 alongside Singapore. That was exactly the open question: the same terms say under 2.3 only
