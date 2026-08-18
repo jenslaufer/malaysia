@@ -246,6 +246,14 @@ fishing fleet, and the ferries share the water with it.
    places to stay on Tioman ask for it at check-in, and it covers the whole stay.
 3. **Johor fee counter.** Its own counter and its own amount — see below.
 
+**✓ The fees are not collected in the terminal but in an office near the jetty (18.08.).**
+Jens reported it on the morning of the crossing: the office sits away from the terminal
+building, with a pavilion in front of it — that is how you find it. So the boarding passes come
+from one place and the fees are paid at another. That is an extra walk, and it is not in our
+plan further down. Which of the fees are collected there together, and what it came to in the
+end, goes here as soon as it is reported.
+<!-- werkstatt: telegram=2026-08-18T02:12 -->
+
 **○ The fees, and the one where the sources disagree.** The marine park fee is not in dispute:
 foreigners pay RM30 as adults and RM15 as a child aged 6 to 12, under 6 free, over 60 also
 RM15 (rates published by the Malaysian Department of Fisheries). For the four of us — three

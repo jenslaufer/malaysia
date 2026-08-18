@@ -248,6 +248,14 @@ Arbeitshafen mit Fischerei, und der Fährbetrieb teilt sich das Wasser mit ihr.
    Aufenthalt.
 3. **Schalter für die Johor-Gebühr.** Eigener Schalter, eigener Betrag, siehe unten.
 
+**✓ Kassiert wird nicht im Terminal, sondern in einem Büro in der Nähe der Anlegestelle
+(18.08.).** Jens hat es am Morgen der Überfahrt gemeldet: das Büro liegt abseits des
+Terminalgebäudes, davor steht ein Pavillon — daran ist es zu erkennen. Die Bordkarten gibt es
+also an der einen Stelle, gezahlt wird an der anderen. Das ist ein zusätzlicher Weg, und in
+unserer Planung weiter unten steht er nicht. Welche der Gebühren dort zusammen kassiert werden
+und wie viel es am Ende war, steht hier, sobald es gemeldet ist.
+<!-- werkstatt: telegram=2026-08-18T02:12 -->
+
 **○ Die Gebühren — und die eine, bei der die Quellen auseinandergehen.** Die
 Marine-Park-Gebühr ist unstrittig: Ausländer zahlen RM30 als Erwachsene und RM15 als Kind von
 6 bis 12 Jahren, unter 6 frei, Senioren ab 60 ebenfalls RM15 (Sätze des malaysischen
