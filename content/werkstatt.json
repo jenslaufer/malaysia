@@ -103,16 +103,22 @@
       "veroeffentlicht": "2026-08-18T07:03:23+00:00"
     },
     {
-      "anker": "**✓ Der Regenwald steht direkt hinter den Häusern (18.08.).*",
-      "minuten": 7,
+      "anker": "**✓ Der Regenwald steht direkt hinter den Häusern von Tekek ",
+      "minuten": 24,
       "telegram": "2026-08-18T09:43:00+00:00",
-      "veroeffentlicht": "2026-08-18T09:50:12+00:00"
+      "veroeffentlicht": "2026-08-18T10:07:06+00:00"
     },
     {
-      "anker": "**✓ Die Dorfstraße ist ein Betonstreifen, und viel fährt dar",
-      "minuten": 7,
+      "anker": "**✓ Die Dorfstraße in Tekek ist ein Betonstreifen, und viel ",
+      "minuten": 24,
       "telegram": "2026-08-18T09:43:00+00:00",
-      "veroeffentlicht": "2026-08-18T09:50:12+00:00"
+      "veroeffentlicht": "2026-08-18T10:07:06+00:00"
+    },
+    {
+      "anker": "**✓ Am Ufer in Tekek steht eine Tafel, die die ganze Insel a",
+      "minuten": 6,
+      "telegram": "2026-08-18T10:18:00+00:00",
+      "veroeffentlicht": "2026-08-18T10:24:29+00:00"
     },
     {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
@@ -145,10 +151,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 24,
-  "juengste_minuten": 7,
-  "markiert": 24,
-  "median_minuten": 12,
+  "gemessen": 25,
+  "juengste_minuten": 6,
+  "markiert": 25,
+  "median_minuten": 17,
   "schnellste_minuten": 4,
   "stand": "2026-08-18"
 }
