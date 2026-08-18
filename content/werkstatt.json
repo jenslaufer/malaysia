@@ -91,6 +91,18 @@
       "veroeffentlicht": "2026-08-18T03:41:11+00:00"
     },
     {
+      "anker": "**✓ Die Unterkunft steht direkt auf dem Sand (18.08.).** Kei",
+      "minuten": 7,
+      "telegram": "2026-08-18T06:56:00+00:00",
+      "veroeffentlicht": "2026-08-18T07:03:23+00:00"
+    },
+    {
+      "anker": "**✓ Die Bucht ist flach und ruhig, der Steg liegt am anderen",
+      "minuten": 7,
+      "telegram": "2026-08-18T06:56:00+00:00",
+      "veroeffentlicht": "2026-08-18T07:03:23+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -121,10 +133,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 20,
-  "juengste_minuten": 9,
-  "markiert": 20,
-  "median_minuten": 17,
+  "gemessen": 22,
+  "juengste_minuten": 7,
+  "markiert": 22,
+  "median_minuten": 15,
   "schnellste_minuten": 4,
   "stand": "2026-08-18"
 }
