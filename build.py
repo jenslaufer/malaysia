@@ -337,7 +337,7 @@ ZEICHEN_EN = {
 UMLAUTE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss"})
 
 
-MARKER = re.compile(r"^[ \t]*<!--\s*werkstatt:.*?-->[ \t]*\n?", flags=re.M)
+MARKER = re.compile(r"^[ \t]*<!--\s*(?:werkstatt|ort):.*?-->[ \t]*\n?", flags=re.M)
 # Derselbe Marker, aber mit der Uhrzeit als Gruppe. Er wird vor dem Entfernen
 # aller Kommentare in ein Token umgeschrieben, damit die Herkunft den Weg durch
 # den Renderer ueberlebt: die englische Fassung hat einen anderen Text und
@@ -345,6 +345,16 @@ MARKER = re.compile(r"^[ \t]*<!--\s*werkstatt:.*?-->[ \t]*\n?", flags=re.M)
 # finden, und zwar still.
 MARKER_ZEIT = re.compile(r"[ \t]*<!--\s*werkstatt:\s*telegram=([0-9TZ:+\-]+)\s*-->[ \t]*")
 TOKEN = re.compile(r"@@WERKSTATT:([0-9TZ:+\-]+)@@")
+# Der Ort eines Eintrags. Er geht denselben Weg wie die Herkunft und aus
+# demselben Grund: die englische Fassung hat einen anderen Text, ueber den
+# Text gefunden faende sie nichts — und zwar still.
+ORT_WERT = re.compile(r"[ \t]*<!--\s*ort:\s*([a-z0-9-]+)\s*-->[ \t]*")
+ORT_TOKEN = re.compile(r"@@ORT:([a-z0-9-]+)@@")
+
+
+class OrtException(Exception):
+    """Ein Eintrag nennt einen Ort, den die Karte nicht kennt."""
+
 # Die Zaehlziffer eines Listenpunkts. Sie muss raus, bevor der Punkt ein <li>
 # wird — die Nummer setzt der Browser, sonst steht "1. 1." auf der Seite.
 ZIFFER = re.compile(r"^\d+\.[ \t]+")
@@ -415,7 +425,7 @@ def inline(text: str) -> str:
     return t
 
 
-def _eintrag(block: str, telegram: str = None) -> str | None:
+def _eintrag(block: str, telegram: str = None, ort: str = None) -> str | None:
     """Absatz mit Zeichen → eigener Eintrag mit Zeichen in der Randspalte."""
     treffer = re.match(r"^\*\*([✓○✗])\s+(.*)$", block, flags=re.S)
     if treffer:
@@ -440,13 +450,25 @@ def _eintrag(block: str, telegram: str = None) -> str | None:
         MARKEN[schluessel] = MARKEN.get(schluessel, 0) + 1
         marke = (f' id="eintrag-{schluessel}-{MARKEN[schluessel]}"'
                  f' data-telegram="{html.escape(daten["telegram"], quote=True)}"')
-    elif zeichen == "✗":
-        # ✗ traegt keine Messung — es ist ja gerade nichts passiert, das man
-        # von Telegram bis zur Seite haette stoppen koennen. Ohne id ist der
-        # Block oben aber nicht verlinkbar, also kommt die Marke aus dem TITEL.
-        # Der Fliesstext darunter wird nachgebessert, die fette Zeile nicht;
+    elif zeichen in "✗✓":
+        # Keine Messung, aber verlinkbar sein muss der Block trotzdem. Bei ✗ ist
+        # das die Regel — es ist ja gerade nichts passiert, das man von Telegram
+        # bis zur Seite haette stoppen koennen. Bei ✓ die Ausnahme: die 33
+        # MRT-Minuten sind aus zwei Zeitstempeln gerechnet und bekommen deshalb
+        # bewusst keinen Herkunftsmarker. Die Marke kommt dann aus dem TITEL —
+        # der Fliesstext darunter wird nachgebessert, die fette Zeile nicht;
         # ein geteilter Link ueberlebt damit eine Korrektur am Absatz.
-        marke = f' id="{_fehl_marke(rest)}"'
+        marke = f' id="{_fehl_marke(rest, "fehl" if zeichen == "✗" else "erlebt")}"'
+    # Der Ort steht hinter der Herkunft, weil `EINTRAG_ZEILE` die Attribute in
+    # dieser Reihenfolge liest. Ein unbekannter Schluessel bricht ab statt still
+    # zu verschwinden: ein Tippfehler waere sonst ein Eintrag, der nie auf der
+    # Karte auftaucht, und niemand erfuehre warum.
+    if ort:
+        if ort not in ORTE:
+            raise OrtException(
+                f"Unbekannter Ort '{ort}'. Bekannt sind: {', '.join(sorted(ORTE))}"
+            )
+        marke += f' data-ort="{ort}"'
     return (
         f'<div class="entry entry--{klasse}"{marke}>'
         f'<span class="mark" aria-hidden="true">{glyph}</span>'
@@ -461,8 +483,14 @@ FEHL_MARKEN: dict[str, int] = {}
 FEHL_TITEL = re.compile(r"^\*\*(.*?)\*\*", flags=re.S)
 
 
-def _fehl_marke(rest: str) -> str:
-    """Sprungmarke fuer ein ✗, aus den ersten Woertern seines Titels.
+def _fehl_marke(rest: str, praefix: str = "fehl") -> str:
+    """Sprungmarke aus den ersten Woertern des Titels.
+
+    Zwei Aufrufer, ein Verfahren: ein ✗ hat nie eine Messung (es ist ja gerade
+    nichts passiert), und ein paar ✓ haben ebenfalls keine — die 33 MRT-Minuten
+    sind aus zwei Zeitstempeln gerechnet, nicht gemeldet. Ohne Marke ist so ein
+    Eintrag von der Karte aus nicht erreichbar, und die Zahl unter der Karte
+    waere kleiner als die Zahl der Haken auf der Seite.
 
     Gekuerzt auf eine Kante, nicht mitten im Wort: eine Marke ist eine Adresse,
     die jemand weitergibt. Der Zaehler dahinter faengt den Fall ab, dass zwei
@@ -476,9 +504,10 @@ def _fehl_marke(rest: str) -> str:
         # sich wie ein Uebertragungsfehler, und die Marke steht in der
         # Adresszeile, sobald jemand den Punkt weitergibt.
         basis = basis[:48].rsplit("-", 1)[0]
+    basis = f"{praefix}-{basis}"
     FEHL_MARKEN[basis] = FEHL_MARKEN.get(basis, 0) + 1
     nr = FEHL_MARKEN[basis]
-    return f"fehl-{basis}" + (f"-{nr}" if nr > 1 else "")
+    return basis + (f"-{nr}" if nr > 1 else "")
 
 
 def _uhr(iso: str) -> str:
@@ -761,6 +790,7 @@ def render_markdown(md: str) -> str:
     # Pflegeblock am Dateiende auch die Uhrzeit, an der die englische Fassung
     # ihre Messung wiederfindet.
     md = MARKER_ZEIT.sub(r"@@WERKSTATT:\1@@", md)
+    md = ORT_WERT.sub(r"@@ORT:\1@@", md)
     md = strip_kommentare(strip_marker(md))
     MARKEN.clear()  # sonst zaehlt die englische Fassung auf der deutschen weiter
     FEHL_MARKEN.clear()  # dito: sonst heisst das erste ✗ der en-Fassung fehl-…-2
@@ -770,6 +800,9 @@ def render_markdown(md: str) -> str:
         zeit = TOKEN.search(block)
         telegram = zeit.group(1) if zeit else None
         block = TOKEN.sub("", block).strip()
+        wo = ORT_TOKEN.search(block)
+        ort = wo.group(1) if wo else None
+        block = ORT_TOKEN.sub("", block).strip()
         if not block or set(block) <= {"-"} and len(block) >= 3:
             continue
         bilder = _fotos(block)
@@ -798,7 +831,7 @@ def render_markdown(md: str) -> str:
             )
             teile.append(f'<ol class="schritte">{li}</ol>')
         else:
-            teile.append(_eintrag(block, telegram) or f"<p>{inline(block)}</p>")
+            teile.append(_eintrag(block, telegram, ort) or f"<p>{inline(block)}</p>")
     return "\n".join(teile)
 
 
@@ -810,7 +843,8 @@ def render_markdown(md: str) -> str:
 
 EINTRAG_ZEILE = re.compile(
     r'^<div class="entry entry--(?P<art>[a-z]+)"'
-    r'(?: id="(?P<id>[^"]+)")?(?: data-telegram="(?P<zeit>[^"]+)")?>'
+    r'(?: id="(?P<id>[^"]+)")?(?: data-telegram="(?P<zeit>[^"]+)")?'
+    r'(?: data-ort="(?P<ort>[^"]+)")?>'
 )
 
 # Ein Block ist NICHT eine Zeile. Die Absaetze im Quelldokument sind umbrochen,
@@ -855,6 +889,11 @@ def _zuletzt(rumpf: str, anzahl: int = 5) -> str:
     for i, block in enumerate(bloecke):
         m = EINTRAG_ZEILE.match(block)
         if not m or m.group("art") != "erlebt" or not m.group("id"):
+            continue
+        # Seit ✓ ohne Messung eine Titelmarke bekommt, reicht die id als Filter
+        # nicht mehr: ohne Zeitstempel gibt es kein Datum, nach dem sich
+        # sortieren liesse, und `sort` faellt ueber das None.
+        if not m.group("zeit"):
             continue
         titel = STARK.search(block)
         if not titel:
@@ -1022,24 +1061,114 @@ STATIONEN = [
      "4–5 Sep · Tip of Borneo"),
 ]
 
+# Der Schluessel, den ein `<!-- ort: … -->` nennen darf. Aus STATIONEN erzeugt,
+# nicht danebengeschrieben: zwei Listen waeren nach einer Woche zwei Listen.
+ORTE = {slug(name): name for name, *_ in STATIONEN}
 
-def _karte() -> str:
-    stationen = [(name, lat, lon, _t(de, en)) for name, lat, lon, de, en in STATIONEN]
-    punkte = ",\n      ".join(
-        f'["{name}", {lat}, {lon}, "{note}"]' for name, lat, lon, note in stationen
+
+# Was die Karte aus dem Dokument geholt hat. Gemeldet wird eine Zahl, keine
+# Warnung: dass eine Etappe ("gut vier Stunden von der Grenze nach Mersing")
+# keinen Ort traegt, ist die Regel und kein Versaeumnis — aber wenn die Zahl
+# eines Tages faellt, waehrend die Seite waechst, sieht man es hier.
+KARTE_SUMME: dict[str, int] = {}
+
+
+def _erlebnisse(rumpf: str) -> dict[str, list[tuple[str, str]]]:
+    """Je Ort die selbst erlebten Eintraege, in Dokumentreihenfolge.
+
+    Nur `✓` MIT Sprungmarke. Recherche hat keinen Ort, an dem jemand gewesen
+    waere — ein Punkt dafuer waere eine Ortsangabe fuer etwas Gelesenes.
+    """
+    gefunden: dict[str, list[tuple[str, str]]] = {}
+    erlebt_gesamt = 0
+    for block in _bloecke(rumpf):
+        m = EINTRAG_ZEILE.match(block)
+        if not m or m.group("art") != "erlebt":
+            continue
+        erlebt_gesamt += 1
+        if not m.group("ort") or not m.group("id"):
+            continue
+        titel = STARK.search(block)
+        if not titel:
+            continue
+        gefunden.setdefault(m.group("ort"), []).append((
+            m.group("id"),
+            TITEL_DATUM.sub("", titel.group(1).strip()).rstrip(" .") + ".",
+        ))
+    KARTE_SUMME.clear()
+    KARTE_SUMME.update(
+        erlebt=erlebt_gesamt,
+        verortet=sum(len(v) for v in gefunden.values()),
+        stationen=len(gefunden),
     )
-    liste = "".join(
-        f"<li><b>{html.escape(name)}</b> <span>{html.escape(note)}</span></li>"
-        for name, _, _, note in stationen
+    return gefunden
+
+
+def _karte(rumpf: str = "") -> str:
+    """Die Route — und seit Jens' vierter Idee (18.08. 09:44) der zweite Weg
+    in den Text.
+
+    "Ein Punkt je ✓ mit Sprung zum Eintrag gibt einen zweiten Weg hinein, ueber
+    den Ort statt ueber das Thema." Gebuendelt wird pro Station, nicht pro
+    Eintrag: sieben Erlebnisse in Tekek liegen auf derselben Koordinate und
+    haetten sich gegenseitig verdeckt.
+
+    Neue Koordinaten kommen dabei keine dazu, und das ist Absicht. Die acht
+    Stationen stehen seit dem 17.08. hier und sind geprueft; ein Punkt, den
+    diese Sitzung fuer "Mamak-Stand in Mersing" erfunden haette, waere eine
+    Genauigkeit, die niemand gemessen hat.
+    """
+    erlebt = _erlebnisse(rumpf)
+    stationen = [
+        (name, lat, lon, _t(de, en), erlebt.get(slug(name), []))
+        for name, lat, lon, de, en in STATIONEN
+    ]
+    gesamt = sum(len(e) for *_, e in stationen)
+
+    # Das JS bekommt die Daten als JSON, nicht handgeschrieben: in den Titeln
+    # stehen Anfuehrungszeichen, Apostrophe und Umlaute. `</` wird zerlegt,
+    # weil sonst ein Titel das <script> schliessen koennte.
+    daten = json.dumps(
+        [[name, lat, lon, note, [[i, t] for i, t in eintraege]]
+         for name, lat, lon, note, eintraege in stationen],
+        ensure_ascii=False,
+    ).replace("</", "<\\/")
+
+    posten = []
+    for name, _, _, note, eintraege in stationen:
+        zahl = (f'<span class="stationen-zahl">{len(eintraege)}</span>'
+                if eintraege else "")
+        sprung = "".join(
+            f'<li><a href="#{i}">{t}</a></li>' for i, t in eintraege
+        )
+        liste = f'<ul class="stationen-erlebt">{sprung}</ul>' if sprung else ""
+        posten.append(
+            f"<li><b>{html.escape(name)}</b>{zahl}"
+            f'<span class="stationen-zeit">{html.escape(note)}</span>{liste}</li>'
+        )
+    liste = "".join(posten)
+
+    # Seitentext, nicht Kommentar: hier stehen echte Umlaute. Ein Test haelt
+    # die ganze Seite dagegen — die ASCII-Umschrift dieser Datei gilt fuer den
+    # Quelltext, nicht fuer das, was der Leser sieht.
+    grund = _t(
+        "Acht Stationen zwischen Singapur und dem Norden Borneos. Die Anreise "
+        "über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.",
+        "Eight stops between Singapore and the north of Borneo. The journey out "
+        "via Frankfurt and Bahrain lies outside the frame.",
     )
+    if gesamt:
+        grund += _t(
+            f" An den Stationen hängen die {gesamt} selbst erlebten Einträge — "
+            "ein zweiter Weg in den Text, über den Ort statt über das Thema.",
+            f" The {gesamt} first-hand entries hang off the stops — a second way "
+            "into the text, by place instead of by topic.",
+        )
+
     return f"""
 <section class="karte-block" aria-labelledby="karte-titel">
   <h2 id="karte-titel">{_t("Die Route", "The route")}</h2>
-  <p class="karte-intro">{_t(
-     "Acht Stationen zwischen Singapur und dem Norden Borneos. "
-     "Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.",
-     "Eight stops between Singapore and the north of Borneo. The journey out via "
-     "Frankfurt and Bahrain lies outside the frame.")}</p>
+  <p class="karte-intro">{grund}</p>
   <div id="karte" role="img" aria-label="{_t(
        'Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo',
        'Map of the route from Singapore across the peninsula to Sabah on Borneo')}">
@@ -1067,9 +1196,7 @@ def _karte() -> str:
     if (!el || typeof L === "undefined") return;
     el.innerHTML = "";
     el.removeAttribute("role");
-    var orte = [
-      {punkte}
-    ];
+    var orte = {daten};
     var karte = L.map("karte", {{ scrollWheelZoom: false }});
     L.tileLayer("https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{
       maxZoom: 17,
@@ -1078,9 +1205,24 @@ def _karte() -> str:
     var linie = [];
     orte.forEach(function (o, i) {{
       linie.push([o[1], o[2]]);
-      L.circleMarker([o[1], o[2]], {{
-        radius: 7, weight: 2, color: "#1c4f3f", fillColor: "#2f6b4f", fillOpacity: 1
-      }}).addTo(karte).bindPopup("<b>" + (i + 1) + ". " + o[0] + "</b><br>" + o[3]);
+      var eintraege = o[4] || [];
+      // Der Radius traegt die Zahl der Erlebnisse. Eine Station ohne Erlebnis
+      // bleibt sichtbar — ein Loch in der Linie waere eine andere Reise.
+      var punkt = L.circleMarker([o[1], o[2]], {{
+        radius: eintraege.length ? 7 + Math.min(eintraege.length, 8) : 5,
+        weight: 2, color: "#1c4f3f",
+        fillColor: eintraege.length ? "#2f6b4f" : "#8aa79b",
+        fillOpacity: eintraege.length ? 1 : .6
+      }}).addTo(karte);
+      var text = "<b>" + (i + 1) + ". " + o[0] + "</b><br>" + o[3];
+      if (eintraege.length) {{
+        text += "<ul class=\\"karte-liste\\">";
+        eintraege.forEach(function (e) {{
+          text += "<li><a href=\\"#" + e[0] + "\\">" + e[1] + "</a></li>";
+        }});
+        text += "</ul>";
+      }}
+      punkt.bindPopup(text, {{ maxWidth: 320 }});
     }});
     L.polyline(linie, {{ color: "#1c4f3f", weight: 2, opacity: .45, dashArray: "5 6" }}).addTo(karte);
     karte.fitBounds(L.latLngBounds(linie).pad(.12));
@@ -1312,7 +1454,7 @@ def baue_seite(md: str) -> str:
     schnitt = rumpf.find("<h2")
     kopf, rest = (rumpf[:schnitt], rumpf[schnitt:]) if schnitt > 0 else (rumpf, "")
     rest = (_zuletzt(rumpf) + _fehlschlaege(rumpf) + _werkstatt_band(WERKSTATT_SUMME)
-            + _karte() + falte_recherche(rest) + _autor_block())
+            + _karte(rumpf) + falte_recherche(rest) + _autor_block())
 
     vorlage = (WURZEL / "template" / _t("page.html", "page.en.html")).read_text(encoding="utf-8")
     css = (WURZEL / "template" / "site.css").read_text(encoding="utf-8")
@@ -1642,6 +1784,12 @@ def main() -> int:
             print(f"ABBRUCH ({sprache}) — {e}", file=sys.stderr)
             print("Nichts geschrieben. Den Satz im Quelldokument entfernen.", file=sys.stderr)
             return 1
+        if KARTE_SUMME:
+            print(
+                f"Karte ({sprache}): {KARTE_SUMME['verortet']} von "
+                f"{KARTE_SUMME['erlebt']} Erlebnissen an "
+                f"{KARTE_SUMME['stationen']} Stationen"
+            )
         namen = warne_namen(seiten[sprache])
         if namen:
             print(

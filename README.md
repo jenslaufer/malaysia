@@ -33,13 +33,56 @@ oder gelöscht** — es wurde nur sortiert, und das an drei Stellen:
 | `#zuletzt` (`_zuletzt`) | die 5 jüngsten **✓** mit Bild, Datum, Sprungmarke | die frischen Einträge liegen in ihrem Themenabschnitt; wer nach zwei Tagen wiederkommt, findet nicht, was neu ist |
 | `#fehlschlaege` (`_fehlschlaege`) | **alle ✗**, ungedeckelt | 2 gegen 69: wer überfliegt, sieht lauter Haken und keinen Reinfall — das liest sich glatter, als es war |
 | `<details>` (`falte_recherche`) | ≥2 aufeinanderfolgende **○** in einem Kasten | die Seite verspricht „was wirklich funktioniert hat" und bestand mehrheitlich aus Vorher-Gelesenem |
+| `.stationen` (`_karte`) | je Station die **✓**, die dort passiert sind | die Karte zeichnete nur die Route; über den Ort führte kein Weg in den Text |
 
 Sprungmarken: **✓** hängt am Telegram-Zeitstempel (siehe unten), **✗** am
 eigenen Titel (`fehl-…`, an der Wortkante gekürzt) — ein ✗ hat keine Messung,
-weil gerade nichts von Telegram bis zur Seite gelaufen ist. Beide Marken
-entstehen im selben Build wie der Link darauf, können also nicht ins Leere
-zeigen; ein Test hält das gegen die **ausgelieferte** Datei fest, nicht gegen
-den Renderer.
+weil gerade nichts von Telegram bis zur Seite gelaufen ist. **Ein ✓ ohne
+Messung bekommt dieselbe Titelmarke, nur mit `erlebt-`**: die 33 MRT-Minuten
+sind aus zwei Zeitstempeln gerechnet und tragen deshalb bewusst keinen
+Herkunftsmarker — ohne Marke wäre der Eintrag von der Karte aus nicht
+erreichbar, und die Zahl unter der Karte wäre kleiner als die Zahl der Haken
+auf der Seite. Alle Marken entstehen im selben Build wie der Link darauf,
+können also nicht ins Leere zeigen; ein Test hält das gegen die
+**ausgelieferte** Datei fest, nicht gegen den Renderer.
+
+## Der Ort steht im Dokument, er wird nicht geraten
+
+Jens' vierte Idee vom 18.08.: „Ein Punkt je ✓ mit Sprung zum Eintrag gibt einen
+zweiten Weg hinein, über den Ort statt über das Thema."
+
+Ein Eintrag nennt seinen Ort selbst, in einer eigenen Zeile direkt darunter —
+gleiche Bauform wie der Herkunftsmarker, gleicher Grund (die englische Fassung
+hat einen anderen Text, über den Text gefunden fände sie nichts, und zwar
+still):
+
+    <!-- ort: mersing -->
+
+Erlaubt sind ausschließlich die Schlüssel aus `STATIONEN` (`ORTE` wird daraus
+erzeugt, nicht danebengeschrieben). **Ein unbekannter Schlüssel bricht den Build
+ab** — still verschluckt wäre er ein Eintrag, der nie auf der Karte auftaucht,
+ohne dass jemand erführe warum.
+
+Drei Regeln, die sich beim Setzen der ersten 23 Marker ergeben haben:
+
+1. **Der Ort kommt aus dem Satz, nie aus dem Abschnitt.** „Essen", „Bezahlen"
+   und „Strom" sind Themen; ihre Einträge stammen aus vier verschiedenen Orten.
+   Ein aus der Überschrift geratener Punkt ist derselbe Fehler wie ein ✓ ohne
+   Erlebnis — er sieht aus wie eine Messung.
+2. **Eine Etappe bekommt keinen Marker**, außer der Eintrag beschreibt etwas,
+   das nur an einem der beiden Enden zu sehen ist. „Gut vier Stunden von der
+   Grenze nach Mersing" ist eine Dauer, kein Ort; „Eingestiegen wird vom Steg
+   aus" ist Mersing. Genauso wenig bekommt Landesweites einen (die eSIM trägt
+   in ganz Malaysia). Von 29 ✓ tragen deshalb 23 einen Ort, und der Build
+   druckt die Zahl bei jedem Lauf: `Karte (de): 23 von 29 Erlebnissen an 4
+   Stationen`.
+3. **Gebündelt wird pro Station, nicht pro Eintrag**, und es kommen **keine
+   neuen Koordinaten** dazu. Sieben Erlebnisse in Tekek liegen auf derselben
+   Koordinate und hätten sich gegenseitig verdeckt; ein eigener Punkt für
+   „Mamak-Stand in Mersing" wäre eine Genauigkeit, die niemand gemessen hat.
+   Eine Station ohne Erlebnis bleibt sichtbar (blasser, kleiner) und bekommt
+   **keine 0** — Kuala Lumpur und Sandakan sind nicht leer, sie sind noch nicht
+   dran.
 
 ## Die Verbindung zu /otto/ ist eine Messung, kein Link
 

@@ -32,6 +32,7 @@ einzigen Satz mehr sagen, ob dahinter eine Erfahrung steht oder eine Internetsei
 (16.08.).** Gemessen zwischen „wir sind an der Jalan Besar" und „wir sind am Garten", also
 inklusive Weg zur Station und Fußweg am Ende. Mit der MRT, Downtown Line, sechs Stationen
 bis Bayfront.
+<!-- ort: singapur -->
 
 **○ Die Fahrtrichtung ist die Stolperstelle, und sie kostet den Anschluss.** Die Downtown
 Line fährt einen Bogen: Bayfront (DT16) liegt geografisch südlich von Jalan Besar (DT22),
@@ -47,6 +48,7 @@ Supertree füllt aus der Nähe das ganze Bild. Auf dem Weitwinkelfoto unten steh
 aufgespannte Schirme in der Menge; die Show läuft also auch bei Regen weiter. (Das ist vom
 Bild abgelesen, nicht von uns berichtet.)
 <!-- werkstatt: telegram=2026-08-17T09:39 -->
+<!-- ort: singapur -->
 
 ![Zwei Supertrees in grünem Licht, dahinter das Marina Bay Sands und der beleuchtete Skyway.](foto:2026-08-17_093911.jpg)
 ![Ein einzelner Supertree von unten, die Krone von innen grün ausgeleuchtet.](foto:2026-08-17_093914.jpg)
@@ -73,11 +75,13 @@ reine Preisvergleich rät falsch.
 hat, ist nicht mitgeschrieben — die Erfahrung anderer ist, dass die Zeit fast vollständig
 für das Anstehen draufgeht und nicht für die Strecke; der Causeway ist gut einen Kilometer lang.
 <!-- werkstatt: telegram=2026-08-17T04:01 -->
+<!-- ort: johor-bahru -->
 
 **✓ In der Grenzhalle hängt die Wegweisung schon.** Nach der Kontrolle steht man vor
 Schildern `↑ JB Sentral`. JB Sentral ist der Bahnhof direkt neben dem Grenzgebäude und der
 Ort, von dem aus es weitergeht — Bus, Taxi, Zug, alles dort. Man muss niemanden fragen.
 <!-- werkstatt: telegram=2026-08-17T04:04 -->
+<!-- ort: johor-bahru -->
 
 **✓ Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg (17.08.).**
 Larkin Sentral ist der Fernbusbahnhof, von dem es weiter ins Land geht — vom Grenzgebäude
@@ -85,6 +89,7 @@ sind es rund 5 Kilometer. Der Bus ab JB Sentral nimmt kontaktlos Karte und Googl
 „Bezahlen“ weiter unten. Empfohlen wird einem meist ein Grab für etwa RM20; der Bus tut dasselbe für einen
 Bruchteil.
 <!-- werkstatt: telegram=2026-08-17T04:47 -->
+<!-- ort: johor-bahru -->
 
 **○ Ein Grab lässt sich am Grenzgebäude selbst nicht bestellen.** Der Abholpunkt wäre das
 Erdgeschoss von JB Sentral nebenan. Wer in der Halle die App aufmacht, findet keinen Wagen.
@@ -125,6 +130,7 @@ Tioman am selben Tag noch erreichen will, plant für diese Strecke einen halben 
 **✓ Der Fernbus hält direkt am Fährterminal Plaza D'Jeti (17.08.).** Terminal, Ticketschalter,
 Läden und Busvorfahrt liegen auf demselben Platz; zwischen Aussteigen und Fährschalter liegt
 kein Umstieg und keine zweite Fahrt.
+<!-- ort: mersing -->
 
 **✓ Mitte August hängt in Johor überall Flaggenschmuck (17.08.).** Malaysische Flaggen und die
 Johor-Flagge an Zäunen, Masten und Hauswänden, auch in kleinen Orten. Der Nationalfeiertag
@@ -142,6 +148,7 @@ eine rot-weiße quer über die Fliesen gestreckt und schlafend, eine schwarz-wei
 Vorbeigehen kurz herüberschaut. Das ist keine Ausnahme dieses Tages — es ist das, wonach eine
 malaysische Kleinstadt aussieht.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
+<!-- ort: mersing -->
 
 ![Eine schwarze Katze liegt im Schatten unter einem Marktwagen.](foto:2026-08-17_085957.jpg)
 ![Eine rot-weiße Katze schläft ausgestreckt auf einem Fliesenboden.](foto:2026-08-17_090000.jpg)
@@ -164,6 +171,7 @@ abgelehnt noch eine Fremdkartengebühr fällig — und ausgerechnet bei der Bank
 abgeraten hatten. Wer eine Reisekreditkarte ohne Auslandsentgelt dabeihat, braucht für Mersing
 keine Wechselstube und muss sich in Johor Bahru nicht mit Bargeld eindecken.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
+<!-- ort: mersing -->
 
 **✓ RM500 waren es, und das ist knapper, als es klingt (17.08.).** Fest verplant sind davon
 **RM165**: RM105 Marine-Park-Gebühr am Fährschalter in Mersing und RM60 Touristensteuer in der
@@ -173,6 +181,7 @@ Wir hatten dafür vorher RM800–1.200 veranschlagt, allerdings geschätzt und o
 nicht darauf ankommen lassen will, hebt in Mersing nach, solange fünf Banken nebeneinander
 stehen; auf der Insel ist es genau einer, und ein Inselautomat kann leer sein.
 <!-- werkstatt: telegram=2026-08-17T09:36 -->
+<!-- ort: mersing -->
 
 **○ Gebührenfrei heißt nicht zinsfrei.** Bei vielen Kreditkarten ist eine Bargeldabhebung eine
 Barverfügung und wird ab dem Tag der Abhebung verzinst, auch wenn keine Gebühr anfällt — bei
@@ -201,6 +210,7 @@ an den Masten hängen schon die Flaggen für Merdeka. Wer in Mersing auf die Fä
 nicht weiß, wohin: hierhin — es ist der Ort, an dem abends alle sind. (Vom Bild abgelesen,
 nicht von uns berichtet.)
 <!-- werkstatt: telegram=2026-08-17T10:21 -->
+<!-- ort: mersing -->
 
 ![Die Strandpromenade von Mersing am Spätnachmittag: Kokospalmen, ein gepflasterter Weg, Pavillons und dahinter die Straße.](foto:2026-08-17_102114.jpg)
 
@@ -229,6 +239,7 @@ noch schwammen. Das ist kein Wetterschaden und kein schlechter Tag — das ist d
 Tidenhub, und es ist der Grund, warum die Abfahrtszeit in Mersing jeden Tag eine andere ist.
 Wer dieses Bild vor Augen hat, versteht den Fahrplan sofort.
 <!-- werkstatt: telegram=2026-08-17T10:21 -->
+<!-- ort: mersing -->
 
 ![Der Hafen von Mersing bei Niedrigwasser: kleine Boote liegen am Ufer im Schlick, zwei größere Boote liegen am Steg im Wasser.](foto:2026-08-17_102109.jpg)
 
@@ -256,6 +267,7 @@ also an der einen Stelle, gezahlt wird an der anderen. Das ist ein zusätzlicher
 unserer Planung weiter unten stand er nicht. Welche Gebühr dort verlangt wird, steht zwei
 Absätze weiter; der Betrag steht noch aus.
 <!-- werkstatt: telegram=2026-08-18T02:12 -->
+<!-- ort: mersing -->
 
 **○ Die Gebühren — und die eine, bei der die Quellen auseinandergehen.** Die
 Marine-Park-Gebühr ist unstrittig: Ausländer zahlen RM30 als Erwachsene und RM15 als Kind von
@@ -276,6 +288,7 @@ trotzdem weiter in bar dabeihaben — ein Dienstagvormittag im August widerlegt 
 Gebührenordnung, er zeigt nur, dass an diesem Tag an dieser Stelle nicht kassiert wurde. Was
 die Marine-Park-Gebühr am Ende gekostet hat, steht hier, sobald es gemeldet ist.
 <!-- werkstatt: telegram=2026-08-18T02:19 -->
+<!-- ort: mersing -->
 
 **○ Beide Gebühren nur bar — und im Terminal steht kein Geldautomat.** Die nächsten
 Bankautomaten sind 400 bis 494 Meter entfernt, also fünf bis sieben Minuten zu Fuß (aus den
@@ -301,6 +314,7 @@ Bildschirme mit den Abfahrten. Klimaanlage gibt es hier nicht und kann es nicht 
 sich auf eine gekühlte Halle einstellt, wartet in der Mittagshitze falsch angezogen. Der
 Schatten ist das ganze Angebot, und er reicht.
 <!-- werkstatt: telegram=2026-08-18T03:32 -->
+<!-- ort: mersing -->
 
 ![Die offene Wartehalle des Fährterminals in Mersing: Ziegeldach auf Stützen, Deckenventilatoren, blaue Stuhlreihen, wartende Reisende.](foto:2026-08-18_033236.jpg)
 
@@ -309,6 +323,7 @@ unter einem Vordach, jeder mit seinem Gepäck am Körper. Das Boot ist ein Katam
 Betreiber heißt **Cataferry** — der Name steht in großen Buchstaben an der Bordwand, und
 damit weiß man am Steg, ob man vor dem richtigen Boot steht.
 <!-- werkstatt: telegram=2026-08-18T03:32 -->
+<!-- ort: mersing -->
 
 ![Die Warteschlange auf dem Steg in Mersing, davor der Katamaran mit dem Schriftzug Cataferry.](foto:2026-08-18_033254.jpg)
 
@@ -348,6 +363,7 @@ dem Wasser liegen ein paar Schritte Sand und keine Straße. Vor den Türen liege
 Gäste, an einem Baum hängen handgemalte Schilder Richtung Frühstück und Dusche. Wer eine Lobby
 und einen Empfangstresen erwartet, sucht vergeblich: die Tür des Häuschens ist der Eingang.
 <!-- werkstatt: telegram=2026-08-18T06:56 -->
+<!-- ort: tioman -->
 
 ![Eine Reihe weißer Strandhäuschen unter Palmen und Bäumen, davor ein Kajak auf dem Sand, links das flache türkisfarbene Wasser der Bucht.](foto:2026-08-18_065631.jpg)
 
@@ -357,6 +373,7 @@ Wasserrand hängt eine Hängematte zwischen zwei Pfosten. Kurz vor 15 Uhr Ortsze
 Strand leer. Am anderen Ende der Bucht steht ein langer Steg, davor ein paar Dächer — mehr ist
 von hier aus nicht zu erkennen.
 <!-- werkstatt: telegram=2026-08-18T06:56 -->
+<!-- ort: tioman -->
 
 ![Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg.](foto:2026-08-18_065629.jpg)
 
@@ -366,6 +383,7 @@ einzelne hohe Bäume heraus. Zwischen dem letzten Dach und dem Wald liegt weder 
 Wer auf der Dorfstraße steht, hat auf der einen Seite Wellblechdächer und auf der anderen den
 Wald.
 <!-- werkstatt: telegram=2026-08-18T09:43 -->
+<!-- ort: tioman -->
 
 ![Bewaldeter Hang direkt hinter einer Reihe kleiner Häuser mit Blechdächern, davor Sandfläche, Bänke und Stromleitungen.](foto:2026-08-18_094311.jpg)
 
@@ -375,6 +393,7 @@ blaues Pavillonzelt mit einer Kühltruhe davor und eine Brücke mit weißem Gel�
 waren ein Roller, eine Ziege quer über die Fahrbahn und ein einzelner Pick-up mit Firmenaufkleber
 an der Tür. An Masten und Zäunen hängen Malaysia-Flaggen.
 <!-- werkstatt: telegram=2026-08-18T09:43 -->
+<!-- ort: tioman -->
 
 ![Dorfstraße aus Beton, ein Roller fährt Richtung Brücke, eine Ziege überquert die Fahrbahn, links Läden unter Blechdächern, dahinter der bewaldete Hang.](foto:2026-08-18_094309.jpg)
 ![Blick die Dorfstraße hinunter zur Brücke mit weißem Geländer, rechts ein blaues Pavillonzelt mit Malaysia-Flagge, links Läden und Bananenstauden.](foto:2026-08-18_094304.jpg)
@@ -395,6 +414,7 @@ Zwischen den Dörfern liegen die Tauchinseln — Chebeh, Tulai, Labas, Sepoi, So
 Jahat — jede mit Taucher- oder Schnorchelzeichen. Was davon stimmt, steht hier erst, wenn wir
 es selbst gesehen haben.
 <!-- werkstatt: telegram=2026-08-18T10:18 -->
+<!-- ort: tioman -->
 
 ![Blaue Infotafel am Uferweg mit der Aufschrift „Pulau Tioman"; darin eine gezeichnete Inselkarte mit Dörfern, Tauchplätzen und Aktivitätslisten.](foto:2026-08-18_101819.jpg)
 
@@ -406,6 +426,7 @@ einzeln zu zählen; wo sie dicht hängen, gehen sie ineinander über, die Koloni
 größer. Der Baumstreifen steht zwischen dem Betonweg und dem Sand, dahinter der Strand. Vom
 Weg aus sieht man sie erst, wenn man nach oben schaut — von unten sind es Schatten im Geäst.
 <!-- werkstatt: telegram=2026-08-18T10:30 -->
+<!-- ort: tioman -->
 
 ![Nadelbäume am Strand von Tekek, an ihren Zweigen hängen dutzende dunkle Flughunde kopfüber im Geäst; dahinter ein Betonweg und der Sandstrand.](foto:2026-08-18_103031.jpg)
 
@@ -497,6 +518,7 @@ RM 1,50 bis RM 3,50, Teh Tarik heiß RM 2,00 und kalt RM 2,50 — kalt kostet hi
 **RM 34 bis RM 54** (7 bis 11 €). Zum Mitnehmen kommen **20 Sen je Packung** dazu; das
 steht als einzige Fußnote auf der Tafel.
 <!-- werkstatt: telegram=2026-08-17T11:19 -->
+<!-- ort: mersing -->
 
 **○ „Steht auf der vegetarischen Seite" und „ist vegetarisch" sind an einem Mamak-Stand
 nicht dasselbe.** Ohne Fleisch auf der Karte sind Nasi Goreng, Mee Goreng, Kuey Teow
@@ -524,6 +546,7 @@ Verkehrskarte. Das ist die praktisch wichtigste Erfahrung des Tages: für den We
 Grenzgebäude zum Fernbusbahnhof braucht man weder Ringgit in bar noch eine App, und der Bus
 ist deutlich billiger als das Taxi, zu dem einem sonst geraten wird.
 <!-- werkstatt: telegram=2026-08-17T04:41 -->
+<!-- ort: johor-bahru -->
 
 **○ In Malaysia bleibt Bargeld trotzdem Pflicht — aber für andere Dinge.**
 Behördengebühren und kleine Stände nehmen es nicht anders. Fest eingeplant für Tioman:

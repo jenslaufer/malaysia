@@ -31,6 +31,7 @@ for a single sentence in it, whether there is an experience behind it or a web p
 **✓ From Jalan Besar to Gardens by the Bay: 33 minutes, at seven in the evening (16 Aug).**
 Measured between "we're at Jalan Besar" and "we're at the garden", so including the walk to
 the station and the walk at the far end. By MRT, Downtown Line, six stops to Bayfront.
+<!-- ort: singapur -->
 
 **○ The direction of travel is the trap, and it costs you the connection.** The Downtown Line
 runs in an arc: Bayfront (DT16) lies geographically south of Jalan Besar (DT22), but the right
@@ -46,6 +47,7 @@ single Supertree fills the entire frame. In the wide shot below a good number of
 up in the crowd, so the show carries on in the rain. (That is read off the picture, not
 something we reported.)
 <!-- werkstatt: telegram=2026-08-17T09:39 -->
+<!-- ort: singapur -->
 
 ![Two Supertrees lit green, with Marina Bay Sands and the illuminated skyway behind them.](foto:2026-08-17_093911.jpg)
 ![A single Supertree from below, its canopy lit green from the inside.](foto:2026-08-17_093914.jpg)
@@ -72,12 +74,14 @@ gives you the wrong answer.
 other people's experience is that almost all of the time goes on queueing rather than on the
 distance; the Causeway is a good kilometre long.
 <!-- werkstatt: telegram=2026-08-17T04:01 -->
+<!-- ort: johor-bahru -->
 
 **✓ The signage in the border hall is already there.** After the control you stand in front of
 signs reading `↑ JB Sentral`. JB Sentral is the station directly next to the border building
 and the place everything continues from — bus, taxi, train, all of it there. You do not have
 to ask anyone.
 <!-- werkstatt: telegram=2026-08-17T04:04 -->
+<!-- ort: johor-bahru -->
 
 **✓ A bus runs from JB Sentral to Larkin, and it is the easiest way (17 Aug).** Larkin
 Sentral is the long-distance bus station from which you go on into the country — about 5
@@ -85,6 +89,7 @@ kilometres from the border building. The bus from JB Sentral takes contactless c
 Google Pay, see “Paying” below. What you will usually be recommended is a Grab for around RM20; the
 bus does the same thing for a fraction of it.
 <!-- werkstatt: telegram=2026-08-17T04:47 -->
+<!-- ort: johor-bahru -->
 
 **○ You cannot order a Grab at the border building itself.** The pick-up point would be the
 ground floor of JB Sentral next door. Open the app inside the hall and you will find no car.
@@ -125,6 +130,7 @@ to catch the ferry to Tioman on the same day, budget half a day for this leg.
 **✓ The long-distance bus stops right at the Plaza D'Jeti ferry terminal (17 Aug).** Terminal,
 ticket counters, shops and the bus forecourt are all on the same square; between getting off the
 bus and reaching the ferry counter there is no transfer and no second ride.
+<!-- ort: mersing -->
 
 **✓ In mid-August Johor is covered in flags (17 Aug).** Malaysian flags and the Johor flag on
 fences, poles and house walls, in small towns too. The national holiday, Merdeka, is on 31
@@ -142,6 +148,7 @@ cart, a ginger-and-white one stretched out asleep across a tiled floor, a black-
 glancing over as it walks past. This is not a quirk of the day — it is what a small Malaysian
 town looks like.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
+<!-- ort: mersing -->
 
 ![A black cat lying in the shade under a market cart.](foto:2026-08-17_085957.jpg)
 ![A ginger-and-white cat asleep, stretched out across a tiled floor.](foto:2026-08-17_090000.jpg)
@@ -164,6 +171,7 @@ the very bank we had warned against. Anyone carrying a travel credit card withou
 transaction charge needs no money changer for Mersing and does not have to stock up on cash in
 Johor Bahru.
 <!-- werkstatt: telegram=2026-08-17T08:59 -->
+<!-- ort: mersing -->
 
 **✓ RM500 was the amount, and that is tighter than it sounds (17 Aug).** **RM165** of it is
 already committed: RM105 marine park fee at the ferry counter in Mersing and RM60 tourist tax at
@@ -173,6 +181,7 @@ not. We had budgeted RM800–1,200 for those, but that figure is an estimate and
 source. Anyone who would rather not find out tops up in Mersing while five banks still stand
 side by side; on the island there is exactly one machine, and an island machine can be empty.
 <!-- werkstatt: telegram=2026-08-17T09:36 -->
+<!-- ort: mersing -->
 
 **○ No fee is not the same as no interest.** On many credit cards a cash withdrawal counts as a
 cash advance and accrues interest from the day it is taken, even when no fee is charged; some
@@ -200,6 +209,7 @@ cycling, and the flags for Merdeka are already up on the masts. If you are waiti
 ferry in Mersing and do not know where to go: here — this is where everyone is in the
 evening. (Read off the picture, not reported by us.)
 <!-- werkstatt: telegram=2026-08-17T10:21 -->
+<!-- ort: mersing -->
 
 ![The seafront promenade in Mersing in the late afternoon: coconut palms, a paved path, pavilions and the road behind.](foto:2026-08-17_102114.jpg)
 
@@ -228,6 +238,7 @@ the pontoon were still afloat. That is not storm damage and not a bad day — it
 tidal range, and it is the reason the departure time in Mersing is different every day. Once
 you have seen it, the timetable explains itself.
 <!-- werkstatt: telegram=2026-08-17T10:21 -->
+<!-- ort: mersing -->
 
 ![Mersing harbour at low water: small boats lying in the mud along the bank, two larger boats still afloat at the pontoon.](foto:2026-08-17_102109.jpg)
 
@@ -253,6 +264,7 @@ building, with a pavilion in front of it — that is how you find it. So the boa
 from one place and the fees are paid at another. That is an extra walk, and it was not in our
 plan further down. Which fee is charged there is two paragraphs on; the amount is still open.
 <!-- werkstatt: telegram=2026-08-18T02:12 -->
+<!-- ort: mersing -->
 
 **○ The fees, and the one where the sources disagree.** The marine park fee is not in dispute:
 foreigners pay RM30 as adults and RM15 as a child aged 6 to 12, under 6 free, over 60 also
@@ -272,6 +284,7 @@ it in cash: one Tuesday morning in August does not overturn a published schedule
 only shows that on that day, at that spot, nobody collected it. What the marine park fee came
 to in the end goes here as soon as it is reported.
 <!-- werkstatt: telegram=2026-08-18T02:19 -->
+<!-- ort: mersing -->
 
 **○ Both fees cash only — and there is no cash machine in the terminal.** The nearest ones are
 400 to 494 metres away, five to seven minutes on foot (calculated from OpenStreetMap
@@ -296,6 +309,7 @@ departures. There is no air conditioning here and there cannot be — anyone cou
 cooled hall is dressed wrong for the midday wait. The shade is the whole offer, and it is
 enough.
 <!-- werkstatt: telegram=2026-08-18T03:32 -->
+<!-- ort: mersing -->
 
 ![The open waiting hall of the Mersing ferry terminal: tiled roof on posts, ceiling fans, rows of blue seats, waiting passengers.](foto:2026-08-18_033236.jpg)
 
@@ -304,6 +318,7 @@ canopy, everyone still carrying their own luggage. The boat is a catamaran and t
 is **Cataferry** — the name is painted in large letters on the side, so you can tell from the
 pontoon whether you are standing at the right boat.
 <!-- werkstatt: telegram=2026-08-18T03:32 -->
+<!-- ort: mersing -->
 
 ![The boarding queue on the pontoon in Mersing, with the Cataferry catamaran alongside.](foto:2026-08-18_033254.jpg)
 
@@ -343,6 +358,7 @@ the water there are a few paces of sand and no road. Kayaks lie in front of the 
 guests, and hand-painted signs on a tree point towards breakfast and showers. Anyone expecting
 a lobby and a reception desk will look in vain: the door of the cabin is the entrance.
 <!-- werkstatt: telegram=2026-08-18T06:56 -->
+<!-- ort: tioman -->
 
 ![A row of white beach cabins under palms and trees, a kayak on the sand in front of them, the shallow turquoise water of the bay on the left.](foto:2026-08-18_065631.jpg)
 
@@ -352,6 +368,7 @@ A hammock hangs between two posts at the waterline. Just before 3 pm local time 
 empty. At the far end of the bay stands a long jetty with a few roofs in front of it — from
 here that is all one can make out.
 <!-- werkstatt: telegram=2026-08-18T06:56 -->
+<!-- ort: tioman -->
 
 ![A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay.](foto:2026-08-18_065629.jpg)
 
@@ -361,6 +378,7 @@ tall trees standing out above the canopy. Between the last roof and the forest t
 field nor a garden. Stand on the village road and you have corrugated iron roofs on one side and
 the forest on the other.
 <!-- werkstatt: telegram=2026-08-18T09:43 -->
+<!-- ort: tioman -->
 
 ![A forested slope directly behind a row of small houses with metal roofs, with sand, benches and power lines in front of them.](foto:2026-08-18_094311.jpg)
 
@@ -370,6 +388,7 @@ blue gazebo with a chest freezer in front of it and a bridge with a white railin
 one scooter, a goat crossing it, and a single pickup with a company decal on the door. Malaysian
 flags hang from poles and fences.
 <!-- werkstatt: telegram=2026-08-18T09:43 -->
+<!-- ort: tioman -->
 
 ![A concrete village road, a scooter riding towards the bridge, a goat crossing, shops under metal roofs on the left and the forested slope behind.](foto:2026-08-18_094309.jpg)
 ![Looking down the village road towards the bridge with its white railing, a blue gazebo with a Malaysian flag on the right, shops and banana plants on the left.](foto:2026-08-18_094304.jpg)
@@ -389,6 +408,7 @@ the Asah waterfall and a via ferrata on Gunung Nenek Semukut. Between the villag
 islands — Chebeh, Tulai, Labas, Sepoi, Soyak, Renggis, Jahat — each marked with a diver or
 snorkel symbol. Whether any of it holds up goes here once we have seen it ourselves.
 <!-- werkstatt: telegram=2026-08-18T10:18 -->
+<!-- ort: tioman -->
 
 ![Blue information board on the waterfront path reading "Pulau Tioman"; inside it a drawn island map with villages, dive sites and activity lists.](foto:2026-08-18_101819.jpg)
 
@@ -400,6 +420,7 @@ crops; where they hang densely they merge into one another, so the colony is lar
 of trees stands between the concrete path and the sand, with the beach behind it. From the
 path you only see them if you look up — from below they are shadows in the branches.
 <!-- werkstatt: telegram=2026-08-18T10:30 -->
+<!-- ort: tioman -->
 
 ![Needle trees on the beach at Tekek with dozens of dark flying foxes hanging head down among the branches; behind them a concrete path and the sandy beach.](foto:2026-08-18_103031.jpg)
 
@@ -487,6 +508,7 @@ board. So breakfast of roti canai and teh tarik is **RM 3.50** (about €0.70), 
 for four with a plate and a drink each is **RM 34 to RM 54** (€7 to €11). Takeaway adds
 **20 sen per box**; that is the only footnote on the board.
 <!-- werkstatt: telegram=2026-08-17T11:19 -->
+<!-- ort: mersing -->
 
 **○ "It is on the vegetarian side of the menu" and "it is vegetarian" are not the same
 thing at a mamak stall.** Meat-free on the board are nasi goreng, mee goreng, kuey teow
@@ -513,6 +535,7 @@ That is the practically most useful thing we learned that day: for the stretch f
 border building to the long-distance bus station you need neither ringgit in cash nor an
 app, and the bus is far cheaper than the taxi you will otherwise be steered towards.
 <!-- werkstatt: telegram=2026-08-17T04:41 -->
+<!-- ort: johor-bahru -->
 
 **○ Cash is still compulsory in Malaysia — but for other things.** Government fees and small
 stalls take nothing else. Budgeted for Tioman: RM105 marine park fee at the ferry counter in

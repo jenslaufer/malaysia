@@ -1764,5 +1764,139 @@ class TestFehlschlaege(unittest.TestCase):
 
 
 
+class TestOrtsmarker(unittest.TestCase):
+    """Ein Eintrag weiss, WO er passiert ist — aber nur, wenn es dasteht.
+
+    Der Ort wird nicht aus dem Abschnitt geraten. "Essen", "Bezahlen" und
+    "Strom" sind Themen, keine Orte, und die Eintraege darin stammen aus vier
+    verschiedenen Staedten. Ein geratener Punkt auf einer Karte ist derselbe
+    Fehler wie ein ✓ ohne Erlebnis: er sieht aus wie eine Messung.
+    """
+
+    def test_marker_wird_zu_data_ort(self):
+        html = build.render_markdown(
+            "**✓ Der Ort ist voller Katzen (17.08.).** Ueberall.\n"
+            "<!-- ort: mersing -->")
+        self.assertIn('data-ort="mersing"', html)
+
+    def test_marker_steht_nicht_im_text(self):
+        """Er ist Angabe, kein Satz — wie der Herkunftsmarker."""
+        html = build.render_markdown(
+            "**✓ Der Ort ist voller Katzen (17.08.).** Ueberall.\n"
+            "<!-- ort: mersing -->")
+        self.assertNotIn("ort:", html)
+        self.assertNotIn("@@ORT", html)
+
+    def test_eintrag_ohne_marker_traegt_kein_data_ort(self):
+        html = build.render_markdown("**✓ Etwas hat geklappt.** Dazu ein Satz.")
+        self.assertNotIn("data-ort", html)
+
+    def test_marker_ueberlebt_neben_dem_herkunftsmarker(self):
+        """Beide haengen am selben Eintrag und duerfen sich nicht fressen."""
+        html = build.render_markdown(
+            "**✓ Etwas hat geklappt (17.08.).** Dazu ein Satz.\n"
+            "<!-- werkstatt: telegram=2026-08-17T06:21 -->\n"
+            "<!-- ort: tioman -->")
+        self.assertIn('data-ort="tioman"', html)
+        self.assertNotIn("telegram=", html)
+
+    def test_unbekannter_ort_bricht_den_build_ab(self):
+        """Still verschluckt waere er ein Eintrag, der nie auf der Karte auftaucht,
+        ohne dass jemand erfaehrt warum. Ein Tippfehler muss schreien."""
+        with self.assertRaises(build.OrtException):
+            build.render_markdown(
+                "**✓ Etwas hat geklappt.** Dazu ein Satz.\n"
+                "<!-- ort: tiomann -->")
+
+
+class TestKarteErlebnisse(unittest.TestCase):
+    """Die Karte war eine Route. Jetzt ist sie ein zweiter Weg in den Text.
+
+    Jens' vierte Idee vom 18.08. 09:44: "Ein Punkt je ✓ mit Sprung zum
+    Eintrag gibt einen zweiten Weg hinein, ueber den Ort statt ueber das
+    Thema." Gebuendelt wird pro Station, nicht pro Eintrag: sieben Erlebnisse
+    in Tekek haetten sonst sieben Punkte auf derselben Koordinate.
+    """
+
+    QUELLE = (
+        "## Unterwegs\n\n"
+        "**✓ In der Grenzhalle haengt die Wegweisung schon (17.08.).** Text dazu.\n"
+        "<!-- werkstatt: telegram=2026-08-17T06:21 -->\n"
+        "<!-- ort: johor-bahru -->\n\n"
+        "**✓ Der Ort ist voller Katzen (17.08.).** Text dazu.\n"
+        "<!-- werkstatt: telegram=2026-08-17T07:21 -->\n"
+        "<!-- ort: mersing -->\n\n"
+        "**○ Wechselstube schlaegt Geldautomat.** Nachgeschlagen.\n"
+        "<!-- ort: mersing -->\n"
+    )
+
+    def rumpf(self):
+        return build.render_markdown(self.QUELLE)
+
+    def test_station_listet_ihre_erlebnisse(self):
+        karte = build._karte(self.rumpf())
+        self.assertIn("Der Ort ist voller Katzen", karte)
+        self.assertIn("In der Grenzhalle", karte)
+
+    def test_jeder_posten_springt_in_den_text(self):
+        rumpf = self.rumpf()
+        karte = build._karte(rumpf)
+        ziele = re.findall(r'href="#([^"]+)"', karte)
+        self.assertTrue(ziele, "kein einziger Sprung in den Text")
+        for ziel in ziele:
+            self.assertIn(f'id="{ziel}"', rumpf)
+
+    def test_nur_selbst_erlebtes_kommt_auf_die_karte(self):
+        """Recherche hat keinen Ort, an dem jemand gewesen waere."""
+        karte = build._karte(self.rumpf())
+        self.assertNotIn("Wechselstube", karte)
+
+    def test_station_ohne_erlebnis_bleibt_stehen(self):
+        """Die Linie ist die Reise. Ein Loch darin waere eine andere Reise."""
+        karte = build._karte(self.rumpf())
+        for name, *_ in build.STATIONEN:
+            self.assertIn(name, karte)
+
+    def test_die_zahl_steht_neben_der_station(self):
+        karte = build._karte(self.rumpf())
+        self.assertRegex(karte, r'(?s)Mersing.*?stationen-zahl[^>]*>\s*1\s*<')
+
+    def test_javascript_kennt_die_erlebnisse(self):
+        """Sonst zeigt das Popup einen Ort ohne einen Weg hinein."""
+        karte = build._karte(self.rumpf())
+        js = karte.split("var orte = ", 1)[1].split("\n", 1)[0]
+        self.assertIn("Der Ort ist voller Katzen", js)
+
+    def test_ohne_javascript_bleibt_die_liste(self):
+        """Die Kartenkacheln laden erst auf Klick — ohne die Liste waere die
+        Verbindung Ort → Eintrag fuer jeden weg, der nicht klickt."""
+        karte = build._karte(self.rumpf())
+        liste = karte.split('<ol class="stationen">', 1)[1]
+        self.assertIn('href="#', liste)
+        self.assertIn("Der Ort ist voller Katzen", liste)
+
+    def test_die_ausgelieferte_seite_traegt_die_erlebnispunkte(self):
+        """Gegen die Datei, nicht gegen den Renderer."""
+        for datei in (build.WURZEL / "index.html", build.WURZEL / "en" / "index.html"):
+            with self.subTest(datei=datei.name):
+                seite = datei.read_text(encoding="utf-8")
+                block = seite.split('<ol class="stationen">', 1)[1].split("</ol>", 1)[0]
+                ziele = re.findall(r'href="#([^"]+)"', block)
+                self.assertTrue(ziele, "die Karte fuehrt in keinen einzigen Eintrag")
+                for ziel in ziele:
+                    self.assertIn(f'id="{ziel}"', seite)
+
+    def test_beide_sprachen_tragen_gleich_viele_punkte(self):
+        """Die englische Fassung findet ihre Orte ueber den Marker, nicht ueber
+        den Text — waere es der Text, faende sie nichts, und zwar still."""
+        zahlen = []
+        for datei in (build.WURZEL / "index.html", build.WURZEL / "en" / "index.html"):
+            seite = datei.read_text(encoding="utf-8")
+            block = seite.split('<ol class="stationen">', 1)[1].split("</ol>", 1)[0]
+            zahlen.append(len(re.findall(r'href="#', block)))
+        self.assertEqual(zahlen[0], zahlen[1])
+
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

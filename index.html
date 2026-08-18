@@ -400,7 +400,46 @@ code {
 
 .stationen li { margin-bottom: .35rem; break-inside: avoid; }
 .stationen b { color: var(--tinte); font-weight: 600; }
-.stationen span { display: block; font-size: .85rem; }
+.stationen-zeit { display: block; font-size: .85rem; }
+
+/* Die Zahl neben der Station: wie viele selbst erlebte Eintraege dort haengen.
+   Eine Station ohne Erlebnis bekommt keine 0 — eine 0 liest sich wie eine
+   Messung, dabei sind Kuala Lumpur und Sandakan schlicht noch nicht dran. */
+.stationen-zahl {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: 0 .4rem;
+  border-radius: 999px;
+  background: #e3ece7;
+  color: var(--erlebt);
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.stationen-erlebt {
+  margin: .3rem 0 .7rem;
+  padding-left: .9rem;
+  list-style: none;
+  border-left: 2px solid #d8e2dc;
+}
+
+.stationen-erlebt li { margin-bottom: .2rem; }
+
+.stationen-erlebt a {
+  color: var(--tinte-leise);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.stationen-erlebt a:hover {
+  color: var(--erlebt);
+  border-bottom-color: #9ebcae;
+}
+
+/* Dieselbe Liste im Kartenpopup. Leaflet setzt seine eigenen Abstaende. */
+.karte-liste { margin: .4rem 0 0; padding-left: .95rem; }
+.karte-liste li { margin-bottom: .15rem; }
 
 .hinweis { color: var(--tinte-leise); font-size: .92rem; }
 
@@ -780,7 +819,7 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 
 <section class="karte-block" aria-labelledby="karte-titel">
   <h2 id="karte-titel">Die Route</h2>
-  <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos. Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts.</p>
+  <p class="karte-intro">Acht Stationen zwischen Singapur und dem Norden Borneos. Die Anreise über Frankfurt und Bahrain liegt außerhalb des Ausschnitts. An den Stationen hängen die 23 selbst erlebten Einträge — ein zweiter Weg in den Text, über den Ort statt über das Thema.</p>
   <div id="karte" role="img" aria-label="Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo">
     <div class="karte-tuer">
       <p>Die Kartenbilder kommen von OpenStreetMap. Beim Laden erfährt openstreetmap.org Ihre IP-Adresse — deshalb erst auf Ihren Klick.</p>
@@ -788,7 +827,11 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
     </div>
   </div>
   <noscript><p class="hinweis">Die Karte braucht JavaScript. Die Stationen stehen als Liste darunter.</p></noscript>
-  <ol class="stationen"><li><b>Singapur</b> <span>15.–17.08. · 05.–07.09.</span></li><li><b>Johor Bahru</b> <span>17.08. · Grenze und Larkin Sentral</span></li><li><b>Mersing</b> <span>17.–18.08. · Fährhafen nach Tioman</span></li><li><b>Tioman</b> <span>18.–21.08.</span></li><li><b>Kuala Lumpur</b> <span>22.–24.08.</span></li><li><b>Sandakan</b> <span>25.–28.08. · Sabah</span></li><li><b>Kota Kinabalu</b> <span>29.08.–03.09.</span></li><li><b>Kudat</b> <span>04.–05.09. · Tip of Borneo</span></li></ol>
+  <ol class="stationen"><li><b>Singapur</b><span class="stationen-zahl">2</span><span class="stationen-zeit">15.–17.08. · 05.–07.09.</span><ul class="stationen-erlebt"><li><a href="#erlebt-von-der-jalan-besar-bis-in-die-gardens-by-the">Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben.</a></li><li><a href="#eintrag-2026-08-17t09-39-1"><em>Garden Rhapsody</em> im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach
+darunter.</a></li></ul></li><li><b>Johor Bahru</b><span class="stationen-zahl">4</span><span class="stationen-zeit">17.08. · Grenze und Larkin Sentral</span><ul class="stationen-erlebt"><li><a href="#eintrag-2026-08-17t04-01-1">An einem Montagvormittag waren wir gegen 12:00 Ortszeit auf malaysischer Seite durch.</a></li><li><a href="#eintrag-2026-08-17t04-04-1">In der Grenzhalle hängt die Wegweisung schon.</a></li><li><a href="#eintrag-2026-08-17t04-47-1">Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg.</a></li><li><a href="#eintrag-2026-08-17t04-41-1">Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit
+Google Pay.</a></li></ul></li><li><b>Mersing</b><span class="stationen-zahl">11</span><span class="stationen-zeit">17.–18.08. · Fährhafen nach Tioman</span><ul class="stationen-erlebt"><li><a href="#erlebt-der-fernbus-haelt-direkt-am-faehrterminal-plaza">Der Fernbus hält direkt am Fährterminal Plaza D'Jeti.</a></li><li><a href="#eintrag-2026-08-17t08-59-1">Der Ort ist voller Katzen.</a></li><li><a href="#eintrag-2026-08-17t08-59-2">Am Geldautomaten der BSN in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne
+Gebühr.</a></li><li><a href="#eintrag-2026-08-17t09-36-1">RM500 waren es, und das ist knapper, als es klingt.</a></li><li><a href="#eintrag-2026-08-17t10-21-1">Am Spätnachmittag spielt sich der Ort an der Strandpromenade ab.</a></li><li><a href="#eintrag-2026-08-17t10-21-2">Und so sieht das aus (17.08., 18:20 Ortszeit).</a></li><li><a href="#eintrag-2026-08-18t02-12-1">Kassiert wird nicht im Terminal, sondern in einem Büro in der Nähe der Anlegestelle.</a></li><li><a href="#eintrag-2026-08-18t02-19-1">Erhoben wurde nur die Marine-Park-Gebühr.</a></li><li><a href="#eintrag-2026-08-18t03-32-1">Die Wartehalle ist ein offener Pavillon, kein Gebäude.</a></li><li><a href="#eintrag-2026-08-18t03-32-2">Eingestiegen wird vom Steg aus, direkt neben dem Rumpf.</a></li><li><a href="#eintrag-2026-08-17t11-19-1">Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
+Frühstück kostet RM 3,50.</a></li></ul></li><li><b>Tioman</b><span class="stationen-zahl">6</span><span class="stationen-zeit">18.–21.08.</span><ul class="stationen-erlebt"><li><a href="#eintrag-2026-08-18t06-56-1">Die Unterkunft steht direkt auf dem Sand.</a></li><li><a href="#eintrag-2026-08-18t06-56-2">Die Bucht ist flach und ruhig, der Steg liegt am anderen Ende in Sichtweite.</a></li><li><a href="#eintrag-2026-08-18t09-43-1">Der Regenwald steht direkt hinter den Häusern von Tekek.</a></li><li><a href="#eintrag-2026-08-18t09-43-2">Die Dorfstraße in Tekek ist ein Betonstreifen, und viel fährt darauf nicht.</a></li><li><a href="#eintrag-2026-08-18t10-18-1">Am Ufer in Tekek steht eine Tafel, die die ganze Insel auf einen Blick sortiert.</a></li><li><a href="#eintrag-2026-08-18t10-30-1">In den Nadelbäumen am Ufer von Tekek hängen Flughunde, und zwar zu Dutzenden.</a></li></ul></li><li><b>Kuala Lumpur</b><span class="stationen-zeit">22.–24.08.</span></li><li><b>Sandakan</b><span class="stationen-zeit">25.–28.08. · Sabah</span></li><li><b>Kota Kinabalu</b><span class="stationen-zeit">29.08.–03.09.</span></li><li><b>Kudat</b><span class="stationen-zeit">04.–05.09. · Tip of Borneo</span></li></ol>
 </section>
 <script>
   // Die Kacheln sind der einzige Dritte, der auf dieser Seite bleibt — eine
@@ -800,16 +843,7 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
     if (!el || typeof L === "undefined") return;
     el.innerHTML = "";
     el.removeAttribute("role");
-    var orte = [
-      ["Singapur", 1.3521, 103.8198, "15.–17.08. · 05.–07.09."],
-      ["Johor Bahru", 1.4655, 103.7578, "17.08. · Grenze und Larkin Sentral"],
-      ["Mersing", 2.4312, 103.8405, "17.–18.08. · Fährhafen nach Tioman"],
-      ["Tioman", 2.8167, 104.1667, "18.–21.08."],
-      ["Kuala Lumpur", 3.139, 101.6869, "22.–24.08."],
-      ["Sandakan", 5.8402, 118.1179, "25.–28.08. · Sabah"],
-      ["Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09."],
-      ["Kudat", 6.8837, 116.8378, "04.–05.09. · Tip of Borneo"]
-    ];
+    var orte = [["Singapur", 1.3521, 103.8198, "15.–17.08. · 05.–07.09.", [["erlebt-von-der-jalan-besar-bis-in-die-gardens-by-the", "Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben."], ["eintrag-2026-08-17t09-39-1", "<em>Garden Rhapsody<\/em> im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach\ndarunter."]]], ["Johor Bahru", 1.4655, 103.7578, "17.08. · Grenze und Larkin Sentral", [["eintrag-2026-08-17t04-01-1", "An einem Montagvormittag waren wir gegen 12:00 Ortszeit auf malaysischer Seite durch."], ["eintrag-2026-08-17t04-04-1", "In der Grenzhalle hängt die Wegweisung schon."], ["eintrag-2026-08-17t04-47-1", "Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg."], ["eintrag-2026-08-17t04-41-1", "Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit\nGoogle Pay."]]], ["Mersing", 2.4312, 103.8405, "17.–18.08. · Fährhafen nach Tioman", [["erlebt-der-fernbus-haelt-direkt-am-faehrterminal-plaza", "Der Fernbus hält direkt am Fährterminal Plaza D'Jeti."], ["eintrag-2026-08-17t08-59-1", "Der Ort ist voller Katzen."], ["eintrag-2026-08-17t08-59-2", "Am Geldautomaten der BSN in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne\nGebühr."], ["eintrag-2026-08-17t09-36-1", "RM500 waren es, und das ist knapper, als es klingt."], ["eintrag-2026-08-17t10-21-1", "Am Spätnachmittag spielt sich der Ort an der Strandpromenade ab."], ["eintrag-2026-08-17t10-21-2", "Und so sieht das aus (17.08., 18:20 Ortszeit)."], ["eintrag-2026-08-18t02-12-1", "Kassiert wird nicht im Terminal, sondern in einem Büro in der Nähe der Anlegestelle."], ["eintrag-2026-08-18t02-19-1", "Erhoben wurde nur die Marine-Park-Gebühr."], ["eintrag-2026-08-18t03-32-1", "Die Wartehalle ist ein offener Pavillon, kein Gebäude."], ["eintrag-2026-08-18t03-32-2", "Eingestiegen wird vom Steg aus, direkt neben dem Rumpf."], ["eintrag-2026-08-17t11-19-1", "Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein\nFrühstück kostet RM 3,50."]]], ["Tioman", 2.8167, 104.1667, "18.–21.08.", [["eintrag-2026-08-18t06-56-1", "Die Unterkunft steht direkt auf dem Sand."], ["eintrag-2026-08-18t06-56-2", "Die Bucht ist flach und ruhig, der Steg liegt am anderen Ende in Sichtweite."], ["eintrag-2026-08-18t09-43-1", "Der Regenwald steht direkt hinter den Häusern von Tekek."], ["eintrag-2026-08-18t09-43-2", "Die Dorfstraße in Tekek ist ein Betonstreifen, und viel fährt darauf nicht."], ["eintrag-2026-08-18t10-18-1", "Am Ufer in Tekek steht eine Tafel, die die ganze Insel auf einen Blick sortiert."], ["eintrag-2026-08-18t10-30-1", "In den Nadelbäumen am Ufer von Tekek hängen Flughunde, und zwar zu Dutzenden."]]], ["Kuala Lumpur", 3.139, 101.6869, "22.–24.08.", []], ["Sandakan", 5.8402, 118.1179, "25.–28.08. · Sabah", []], ["Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09.", []], ["Kudat", 6.8837, 116.8378, "04.–05.09. · Tip of Borneo", []]];
     var karte = L.map("karte", { scrollWheelZoom: false });
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 17,
@@ -818,9 +852,24 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
     var linie = [];
     orte.forEach(function (o, i) {
       linie.push([o[1], o[2]]);
-      L.circleMarker([o[1], o[2]], {
-        radius: 7, weight: 2, color: "#1c4f3f", fillColor: "#2f6b4f", fillOpacity: 1
-      }).addTo(karte).bindPopup("<b>" + (i + 1) + ". " + o[0] + "</b><br>" + o[3]);
+      var eintraege = o[4] || [];
+      // Der Radius traegt die Zahl der Erlebnisse. Eine Station ohne Erlebnis
+      // bleibt sichtbar — ein Loch in der Linie waere eine andere Reise.
+      var punkt = L.circleMarker([o[1], o[2]], {
+        radius: eintraege.length ? 7 + Math.min(eintraege.length, 8) : 5,
+        weight: 2, color: "#1c4f3f",
+        fillColor: eintraege.length ? "#2f6b4f" : "#8aa79b",
+        fillOpacity: eintraege.length ? 1 : .6
+      }).addTo(karte);
+      var text = "<b>" + (i + 1) + ". " + o[0] + "</b><br>" + o[3];
+      if (eintraege.length) {
+        text += "<ul class=\"karte-liste\">";
+        eintraege.forEach(function (e) {
+          text += "<li><a href=\"#" + e[0] + "\">" + e[1] + "</a></li>";
+        });
+        text += "</ul>";
+      }
+      punkt.bindPopup(text, { maxWidth: 320 });
     });
     L.polyline(linie, { color: "#1c4f3f", weight: 2, opacity: .45, dashArray: "5 6" }).addTo(karte);
     karte.fitBounds(L.latLngBounds(linie).pad(.12));
@@ -837,7 +886,7 @@ Datum hier — oder als Fehlschlag, damit es niemand zweimal versucht.</p>
 <p>Ein Reisebericht, der beides vermischt, ist nichts wert: der Leser kann dann bei keinem
 einzigen Satz mehr sagen, ob dahinter eine Erfahrung steht oder eine Internetseite.</p>
 <h2 id="unterwegs-in-singapur">Unterwegs in Singapur</h2>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben
+<div class="entry entry--erlebt" id="erlebt-von-der-jalan-besar-bis-in-die-gardens-by-the" data-ort="singapur"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von der Jalan Besar bis in die Gardens by the Bay: 33 Minuten, abends um sieben
 (16.08.).</strong> Gemessen zwischen „wir sind an der Jalan Besar" und „wir sind am Garten", also
 inklusive Weg zur Station und Fußweg am Ende. Mit der MRT, Downtown Line, sechs Stationen
 bis Bayfront.</p></div>
@@ -846,7 +895,7 @@ Line fährt einen Bogen: Bayfront (DT16) liegt geografisch südlich von Jalan Be
 der richtige Zug fährt aber <strong>Richtung Bukit Panjang</strong>, also scheinbar nach Norden. Auf den
 Bahnsteig gehört der Blick auf die Stationsnummern, nicht auf die Himmelsrichtung. Ab
 Bayfront: Ausgang B, Unterführung, dann Dragonfly Bridge oder Meadow Bridge.</p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-39-1" data-telegram="2026-08-17T09:39:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong><em>Garden Rhapsody</em> im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-39-1" data-telegram="2026-08-17T09:39:00+00:00" data-ort="singapur"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong><em>Garden Rhapsody</em> im Supertree Grove — kostenlos, ohne Ticket, und man steht einfach
 darunter (16.08.).</strong> Keine Absperrung, keine Reihen, kein Einlass: die Zuschauer verteilen
 sich auf dem Platz zwischen den Bäumen, viele legen sich flach hin, weil die Show nach oben
 spielt. Wer ein Foto will, braucht keinen bestimmten Platz — aber Abstand, denn ein
@@ -864,14 +913,14 @@ Festpreisschalter ein Sechssitzer für S$75. Ein normales Taxi fasst vier Person
 keine vier Koffer für drei Wochen — dann sind es zwei Wagen oder ein Sechssitzer, und der
 reine Preisvergleich rät falsch.</p></div></details>
 <h2 id="grenze-singapur-malaysia">Grenze Singapur → Malaysia</h2>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-01-1" data-telegram="2026-08-17T04:01:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>An einem Montagvormittag waren wir gegen 12:00 Ortszeit auf malaysischer Seite durch
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-01-1" data-telegram="2026-08-17T04:01:00+00:00" data-ort="johor-bahru"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>An einem Montagvormittag waren wir gegen 12:00 Ortszeit auf malaysischer Seite durch
 (17.08.).</strong> Losgefahren sind wir in Little India. Wie lange die Kontrolle selbst gedauert
 hat, ist nicht mitgeschrieben — die Erfahrung anderer ist, dass die Zeit fast vollständig
 für das Anstehen draufgeht und nicht für die Strecke; der Causeway ist gut einen Kilometer lang.</p><p class="spur"><span class="spur-von">Telegram 17.08. 04:01</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 05:46</span><span class="spur-dauer">106 Min</span></p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-04-1" data-telegram="2026-08-17T04:04:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>In der Grenzhalle hängt die Wegweisung schon.</strong> Nach der Kontrolle steht man vor
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-04-1" data-telegram="2026-08-17T04:04:00+00:00" data-ort="johor-bahru"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>In der Grenzhalle hängt die Wegweisung schon.</strong> Nach der Kontrolle steht man vor
 Schildern <code>↑ JB Sentral</code>. JB Sentral ist der Bahnhof direkt neben dem Grenzgebäude und der
 Ort, von dem aus es weitergeht — Bus, Taxi, Zug, alles dort. Man muss niemanden fragen.</p><p class="spur"><span class="spur-von">Telegram 17.08. 04:04</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 05:46</span><span class="spur-dauer">103 Min</span></p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-47-1" data-telegram="2026-08-17T04:47:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg (17.08.).</strong>
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-47-1" data-telegram="2026-08-17T04:47:00+00:00" data-ort="johor-bahru"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Von JB Sentral nach Larkin fährt ein Bus, und der ist der einfachste Weg (17.08.).</strong>
 Larkin Sentral ist der Fernbusbahnhof, von dem es weiter ins Land geht — vom Grenzgebäude
 sind es rund 5 Kilometer. Der Bus ab JB Sentral nimmt kontaktlos Karte und Google Pay, siehe
 „Bezahlen“ weiter unten. Empfohlen wird einem meist ein Grab für etwa RM20; der Bus tut dasselbe für einen
@@ -898,15 +947,15 @@ nur <code>eservices.ica.gov.sg/sgarrivalcard</code> oder die MyICA-App.</p></div
 zwischen „wir sind durch die Kontrolle" um 12:01 Ortszeit und dem Foto vom Fährterminal um
 16:11 — darin steckt alles: der Weg nach Larkin, das Warten und die Fahrt. Wer die Fähre nach
 Tioman am selben Tag noch erreichen will, plant für diese Strecke einen halben Tag ein.</p><p class="spur"><span class="spur-von">Telegram 17.08. 08:11</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 08:17</span><span class="spur-dauer">7 Min</span></p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Fernbus hält direkt am Fährterminal Plaza D'Jeti (17.08.).</strong> Terminal, Ticketschalter,
+<div class="entry entry--erlebt" id="erlebt-der-fernbus-haelt-direkt-am-faehrterminal-plaza" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Fernbus hält direkt am Fährterminal Plaza D'Jeti (17.08.).</strong> Terminal, Ticketschalter,
 Läden und Busvorfahrt liegen auf demselben Platz; zwischen Aussteigen und Fährschalter liegt
 kein Umstieg und keine zweite Fahrt.</p></div>
-<div class="entry entry--erlebt"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Mitte August hängt in Johor überall Flaggenschmuck (17.08.).</strong> Malaysische Flaggen und die
+<div class="entry entry--erlebt" id="erlebt-mitte-august-haengt-in-johor-ueberall"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Mitte August hängt in Johor überall Flaggenschmuck (17.08.).</strong> Malaysische Flaggen und die
 Johor-Flagge an Zäunen, Masten und Hauswänden, auch in kleinen Orten. Der Nationalfeiertag
 Merdeka ist am 31. August, die Dekoration steht Wochen vorher — schöner Nebeneffekt für Fotos,
 und ein Hinweis darauf, dass Ende August mit vollen Straßen und Feiertagsverkehr zu rechnen ist.</p></div>
 <h2 id="in-mersing">In Mersing</h2>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-59-1" data-telegram="2026-08-17T08:59:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Ort ist voller Katzen (17.08.).</strong> Jens' Meldung dazu bestand aus einem Satz: „Wir
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-59-1" data-telegram="2026-08-17T08:59:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Ort ist voller Katzen (17.08.).</strong> Jens' Meldung dazu bestand aus einem Satz: „Wir
 lieben die vielen Katzen." Auf den Fotos sind es drei verschiedene Tiere an drei Stellen im
 Ortskern, alle satt, keines auf der Flucht: eine schwarze im Schatten unter einem Marktwagen,
 eine rot-weiße quer über die Fliesen gestreckt und schlafend, eine schwarz-weiße, die im
@@ -922,13 +971,13 @@ nicht auf Hunde. <strong>Sabah</strong> — Sandakan, Kota Kinabalu, Kudat — g
 tollwutfrei. Die beiden Staaten liegen auf derselben Insel und werden ständig verwechselt.
 Wer also auf Borneo eine Katze anfasst, sollte vorher wissen, in welchem der beiden er steht;
 und nach Biss oder Kratzer gilt überall dasselbe: sofort zum Arzt, nicht abwarten.</p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-59-2" data-telegram="2026-08-17T08:59:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Am Geldautomaten der BSN in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t08-59-2" data-telegram="2026-08-17T08:59:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Am Geldautomaten der BSN in Mersing kam Geld heraus, mit einer Reisekreditkarte und ohne
 Gebühr (17.08.).</strong> Das ist die praktisch wichtigste Auskunft dieses Abschnitts, und sie
 widerspricht dem, was wir vorher angenommen hatten (siehe „Bezahlen"): weder wurde die Karte
 abgelehnt noch eine Fremdkartengebühr fällig — und ausgerechnet bei der Bank, von der wir hier
 abgeraten hatten. Wer eine Reisekreditkarte ohne Auslandsentgelt dabeihat, braucht für Mersing
 keine Wechselstube und muss sich in Johor Bahru nicht mit Bargeld eindecken.</p><p class="spur"><span class="spur-von">Telegram 17.08. 08:59</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 17.08. 09:40</span><span class="spur-dauer">41 Min</span></p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-36-1" data-telegram="2026-08-17T09:36:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>RM500 waren es, und das ist knapper, als es klingt (17.08.).</strong> Fest verplant sind davon
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t09-36-1" data-telegram="2026-08-17T09:36:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>RM500 waren es, und das ist knapper, als es klingt (17.08.).</strong> Fest verplant sind davon
 <strong>RM165</strong>: RM105 Marine-Park-Gebühr am Fährschalter in Mersing und RM60 Touristensteuer in der
 Unterkunft auf Tioman. Bleiben <strong>RM335 für vier Personen und drei Inseltage</strong> — Frühstück ist
 in der Unterkunft enthalten, Bootsfahrten zwischen den Buchten und eine Schnorcheltour nicht.
@@ -950,7 +999,7 @@ Panggung Wayang</em> — wörtlich „Kino-Nudeln" —, der der Überlieferung n
 stand; auf Google Maps zu finden als „Panggung Cafe Mersing". Ob es dieses Gebäude war, sagt
 das nicht.</p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-altes-kino-640.avif 640w, fotos/mersing-altes-kino-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-altes-kino-640.webp 640w, fotos/mersing-altes-kino-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-altes-kino.jpg" srcset="fotos/mersing-altes-kino-640.jpg 640w, fotos/mersing-altes-kino.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Ein leerstehendes ehemaliges Kino im Ortskern von Mersing." loading="lazy" decoding="async"></picture><figcaption>Ein leerstehendes ehemaliges Kino im Ortskern von Mersing.</figcaption></figure>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-21-1" data-telegram="2026-08-17T10:21:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Am Spätnachmittag spielt sich der Ort an der Strandpromenade ab (17.08.).</strong> Ein
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-21-1" data-telegram="2026-08-17T10:21:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Am Spätnachmittag spielt sich der Ort an der Strandpromenade ab (17.08.).</strong> Ein
 asphaltierter Weg zwischen Kokospalmen und Meer, Pavillons zum Sitzen, Spielgeräte, dahinter
 die Straße mit den Parkplätzen. Auf dem Foto gehen Familien spazieren, Kinder fahren Rad,
 an den Masten hängen schon die Flaggen für Merdeka. Wer in Mersing auf die Fähre wartet und
@@ -971,7 +1020,7 @@ dazu, der Plan könne sich ohne Ankündigung ändern. Der zweite Hafen, <strong>
 alte Name Teluk Gading steht noch in vielen Buchungen), liegt 40 Kilometer nördlich und hat
 das Problem nicht, weil dort das Wasser tief genug ist. Beide Häfen fahren nach Tioman, aber
 nur einer steht auf dem eigenen Ticket.</p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-21-2" data-telegram="2026-08-17T10:21:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Und so sieht das aus (17.08., 18:20 Ortszeit).</strong> Am Abend vor der Überfahrt lagen die
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t10-21-2" data-telegram="2026-08-17T10:21:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Und so sieht das aus (17.08., 18:20 Ortszeit).</strong> Am Abend vor der Überfahrt lagen die
 kleinen Boote am gegenüberliegenden Ufer im Schlick, während die beiden großen Boote am Steg
 noch schwammen. Das ist kein Wetterschaden und kein schlechter Tag — das ist der normale
 Tidenhub, und es ist der Grund, warum die Abfahrtszeit in Mersing jeden Tag eine andere ist.
@@ -988,7 +1037,7 @@ Arbeitshafen mit Fischerei, und der Fährbetrieb teilt sich das Wasser mit ihr.<
    Unterkünfte auf Tioman fragen beim Einchecken danach, und er gilt für den ganzen
    Aufenthalt.</li><li><strong>Schalter für die Johor-Gebühr.</strong> Eigener Schalter, eigener Betrag — am 18.08. wurde sie
    allerdings nicht erhoben, siehe unten.</li></ol>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t02-12-1" data-telegram="2026-08-18T02:12:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Kassiert wird nicht im Terminal, sondern in einem Büro in der Nähe der Anlegestelle
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t02-12-1" data-telegram="2026-08-18T02:12:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Kassiert wird nicht im Terminal, sondern in einem Büro in der Nähe der Anlegestelle
 (18.08.).</strong> Jens hat es am Morgen der Überfahrt gemeldet: das Büro liegt abseits des
 Terminalgebäudes, davor steht ein Pavillon — daran ist es zu erkennen. Die Bordkarten gibt es
 also an der einen Stelle, gezahlt wird an der anderen. Das ist ein zusätzlicher Weg, und in
@@ -1004,7 +1053,7 @@ RM5, eine andere RM10; für uns wären es also RM65 oder RM70. Und der Autor ein
 ausführlichen Führers schreibt, er sei ihr in der Praxis nie begegnet. Das ist der Grund, sie
 trotzdem in bar dabeizuhaben: nicht erhoben zu werden kostet nichts, sie nicht dabeizuhaben
 kostet die Fähre.</p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t02-19-1" data-telegram="2026-08-18T02:19:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Erhoben wurde nur die Marine-Park-Gebühr (18.08.).</strong> Damit ist die Frage entschieden, bei
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t02-19-1" data-telegram="2026-08-18T02:19:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Erhoben wurde nur die Marine-Park-Gebühr (18.08.).</strong> Damit ist die Frage entschieden, bei
 der die Quellen im Absatz darüber auseinandergehen: Im Büro an der Anlegestelle wurde allein
 die Marine-Park-Gebühr kassiert, kein zweiter Betrag und kein zweiter Schalter. Der Autor, der
 schrieb, er sei der Johor-Gebühr in der Praxis nie begegnet, behält also recht. Wir würden sie
@@ -1024,13 +1073,13 @@ Minuten in ruhigen Zeiten und 90 in den Schulferien. Mehr als anderthalb Stunden
 nichts, weil vorher niemand am Schalter sitzt.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Das Gepäck nimmt die Mannschaft beim Einsteigen ab und fragt, wo man aussteigt.</strong> Das
 Boot hält auf Tioman an mehreren Dörfern — Genting, Paya, Tekek, ABC, Salang. Wer den Namen
 seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falschen Bucht.</p></div></details>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-1" data-telegram="2026-08-18T03:32:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Wartehalle ist ein offener Pavillon, kein Gebäude (18.08.).</strong> Ein Ziegeldach auf
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-1" data-telegram="2026-08-18T03:32:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Wartehalle ist ein offener Pavillon, kein Gebäude (18.08.).</strong> Ein Ziegeldach auf
 Stützen, an den Seiten offen, Deckenventilatoren unter dem Dach, feste Stuhlreihen, zwei
 Bildschirme mit den Abfahrten. Klimaanlage gibt es hier nicht und kann es nicht geben — wer
 sich auf eine gekühlte Halle einstellt, wartet in der Mittagshitze falsch angezogen. Der
 Schatten ist das ganze Angebot, und er reicht.</p><p class="spur"><span class="spur-von">Telegram 18.08. 03:32</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 18.08. 03:41</span><span class="spur-dauer">9 Min</span></p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="fotos/mersing-faehrterminal-wartehalle-640.avif 640w, fotos/mersing-faehrterminal-wartehalle-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/mersing-faehrterminal-wartehalle-640.webp 640w, fotos/mersing-faehrterminal-wartehalle-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/mersing-faehrterminal-wartehalle.jpg" srcset="fotos/mersing-faehrterminal-wartehalle-640.jpg 640w, fotos/mersing-faehrterminal-wartehalle.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Die offene Wartehalle des Fährterminals in Mersing: Ziegeldach auf Stützen, Deckenventilatoren, blaue Stuhlreihen, wartende Reisende." loading="lazy" decoding="async"></picture><figcaption>Die offene Wartehalle des Fährterminals in Mersing: Ziegeldach auf Stützen, Deckenventilatoren, blaue Stuhlreihen, wartende Reisende.</figcaption></figure>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-2" data-telegram="2026-08-18T03:32:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Eingestiegen wird vom Steg aus, direkt neben dem Rumpf (18.08.).</strong> Die Schlange steht
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t03-32-2" data-telegram="2026-08-18T03:32:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Eingestiegen wird vom Steg aus, direkt neben dem Rumpf (18.08.).</strong> Die Schlange steht
 unter einem Vordach, jeder mit seinem Gepäck am Körper. Das Boot ist ein Katamaran, der
 Betreiber heißt <strong>Cataferry</strong> — der Name steht in großen Buchstaben an der Bordwand, und
 damit weiß man am Steg, ob man vor dem richtigen Boot steht.</p><p class="spur"><span class="spur-von">Telegram 18.08. 03:32</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 18.08. 03:41</span><span class="spur-dauer">9 Min</span></p></div>
@@ -1048,25 +1097,25 @@ um 11:30 — die Zeiten aus der Tabelle unten haben bis zum Sitzplatz getragen.<
 <p>Der Abschnitt entstand vor der Ankunft, deshalb steht darin fast überall ○. Was wir seit dem
 18. August selbst gesehen haben, steht oben mit ✓; die ○-Sätze darunter warten weiter auf ihre
 Prüfung.</p>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t06-56-1" data-telegram="2026-08-18T06:56:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Unterkunft steht direkt auf dem Sand (18.08.).</strong> Kein Hotelgebäude, sondern eine Reihe
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t06-56-1" data-telegram="2026-08-18T06:56:00+00:00" data-ort="tioman"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Unterkunft steht direkt auf dem Sand (18.08.).</strong> Kein Hotelgebäude, sondern eine Reihe
 weißer Häuschen nebeneinander, jedes mit eigener Tür zum Strand. Zwischen der letzten Stufe und
 dem Wasser liegen ein paar Schritte Sand und keine Straße. Vor den Türen liegen Kajaks für die
 Gäste, an einem Baum hängen handgemalte Schilder Richtung Frühstück und Dusche. Wer eine Lobby
 und einen Empfangstresen erwartet, sucht vergeblich: die Tür des Häuschens ist der Eingang.</p><p class="spur"><span class="spur-von">Telegram 18.08. 06:56</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 18.08. 07:03</span><span class="spur-dauer">7 Min</span></p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-strandchalets-640.avif 640w, fotos/tioman-strandchalets-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-strandchalets-640.webp 640w, fotos/tioman-strandchalets-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-strandchalets.jpg" srcset="fotos/tioman-strandchalets-640.jpg 640w, fotos/tioman-strandchalets.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Eine Reihe weißer Strandhäuschen unter Palmen und Bäumen, davor ein Kajak auf dem Sand, links das flache türkisfarbene Wasser der Bucht." loading="lazy" decoding="async"></picture><figcaption>Eine Reihe weißer Strandhäuschen unter Palmen und Bäumen, davor ein Kajak auf dem Sand, links das flache türkisfarbene Wasser der Bucht.</figcaption></figure>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t06-56-2" data-telegram="2026-08-18T06:56:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Bucht ist flach und ruhig, der Steg liegt am anderen Ende in Sichtweite (18.08.).</strong>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t06-56-2" data-telegram="2026-08-18T06:56:00+00:00" data-ort="tioman"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Bucht ist flach und ruhig, der Steg liegt am anderen Ende in Sichtweite (18.08.).</strong>
 Helles Wasser ohne Wellen, klar bis weit hinaus, dahinter bewaldete Hügel bis ans Ufer. Am
 Wasserrand hängt eine Hängematte zwischen zwei Pfosten. Kurz vor 15 Uhr Ortszeit war der
 Strand leer. Am anderen Ende der Bucht steht ein langer Steg, davor ein paar Dächer — mehr ist
 von hier aus nicht zu erkennen.</p><p class="spur"><span class="spur-von">Telegram 18.08. 06:56</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 18.08. 07:03</span><span class="spur-dauer">7 Min</span></p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-bucht-strand-640.avif 640w, fotos/tioman-bucht-strand-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-bucht-strand-640.webp 640w, fotos/tioman-bucht-strand-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-bucht-strand.jpg" srcset="fotos/tioman-bucht-strand-640.jpg 640w, fotos/tioman-bucht-strand.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg." loading="lazy" decoding="async"></picture><figcaption>Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg.</figcaption></figure>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t09-43-1" data-telegram="2026-08-18T09:43:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Regenwald steht direkt hinter den Häusern von Tekek (18.08.).</strong> Hinter der Häuserzeile
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t09-43-1" data-telegram="2026-08-18T09:43:00+00:00" data-ort="tioman"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Der Regenwald steht direkt hinter den Häusern von Tekek (18.08.).</strong> Hinter der Häuserzeile
 am Dorfrand steigt der Hang sofort an, dicht bewachsen bis zum Grat, und aus dem Blätterdach ragen
 einzelne hohe Bäume heraus. Zwischen dem letzten Dach und dem Wald liegt weder Feld noch Garten.
 Wer auf der Dorfstraße steht, hat auf der einen Seite Wellblechdächer und auf der anderen den
 Wald.</p><p class="spur"><span class="spur-von">Telegram 18.08. 09:43</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 18.08. 10:07</span><span class="spur-dauer">24 Min</span></p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-regenwald-hinter-dem-dorf-640.avif 640w, fotos/tioman-regenwald-hinter-dem-dorf-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-regenwald-hinter-dem-dorf-640.webp 640w, fotos/tioman-regenwald-hinter-dem-dorf-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-regenwald-hinter-dem-dorf.jpg" srcset="fotos/tioman-regenwald-hinter-dem-dorf-640.jpg 640w, fotos/tioman-regenwald-hinter-dem-dorf.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="Bewaldeter Hang direkt hinter einer Reihe kleiner Häuser mit Blechdächern, davor Sandfläche, Bänke und Stromleitungen." loading="lazy" decoding="async"></picture><figcaption>Bewaldeter Hang direkt hinter einer Reihe kleiner Häuser mit Blechdächern, davor Sandfläche, Bänke und Stromleitungen.</figcaption></figure>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t09-43-2" data-telegram="2026-08-18T09:43:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Dorfstraße in Tekek ist ein Betonstreifen, und viel fährt darauf nicht (18.08.).</strong> Eine Fahrspur
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t09-43-2" data-telegram="2026-08-18T09:43:00+00:00" data-ort="tioman"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Die Dorfstraße in Tekek ist ein Betonstreifen, und viel fährt darauf nicht (18.08.).</strong> Eine Fahrspur
 breit, an den Rändern orange-weiße Plastikbaken, dazwischen kleine Läden unter Blechdächern, ein
 blaues Pavillonzelt mit einer Kühltruhe davor und eine Brücke mit weißem Geländer. Unterwegs
 waren ein Roller, eine Ziege quer über die Fahrbahn und ein einzelner Pick-up mit Firmenaufkleber
@@ -1075,7 +1124,7 @@ an der Tür. An Masten und Zäunen hängen Malaysia-Flaggen.</p><p class="spur">
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Die Flaggen hängen wegen des Monats.</strong> Malaysia feiert am 31. August den Unabhängigkeitstag,
 Hari Merdeka; im ganzen August hängen Landes- und Bundesstaatsflaggen an Häusern, Zäunen und
 Straßenmasten. An diesem Tag sind wir in Kota Kinabalu.</p></div>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t10-18-1" data-telegram="2026-08-18T10:18:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Am Ufer in Tekek steht eine Tafel, die die ganze Insel auf einen Blick sortiert (18.08.).</strong>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t10-18-1" data-telegram="2026-08-18T10:18:00+00:00" data-ort="tioman"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Am Ufer in Tekek steht eine Tafel, die die ganze Insel auf einen Blick sortiert (18.08.).</strong>
 Blaues Gestell, seitlich in großen Buchstaben „Pulau Tioman", darin eine gezeichnete Karte mit
 einem Kasten pro Dorf. Tekek: Marina, Zentrum des Marine Parks, Golfplatz, der Dschungelpfad
 nach Juara quer über die Insel, dazu eine Seilrutsche am Keluang. Salang ganz im Norden: eine
@@ -1086,7 +1135,7 @@ Zwischen den Dörfern liegen die Tauchinseln — Chebeh, Tulai, Labas, Sepoi, So
 Jahat — jede mit Taucher- oder Schnorchelzeichen. Was davon stimmt, steht hier erst, wenn wir
 es selbst gesehen haben.</p><p class="spur"><span class="spur-von">Telegram 18.08. 10:18</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">auf dieser Seite 18.08. 10:24</span><span class="spur-dauer">6 Min</span></p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="fotos/tioman-uebersichtstafel-tekek-640.avif 640w, fotos/tioman-uebersichtstafel-tekek-720.avif 720w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="fotos/tioman-uebersichtstafel-tekek-640.webp 640w, fotos/tioman-uebersichtstafel-tekek-720.webp 720w" sizes="(max-width: 46rem) 92vw, 640px"><img src="fotos/tioman-uebersichtstafel-tekek.jpg" srcset="fotos/tioman-uebersichtstafel-tekek-640.jpg 640w, fotos/tioman-uebersichtstafel-tekek.jpg 720w" sizes="(max-width: 46rem) 92vw, 640px" width="720" height="1280" alt="Blaue Infotafel am Uferweg mit der Aufschrift „Pulau Tioman&quot;; darin eine gezeichnete Inselkarte mit Dörfern, Tauchplätzen und Aktivitätslisten." loading="lazy" decoding="async"></picture><figcaption>Blaue Infotafel am Uferweg mit der Aufschrift „Pulau Tioman"; darin eine gezeichnete Inselkarte mit Dörfern, Tauchplätzen und Aktivitätslisten.</figcaption></figure>
-<div class="entry entry--erlebt" id="eintrag-2026-08-18t10-30-1" data-telegram="2026-08-18T10:30:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>In den Nadelbäumen am Ufer von Tekek hängen Flughunde, und zwar zu Dutzenden (18.08.).</strong>
+<div class="entry entry--erlebt" id="eintrag-2026-08-18t10-30-1" data-telegram="2026-08-18T10:30:00+00:00" data-ort="tioman"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>In den Nadelbäumen am Ufer von Tekek hängen Flughunde, und zwar zu Dutzenden (18.08.).</strong>
 Kurz vor halb sieben abends, gut eine Stunde vor Sonnenuntergang, hängen sie noch: dunkle
 Bündel an den dünnen Zweigen, kopfüber, jedes in seine eigenen Flughäute gewickelt, an
 manchen Ästen drei oder vier nebeneinander. In den vergrößerten Ausschnitten sind über sechzig
@@ -1148,7 +1197,7 @@ Fahrplan in Mersing jeden Tag verschiebt, verschiebt auch die Rückfahrt — ein
 nachfragen ist der Rat, den hier alle Quellen geben, und er kostet nichts.</p></div><div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">nachgeschlagen, nicht selbst geprüft</span><p><strong>Den Beleg der Marine-Park-Gebühr nicht in den Koffer packen.</strong> Er wird beim Einchecken in
 der Unterkunft verlangt und gilt für den ganzen Aufenthalt.</p></div></details>
 <h2 id="essen">Essen</h2>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t11-19-1" data-telegram="2026-08-17T11:19:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t11-19-1" data-telegram="2026-08-17T11:19:00+00:00" data-ort="mersing"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
 Frühstück kostet RM 3,50 (17.08.).</strong> Zahlen von der Anzeigetafel, nicht geschätzt: Nasi
 Goreng, Mee Goreng, Kuey Teow Goreng und Mehoon Goreng je <strong>RM 6,50</strong>; mit Hähnchen
 RM 10,00, mit Rind RM 10,50, mit Ziege RM 11,50. Reis pur RM 2,50, Gemüse RM 2,00, ein
@@ -1172,7 +1221,7 @@ goreng" gebratene Nudeln ohne Zusatz. <em>Kosong</em> heißt leer, also ohne Fü
 einfach, <em>panas</em> heiß und <em>sejuk</em> kalt — die letzten beiden stehen über den zwei
 Preisspalten bei den Getränken.</p></div></details>
 <h2 id="bezahlen">Bezahlen</h2>
-<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-41-1" data-telegram="2026-08-17T04:41:00+00:00"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit
+<div class="entry entry--erlebt" id="eintrag-2026-08-17t04-41-1" data-telegram="2026-08-17T04:41:00+00:00" data-ort="johor-bahru"><span class="mark" aria-hidden="true">✓</span><span class="mark-label">selbst erlebt</span><p><strong>Im Bus von JB Sentral nach Larkin geht kontaktlos bezahlen, mit Kreditkarte und mit
 Google Pay (17.08.).</strong> Beides wurde angenommen, ohne Vorbereitung und ohne lokale
 Verkehrskarte. Das ist die praktisch wichtigste Erfahrung des Tages: für den Weg vom
 Grenzgebäude zum Fernbusbahnhof braucht man weder Ringgit in bar noch eine App, und der Bus

@@ -378,7 +378,46 @@ code {
 
 .stationen li { margin-bottom: .35rem; break-inside: avoid; }
 .stationen b { color: var(--tinte); font-weight: 600; }
-.stationen span { display: block; font-size: .85rem; }
+.stationen-zeit { display: block; font-size: .85rem; }
+
+/* Die Zahl neben der Station: wie viele selbst erlebte Eintraege dort haengen.
+   Eine Station ohne Erlebnis bekommt keine 0 — eine 0 liest sich wie eine
+   Messung, dabei sind Kuala Lumpur und Sandakan schlicht noch nicht dran. */
+.stationen-zahl {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: 0 .4rem;
+  border-radius: 999px;
+  background: #e3ece7;
+  color: var(--erlebt);
+  font-size: .75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.stationen-erlebt {
+  margin: .3rem 0 .7rem;
+  padding-left: .9rem;
+  list-style: none;
+  border-left: 2px solid #d8e2dc;
+}
+
+.stationen-erlebt li { margin-bottom: .2rem; }
+
+.stationen-erlebt a {
+  color: var(--tinte-leise);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.stationen-erlebt a:hover {
+  color: var(--erlebt);
+  border-bottom-color: #9ebcae;
+}
+
+/* Dieselbe Liste im Kartenpopup. Leaflet setzt seine eigenen Abstaende. */
+.karte-liste { margin: .4rem 0 0; padding-left: .95rem; }
+.karte-liste li { margin-bottom: .15rem; }
 
 .hinweis { color: var(--tinte-leise); font-size: .92rem; }
 
