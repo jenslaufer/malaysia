@@ -343,6 +343,18 @@ the large duty-free shops are all there too. Staying in any other bay means taki
 each of those. That is the practical reason to sleep in Tekek, and it has nothing to do with
 the beach.
 
+**○ "Tioman is cashless" is true — and it does not help us.** The island switched over
+officially on 7 August 2023: BSN brought QR codes, card terminals and banking agents (*Ejen
+Bank BSN*) to the villages, and the bank now writes that nearly every purchase runs that way.
+The rails behind it are Malaysian, though — DuitNow QR, a Malaysian debit card, a bank
+transfer. You scan a DuitNow code with a Malaysian banking app, not with a German one. The one
+bridge that existed is closed: *My TouristPay*, the app that let foreigners register a Visa or
+Mastercard and pay DuitNow codes with it, **was discontinued on 31 December 2024** — the
+how-to articles are still online and read as current. And the Alipay+ tie-in only connects
+Asian wallets (AlipayHK, GCash, Kakao Pay, TrueMoney), no European ones. That leaves us two
+ways: card terminals where they exist, and the single ATM in Tekek. Anyone who reads the
+headline and packs less cash because of it draws exactly the wrong conclusion.
+
 **○ The island has been duty-free since 2002.** Alcohol, tobacco and chocolate cost
 considerably less than on the mainland — up to 50 per cent is the figure quoted. The largest
 shop is in Tekek. What you are allowed to carry back to the mainland is not stated in any

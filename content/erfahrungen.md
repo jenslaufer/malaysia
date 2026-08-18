@@ -348,6 +348,19 @@ Informationszentrum des Marine Parks und die großen zollfreien Läden. Wer in e
 Buchten wohnt, nimmt für jede dieser Sachen ein Boot. Das ist der praktische Grund, in Tekek zu
 übernachten, und er hat mit dem Strand nichts zu tun.
 
+**○ „Tioman ist bargeldlos" stimmt — und hilft uns nicht.** Die Insel hat am 7. August 2023
+offiziell umgestellt: die BSN hat QR-Codes, Kartenterminals und Bankagenten (*Ejen Bank BSN*)
+in die Dörfer gebracht, und die Bank schreibt heute, fast jeder Einkauf laufe darüber. Die
+Wege dahinter sind aber malaysische — DuitNow QR, malaysische Debitkarte, Überweisung. Einen
+DuitNow-Code scannt man mit einer malaysischen Bank-App, nicht mit einer deutschen. Die eine
+Brücke, die es dafür gab, ist zu: die App *My TouristPay*, mit der Fremde ihre Visa oder
+Mastercard hinterlegen und damit DuitNow-Codes scannen konnten, wurde **zum 31. Dezember 2024
+eingestellt** — Anleitungen dazu stehen weiter im Netz und lesen sich wie aktuell. Und die
+Alipay+-Kopplung verbindet nur asiatische Geldbörsen (AlipayHK, GCash, Kakao Pay, TrueMoney),
+keine europäischen. Für uns bleiben deshalb zwei Wege: Kartenterminals, wo es welche gibt, und
+der eine Geldautomat in Tekek. Wer die Schlagzeile liest und daraufhin weniger Bargeld
+einpackt, zieht genau den falschen Schluss.
+
 **○ Die Insel ist zollfrei, seit 2002.** Alkohol, Tabak und Schokolade kosten dort deutlich
 weniger als auf dem Festland — genannt werden bis zu 50 Prozent. Der größte Laden steht in
 Tekek. Was man beim Zurückfahren aufs Festland mitnehmen darf, steht in keiner der Quellen, die
