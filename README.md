@@ -1,4 +1,8 @@
-# malaysia.jenslaufer.com
+# jenslaufer.com/malaysia/
+
+**Live unter `https://jenslaufer.com/malaysia/`** — GitHub Pages, Projektpfad, kein CNAME.
+`malaysia.jenslaufer.com` löst nicht auf und ist bewusst aufgeschoben (Begründung unten unter
+„Ausliefern"). Wer die Subdomain im Text findet, meint diesen Pfad.
 
 Reisenotizen aus Singapur und Malaysia (August/September 2026), zum Weitergeben.
 Statische Seite, gebaut aus einem Markdown-Dokument. Kein Framework, keine
