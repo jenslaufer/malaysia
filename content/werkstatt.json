@@ -103,6 +103,18 @@
       "veroeffentlicht": "2026-08-18T07:03:23+00:00"
     },
     {
+      "anker": "**✓ Der Regenwald steht direkt hinter den Häusern (18.08.).*",
+      "minuten": 7,
+      "telegram": "2026-08-18T09:43:00+00:00",
+      "veroeffentlicht": "2026-08-18T09:50:12+00:00"
+    },
+    {
+      "anker": "**✓ Die Dorfstraße ist ein Betonstreifen, und viel fährt dar",
+      "minuten": 7,
+      "telegram": "2026-08-18T09:43:00+00:00",
+      "veroeffentlicht": "2026-08-18T09:50:12+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -133,10 +145,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 22,
+  "gemessen": 24,
   "juengste_minuten": 7,
-  "markiert": 22,
-  "median_minuten": 15,
+  "markiert": 24,
+  "median_minuten": 12,
   "schnellste_minuten": 4,
   "stand": "2026-08-18"
 }
