@@ -1686,5 +1686,83 @@ class TestRechercheFaltung(unittest.TestCase):
 
 
 
+class TestFehlschlaege(unittest.TestCase):
+    """Umbau 2 (Jens 2026-08-18 09:44): „Sollten wir den Reiseblog nicht spannender gestalten?"
+
+    Die Seite verspricht „was wirklich funktioniert hat" und traegt am 18.08.
+    genau **2 ✗** gegen 29 ✓ und 40 ○ — beide in ihrem Themenabschnitt vergraben.
+    Das ist der Teil, den kein Reisefuehrer schreibt, und der einzige, der die
+    anderen Haken glaubwuerdig macht. Deshalb steht er oben, nicht weil er
+    haeufig waere.
+    """
+
+    QUELLE = ("# T\n\n## A\n\n"
+              "**✓ Hat geklappt.** Text.\n\n"
+              "**✗ Wechselstube schlaegt Automat — galt bei uns nicht.** Begruendung.\n\n"
+              "## B\n\n"
+              "**○ Nachgeschlagen.** Text.\n\n"
+              "**✗ CelcomDigi liess sich online nicht kaufen.** Begruendung.\n")
+
+    def test_jeder_gescheiterte_eintrag_bekommt_eine_sprungmarke(self):
+        """Ohne id ist der Block nicht verlinkbar, und ✗ traegt keine Messung."""
+        rumpf = build.render_markdown(self.QUELLE)
+        self.assertEqual(rumpf.count('class="entry entry--gescheitert" id="'), 2)
+
+    def test_der_block_nennt_beide_und_verlinkt_in_den_rumpf(self):
+        rumpf = build.render_markdown(self.QUELLE)
+        block = build._fehlschlaege(rumpf)
+        ziele = re.findall(r'href="#([^"]+)"', block)
+        self.assertEqual(len(ziele), 2)
+        for ziel in ziele:
+            self.assertIn(f'id="{ziel}"', rumpf)
+
+    def test_nur_gescheitertes_kommt_hinein(self):
+        block = build._fehlschlaege(build.render_markdown(self.QUELLE))
+        self.assertNotIn("Hat geklappt", block)
+        self.assertNotIn("Nachgeschlagen", block)
+
+    def test_ohne_fehlschlag_gar_kein_block(self):
+        """Eine leere Ueberschrift „Was nicht funktioniert hat" waere eine Luege."""
+        self.assertEqual(build._fehlschlaege(build.render_markdown(
+            "## A\n\n**✓ Alles gut.** Text.\n")), "")
+
+    def test_die_marke_haengt_am_titel_nicht_am_fliesstext(self):
+        """Ein geteilter Link darf nicht brechen, weil der Absatz nachgebessert wird."""
+        a = build.render_markdown(self.QUELLE)
+        b = build.render_markdown(self.QUELLE.replace("Begruendung.", "Begruendung, laenger."))
+        marken = re.findall(r'class="entry entry--gescheitert" id="([^"]+)"', a)
+        self.assertEqual(len(marken), 2, "ohne Marken vergleicht der Test zwei leere Listen")
+        self.assertEqual(
+            marken, re.findall(r'class="entry entry--gescheitert" id="([^"]+)"', b))
+
+    def test_die_marke_bricht_kein_wort_ab(self):
+        """`…-bei-u` liest sich wie ein Uebertragungsfehler, und die Marke
+        landet in der Adresszeile, sobald jemand den Punkt weitergibt."""
+        rumpf = build.render_markdown(
+            "## A\n\n**✗ Ein sehr langer Titel mit vielen Woertern, der die "
+            "Grenze von achtundvierzig Zeichen deutlich ueberschreitet.** Text.\n")
+        marke = re.search(r'id="(fehl-[^"]+)"', rumpf).group(1)
+        self.assertLessEqual(len(marke), 53)
+        for wort in marke[len("fehl-"):].split("-"):
+            self.assertIn(wort, build.slug(
+                "Ein sehr langer Titel mit vielen Woertern, der die Grenze von "
+                "achtundvierzig Zeichen deutlich ueberschreitet.").split("-"))
+
+    def test_der_block_nennt_die_anzahl(self):
+        block = build._fehlschlaege(build.render_markdown(self.QUELLE))
+        # Die Zahl steht in einem eigenen <span> (sie traegt die Farbe des
+        # Zeichens), also darf das Muster Verschachtelung zulassen.
+        self.assertRegex(block, r"(?s)<h2[^>]*>.*?\b2\b.*?</h2>")
+
+    def test_die_ausgelieferte_seite_traegt_den_block(self):
+        for datei in (build.WURZEL / "index.html", build.WURZEL / "en" / "index.html"):
+            with self.subTest(datei=datei.name):
+                seite = datei.read_text(encoding="utf-8")
+                self.assertIn('id="fehlschlaege"', seite)
+                for ziel in re.findall(r'href="#(fehl-[^"]+)"', seite):
+                    self.assertIn(f'id="{ziel}"', seite)
+
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -505,6 +505,63 @@ a { color: var(--erlebt); }
 
 .zuletzt-posten a:hover .zuletzt-titel { color: var(--erlebt); }
 
+/* --- Was nicht funktioniert hat ------------------------------------------
+   Zwei Zeilen gegen 69 andere. Der Block darf deshalb nicht wie ein Kapitel
+   aussehen — er nimmt die Kopfzeile von "Zuletzt" und setzt nur die Farbe
+   des Zeichens dagegen, damit das Auge ihn findet und nicht daran haengt. */
+
+.fehl {
+  max-width: var(--satz);
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.fehl-kopf {
+  margin: 0 0 .9rem;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--tinte-leise);
+}
+
+.fehl-zahl {
+  font-variant-numeric: tabular-nums;
+  color: var(--gescheitert);
+}
+
+.fehl-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--linie);
+}
+
+.fehl-posten { border-bottom: 1px solid var(--linie); }
+
+.fehl-posten a {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: .8rem;
+  align-items: baseline;
+  padding: .7rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fehl-zeichen {
+  color: var(--gescheitert);
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.fehl-titel {
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.fehl-posten a:hover .fehl-titel { color: var(--gescheitert); }
+
 /* Sprungziel nicht unter den Fensterrand schieben. */
 .entry[id] { scroll-margin-top: 1.5rem; }
 

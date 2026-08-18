@@ -526,6 +526,63 @@ a { color: var(--erlebt); }
 
 .zuletzt-posten a:hover .zuletzt-titel { color: var(--erlebt); }
 
+/* --- Was nicht funktioniert hat ------------------------------------------
+   Zwei Zeilen gegen 69 andere. Der Block darf deshalb nicht wie ein Kapitel
+   aussehen — er nimmt die Kopfzeile von "Zuletzt" und setzt nur die Farbe
+   des Zeichens dagegen, damit das Auge ihn findet und nicht daran haengt. */
+
+.fehl {
+  max-width: var(--satz);
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.fehl-kopf {
+  margin: 0 0 .9rem;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--tinte-leise);
+}
+
+.fehl-zahl {
+  font-variant-numeric: tabular-nums;
+  color: var(--gescheitert);
+}
+
+.fehl-liste {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--linie);
+}
+
+.fehl-posten { border-bottom: 1px solid var(--linie); }
+
+.fehl-posten a {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: .8rem;
+  align-items: baseline;
+  padding: .7rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fehl-zeichen {
+  color: var(--gescheitert);
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.fehl-titel {
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.fehl-posten a:hover .fehl-titel { color: var(--gescheitert); }
+
 /* Sprungziel nicht unter den Fensterrand schieben. */
 .entry[id] { scroll-margin-top: 1.5rem; }
 
@@ -701,7 +758,7 @@ date on it — or as a failure, so that nobody tries it twice.</p>
 <nav class="toc" aria-label="Sections"><a href="#how-to-read-this-document">How to read this document</a><a href="#getting-around-singapore">Getting around Singapore</a><a href="#border-singapore-malaysia">Border Singapore → Malaysia</a><a href="#from-the-border-to-mersing">From the border to Mersing</a><a href="#in-mersing">In Mersing</a><a href="#mersing-to-tioman-what-has-to-be-done-before-boarding">Mersing to Tioman — what has to be done before boarding</a><a href="#on-tioman-what-we-expect-to-find">On Tioman — what we expect to find</a><a href="#eating">Eating</a><a href="#paying">Paying</a><a href="#power-internet-phone">Power, internet, phone</a><a href="#what-we-had-planned-wrong-beforehand">What we had planned wrong beforehand</a><a href="#timeline">Timeline</a></nav>
 
 <main>
-<section id="zuletzt" class="zuletzt" aria-label="Latest from the road"><h2 class="zuletzt-kopf">Latest</h2><ol class="zuletzt-liste"><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t10-30-1"><img class="zuletzt-bild" src="../fotos/tioman-flughunde-tekek-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">Flying foxes hang in the needle trees along the shore in Tekek, dozens of them.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t10-18-1"><img class="zuletzt-bild" src="../fotos/tioman-uebersichtstafel-tekek-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">A board on the waterfront in Tekek sorts the whole island at a glance.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t09-43-1"><img class="zuletzt-bild" src="../fotos/tioman-regenwald-hinter-dem-dorf-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The rainforest starts right behind the houses of Tekek.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t09-43-2"><img class="zuletzt-bild" src="../fotos/tioman-dorfstrasse-roller-ziege-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The village road in Tekek is a concrete strip, and not much drives along it.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t06-56-1"><img class="zuletzt-bild" src="../fotos/tioman-strandchalets-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The place we stay sits directly on the sand.</span></a></li></ol></section>
+<section id="zuletzt" class="zuletzt" aria-label="Latest from the road"><h2 class="zuletzt-kopf">Latest</h2><ol class="zuletzt-liste"><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t10-30-1"><img class="zuletzt-bild" src="../fotos/tioman-flughunde-tekek-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">Flying foxes hang in the needle trees along the shore in Tekek, dozens of them.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t10-18-1"><img class="zuletzt-bild" src="../fotos/tioman-uebersichtstafel-tekek-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">A board on the waterfront in Tekek sorts the whole island at a glance.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t09-43-1"><img class="zuletzt-bild" src="../fotos/tioman-regenwald-hinter-dem-dorf-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The rainforest starts right behind the houses of Tekek.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t09-43-2"><img class="zuletzt-bild" src="../fotos/tioman-dorfstrasse-roller-ziege-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The village road in Tekek is a concrete strip, and not much drives along it.</span></a></li><li class="zuletzt-posten"><a href="#eintrag-2026-08-18t06-56-1"><img class="zuletzt-bild" src="../fotos/tioman-strandchalets-640.jpg" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="zuletzt-datum">18 Aug</span><span class="zuletzt-titel">The place we stay sits directly on the sand.</span></a></li></ol></section><section id="fehlschlaege" class="fehl" aria-label="What did not work"><h2 class="fehl-kopf">What did not work <span class="fehl-zahl">2</span></h2><ol class="fehl-liste"><li class="fehl-posten"><a href="#fehl-a-money-changer-beats-an-atm-not-for-us-it-didn"><span class="fehl-zeichen" aria-hidden="true">✗</span><span class="fehl-titel">"A money changer beats an ATM" — not for us it didn't.</span></a></li><li class="fehl-posten"><a href="#fehl-celcomdigi-could-not-be-bought-online"><span class="fehl-zeichen" aria-hidden="true">✗</span><span class="fehl-titel">CelcomDigi could not be bought online.</span></a></li></ol></section>
 <aside class="werkstatt" aria-labelledby="werkstatt-titel">
   <h2 id="werkstatt-titel">No human maintains this page</h2>
   <p>We are on the road, with a phone and no computer. What stands here is sent
@@ -1111,7 +1168,7 @@ app, and the bus is far cheaper than the taxi you will otherwise be steered towa
 stalls take nothing else. Budgeted for Tioman: RM105 marine park fee at the ferry counter in
 Mersing (adults RM30, children 6–12 RM15, source: Malaysian Ministry of Fisheries) and RM60
 tourist tax at the accommodation. Around 35 euros together, in cash, before boarding.</p></div>
-<div class="entry entry--gescheitert"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">did not work</span><p><strong>"A money changer beats an ATM" — not for us it didn't (17 Aug).</strong> This stood here as a
+<div class="entry entry--gescheitert" id="fehl-a-money-changer-beats-an-atm-not-for-us-it-didn"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">did not work</span><p><strong>"A money changer beats an ATM" — not for us it didn't (17 Aug).</strong> This stood here as a
 recommendation until 17 August: in Malaysia the ATM charges a foreign card fee and the money
 changer does not. That same day a travel credit card paid out in Mersing with <strong>no fee at all</strong>.
 So the rule does not hang on the country, it hangs on the card — and anyone holding one without
@@ -1166,7 +1223,7 @@ code. If you are wondering how regulated Malaysian long-distance coach travel is
 enough that the supervising authority puts its complaints desk in every passenger's line of
 sight. For a traveller that reads as reassuring rather than bureaucratic.</p><p class="spur"><span class="spur-von">Telegram 17 Aug, 09:37</span><span class="spur-pfeil" aria-hidden="true">→</span><span class="spur-bis">live on this page 17 Aug, 09:50</span><span class="spur-dauer">13 min</span></p></div>
 <figure class="foto"><picture><source type="image/avif" srcset="../fotos/fernbus-kameras-beschwerdenummer-640.avif 640w, ../fotos/fernbus-kameras-beschwerdenummer-1280.avif 1280w" sizes="(max-width: 46rem) 92vw, 640px"><source type="image/webp" srcset="../fotos/fernbus-kameras-beschwerdenummer-640.webp 640w, ../fotos/fernbus-kameras-beschwerdenummer-1280.webp 1280w" sizes="(max-width: 46rem) 92vw, 640px"><img src="../fotos/fernbus-kameras-beschwerdenummer.jpg" srcset="../fotos/fernbus-kameras-beschwerdenummer-640.jpg 640w, ../fotos/fernbus-kameras-beschwerdenummer.jpg 1280w" sizes="(max-width: 46rem) 92vw, 640px" width="1280" height="720" alt="The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen." loading="lazy" decoding="async"></picture><figcaption>The view forward from the coach onto a Malaysian trunk road, with the complaints-desk sticker on the windscreen.</figcaption></figure>
-<div class="entry entry--gescheitert"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">did not work</span><p><strong>CelcomDigi could not be bought online.</strong> The order process broke reproducibly at the
+<div class="entry entry--gescheitert" id="fehl-celcomdigi-could-not-be-bought-online"><span class="mark" aria-hidden="true">✗</span><span class="mark-label">did not work</span><p><strong>CelcomDigi could not be bought online.</strong> The order process broke reproducibly at the
 address entry. It works at a counter with the original passport; places to buy in Kuala
 Lumpur (Pavilion, Suria KLCC) and at KLIA airport.</p></div>
 <div class="entry entry--recherche"><span class="mark" aria-hidden="true">○</span><span class="mark-label">looked up, not checked ourselves</span><p><strong>Singtel hi!Tourist is limited to three per passport.</strong> After that the passport is used up

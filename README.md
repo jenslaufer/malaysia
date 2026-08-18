@@ -22,6 +22,25 @@ als lauter Erfahrung, und **ein ✓ ohne Erlebnis entwertet jeden anderen Haken 
 Deshalb ist das Zeichen auch gestalterisch die Hauptsache: eigene Randspalte,
 eigene Farbe, keine Bildflächen, keine Kacheln.
 
+## Die Reihenfolge ist der Umbau, nicht das Layout
+
+Jens am 18.08. 09:44: „Sollten wir den Reiseblog nicht spannender gestalten?"
+Die Antwort war keine Design-Frage. **Kein Satz wurde umgeschrieben, gekürzt
+oder gelöscht** — es wurde nur sortiert, und das an drei Stellen:
+
+| Block | Was er zeigt | Warum |
+|---|---|---|
+| `#zuletzt` (`_zuletzt`) | die 5 jüngsten **✓** mit Bild, Datum, Sprungmarke | die frischen Einträge liegen in ihrem Themenabschnitt; wer nach zwei Tagen wiederkommt, findet nicht, was neu ist |
+| `#fehlschlaege` (`_fehlschlaege`) | **alle ✗**, ungedeckelt | 2 gegen 69: wer überfliegt, sieht lauter Haken und keinen Reinfall — das liest sich glatter, als es war |
+| `<details>` (`falte_recherche`) | ≥2 aufeinanderfolgende **○** in einem Kasten | die Seite verspricht „was wirklich funktioniert hat" und bestand mehrheitlich aus Vorher-Gelesenem |
+
+Sprungmarken: **✓** hängt am Telegram-Zeitstempel (siehe unten), **✗** am
+eigenen Titel (`fehl-…`, an der Wortkante gekürzt) — ein ✗ hat keine Messung,
+weil gerade nichts von Telegram bis zur Seite gelaufen ist. Beide Marken
+entstehen im selben Build wie der Link darauf, können also nicht ins Leere
+zeigen; ein Test hält das gegen die **ausgelieferte** Datei fest, nicht gegen
+den Renderer.
+
 ## Die Verbindung zu /otto/ ist eine Messung, kein Link
 
 Die Seite ist zugleich Reisebericht und Arbeitsprobe: sie entsteht drei Wochen

@@ -440,6 +440,13 @@ def _eintrag(block: str, telegram: str = None) -> str | None:
         MARKEN[schluessel] = MARKEN.get(schluessel, 0) + 1
         marke = (f' id="eintrag-{schluessel}-{MARKEN[schluessel]}"'
                  f' data-telegram="{html.escape(daten["telegram"], quote=True)}"')
+    elif zeichen == "✗":
+        # ✗ traegt keine Messung — es ist ja gerade nichts passiert, das man
+        # von Telegram bis zur Seite haette stoppen koennen. Ohne id ist der
+        # Block oben aber nicht verlinkbar, also kommt die Marke aus dem TITEL.
+        # Der Fliesstext darunter wird nachgebessert, die fette Zeile nicht;
+        # ein geteilter Link ueberlebt damit eine Korrektur am Absatz.
+        marke = f' id="{_fehl_marke(rest)}"'
     return (
         f'<div class="entry entry--{klasse}"{marke}>'
         f'<span class="mark" aria-hidden="true">{glyph}</span>'
@@ -448,6 +455,30 @@ def _eintrag(block: str, telegram: str = None) -> str | None:
         f"{_spur(block, telegram)}"
         f"</div>"
     )
+
+
+FEHL_MARKEN: dict[str, int] = {}
+FEHL_TITEL = re.compile(r"^\*\*(.*?)\*\*", flags=re.S)
+
+
+def _fehl_marke(rest: str) -> str:
+    """Sprungmarke fuer ein ✗, aus den ersten Woertern seines Titels.
+
+    Gekuerzt auf eine Kante, nicht mitten im Wort: eine Marke ist eine Adresse,
+    die jemand weitergibt. Der Zaehler dahinter faengt den Fall ab, dass zwei
+    ✗ mit denselben sechs Woertern anfangen — zwei gleiche id auf einer Seite
+    lassen den Browser immer die erste anspringen, und das faellt niemandem auf.
+    """
+    titel = FEHL_TITEL.match(rest)
+    basis = slug(titel.group(1)) if titel else "eintrag"
+    if len(basis) > 48:
+        # An der Wortkante schneiden, nicht bei Zeichen 48: `…-bei-u` liest
+        # sich wie ein Uebertragungsfehler, und die Marke steht in der
+        # Adresszeile, sobald jemand den Punkt weitergibt.
+        basis = basis[:48].rsplit("-", 1)[0]
+    FEHL_MARKEN[basis] = FEHL_MARKEN.get(basis, 0) + 1
+    nr = FEHL_MARKEN[basis]
+    return f"fehl-{basis}" + (f"-{nr}" if nr > 1 else "")
 
 
 def _uhr(iso: str) -> str:
@@ -732,6 +763,7 @@ def render_markdown(md: str) -> str:
     md = MARKER_ZEIT.sub(r"@@WERKSTATT:\1@@", md)
     md = strip_kommentare(strip_marker(md))
     MARKEN.clear()  # sonst zaehlt die englische Fassung auf der deutschen weiter
+    FEHL_MARKEN.clear()  # dito: sonst heisst das erste ✗ der en-Fassung fehl-…-2
     teile = []
     for block in re.split(r"\n\s*\n", md):
         block = block.strip()
@@ -859,6 +891,44 @@ def _zuletzt(rumpf: str, anzahl: int = 5) -> str:
         f'{_t("Zuletzt erlebt", "Latest from the road")}">'
         f'<h2 class="zuletzt-kopf">{_t("Zuletzt", "Latest")}</h2>'
         f'<ol class="zuletzt-liste">{"".join(posten)}</ol></section>'
+    )
+
+
+def _fehlschlaege(rumpf: str) -> str:
+    """Was nicht funktioniert hat — ganz oben, obwohl es das Seltenste ist.
+
+    Umbau 2 (Jens 18.08. 09:44). Die Seite traegt 2 ✗ gegen 29 ✓ und 40 ○, und
+    beide lagen in ihrem Themenabschnitt: der Automaten-Irrtum unter „Bezahlen",
+    die gescheiterte SIM-Bestellung unter „Mobilfunk". Wer die Seite ueberfliegt,
+    sieht 71 Haken und keinen einzigen Reinfall — das liest sich glatter, als es
+    war. Der Block ist die Gegenprobe zum Versprechen der Seite und macht die
+    anderen Zeichen erst glaubwuerdig.
+
+    Gedeckelt wird nichts: ✗ ist die knappste Kategorie der Seite, ein Deckel
+    haette hier nur eine Zahl versteckt.
+    """
+    posten = []
+    for block in _bloecke(rumpf):
+        m = EINTRAG_ZEILE.match(block)
+        if not m or m.group("art") != "gescheitert" or not m.group("id"):
+            continue
+        titel = STARK.search(block)
+        if not titel:
+            continue
+        posten.append(
+            f'<li class="fehl-posten"><a href="#{m.group("id")}">'
+            f'<span class="fehl-zeichen" aria-hidden="true">✗</span>'
+            f'<span class="fehl-titel">'
+            f'{TITEL_DATUM.sub("", titel.group(1).strip()).rstrip(" .")}.'
+            f'</span></a></li>'
+        )
+    if not posten:
+        return ""
+    kopf = _t("Was nicht funktioniert hat", "What did not work")
+    return (
+        f'<section id="fehlschlaege" class="fehl" aria-label="{kopf}">'
+        f'<h2 class="fehl-kopf">{kopf} <span class="fehl-zahl">{len(posten)}</span></h2>'
+        f'<ol class="fehl-liste">{"".join(posten)}</ol></section>'
     )
 
 
@@ -1241,8 +1311,8 @@ def baue_seite(md: str) -> str:
     # Kopf ist alles bis zur ersten Ueberschrift zweiter Ordnung.
     schnitt = rumpf.find("<h2")
     kopf, rest = (rumpf[:schnitt], rumpf[schnitt:]) if schnitt > 0 else (rumpf, "")
-    rest = (_zuletzt(rumpf) + _werkstatt_band(WERKSTATT_SUMME) + _karte()
-            + falte_recherche(rest) + _autor_block())
+    rest = (_zuletzt(rumpf) + _fehlschlaege(rumpf) + _werkstatt_band(WERKSTATT_SUMME)
+            + _karte() + falte_recherche(rest) + _autor_block())
 
     vorlage = (WURZEL / "template" / _t("page.html", "page.en.html")).read_text(encoding="utf-8")
     css = (WURZEL / "template" / "site.css").read_text(encoding="utf-8")
