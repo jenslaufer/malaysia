@@ -360,8 +360,8 @@ von hier aus nicht zu erkennen.
 
 ![Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg.](foto:2026-08-18_065629.jpg)
 
-**✓ Der Regenwald steht direkt hinter den Häusern (18.08.).** Hinter der Häuserzeile am
-Dorfrand steigt der Hang sofort an, dicht bewachsen bis zum Grat, und aus dem Blätterdach ragen
+**✓ Der Regenwald steht direkt hinter den Häusern von Tekek (18.08.).** Hinter der Häuserzeile
+am Dorfrand steigt der Hang sofort an, dicht bewachsen bis zum Grat, und aus dem Blätterdach ragen
 einzelne hohe Bäume heraus. Zwischen dem letzten Dach und dem Wald liegt weder Feld noch Garten.
 Wer auf der Dorfstraße steht, hat auf der einen Seite Wellblechdächer und auf der anderen den
 Wald.
@@ -369,7 +369,7 @@ Wald.
 
 ![Bewaldeter Hang direkt hinter einer Reihe kleiner Häuser mit Blechdächern, davor Sandfläche, Bänke und Stromleitungen.](foto:2026-08-18_094311.jpg)
 
-**✓ Die Dorfstraße ist ein Betonstreifen, und viel fährt darauf nicht (18.08.).** Eine Fahrspur
+**✓ Die Dorfstraße in Tekek ist ein Betonstreifen, und viel fährt darauf nicht (18.08.).** Eine Fahrspur
 breit, an den Rändern orange-weiße Plastikbaken, dazwischen kleine Läden unter Blechdächern, ein
 blaues Pavillonzelt mit einer Kühltruhe davor und eine Brücke mit weißem Geländer. Unterwegs
 waren ein Roller, eine Ziege quer über die Fahrbahn und ein einzelner Pick-up mit Firmenaufkleber
