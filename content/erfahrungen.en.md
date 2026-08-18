@@ -392,6 +392,37 @@ snorkel symbol. Whether any of it holds up goes here once we have seen it oursel
 
 ![Blue information board on the waterfront path reading "Pulau Tioman"; inside it a drawn island map with villages, dive sites and activity lists.](foto:2026-08-18_101819.jpg)
 
+**✓ Flying foxes hang in the needle trees along the shore in Tekek, dozens of them (18 Aug).**
+Just before half past six in the evening, a good hour before sunset, they are still there:
+dark bundles on the thin branches, head down, each wrapped in its own wings, three or four
+side by side on some boughs. More than sixty can be counted individually in the enlarged
+crops; where they hang densely they merge into one another, so the colony is larger. The strip
+of trees stands between the concrete path and the sand, with the beach behind it. From the
+path you only see them if you look up — from below they are shadows in the branches.
+<!-- werkstatt: telegram=2026-08-18T10:30 -->
+
+![Needle trees on the beach at Tekek with dozens of dark flying foxes hanging head down among the branches; behind them a concrete path and the sandy beach.](foto:2026-08-18_103031.jpg)
+
+**○ They are island flying foxes, and this strip of trees is one of only two roosts on the
+whole island.** The species on Tioman is *Pteropus hypomelanus*, the island flying fox. A count
+running from March to October 2015 found the animals in exactly two places: Tekek and Juara.
+It came to 675–1,033 animals in Juara and 2,178–5,385 for the entire island, so the larger
+share hangs here. The international red list rates the species as not threatened, the
+Malaysian one as endangered, and the population is falling. Which species hangs there is not
+settled by the photograph but taken from the study (Aziz et al., *Human Ecology* 2017).
+
+**○ These animals pollinate durian — and it was proved for the first time on this island.**
+In Juara, on the other side of Tioman, nineteen camera traps hung in four flowering durian
+trees from April to July 2015. The flying foxes drink the nectar without destroying the
+flower, and they work above six metres, where the smaller nectar bats do not reach. The trees
+with the most flying fox visits bore ripe fruit; those with few did not. Many farmers treat
+the animals as pests because they sit in the blossom; in fact the harvest depends on them
+(Aziz et al., *Ecology and Evolution* 2017).
+
+**○ Do not touch a flying fox, not even a dead one.** That is the only rule needed, and it
+holds for every bat everywhere. Looking, photographing and walking underneath is harmless.
+
+
 **Still open:** what the marine park fee at the ferry counter actually cost, whether the
 receipt was asked for at check-in, and how one gets from the jetty to the cabins — on foot or
 by boat.

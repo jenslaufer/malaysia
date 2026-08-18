@@ -398,6 +398,39 @@ es selbst gesehen haben.
 
 ![Blaue Infotafel am Uferweg mit der Aufschrift „Pulau Tioman"; darin eine gezeichnete Inselkarte mit Dörfern, Tauchplätzen und Aktivitätslisten.](foto:2026-08-18_101819.jpg)
 
+**✓ In den Nadelbäumen am Ufer von Tekek hängen Flughunde, und zwar zu Dutzenden (18.08.).**
+Kurz vor halb sieben abends, gut eine Stunde vor Sonnenuntergang, hängen sie noch: dunkle
+Bündel an den dünnen Zweigen, kopfüber, jedes in seine eigenen Flughäute gewickelt, an
+manchen Ästen drei oder vier nebeneinander. In den vergrößerten Ausschnitten sind über sechzig
+einzeln zu zählen; wo sie dicht hängen, gehen sie ineinander über, die Kolonie ist also
+größer. Der Baumstreifen steht zwischen dem Betonweg und dem Sand, dahinter der Strand. Vom
+Weg aus sieht man sie erst, wenn man nach oben schaut — von unten sind es Schatten im Geäst.
+<!-- werkstatt: telegram=2026-08-18T10:30 -->
+
+![Nadelbäume am Strand von Tekek, an ihren Zweigen hängen dutzende dunkle Flughunde kopfüber im Geäst; dahinter ein Betonweg und der Sandstrand.](foto:2026-08-18_103031.jpg)
+
+**○ Es sind Inselflughunde, und dieser Baumstreifen ist einer von nur zwei Schlafplätzen der
+ganzen Insel.** Auf Tioman lebt *Pteropus hypomelanus*, der Inselflughund. Eine Zählung von
+März bis Oktober 2015 fand die Tiere an genau zwei Orten: in Tekek und in Juara. Ergebnis
+damals 675 bis 1.033 Tiere in Juara und 2.178 bis 5.385 auf der ganzen Insel — der größere
+Teil hängt also hier. Auf der internationalen Roten Liste gilt die Art als nicht gefährdet,
+auf der malaysischen als stark gefährdet, und der Bestand nimmt ab. Welche Art da hängt, ist
+nicht am Foto entschieden, sondern aus der Untersuchung übernommen (Aziz u.a., *Human
+Ecology* 2017).
+
+**○ Diese Tiere bestäuben Durian — nachgewiesen wurde das zum ersten Mal auf dieser Insel.**
+In Juara, auf der anderen Seite von Tioman, hingen von April bis Juli 2015 neunzehn
+Kamerafallen in vier blühenden Durianbäumen. Die Flughunde trinken den Nektar, ohne die
+Blüte zu zerstören, und arbeiten oberhalb von sechs Metern, wo die kleineren Nektarfledermäuse
+nicht hinkommen. Die Bäume mit den meisten Flughund-Besuchen trugen reife Früchte, die mit
+wenigen nicht. Viele Bauern halten die Tiere für Schädlinge, weil sie in den Blüten sitzen;
+tatsächlich hängt die Ernte an ihnen (Aziz u.a., *Ecology and Evolution* 2017).
+
+**○ Einen Flughund nicht anfassen, auch keinen toten.** Das ist die einzige Regel, die es
+braucht, und sie gilt für jede Fledermaus weltweit. Ansehen, fotografieren und darunter
+weitergehen ist unbedenklich.
+
+
 **Offen, kommt noch:** was die Marine-Park-Gebühr am Fährschalter tatsächlich gekostet hat, ob
 der Beleg beim Einchecken verlangt wurde, und wie man vom Steg zur Unterkunft kommt — zu Fuß
 oder mit dem Boot.
