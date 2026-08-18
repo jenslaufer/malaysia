@@ -379,6 +379,19 @@ flags hang from poles and fences.
 Merdeka, on 31 August; throughout August national and state flags hang from houses, fences and
 street poles. On that day we will be in Kota Kinabalu.
 
+**✓ A board on the waterfront in Tekek sorts the whole island at a glance (18 Aug).** A blue
+frame with "Pulau Tioman" down the side in large letters, holding a drawn map with one box per
+village. Tekek: the marina, the marine park centre, a golf course, the jungle path across the
+island to Juara, and a zip line at Keluang. Salang in the far north: a whale rock sculpture and
+the forest track over from Panuba. Juara on the east side, the only village facing the open
+sea: two waterfalls, a viewpoint, a surf school. Nipah and Mukut in the south: a cave, kayaking,
+the Asah waterfall and a via ferrata on Gunung Nenek Semukut. Between the villages lie the dive
+islands — Chebeh, Tulai, Labas, Sepoi, Soyak, Renggis, Jahat — each marked with a diver or
+snorkel symbol. Whether any of it holds up goes here once we have seen it ourselves.
+<!-- werkstatt: telegram=2026-08-18T10:18 -->
+
+![Blue information board on the waterfront path reading "Pulau Tioman"; inside it a drawn island map with villages, dive sites and activity lists.](foto:2026-08-18_101819.jpg)
+
 **Still open:** what the marine park fee at the ferry counter actually cost, whether the
 receipt was asked for at check-in, and how one gets from the jetty to the cabins — on foot or
 by boat.

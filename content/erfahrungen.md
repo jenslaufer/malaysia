@@ -384,6 +384,20 @@ an der Tür. An Masten und Zäunen hängen Malaysia-Flaggen.
 Hari Merdeka; im ganzen August hängen Landes- und Bundesstaatsflaggen an Häusern, Zäunen und
 Straßenmasten. An diesem Tag sind wir in Kota Kinabalu.
 
+**✓ Am Ufer in Tekek steht eine Tafel, die die ganze Insel auf einen Blick sortiert (18.08.).**
+Blaues Gestell, seitlich in großen Buchstaben „Pulau Tioman", darin eine gezeichnete Karte mit
+einem Kasten pro Dorf. Tekek: Marina, Zentrum des Marine Parks, Golfplatz, der Dschungelpfad
+nach Juara quer über die Insel, dazu eine Seilrutsche am Keluang. Salang ganz im Norden: eine
+Walfels-Skulptur und der Waldweg von Panuba herüber. Juara auf der Ostseite, als einziges Dorf
+am offenen Meer: zwei Wasserfälle, ein Aussichtspunkt, eine Surfschule. Im Süden Nipah und
+Mukut: Höhle, Kajak, der Wasserfall von Asah und eine Via ferrata am Gunung Nenek Semukut.
+Zwischen den Dörfern liegen die Tauchinseln — Chebeh, Tulai, Labas, Sepoi, Soyak, Renggis,
+Jahat — jede mit Taucher- oder Schnorchelzeichen. Was davon stimmt, steht hier erst, wenn wir
+es selbst gesehen haben.
+<!-- werkstatt: telegram=2026-08-18T10:18 -->
+
+![Blaue Infotafel am Uferweg mit der Aufschrift „Pulau Tioman"; darin eine gezeichnete Inselkarte mit Dörfern, Tauchplätzen und Aktivitätslisten.](foto:2026-08-18_101819.jpg)
+
 **Offen, kommt noch:** was die Marine-Park-Gebühr am Fährschalter tatsächlich gekostet hat, ob
 der Beleg beim Einchecken verlangt wurde, und wie man vom Steg zur Unterkunft kommt — zu Fuß
 oder mit dem Boot.

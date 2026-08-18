@@ -1,295 +1,299 @@
 {
- "_lies-mich": [
-  "Was auf dieser Seite veroeffentlicht wird, und was daran unkenntlich gemacht wird.",
-  "'blur' sind RELATIVE Kaesten [x, y, breite, hoehe] von 0 bis 1 — sie ueberleben",
-  "das Verkleinern. Absolute Pixel zeigen nach dem Skalieren woanders hin, lautlos.",
-  "Von Hand gepflegt: ein Erkenner, der drei von vier Kennzeichen findet, liest",
-  "sich wie Schutz und ist keiner. Nach jeder Aenderung das Bild ansehen, nicht",
-  "nur den Test."
- ],
- "2026-08-17_085957.jpg": {
-  "name": "mersing-katze-marktwagen"
- },
- "2026-08-17_090000.jpg": {
-  "name": "mersing-katze-fliesen"
- },
- "2026-08-17_090002.jpg": {
-  "name": "mersing-katze-gehweg"
- },
- "2026-08-17_090004.jpg": {
-  "name": "mersing-altes-kino",
-  "_blur": "drei Kfz-Kennzeichen Fremder",
-  "blur": [
-   [
-    0.4719,
-    0.8417,
-    0.0453,
-    0.0333
-   ],
-   [
-    0.9438,
-    0.8583,
-    0.0484,
-    0.0417
-   ],
-   [
-    0.8297,
-    0.7667,
-    0.0438,
-    0.0319
-   ]
-  ]
- },
- "2026-08-17_090006.jpg": {
-  "name": "mersing-geldautomat",
-  "position": "top",
-  "_position": "hochkant; der Satz auf dem Schirm steht oben"
- },
- "2026-08-17_090008.jpg": {
-  "name": "mersing-bankenzeile",
-  "_blur": "acht Kfz-Kennzeichen Fremder, dazu drei erkennbare Koepfe",
-  "blur": [
-   [
-    0.085,
-    0.575,
-    0.042,
-    0.045
-   ],
-   [
-    0.165,
-    0.612,
-    0.044,
-    0.045
-   ],
-   [
-    0.281,
-    0.645,
-    0.045,
-    0.048
-   ],
-   [
-    0.325,
-    0.628,
-    0.04,
-    0.047
-   ],
-   [
-    0.73,
-    0.75,
-    0.018,
-    0.025
-   ],
-   [
-    0.798,
-    0.765,
-    0.02,
-    0.027
-   ],
-   [
-    0.85,
-    0.793,
-    0.02,
-    0.027
-   ],
-   [
-    0.935,
-    0.808,
-    0.023,
-    0.028
-   ],
-   [
-    0.66,
-    0.622,
-    0.03,
-    0.05
-   ],
-   [
-    0.73,
-    0.665,
-    0.028,
-    0.038
-   ],
-   [
-    0.753,
-    0.672,
-    0.028,
-    0.04
-   ]
-  ]
- },
- "2026-08-17_093758.jpg": {
-  "name": "fernbus-kameras-beschwerdenummer"
- },
- "2026-08-17_093911.jpg": {
-  "name": "garden-rhapsody-supertrees-mbs"
- },
- "2026-08-17_093914.jpg": {
-  "name": "garden-rhapsody-supertree-nah"
- },
- "2026-08-17_093916.jpg": {
-  "name": "garden-rhapsody-menge"
- },
- "2026-08-17_102109.jpg": {
-  "name": "mersing-hafen-niedrigwasser"
- },
- "2026-08-17_102111.jpg": {
-  "name": "mersing-jabatan-laut"
- },
- "2026-08-17_102114.jpg": {
-  "name": "mersing-strandpromenade",
-  "blur": [
-   [
-    0.6977,
-    0.6069,
-    0.0148,
-    0.0319
-   ],
-   [
-    0.7195,
-    0.5931,
-    0.0141,
-    0.0278
-   ],
-   [
-    0.7297,
-    0.6542,
-    0.0133,
-    0.025
-   ],
-   [
-    0.8602,
-    0.6556,
-    0.0203,
-    0.0194
-   ],
-   [
-    0.2445,
-    0.5944,
-    0.0461,
-    0.0278
-   ],
-   [
-    0.7805,
-    0.6486,
-    0.018,
-    0.0153
-   ]
-  ]
- },
- "2026-08-18_033236.jpg": {
-  "name": "mersing-faehrterminal-wartehalle",
-  "_blur": "sechs erkennbare Gesichter Fremder in der Wartehalle",
-  "blur": [
-   [
-    0.085,
-    0.6,
-    0.043,
-    0.082
-   ],
-   [
-    0.831,
-    0.478,
-    0.042,
-    0.09
-   ],
-   [
-    0.777,
-    0.675,
-    0.036,
-    0.06
-   ],
-   [
-    0.892,
-    0.628,
-    0.022,
-    0.045
-   ],
-   [
-    0.944,
-    0.638,
-    0.024,
-    0.042
-   ],
-   [
-    0.974,
-    0.643,
-    0.02,
-    0.036
-   ]
-  ]
- },
- "2026-08-18_033254.jpg": {
-  "name": "mersing-einsteigen-cataferry",
-  "_blur": "zwei erkennbare Gesichter Fremder, links im Anschnitt formatfuellend",
-  "blur": [
-   [
-    0.0,
-    0.29,
-    0.125,
-    0.535
-   ],
-   [
-    0.668,
-    0.42,
-    0.075,
-    0.145
-   ]
-  ]
- },
- "2026-08-18_033252.jpg": {
-  "name": "cataferry-kabine-sicherheitsvideo",
-  "_blur": "keine Kaesten: nur Hinterkoepfe, kein Gesicht im Bild"
- },
- "2026-08-18_065629.jpg": {
-  "name": "tioman-bucht-strand",
-  "_blur": "keine Kaesten: keine Person im Bild, der Steg liegt am anderen Ende der Bucht"
- },
- "2026-08-18_065631.jpg": {
-  "name": "tioman-strandchalets",
-  "_blur": "Name der Unterkunft (sie wohnen dort bis 21.08.), dazu zwei erkennbare Personen an den Tischen rechts",
-  "blur": [
-   [
-    0.82,
-    0.15,
-    0.15,
-    0.13
-   ],
-   [
-    0.905,
-    0.425,
-    0.042,
-    0.06
-   ],
-   [
-    0.972,
-    0.452,
-    0.028,
-    0.05
-   ]
-  ]
- },
- "2026-08-18_094311.jpg": {
-  "name": "tioman-regenwald-hinter-dem-dorf",
-  "_blur": "keine Kaesten: keine Person im Bild, die Roller links stehen ohne lesbares Kennzeichen"
- },
- "2026-08-18_094309.jpg": {
-  "name": "tioman-dorfstrasse-roller-ziege",
-  "_blur": "keine Kaesten: der Rollerfahrer ist von hinten zu sehen, kein Gesicht; die Leute am Zelt sind ~15 px hoch"
- },
- "2026-08-18_094304.jpg": {
-  "name": "tioman-dorfstrasse-bruecke",
-  "_blur": "Kennzeichen des wegfahrenden Pick-ups",
-  "blur": [
-   [
-    0.48,
-    0.512,
-    0.022,
-    0.017
-   ]
-  ]
- },
- "2026-08-18_094307.jpg": {
-  "name": "tioman-dorfstrasse-pickup",
-  "_blur": "keine Kaesten: der Pick-up steht seitlich, kein Kennzeichen im Bild; der Firmenaufkleber ist Werbung eines Betriebs, nicht lesbar"
- }
+  "_lies-mich": [
+    "Was auf dieser Seite veroeffentlicht wird, und was daran unkenntlich gemacht wird.",
+    "'blur' sind RELATIVE Kaesten [x, y, breite, hoehe] von 0 bis 1 — sie ueberleben",
+    "das Verkleinern. Absolute Pixel zeigen nach dem Skalieren woanders hin, lautlos.",
+    "Von Hand gepflegt: ein Erkenner, der drei von vier Kennzeichen findet, liest",
+    "sich wie Schutz und ist keiner. Nach jeder Aenderung das Bild ansehen, nicht",
+    "nur den Test."
+  ],
+  "2026-08-17_085957.jpg": {
+    "name": "mersing-katze-marktwagen"
+  },
+  "2026-08-17_090000.jpg": {
+    "name": "mersing-katze-fliesen"
+  },
+  "2026-08-17_090002.jpg": {
+    "name": "mersing-katze-gehweg"
+  },
+  "2026-08-17_090004.jpg": {
+    "name": "mersing-altes-kino",
+    "_blur": "drei Kfz-Kennzeichen Fremder",
+    "blur": [
+      [
+        0.4719,
+        0.8417,
+        0.0453,
+        0.0333
+      ],
+      [
+        0.9438,
+        0.8583,
+        0.0484,
+        0.0417
+      ],
+      [
+        0.8297,
+        0.7667,
+        0.0438,
+        0.0319
+      ]
+    ]
+  },
+  "2026-08-17_090006.jpg": {
+    "name": "mersing-geldautomat",
+    "position": "top",
+    "_position": "hochkant; der Satz auf dem Schirm steht oben"
+  },
+  "2026-08-17_090008.jpg": {
+    "name": "mersing-bankenzeile",
+    "_blur": "acht Kfz-Kennzeichen Fremder, dazu drei erkennbare Koepfe",
+    "blur": [
+      [
+        0.085,
+        0.575,
+        0.042,
+        0.045
+      ],
+      [
+        0.165,
+        0.612,
+        0.044,
+        0.045
+      ],
+      [
+        0.281,
+        0.645,
+        0.045,
+        0.048
+      ],
+      [
+        0.325,
+        0.628,
+        0.04,
+        0.047
+      ],
+      [
+        0.73,
+        0.75,
+        0.018,
+        0.025
+      ],
+      [
+        0.798,
+        0.765,
+        0.02,
+        0.027
+      ],
+      [
+        0.85,
+        0.793,
+        0.02,
+        0.027
+      ],
+      [
+        0.935,
+        0.808,
+        0.023,
+        0.028
+      ],
+      [
+        0.66,
+        0.622,
+        0.03,
+        0.05
+      ],
+      [
+        0.73,
+        0.665,
+        0.028,
+        0.038
+      ],
+      [
+        0.753,
+        0.672,
+        0.028,
+        0.04
+      ]
+    ]
+  },
+  "2026-08-17_093758.jpg": {
+    "name": "fernbus-kameras-beschwerdenummer"
+  },
+  "2026-08-17_093911.jpg": {
+    "name": "garden-rhapsody-supertrees-mbs"
+  },
+  "2026-08-17_093914.jpg": {
+    "name": "garden-rhapsody-supertree-nah"
+  },
+  "2026-08-17_093916.jpg": {
+    "name": "garden-rhapsody-menge"
+  },
+  "2026-08-17_102109.jpg": {
+    "name": "mersing-hafen-niedrigwasser"
+  },
+  "2026-08-17_102111.jpg": {
+    "name": "mersing-jabatan-laut"
+  },
+  "2026-08-17_102114.jpg": {
+    "name": "mersing-strandpromenade",
+    "blur": [
+      [
+        0.6977,
+        0.6069,
+        0.0148,
+        0.0319
+      ],
+      [
+        0.7195,
+        0.5931,
+        0.0141,
+        0.0278
+      ],
+      [
+        0.7297,
+        0.6542,
+        0.0133,
+        0.025
+      ],
+      [
+        0.8602,
+        0.6556,
+        0.0203,
+        0.0194
+      ],
+      [
+        0.2445,
+        0.5944,
+        0.0461,
+        0.0278
+      ],
+      [
+        0.7805,
+        0.6486,
+        0.018,
+        0.0153
+      ]
+    ]
+  },
+  "2026-08-18_033236.jpg": {
+    "name": "mersing-faehrterminal-wartehalle",
+    "_blur": "sechs erkennbare Gesichter Fremder in der Wartehalle",
+    "blur": [
+      [
+        0.085,
+        0.6,
+        0.043,
+        0.082
+      ],
+      [
+        0.831,
+        0.478,
+        0.042,
+        0.09
+      ],
+      [
+        0.777,
+        0.675,
+        0.036,
+        0.06
+      ],
+      [
+        0.892,
+        0.628,
+        0.022,
+        0.045
+      ],
+      [
+        0.944,
+        0.638,
+        0.024,
+        0.042
+      ],
+      [
+        0.974,
+        0.643,
+        0.02,
+        0.036
+      ]
+    ]
+  },
+  "2026-08-18_033254.jpg": {
+    "name": "mersing-einsteigen-cataferry",
+    "_blur": "zwei erkennbare Gesichter Fremder, links im Anschnitt formatfuellend",
+    "blur": [
+      [
+        0.0,
+        0.29,
+        0.125,
+        0.535
+      ],
+      [
+        0.668,
+        0.42,
+        0.075,
+        0.145
+      ]
+    ]
+  },
+  "2026-08-18_033252.jpg": {
+    "name": "cataferry-kabine-sicherheitsvideo",
+    "_blur": "keine Kaesten: nur Hinterkoepfe, kein Gesicht im Bild"
+  },
+  "2026-08-18_065629.jpg": {
+    "name": "tioman-bucht-strand",
+    "_blur": "keine Kaesten: keine Person im Bild, der Steg liegt am anderen Ende der Bucht"
+  },
+  "2026-08-18_065631.jpg": {
+    "name": "tioman-strandchalets",
+    "_blur": "Name der Unterkunft (sie wohnen dort bis 21.08.), dazu zwei erkennbare Personen an den Tischen rechts",
+    "blur": [
+      [
+        0.82,
+        0.15,
+        0.15,
+        0.13
+      ],
+      [
+        0.905,
+        0.425,
+        0.042,
+        0.06
+      ],
+      [
+        0.972,
+        0.452,
+        0.028,
+        0.05
+      ]
+    ]
+  },
+  "2026-08-18_094311.jpg": {
+    "name": "tioman-regenwald-hinter-dem-dorf",
+    "_blur": "keine Kaesten: keine Person im Bild, die Roller links stehen ohne lesbares Kennzeichen"
+  },
+  "2026-08-18_094309.jpg": {
+    "name": "tioman-dorfstrasse-roller-ziege",
+    "_blur": "keine Kaesten: der Rollerfahrer ist von hinten zu sehen, kein Gesicht; die Leute am Zelt sind ~15 px hoch"
+  },
+  "2026-08-18_094304.jpg": {
+    "name": "tioman-dorfstrasse-bruecke",
+    "_blur": "Kennzeichen des wegfahrenden Pick-ups",
+    "blur": [
+      [
+        0.48,
+        0.512,
+        0.022,
+        0.017
+      ]
+    ]
+  },
+  "2026-08-18_094307.jpg": {
+    "name": "tioman-dorfstrasse-pickup",
+    "_blur": "keine Kaesten: der Pick-up steht seitlich, kein Kennzeichen im Bild; der Firmenaufkleber ist Werbung eines Betriebs, nicht lesbar"
+  },
+  "2026-08-18_101819.jpg": {
+    "name": "tioman-uebersichtstafel-tekek",
+    "_blur": "keine Kaesten: keine Person im Bild, kein Fahrzeug, kein Kennzeichen — nur die Tafel, der Uferweg und ein Gebaeude im Hintergrund"
+  }
 }
