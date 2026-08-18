@@ -299,6 +299,47 @@ seines Dorfes nicht sofort sagen kann, sucht sein Gepäck später in der falsche
 
 ---
 
+## Auf Tioman — was uns dort erwartet
+
+Geschrieben vor der Ankunft, deshalb durchgehend ○. Was davon stimmt, steht hier, sobald wir
+es gesehen haben.
+
+**○ Tekek ist das Dorf mit der Infrastruktur — und die ganze Insel hängt daran.** Es gibt auf
+Tioman genau einen Geldautomaten, eine BSN, gleich um die Ecke vom Flugfeld in Tekek. Dazu
+kommen dort die Bank, eine kleine Klinik, die Polizei, eine Wechselstube, das
+Informationszentrum des Marine Parks und die großen zollfreien Läden. Wer in einer der anderen
+Buchten wohnt, nimmt für jede dieser Sachen ein Boot. Das ist der praktische Grund, in Tekek zu
+übernachten, und er hat mit dem Strand nichts zu tun.
+
+**○ Die Insel ist zollfrei, seit 2002.** Alkohol, Tabak und Schokolade kosten dort deutlich
+weniger als auf dem Festland — genannt werden bis zu 50 Prozent. Der größte Laden steht in
+Tekek. Was man beim Zurückfahren aufs Festland mitnehmen darf, steht in keiner der Quellen, die
+wir gelesen haben; auf eine Freimenge verlassen wir uns deshalb nicht.
+
+**○ Zwischen den Dörfern gibt es keine durchgehende Straße.** Es bleiben drei Wege: zu Fuß auf
+den Küstenpfaden, mit dem Fahrrad, oder mit dem Seetaxi. Von Tekek nach ABC (Air Batang) sind
+es 3,5 Kilometer flacher Weg, etwa 30 Minuten; seit 2017 gibt es dafür eine Promenade, und sie
+läuft an einem geschützten Schnorchelgebiet entlang — Fische sieht man vom Weg aus. Das Seetaxi
+kostet nach ABC oder Salang RM25 bis RM30, über weitere Strecken bis RM60, gerechnet pro Person
+und verhandelbar. Kleine Boote nehmen kein Kartengerät mit.
+
+**○ Das Netz ist besser als der Ruf der Insel, aber nicht überall.** Seit 2023 melden alle vier
+malaysischen Netze 4G in allen Dörfern, ein Seekabel liegt seit 2018 bis Tekek. Tioman bleibt
+trotzdem ein bewaldeter Bergrücken: hinter den Hügeln und in den abgelegenen Buchten gibt es
+Funklöcher, und die verschwinden nicht dadurch, dass die Abdeckung offiziell vollständig ist.
+
+**○ Die Rückfahrt läuft nach derselben Mechanik wie die Hinfahrt.** Check-in eine Stunde vor
+Abfahrt, der Schalter schließt 30 Minuten vorher, Bordkarte gegen Pass, am Steg 30 Minuten
+vorher stehen. Tekek ist nur einer von fünf Anlegern auf der Insel; das Boot fährt die Buchten
+nacheinander ab, und eine Verspätung an einem Steg trifft alle danach. Die Tide, die den
+Fahrplan in Mersing jeden Tag verschiebt, verschiebt auch die Rückfahrt — einen Tag vorher
+nachfragen ist der Rat, den hier alle Quellen geben, und er kostet nichts.
+
+**○ Den Beleg der Marine-Park-Gebühr nicht in den Koffer packen.** Er wird beim Einchecken in
+der Unterkunft verlangt und gilt für den ganzen Aufenthalt.
+
+---
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein

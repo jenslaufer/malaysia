@@ -295,6 +295,47 @@ village on the spot, you will be looking for your bags in the wrong bay.
 
 ---
 
+## On Tioman — what we expect to find
+
+Written before we arrived, so all of it is ○. What turns out to be true goes here once we have
+seen it.
+
+**○ Tekek is the village with the infrastructure, and the whole island hangs off it.** There is
+exactly one cash machine on Tioman, a BSN, just around the corner from the airstrip in Tekek.
+The bank, a small clinic, the police, a money changer, the marine park information centre and
+the large duty-free shops are all there too. Staying in any other bay means taking a boat for
+each of those. That is the practical reason to sleep in Tekek, and it has nothing to do with
+the beach.
+
+**○ The island has been duty-free since 2002.** Alcohol, tobacco and chocolate cost
+considerably less than on the mainland — up to 50 per cent is the figure quoted. The largest
+shop is in Tekek. What you are allowed to carry back to the mainland is not stated in any
+source we read, so we are not counting on an allowance.
+
+**○ There is no through road between the villages.** That leaves three ways: the coastal paths
+on foot, a bicycle, or a sea taxi. Tekek to ABC (Air Batang) is 3.5 kilometres of flat path,
+about 30 minutes; a promenade was built for it in 2017 and it runs along a protected
+snorkelling area, so you see fish from the path itself. A sea taxi to ABC or Salang costs RM25
+to RM30, up to RM60 over longer distances, priced per person and negotiable. Small boats do not
+carry a card reader.
+
+**○ The network is better than the island's reputation, but not everywhere.** Since 2023 all
+four Malaysian networks report 4G in every village, and an undersea cable has run to Tekek
+since 2018. Tioman is still a forested ridge, though: there are dead spots behind the hills and
+in the remote bays, and they do not disappear because the coverage is officially complete.
+
+**○ The return runs on the same mechanics as the outward leg.** Check-in one hour before
+departure, the counter closes 30 minutes before, boarding pass against passport, be on the
+pontoon 30 minutes before. Tekek is only one of five piers on the island; the boat calls at the
+bays in turn, and a delay at one pier lands on everyone after it. The tide that moves the
+Mersing timetable every day moves the return as well — ask the day before is the advice every
+source here gives, and it costs nothing.
+
+**○ Do not pack the marine park receipt in the suitcase.** It is asked for at check-in where
+you stay, and it covers the whole visit.
+
+---
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
