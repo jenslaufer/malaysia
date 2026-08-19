@@ -145,6 +145,12 @@
       "veroeffentlicht": "2026-08-18T10:37:34+00:00"
     },
     {
+      "anker": "**✓ Im zollfreien Laden in Tekek steht Cognac in Drei-Liter-",
+      "minuten": 9,
+      "telegram": "2026-08-19T08:21:00+00:00",
+      "veroeffentlicht": "2026-08-19T08:30:14+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -175,10 +181,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 29,
-  "juengste_minuten": 5,
-  "markiert": 29,
-  "median_minuten": 11,
+  "gemessen": 30,
+  "juengste_minuten": 9,
+  "markiert": 30,
+  "median_minuten": 10,
   "schnellste_minuten": 4,
   "stand": "2026-08-19"
 }
