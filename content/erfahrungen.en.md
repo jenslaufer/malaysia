@@ -502,10 +502,38 @@ Asian wallets (AlipayHK, GCash, Kakao Pay, TrueMoney), no European ones. That le
 ways: card terminals where they exist, and the single ATM in Tekek. Anyone who reads the
 headline and packs less cash because of it draws exactly the wrong conclusion.
 
-**○ The island has been duty-free since 2002.** Alcohol, tobacco and chocolate cost
-considerably less than on the mainland — up to 50 per cent is the figure quoted. The largest
-shop is in Tekek. What you are allowed to carry back to the mainland is not stated in any
-source we read, so we are not counting on an allowance.
+**✓ The duty-free shop in Tekek sells cognac in three-litre bottles — and it costs more than at
+home in Germany (19 Aug).** Three three-litre bottles stand side by side on the counter, with
+shelves of Johnnie Walker, Chivas, Dewar's and more Martell behind them. The yellow price tags
+carry the shop's name, Star Glory: Martell XO 3 l at RM 3,980, Hennessy XO 3 l at RM 4,775,
+Martell Cordon Bleu 3 l at RM 3,300. At the 18 Aug rate (RM 1 = €0.2128) that is €847, €1,016
+and €702, or €282, €339 and €234 per litre. German retail asks €154, €178.50 and €122.89 for
+the same three brands in the 0.7-litre bottle — €220, €255 and €176 per litre. The duty-free
+bottle is therefore 28 to 33 per cent **more expensive** than the same brand at home. One
+caveat belongs with it: three-litre bottles are a special format in Germany too and carry their
+own premium, and the comparison here runs against the ordinary 0.7-litre size. That does not
+change the direction.
+<!-- werkstatt: telegram=2026-08-19T08:21 -->
+<!-- ort: tioman -->
+
+![Three three-litre cognac bottles on a shop counter — Martell XO, Hennessy XO and Martell Cordon Bleu — with yellow price tags in front and shelves full of spirits behind.](foto:2026-08-19_082141.jpg)
+
+**○ The island has been duty-free since 2002 — and you may carry one litre of it away per
+person.** Alcohol, tobacco and chocolate cost less than on the mainland, up to 50 per cent is
+the figure quoted; for cognac that does not hold, see above. The largest shop is in Tekek.
+Going back to the mainland, the Malaysian allowance for the duty-free islands applies: **one
+litre** of wine, spirits or beer per person, plus other goods up to RM 500, and both only after
+at least 48 hours on the island. This question stood here as open until 19 Aug.
+
+**○ Carrying a bottle all the way home means crossing three borders with three different
+allowances.** Tioman → mainland: one litre per person. Malaysia → Singapore: **no allowance at
+all.** Singapore expressly withholds the duty-free liquor concession from anyone who cleared
+Malaysian immigration before arriving, so duty is payable on every drop, and the import-tax
+relief never covers alcohol anyway. Singapore → Germany: one litre of spirits above 22 per cent
+per person aged 17 or over; children do not count. Above the allowance German customs charges a
+flat €6.80 per litre, but only up to a goods value of €700 per traveller — an €847 bottle sits
+above that and is assessed by tariff, where the 19 per cent import VAT alone comes to more than
+€160. The three-litre bottle is too big at all three borders.
 
 **○ There is no through road between the villages.** That leaves three ways: the coastal paths
 on foot, a bicycle, or a sea taxi. Tekek to ABC (Air Batang) is 3.5 kilometres of flat path,

@@ -311,5 +311,17 @@
   "2026-08-19_034821.jpg": {
     "name": "tioman-bucht-steinschuettung",
     "_blur": "keine Kaesten: bei 4-facher Vergroesserung des Uferabschnitts und des Pavillons kein Mensch im Bild; kein Fahrzeug, kein Kennzeichen, keine lesbare Beschriftung"
+  },
+  "2026-08-19_082141.jpg": {
+    "name": "tioman-zollfrei-cognac",
+    "_blur": "gerahmte Lizenz mit Passbild des Ladeninhabers an der Wand",
+    "blur": [
+      [
+        0.34,
+        0.01,
+        0.062,
+        0.13
+      ]
+    ]
   }
 }

@@ -512,10 +512,39 @@ keine europäischen. Für uns bleiben deshalb zwei Wege: Kartenterminals, wo es 
 der eine Geldautomat in Tekek. Wer die Schlagzeile liest und daraufhin weniger Bargeld
 einpackt, zieht genau den falschen Schluss.
 
-**○ Die Insel ist zollfrei, seit 2002.** Alkohol, Tabak und Schokolade kosten dort deutlich
-weniger als auf dem Festland — genannt werden bis zu 50 Prozent. Der größte Laden steht in
-Tekek. Was man beim Zurückfahren aufs Festland mitnehmen darf, steht in keiner der Quellen, die
-wir gelesen haben; auf eine Freimenge verlassen wir uns deshalb nicht.
+**✓ Im zollfreien Laden in Tekek steht Cognac in Drei-Liter-Flaschen — und der ist teurer als in
+Deutschland (19.08.).** Auf dem Verkaufstisch stehen drei Flaschen zu je drei Litern
+nebeneinander, dahinter Regale mit Johnnie Walker, Chivas, Dewar's und weiteren Martells. Die
+gelben Preisschilder tragen den Ladennamen Star Glory: Martell XO 3 l für 3.980 RM, Hennessy XO
+3 l für 4.775 RM, Martell Cordon Bleu 3 l für 3.300 RM. Zum Kurs vom 18.08. (1 RM = 0,2128 €)
+sind das 847 €, 1.016 € und 702 €, also 282 €, 339 € und 234 € je Liter. Der deutsche Handel
+verlangt für dieselben drei Marken in der 0,7-Liter-Flasche 154 €, 178,50 € und 122,89 € — das
+sind 220 €, 255 € und 176 € je Liter. Die zollfreie Flasche ist damit 28 bis 33 Prozent
+**teurer** als dieselbe Marke zu Hause. Ein Vorbehalt gehört dazu: Drei-Liter-Flaschen sind auch
+in Deutschland ein Sonderformat mit eigenem Aufschlag, verglichen wird hier gegen die gängige
+0,7-Liter-Größe. Die Richtung ändert das nicht.
+<!-- werkstatt: telegram=2026-08-19T08:21 -->
+<!-- ort: tioman -->
+
+![Drei Cognacflaschen zu je drei Litern auf einem Verkaufstisch — Martell XO, Hennessy XO und Martell Cordon Bleu — mit gelben Preisschildern davor, dahinter Regale voller Spirituosen.](foto:2026-08-19_082141.jpg)
+
+**○ Die Insel ist zollfrei, seit 2002 — mitnehmen darf man davon einen Liter pro Person.**
+Alkohol, Tabak und Schokolade kosten dort weniger als auf dem Festland, genannt werden bis zu
+50 Prozent; für Cognac stimmt das nicht, siehe oben. Der größte Laden steht in Tekek. Beim
+Zurückfahren aufs Festland gilt die malaysische Freimenge für die zollfreien Inseln: **ein
+Liter** Wein, Spirituosen oder Bier pro Person, dazu andere Waren bis 500 RM, und beides erst
+nach mindestens 48 Stunden auf der Insel. Diese Frage stand hier bis zum 19.08. als offen.
+
+**○ Eine Flasche bis nach Hause zu tragen heißt, drei Grenzen mit drei verschiedenen Freimengen
+zu passieren.** Tioman → Festland: ein Liter pro Person. Malaysia → Singapur: **gar keine
+Freimenge.** Singapur gewährt die zollfreie Menge für Alkohol ausdrücklich nicht, wenn man vor
+der Einreise die malaysische Grenzkontrolle passiert hat — dann ist auf jeden Tropfen Zoll
+fällig, und die Befreiung von der Einfuhrsteuer gilt für Alkohol ohnehin nie. Singapur →
+Deutschland: ein Liter Spirituosen über 22 Prozent pro Person ab 17 Jahren; Kinder zählen nicht
+mit. Über der Freimenge rechnet der deutsche Zoll pauschal 6,80 € je Liter, aber nur bis zu
+einem Warenwert von 700 € pro Person — eine Flasche für 847 € liegt darüber und wird nach Tarif
+veranlagt, allein die Einfuhrumsatzsteuer von 19 Prozent sind dann über 160 €. Die
+Drei-Liter-Flasche ist an allen drei Grenzen zu groß.
 
 **○ Zwischen den Dörfern gibt es keine durchgehende Straße.** Es bleiben drei Wege: zu Fuß auf
 den Küstenpfaden, mit dem Fahrrad, oder mit dem Seetaxi. Von Tekek nach ABC (Air Batang) sind
