@@ -568,6 +568,49 @@ nachfragen ist der Rat, den hier alle Quellen geben, und er kostet nichts.
 **○ Den Beleg der Marine-Park-Gebühr nicht in den Koffer packen.** Er wird beim Einchecken in
 der Unterkunft verlangt und gilt für den ganzen Aufenthalt.
 
+**✓ Zwischen Baumaterial im Dorf liegt ein zerlegtes Kleinflugzeug (19.08.).** Weiß mit
+dunkelblauem Zierstreifen, am Heck der Schriftzug Cirrus, auf dem Rumpf das Kennzeichen
+**9M-ZWP** — 9M steht für Malaysia. Die Kabine ist ausgeräumt, Türen und Seitenscheiben
+fehlen, die Kanzel steht noch, ein Flügel liegt abgebrochen daneben. Das Ganze ruht auf
+einem Stapel schwarzer Kunststoffrohre und Stahlträger, dahinter ein Baggerlader und ein
+Rohbau mit rotem Ziegeldach. Kein Zaun, kein Absperrband, kein Schild: es liegt da wie das
+übrige Baumaterial auch.
+<!-- werkstatt: telegram=2026-08-19T10:22 -->
+<!-- ort: tioman -->
+
+![Ein zerlegtes weiß-blaues Kleinflugzeug mit dem Schriftzug Cirrus liegt auf einem Stapel schwarzer Kunststoffrohre und Stahlträger, daneben ein Baggerlader, dahinter ein Rohbau mit rotem Ziegeldach.](foto:2026-08-19_102239.jpg)
+
+**○ Zu diesem Kennzeichen gibt es keinen öffentlichen Eintrag.** Gesucht am 19.08. in den
+Unfalldatenbanken, in den Flugzeugregistern und in malaysischen Nachrichten auf Englisch und
+Malaiisch: 9M-ZWP taucht nirgends auf. Was mit der Maschine passiert ist, wann und wo, steht
+hier deshalb nicht. Beschrieben ist, was im Hof liegt — nicht, wie es dorthin kam.
+
+**○ Nach Tioman fliegt niemand mehr; die Fähre ist der einzige Weg auf die Insel und
+herunter.** Der Flugplatz liegt mitten in Tekek und hat eine Bahn von **992 Metern** (02/20).
+Weil im Süden Hügel stehen, wird nur aus einer Richtung angeflogen — deshalb gilt die Bahn als
+eine der anspruchsvollsten in der Region. Berjaya Air flog sie bis 2014 von Singapur-Seletar
+und Kuala Lumpur-Subang an. Der letzte Anbieter, **SKS Airways**, setzte die Flüge nach Tioman
+und Redang im November 2023 aus, verlor im Oktober 2024 die Betriebserlaubnis und stellte am
+**16. Januar 2025** endgültig ein. Für die Reiseplanung heißt das: es gibt keinen Ausweichweg.
+Wer die Fähre verpasst, wartet auf die nächste Fähre.
+
+**✓ Eine weiße Katze mit zwei verschiedenfarbigen Augen (19.08.).** Ein Auge blau, das andere
+bernsteinfarben, dazu ein blaues Halsband mit Glöckchen — sie gehört jemandem und liegt
+ausgestreckt auf dem Kunstrasen. Nach den drei Katzen in Mersing die vierte auf dieser Reise,
+und die erste, die niemandem ausweicht.
+<!-- werkstatt: telegram=2026-08-19T10:22 -->
+<!-- ort: tioman -->
+
+![Eine weiße Katze mit einem blauen und einem bernsteinfarbenen Auge liegt auf Kunstrasen, sie trägt ein blaues Halsband mit Glöckchen.](foto:2026-08-19_102236.jpg)
+
+**○ Zwei verschiedene Augenfarben bei einer weißen Katze heißen meistens: taub auf der blauen
+Seite.** Beides hängt am selben Erbgang. Von weißen Katzen mit zwei blauen Augen sind 60 bis 80
+Prozent taub, mit zwei andersfarbigen 10 bis 20 Prozent, und bei einem blauen Auge 30 bis 40
+Prozent — dann fast immer nur auf dem Ohr der blauen Seite (Zahlen aus dem englischsprachigen
+Wikipedia-Artikel *Odd-eyed cat*, dort belegt mit Richards, *ASPCA Complete Guide to Cats*,
+1999). Praktisch heißt das: sich von vorn nähern und nicht von der blauen Seite ansprechen. Ob
+dieses Tier hört, ist damit nicht gesagt, nur die Wahrscheinlichkeit.
+
 ---
 
 ## Essen

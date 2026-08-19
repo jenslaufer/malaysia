@@ -1756,7 +1756,7 @@ class TestFehlschlaege(unittest.TestCase):
 
     def test_die_ausgelieferte_seite_traegt_den_block(self):
         for datei in (build.WURZEL / "index.html", build.WURZEL / "en" / "index.html"):
-            with self.subTest(datei=datei.name):
+            with self.subTest(datei=f"{datei.parent.name}/{datei.name}"):
                 seite = datei.read_text(encoding="utf-8")
                 self.assertIn('id="fehlschlaege"', seite)
                 for ziel in re.findall(r'href="#(fehl-[^"]+)"', seite):
@@ -1878,7 +1878,7 @@ class TestKarteErlebnisse(unittest.TestCase):
     def test_die_ausgelieferte_seite_traegt_die_erlebnispunkte(self):
         """Gegen die Datei, nicht gegen den Renderer."""
         for datei in (build.WURZEL / "index.html", build.WURZEL / "en" / "index.html"):
-            with self.subTest(datei=datei.name):
+            with self.subTest(datei=f"{datei.parent.name}/{datei.name}"):
                 seite = datei.read_text(encoding="utf-8")
                 block = seite.split('<ol class="stationen">', 1)[1].split("</ol>", 1)[0]
                 ziele = re.findall(r'href="#([^"]+)"', block)
@@ -1896,6 +1896,66 @@ class TestKarteErlebnisse(unittest.TestCase):
             zahlen.append(len(re.findall(r'href="#', block)))
         self.assertEqual(zahlen[0], zahlen[1])
 
+class TestFlugzeugwrack(unittest.TestCase):
+    """Ein Foto von einem Wrack ist eine Beobachtung, keine Unfallgeschichte.
+
+    Jens schickte am 19.08. ein zerlegtes Kleinflugzeug ohne ein Wort dazu.
+    Zum Kennzeichen 9M-ZWP findet sich in Unfalldatenbanken, Registern und
+    malaysischen Nachrichten nichts. Genau da entsteht der Fehler: die
+    naechste Sitzung liest den Absatz, findet ein Kennzeichen und einen
+    Flugplatz im selben Abschnitt und schreibt daraus einen Absturz.
+
+    Der Test haelt deshalb BEIDE Haelften fest — das Kennzeichen und den
+    Satz, dass es dazu keinen oeffentlichen Eintrag gibt. Faellt die zweite
+    weg, sieht der Abschnitt vollstaendig aus und behauptet mehr, als
+    gemessen ist.
+    """
+
+    def _seiten(self):
+        return {
+            "de": (build.WURZEL / "index.html").read_text(encoding="utf-8"),
+            "en": (build.WURZEL / "en" / "index.html").read_text(encoding="utf-8"),
+        }
+
+    def test_das_kennzeichen_steht_auf_beiden_seiten(self):
+        for sprache, seite in self._seiten().items():
+            with self.subTest(sprache=sprache):
+                self.assertIn("9M-ZWP", seite)
+
+    def test_die_leere_suche_steht_daneben(self):
+        """Ohne diesen Satz ist das Kennzeichen eine Identifikation."""
+        marker = {"de": "keinen öffentlichen Eintrag", "en": "no public record"}
+        for sprache, seite in self._seiten().items():
+            with self.subTest(sprache=sprache):
+                self.assertIn(marker[sprache], seite)
+
+    def test_kein_absturz_behauptet(self):
+        """Was mit der Maschine geschah, ist nicht gemessen — also steht es nicht da."""
+        verboten = {"de": ("abgestuerzt", "Absturz", "verunglueckt"),
+                    "en": ("crashed", "crash landing", "the accident")}
+        for sprache, seite in self._seiten().items():
+            abschnitt = seite.split("9M-ZWP", 1)[1][:1500]
+            for wort in verboten[sprache]:
+                with self.subTest(sprache=sprache, wort=wort):
+                    self.assertNotIn(wort, abschnitt)
+
+
+class TestKeinFlugAufDieInsel(unittest.TestCase):
+    """Die praktische Halbhaelfte des Flugplatzes: es faehrt nur die Faehre.
+
+    Der Flugplatz liegt mitten im Dorf, also liest sich „992 m Bahn" wie eine
+    Ausweichmoeglichkeit. Es gibt keine — der letzte Anbieter hat am
+    16.01.2025 eingestellt. Beide Zahlen gehoeren zusammen auf die Seite;
+    steht nur die Bahnlaenge da, ist die Auskunft schlimmer als keine.
+    """
+
+    def test_bahn_und_einstellung_stehen_zusammen(self):
+        for datei in (build.WURZEL / "index.html", build.WURZEL / "en" / "index.html"):
+            seite = datei.read_text(encoding="utf-8")
+            with self.subTest(datei=f"{datei.parent.name}/{datei.name}"):
+                self.assertIn("992", seite)
+                self.assertIn("2025", seite)
+                self.assertIn("SKS Airways", seite)
 
 
 if __name__ == "__main__":

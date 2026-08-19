@@ -557,6 +557,49 @@ source here gives, and it costs nothing.
 **○ Do not pack the marine park receipt in the suitcase.** It is asked for at check-in where
 you stay, and it covers the whole visit.
 
+**✓ A dismantled light aircraft lies among the building materials in the village (19.08.).**
+White with a dark blue trim line, the word Cirrus on the tail, the registration **9M-ZWP** on
+the fuselage — 9M is Malaysia. The cabin is stripped, doors and side windows are gone, the
+canopy is still there, one wing lies broken off beside it. The whole thing rests on a stack of
+black plastic pipes and steel beams, with a backhoe loader next to it and a red-tiled shell of
+a house behind. No fence, no tape, no sign: it lies there like the rest of the building
+material.
+<!-- werkstatt: telegram=2026-08-19T10:22 -->
+<!-- ort: tioman -->
+
+![A dismantled white and blue light aircraft marked Cirrus resting on a stack of black plastic pipes and steel beams, a backhoe loader beside it and a red-tiled shell of a house behind.](foto:2026-08-19_102239.jpg)
+
+**○ There is no public record for this registration.** Searched on 19.08. in the accident
+databases, in the aircraft registers and in Malaysian news in English and Malay: 9M-ZWP appears
+nowhere. What happened to the aircraft, when and where, is therefore not written here. What is
+described is what lies in the yard — not how it got there.
+
+**○ Nobody flies to Tioman any more; the ferry is the only way on and off the island.** The
+airstrip sits in the middle of Tekek and has a **992-metre** runway (02/20). Because of the
+hills at the southern end it is approached from one direction only, which is why it counts
+among the more demanding strips in the region. Berjaya Air served it from Singapore-Seletar and
+Kuala Lumpur-Subang until 2014. The last operator, **SKS Airways**, suspended its Tioman and
+Redang flights in November 2023, lost its air operator's certificate in October 2024 and shut
+down for good on **16 January 2025**. For planning that means there is no fallback. Miss the
+ferry and you wait for the next ferry.
+
+**✓ A white cat with two differently coloured eyes (19.08.).** One eye blue, the other amber,
+and a blue collar with a bell — she belongs to someone, and she is stretched out on the
+artificial turf. The fourth cat of this trip after the three in Mersing, and the first one that
+gets out of nobody's way.
+<!-- werkstatt: telegram=2026-08-19T10:22 -->
+<!-- ort: tioman -->
+
+![A white cat with one blue and one amber eye lying on artificial turf, wearing a blue collar with a bell.](foto:2026-08-19_102236.jpg)
+
+**○ Two different eye colours on a white cat usually mean deaf on the blue side.** Both traits
+run on the same inheritance. Of white cats with two blue eyes 60 to 80 per cent are deaf, with
+two non-blue eyes 10 to 20 per cent, and with one blue eye 30 to 40 per cent — and then almost
+always in the ear on the blue-eyed side only (figures from the English Wikipedia article *Odd-eyed
+cat*, sourced there to Richards, *ASPCA Complete Guide to Cats*, 1999). In practice: approach
+from the front and do not speak to her from the blue side. Whether this particular animal hears
+is not settled by that, only the odds are.
+
 ---
 
 ## Eating
