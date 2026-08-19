@@ -151,6 +151,18 @@
       "veroeffentlicht": "2026-08-19T08:30:14+00:00"
     },
     {
+      "anker": "**✓ Zwischen Baumaterial im Dorf liegt ein zerlegtes Kleinfl",
+      "minuten": 12,
+      "telegram": "2026-08-19T10:22:00+00:00",
+      "veroeffentlicht": "2026-08-19T10:34:14+00:00"
+    },
+    {
+      "anker": "**✓ Eine weiße Katze mit zwei verschiedenfarbigen Augen (19.",
+      "minuten": 12,
+      "telegram": "2026-08-19T10:22:00+00:00",
+      "veroeffentlicht": "2026-08-19T10:34:14+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -181,10 +193,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 30,
-  "juengste_minuten": 9,
-  "markiert": 30,
-  "median_minuten": 10,
+  "gemessen": 32,
+  "juengste_minuten": 12,
+  "markiert": 32,
+  "median_minuten": 12,
   "schnellste_minuten": 4,
   "stand": "2026-08-19"
 }
