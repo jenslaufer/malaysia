@@ -377,6 +377,18 @@ von hier aus nicht zu erkennen.
 
 ![Heller Sandstrand mit ruhigem türkisfarbenem Wasser, dahinter bewaldete Hügel; am Ende der Bucht ein langer Steg.](foto:2026-08-18_065629.jpg)
 
+**✓ Die Unterkunft heißt Coral Reef Holiday Resort, und gefrühstückt wird auf dem Sand (19.08.).**
+Der Name stand bis jetzt als „Coral Beach oder so" hier — er ist damit geklärt. Die Tische stehen
+im Freien zwischen Palmen und Wasserlinie, weiße Decken, schwarze Plastikstühle, dazwischen ein
+Sonnenschirm. Hinter den Tischen liegt eine Reihe heller Felsblöcke als Uferschutz, dahinter das
+türkisfarbene Wasser der Bucht. Zum Frühstück gab es zwei hohe Gläser Fruchtgetränk, eines
+magentafarben aus Drachenfrucht, eines hellgelb. Ob sie im Preis enthalten sind oder extra
+bezahlt wurden, ist hier nicht gemessen — das Frühstück selbst ist laut Buchung enthalten.
+<!-- werkstatt: telegram=2026-08-19T03:26 -->
+<!-- ort: tioman -->
+
+![Zwei hohe Gläser mit Fruchtgetränken auf einem Tisch am Strand, links magentafarben aus Drachenfrucht, rechts hellgelb; dahinter Felsblöcke, das türkisfarbene Wasser der Bucht und Palmen.](foto:2026-08-19_032615.jpg)
+
 **✓ Der Regenwald steht direkt hinter den Häusern von Tekek (18.08.).** Hinter der Häuserzeile
 am Dorfrand steigt der Hang sofort an, dicht bewachsen bis zum Grat, und aus dem Blätterdach ragen
 einzelne hohe Bäume heraus. Zwischen dem letzten Dach und dem Wald liegt weder Feld noch Garten.

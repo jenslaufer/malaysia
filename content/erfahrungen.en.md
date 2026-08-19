@@ -372,6 +372,18 @@ here that is all one can make out.
 
 ![A bright sandy beach with calm turquoise water, forested hills behind it, and a long jetty at the end of the bay.](foto:2026-08-18_065629.jpg)
 
+**✓ The place is called Coral Reef Holiday Resort, and breakfast is served on the sand (19.08.).**
+Until now the name stood here as "Coral Beach or something" — that is settled. The tables stand
+outdoors between the palms and the waterline, white cloths, black plastic chairs, a parasol among
+them. Behind the tables runs a line of pale boulders as a breakwater, and behind that the
+turquoise water of the bay. Breakfast came with two tall glasses of fruit drink, one magenta from
+dragon fruit, one pale yellow. Whether they are included or paid for separately is not measured
+here — breakfast itself is included according to the booking.
+<!-- werkstatt: telegram=2026-08-19T03:26 -->
+<!-- ort: tioman -->
+
+![Two tall glasses of fruit drinks on a table by the beach, magenta dragon fruit on the left, pale yellow on the right; behind them boulders, the turquoise water of the bay and palm trees.](foto:2026-08-19_032615.jpg)
+
 **✓ The rainforest starts right behind the houses of Tekek (18.08.).** Behind the row of houses
 at the edge of the village the slope rises straight away, densely overgrown up to the ridge, with single
 tall trees standing out above the canopy. Between the last roof and the forest there is neither a
