@@ -103,6 +103,24 @@
       "veroeffentlicht": "2026-08-18T07:03:23+00:00"
     },
     {
+      "anker": "**✓ Die Unterkunft heißt Coral Reef Holiday Resort, und gefr",
+      "minuten": 4,
+      "telegram": "2026-08-19T03:26:00+00:00",
+      "veroeffentlicht": "2026-08-19T03:30:20+00:00"
+    },
+    {
+      "anker": "**✓ Der Pancake zum Frühstück ist ein gerollter Crêpe mit Ba",
+      "minuten": 5,
+      "telegram": "2026-08-19T03:48:00+00:00",
+      "veroeffentlicht": "2026-08-19T03:53:20+00:00"
+    },
+    {
+      "anker": "**✓ Die Bucht ist nicht durchgehend Sand, und am späten Vorm",
+      "minuten": 5,
+      "telegram": "2026-08-19T03:48:00+00:00",
+      "veroeffentlicht": "2026-08-19T03:53:20+00:00"
+    },
+    {
       "anker": "**✓ Der Regenwald steht direkt hinter den Häusern von Tekek ",
       "minuten": 24,
       "telegram": "2026-08-18T09:43:00+00:00",
@@ -157,10 +175,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 26,
-  "juengste_minuten": 8,
-  "markiert": 26,
-  "median_minuten": 15,
+  "gemessen": 29,
+  "juengste_minuten": 5,
+  "markiert": 29,
+  "median_minuten": 11,
   "schnellste_minuten": 4,
-  "stand": "2026-08-18"
+  "stand": "2026-08-19"
 }
