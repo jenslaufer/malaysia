@@ -384,6 +384,29 @@ here — breakfast itself is included according to the booking.
 
 ![Two tall glasses of fruit drinks on a table by the beach, magenta dragon fruit on the left, pale yellow on the right; behind them boulders, the turquoise water of the bay and palm trees.](foto:2026-08-19_032615.jpg)
 
+**✓ The breakfast pancake is a rolled crêpe with banana (19.08.).** Not a stack of American
+pancakes but a thin sheet of batter, rolled up, dusted with icing sugar and topped with three
+slices of banana. The filling is pale brown and coarse; the photo does not say what it is. With
+it comes coffee in a glass mug and a bottle of amber syrup or honey on the table. Nothing savoury
+is on the plate — no egg, no toast, no bacon. Whether you can ask for that, we did not ask.
+<!-- werkstatt: telegram=2026-08-19T03:48 -->
+<!-- ort: tioman -->
+
+![A rolled pancake with icing sugar and three slices of banana on a white plate, knife and fork beside it, behind it a glass mug of coffee and a bottle of syrup.](foto:2026-08-19_034819.jpg)
+
+**✓ The bay is not one continuous beach, and late in the morning it is empty (19.08.).** One
+stretch of the shore is armoured with a bank of pale boulders, several metres wide — anyone
+expecting a single unbroken sweep of sand is wrong at that spot. Next to it the sand starts and
+runs in a shallow curve along the bay to a wooded point, where a pavilion with an orange tiled
+roof stands on yellow-painted posts. Far out beyond the bay lies a small wooded rock island.
+Along the tree line a few things sit in the sand: a black net, an old sack, a pale sheet of metal
+— nothing here is raked. Just before twelve local time there was not a single person on the
+beach.
+<!-- werkstatt: telegram=2026-08-19T03:48 -->
+<!-- ort: tioman -->
+
+![View across a bank of pale boulders onto the empty sandy beach of the bay, trees and the red roofs of the accommodation on the left, turquoise water on the right and a small wooded rock island far out.](foto:2026-08-19_034821.jpg)
+
 **✓ The rainforest starts right behind the houses of Tekek (18.08.).** Behind the row of houses
 at the edge of the village the slope rises straight away, densely overgrown up to the ridge, with single
 tall trees standing out above the canopy. Between the last roof and the forest there is neither a

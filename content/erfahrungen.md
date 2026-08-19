@@ -389,6 +389,30 @@ bezahlt wurden, ist hier nicht gemessen — das Frühstück selbst ist laut Buch
 
 ![Zwei hohe Gläser mit Fruchtgetränken auf einem Tisch am Strand, links magentafarben aus Drachenfrucht, rechts hellgelb; dahinter Felsblöcke, das türkisfarbene Wasser der Bucht und Palmen.](foto:2026-08-19_032615.jpg)
 
+**✓ Der Pancake zum Frühstück ist ein gerollter Crêpe mit Banane (19.08.).** Kein Stapel
+amerikanischer Pfannkuchen, sondern ein dünner Teigfladen, zusammengerollt, mit Puderzucker
+bestäubt und mit drei Bananenscheiben belegt. Die Füllung ist hellbraun und grob; benennen lässt
+sie sich vom Bild nicht. Dazu Kaffee im Glasbecher und eine Flasche mit bernsteinfarbenem Sirup
+oder Honig auf dem Tisch. Herzhaftes liegt nicht dabei — kein Ei, kein Toast, kein Speck. Ob es
+das auf Nachfrage gibt, haben wir nicht gefragt.
+<!-- werkstatt: telegram=2026-08-19T03:48 -->
+<!-- ort: tioman -->
+
+![Ein gerollter Pfannkuchen mit Puderzucker und drei Bananenscheiben auf einem weißen Teller, daneben Messer und Gabel, dahinter ein Glasbecher mit Kaffee und eine Flasche Sirup.](foto:2026-08-19_034819.jpg)
+
+**✓ Die Bucht ist nicht durchgehend Sand, und am späten Vormittag ist sie leer (19.08.).** Ein
+Stück des Ufers ist mit einer Schüttung aus hellen Felsblöcken befestigt, mehrere Meter breit —
+wer den Strand als eine einzige Sandfläche erwartet, irrt sich an dieser Stelle. Daneben beginnt
+der Sand und läuft in einer flachen Kurve die Bucht entlang bis zu einer bewaldeten Landspitze,
+an der ein Pavillon mit orangem Ziegeldach auf gelb gestrichenen Pfosten steht. Weit draußen vor
+der Bucht liegt eine kleine bewaldete Felseninsel. Am Baumsaum liegt einiges im Sand: ein
+schwarzes Netz, ein alter Sack, eine helle Blechplatte — geharkt wird hier nichts. Um kurz vor
+zwölf Uhr Ortszeit war kein einziger Mensch am Strand.
+<!-- werkstatt: telegram=2026-08-19T03:48 -->
+<!-- ort: tioman -->
+
+![Blick über eine Schüttung heller Felsblöcke auf den leeren Sandstrand der Bucht, links Bäume und die roten Dächer der Unterkunft, rechts türkisfarbenes Wasser und weit draußen eine kleine bewaldete Felseninsel.](foto:2026-08-19_034821.jpg)
+
 **✓ Der Regenwald steht direkt hinter den Häusern von Tekek (18.08.).** Hinter der Häuserzeile
 am Dorfrand steigt der Hang sofort an, dicht bewachsen bis zum Grat, und aus dem Blätterdach ragen
 einzelne hohe Bäume heraus. Zwischen dem letzten Dach und dem Wald liegt weder Feld noch Garten.
