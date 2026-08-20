@@ -331,5 +331,109 @@
   "2026-08-19_102236.jpg": {
     "name": "tioman-katze-zwei-augenfarben",
     "_blur": "keine Kaesten: nur die Katze auf Kunstrasen — kein Mensch, kein Fahrzeug, kein Kennzeichen, keine Beschriftung"
+  },
+  "2026-08-20_024346.jpg": {
+    "name": "tioman-juara-weg-schild-perhilitan",
+    "_blur": "keine Kaesten: nur Schild und Wald — kein Mensch, kein Fahrzeug, keine private Angabe. Der Schildtext ist eine amtliche Bekanntmachung"
+  },
+  "2026-08-20_062331.jpg": {
+    "name": "tioman-juara-weg-betonpiste",
+    "_blur": "keine Kaesten: Weg, Wald, Meer — kein Mensch, kein Fahrzeug"
+  },
+  "2026-08-20_062343.jpg": {
+    "name": "tioman-juara-weg-betontreppe",
+    "_blur": "keine Kaesten: nur Treppe und Unterholz"
+  },
+  "2026-08-20_062345.jpg": {
+    "name": "tioman-juara-weg-rohr",
+    "_blur": "keine Kaesten: nur Rohr und Waldboden"
+  },
+  "2026-08-20_062338.jpg": {
+    "name": "tioman-juara-weg-waran",
+    "_blur": "keine Kaesten: nur das Tier auf dem Pfad"
+  },
+  "2026-08-20_062329.jpg": {
+    "name": "tioman-juara-weg-bach",
+    "_blur": "keine Kaesten: nur Wasser und Wald"
+  },
+  "2026-08-20_062336.jpg": {
+    "name": "tioman-juara-weg-urwaldriese",
+    "_blur": "keine Kaesten: nur Bewuchs und Himmel"
+  },
+  "2026-08-20_062334.jpg": {
+    "name": "tioman-juara-weg-urwaldriese-quer",
+    "_blur": "keine Kaesten: nur Bewuchs und Himmel"
+  },
+  "2026-08-20_062341.jpg": {
+    "name": "tioman-juara-weg-blauer-falter",
+    "_blur": "keine Kaesten: nur Falter und Waldboden"
+  },
+  "2026-08-20_062327.jpg": {
+    "name": "tioman-juara-torbogen",
+    "_blur": "drei Kaesten: die Nummernschildflaechen der beiden Pick-ups am Strassenrand (unleserlich, aber Kennzeichenflaeche) und der Kopf des Rollerfahrers rechts",
+    "blur": [
+      [
+        0.211,
+        0.565,
+        0.028,
+        0.019
+      ],
+      [
+        0.3,
+        0.574,
+        0.028,
+        0.018
+      ],
+      [
+        0.566,
+        0.536,
+        0.026,
+        0.032
+      ]
+    ]
+  },
+  "2026-08-20_062325.jpg": {
+    "name": "tioman-juara-tafel-flughunde",
+    "_blur": "ein Kasten: das lesbare Kfz-Kennzeichen des schwarzen Pick-ups links. Der Wagen rechts im Anschnitt zeigt nur Dach und Spiegel, kein Kennzeichen",
+    "blur": [
+      [
+        0.062,
+        0.616,
+        0.05,
+        0.038
+      ]
+    ]
+  },
+  "2026-08-20_062316.jpg": {
+    "name": "tioman-juara-strand-nord",
+    "_blur": "ein Kasten: die einzelne am Strand liegende Person. Winzig im Bild, aber ein Fremder in Badekleidung",
+    "blur": [
+      [
+        0.552,
+        0.52,
+        0.058,
+        0.034
+      ]
+    ]
+  },
+  "2026-08-20_062318.jpg": {
+    "name": "tioman-juara-strand-brandung",
+    "_blur": "keine Kaesten: die Gestalten am fernen Strandende sind wenige Pixel gross, kein Gesicht, kein Kennzeichen"
+  },
+  "2026-08-20_062320.jpg": {
+    "name": "tioman-juara-strand-palmen",
+    "_blur": "ein Kasten: dieselbe am Strand liegende Person wie im Nordbild",
+    "blur": [
+      [
+        0.05,
+        0.576,
+        0.062,
+        0.034
+      ]
+    ]
+  },
+  "2026-08-20_062322.jpg": {
+    "name": "tioman-juara-strand-suedspitze",
+    "_blur": "keine Kaesten: die Boote liegen weit draussen, keine Person erkennbar, keine Beschriftung lesbar"
   }
 }

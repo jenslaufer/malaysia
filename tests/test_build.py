@@ -192,6 +192,30 @@ class TestDatenschutz(unittest.TestCase):
     def test_gebuehr_ist_keine_passnummer(self):
         build.pruefe_privat("RM105 Marine-Park-Gebühr, dazu RM60 Touristensteuer.")
 
+    def test_malaiisches_wort_in_versalien_ist_keine_passnummer(self):
+        """Der Waechter darf ein zitiertes Behoerdenschild nicht fuer einen Pass halten.
+
+        Am 20.08. brach der Build an `KEBENARAN` ab — neun Grossbuchstaben, K am
+        Anfang, also formal `[CFGHJK][0-9A-Z]{8}`. Eine deutsche Passnummer kann
+        die Buchstaben A, B, D, E, I, O, Q, S, U aber gar nicht enthalten; sie
+        sind aus dem Zeichenvorrat ausgenommen, damit man 0/O und 1/I nicht
+        verwechselt. Ein Muster, das jedes malaiische Wort in Versalien fangen
+        kann, kostet nicht eine Minute, sondern verleitet dazu, das Zitat zu
+        verbiegen — und dann ist der naechste echte Treffer auch nur Laerm.
+        """
+        build.pruefe_privat("Auf dem Schild steht DILARANG MASUK TANPA KEBENARAN.")
+
+    def test_echte_passnummer_faellt_weiter_auf(self):
+        """Gegenprobe zum Muster darueber: die Verschaerfung darf nichts durchlassen."""
+        for nummer in ("C01X00T47", "CZ6311T47", "K12345678"):
+            with self.subTest(nummer=nummer):
+                try:
+                    build.pruefe_privat(f"Reisepass {nummer} vorlegen.")
+                except build.PrivatException:
+                    pass
+                else:
+                    self.fail(f"{nummer} nicht erkannt")
+
     def test_datum_ist_keine_iban(self):
         build.pruefe_privat("Grab fährt seit dem 04.05.2026 über die Grenze.")
 

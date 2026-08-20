@@ -629,6 +629,135 @@ Erzählt wird dazu auch eine Legende, eine Prinzessin habe beim Baden ihre Ringe
 Katzenschwanz gesteckt und die Katze ihn eingeknickt, damit nichts herunterfällt. Erklärt nichts,
 hört man aber gern.
 
+**✓ Der Weg nach Juara ist zum großen Teil gebaut (20.08.).** Die Tafel in Tekek nennt ihn
+Dschungelpfad; unter den Schuhen sind es drei verschiedene Untergründe. Über weite Strecken eine
+schmale Betonpiste mit eingekämmtem Fischgrätenmuster, gerade breit genug für einen Roller, an
+den Rändern vom Grün überwachsen. Wo es steil wird, löst eine Treppe aus Betonstufen sie ab,
+moosbewachsen, voller Laub, mannsbreit zwischen dem Unterholz. Dazwischen liegt festgetretene
+Erde mit Wurzeln und Steinen. Auf der Höhe öffnet sich der Bewuchs und gibt den Blick über das
+Blätterdach bis aufs Meer frei. Was hier nicht steht, weil es nicht gemessen wurde: wie lange
+der Weg dauert und wie viele Höhenmeter er hat.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Schmale Betonpiste mit Fischgrätenmuster führt durch dichtes Grün bergab, dahinter das Blätterdach und am Horizont das Meer.](foto:2026-08-20_062331.jpg)
+![Eine Treppe aus moosbewachsenen Betonstufen führt zwischen Farnen und Unterholz den Hang hinauf, die Stufen liegen voller trockener Blätter.](foto:2026-08-20_062343.jpg)
+
+**✓ Am Weg steht ein gelbes Schild der Wildtierbehörde (20.08.).** Zwei Stahlrohre, ein gelbes
+Blech, oben das Staatswappen Malaysias, rechts das Zeichen von PERHILITAN. Der Text lautet „RHL
+TIOMAN IALAH KAWASAN PERLINDUNGAN — DILARANG MASUK TANPA KEBENARAN", unten „Arahan Ketua Pengarah
+Jabatan PERHILITAN". Übersetzt: RHL Tioman ist ein Schutzgebiet, Zutritt ohne Genehmigung
+verboten, auf Anordnung des Generaldirektors der Wildtierbehörde. RHL steht für *Rezab Hidupan
+Liar*, Wildschutzgebiet. Es ist eine Gebietsgrenze, kein Wegweiser: ob sich das Verbot auf den
+Weg selbst bezieht oder auf den Wald daneben, steht nicht darauf. Der Weg nach Juara ist begehbar
+und wird begangen.
+<!-- werkstatt: telegram=2026-08-20T02:43 -->
+<!-- ort: tioman -->
+
+![Gelbes Schild an zwei Stahlrohren am Waldrand mit malaysischem Staatswappen und dem Text „RHL Tioman ialah kawasan perlindungan — dilarang masuk tanpa kebenaran"; rechts unten ein graues Rohr im Laub.](foto:2026-08-20_024346.jpg)
+
+**✓ Ein graues Rohr begleitet den Weg, und es trägt rote Farbmarken (20.08.).** Armdick, hellgrau,
+auf Betonböcken über dem Waldboden, in Abständen verschraubt, an manchen Stellen mit roter Farbe
+bespritzt. Es läuft in derselben Richtung wie der Weg den Hang hinunter und ist auch dort noch zu
+sehen, wo der Pfad zwischen Laub und Wurzeln undeutlich wird. Als Orientierung taugt es besser als
+jede Markierung an den Bäumen, weil es nicht verwittert und nicht überwächst.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Ein armdickes graues Kunststoffrohr liegt auf Betonböcken den Waldhang hinab, mit roten Farbspritzern, ringsum trockenes Laub.](foto:2026-08-20_062345.jpg)
+
+**○ Was das Rohr führt, ist hier nicht entschieden.** Auf den Bildern ist ein Druckrohr auf
+Auflagern zu sehen, mit Muffen und Schellen — das spricht für eine Wasserleitung vom Berg ins
+Dorf. Ein Stromkabel wäre die zweite Möglichkeit. Nichts am Rohr sagt es, kein Schild steht dabei,
+und auf dem Foto steht kein Betreiber. Wer es wissen will, fragt im Dorf.
+
+**✓ Auf dem Weg lag ein Waran (20.08.).** Grau-braun gekörnte Haut, kräftige Krallen, der Schwanz
+zum Hang hin ausgestreckt, den Kopf zur Seite — er lag auf der festgetretenen Erde zwischen
+ingwerartigen Blättern und rührte sich nicht, als der Weg an ihm vorbeiführte. Vom Kopf bis zum
+sichtbaren Schwanzansatz nimmt er gut die halbe Wegbreite ein.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Ein grau-brauner Waran liegt auf dem Erdpfad zwischen breiten grünen Blättern und trockenem Laub.](foto:2026-08-20_062338.jpg)
+
+**○ Welche Art das ist, steht hier nicht.** Auf der malaysischen Halbinsel und ihren Inseln ist
+der Bindenwaran (*Varanus salvator*) der mit Abstand häufigste, und er wird auf Tioman regelmäßig
+gemeldet. Zu sehen ist auf dem Bild aber nur ein Waran, kein Bestimmungsmerkmal. Praktisch ändert
+das nichts: stehenbleiben, Abstand lassen, weitergehen. Warane greifen niemanden an, sie laufen
+weg, wenn man ihnen den Weg lässt.
+
+**✓ Der Weg führt durch geschlossenen Wald, und ein Bach quert ihn (20.08.).** Klares, kaum
+strömendes Wasser über hellem Grund, darüber hängen Palmwedel bis auf die Oberfläche, dahinter
+liegt ein Stamm quer im Wasser. Weiter oben steht der Wald dicht bis über den Weg: Kletterpflanzen
+mit handtellergroßen Blättern überziehen alles bis in Kopfhöhe, und aus dem Dach ragen einzelne
+sehr hohe Bäume mit hellem, geradem Stamm und kleiner Krone heraus. Der Wald ist nicht offen wie
+ein Park, sondern eine Wand, in die der Weg eine Kerbe schneidet.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Ein klarer, kaum strömender Bach im Wald, über dem Wasser hängen Palmwedel, ein Stamm liegt quer.](foto:2026-08-20_062329.jpg)
+![Blick von unten in dichtes Kletterlaub, aus dem Blätterdach ragt ein sehr hoher Baum mit hellem geradem Stamm in den blauen Himmel.](foto:2026-08-20_062336.jpg)
+![Derselbe Baum quer, links eine Wand aus großblättrigen Kletterpflanzen bis in Kopfhöhe.](foto:2026-08-20_062334.jpg)
+
+**✓ Ein blau schillernder Falter lag auf dem Waldboden (20.08.).** Die Flügel offen im feuchten
+Erdreich zwischen Zweigen und Laub, die Oberseite an den Rändern dunkelbraun, in der Mitte
+leuchtend blau — kein Farbstoff, sondern ein Schiller, der aus dem Halbdunkel heraussticht. Der
+Falter ist beschädigt, ein Flügelrand fehlt, und er bewegte sich nicht.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Ein Schmetterling mit offenen Flügeln auf dunklem Waldboden, die Flügelmitte leuchtet metallisch blau, die Ränder sind braun.](foto:2026-08-20_062341.jpg)
+
+**✓ Juara empfängt mit einem gemauerten Torbogen über der Dorfstraße (20.08.).** Zwei Pfeiler mit
+brauner Bruchstein-Verkleidung, dazwischen ein weißer Bogen: „WELCOME TO JUARA VILLAGE — PULAU
+TIOMAN". Dahinter beginnt eine Betonstraße zwischen blau und rot gestrichenen Flachbauten mit
+roten Ziegeldächern. Am Straßenrand stehen Pick-ups, ein Motorrad mit Anhänger, eine Schubkarre
+und Sandsäcke: hier wird gebaut. Wer aus dem Wald kommt, steht ohne Übergang mitten im Dorf.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Gemauerter Torbogen mit der Aufschrift „Welcome to Juara Village, Pulau Tioman" über einer Betonstraße, dahinter blau und rot gestrichene Häuser mit roten Ziegeldächern.](foto:2026-08-20_062327.jpg)
+
+**✓ In Juara steht eine Tafel zu den Flughunden — und sie bestätigt, was oben nur nachgeschlagen
+war (20.08.).** Weißes Blech am Ortseingang, darauf ein Flughund mit ausgebreiteten Flügeln in
+Lebensgröße und die Überschrift „ISLAND FLYING FOX — *Pteropus hypomelanus* — Keluang Kecil". Die
+Kästen darauf sagen: *Gardeners of our forest* — die Tiere fressen Früchte, Nektar und Blätter,
+sie sind Hauptbestäuber der Durian und verbreiten Feigensamen. *Threatened by hunting and habitat
+loss* — geschützte Art, Fangen, Töten und Belästigen ist verboten, Wildlife Conservation Act 2010
+(Act 716). *Admire from a distance* — nicht unter den Schlafbäumen stehen, nichts anfassen.
+*Living safely with bats* — ein Nebeneinander ist gefahrlos möglich, solange man keinen direkten
+Kontakt sucht. *You can be a flying fox guardian* — wer einen Fang- oder Tötungsversuch sieht,
+ruft die PERHILITAN-Hotline 1800-88-5151; auf der Insel patrouillieren Wildhüter. Unten steht der
+Urheber: „a project under **Rimba**", mit Unterstützung unter anderem von Rufford und Mandai
+Nature.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Weiße Informationstafel am Ortseingang von Juara mit der Zeichnung eines Flughundes in Lebensgröße und der Überschrift „Island Flying Fox, Pteropus hypomelanus, Keluang Kecil".](foto:2026-08-20_062325.jpg)
+
+**○ Die Tafel und die Untersuchung sind dieselbe Quelle.** Die Zahlen weiter oben — zwei
+Schlafplätze auf der Insel, Tekek und Juara, und der erste Nachweis, dass Flughunde Durian
+bestäuben — stammen aus Arbeiten von Sheema Abdul Aziz und Kollegen; Rimba ist die
+Forschungsgruppe, in der sie arbeiten, und die Kamerafallen von 2015 hingen in Juara. Auf der
+Tafel steht damit dieselbe Handschrift, die die Studien geschrieben hat, an dem Ort, an dem
+gemessen wurde. Für uns heißt das: die Art, die Bestäubung und das Berührungsverbot sind nicht
+mehr nur nachgeschlagen, sie stehen vor Ort auf einem behördlich gedeckten Schild.
+
+**✓ Juara liegt am offenen Meer, und das sieht man sofort (20.08.).** Anders als die flache,
+spiegelglatte Bucht von Tekek: hier läuft eine Brandung in mehreren Reihen auf den Strand, das
+Wasser ist an der Kante grau-grün statt türkis, und der Sand fällt in einer breiten, harten Stufe
+zum Wasser ab. Die Bucht ist lang und leicht gebogen, an beiden Enden schließt sie mit bewaldeten
+Landzungen ab, die bis ans Wasser reichen. Hinter der Palmenreihe stehen einzelne Häuser und ein
+langes Restaurant mit Holzterrasse und Sonnenschirmen, davor liegen Boote im Sand. Am Südende
+liegen Schnellboote vor der Landzunge. Um die Mittagszeit lag genau ein Mensch am Strand.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![Breiter heller Sandstrand von Juara, links läuft die Brandung auf, rechts Palmen und einzelne Häuser vor dem bewaldeten Hang.](foto:2026-08-20_062316.jpg)
+![Blick die Bucht von Juara entlang: Brandung in mehreren Reihen, dahinter zwei bewaldete Bergrücken, die bis ans Wasser reichen.](foto:2026-08-20_062318.jpg)
+![Palmenreihe am Strand von Juara, dahinter ein langes Restaurant mit Holzterrasse und Sonnenschirmen, davor Boote im Sand.](foto:2026-08-20_062320.jpg)
+![Das Südende der Bucht von Juara, eine bewaldete Landzunge reicht bis ins türkisfarbene Wasser, davor liegen Schnellboote.](foto:2026-08-20_062322.jpg)
+
 ---
 
 ## Essen

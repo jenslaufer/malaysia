@@ -618,6 +618,132 @@ dominant — one parent is enough. There is a legend as well: a princess is said
 her rings onto a cat's tail while bathing, and the cat bent it so nothing would fall off. It
 explains nothing, but people enjoy telling it.
 
+**✓ The path to Juara is largely built, not worn (20 Aug).** The board in Tekek calls it a jungle
+trail; underfoot it is three different surfaces. For long stretches a narrow concrete track with a
+herringbone pattern combed into it, just wide enough for a scooter, green closing in from both
+sides. Where it gets steep, a flight of concrete steps takes over, mossy, buried in dry leaves, one
+person wide between the undergrowth. In between there is packed earth with roots and stones. At the
+top the growth opens and the view runs out over the canopy to the sea. What is not here, because it
+was not measured: how long the walk takes and how much climbing it involves.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![A narrow concrete track with a herringbone pattern running downhill through dense green, the canopy behind it and the sea on the horizon.](foto:2026-08-20_062331.jpg)
+![A flight of mossy concrete steps climbing the slope between ferns and undergrowth, the steps covered in dry leaves.](foto:2026-08-20_062343.jpg)
+
+**✓ A yellow wildlife department sign stands beside the path (20 Aug).** Two steel posts, a yellow
+metal plate, the Malaysian coat of arms at the top, the PERHILITAN emblem on the right. The text
+reads "RHL TIOMAN IALAH KAWASAN PERLINDUNGAN — DILARANG MASUK TANPA KEBENARAN", and below it
+"Arahan Ketua Pengarah Jabatan PERHILITAN". Translated: RHL Tioman is a protected area, entry
+without permission is prohibited, by order of the Director-General of the Wildlife Department. RHL
+stands for *Rezab Hidupan Liar*, wildlife reserve. It marks a boundary, not a route: whether the
+prohibition covers the path itself or the forest beside it is not written on it. The path to Juara
+is walkable and is walked.
+<!-- werkstatt: telegram=2026-08-20T02:43 -->
+<!-- ort: tioman -->
+
+![A yellow sign on two steel posts at the forest edge bearing the Malaysian coat of arms and the text "RHL Tioman ialah kawasan perlindungan — dilarang masuk tanpa kebenaran"; a grey pipe lies in the leaves at bottom right.](foto:2026-08-20_024346.jpg)
+
+**✓ A grey pipe follows the path, and it carries red paint marks (20 Aug).** Arm-thick, pale grey,
+resting on concrete saddles above the forest floor, bolted at intervals, splashed with red paint in
+places. It runs downhill in the same direction as the path and stays visible where the trail itself
+blurs into leaves and roots. As a handrail for the eye it beats any mark on a tree, because it
+neither weathers nor gets overgrown.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![An arm-thick grey plastic pipe running down the forest slope on concrete saddles, splashed with red paint, dry leaves all around.](foto:2026-08-20_062345.jpg)
+
+**○ What the pipe carries is not settled here.** The photographs show a pressure pipe on saddles,
+with couplings and clamps — that argues for a water main from the hills down to the village. A
+power cable would be the second possibility. Nothing on the pipe says so, no sign stands beside it,
+and no operator is visible in the picture. Anyone who wants to know asks in the village.
+
+**✓ A monitor lizard lay on the path (20 Aug).** Grey-brown grainy skin, heavy claws, tail
+stretched out towards the slope, head turned aside — it lay on the packed earth among
+ginger-like leaves and did not move as the path went past it. From head to the visible base of the
+tail it takes up a good half of the path's width.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![A grey-brown monitor lizard lying on the earth path between broad green leaves and dry litter.](foto:2026-08-20_062338.jpg)
+
+**○ Which species it is does not belong here.** On peninsular Malaysia and its islands the water
+monitor (*Varanus salvator*) is by far the most common, and it is reported on Tioman regularly. But
+what the picture shows is a monitor lizard, not a diagnostic feature. In practice it makes no
+difference: stop, keep your distance, walk on. Monitors do not attack anyone, they leave if you
+leave them a way out.
+
+**✓ The path runs through closed forest, and a stream crosses it (20 Aug).** Clear, barely moving
+water over a pale bed, palm fronds hanging down to the surface, a trunk lying across it behind.
+Higher up the forest closes over the path: climbers with leaves the size of a hand cover everything
+up to head height, and single very tall trees push out of the canopy on pale straight trunks with
+small crowns. This forest is not open like a park, it is a wall with a notch cut into it.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![A clear, barely moving stream in the forest, palm fronds hanging over the water, a trunk lying across it.](foto:2026-08-20_062329.jpg)
+![Looking up into dense climbing foliage, a very tall tree with a pale straight trunk rising out of the canopy into the blue sky.](foto:2026-08-20_062336.jpg)
+![The same tree in landscape, on the left a wall of large-leaved climbers up to head height.](foto:2026-08-20_062334.jpg)
+
+**✓ An iridescent blue butterfly lay on the forest floor (20 Aug).** Wings open on the damp soil
+between twigs and leaf litter, the upper side dark brown at the edges and brilliant blue in the
+middle — not a pigment but a sheen, and it stands out of the gloom. The butterfly is damaged, part
+of one wing edge is missing, and it did not move.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![A butterfly with open wings on dark forest soil, the centre of the wings shining metallic blue, the edges brown.](foto:2026-08-20_062341.jpg)
+
+**✓ Juara greets you with a masonry arch over the village road (20 Aug).** Two piers faced in brown
+stone, a white arch between them: "WELCOME TO JUARA VILLAGE — PULAU TIOMAN". Behind it a concrete
+road begins between low blue and red painted buildings with red tiled roofs. Pick-ups stand at the
+roadside, a motorbike with a trailer, a wheelbarrow and sandbags: building is going on here.
+Whoever comes out of the forest stands in the middle of the village with no transition.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![A masonry arch reading "Welcome to Juara Village, Pulau Tioman" over a concrete road, blue and red painted houses with red tiled roofs behind it.](foto:2026-08-20_062327.jpg)
+
+**✓ Juara has a board about the flying foxes — and it confirms what was only looked up above
+(20 Aug).** A white metal panel at the entrance to the village, carrying a life-size flying fox with
+its wings spread and the heading "ISLAND FLYING FOX — *Pteropus hypomelanus* — Keluang Kecil". The
+boxes on it say: *Gardeners of our forest* — the animals feed on fruit, nectar and leaves, they are
+key pollinators of durian and disperse fig seeds. *Threatened by hunting and habitat loss* — a
+protected species, catching, killing and harassing them is illegal, Wildlife Conservation Act 2010
+(Act 716). *Admire from a distance* — do not stand underneath the roosts, touch nothing. *Living
+safely with bats* — coexistence is safe as long as you seek no direct contact. *You can be a flying
+fox guardian* — anyone who sees an attempt to catch or harm them calls the PERHILITAN hotline
+1800-88-5151; there are wildlife officers patrolling the island. At the bottom stands the author:
+"a project under **Rimba**", with support from Rufford and Mandai Nature among others.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![A white information board at the entrance to Juara with a life-size drawing of a flying fox and the heading "Island Flying Fox, Pteropus hypomelanus, Keluang Kecil".](foto:2026-08-20_062325.jpg)
+
+**○ The board and the study are the same source.** The figures further up — two roosts on the
+island, Tekek and Juara, and the first evidence that flying foxes pollinate durian — come from work
+by Sheema Abdul Aziz and colleagues; Rimba is the research group they work in, and the camera traps
+of 2015 hung in Juara. So the board carries the same hand that wrote the studies, standing at the
+place where the measuring was done. For us that means the species, the pollination and the
+no-touching rule are no longer merely looked up: they are on a sign on site, backed by the
+authority.
+
+**✓ Juara faces the open sea, and you see it at once (20 Aug).** Unlike the flat, mirror-smooth bay
+at Tekek: here surf runs onto the beach in several rows, the water is grey-green at the edge instead
+of turquoise, and the sand drops to the water in a broad, hard step. The bay is long and slightly
+curved, closed at both ends by wooded headlands that reach down to the water. Behind the line of
+palms stand single houses and a long restaurant with a wooden terrace and parasols, boats lying in
+the sand in front. Speedboats lie off the southern headland. Around midday exactly one person was on
+the beach.
+<!-- werkstatt: telegram=2026-08-20T06:23 -->
+<!-- ort: tioman -->
+
+![The wide pale sand of Juara beach, surf running in on the left, palms and single houses in front of the wooded slope on the right.](foto:2026-08-20_062316.jpg)
+![Looking along the bay at Juara: surf in several rows, two wooded ridges behind it reaching down to the water.](foto:2026-08-20_062318.jpg)
+![The line of palms on Juara beach, a long restaurant with a wooden terrace and parasols behind them, boats lying in the sand.](foto:2026-08-20_062320.jpg)
+![The southern end of Juara bay, a wooded headland reaching into the turquoise water, speedboats lying in front of it.](foto:2026-08-20_062322.jpg)
+
 ---
 
 ## Eating

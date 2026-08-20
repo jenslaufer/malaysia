@@ -165,7 +165,12 @@ class PrivatException(Exception):
 # Passnummer im Netz — ein Fehlalarm kostet eine Minute, der andere Fall ist
 # nicht ruecknehmbar.
 MUSTER = [
-    (r"\b[CFGHJK][0-9A-Z]{8}\b", "Passnummer (deutsches Format)"),
+    # Der Zeichenvorrat der deutschen Passnummer laesst A, B, D, E, I, O, Q, S
+    # und U aus (0/O und 1/I sollen nicht verwechselbar sein). `[0-9A-Z]{8}` fing
+    # deshalb jedes neunstellige Wort in Versalien mit — am 20.08. brach der Build
+    # an KEBENARAN ab, einem Zitat vom Behoerdenschild am Weg nach Juara. Der
+    # Fehlalarm kostete nicht eine Minute, sondern haette das Zitat gekostet.
+    (r"\b[CFGHJK][0-9CFGHJKLMNPRTVWXYZ]{8}\b", "Passnummer (deutsches Format)"),
     (r"\b[A-Z]{1,2}\d{7,9}\b", "Ausweis- oder Vorgangsnummer"),
     (r"\b[A-Z]{2}\d{2}[ ]?(?:[0-9A-Z]{4}[ ]?){3,}[0-9A-Z]{1,4}\b", "IBAN"),
     (r"[\w.+-]+@[\w-]+\.[A-Za-z]{2,}", "E-Mail-Adresse"),
