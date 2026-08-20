@@ -744,6 +744,36 @@ the beach.
 ![The line of palms on Juara beach, a long restaurant with a wooden terrace and parasols behind them, boats lying in the sand.](foto:2026-08-20_062320.jpg)
 ![The southern end of Juara bay, a wooded headland reaching into the turquoise water, speedboats lying in front of it.](foto:2026-08-20_062322.jpg)
 
+**✓ Petrol comes from the shop, in bottles, for RM 4.00 (20 Aug).** No pump, no nozzle: a
+pale blue plastic crate stands on the tiled floor, holding about twenty used plastic bottles of
+yellowish fuel, each with a different screw cap. A piece of cardboard hangs off the front on two
+purple ribbons, hand-lettered: "PETROL RM 4.00". Behind it stand three blue jerrycans stencilled
+"JM PETROL", one of them fitted with a brass tap on top — that is where the bottles are filled. A water
+bottle stands among the petrol ones, plastic bowls and a stool are stacked beside them. It is an
+ordinary village shop, not a fuel dealer.
+<!-- werkstatt: telegram=2026-08-20T07:19 -->
+<!-- ort: tioman -->
+
+![A turquoise plastic crate on a tiled floor, filled with used plastic bottles of yellowish petrol; in front a hand-lettered cardboard sign reading "PETROL RM 4.00", behind it three blue jerrycans stencilled "JM PETROL".](foto:2026-08-20_071933.jpg)
+
+**○ There is no petrol station on Tioman — this is how you buy fuel.** "There aren't even any
+petrol kiosks here in Tioman – you get fuel from the minimarts in plastic bottles," says a report
+of a bike ride from Tekek to Air Batang (theoccasionaltraveller.com/tioman-cycling). Rent a
+scooter here and you buy its fuel in a shop, not at the roadside.
+
+**○ The sign names no volume; RM 4.00 for one litre is the going rate.** Malaysiakini described
+the trade on 30 Sep 2025 and quotes the same prices: 500 ml for RM 2, one litre for RM 4 — naming
+Pulau Tioman, Pulau Tuba and Pulau Perhentian explicitly (malaysiakini.com/news/756524). The
+buyers are locals moving around their own village; the article has the line about older people
+riding a motorbike to the mosque, the coffee shop or the garden. The photo does not show the
+volume, and the bottles are of different sizes.
+
+**○ For us the bottle is barely dearer than a pump on the mainland.** In the week of 13–19 Aug
+2026 RON95 cost RM 1.99 at the pump for Malaysians — with a MyKad, under the BUDI95 scheme — and
+**RM 3.62 for everyone else**, foreigners included (paultan.org/fuel-price). So a litre out of
+the bottle costs a local twice the pump price and costs us about ten per cent more. The mark-up
+people on the island complain about lands on the residents, not on the visitor.
+
 ---
 
 ## Eating

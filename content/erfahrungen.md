@@ -758,6 +758,39 @@ liegen Schnellboote vor der Landzunge. Um die Mittagszeit lag genau ein Mensch a
 ![Palmenreihe am Strand von Juara, dahinter ein langes Restaurant mit Holzterrasse und Sonnenschirmen, davor Boote im Sand.](foto:2026-08-20_062320.jpg)
 ![Das Südende der Bucht von Juara, eine bewaldete Landzunge reicht bis ins türkisfarbene Wasser, davor liegen Schnellboote.](foto:2026-08-20_062322.jpg)
 
+**✓ Benzin gibt es im Laden, in Flaschen, für RM 4,00 (20.08.).** Keine Säule, kein Zapfhahn:
+Auf dem Fliesenboden steht eine hellblaue Plastikkiste, darin rund zwanzig gebrauchte
+Plastikflaschen mit gelblichem Sprit, jede mit einem anderen Schraubdeckel. Vorn hängt ein Stück
+Karton an zwei lila Schleifen, mit der Hand beschriftet: „PETROL RM 4.00". Dahinter stehen drei
+blaue Kanister mit dem Aufdruck „JM PETROL", auf einem sitzt oben ein Messinghahn — daraus wird
+abgefüllt. Zwischen den Benzinflaschen steht eine Wasserflasche, daneben stapeln sich
+Plastikschüsseln und ein Hocker. Es ist ein gewöhnlicher Dorfladen, kein Treibstoffhandel.
+<!-- werkstatt: telegram=2026-08-20T07:19 -->
+<!-- ort: tioman -->
+
+![Eine türkisfarbene Plastikkiste auf Fliesenboden, gefüllt mit gebrauchten Plastikflaschen voll gelblichem Benzin; davor ein handbeschriftetes Pappschild „PETROL RM 4.00", dahinter drei blaue Kanister mit der Aufschrift „JM PETROL".](foto:2026-08-20_071933.jpg)
+
+**○ Eine Tankstelle gibt es auf Tioman nicht — das ist der Weg an Benzin.** „There aren't even
+any petrol kiosks here in Tioman – you get fuel from the minimarts in plastic bottles", schreibt
+ein Reisebericht über eine Radtour von Tekek nach Air Batang
+(theoccasionaltraveller.com/tioman-cycling). Wer hier einen Roller mietet, kauft seinen Sprit im
+Laden, nicht an der Straße.
+
+**○ Auf dem Schild steht keine Menge, üblich ist RM 4,00 für einen Liter.** Malaysiakini hat den
+Handel am 30.09.2025 beschrieben und nennt dieselben Preise: 500 ml für RM 2, ein Liter für RM 4
+— und als Orte ausdrücklich Pulau Tioman, Pulau Tuba und Pulau Perhentian
+(malaysiakini.com/news/756524). Verkauft wird an Einheimische, die im Dorf unterwegs sind; im
+Artikel steht der Satz von den älteren Leuten, die mit dem Motorrad zur Moschee, ins Kaffeehaus
+oder in den Garten fahren. Auf dem Foto ist die Menge nicht zu sehen, die Flaschen haben
+verschiedene Größen.
+
+**○ Für uns ist die Flasche kaum teurer als eine Zapfsäule auf dem Festland.** In der Woche vom
+13. bis 19.08.2026 kostete RON95 an der Säule RM 1,99 für Malaysier — mit MyKad, über das
+Programm BUDI95 — und **RM 3,62 für alle anderen**, also für Ausländer (paultan.org/fuel-price).
+Der Liter aus der Flasche kostet einen Einheimischen damit das Doppelte, uns rund zehn Prozent
+mehr als eine Tankfüllung drüben. Der Aufschlag, über den auf der Insel geklagt wird, trifft
+nicht den Reisenden, sondern den, der hier wohnt.
+
 ---
 
 ## Essen
