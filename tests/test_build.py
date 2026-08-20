@@ -14,6 +14,7 @@ Lauf: python3 tests/test_build.py
 
 import contextlib
 import io
+import json
 import re
 import shutil
 import sys
@@ -1353,7 +1354,7 @@ class TestFremdeRessourcen(unittest.TestCase):
             '<script src="vendor/leaflet/leaflet.js"></script>'
             '<link rel="icon" href="data:image/svg+xml,%3Csvg%3E">'))
 
-    def test_beide_sprachfassungen_laden_nichts_ausser_der_karte(self):
+    def test_beide_sprachfassungen_laden_ueberhaupt_nichts(self):
         for sprache in build.SPRACHEN:
             pfad = build.ZIELE[sprache]
             if not pfad.exists():
@@ -1366,8 +1367,13 @@ class TestFremdeRessourcen(unittest.TestCase):
         with self.assertRaises(build.ExternException):
             build.pruefe_extern('<script src="https://example.com/x.js"></script>')
 
-    def test_erlaubte_quelle_steht_in_der_datenschutzerklaerung(self):
-        self.assertTrue(build.EXTERN_ERLAUBT, "die Karte braucht eine Ausnahme")
+    def test_es_gibt_keine_erlaubte_fremde_quelle_mehr(self):
+        # Seit dem 20.08. laedt die Seite von nirgends sonst. Die Liste ist
+        # die Tuer im Waechter — steht etwas drin, muss es auch in der
+        # Datenschutzerklaerung stehen, und dann gilt der Test darunter.
+        self.assertEqual((), build.EXTERN_ERLAUBT)
+
+    def test_was_erlaubt_waere_stuende_in_der_datenschutzerklaerung(self):
         for host in build.EXTERN_ERLAUBT:
             for sprache in build.SPRACHEN:
                 with self.subTest(host=host, sprache=sprache):
@@ -1375,13 +1381,25 @@ class TestFremdeRessourcen(unittest.TestCase):
                                   f"{host} ist erlaubt, steht aber nicht in der "
                                   f"Datenschutzerklaerung ({sprache})")
 
+    def test_die_datenschutzerklaerung_verspricht_keinen_knopf_mehr(self):
+        for sprache in build.SPRACHEN:
+            with self.subTest(sprache=sprache):
+                text = build.rendere_recht("datenschutz", sprache)
+                self.assertNotIn("openstreetmap.org", text)
+                self.assertNotIn("tile.", text)
 
-class TestKarteLaedtErstAufKlick(unittest.TestCase):
-    """Die Kacheln kommen von OpenStreetMap — der einzige Dritte, der bleibt.
 
-    Er bleibt, weil man eine Weltkarte nicht mitliefert. Also entscheidet der
-    Leser: die Karte zeigt zuerst einen Knopf, und erst der Klick holt die
-    Kacheln. Vorher erfaehrt openstreetmap.org nichts von ihm.
+class TestKarteLaedtSofort(unittest.TestCase):
+    """Seit dem 20.08. holt die Karte nichts mehr bei einem Dritten.
+
+    Vorher lagen die Kacheln bei tile.openstreetmap.org. Das traegt die IP
+    jedes Lesers dorthin, also stand ein Knopf davor. Jens am 20.08. 08:27:
+    "Warum muss ich den Knopf druecken? Warum startet die Map nicht direkt?"
+
+    Der Knopf war die Folge einer Annahme im Code — "eine Weltkarte laesst
+    sich nicht mitliefern". Die Reise braucht keine Weltkarte, sondern einen
+    Ausschnitt, und der wiegt 52 KB (`karte-land.py`, Natural Earth,
+    gemeinfrei). Ohne Dritten kein Einwilligungsgrund, ohne Grund kein Knopf.
     """
 
     def setUp(self):
@@ -1391,28 +1409,87 @@ class TestKarteLaedtErstAufKlick(unittest.TestCase):
     def tearDown(self):
         build.SPRACHE = "de"
 
-    def test_die_kachel_adresse_steht_nicht_im_automatischen_teil(self):
-        # Der Aufruf muss HINTER dem Knopf liegen. Steht er im Startlauf,
-        # laedt die Karte trotz Knopf — und der Knopf ist dann Dekoration.
-        start = self.html.split("function karteLaden")[0]
-        self.assertNotIn("tile.openstreetmap.org", start)
+    def test_kein_knopf_und_keine_tuer_mehr(self):
+        self.assertNotIn("karte-laden", self.html)
+        self.assertNotIn("karte-tuer", self.html)
 
-    def test_knopf_und_begruendung_stehen_da(self):
-        self.assertIn("karte-laden", self.html)
-        self.assertIn("openstreetmap.org", self.html)
-        self.assertIn("IP-Adresse", self.html)
+    def test_keine_kachel_adresse_mehr_auf_der_seite(self):
+        self.assertNotIn("openstreetmap.org", self.html)
+        self.assertNotIn("tileLayer", self.html)
 
-    def test_stationen_stehen_auch_ohne_karte_da(self):
-        # Der Knopf darf die Auskunft nicht wegsperren: wer nicht klickt, soll
-        # die Route trotzdem lesen koennen.
+    def test_die_karte_startet_ohne_klick(self):
+        # Nicht "ein Aufruf steht irgendwo": der Aufruf muss im Startlauf
+        # stehen. Sonst zeichnet die Karte erst, wenn jemand etwas anfasst —
+        # genau der Zustand, den Jens gemeldet hat.
+        start = self.html.split("DOMContentLoaded")[1]
+        self.assertIn("karteZeichnen", start)
+        self.assertNotIn('addEventListener("click"', self.html)
+        self.assertNotIn("<button", self.html)
+
+    def test_stationen_stehen_weiter_als_liste_da(self):
+        # Die Karte ist ein Weg in den Text, nicht der einzige: wer kein
+        # Javascript hat, soll die Route trotzdem lesen koennen.
         self.assertIn('<ol class="stationen">', self.html)
         self.assertIn("Kota Kinabalu", self.html)
 
-    def test_englische_fassung_hat_den_englischen_knopftext(self):
-        build.SPRACHE = "en"
-        html = build._karte()
-        self.assertIn("Load map", html)
-        self.assertNotIn("Karte laden", html)
+    def test_das_land_liegt_in_der_seite_nicht_hinter_einer_anfrage(self):
+        # Eingebettet statt nachgeladen: ein zweiter Weg zum Server ist ein
+        # zweiter Weg, auf dem die Karte leer bleiben kann.
+        self.assertIn("KARTE_LAND", self.html)
+        self.assertNotIn("fetch(", self.html)
+
+
+class TestKartenland(unittest.TestCase):
+    """Die Kuestenlinie, die `karte-land.py` erzeugt.
+
+    Der Test, der hier zaehlt, ist Tioman. Mit einer festen Toleranz von
+    0,05 Grad verschwand die Insel aus der Datei — sie ist schmaler als die
+    Toleranz, also fiel ihr Ring auf eine Linie zusammen und wurde
+    weggeworfen. Gemerkt haette man das an einer Station, die im Meer steht:
+    Tioman ist Station 4 von 8 und der Ort, an dem Jens gerade ist.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.pfad = build.WURZEL / "karte-land.json"
+        if not cls.pfad.exists():
+            raise unittest.SkipTest("karte-land.json fehlt")
+        cls.flaechen = json.loads(cls.pfad.read_text(encoding="utf-8"))
+
+    @staticmethod
+    def _drin(px, py, ring):
+        c = False
+        for i in range(len(ring)):
+            x0, y0 = ring[i - 1]
+            x1, y1 = ring[i]
+            if (y0 > py) != (y1 > py) and px < (x1 - x0) * (py - y0) / (y1 - y0) + x0:
+                c = not c
+        return c
+
+    def test_jede_flaeche_ist_ein_geschlossener_ring(self):
+        for i, ring in enumerate(self.flaechen):
+            with self.subTest(flaeche=i):
+                self.assertGreaterEqual(len(ring), 4)
+                self.assertEqual(ring[0], ring[-1])
+
+    def test_tioman_ist_nicht_wegvereinfacht(self):
+        self.assertTrue(
+            any(self._drin(104.1667, 2.8167, r) for r in self.flaechen),
+            "Tioman fehlt in karte-land.json — Station 4 stuende im Meer")
+
+    def test_jede_station_liegt_im_ausschnitt(self):
+        lo0, la0, lo1, la1 = build.KARTE_FENSTER
+        for name, lat, lon, *_ in build.STATIONEN:
+            with self.subTest(station=name):
+                self.assertTrue(lo0 < lon < lo1 and la0 < lat < la1,
+                                f"{name} liegt ausserhalb des Kartenfensters")
+
+    def test_die_datei_bleibt_klein_genug_zum_einbetten(self):
+        # Sie steht in beiden Sprachfassungen im Quelltext. Waechst sie, waechst
+        # jede Seite doppelt.
+        self.assertLess(self.pfad.stat().st_size, 80_000,
+                        "karte-land.json ist zu gross zum Einbetten — "
+                        "Toleranz in karte-land.py erhoehen")
 
 
 class TestRechtsseiten(unittest.TestCase):

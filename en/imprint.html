@@ -21,6 +21,9 @@
   --tinte: #1b1a17;
   --tinte-leise: #56514a;
   --linie: #e0d8c9;
+  --see: #dde7e6;
+  --land: #f7f2e8;
+  --kueste: #b9ac93;
   --erlebt: #2f6b4f;
   --recherche: #a8762c;
   --gescheitert: #a33a2e;
@@ -311,42 +314,22 @@ code {
   height: min(56vh, 460px);
   border: 1px solid var(--linie);
   border-radius: 10px;
-  background: var(--papier-tief);
+  background: var(--see);
   margin-bottom: 1.1rem;
 }
 
-.leaflet-container { font: inherit; border-radius: 10px; }
+.leaflet-container { font: inherit; border-radius: 10px; background: var(--see); }
 
-/* Die Tuer vor der Karte. Vor dem Klick geht keine Anfrage nach
-   openstreetmap.org — der Kasten sagt, warum, statt nur einen Knopf zu zeigen. */
-.karte-tuer {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-}
-.karte-tuer p {
-  margin: 0;
-  max-width: 34ch;
-  font-size: .92rem;
+/* Kein Kachelbild, sondern gezeichnetes Land: eine Flaeche in Papierton auf
+   See. Das passt zur Seite, die sonst ohne Bildflaechen auskommt — und es
+   holt nichts bei einem Dritten, weshalb der Knopf davor weg konnte. */
+.karte-land { fill: var(--land); stroke: var(--kueste); stroke-width: .8; }
+
+.karte-quelle {
+  margin: -.7rem 0 1.1rem;
+  font-size: .82rem;
   color: var(--tinte-leise);
 }
-.karte-tuer button {
-  font: inherit;
-  font-size: .95rem;
-  font-weight: 500;
-  padding: .55rem 1.2rem;
-  color: var(--papier);
-  background: var(--erlebt);
-  border: 0;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.karte-tuer button:hover { background: #1c4f3f; }
 
 /* --- Rechtsseiten ---
 

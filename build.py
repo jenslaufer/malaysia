@@ -83,12 +83,26 @@ IMPRESSUM = {
     "ustid": "DE357501843",
 }
 
-# Hosts, von denen diese Seite laden darf. Schriften und Leaflet liegen seit
-# dem 17.08. hier im Repo; die Kartenkacheln bleiben fremd, weil man eine
-# Weltkarte nicht mitliefert — deshalb laedt die Karte erst auf Klick.
+# Hosts, von denen diese Seite laden darf. Seit dem 20.08. ist die Liste leer.
+#
+# Schriften und Leaflet kamen am 17.08. ins Repo, die Kacheln blieben fremd —
+# "weil man eine Weltkarte nicht mitliefert" stand hier, und daraus folgte der
+# Knopf vor der Karte. Der Satz war falsch: die Reise braucht keine Weltkarte,
+# sondern den Ausschnitt Singapur–Nordborneo, und der wiegt als Kuestenlinie
+# 52 KB (`karte-land.py`, Natural Earth, gemeinfrei). Kacheln mitzuliefern
+# waere ohnehin verboten gewesen — die Tile Usage Policy der OSM Foundation
+# nennt das Vorab-Herunterladen mehrerer Zoomstufen ausdruecklich als
+# Missbrauch (operations.osmfoundation.org/policies/tiles, 20.08.2026).
+#
 # Was hier steht, muss in der Datenschutzerklaerung stehen; ein Test haelt
-# beide zusammen.
-EXTERN_ERLAUBT: tuple[str, ...] = ("tile.openstreetmap.org", "www.openstreetmap.org")
+# beide zusammen. Leer heisst: die Seite laedt nichts von Dritten — und dann
+# braucht sie fuer nichts eine Einwilligung und fuer nichts einen Knopf.
+EXTERN_ERLAUBT: tuple[str, ...] = ()
+
+# Der Ausschnitt, den `karte-land.py` geschnitten hat (lon0, lat0, lon1, lat1).
+# Ausserhalb davon steht kein Land in der Datei, also darf die Karte nicht
+# weiter hinaus — sonst schwimmt ein Rechteck im Leeren.
+KARTE_FENSTER = (93.0, -8.0, 127.0, 17.0)
 
 # Welche Fassung gerade gebaut wird. Ein Modul-Global wie WERKSTATT und
 # GEHEIME_TOKEN daneben: der Rendercode reicht sonst durch ein Dutzend
@@ -1170,43 +1184,53 @@ def _karte(rumpf: str = "") -> str:
             "into the text, by place instead of by topic.",
         )
 
+    # Die Kuestenlinie steht IN der Seite, nicht hinter einer zweiten Anfrage.
+    # 52 KB in beiden Sprachfassungen, dafuer kann die Karte nicht halb laden.
+    # Sie ersetzt die Kacheln, die bis zum 20.08. bei tile.openstreetmap.org
+    # lagen und wegen der IP-Uebertragung einen Knopf davor noetig machten.
+    lo0, la0, lo1, la1 = KARTE_FENSTER
+    land = (WURZEL / "karte-land.json").read_text(encoding="utf-8")
+
     return f"""
 <section class="karte-block" aria-labelledby="karte-titel">
   <h2 id="karte-titel">{_t("Die Route", "The route")}</h2>
   <p class="karte-intro">{grund}</p>
   <div id="karte" role="img" aria-label="{_t(
        'Karte der Reiseroute von Singapur über die Halbinsel bis nach Sabah auf Borneo',
-       'Map of the route from Singapore across the peninsula to Sabah on Borneo')}">
-    <div class="karte-tuer">
-      <p>{_t(
-         "Die Kartenbilder kommen von OpenStreetMap. Beim Laden erfährt "
-         "openstreetmap.org Ihre IP-Adresse — deshalb erst auf Ihren Klick.",
-         "The map tiles come from OpenStreetMap. Loading them tells "
-         "openstreetmap.org your IP address — so it happens on your click, not before.")}</p>
-      <button type="button" id="karte-laden">{_t("Karte laden", "Load map")}</button>
-    </div>
-  </div>
+       'Map of the route from Singapore across the peninsula to Sabah on Borneo')}"></div>
+  <p class="karte-quelle">{_t(
+     "Küstenlinie: Natural Earth, gemeinfrei. Die Karte lädt nichts von "
+     "fremden Servern — deshalb startet sie ohne Nachfrage.",
+     "Coastline: Natural Earth, public domain. The map loads nothing from "
+     "third-party servers — which is why it starts without asking.")}</p>
   <noscript><p class="hinweis">{_t(
      "Die Karte braucht JavaScript. Die Stationen stehen als Liste darunter.",
      "The map needs JavaScript. The stops are listed below it.")}</p></noscript>
   <ol class="stationen">{liste}</ol>
 </section>
 <script>
-  // Die Kacheln sind der einzige Dritte, der auf dieser Seite bleibt — eine
-  // Weltkarte laesst sich nicht mitliefern. Also entscheidet der Leser: vor
-  // dem Klick geht keine Anfrage nach openstreetmap.org. Der Aufruf steht
-  // deshalb IN dieser Funktion und nirgends sonst.
-  function karteLaden() {{
+  // Die Karte zeichnet ihr Land selbst, aus einer Datei von diesem Server.
+  // Sie fragt niemanden sonst — deshalb startet sie ohne Knopf davor.
+  var KARTE_LAND = {land};
+  function karteZeichnen() {{
     var el = document.getElementById("karte");
     if (!el || typeof L === "undefined") return;
-    el.innerHTML = "";
     el.removeAttribute("role");
     var orte = {daten};
-    var karte = L.map("karte", {{ scrollWheelZoom: false }});
-    L.tileLayer("https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png", {{
-      maxZoom: 17,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }}).addTo(karte);
+    var karte = L.map("karte", {{
+      scrollWheelZoom: false,
+      zoomControl: true,
+      maxBounds: [[{la0}, {lo0}], [{la1}, {lo1}]],
+      maxBoundsViscosity: 1,
+      attributionControl: false
+    }});
+    // Land zuerst, damit Linie und Punkte darueber liegen.
+    // Jeder Ring bekommt seine EIGENE Klammer. Ohne sie liest Leaflet die
+    // Liste als einen Umriss mit 236 Loechern — gemessen am 20.08. am
+    // gerenderten Bild: nur Konturen, keine gefuellte Flaeche.
+    L.polygon(KARTE_LAND.map(function (ring) {{
+      return [ring.map(function (p) {{ return [p[1], p[0]]; }})];
+    }}), {{ className: "karte-land", interactive: false }}).addTo(karte);
     var linie = [];
     orte.forEach(function (o, i) {{
       linie.push([o[1], o[2]]);
@@ -1231,11 +1255,14 @@ def _karte(rumpf: str = "") -> str:
     }});
     L.polyline(linie, {{ color: "#1c4f3f", weight: 2, opacity: .45, dashArray: "5 6" }}).addTo(karte);
     karte.fitBounds(L.latLngBounds(linie).pad(.12));
+    // Nicht weiter hinaus als die erste Ansicht: ausserhalb des Ausschnitts
+    // gibt es kein Land in der Datei, und ein Rechteck im Leeren sieht aus
+    // wie ein Fehler. Die Grenze richtet sich nach dem Fenster des Lesers,
+    // deshalb wird sie hier gelesen und nicht vorher geraten.
+    karte.setMinZoom(karte.getZoom());
+    karte.setMaxZoom(10);
   }}
-  document.addEventListener("DOMContentLoaded", function () {{
-    var knopf = document.getElementById("karte-laden");
-    if (knopf) knopf.addEventListener("click", karteLaden);
-  }});
+  document.addEventListener("DOMContentLoaded", karteZeichnen);
 </script>
 """
 
