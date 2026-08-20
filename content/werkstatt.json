@@ -169,6 +169,60 @@
       "veroeffentlicht": "2026-08-20T01:33:18+00:00"
     },
     {
+      "anker": "**✓ Der Weg nach Juara ist zum großen Teil gebaut (20.08.).*",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Am Weg steht ein gelbes Schild der Wildtierbehörde (20.0",
+      "minuten": 235,
+      "telegram": "2026-08-20T02:43:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Ein graues Rohr begleitet den Weg, und es trägt rote Far",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Auf dem Weg lag ein Waran (20.08.).** Grau-braun gekörnt",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Der Weg führt durch geschlossenen Wald, und ein Bach que",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Ein blau schillernder Falter lag auf dem Waldboden (20.0",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Juara empfängt mit einem gemauerten Torbogen über der Do",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ In Juara steht eine Tafel zu den Flughunden — und sie be",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
+      "anker": "**✓ Juara liegt am offenen Meer, und das sieht man sofort (2",
+      "minuten": 15,
+      "telegram": "2026-08-20T06:23:00+00:00",
+      "veroeffentlicht": "2026-08-20T06:37:45+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -199,10 +253,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 33,
-  "juengste_minuten": 43,
-  "markiert": 33,
-  "median_minuten": 12,
+  "gemessen": 42,
+  "juengste_minuten": 15,
+  "markiert": 42,
+  "median_minuten": 15,
   "schnellste_minuten": 4,
   "stand": "2026-08-20"
 }
