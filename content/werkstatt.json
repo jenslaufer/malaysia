@@ -223,6 +223,12 @@
       "veroeffentlicht": "2026-08-20T06:37:45+00:00"
     },
     {
+      "anker": "**✓ Benzin gibt es im Laden, in Flaschen, für RM 4,00 (20.08",
+      "minuten": 6,
+      "telegram": "2026-08-20T07:19:00+00:00",
+      "veroeffentlicht": "2026-08-20T07:24:55+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -253,9 +259,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 42,
-  "juengste_minuten": 15,
-  "markiert": 42,
+  "gemessen": 43,
+  "juengste_minuten": 6,
+  "markiert": 43,
   "median_minuten": 15,
   "schnellste_minuten": 4,
   "stand": "2026-08-20"
