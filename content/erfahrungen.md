@@ -611,6 +611,24 @@ Wikipedia-Artikel *Odd-eyed cat*, dort belegt mit Richards, *ASPCA Complete Guid
 1999). Praktisch heißt das: sich von vorn nähern und nicht von der blauen Seite ansprechen. Ob
 dieses Tier hört, ist damit nicht gesagt, nur die Wahrscheinlichkeit.
 
+**✓ Fast alle Katzen hier haben einen kurzen, oft geknickten Schwanz (20.08.).** Nicht eine
+einzelne, sondern das Übliche — halbe Länge, viele mit einem Knoten am Ende.
+<!-- werkstatt: telegram=2026-08-20T00:50 -->
+<!-- ort: tioman -->
+
+**○ Die Schwänze sind nicht gekürzt, sie wachsen so.** Ein Erbmerkmal, kein Eingriff — das ist
+die Auskunft, die man hier braucht, denn der erste Gedanke beim Hinsehen ist ein anderer. Darwin
+beschrieb es 1868 für den malaiischen Archipel, Siam, Pegu und Burma: Schwänze von etwa halber
+Länge, oft mit einem Knoten am Ende. Das Merkmal ist also mindestens 160 Jahre alt. Die Ursache
+wurde 2016 gefunden, eine Punktmutation im Gen *HES7*, das beim Embryo die Wirbel anlegt; geprüft
+an 245 Katzen, und sie steckt in den Straßenkatzen Südost- und Ostasiens genauso wie in der
+japanischen Bobtail-Rasse (*Scientific Reports* 6:31583, nature.com/articles/srep31583). Der Knick
+sind verwachsene Schwanzwirbel und tut dem Tier nichts. Häufig ist es hier, weil die Katzen sich
+frei vermehren, niemand dagegen züchtet und das Merkmal dominant ist — ein Elternteil genügt.
+Erzählt wird dazu auch eine Legende, eine Prinzessin habe beim Baden ihre Ringe auf den
+Katzenschwanz gesteckt und die Katze ihn eingeknickt, damit nichts herunterfällt. Erklärt nichts,
+hört man aber gern.
+
 ---
 
 ## Essen

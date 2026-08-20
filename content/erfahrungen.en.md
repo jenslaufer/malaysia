@@ -600,6 +600,24 @@ cat*, sourced there to Richards, *ASPCA Complete Guide to Cats*, 1999). In pract
 from the front and do not speak to her from the blue side. Whether this particular animal hears
 is not settled by that, only the odds are.
 
+**✓ Almost every cat here has a short, often kinked tail (20.08.).** Not one animal but the
+normal case — about half length, many with a knot at the end.
+<!-- werkstatt: telegram=2026-08-20T00:50 -->
+<!-- ort: tioman -->
+
+**○ The tails are not docked, they grow that way.** An inherited trait, not something done to
+the animal — which is the piece of information you need here, because it is not the first thing
+that comes to mind when you look. Darwin described it in 1868 for the Malay Archipelago, Siam,
+Pegu and Burma: tails about half the usual length, often with a knot at the end. So the trait is
+at least 160 years old. The cause was found in 2016, a point mutation in the *HES7* gene, which
+lays down the vertebrae in the embryo; checked across 245 cats, and it sits in the street cats of
+South-East and East Asia just as it does in the Japanese Bobtail breed (*Scientific Reports*
+6:31583, nature.com/articles/srep31583). The kink is fused tail vertebrae and does the animal no
+harm. It is common here because the cats breed freely, nobody breeds against it, and the trait is
+dominant — one parent is enough. There is a legend as well: a princess is said to have slipped
+her rings onto a cat's tail while bathing, and the cat bent it so nothing would fall off. It
+explains nothing, but people enjoy telling it.
+
 ---
 
 ## Eating
