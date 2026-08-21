@@ -154,6 +154,18 @@ town looks like.
 ![A ginger-and-white cat asleep, stretched out across a tiled floor.](foto:2026-08-17_090000.jpg)
 ![A black-and-white cat walking along the paving at the roadside.](foto:2026-08-17_090002.jpg)
 
+**✓ There is a Tamil temple from 1892 in the middle of town (21 Aug).** The date is on the
+building itself: above the entrance, under the Tamil line, "KUIL SRI SUBRAMANIAR (1892)".
+Anyone who takes Mersing for nothing but a ferry stop is about 130 years out. The tower is
+covered from top to bottom in painted figures, and it does not stand apart — it is right on
+the street among houses, power lines and parked cars, so in the town centre you walk past it
+almost unavoidably. We saw it from the outside; whether and when it is open we did not check.
+<!-- werkstatt: telegram=2026-08-21T11:10 -->
+<!-- ort: mersing -->
+
+![The painted facade of the temple seen from the street, with flags and parked cars beside it.](foto:2026-08-21_111003.jpg)
+![The panel above the entrance: Tamil script and below it "KUIL SRI SUBRAMANIAR (1892)".](foto:2026-08-21_111001.jpg)
+
 **○ Petting them is harmless here — on Borneo it is not, and not in the part most people
 assume.** Peninsular Malaysia, which includes Johor and Mersing, has been officially rabies-free
 since July 2013; the last human case was in 1998. **Sarawak**, by contrast, has had an ongoing

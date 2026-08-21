@@ -154,6 +154,19 @@ malaysische Kleinstadt aussieht.
 ![Eine rot-weiße Katze schläft ausgestreckt auf einem Fliesenboden.](foto:2026-08-17_090000.jpg)
 ![Eine schwarz-weiße Katze läuft über das Kopfsteinpflaster am Straßenrand.](foto:2026-08-17_090002.jpg)
 
+**✓ Mitten im Ort steht ein tamilischer Tempel von 1892 (21.08.).** Die Jahreszahl steht am
+Bau selbst: über dem Eingang, unter der tamilischen Zeile, „KUIL SRI SUBRAMANIAR (1892)".
+Wer Mersing für eine reine Fährstation hält, liegt damit rund 130 Jahre daneben. Der Turm ist
+über und über mit bemalten Figuren besetzt, und er steht nicht abseits, sondern an der Straße
+zwischen Wohnhäusern, Stromleitungen und geparkten Autos — im Ortskern läuft man fast
+zwangsläufig daran vorbei. Wir haben ihn von außen gesehen; ob und wann er offen ist, haben
+wir nicht geprüft.
+<!-- werkstatt: telegram=2026-08-21T11:10 -->
+<!-- ort: mersing -->
+
+![Die bemalte Fassade des Tempels von der Straße aus, daneben Fahnen und geparkte Autos.](foto:2026-08-21_111003.jpg)
+![Die Tafel über dem Eingang: tamilische Schrift und darunter „KUIL SRI SUBRAMANIAR (1892)".](foto:2026-08-21_111001.jpg)
+
 **○ Streicheln ist hier harmlos — auf Borneo ist es das nicht, und zwar genau in dem Teil,
 den die wenigsten dafür halten.** Die malaysische Halbinsel, also auch Johor und Mersing, gilt
 seit Juli 2013 als tollwutfrei; der letzte Fall beim Menschen war 1998. In **Sarawak** dagegen
