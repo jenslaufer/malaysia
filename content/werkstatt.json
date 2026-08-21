@@ -49,6 +49,12 @@
       "veroeffentlicht": "2026-08-17T09:40:10+00:00"
     },
     {
+      "anker": "**✓ RM800 sind es geworden, für vier Personen und drei Insel",
+      "minuten": 8,
+      "telegram": "2026-08-21T10:04:00+00:00",
+      "veroeffentlicht": "2026-08-21T10:11:31+00:00"
+    },
+    {
       "anker": "**✓ Am Spätnachmittag spielt sich der Ort an der Strandprome",
       "minuten": 37,
       "telegram": "2026-08-17T10:21:00+00:00",
@@ -259,10 +265,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 43,
-  "juengste_minuten": 6,
-  "markiert": 43,
+  "gemessen": 44,
+  "juengste_minuten": 8,
+  "markiert": 44,
   "median_minuten": 15,
   "schnellste_minuten": 4,
-  "stand": "2026-08-20"
+  "stand": "2026-08-21"
 }
