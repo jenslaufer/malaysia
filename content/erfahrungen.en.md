@@ -183,6 +183,22 @@ side by side; on the island there is exactly one machine, and an island machine 
 <!-- werkstatt: telegram=2026-08-17T09:36 -->
 <!-- ort: mersing -->
 
+**✓ RM800 was the answer, for four people across three island days (21 Aug).** Our estimate of
+RM800–1,200 was right at its lower end: **RM267 a day for four**, about 169 euros for the whole
+island stay. What matters more than the number is where it applies — on Tioman almost no stall
+and no small restaurant takes a card, it is the most cash-dependent place on this trip. In
+Kuala Lumpur and Kota Kinabalu the card carries most of it. Anyone extrapolating RM267 across
+three weeks will withdraw far too much.
+<!-- werkstatt: telegram=2026-08-21T10:04 -->
+<!-- ort: tioman -->
+
+**○ With a fee-free card, stocking up on cash does not pay.** This is not an experience but the
+conclusion that follows from the two ticks above: if the withdrawal costs nothing, a large
+amount saves nothing — it only ties up cash you then carry through a bus ride and three cities.
+What changes that calculation is not the fee but availability: before an island or a rural
+tour, once too much beats once too little.
+<!-- ort: mersing -->
+
 **○ No fee is not the same as no interest.** On many credit cards a cash withdrawal counts as a
 cash advance and accrues interest from the day it is taken, even when no fee is charged; some
 travel cards waive both, others only the fee. That is written in the card terms, not on the

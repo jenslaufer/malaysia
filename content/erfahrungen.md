@@ -183,6 +183,22 @@ stehen; auf der Insel ist es genau einer, und ein Inselautomat kann leer sein.
 <!-- werkstatt: telegram=2026-08-17T09:36 -->
 <!-- ort: mersing -->
 
+**✓ RM800 sind es geworden, für vier Personen und drei Inseltage (21.08.).** Unsere Schätzung
+von RM800–1.200 hat damit am unteren Ende gestimmt: **RM267 am Tag für vier**, rund 169 Euro
+für den ganzen Inselaufenthalt. Wichtiger als die Zahl ist, wofür sie gilt — auf Tioman nimmt
+fast kein Stand und kein kleines Lokal eine Karte, es ist der Ort dieser Reise mit dem
+höchsten Bargeldanteil. In Kuala Lumpur und Kota Kinabalu trägt die Karte den größten Teil.
+Wer die RM267 auf drei Wochen hochrechnet, hebt deutlich zu viel ab.
+<!-- werkstatt: telegram=2026-08-21T10:04 -->
+<!-- ort: tioman -->
+
+**○ Mit einer gebührenfreien Karte lohnt Abheben auf Vorrat nicht.** Das ist keine Erfahrung,
+sondern die Folgerung aus den beiden Haken darüber: kostet die Abhebung nichts, spart ein
+großer Betrag auch nichts — er bindet nur Bargeld, das man über eine Busfahrt und drei Städte
+trägt. Was die Rechnung kippt, ist nicht die Gebühr, sondern die Verfügbarkeit: vor einer
+Insel oder einer ländlichen Tour lieber einmal zu viel als einmal zu wenig.
+<!-- ort: mersing -->
+
 **○ Gebührenfrei heißt nicht zinsfrei.** Bei vielen Kreditkarten ist eine Bargeldabhebung eine
 Barverfügung und wird ab dem Tag der Abhebung verzinst, auch wenn keine Gebühr anfällt — bei
 manchen Reisekarten ist beides erlassen, bei anderen nur die Gebühr. Das steht in den
