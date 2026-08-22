@@ -43,6 +43,18 @@
       "veroeffentlicht": "2026-08-21T11:16:25+00:00"
     },
     {
+      "anker": "**✓ Der Ortskern ist ein Dorf, kein Städtchen — Holzhäuser a",
+      "minuten": 16,
+      "telegram": "2026-08-22T00:11:00+00:00",
+      "veroeffentlicht": "2026-08-22T00:26:39+00:00"
+    },
+    {
+      "anker": "**✓ „Dorf\" trifft nur die halbe Wahrheit — gewohnt wird in M",
+      "minuten": 895,
+      "telegram": "2026-08-21T11:09:00+00:00",
+      "veroeffentlicht": "2026-08-22T02:04:01+00:00"
+    },
+    {
       "anker": "**✓ Am Geldautomaten der BSN in Mersing kam Geld heraus, mit",
       "minuten": 41,
       "telegram": "2026-08-17T08:59:00+00:00",
@@ -271,10 +283,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 45,
-  "juengste_minuten": 6,
-  "markiert": 45,
+  "gemessen": 47,
+  "juengste_minuten": 16,
+  "markiert": 47,
   "median_minuten": 15,
   "schnellste_minuten": 4,
-  "stand": "2026-08-21"
+  "stand": "2026-08-22"
 }
