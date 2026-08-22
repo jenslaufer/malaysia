@@ -979,7 +979,7 @@ def _fehlschlaege(rumpf: str) -> str:
 def falte_recherche(rumpf: str, ab: int = 2) -> str:
     """Zusammenhaengende `○`-Eintraege in einen aufklappbaren Kasten.
 
-    Die Seite verspricht "was wirklich funktioniert hat" und bestand am
+    Die Seite verspricht "was funktioniert hat und was nicht" und bestand am
     18.08. aus 37 nachgeschlagenen gegen 28 erlebten Eintraegen — die
     Recherche trug die Seite, nicht das Erlebte. Eingeklappt kehrt sich das
     um, ohne dass ein Satz verschwindet: der Text steht im `<details>` und
@@ -1363,7 +1363,7 @@ def _autor_block() -> str:
 """
 
 
-def _og_karte(summe: dict) -> str:
+def _og_karte(summe: dict, titel: str = None) -> str:
     """Die Vorschaukarte als HTML. Ohne Messung ohne Zahl — nie mit einer Null."""
     karte = (WURZEL / "template" / "og.html").read_text(encoding="utf-8")
     if summe.get("gemessen") and summe.get("juengste_minuten") is not None:
@@ -1376,15 +1376,20 @@ def _og_karte(summe: dict) -> str:
     else:
         fuss = _t("Geschrieben unterwegs, gebaut in Deutschland",
                   "Written on the road, built in Germany")
+    # Der Titel kam hier bis zum 22.08. aus einer Suchen-und-Ersetzen-Zeile:
+    # die deutsche Vorlage trug ihn im Klartext, die englische Karte entstand
+    # daraus. Eine geaenderte Ueberschrift traf das Muster nicht mehr und die
+    # Karte blieb still auf dem alten Titel.
+    if titel is None:
+        titel = seiten_titel(KOPIEN[SPRACHE].read_text(encoding="utf-8"))
     if SPRACHE == "en":
-        karte = (karte.replace("Singapur und Malaysia", "Singapore and Malaysia")
-                      .replace("was wirklich funktioniert hat", "what actually worked")
-                      .replace('lang="de"', 'lang="en"'))
+        karte = karte.replace('lang="de"', 'lang="en"')
     # Die Adresse kommt aus BASIS, nicht aus der Vorlage. Sie stand dort als
     # malaysia.jenslaufer.com — eine Subdomain, die nie angelegt wurde. Im HTML
     # war ueberall die richtige Adresse, geteilt wird aber das Bild, und dort
     # findet sie kein grep. Wer sie abtippt, landet nirgends (17.08. gemessen).
     ersatz = {
+        "SEITENTITEL": _titel_fuer_html(titel),
         "ADRESSE": BASIS.split("://", 1)[1].rstrip("/"),
         "UNTERZEILE": _t(
             "Reisenotizen, unterwegs per Telegram geschrieben und von einer "
@@ -1401,7 +1406,7 @@ def _og_karte(summe: dict) -> str:
     return karte
 
 
-def baue_og_bild(summe: dict, ziel: Path = None) -> Path | None:
+def baue_og_bild(summe: dict, titel: str = None, ziel: Path = None) -> Path | None:
     """Rendert die Vorschaukarte (1200x630) mit Chromium.
 
     Ohne Bild ist der geteilte Link in Telegram, WhatsApp und LinkedIn eine graue
@@ -1409,7 +1414,7 @@ def baue_og_bild(summe: dict, ziel: Path = None) -> Path | None:
     """
     ziel = ziel or (WURZEL / ("og.png" if SPRACHE == "de" else "en/og.png"))
     ziel.parent.mkdir(parents=True, exist_ok=True)
-    karte = _og_karte(summe)
+    karte = _og_karte(summe, titel)
     pruefe_privat(karte)
 
     # Snap-Chromium darf weder nach /tmp noch in versteckte Ordner schreiben.
@@ -1451,6 +1456,38 @@ def _inhaltsverzeichnis(rumpf: str) -> str:
     return f'<nav class="toc" aria-label="{_t("Abschnitte", "Sections")}">{links}</nav>'
 
 
+H1 = re.compile(r"^#[ \t]+(.+?)[ \t]*$", flags=re.M)
+
+
+def _titel_fuer_html(titel: str) -> str:
+    """Sicher als Textknoten UND in einem Attribut mit doppelten Anfuehrungszeichen.
+
+    `html.escape(quote=True)` waere zu scharf: es macht aus dem Apostroph in
+    „what didn't" ein `&#x27;`, das im Browser-Reiter und in der WhatsApp-
+    Vorschau als solches dasteht. Gefaehrlich sind hier `&<>` und das doppelte
+    Anfuehrungszeichen, nicht der Apostroph.
+    """
+    return html.escape(titel, quote=False).replace('"', "&quot;")
+
+
+def seiten_titel(md: str) -> str:
+    """Der Seitentitel ist die erste Ueberschrift des Quelldokuments — nur die.
+
+    Bis zum 22.08. stand er zusaetzlich im `<title>`, im `og:title`, auf der
+    Vorschaukarte und im Feed, je Sprache: zehn Stellen fuer zwei Titel, neun
+    davon Kopien. Wer die Ueberschrift aendert, aendert dann die Seite und
+    laesst Browser-Reiter, WhatsApp-Vorschau und Feed auf dem alten Stand
+    stehen — sichtbar genau beim Weitergeben, dem einzigen Zweck der Seite.
+
+    Kein Ersatztitel bei fehlender Ueberschrift: eine Seite, die still
+    „Titel" heisst, faellt erst auf, wenn jemand den Link teilt.
+    """
+    treffer = H1.search(md)
+    if not treffer:
+        raise ValueError("Quelldokument ohne Ueberschrift erster Ordnung")
+    return treffer.group(1).strip()
+
+
 def baue_seite(md: str) -> str:
     pruefe_privat(strip_kommentare(md))
     rumpf = render_markdown(md)
@@ -1472,6 +1509,7 @@ def baue_seite(md: str) -> str:
         .replace("{{TOC}}", _inhaltsverzeichnis(rumpf))
         .replace("{{STAND}}", stand)
         .replace("{{BASIS}}", BASIS)
+        .replace("{{SEITENTITEL}}", _titel_fuer_html(seiten_titel(md)))
     )
     pruefe_privat(seite)
     pruefe_extern(seite)
@@ -1666,10 +1704,7 @@ def baue_feed(md: str) -> str | None:
     ET.register_namespace("", ATOM)
     feed = ET.Element(f"{{{ATOM}}}feed")
     feed.set("{http://www.w3.org/XML/1998/namespace}lang", SPRACHE)
-    ET.SubElement(feed, f"{{{ATOM}}}title").text = _t(
-        "Singapur und Malaysia — was wirklich funktioniert hat",
-        "Singapore and Malaysia — what actually worked",
-    )
+    ET.SubElement(feed, f"{{{ATOM}}}title").text = seiten_titel(md)
     ET.SubElement(feed, f"{{{ATOM}}}subtitle").text = _t(
         # Echte Umlaute: dieser Satz steht in jedem Leseprogramm sichtbar da.
         # Die ASCII-Schreibweise ist ein Reflex aus dem Quelltext und war am
@@ -1843,9 +1878,18 @@ def main() -> int:
         pfad.write_text(html, encoding="utf-8")
         print(f"gebaut: {pfad} ({pfad.stat().st_size:,} Bytes)")
 
-        # Der Feed wird NACH der Seite geschrieben und nur, wenn es etwas zu
-        # melden gibt. Ohne Messung bleibt die alte Datei stehen: ein leerer
-        # Feed sieht bei jedem Leser aus wie eine ruhige Woche.
+    # Der Feed wird NACH der Seite geschrieben und nur, wenn es etwas zu
+    # melden gibt. Ohne Messung bleibt die alte Datei stehen: ein leerer
+    # Feed sieht bei jedem Leser aus wie eine ruhige Woche.
+    #
+    # Eigene Schleife, seit dem 22.08.: der Block hing eine Ebene tiefer in
+    # der Schleife ueber die Rechtsseiten und lief deshalb viermal statt
+    # zweimal — sichtbar nur als doppelte Zeile in der Bauausgabe, weil
+    # zweimal dieselben Bytes geschrieben wurden. Der Preis waere erst beim
+    # naechsten Umbau faellig geworden: haengt der Feed an RECHTSARTEN, wird
+    # er gar nicht mehr geschrieben, sobald dort etwas anderes steht — und
+    # eine nicht geschriebene Datei bleibt als alte Datei erreichbar.
+    for sprache in SPRACHEN:
         SPRACHE = sprache
         xml = baue_feed(quellen[sprache])
         feed_datei = FEED_DATEIEN[sprache]

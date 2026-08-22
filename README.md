@@ -32,7 +32,7 @@ oder gelöscht** — es wurde nur sortiert, und das an drei Stellen:
 |---|---|---|
 | `#zuletzt` (`_zuletzt`) | die 5 jüngsten **✓** mit Bild, Datum, Sprungmarke | die frischen Einträge liegen in ihrem Themenabschnitt; wer nach zwei Tagen wiederkommt, findet nicht, was neu ist |
 | `#fehlschlaege` (`_fehlschlaege`) | **alle ✗**, ungedeckelt | 2 gegen 69: wer überfliegt, sieht lauter Haken und keinen Reinfall — das liest sich glatter, als es war |
-| `<details>` (`falte_recherche`) | ≥2 aufeinanderfolgende **○** in einem Kasten | die Seite verspricht „was wirklich funktioniert hat" und bestand mehrheitlich aus Vorher-Gelesenem |
+| `<details>` (`falte_recherche`) | ≥2 aufeinanderfolgende **○** in einem Kasten | die Seite verspricht „was funktioniert hat und was nicht" und bestand mehrheitlich aus Vorher-Gelesenem |
 | `.stationen` (`_karte`) | je Station die **✓**, die dort passiert sind | die Karte zeichnete nur die Route; über den Ort führte kein Weg in den Text |
 
 Sprungmarken: **✓** hängt am Telegram-Zeitstempel (siehe unten), **✗** am

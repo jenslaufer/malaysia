@@ -1631,7 +1631,7 @@ class TestZuletzt(unittest.TestCase):
 class TestRechercheFaltung(unittest.TestCase):
     """Umbau 3 (Jens 2026-08-18 09:44).
 
-    37 ○ gegen 28 ✓: die Seite verspricht „was wirklich funktioniert hat" und
+    37 ○ gegen 28 ✓: die Seite verspricht „was funktioniert hat und was nicht" und
     besteht mehrheitlich aus Vorher-Gelesenem. Eingeklappt traegt das Erlebte
     die Seite — der Text bleibt, er ist einen Klick entfernt.
     """
@@ -1713,7 +1713,7 @@ class TestRechercheFaltung(unittest.TestCase):
 class TestFehlschlaege(unittest.TestCase):
     """Umbau 2 (Jens 2026-08-18 09:44): „Sollten wir den Reiseblog nicht spannender gestalten?"
 
-    Die Seite verspricht „was wirklich funktioniert hat" und traegt am 18.08.
+    Die Seite verspricht „was funktioniert hat und was nicht" und traegt am 18.08.
     genau **2 ✗** gegen 29 ✓ und 40 ○ — beide in ihrem Themenabschnitt vergraben.
     Das ist der Teil, den kein Reisefuehrer schreibt, und der einzige, der die
     anderen Haken glaubwuerdig macht. Deshalb steht er oben, nicht weil er
@@ -1980,6 +1980,108 @@ class TestKeinFlugAufDieInsel(unittest.TestCase):
                 self.assertIn("992", seite)
                 self.assertIn("2025", seite)
                 self.assertIn("SKS Airways", seite)
+
+
+class TestEinTitelFuerAlleFlaechen(unittest.TestCase):
+    """Der Titel stand sechsmal im Repo — geaendert wird er an einer Stelle.
+
+    Gefunden am 22.08., als Jens „Wir brauchen eine bessere Headline" schrieb.
+    Die Ueberschrift lebte im Quelldokument, im `<title>`, im `og:title`, auf
+    der Vorschaukarte und im Feed — je Sprache, also zehn Stellen fuer zwei
+    Titel. Neun davon sind Kopien, die niemand mitzieht: wer die Ueberschrift
+    im Quelldokument aendert, bekommt eine Seite mit dem neuen Titel, einen
+    Browser-Reiter mit dem alten, eine WhatsApp-Vorschau mit dem alten und
+    einen Feed mit dem alten.
+
+    Sichtbar wird das genau beim Weitergeben, und das ist der einzige Zweck
+    der Seite. Dieselbe Bauform hat die Adresse auf der Vorschaukarte schon
+    einmal erwischt (17.08.): jede Pruefung ueber HTML war gruen, geteilt wird
+    aber das Bild.
+    """
+
+    MD = "# Testtitel Alpha\n\nVorspann.\n\n## Erstes\n\n**✓ Etwas (17.08.).** Text.\n"
+
+    def test_seitentitel_kommt_aus_der_ueberschrift(self):
+        self.assertEqual("Testtitel Alpha", build.seiten_titel(self.MD))
+
+    def test_quelle_ohne_ueberschrift_bricht_ab(self):
+        # Kein stiller Ersatztitel: eine Seite, die „Titel" heisst, faellt
+        # niemandem auf, bis sie geteilt wird.
+        with self.assertRaises(ValueError):
+            build.seiten_titel("Nur Text, keine Ueberschrift.\n")
+
+    def test_browserreiter_folgt_der_quelle(self):
+        self.assertIn("<title>Testtitel Alpha</title>", build.baue_seite(self.MD))
+
+    def test_vorschau_folgt_der_quelle(self):
+        self.assertIn('property="og:title" content="Testtitel Alpha"',
+                      build.baue_seite(self.MD))
+
+    def test_ueberschrift_im_text_folgt_der_quelle(self):
+        self.assertIn("<h1>Testtitel Alpha</h1>", build.baue_seite(self.MD))
+
+    def test_vorschaukarte_folgt_der_quelle(self):
+        self.assertIn("Testtitel Alpha", build._og_karte({}, "Testtitel Alpha"))
+
+    def test_feed_folgt_der_quelle(self):
+        md = ("# Testtitel Alpha\n\n## Bezahlen\n\n"
+              "**✓ Im Bus geht kontaktlos.** Ohne Vorbereitung.\n"
+              "<!-- werkstatt: telegram=2026-08-17T04:41 -->\n")
+        alt_w, build.WERKSTATT = build.WERKSTATT, {
+            "2026-08-17T04:41:00+00:00": {
+                "telegram": "2026-08-17T04:41:00+00:00",
+                "veroeffentlicht": "2026-08-17T05:46:51+00:00",
+                "minuten": 66,
+            }
+        }
+        try:
+            xml = build.baue_feed(md)
+        finally:
+            build.WERKSTATT = alt_w
+        wurzel = ET.fromstring(xml)
+        self.assertEqual("Testtitel Alpha",
+                         wurzel.find("{http://www.w3.org/2005/Atom}title").text)
+
+    def test_kein_titel_liegt_hartkodiert_neben_der_quelle(self):
+        """Die eigentliche Sperre — sonst wandert der naechste Titel zurueck.
+
+        Die Tests darueber pruefen, dass die Kopien der Quelle folgen. Sie
+        bleiben aber gruen, wenn jemand den echten Titel zusaetzlich in eine
+        Vorlage schreibt: solange beide gleich lauten, faellt nichts auf. Also
+        wird hier gezaehlt, wo der ausgelieferte Titel ueberhaupt stehen darf.
+        """
+        titel = {s: build.seiten_titel(build.KOPIEN[s].read_text(encoding="utf-8"))
+                 for s in build.SPRACHEN}
+        dateien = [build.WURZEL / "build.py"]
+        dateien += sorted((build.WURZEL / "template").glob("*.html"))
+        for datei in dateien:
+            inhalt = datei.read_text(encoding="utf-8")
+            for sprache, wert in titel.items():
+                with self.subTest(datei=datei.name, sprache=sprache):
+                    self.assertNotIn(
+                        wert, inhalt,
+                        f"{datei.name} traegt den Titel ({sprache}) als Kopie. "
+                        f"Er gehoert nur in {build.QUELLEN[sprache].name}.")
+
+    def test_ausgelieferte_flaechen_tragen_denselben_titel(self):
+        """Gegen die Dateien, die wirklich im Netz stehen, nicht gegen den Renderer.
+
+        Ein Build, der die Seite neu schreibt und den Feed auslaesst, faellt
+        sonst durch jede Pruefung: beide Wege sind fuer sich gruen.
+        """
+        for sprache in build.SPRACHEN:
+            titel = build.seiten_titel(build.KOPIEN[sprache].read_text(encoding="utf-8"))
+            seite = build.ZIELE[sprache].read_text(encoding="utf-8")
+            with self.subTest(sprache=sprache):
+                self.assertIn(f"<title>{titel}</title>", seite)
+                self.assertIn(f'property="og:title" content="{titel}"', seite)
+                self.assertIn(f"<h1>{titel}</h1>", seite)
+                feed = build.FEED_DATEIEN[sprache]
+                if feed.exists():
+                    wurzel = ET.fromstring(feed.read_text(encoding="utf-8"))
+                    self.assertEqual(
+                        titel,
+                        wurzel.find("{http://www.w3.org/2005/Atom}title").text)
 
 
 if __name__ == "__main__":

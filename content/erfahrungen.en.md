@@ -1,4 +1,4 @@
-# Singapore and Malaysia — what actually worked
+# Singapore and Malaysia — what worked and what didn’t
 
 On Monday, just after noon, the four of us stood on the Malaysian side of the border with
 three weeks of luggage, looking for the way to Larkin bus station. Five kilometres, with
