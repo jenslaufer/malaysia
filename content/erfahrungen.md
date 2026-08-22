@@ -853,6 +853,52 @@ nicht den Reisenden, sondern den, der hier wohnt.
 
 ---
 
+## Von Mersing nach Kuala Lumpur
+
+**✓ Auf dem Bus steht ein zweiter Firmenname, und der ist thailändisch (22.08.).** Gebucht ist
+Sanwa Express, und „Sanwa" steht auch groß auf der roten Flanke. Darüber, klein und in
+thailändischer Schrift: ซี.ไอ.เอ็น.ทัวร์ หาดใหญ่ — „C.I.N. Tour, Hat Yai" — dazu eine
+thailändische Mobilnummer. An einem malaysischen Fernbus kann also mehr als ein Name stehen.
+Wer seinen Wagen sucht, geht besser nach dem Ziel an der Frontscheibe und nach der Bordkarte
+als nach dem Schriftzug auf der Seite.
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![Ein roter Reisebus mit dem Schriftzug „Sanwa" tankt an einer Tankstelle, darüber in thailändischer Schrift der Name eines Betreibers aus Hat Yai; die Gepäckklappe steht offen.](foto:2026-08-22_060737.jpg)
+
+**✓ Die Pause ist eine gewöhnliche Tankstelle an der Landstraße (22.08.).** Kein Rasthof mit
+Food Court und Ständen: ein weißes Vordach über den Zapfsäulen, ein Laden an der Seite,
+ringsum Beton, und dahinter fangen sofort Ölpalmen und Wald an. Der Bus tankt in der Pause
+selbst, die Gepäckklappe steht dabei offen. Wer aussteigt, hat den Vorplatz und den Laden —
+mehr ist an dieser Stelle nicht.
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![Der Vorplatz einer Tankstelle unter einem weißen Vordach, dahinter Wald und Ölpalmen, rechts eine orangefarbene Absperrung mit der Aufschrift „No Parking".](foto:2026-08-22_060732.jpg)
+
+**✓ Die Strecke führt zuerst die Küstenstraße nach Norden (22.08.).** Am Straßenrand steht ein
+Wegweiser: nach links „Kuantan / Segamat", nach rechts „T. Gemok / K. Rompin", darunter auf
+Grün Feuerwehr, Moschee und Krankenhaus. Tanjung Gemok und Kuala Rompin liegen beide nördlich
+von Mersing — der Bus nach Kuala Lumpur fährt also nicht auf direktem Weg landeinwärts,
+sondern erst an der Küste hinauf. Für alle, deren Fährticket auf Tanjung Gemok lautet und
+nicht auf Mersing, ist das die praktische Auskunft: Die Abzweigung dorthin liegt an dieser
+Strecke. (Vom Bild abgelesen, nicht von uns berichtet.)
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![Ein blauer Wegweiser am Straßenrand: nach links Kuantan und Segamat, nach rechts T. Gemok und K. Rompin, darunter ein grünes Schild zu Feuerwehr, Moschee und Krankenhaus.](foto:2026-08-22_060746.jpg)
+
+**✓ Neun Tage vor Merdeka hängen die Flaggen auch an den Booten (22.08.).** An einem
+Flusshafen unterwegs liegen Fischerboote und Schnellboote dicht nebeneinander, und über die
+ganze Länge der Aufbauten sind Leinen mit malaysischen Flaggen gespannt, Dutzende auf jedem
+Boot. Am Ufer stehen weiße Zelte, davor stecken junge Mangroven im Schlick. Auf dem Steuerhaus
+eines blau-gelben Fischerboots hängt eine große Flagge flach an der Wand. Dasselbe Bild wie an
+den Zäunen in Johor und an den Masten der Strandpromenade von Mersing, nur eben auf dem
+Wasser. Wo genau das war, steht hier nicht — Jens hat die Bilder ohne Ortsangabe geschickt.
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![Ein Flusshafen mit Mangroven am Ufer: ein blau-gelbes Fischerboot mit malaysischer Flagge am Steuerhaus, dahinter Reihen weiterer Boote, über und über mit Flaggen geschmückt.](foto:2026-08-22_060741.jpg)
+![Dieselbe Szene durch die Blätter eines Baumes am Ufer, im Vordergrund Schlick mit jungen Mangroven.](foto:2026-08-22_060744.jpg)
+
+---
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein

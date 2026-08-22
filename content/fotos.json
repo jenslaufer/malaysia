@@ -445,5 +445,50 @@
   },
   "2026-08-21_111003.jpg": {
     "name": "mersing-sri-subramaniar-fassade"
+  },
+  "2026-08-22_060737.jpg": {
+    "name": "bus-sanwa-tankstelle"
+  },
+  "2026-08-22_060732.jpg": {
+    "name": "tankstelle-vorplatz",
+    "_blur": "drei Kfz-Kennzeichen Fremder (Limousine an der Saeule, Wagen links am Rand, SUV dahinter)",
+    "blur": [
+      [
+        0.512,
+        0.622,
+        0.038,
+        0.032
+      ],
+      [
+        0.0,
+        0.852,
+        0.022,
+        0.036
+      ],
+      [
+        0.598,
+        0.542,
+        0.032,
+        0.03
+      ]
+    ]
+  },
+  "2026-08-22_060746.jpg": {
+    "name": "wegweiser-kuantan-rompin"
+  },
+  "2026-08-22_060741.jpg": {
+    "name": "boote-flaggen-merdeka",
+    "_blur": "Registriernummer eines fremden Fischerboots",
+    "blur": [
+      [
+        0.434,
+        0.527,
+        0.034,
+        0.024
+      ]
+    ]
+  },
+  "2026-08-22_060744.jpg": {
+    "name": "boote-flaggen-durch-blaetter"
   }
 }

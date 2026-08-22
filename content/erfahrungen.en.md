@@ -834,6 +834,50 @@ people on the island complain about lands on the residents, not on the visitor.
 
 ---
 
+## From Mersing to Kuala Lumpur
+
+**✓ The coach carries a second company name, and it is Thai (22 Aug).** The booking says Sanwa
+Express, and "Sanwa" is written large on the red flank. Above it, small and in Thai script:
+ซี.ไอ.เอ็น.ทัวร์ หาดใหญ่ — "C.I.N. Tour, Hat Yai" — plus a Thai mobile number. So a Malaysian
+long-distance coach can carry more than one name. When you are looking for your bus, go by the
+destination in the windscreen and by the boarding pass, not by the lettering on the side.
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![A red coach lettered "Sanwa" refuelling at a petrol station, above it in Thai script the name of an operator from Hat Yai; the luggage hold stands open.](foto:2026-08-22_060737.jpg)
+
+**✓ The break is at an ordinary roadside petrol station (22 Aug).** No service area with a food
+court and rows of stalls: a white canopy over the pumps, a shop at the side, concrete all
+round, and oil palms and forest starting immediately behind it. The coach refuels during the
+break, luggage hold open. If you get off, you have the forecourt and the shop — there is nothing
+else at this stop.
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![The forecourt of a petrol station under a white canopy, forest and oil palms behind it, on the right an orange barrier reading "No Parking".](foto:2026-08-22_060732.jpg)
+
+**✓ The route runs up the coast road to the north first (22 Aug).** A signpost at the roadside:
+left for "Kuantan / Segamat", right for "T. Gemok / K. Rompin", and below on green the fire
+station, mosque and hospital. Tanjung Gemok and Kuala Rompin both lie north of Mersing — so the
+coach to Kuala Lumpur does not head straight inland, it runs up the coast first. For anyone
+whose ferry ticket says Tanjung Gemok rather than Mersing, that is the practical part: the
+turn-off is on this route. (Read off the picture, not reported by us.)
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![A blue signpost at the roadside: left for Kuantan and Segamat, right for T. Gemok and K. Rompin, below it a green sign for the fire station, mosque and hospital.](foto:2026-08-22_060746.jpg)
+
+**✓ Nine days before Merdeka the flags are on the boats as well (22 Aug).** At a river harbour
+along the way, fishing boats and speedboats lie side by side, and lines of Malaysian flags are
+strung the whole length of the superstructures, dozens on every boat. White tents stand on the
+bank, and young mangroves grow out of the mud in front of them. A large flag hangs flat on the
+wheelhouse of a blue and yellow fishing boat. The same sight as on the fences in Johor and on
+the masts along the Mersing seafront, only on the water. Where exactly this was is not recorded
+here — Jens sent the pictures without naming the place.
+<!-- werkstatt: telegram=2026-08-22T06:07 -->
+
+![A river harbour with mangroves along the bank: a blue and yellow fishing boat with a Malaysian flag on the wheelhouse, behind it rows of further boats covered in flags.](foto:2026-08-22_060741.jpg)
+![The same scene through the leaves of a tree on the bank, mud and young mangroves in the foreground.](foto:2026-08-22_060744.jpg)
+
+---
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for

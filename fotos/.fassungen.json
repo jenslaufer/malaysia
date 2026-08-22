@@ -4,6 +4,9 @@
  "2026-08-22_001122": "f0e409480c57802ba389b3b9c99db44b8fa6134bb4d0e13b344964adcce2f073",
  "2026-08-22_001126": "7f5290df8c543ab99b8ddf841f47f7af1ca40fe40d1a2243d544cafc164d7d6d",
  "2026-08-22_001136": "4b0c4059a7f3362a25b5c9704751c1e77e4edf2cfe138888ab600e73707629b6",
+ "boote-flaggen-durch-blaetter": "252e1046c586dfa21985ef1970c88d14a3a32b86d70595bd037d61fe71f84e16",
+ "boote-flaggen-merdeka": "0079391826192e81172e18354affcd988c35a9403f6c166b8e1a488ddb555b4b",
+ "bus-sanwa-tankstelle": "ea368d4359dbc60151cbd0abb35e7e2f41b3f4cd13b10daef1c95d0f94b7fb93",
  "cataferry-kabine-sicherheitsvideo": "0e2c5b2aa0f4e1a03a88e7a30757ef6bd4611d0b0fee02966ede3e663de7cec8",
  "fernbus-kameras-beschwerdenummer": "1261964e2d7a440bbcd60d0f3c92d3495940950e9d7a9fbc625dd3b9b51e5c2a",
  "garden-rhapsody-menge": "8c8fc2155830e987285fead8688458c7bb963fce37c809519df752ba66a2546e",
@@ -22,6 +25,7 @@
  "mersing-sri-subramaniar-fassade": "c441d10ed73237ad37fd942d02db8d08de668de41c98a4f263223c2a13e15703",
  "mersing-sri-subramaniar-schild": "85f5f21a62160f4ef16302ceb6fe7bf4393ff8da278210382b7da0423115671f",
  "mersing-strandpromenade": "9dc3c56b3330171f8caa6e94a1e41d4a9c9a66d8550647845aa027a43f784f36",
+ "tankstelle-vorplatz": "4b51d290fcb3886adf67830d365d83701fe75f673aad398b8243c05be1f72356",
  "tioman-benzin-in-flaschen": "e068feeec311eabc850614b56d9bbc67aec3dba46cd8bad55c0488b6b135db5d",
  "tioman-bucht-steinschuettung": "7dd144daa65e5b5ebf47451c9ce515b22e7efc7305e55beae751c3a958e218b6",
  "tioman-bucht-strand": "d45dd98b66cd9c58fe49ef4771819ddf2a69ce5b911b6ed3f8ec81e0204102ab",
@@ -51,5 +55,6 @@
  "tioman-regenwald-hinter-dem-dorf": "4a1c7ae5a2c5b99a34a7f4f256b047ed01c5c0095666e4058bbdb6d5be6e70bd",
  "tioman-strandchalets": "14a54432b17d41d46a90cb6786bba4db73cefc1d0f7f36b271690362a86843b4",
  "tioman-uebersichtstafel-tekek": "77c5ba8103ba09a0e22ab50df1bacc7bbbb592a2792670aaf2c14205b579bda3",
- "tioman-zollfrei-cognac": "d3308f61333c6cfaca1dbd2f7d9485b23f249df5e0df11583b3251697148694c"
+ "tioman-zollfrei-cognac": "d3308f61333c6cfaca1dbd2f7d9485b23f249df5e0df11583b3251697148694c",
+ "wegweiser-kuantan-rompin": "08ad06a24d66a377339a59493b01c833bd9ab21773ca8b44b5b2539413c2f408"
 }
