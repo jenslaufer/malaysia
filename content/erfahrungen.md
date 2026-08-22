@@ -183,6 +183,21 @@ deshalb nicht.
 ![Eine hellblaue Holzkate mit rotem Ziegeldach und vergitterter Veranda an einer Kreuzung.](foto:2026-08-22_001126.jpg)
 ![Dichter Bewuchs direkt hinter dem Straßenrand, davor eine Rasenfläche und ein Strommast.](foto:2026-08-22_001136.jpg)
 
+**✓ „Dorf" trifft nur die halbe Wahrheit — gewohnt wird in Mersing auch in zweigeschossigen
+Wohnblöcken mit Spielplatz davor (21.08.).** Ein paar Straßen weiter stehen zwei baugleiche
+Wohnhäuser, cremefarben mit rotem Blechdach, Wäsche und Topfpflanzen auf den offenen
+Laubengängen, Autos darunter geparkt. Davor: gemähter Rasen, ein Betonkanal als Entwässerung,
+Zaun, Straßenlaternen — und an der nächsten Ecke ein Spielplatz mit gelb-blauen Geräten an
+einer asphaltierten Wohnstraße. Das ist keine gewachsene Kampung-Streusiedlung, sondern eine
+geplante und gepflegte Wohnsiedlung. Wer nur die Stelzenhäuser sieht, unterschätzt den Ort:
+Mersing hat beides nebeneinander, und der Wohnteil ist der größere. Auch diese Bilder kamen
+ohne Text.
+<!-- werkstatt: telegram=2026-08-21T11:09 -->
+<!-- ort: mersing -->
+
+![Zwei baugleiche zweigeschossige Wohnblöcke mit rotem Blechdach, Wäsche auf den Laubengängen, davor Zaun und gemähter Rasen.](foto:2026-08-21_110958.jpg)
+![Eine asphaltierte Wohnstraße in der Dämmerung, links ein Spielplatz hinter einem Zaun, rechts Reihenhäuser, zwei Menschen gehen die Straße entlang.](foto:2026-08-21_110953.jpg)
+
 **○ Streicheln ist hier harmlos — auf Borneo ist es das nicht, und zwar genau in dem Teil,
 den die wenigsten dafür halten.** Die malaysische Halbinsel, also auch Johor und Mersing, gilt
 seit Juli 2013 als tollwutfrei; der letzte Fall beim Menschen war 1998. In **Sarawak** dagegen

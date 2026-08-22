@@ -181,6 +181,21 @@ line of text, so what he did there is not recorded here.
 ![A pale blue timber cottage with a red tiled roof and a grilled veranda at a junction.](foto:2026-08-22_001126.jpg)
 ![Dense growth right behind the kerb, a strip of grass and a power pole in front.](foto:2026-08-22_001136.jpg)
 
+**✓ "Village" is only half of it — people in Mersing also live in two-storey blocks of flats
+with a playground out front (21 Aug).** A few streets on stand two identical residential
+blocks, cream walls under red metal roofs, washing and potted plants along the open access
+balconies, cars parked underneath. In front of them: mown grass, a concrete storm drain, a
+fence, street lights — and round the next corner a playground with yellow and blue equipment
+on a surfaced residential street. This is not a kampung that grew on its own, it is a planned
+and maintained housing estate. Judging the place by the stilt houses alone sells it short:
+Mersing has both side by side, and the residential part is the larger one. These pictures came
+without any text either.
+<!-- werkstatt: telegram=2026-08-21T11:09 -->
+<!-- ort: mersing -->
+
+![Two identical two-storey blocks of flats with red metal roofs, washing along the access balconies, a fence and mown grass in front.](foto:2026-08-21_110958.jpg)
+![A surfaced residential street at dusk, a fenced playground on the left, terraced houses on the right, two people walking along the road.](foto:2026-08-21_110953.jpg)
+
 **○ Petting them is harmless here — on Borneo it is not, and not in the part most people
 assume.** Peninsular Malaysia, which includes Johor and Mersing, has been officially rabies-free
 since July 2013; the last human case was in 1998. **Sarawak**, by contrast, has had an ongoing
