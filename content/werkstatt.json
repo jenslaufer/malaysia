@@ -277,6 +277,36 @@
       "veroeffentlicht": "2026-08-22T06:21:14+00:00"
     },
     {
+      "anker": "**✓ Ins Zentrum geht es über eine Hochstraße, und der erste ",
+      "minuten": 9,
+      "telegram": "2026-08-22T11:52:00+00:00",
+      "veroeffentlicht": "2026-08-22T12:01:13+00:00"
+    },
+    {
+      "anker": "**✓ Aus dem Fenster sieht man den Fernsehturm, nicht die Pet",
+      "minuten": 9,
+      "telegram": "2026-08-22T11:52:00+00:00",
+      "veroeffentlicht": "2026-08-22T12:01:13+00:00"
+    },
+    {
+      "anker": "**✓ Die Flagge hängt hier über die halbe Fassade (22.08.).**",
+      "minuten": 9,
+      "telegram": "2026-08-22T11:52:00+00:00",
+      "veroeffentlicht": "2026-08-22T12:01:13+00:00"
+    },
+    {
+      "anker": "**✓ Die Petronas Towers stehen an einer ganz normalen Straße",
+      "minuten": 9,
+      "telegram": "2026-08-22T11:52:00+00:00",
+      "veroeffentlicht": "2026-08-22T12:01:13+00:00"
+    },
+    {
+      "anker": "**✓ Abends stehen die Türme hinter den Flaggen am Saloma (22",
+      "minuten": 9,
+      "telegram": "2026-08-22T11:52:00+00:00",
+      "veroeffentlicht": "2026-08-22T12:01:13+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -307,9 +337,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 51,
-  "juengste_minuten": 14,
-  "markiert": 51,
+  "gemessen": 56,
+  "juengste_minuten": 9,
+  "markiert": 56,
   "median_minuten": 14,
   "schnellste_minuten": 4,
   "stand": "2026-08-22"
