@@ -37,6 +37,12 @@
       "veroeffentlicht": "2026-08-17T09:19:42+00:00"
     },
     {
+      "anker": "**✓ Mitten im Ort steht ein tamilischer Tempel von 1892 (21.",
+      "minuten": 6,
+      "telegram": "2026-08-21T11:10:00+00:00",
+      "veroeffentlicht": "2026-08-21T11:16:25+00:00"
+    },
+    {
       "anker": "**✓ Am Geldautomaten der BSN in Mersing kam Geld heraus, mit",
       "minuten": 41,
       "telegram": "2026-08-17T08:59:00+00:00",
@@ -265,9 +271,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 44,
-  "juengste_minuten": 8,
-  "markiert": 44,
+  "gemessen": 45,
+  "juengste_minuten": 6,
+  "markiert": 45,
   "median_minuten": 15,
   "schnellste_minuten": 4,
   "stand": "2026-08-21"

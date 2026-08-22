@@ -166,6 +166,21 @@ almost unavoidably. We saw it from the outside; whether and when it is open we d
 ![The painted facade of the temple seen from the street, with flags and parked cars beside it.](foto:2026-08-21_111003.jpg)
 ![The panel above the entrance: Tamil script and below it "KUIL SRI SUBRAMANIAR (1892)".](foto:2026-08-21_111001.jpg)
 
+**✓ The town centre is a village, not a small town — timber houses on stilts, and the jungle
+starts at the kerb (22 Aug).** Walking through Mersing early in the morning: a grey timber
+house up on posts behind coconut palms, next to it a pale blue cottage with a red tiled roof
+and a grilled veranda, both lived in and in use rather than done up. Between the plots sits
+waste ground with high grass, and where the road ends the dense growth begins with nothing in
+between — trees, creepers, no fence. If you book Mersing as a stopover, know that you are
+sleeping in a village, not in a small town with a centre. Jens sent the pictures without a
+line of text, so what he did there is not recorded here.
+<!-- werkstatt: telegram=2026-08-22T00:11 -->
+<!-- ort: mersing -->
+
+![A grey timber house on stilts behind two coconut palms, the road in front.](foto:2026-08-22_001122.jpg)
+![A pale blue timber cottage with a red tiled roof and a grilled veranda at a junction.](foto:2026-08-22_001126.jpg)
+![Dense growth right behind the kerb, a strip of grass and a power pole in front.](foto:2026-08-22_001136.jpg)
+
 **○ Petting them is harmless here — on Borneo it is not, and not in the part most people
 assume.** Peninsular Malaysia, which includes Johor and Mersing, has been officially rabies-free
 since July 2013; the last human case was in 1998. **Sarawak**, by contrast, has had an ongoing

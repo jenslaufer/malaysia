@@ -167,6 +167,22 @@ wir nicht geprüft.
 ![Die bemalte Fassade des Tempels von der Straße aus, daneben Fahnen und geparkte Autos.](foto:2026-08-21_111003.jpg)
 ![Die Tafel über dem Eingang: tamilische Schrift und darunter „KUIL SRI SUBRAMANIAR (1892)".](foto:2026-08-21_111001.jpg)
 
+**✓ Der Ortskern ist ein Dorf, kein Städtchen — Holzhäuser auf Stelzen, und der Dschungel
+steht am Straßenrand (22.08.).** Auf dem Weg durch Mersing am frühen Morgen: ein graues
+Holzhaus auf Pfeilern hinter Kokospalmen, daneben eine hellblaue Kate mit rotem Ziegeldach und
+vergitterter Veranda, beides bewohnt und in Gebrauch, nicht hergerichtet. Zwischen den
+Grundstücken liegt Brachland mit hohem Gras, und wo die Straße aufhört, fängt ohne Übergang
+dichter Bewuchs an — Bäume, Lianen, kein Zaun dazwischen. Wer Mersing als Zwischenstopp bucht,
+sollte wissen, dass er in einem Dorf übernachtet und nicht in einer Kleinstadt mit Zentrum.
+Jens hat die Bilder ohne einen Satz dazu geschickt; was er dort gemacht hat, steht hier
+deshalb nicht.
+<!-- werkstatt: telegram=2026-08-22T00:11 -->
+<!-- ort: mersing -->
+
+![Ein graues Holzhaus auf Stelzen hinter zwei Kokospalmen, davor die Straße.](foto:2026-08-22_001122.jpg)
+![Eine hellblaue Holzkate mit rotem Ziegeldach und vergitterter Veranda an einer Kreuzung.](foto:2026-08-22_001126.jpg)
+![Dichter Bewuchs direkt hinter dem Straßenrand, davor eine Rasenfläche und ein Strommast.](foto:2026-08-22_001136.jpg)
+
 **○ Streicheln ist hier harmlos — auf Borneo ist es das nicht, und zwar genau in dem Teil,
 den die wenigsten dafür halten.** Die malaysische Halbinsel, also auch Johor und Mersing, gilt
 seit Juli 2013 als tollwutfrei; der letzte Fall beim Menschen war 1998. In **Sarawak** dagegen
