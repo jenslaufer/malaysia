@@ -897,6 +897,64 @@ Wasser. Wo genau das war, steht hier nicht — Jens hat die Bilder ohne Ortsanga
 ![Ein Flusshafen mit Mangroven am Ufer: ein blau-gelbes Fischerboot mit malaysischer Flagge am Steuerhaus, dahinter Reihen weiterer Boote, über und über mit Flaggen geschmückt.](foto:2026-08-22_060741.jpg)
 ![Dieselbe Szene durch die Blätter eines Baumes am Ufer, im Vordergrund Schlick mit jungen Mangroven.](foto:2026-08-22_060744.jpg)
 
+## In Kuala Lumpur
+
+**✓ Ins Zentrum geht es über eine Hochstraße, und der erste Turm ist nicht der, den man erwartet
+(22.08.).** Die letzte Etappe läuft auf einer Betontrasse über die Dächer: rechts die leere
+Fahrbahn mit Leitplanke, links eine Wand aus Wohntürmen, dazwischen Rohbauten, grüne Netze und
+Kräne. Ganz hinten im Dunst steht eine schmale Nadel — Merdeka 118. Die Petronas Towers sieht man
+von dieser Seite gar nicht. (Aus dem Auto fotografiert, unten rechts steht der Seitenspiegel im
+Bild.)
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![Blick aus einem fahrenden Auto auf eine Betonhochstraße; links dahinter Wohnhochhäuser und Rohbauten mit Kränen, ganz hinten im Dunst der schmale Turm Merdeka 118.](foto:2026-08-22_115240.jpg)
+
+**✓ Aus dem Fenster sieht man den Fernsehturm, nicht die Petronas Towers (22.08.).** Die Wohnung
+liegt hoch genug, dass der Blick über die Dächer geht: in der Mitte der Menara Kuala Lumpur mit
+seinem Kranz, rechts daneben wieder Merdeka 118, davor ein Teppich aus Bürotürmen und Baustellen
+bis zum Horizont. Nach der anderen Seite fällt der Blick fast senkrecht auf zwei Hotelhochhäuser
+mit einer Poollandschaft dazwischen — und auf eine Bahnstation mit geschwungenem Dach, in die von
+oben ein Gleis auf Stelzen hineinläuft. Wer eine Unterkunft an der Jalan Sultan Ismail sucht: die
+Aussicht zeigt hier die halbe Stadt, aber nicht das Wahrzeichen.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![Blick durch ein Fenster über die Dächer von Kuala Lumpur: mittig der Fernsehturm Menara Kuala Lumpur, rechts daneben der schlanke Merdeka 118, davor dicht gedrängte Hochhäuser.](foto:2026-08-22_115233.jpg)
+![Steiler Blick von oben auf zwei Hotelhochhäuser mit türkisfarbener Poollandschaft, rechts eine Bahnstation mit geschwungenem Dach und ein Gleis auf Stelzen.](foto:2026-08-22_115235.jpg)
+
+**✓ Die Flagge hängt hier über die halbe Fassade (22.08.).** Was an den Booten und Zäunen im Süden
+in Reihen gespannt war, ist in der Stadt eine einzige, riesige Flagge: an einem Bankhochhaus
+hängt sie über gut zehn Stockwerke glatt an der Glasfront herunter, oben das Firmenschild, unten
+die Straße mit Bussen und Baustellenzäunen. An den Laternenmasten daneben stecken kleine Fahnen
+im Dutzend. Neun Tage vor dem 31. August ist das in Kuala Lumpur kein Schmuck mehr, sondern das
+Straßenbild.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![Ein weißes Bankhochhaus, über dessen Glasfassade eine überlebensgroße malaysische Flagge hängt; ringsum Baustellen mit blauen Netzen und ein Abendhimmel.](foto:2026-08-22_115224.jpg)
+
+**✓ Die Petronas Towers stehen an einer ganz normalen Straße (22.08.).** Kein Vorplatz, keine
+Freitreppe: Wer von der Jalan Sultan Ismail kommt, hat die Türme plötzlich schräg über sich,
+zwischen Straßenlaternen, einem Strommast und den Ästen eines Baumes. Die Skybridge in der Mitte
+ist von unten gut zu sehen. Ein paar Schritte weiter beginnt der Verkehr vor dem Suria KLCC —
+sechs Spuren, Reisebusse am Bordstein, Palmen im Mittelstreifen. Der Blick, den man von Fotos
+kennt, ist die Ausnahme; im Alltag stehen die Türme im Feierabendverkehr.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![Die Petronas Towers von unten in der Dämmerung, dazwischen die Skybridge; im Vordergrund ein Strommast und Baumzweige.](foto:2026-08-22_115217.jpg)
+
+**✓ Abends stehen die Türme hinter den Flaggen am Saloma (22.08.).** Vor dem beleuchteten
+Schriftzug „Saloma Kuala Lumpur" hängt eine Reihe malaysischer Flaggen an schrägen Masten, und
+genau dahinter, über dem Ziegeldach des flachen Vorbaus, stehen die beiden Türme angestrahlt im
+Nachthimmel. Man muss dafür nichts bezahlen und nirgends anstehen — die Stelle liegt an der
+Straße.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![Nachtaufnahme: ein beleuchteter Schriftzug „Saloma Kuala Lumpur" auf geschwungenem Vordach, davor malaysische Flaggen an schrägen Masten, dahinter die angestrahlten Petronas Towers.](foto:2026-08-22_115215.jpg)
+
 ---
 
 ## Essen

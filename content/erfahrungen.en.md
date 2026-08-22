@@ -876,6 +876,62 @@ here — Jens sent the pictures without naming the place.
 ![A river harbour with mangroves along the bank: a blue and yellow fishing boat with a Malaysian flag on the wheelhouse, behind it rows of further boats covered in flags.](foto:2026-08-22_060741.jpg)
 ![The same scene through the leaves of a tree on the bank, mud and young mangroves in the foreground.](foto:2026-08-22_060744.jpg)
 
+## In Kuala Lumpur
+
+**✓ You come into the centre on an elevated road, and the first tower is not the one you expect
+(22 Aug).** The last stretch runs on a concrete viaduct above the rooftops: on the right the empty
+carriageway with its crash barrier, on the left a wall of residential towers, and between them
+shells of buildings, green netting and cranes. Far back in the haze stands a slim needle —
+Merdeka 118. From this side you cannot see the Petronas Towers at all. (Shot from the car; the
+wing mirror is in the bottom right of the frame.)
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![View from a moving car onto a concrete elevated road; behind it on the left residential high-rises and building shells with cranes, far back in the haze the slim Merdeka 118 tower.](foto:2026-08-22_115240.jpg)
+
+**✓ From the window you see the telecoms tower, not the Petronas Towers (22 Aug).** The flat sits
+high enough for the view to carry across the rooftops: in the middle Menara Kuala Lumpur with its
+collar, to the right of it Merdeka 118 again, and in front a carpet of office towers and building
+sites out to the horizon. Look the other way and it drops almost vertically onto two hotel towers
+with a pool landscape between them — and onto a station with a curved roof, an elevated track
+running into it. If you are looking for somewhere to stay on Jalan Sultan Ismail: the view here
+gives you half the city, but not the landmark.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![View through a window across the rooftops of Kuala Lumpur: Menara Kuala Lumpur in the centre, the slender Merdeka 118 to its right, densely packed high-rises in front.](foto:2026-08-22_115233.jpg)
+![A steep view down onto two hotel towers with a turquoise pool landscape, on the right a station with a curved roof and an elevated track on pillars.](foto:2026-08-22_115235.jpg)
+
+**✓ Here the flag hangs down half a facade (22 Aug).** What was strung out in rows on the boats and
+fences down south is a single enormous flag in the city: on a bank tower it hangs flat down the
+glass front across a good ten storeys, the company sign above it, the street with buses and
+hoardings below. Small flags stand in dozens on the lamp posts alongside. Nine days before 31
+August this is no longer decoration in Kuala Lumpur, it is the streetscape.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![A white bank tower with an outsized Malaysian flag hanging down its glass facade; building sites with blue netting around it and an evening sky.](foto:2026-08-22_115224.jpg)
+
+**✓ The Petronas Towers stand on an ordinary street (22 Aug).** No forecourt, no flight of steps:
+come up from Jalan Sultan Ismail and the towers are suddenly there at an angle above you, between
+street lamps, a power pylon and the branches of a tree. The skybridge halfway up is clearly
+visible from below. A few steps further the traffic in front of Suria KLCC begins — six lanes,
+coaches at the kerb, palms on the central reservation. The view you know from photographs is the
+exception; day to day the towers stand in the rush hour.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![The Petronas Towers seen from below at dusk with the skybridge between them; a power pylon and tree branches in the foreground.](foto:2026-08-22_115217.jpg)
+
+**✓ In the evening the towers stand behind the flags at Saloma (22 Aug).** In front of the lit
+"Saloma Kuala Lumpur" lettering a row of Malaysian flags hangs from angled poles, and directly
+behind them, above the tiled roof of the low frontage, the two towers stand floodlit against the
+night sky. It costs nothing and there is no queue — the spot is right on the street.
+<!-- werkstatt: telegram=2026-08-22T11:52 -->
+<!-- ort: kuala-lumpur -->
+
+![Night shot: an illuminated "Saloma Kuala Lumpur" sign on a curved canopy, Malaysian flags on angled poles in front, the floodlit Petronas Towers behind.](foto:2026-08-22_115215.jpg)
+
 ---
 
 ## Eating
