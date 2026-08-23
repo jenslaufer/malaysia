@@ -325,6 +325,18 @@
       "veroeffentlicht": "2026-08-23T09:12:30+00:00"
     },
     {
+      "anker": "**✓ Von der Jalan Hang Kasturi steht Merdeka 118 am Ende der",
+      "minuten": 9,
+      "telegram": "2026-08-23T09:25:00+00:00",
+      "veroeffentlicht": "2026-08-23T09:33:50+00:00"
+    },
+    {
+      "anker": "**○ Merdeka 118 ist das zweithöchste Gebäude der Welt, und h",
+      "minuten": 9,
+      "telegram": "2026-08-23T09:25:00+00:00",
+      "veroeffentlicht": "2026-08-23T09:33:50+00:00"
+    },
+    {
       "anker": "**✓ Die goldene Figur und die bunte Treppe bekommt man nur v",
       "minuten": 11,
       "telegram": "2026-08-23T05:22:00+00:00",
@@ -379,10 +391,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 63,
-  "juengste_minuten": 26,
-  "markiert": 63,
-  "median_minuten": 14,
+  "gemessen": 65,
+  "juengste_minuten": 9,
+  "markiert": 65,
+  "median_minuten": 13,
   "schnellste_minuten": 4,
   "stand": "2026-08-23"
 }
