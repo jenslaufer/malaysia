@@ -973,6 +973,24 @@ Dang Wangi. Beide fahren täglich 06:00 bis 23:00, alle 5 bis 15 Minuten. Wer an
 Ismail wohnt, hat den nächsten Halt in rund 300 Metern. In Google Maps sind die Linien als
 „Rapid KL Bus" beschriftet, nicht als GoKL.
 
+**✓ Die Green Line fährt die Einkaufszentren ab (23.08.).** Sie verbindet Suria KLCC am Fuß der
+Petronas-Türme mit dem Pavilion in Bukit Bintang, und dazwischen liegen Platinum Park, Grand Hyatt
+und Life Centre. Wer in Kuala Lumpur einkaufen will, braucht deshalb keine zweite Linie: die beiden
+Adressen, die in jedem Reiseführer stehen, hängen an einem einzigen Ring.
+<!-- werkstatt: telegram=2026-08-23T08:46 -->
+<!-- ort: kuala-lumpur -->
+
+**○ In die Altstadt kommt man mit der Purple Line, nicht mit der Green Line.** Die Purple Line
+(GOKL-02) ist ein eigener Ring zwischen Bukit Bintang und dem Hab Pasar Seni: 16 Halte, eine Runde
+dauert rund 14 Minuten, Betrieb täglich von 06:00 bis 23:00, samstags und sonntags ab 07:00. Für
+Besucher zählen vier Halte — Central Market (Timur), Kota Raya am Rand von Chinatown, das
+Muzium Telekom und KL Tower (Selatan). Eingestiegen wird in Bukit Bintang am Bintang Walk oder an
+der MRT-Station Bukit Bintang, dort heißt der Halt „HSBC"; das ist dieselbe Ecke, an der auch die
+Green Line hält. Merdeka Square, die Masjid Negara und das Nationalmuseum liegen nicht an dieser
+Linie, sondern an der Red Line (GOKL-03).
+<!-- werkstatt: telegram=2026-08-23T08:46 -->
+<!-- ort: kuala-lumpur -->
+
 **○ Alle GoKL-Linien sind Einbahn-Ringe — der nächste Halt ist oft der falsche.** Auf einer
 Ringlinie fährt der Bus nur in eine Richtung, und das entscheidet, welchen Halt man nimmt. Wer an
 der Jalan Sultan Ismail wohnt, hat die Monorail-Station Bukit Nanas mit rund 270 Metern am
@@ -993,6 +1011,15 @@ Farbnamen und Ziel — bei der Green Line also „GOKL 01" und „KLCC". Dazu ko
 derselben Straße ähnlich heißen können: an der Jalan Sultan Ismail stehen 50 Meter auseinander
 ein Halt „Renaissance Hotel", an dem die Linie 300 hält, und der Green-Line-Halt
 „Berjaya Central Park / Renaissance Hotel".
+
+**✓ Die App zum Bus heißt GOKL und kommt von der Stadtverwaltung (23.08.).** Sie zeigt die
+Haltestellen in der Nähe, welche Linien dort halten und wann der nächste Bus kommt, dazu wie voll
+er ist. Damit löst sie genau das Problem von oben: weil alle vier Linien gleich aussehen und der
+Takt zwischen 5 und 15 Minuten schwankt, ist die Ankunftszeit auf dem Handy die einzige
+verlässliche Auskunft, die man am Mast bekommt. Herausgeber ist DBKL, die Stadtverwaltung von
+Kuala Lumpur; kostenlos für Android und iPhone, zuletzt im Dezember 2025 aktualisiert.
+<!-- werkstatt: telegram=2026-08-23T08:46 -->
+<!-- ort: kuala-lumpur -->
 
 
 ---

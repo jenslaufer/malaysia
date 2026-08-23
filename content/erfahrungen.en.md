@@ -949,6 +949,23 @@ station, halfway along Jalan Sultan Ismail, and at Dang Wangi LRT station. Both 
 06:00 to 23:00, every 5 to 15 minutes. If you stay on Jalan Sultan Ismail the nearest stop is
 about 300 metres away. In Google Maps the lines are labelled "Rapid KL Bus", not GoKL.
 
+**✓ The Green Line is the shopping line (23 Aug).** It connects Suria KLCC at the foot of the
+Petronas Towers with Pavilion in Bukit Bintang, and Platinum Park, Grand Hyatt and Life Centre sit
+in between. If shopping is what you came for, you need no second line: both addresses that every
+guidebook names hang off a single loop.
+<!-- werkstatt: telegram=2026-08-23T08:46 -->
+<!-- ort: kuala-lumpur -->
+
+**○ The old town is the Purple Line's job, not the Green Line's.** The Purple Line (GOKL-02) is a
+loop of its own between Bukit Bintang and Hab Pasar Seni: 16 stops, one round takes about 14
+minutes, running daily from 06:00 to 23:00, from 07:00 on Saturdays and Sundays. Four stops matter
+to visitors — Central Market (Timur), Kota Raya at the edge of Chinatown, Muzium Telekom and
+KL Tower (Selatan). In Bukit Bintang you board at Bintang Walk or at Bukit Bintang MRT station,
+where the stop is called "HSBC" — the same corner the Green Line uses. Merdeka Square, Masjid
+Negara and the National Museum are not on this line; they are on the Red Line (GOKL-03).
+<!-- werkstatt: telegram=2026-08-23T08:46 -->
+<!-- ort: kuala-lumpur -->
+
 **○ Every GoKL line is a one-way loop — the nearest stop is often the wrong one.** On a loop
 service the bus runs in one direction only, and that decides which stop you want. If you stay on
 Jalan Sultan Ismail, the Bukit Nanas monorail station is the closest at about 270 metres — but the
@@ -969,6 +986,15 @@ with number, colour name and destination — for the Green Line, "GOKL 01" and "
 that, poles on the same street can carry near-identical names: on Jalan Sultan Ismail a stop
 called "Renaissance Hotel", served by line 300, stands 50 metres from the Green Line stop
 "Berjaya Central Park / Renaissance Hotel".
+
+**✓ The app for the bus is called GOKL and comes from the city council (23 Aug).** It shows the
+stops near you, which lines call there and when the next bus arrives, plus how full it is. That
+solves exactly the problem above: because all four lines look the same and the interval swings
+between 5 and 15 minutes, the arrival time on your phone is the only reliable information you get
+at the pole. It is published by DBKL, the Kuala Lumpur city council; free for Android and iPhone,
+last updated in December 2025.
+<!-- werkstatt: telegram=2026-08-23T08:46 -->
+<!-- ort: kuala-lumpur -->
 
 ---
 
