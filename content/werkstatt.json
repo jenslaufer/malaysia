@@ -307,6 +307,24 @@
       "veroeffentlicht": "2026-08-22T12:01:13+00:00"
     },
     {
+      "anker": "**✓ Die Green Line fährt die Einkaufszentren ab (23.08.).** ",
+      "minuten": 26,
+      "telegram": "2026-08-23T08:46:00+00:00",
+      "veroeffentlicht": "2026-08-23T09:12:30+00:00"
+    },
+    {
+      "anker": "**○ In die Altstadt kommt man mit der Purple Line, nicht mit",
+      "minuten": 26,
+      "telegram": "2026-08-23T08:46:00+00:00",
+      "veroeffentlicht": "2026-08-23T09:12:30+00:00"
+    },
+    {
+      "anker": "**✓ Die App zum Bus heißt GOKL und kommt von der Stadtverwal",
+      "minuten": 26,
+      "telegram": "2026-08-23T08:46:00+00:00",
+      "veroeffentlicht": "2026-08-23T09:12:30+00:00"
+    },
+    {
       "anker": "**✓ Die goldene Figur und die bunte Treppe bekommt man nur v",
       "minuten": 11,
       "telegram": "2026-08-23T05:22:00+00:00",
@@ -361,10 +379,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 60,
-  "juengste_minuten": 11,
-  "markiert": 60,
-  "median_minuten": 12,
+  "gemessen": 63,
+  "juengste_minuten": 26,
+  "markiert": 63,
+  "median_minuten": 14,
   "schnellste_minuten": 4,
   "stand": "2026-08-23"
 }
