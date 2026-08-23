@@ -934,6 +934,69 @@ night sky. It costs nothing and there is no queue — the spot is right on the s
 
 ---
 
+## Batu Caves
+
+**✓ The gold figure and the coloured staircase only fit into one frame from the forecourt
+(23 Aug).** On the left the gopuram of a small temple, on the right the gold Murugan statue, and
+between them the staircase running up the rock face as a narrow band of red, yellow, green and
+blue. Step any closer and you get either the statue or the stairs, not both. The scale comes from
+the wall behind it anyway: grey limestone with vegetation, rising as far again above the figure.
+From the pond side the same statue stands above a long, continuously painted row of temple
+frontages, with a blue footbridge over green water in front of it.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![The gold Murugan statue in front of the overgrown limestone wall of Batu Caves, the colourful gopuram of a temple on the left, the rainbow staircase in the middle.](foto:2026-08-23_052224.jpg)
+![The same statue seen from the pond side, with a long brightly painted row of temple frontages and a blue footbridge over green water in front of it.](foto:2026-08-23_052228.jpg)
+
+**✓ At the top the view back is worth more than the staircase itself (23 Aug).** From the topmost
+step you look out over the railings down the whole flight: the paved forecourt, coaches and car
+parks behind it, a motorway ramp on pillars and, in the haze, the high-rises of Kuala Lumpur. The
+steps are steep and have no landing to rest on; going down, you look at the city the whole way. A
+second, unpainted staircase runs alongside on the right.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![View from the topmost step out over the rainbow-coloured railings, down onto the forecourt, with car parks, a motorway ramp and the high-rises of Kuala Lumpur in the haze behind.](foto:2026-08-23_052222.jpg)
+
+**✓ There is a whole temple inside the cave, and the light comes from above (23 Aug).** Behind the
+stairs a hall opens up, high enough to make the stalactites on the ceiling look small. Inside it
+stands a colourful temple tower, signposted as Sri Velayuthar Temple (Main Temple). A single shaft
+of light falls at an angle onto the floor through a hole in the ceiling — that is all the lighting
+there is in the middle of the hall. At the far end another staircase leads up to a second opening;
+from below all you see up there is rock, greenery and a small canopy on the rim, several storeys
+above your head.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![Inside the temple cave at Batu Caves: a colourful temple tower on the left, a high rock face on the right, a shaft of light falling through an opening in the ceiling between them.](foto:2026-08-23_052217.jpg)
+![Looking straight up through the opening in the cave ceiling: rock walls, greenery along the rim and a small canopy high up on the edge.](foto:2026-08-23_052212.jpg)
+
+**✓ Macaques run along the wall beside the path (23 Aug).** No enclosure, no distance: a full-grown
+animal walks along the rock parapet right next to the path, a juvenile behind it, a third sitting
+on the edge. They stay exactly where the visitors walk.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![Two macaques on a rock parapet beside the path at Batu Caves, one full-grown and one juvenile, greenery and rock face behind them.](foto:2026-08-23_052233.jpg)
+
+**○ The place is not in Kuala Lumpur.** Batu Caves belongs to Gombak in the state of Selangor,
+about 13 km north of the city centre. The KTM Komuter line from KL Sentral terminates right at the
+site, at Batu Caves station.
+
+**○ Two numbers to go with it: 272 steps and 42.7 metres.** That is how many concrete steps lead
+up to the temple cave. They have only been painted in colour since August 2018 — in older photos
+the staircase is grey. The Murugan statue at the foot was unveiled in January 2006 and is 42.7 m
+tall, among the tallest of its kind. The limestone itself is more than 400 million years old.
+
+**○ The main cave is free, the side caves are not.** No admission is charged for the large temple
+cave. Ramayana Cave and Cave Villa are paid separately; travel sites quote around RM 15 for 2026
+and agree that payment on site is cash only. Knees and shoulders have to be covered for the climb,
+and sarongs are sold at the foot of the stairs for roughly RM 10 to 15. All looked up, none of it
+checked by us.
+
+---
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for

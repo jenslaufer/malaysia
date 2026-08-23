@@ -1,513 +1,583 @@
 {
-    "_lies-mich": [
-        "Was auf dieser Seite veroeffentlicht wird, und was daran unkenntlich gemacht wird.",
-        "'blur' sind RELATIVE Kaesten [x, y, breite, hoehe] von 0 bis 1 — sie ueberleben",
-        "das Verkleinern. Absolute Pixel zeigen nach dem Skalieren woanders hin, lautlos.",
-        "Von Hand gepflegt: ein Erkenner, der drei von vier Kennzeichen findet, liest",
-        "sich wie Schutz und ist keiner. Nach jeder Aenderung das Bild ansehen, nicht",
-        "nur den Test."
-    ],
-    "2026-08-17_085957.jpg": {
-        "name": "mersing-katze-marktwagen"
-    },
-    "2026-08-17_090000.jpg": {
-        "name": "mersing-katze-fliesen"
-    },
-    "2026-08-17_090002.jpg": {
-        "name": "mersing-katze-gehweg"
-    },
-    "2026-08-17_090004.jpg": {
-        "name": "mersing-altes-kino",
-        "_blur": "drei Kfz-Kennzeichen Fremder",
-        "blur": [
-            [
-                0.4719,
-                0.8417,
-                0.0453,
-                0.0333
-            ],
-            [
-                0.9438,
-                0.8583,
-                0.0484,
-                0.0417
-            ],
-            [
-                0.8297,
-                0.7667,
-                0.0438,
-                0.0319
-            ]
-        ]
-    },
-    "2026-08-17_090006.jpg": {
-        "name": "mersing-geldautomat",
-        "position": "top",
-        "_position": "hochkant; der Satz auf dem Schirm steht oben"
-    },
-    "2026-08-17_090008.jpg": {
-        "name": "mersing-bankenzeile",
-        "_blur": "acht Kfz-Kennzeichen Fremder, dazu drei erkennbare Koepfe",
-        "blur": [
-            [
-                0.085,
-                0.575,
-                0.042,
-                0.045
-            ],
-            [
-                0.165,
-                0.612,
-                0.044,
-                0.045
-            ],
-            [
-                0.281,
-                0.645,
-                0.045,
-                0.048
-            ],
-            [
-                0.325,
-                0.628,
-                0.04,
-                0.047
-            ],
-            [
-                0.73,
-                0.75,
-                0.018,
-                0.025
-            ],
-            [
-                0.798,
-                0.765,
-                0.02,
-                0.027
-            ],
-            [
-                0.85,
-                0.793,
-                0.02,
-                0.027
-            ],
-            [
-                0.935,
-                0.808,
-                0.023,
-                0.028
-            ],
-            [
-                0.66,
-                0.622,
-                0.03,
-                0.05
-            ],
-            [
-                0.73,
-                0.665,
-                0.028,
-                0.038
-            ],
-            [
-                0.753,
-                0.672,
-                0.028,
-                0.04
-            ]
-        ]
-    },
-    "2026-08-17_093758.jpg": {
-        "name": "fernbus-kameras-beschwerdenummer"
-    },
-    "2026-08-17_093911.jpg": {
-        "name": "garden-rhapsody-supertrees-mbs"
-    },
-    "2026-08-17_093914.jpg": {
-        "name": "garden-rhapsody-supertree-nah"
-    },
-    "2026-08-17_093916.jpg": {
-        "name": "garden-rhapsody-menge"
-    },
-    "2026-08-17_102109.jpg": {
-        "name": "mersing-hafen-niedrigwasser"
-    },
-    "2026-08-17_102111.jpg": {
-        "name": "mersing-jabatan-laut"
-    },
-    "2026-08-17_102114.jpg": {
-        "name": "mersing-strandpromenade",
-        "blur": [
-            [
-                0.6977,
-                0.6069,
-                0.0148,
-                0.0319
-            ],
-            [
-                0.7195,
-                0.5931,
-                0.0141,
-                0.0278
-            ],
-            [
-                0.7297,
-                0.6542,
-                0.0133,
-                0.025
-            ],
-            [
-                0.8602,
-                0.6556,
-                0.0203,
-                0.0194
-            ],
-            [
-                0.2445,
-                0.5944,
-                0.0461,
-                0.0278
-            ],
-            [
-                0.7805,
-                0.6486,
-                0.018,
-                0.0153
-            ]
-        ]
-    },
-    "2026-08-18_033236.jpg": {
-        "name": "mersing-faehrterminal-wartehalle",
-        "_blur": "sechs erkennbare Gesichter Fremder in der Wartehalle",
-        "blur": [
-            [
-                0.085,
-                0.6,
-                0.043,
-                0.082
-            ],
-            [
-                0.831,
-                0.478,
-                0.042,
-                0.09
-            ],
-            [
-                0.777,
-                0.675,
-                0.036,
-                0.06
-            ],
-            [
-                0.892,
-                0.628,
-                0.022,
-                0.045
-            ],
-            [
-                0.944,
-                0.638,
-                0.024,
-                0.042
-            ],
-            [
-                0.974,
-                0.643,
-                0.02,
-                0.036
-            ]
-        ]
-    },
-    "2026-08-18_033254.jpg": {
-        "name": "mersing-einsteigen-cataferry",
-        "_blur": "zwei erkennbare Gesichter Fremder, links im Anschnitt formatfuellend",
-        "blur": [
-            [
-                0.0,
-                0.29,
-                0.125,
-                0.535
-            ],
-            [
-                0.668,
-                0.42,
-                0.075,
-                0.145
-            ]
-        ]
-    },
-    "2026-08-18_033252.jpg": {
-        "name": "cataferry-kabine-sicherheitsvideo",
-        "_blur": "keine Kaesten: nur Hinterkoepfe, kein Gesicht im Bild"
-    },
-    "2026-08-18_065629.jpg": {
-        "name": "tioman-bucht-strand",
-        "_blur": "keine Kaesten: keine Person im Bild, der Steg liegt am anderen Ende der Bucht"
-    },
-    "2026-08-18_065631.jpg": {
-        "name": "tioman-strandchalets",
-        "_blur": "Name der Unterkunft (sie wohnen dort bis 21.08.), dazu zwei erkennbare Personen an den Tischen rechts",
-        "blur": [
-            [
-                0.82,
-                0.15,
-                0.15,
-                0.13
-            ],
-            [
-                0.905,
-                0.425,
-                0.042,
-                0.06
-            ],
-            [
-                0.972,
-                0.452,
-                0.028,
-                0.05
-            ]
-        ]
-    },
-    "2026-08-18_094311.jpg": {
-        "name": "tioman-regenwald-hinter-dem-dorf",
-        "_blur": "keine Kaesten: keine Person im Bild, die Roller links stehen ohne lesbares Kennzeichen"
-    },
-    "2026-08-18_094309.jpg": {
-        "name": "tioman-dorfstrasse-roller-ziege",
-        "_blur": "keine Kaesten: der Rollerfahrer ist von hinten zu sehen, kein Gesicht; die Leute am Zelt sind ~15 px hoch"
-    },
-    "2026-08-18_094304.jpg": {
-        "name": "tioman-dorfstrasse-bruecke",
-        "_blur": "Kennzeichen des wegfahrenden Pick-ups",
-        "blur": [
-            [
-                0.48,
-                0.512,
-                0.022,
-                0.017
-            ]
-        ]
-    },
-    "2026-08-18_094307.jpg": {
-        "name": "tioman-dorfstrasse-pickup",
-        "_blur": "keine Kaesten: der Pick-up steht seitlich, kein Kennzeichen im Bild; der Firmenaufkleber ist Werbung eines Betriebs, nicht lesbar"
-    },
-    "2026-08-18_101819.jpg": {
-        "name": "tioman-uebersichtstafel-tekek",
-        "_blur": "keine Kaesten: keine Person im Bild, kein Fahrzeug, kein Kennzeichen — nur die Tafel, der Uferweg und ein Gebaeude im Hintergrund"
-    },
-    "2026-08-18_103031.jpg": {
-        "name": "tioman-flughunde-tekek",
-        "_blur": "keine Kaesten: die Gestalten am Strand im Hintergrund sind ~8 px hoch, bei 10-facher Vergroesserung ein Schmier ohne Gesicht; kein Fahrzeug, kein Kennzeichen im Bild"
-    },
-    "2026-08-19_032615.jpg": {
-        "name": "tioman-fruehstueck-drachenfrucht",
-        "_blur": "keine Kaesten: links ein nackter Arm im weissen Shirt, rechts am Bildrand eine Schulter von hinten — kein Gesicht im Bild, kein Fahrzeug, kein Kennzeichen"
-    },
-    "2026-08-19_034819.jpg": {
-        "name": "tioman-fruehstueck-pancake",
-        "_blur": "keine Kaesten: kein Mensch im Bild, kein Fahrzeug, kein Kennzeichen — Teller, Besteck, Kaffeebecher und eine Sirupflasche am rechten Rand"
-    },
-    "2026-08-19_034821.jpg": {
-        "name": "tioman-bucht-steinschuettung",
-        "_blur": "keine Kaesten: bei 4-facher Vergroesserung des Uferabschnitts und des Pavillons kein Mensch im Bild; kein Fahrzeug, kein Kennzeichen, keine lesbare Beschriftung"
-    },
-    "2026-08-19_082141.jpg": {
-        "name": "tioman-zollfrei-cognac",
-        "_blur": "gerahmte Lizenz mit Passbild des Ladeninhabers an der Wand",
-        "blur": [
-            [
-                0.34,
-                0.01,
-                0.062,
-                0.13
-            ]
-        ]
-    },
-    "2026-08-19_102239.jpg": {
-        "name": "tioman-flugzeugwrack-cirrus",
-        "_blur": "keine Kaesten: kein Mensch im Bild — was auf der Obergeschoss-Bruestung haengt, ist Waesche, bei 6-facher Vergroesserung geprueft; der Baggerlader traegt kein Kennzeichen. Das Luftfahrzeugkennzeichen 9M-ZWP bleibt lesbar: es ist eine oeffentliche Registernummer, kein Kfz-Kennzeichen eines Anwohners, und es ist der einzige pruefbare Teil des Eintrags"
-    },
-    "2026-08-19_102236.jpg": {
-        "name": "tioman-katze-zwei-augenfarben",
-        "_blur": "keine Kaesten: nur die Katze auf Kunstrasen — kein Mensch, kein Fahrzeug, kein Kennzeichen, keine Beschriftung"
-    },
-    "2026-08-20_024346.jpg": {
-        "name": "tioman-juara-weg-schild-perhilitan",
-        "_blur": "keine Kaesten: nur Schild und Wald — kein Mensch, kein Fahrzeug, keine private Angabe. Der Schildtext ist eine amtliche Bekanntmachung"
-    },
-    "2026-08-20_062331.jpg": {
-        "name": "tioman-juara-weg-betonpiste",
-        "_blur": "keine Kaesten: Weg, Wald, Meer — kein Mensch, kein Fahrzeug"
-    },
-    "2026-08-20_062343.jpg": {
-        "name": "tioman-juara-weg-betontreppe",
-        "_blur": "keine Kaesten: nur Treppe und Unterholz"
-    },
-    "2026-08-20_062345.jpg": {
-        "name": "tioman-juara-weg-rohr",
-        "_blur": "keine Kaesten: nur Rohr und Waldboden"
-    },
-    "2026-08-20_062338.jpg": {
-        "name": "tioman-juara-weg-waran",
-        "_blur": "keine Kaesten: nur das Tier auf dem Pfad"
-    },
-    "2026-08-20_062329.jpg": {
-        "name": "tioman-juara-weg-bach",
-        "_blur": "keine Kaesten: nur Wasser und Wald"
-    },
-    "2026-08-20_062336.jpg": {
-        "name": "tioman-juara-weg-urwaldriese",
-        "_blur": "keine Kaesten: nur Bewuchs und Himmel"
-    },
-    "2026-08-20_062334.jpg": {
-        "name": "tioman-juara-weg-urwaldriese-quer",
-        "_blur": "keine Kaesten: nur Bewuchs und Himmel"
-    },
-    "2026-08-20_062341.jpg": {
-        "name": "tioman-juara-weg-blauer-falter",
-        "_blur": "keine Kaesten: nur Falter und Waldboden"
-    },
-    "2026-08-20_062327.jpg": {
-        "name": "tioman-juara-torbogen",
-        "_blur": "drei Kaesten: die Nummernschildflaechen der beiden Pick-ups am Strassenrand (unleserlich, aber Kennzeichenflaeche) und der Kopf des Rollerfahrers rechts",
-        "blur": [
-            [
-                0.211,
-                0.565,
-                0.028,
-                0.019
-            ],
-            [
-                0.3,
-                0.574,
-                0.028,
-                0.018
-            ],
-            [
-                0.566,
-                0.536,
-                0.026,
-                0.032
-            ]
-        ]
-    },
-    "2026-08-20_062325.jpg": {
-        "name": "tioman-juara-tafel-flughunde",
-        "_blur": "ein Kasten: das lesbare Kfz-Kennzeichen des schwarzen Pick-ups links. Der Wagen rechts im Anschnitt zeigt nur Dach und Spiegel, kein Kennzeichen",
-        "blur": [
-            [
-                0.062,
-                0.616,
-                0.05,
-                0.038
-            ]
-        ]
-    },
-    "2026-08-20_062316.jpg": {
-        "name": "tioman-juara-strand-nord",
-        "_blur": "ein Kasten: die einzelne am Strand liegende Person. Winzig im Bild, aber ein Fremder in Badekleidung",
-        "blur": [
-            [
-                0.552,
-                0.52,
-                0.058,
-                0.034
-            ]
-        ]
-    },
-    "2026-08-20_062318.jpg": {
-        "name": "tioman-juara-strand-brandung",
-        "_blur": "keine Kaesten: die Gestalten am fernen Strandende sind wenige Pixel gross, kein Gesicht, kein Kennzeichen"
-    },
-    "2026-08-20_062320.jpg": {
-        "name": "tioman-juara-strand-palmen",
-        "_blur": "ein Kasten: dieselbe am Strand liegende Person wie im Nordbild",
-        "blur": [
-            [
-                0.05,
-                0.576,
-                0.062,
-                0.034
-            ]
-        ]
-    },
-    "2026-08-20_062322.jpg": {
-        "name": "tioman-juara-strand-suedspitze",
-        "_blur": "keine Kaesten: die Boote liegen weit draussen, keine Person erkennbar, keine Beschriftung lesbar"
-    },
-    "2026-08-20_071933.jpg": {
-        "name": "tioman-benzin-in-flaschen",
-        "_blur": "keine Kaesten: keine Person im Bild, kein Gesicht, kein Kennzeichen; die einzige Beschriftung ist das Preisschild und der Kanister-Aufdruck JM PETROL"
-    },
-    "2026-08-21_111001.jpg": {
-        "name": "mersing-sri-subramaniar-schild"
-    },
-    "2026-08-21_111003.jpg": {
-        "name": "mersing-sri-subramaniar-fassade"
-    },
-    "2026-08-22_060737.jpg": {
-        "name": "bus-sanwa-tankstelle"
-    },
-    "2026-08-22_060732.jpg": {
-        "name": "tankstelle-vorplatz",
-        "_blur": "drei Kfz-Kennzeichen Fremder (Limousine an der Saeule, Wagen links am Rand, SUV dahinter)",
-        "blur": [
-            [
-                0.512,
-                0.622,
-                0.038,
-                0.032
-            ],
-            [
-                0.0,
-                0.852,
-                0.022,
-                0.036
-            ],
-            [
-                0.598,
-                0.542,
-                0.032,
-                0.03
-            ]
-        ]
-    },
-    "2026-08-22_060746.jpg": {
-        "name": "wegweiser-kuantan-rompin"
-    },
-    "2026-08-22_060741.jpg": {
-        "name": "boote-flaggen-merdeka",
-        "_blur": "Registriernummer eines fremden Fischerboots",
-        "blur": [
-            [
-                0.434,
-                0.527,
-                0.034,
-                0.024
-            ]
-        ]
-    },
-    "2026-08-22_060744.jpg": {
-        "name": "boote-flaggen-durch-blaetter"
-    },
-    "2026-08-22_115240.jpg": {
-        "name": "hochstrasse-ins-zentrum-merdeka118"
-    },
-    "2026-08-22_115233.jpg": {
-        "name": "blick-menara-kl-merdeka118"
-    },
-    "2026-08-22_115235.jpg": {
-        "name": "blick-hotels-pool-bahnstation",
-        "position": "top"
-    },
-    "2026-08-22_115224.jpg": {
-        "name": "flagge-bankhochhaus-merdeka"
-    },
-    "2026-08-22_115217.jpg": {
-        "name": "petronas-von-unten-skybridge"
-    },
-    "2026-08-22_115215.jpg": {
-        "name": "saloma-flaggen-tuerme-nachts"
-    }
+  "_lies-mich": [
+    "Was auf dieser Seite veroeffentlicht wird, und was daran unkenntlich gemacht wird.",
+    "'blur' sind RELATIVE Kaesten [x, y, breite, hoehe] von 0 bis 1 — sie ueberleben",
+    "das Verkleinern. Absolute Pixel zeigen nach dem Skalieren woanders hin, lautlos.",
+    "Von Hand gepflegt: ein Erkenner, der drei von vier Kennzeichen findet, liest",
+    "sich wie Schutz und ist keiner. Nach jeder Aenderung das Bild ansehen, nicht",
+    "nur den Test."
+  ],
+  "2026-08-17_085957.jpg": {
+    "name": "mersing-katze-marktwagen"
+  },
+  "2026-08-17_090000.jpg": {
+    "name": "mersing-katze-fliesen"
+  },
+  "2026-08-17_090002.jpg": {
+    "name": "mersing-katze-gehweg"
+  },
+  "2026-08-17_090004.jpg": {
+    "name": "mersing-altes-kino",
+    "_blur": "drei Kfz-Kennzeichen Fremder",
+    "blur": [
+      [
+        0.4719,
+        0.8417,
+        0.0453,
+        0.0333
+      ],
+      [
+        0.9438,
+        0.8583,
+        0.0484,
+        0.0417
+      ],
+      [
+        0.8297,
+        0.7667,
+        0.0438,
+        0.0319
+      ]
+    ]
+  },
+  "2026-08-17_090006.jpg": {
+    "name": "mersing-geldautomat",
+    "position": "top",
+    "_position": "hochkant; der Satz auf dem Schirm steht oben"
+  },
+  "2026-08-17_090008.jpg": {
+    "name": "mersing-bankenzeile",
+    "_blur": "acht Kfz-Kennzeichen Fremder, dazu drei erkennbare Koepfe",
+    "blur": [
+      [
+        0.085,
+        0.575,
+        0.042,
+        0.045
+      ],
+      [
+        0.165,
+        0.612,
+        0.044,
+        0.045
+      ],
+      [
+        0.281,
+        0.645,
+        0.045,
+        0.048
+      ],
+      [
+        0.325,
+        0.628,
+        0.04,
+        0.047
+      ],
+      [
+        0.73,
+        0.75,
+        0.018,
+        0.025
+      ],
+      [
+        0.798,
+        0.765,
+        0.02,
+        0.027
+      ],
+      [
+        0.85,
+        0.793,
+        0.02,
+        0.027
+      ],
+      [
+        0.935,
+        0.808,
+        0.023,
+        0.028
+      ],
+      [
+        0.66,
+        0.622,
+        0.03,
+        0.05
+      ],
+      [
+        0.73,
+        0.665,
+        0.028,
+        0.038
+      ],
+      [
+        0.753,
+        0.672,
+        0.028,
+        0.04
+      ]
+    ]
+  },
+  "2026-08-17_093758.jpg": {
+    "name": "fernbus-kameras-beschwerdenummer"
+  },
+  "2026-08-17_093911.jpg": {
+    "name": "garden-rhapsody-supertrees-mbs"
+  },
+  "2026-08-17_093914.jpg": {
+    "name": "garden-rhapsody-supertree-nah"
+  },
+  "2026-08-17_093916.jpg": {
+    "name": "garden-rhapsody-menge"
+  },
+  "2026-08-17_102109.jpg": {
+    "name": "mersing-hafen-niedrigwasser"
+  },
+  "2026-08-17_102111.jpg": {
+    "name": "mersing-jabatan-laut"
+  },
+  "2026-08-17_102114.jpg": {
+    "name": "mersing-strandpromenade",
+    "blur": [
+      [
+        0.6977,
+        0.6069,
+        0.0148,
+        0.0319
+      ],
+      [
+        0.7195,
+        0.5931,
+        0.0141,
+        0.0278
+      ],
+      [
+        0.7297,
+        0.6542,
+        0.0133,
+        0.025
+      ],
+      [
+        0.8602,
+        0.6556,
+        0.0203,
+        0.0194
+      ],
+      [
+        0.2445,
+        0.5944,
+        0.0461,
+        0.0278
+      ],
+      [
+        0.7805,
+        0.6486,
+        0.018,
+        0.0153
+      ]
+    ]
+  },
+  "2026-08-18_033236.jpg": {
+    "name": "mersing-faehrterminal-wartehalle",
+    "_blur": "sechs erkennbare Gesichter Fremder in der Wartehalle",
+    "blur": [
+      [
+        0.085,
+        0.6,
+        0.043,
+        0.082
+      ],
+      [
+        0.831,
+        0.478,
+        0.042,
+        0.09
+      ],
+      [
+        0.777,
+        0.675,
+        0.036,
+        0.06
+      ],
+      [
+        0.892,
+        0.628,
+        0.022,
+        0.045
+      ],
+      [
+        0.944,
+        0.638,
+        0.024,
+        0.042
+      ],
+      [
+        0.974,
+        0.643,
+        0.02,
+        0.036
+      ]
+    ]
+  },
+  "2026-08-18_033254.jpg": {
+    "name": "mersing-einsteigen-cataferry",
+    "_blur": "zwei erkennbare Gesichter Fremder, links im Anschnitt formatfuellend",
+    "blur": [
+      [
+        0.0,
+        0.29,
+        0.125,
+        0.535
+      ],
+      [
+        0.668,
+        0.42,
+        0.075,
+        0.145
+      ]
+    ]
+  },
+  "2026-08-18_033252.jpg": {
+    "name": "cataferry-kabine-sicherheitsvideo",
+    "_blur": "keine Kaesten: nur Hinterkoepfe, kein Gesicht im Bild"
+  },
+  "2026-08-18_065629.jpg": {
+    "name": "tioman-bucht-strand",
+    "_blur": "keine Kaesten: keine Person im Bild, der Steg liegt am anderen Ende der Bucht"
+  },
+  "2026-08-18_065631.jpg": {
+    "name": "tioman-strandchalets",
+    "_blur": "Name der Unterkunft (sie wohnen dort bis 21.08.), dazu zwei erkennbare Personen an den Tischen rechts",
+    "blur": [
+      [
+        0.82,
+        0.15,
+        0.15,
+        0.13
+      ],
+      [
+        0.905,
+        0.425,
+        0.042,
+        0.06
+      ],
+      [
+        0.972,
+        0.452,
+        0.028,
+        0.05
+      ]
+    ]
+  },
+  "2026-08-18_094311.jpg": {
+    "name": "tioman-regenwald-hinter-dem-dorf",
+    "_blur": "keine Kaesten: keine Person im Bild, die Roller links stehen ohne lesbares Kennzeichen"
+  },
+  "2026-08-18_094309.jpg": {
+    "name": "tioman-dorfstrasse-roller-ziege",
+    "_blur": "keine Kaesten: der Rollerfahrer ist von hinten zu sehen, kein Gesicht; die Leute am Zelt sind ~15 px hoch"
+  },
+  "2026-08-18_094304.jpg": {
+    "name": "tioman-dorfstrasse-bruecke",
+    "_blur": "Kennzeichen des wegfahrenden Pick-ups",
+    "blur": [
+      [
+        0.48,
+        0.512,
+        0.022,
+        0.017
+      ]
+    ]
+  },
+  "2026-08-18_094307.jpg": {
+    "name": "tioman-dorfstrasse-pickup",
+    "_blur": "keine Kaesten: der Pick-up steht seitlich, kein Kennzeichen im Bild; der Firmenaufkleber ist Werbung eines Betriebs, nicht lesbar"
+  },
+  "2026-08-18_101819.jpg": {
+    "name": "tioman-uebersichtstafel-tekek",
+    "_blur": "keine Kaesten: keine Person im Bild, kein Fahrzeug, kein Kennzeichen — nur die Tafel, der Uferweg und ein Gebaeude im Hintergrund"
+  },
+  "2026-08-18_103031.jpg": {
+    "name": "tioman-flughunde-tekek",
+    "_blur": "keine Kaesten: die Gestalten am Strand im Hintergrund sind ~8 px hoch, bei 10-facher Vergroesserung ein Schmier ohne Gesicht; kein Fahrzeug, kein Kennzeichen im Bild"
+  },
+  "2026-08-19_032615.jpg": {
+    "name": "tioman-fruehstueck-drachenfrucht",
+    "_blur": "keine Kaesten: links ein nackter Arm im weissen Shirt, rechts am Bildrand eine Schulter von hinten — kein Gesicht im Bild, kein Fahrzeug, kein Kennzeichen"
+  },
+  "2026-08-19_034819.jpg": {
+    "name": "tioman-fruehstueck-pancake",
+    "_blur": "keine Kaesten: kein Mensch im Bild, kein Fahrzeug, kein Kennzeichen — Teller, Besteck, Kaffeebecher und eine Sirupflasche am rechten Rand"
+  },
+  "2026-08-19_034821.jpg": {
+    "name": "tioman-bucht-steinschuettung",
+    "_blur": "keine Kaesten: bei 4-facher Vergroesserung des Uferabschnitts und des Pavillons kein Mensch im Bild; kein Fahrzeug, kein Kennzeichen, keine lesbare Beschriftung"
+  },
+  "2026-08-19_082141.jpg": {
+    "name": "tioman-zollfrei-cognac",
+    "_blur": "gerahmte Lizenz mit Passbild des Ladeninhabers an der Wand",
+    "blur": [
+      [
+        0.34,
+        0.01,
+        0.062,
+        0.13
+      ]
+    ]
+  },
+  "2026-08-19_102239.jpg": {
+    "name": "tioman-flugzeugwrack-cirrus",
+    "_blur": "keine Kaesten: kein Mensch im Bild — was auf der Obergeschoss-Bruestung haengt, ist Waesche, bei 6-facher Vergroesserung geprueft; der Baggerlader traegt kein Kennzeichen. Das Luftfahrzeugkennzeichen 9M-ZWP bleibt lesbar: es ist eine oeffentliche Registernummer, kein Kfz-Kennzeichen eines Anwohners, und es ist der einzige pruefbare Teil des Eintrags"
+  },
+  "2026-08-19_102236.jpg": {
+    "name": "tioman-katze-zwei-augenfarben",
+    "_blur": "keine Kaesten: nur die Katze auf Kunstrasen — kein Mensch, kein Fahrzeug, kein Kennzeichen, keine Beschriftung"
+  },
+  "2026-08-20_024346.jpg": {
+    "name": "tioman-juara-weg-schild-perhilitan",
+    "_blur": "keine Kaesten: nur Schild und Wald — kein Mensch, kein Fahrzeug, keine private Angabe. Der Schildtext ist eine amtliche Bekanntmachung"
+  },
+  "2026-08-20_062331.jpg": {
+    "name": "tioman-juara-weg-betonpiste",
+    "_blur": "keine Kaesten: Weg, Wald, Meer — kein Mensch, kein Fahrzeug"
+  },
+  "2026-08-20_062343.jpg": {
+    "name": "tioman-juara-weg-betontreppe",
+    "_blur": "keine Kaesten: nur Treppe und Unterholz"
+  },
+  "2026-08-20_062345.jpg": {
+    "name": "tioman-juara-weg-rohr",
+    "_blur": "keine Kaesten: nur Rohr und Waldboden"
+  },
+  "2026-08-20_062338.jpg": {
+    "name": "tioman-juara-weg-waran",
+    "_blur": "keine Kaesten: nur das Tier auf dem Pfad"
+  },
+  "2026-08-20_062329.jpg": {
+    "name": "tioman-juara-weg-bach",
+    "_blur": "keine Kaesten: nur Wasser und Wald"
+  },
+  "2026-08-20_062336.jpg": {
+    "name": "tioman-juara-weg-urwaldriese",
+    "_blur": "keine Kaesten: nur Bewuchs und Himmel"
+  },
+  "2026-08-20_062334.jpg": {
+    "name": "tioman-juara-weg-urwaldriese-quer",
+    "_blur": "keine Kaesten: nur Bewuchs und Himmel"
+  },
+  "2026-08-20_062341.jpg": {
+    "name": "tioman-juara-weg-blauer-falter",
+    "_blur": "keine Kaesten: nur Falter und Waldboden"
+  },
+  "2026-08-20_062327.jpg": {
+    "name": "tioman-juara-torbogen",
+    "_blur": "drei Kaesten: die Nummernschildflaechen der beiden Pick-ups am Strassenrand (unleserlich, aber Kennzeichenflaeche) und der Kopf des Rollerfahrers rechts",
+    "blur": [
+      [
+        0.211,
+        0.565,
+        0.028,
+        0.019
+      ],
+      [
+        0.3,
+        0.574,
+        0.028,
+        0.018
+      ],
+      [
+        0.566,
+        0.536,
+        0.026,
+        0.032
+      ]
+    ]
+  },
+  "2026-08-20_062325.jpg": {
+    "name": "tioman-juara-tafel-flughunde",
+    "_blur": "ein Kasten: das lesbare Kfz-Kennzeichen des schwarzen Pick-ups links. Der Wagen rechts im Anschnitt zeigt nur Dach und Spiegel, kein Kennzeichen",
+    "blur": [
+      [
+        0.062,
+        0.616,
+        0.05,
+        0.038
+      ]
+    ]
+  },
+  "2026-08-20_062316.jpg": {
+    "name": "tioman-juara-strand-nord",
+    "_blur": "ein Kasten: die einzelne am Strand liegende Person. Winzig im Bild, aber ein Fremder in Badekleidung",
+    "blur": [
+      [
+        0.552,
+        0.52,
+        0.058,
+        0.034
+      ]
+    ]
+  },
+  "2026-08-20_062318.jpg": {
+    "name": "tioman-juara-strand-brandung",
+    "_blur": "keine Kaesten: die Gestalten am fernen Strandende sind wenige Pixel gross, kein Gesicht, kein Kennzeichen"
+  },
+  "2026-08-20_062320.jpg": {
+    "name": "tioman-juara-strand-palmen",
+    "_blur": "ein Kasten: dieselbe am Strand liegende Person wie im Nordbild",
+    "blur": [
+      [
+        0.05,
+        0.576,
+        0.062,
+        0.034
+      ]
+    ]
+  },
+  "2026-08-20_062322.jpg": {
+    "name": "tioman-juara-strand-suedspitze",
+    "_blur": "keine Kaesten: die Boote liegen weit draussen, keine Person erkennbar, keine Beschriftung lesbar"
+  },
+  "2026-08-20_071933.jpg": {
+    "name": "tioman-benzin-in-flaschen",
+    "_blur": "keine Kaesten: keine Person im Bild, kein Gesicht, kein Kennzeichen; die einzige Beschriftung ist das Preisschild und der Kanister-Aufdruck JM PETROL"
+  },
+  "2026-08-21_111001.jpg": {
+    "name": "mersing-sri-subramaniar-schild"
+  },
+  "2026-08-21_111003.jpg": {
+    "name": "mersing-sri-subramaniar-fassade"
+  },
+  "2026-08-22_060737.jpg": {
+    "name": "bus-sanwa-tankstelle"
+  },
+  "2026-08-22_060732.jpg": {
+    "name": "tankstelle-vorplatz",
+    "_blur": "drei Kfz-Kennzeichen Fremder (Limousine an der Saeule, Wagen links am Rand, SUV dahinter)",
+    "blur": [
+      [
+        0.512,
+        0.622,
+        0.038,
+        0.032
+      ],
+      [
+        0.0,
+        0.852,
+        0.022,
+        0.036
+      ],
+      [
+        0.598,
+        0.542,
+        0.032,
+        0.03
+      ]
+    ]
+  },
+  "2026-08-22_060746.jpg": {
+    "name": "wegweiser-kuantan-rompin"
+  },
+  "2026-08-22_060741.jpg": {
+    "name": "boote-flaggen-merdeka",
+    "_blur": "Registriernummer eines fremden Fischerboots",
+    "blur": [
+      [
+        0.434,
+        0.527,
+        0.034,
+        0.024
+      ]
+    ]
+  },
+  "2026-08-22_060744.jpg": {
+    "name": "boote-flaggen-durch-blaetter"
+  },
+  "2026-08-22_115240.jpg": {
+    "name": "hochstrasse-ins-zentrum-merdeka118"
+  },
+  "2026-08-22_115233.jpg": {
+    "name": "blick-menara-kl-merdeka118"
+  },
+  "2026-08-22_115235.jpg": {
+    "name": "blick-hotels-pool-bahnstation",
+    "position": "top"
+  },
+  "2026-08-22_115224.jpg": {
+    "name": "flagge-bankhochhaus-merdeka"
+  },
+  "2026-08-22_115217.jpg": {
+    "name": "petronas-von-unten-skybridge"
+  },
+  "2026-08-22_115215.jpg": {
+    "name": "saloma-flaggen-tuerme-nachts"
+  },
+  "2026-08-23_052224.jpg": {
+    "name": "batu-caves-murugan-treppe",
+    "blur": [
+      [
+        0.0,
+        0.898,
+        1.0,
+        0.102
+      ]
+    ]
+  },
+  "2026-08-23_052217.jpg": {
+    "name": "batu-caves-tempelhoehle-lichtschacht"
+  },
+  "2026-08-23_052212.jpg": {
+    "name": "batu-caves-deckenoeffnung"
+  },
+  "2026-08-23_052222.jpg": {
+    "name": "batu-caves-treppe-blick-stadt",
+    "blur": [
+      [
+        0.63,
+        0.615,
+        0.045,
+        0.072
+      ],
+      [
+        0.696,
+        0.656,
+        0.034,
+        0.055
+      ],
+      [
+        0.727,
+        0.672,
+        0.042,
+        0.068
+      ],
+      [
+        0.658,
+        0.758,
+        0.042,
+        0.065
+      ],
+      [
+        0.508,
+        0.63,
+        0.032,
+        0.048
+      ],
+      [
+        0.542,
+        0.676,
+        0.03,
+        0.044
+      ],
+      [
+        0.556,
+        0.633,
+        0.03,
+        0.048
+      ]
+    ]
+  },
+  "2026-08-23_052228.jpg": {
+    "name": "batu-caves-statue-ueber-tempelreihe"
+  },
+  "2026-08-23_052233.jpg": {
+    "name": "batu-caves-makaken"
+  }
 }

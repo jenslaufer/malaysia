@@ -957,6 +957,69 @@ Straße.
 
 ---
 
+## Batu Caves
+
+**✓ Die goldene Figur und die bunte Treppe bekommt man nur vom Vorplatz zusammen aufs Bild
+(23.08.).** Links steht das Gopuram eines kleinen Tempels, rechts die goldene Murugan-Statue,
+dazwischen läuft die Treppe als schmales Band aus Rot, Gelb, Grün und Blau die Felswand hoch.
+Wer näher herangeht, hat entweder die Statue oder die Treppe im Bild, nicht beides. Der Maßstab
+kommt ohnehin von der Wand dahinter: grauer Kalkstein mit Bewuchs, der über der Figur noch
+einmal so weit hinaufgeht. Von der Teichseite aus steht dieselbe Statue über einer langen,
+durchgehend bemalten Tempelreihe, davor eine blaue Fußgängerbrücke über grünes Wasser.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![Die goldene Murugan-Statue vor der bewachsenen Kalksteinwand von Batu Caves, links das bunte Gopuram eines Tempels, in der Mitte die regenbogenfarbene Treppe.](foto:2026-08-23_052224.jpg)
+![Dieselbe Statue von der Teichseite aus, davor eine lange bunt bemalte Tempelreihe und eine blaue Fußgängerbrücke über grünes Wasser.](foto:2026-08-23_052228.jpg)
+
+**✓ Oben lohnt der Blick zurück mehr als die Treppe selbst (23.08.).** Von der obersten Stufe
+sieht man über die Geländer hinweg die ganze Flucht hinunter: der gepflasterte Vorplatz, dahinter
+Reisebusse und Parkplätze, eine Autobahnauffahrt auf Stelzen und im Dunst die Hochhäuser von
+Kuala Lumpur. Die Stufen sind steil und haben keinen Absatz zum Ausruhen; wer heruntergeht,
+schaut die ganze Zeit auf die Stadt. Rechts daneben läuft eine zweite, unbemalte Treppe.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![Blick von der obersten Stufe über die regenbogenfarbenen Geländer hinunter auf den Vorplatz, dahinter Parkplätze, eine Autobahnauffahrt und die Hochhäuser von Kuala Lumpur im Dunst.](foto:2026-08-23_052222.jpg)
+
+**✓ In der Höhle steht ein ganzer Tempel, und das Licht kommt von oben (23.08.).** Hinter der
+Treppe öffnet sich eine Halle, so hoch, dass die Stalaktiten an der Decke klein wirken. Darin
+steht ein bunter Tempelturm, ausgeschildert als Sri Velayuthar Temple (Main Temple). Durch ein
+Loch in der Decke fällt ein einzelner Lichtstrahl schräg auf den Boden — das ist die ganze
+Beleuchtung in der Mitte der Halle. Am hinteren Ende führt eine weitere Treppe zu einer zweiten
+Öffnung hinauf; von unten sieht man dort nur Fels, Grün und ein Vordach an der Kante,
+mehrere Stockwerke über dem Kopf.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![Blick in die Tempelhöhle von Batu Caves: ein bunter Tempelturm links, rechts eine hohe Felswand, dazwischen fällt ein Lichtstrahl durch eine Öffnung in der Decke.](foto:2026-08-23_052217.jpg)
+![Senkrechter Blick nach oben durch die Öffnung in der Höhlendecke: Felswände, Grün am Rand und ein kleines Vordach hoch oben an der Kante.](foto:2026-08-23_052212.jpg)
+
+**✓ Auf der Mauer am Weg laufen Makaken (23.08.).** Kein Gehege, kein Abstand: ein ausgewachsenes
+Tier läuft über die Felsbrüstung direkt neben dem Weg, ein Jungtier hinterher, ein drittes sitzt
+am Rand. Sie halten sich genau dort auf, wo die Besucher entlanggehen.
+<!-- werkstatt: telegram=2026-08-23T05:22 -->
+<!-- ort: kuala-lumpur -->
+
+![Zwei Makaken auf einer Felsbrüstung am Weg in Batu Caves, ein ausgewachsenes Tier und ein Jungtier, dahinter Grün und Felswand.](foto:2026-08-23_052233.jpg)
+
+**○ Der Ort liegt nicht in Kuala Lumpur.** Batu Caves gehört zu Gombak im Bundesstaat Selangor,
+rund 13 km nördlich der Stadtmitte. Die KTM-Komuter-Linie ab KL Sentral endet direkt an der
+Anlage, Station Batu Caves.
+
+**○ Zwei Zahlen dazu: 272 Stufen und 42,7 Meter.** So viele Betonstufen führen zur Tempelhöhle
+hinauf. Bunt gestrichen sind sie erst seit August 2018 — auf älteren Fotos ist die Treppe grau.
+Die Murugan-Statue am Fuß wurde im Januar 2006 eingeweiht und ist 42,7 m hoch, eine der höchsten
+ihrer Art. Der Kalkstein selbst ist über 400 Millionen Jahre alt.
+
+**○ Die Hauptgrotte kostet nichts, die Nebengrotten schon.** Für die große Tempelhöhle wird kein
+Eintritt verlangt. Ramayana Cave und Cave Villa werden getrennt bezahlt; Reiseseiten nennen für
+2026 rund RM 15 und schreiben übereinstimmend, auf dem Gelände werde nur bar gezahlt. Für den
+Aufstieg müssen Knie und Schultern bedeckt sein, am Fuß der Treppe werden Sarongs für etwa
+RM 10 bis 15 verkauft. Alles nachgeschlagen, nicht selbst geprüft.
+
+---
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
