@@ -955,6 +955,24 @@ Straße.
 
 ![Nachtaufnahme: ein beleuchteter Schriftzug „Saloma Kuala Lumpur" auf geschwungenem Vordach, davor malaysische Flaggen an schrägen Masten, dahinter die angestrahlten Petronas Towers.](foto:2026-08-22_115215.jpg)
 
+**○ Der GoKL-Stadtbus ist für Ausländer nicht mehr kostenlos, und bar geht gar nicht.** Fast jeder
+Reiseführer nennt ihn gratis. Das gilt seit dem 1. Januar 2024 nur noch für Malaysier mit
+registrierter MyKad; Ausländer zahlen RM1 pro Fahrt, Kinder bis 12 fahren frei. Bezahlt wird
+ausschließlich bargeldlos — Touch'n'Go, QR-Code oder kontaktlose Kredit- bzw. Debitkarte, also
+dieselbe Karte, die im Bus von JB Sentral nach Larkin funktioniert hat. Zu viert sind das RM4 pro
+Strecke, damit ist der Preisvorteil gegenüber einem Grab klein. Quelle: DBKL, gelesen im
+August 2026. Es gibt Seiten, die weiterhin „no charge" schreiben — die sind veraltet.
+
+**○ Die Linie, die Besucher brauchen, hält an der Jalan Sultan Ismail.** Von den 15 GoKL-Linien
+sind für den Stadtkern vier gedacht. Die Green Line (GOKL-01) fährt einen Ring ab Suria KLCC über
+die Jalan Ampang in die Jalan Sultan Ismail und weiter nach Bukit Bintang; ihre Halte heißen dort
+nach den Häusern an der Straße — „Renaissance Hotel" an der Kreuzung mit der Jalan Ampang, danach
+„Hotel Concorde" und „Life Centre". Die Blue Line (GOKL-04) kommt von Titiwangsa und hält an der
+Monorail-Station Bukit Nanas mitten auf der Jalan Sultan Ismail sowie an der LRT-Station
+Dang Wangi. Beide fahren täglich 06:00 bis 23:00, alle 5 bis 15 Minuten. Wer an der Jalan Sultan
+Ismail wohnt, hat den nächsten Halt in rund 300 Metern. In Google Maps sind die Linien als
+„Rapid KL Bus" beschriftet, nicht als GoKL.
+
 ---
 
 ## Batu Caves
