@@ -959,6 +959,17 @@ has this problem: its loop is small, four stops from "Renaissance Hotel" to Pavi
 stay seated it comes back past your starting point via Suria KLCC at the Petronas Towers. That
 makes it the more useful of the two for visitors, even though the Blue Line stop is closer.
 
+
+**○ The colour is not on the bus — GoKL lines are told apart by number.** The four city lines are
+called Green, Purple, Red and Blue, but since 1 August 2023 DBKL has run them officially under
+numbers: GOKL 01 to 04, with the colour kept only as a suffix on the name. The entire fleet is
+painted green and turquoise, so all four lines look identical from outside. Waiting at the stop
+for a green bus means waiting for every bus. The line shows only on the display at the front,
+with number, colour name and destination — for the Green Line, "GOKL 01" and "KLCC". On top of
+that, poles on the same street can carry near-identical names: on Jalan Sultan Ismail a stop
+called "Renaissance Hotel", served by line 300, stands 50 metres from the Green Line stop
+"Berjaya Central Park / Renaissance Hotel".
+
 ---
 
 ## Batu Caves

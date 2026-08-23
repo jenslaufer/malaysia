@@ -984,6 +984,17 @@ vier Halte bis Pavilion, und wer sitzen bleibt, kommt über Suria KLCC an den Pe
 wieder am Ausgangspunkt vorbei. Deshalb ist sie für Besucher die brauchbarere der beiden, obwohl
 der Blue-Halt näher liegt.
 
+**○ Die Farbe steht nicht am Bus — GoKL erkennt man nur an der Nummer.** Die vier Stadtlinien
+heißen Green, Purple, Red und Blue, aber seit dem 1. August 2023 führt DBKL sie offiziell unter
+Nummern: GOKL 01 bis 04, die Farbe hängt nur noch als Zusatz am Namen. Die ganze Flotte ist
+grün-türkis lackiert, alle vier Linien sehen von außen gleich aus. Wer am Halt auf einen grünen
+Bus wartet, wartet auf jeden. Die Linie steht allein auf der Anzeige vorne, dort mit Nummer,
+Farbnamen und Ziel — bei der Green Line also „GOKL 01" und „KLCC". Dazu kommt, dass Masten an
+derselben Straße ähnlich heißen können: an der Jalan Sultan Ismail stehen 50 Meter auseinander
+ein Halt „Renaissance Hotel", an dem die Linie 300 hält, und der Green-Line-Halt
+„Berjaya Central Park / Renaissance Hotel".
+
+
 ---
 
 ## Batu Caves
