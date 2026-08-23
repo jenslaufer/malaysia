@@ -973,6 +973,17 @@ Dang Wangi. Beide fahren täglich 06:00 bis 23:00, alle 5 bis 15 Minuten. Wer an
 Ismail wohnt, hat den nächsten Halt in rund 300 Metern. In Google Maps sind die Linien als
 „Rapid KL Bus" beschriftet, nicht als GoKL.
 
+**○ Alle GoKL-Linien sind Einbahn-Ringe — der nächste Halt ist oft der falsche.** Auf einer
+Ringlinie fährt der Bus nur in eine Richtung, und das entscheidet, welchen Halt man nimmt. Wer an
+der Jalan Sultan Ismail wohnt, hat die Monorail-Station Bukit Nanas mit rund 270 Metern am
+nächsten — die Blue Line passiert sie aber auf dem Rückweg: von dort nach Bukit Bintang fährt sie
+erst über Sogo, Chow Kit, Titiwangsa und Kampung Baru, also fast einmal komplett herum, rund
+20 Halte. Der Blue-Halt in Richtung Bukit Bintang heißt „Hotel Concorde" und liegt 450 Meter
+entfernt. Die Green Line hat das Problem kaum: Ihr Ring ist klein, ab „Renaissance Hotel" sind es
+vier Halte bis Pavilion, und wer sitzen bleibt, kommt über Suria KLCC an den Petronas-Türmen
+wieder am Ausgangspunkt vorbei. Deshalb ist sie für Besucher die brauchbarere der beiden, obwohl
+der Blue-Halt näher liegt.
+
 ---
 
 ## Batu Caves

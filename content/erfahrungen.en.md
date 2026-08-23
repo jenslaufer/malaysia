@@ -949,6 +949,16 @@ station, halfway along Jalan Sultan Ismail, and at Dang Wangi LRT station. Both 
 06:00 to 23:00, every 5 to 15 minutes. If you stay on Jalan Sultan Ismail the nearest stop is
 about 300 metres away. In Google Maps the lines are labelled "Rapid KL Bus", not GoKL.
 
+**○ Every GoKL line is a one-way loop — the nearest stop is often the wrong one.** On a loop
+service the bus runs in one direction only, and that decides which stop you want. If you stay on
+Jalan Sultan Ismail, the Bukit Nanas monorail station is the closest at about 270 metres — but the
+Blue Line passes it on the way back: from there to Bukit Bintang it first runs via Sogo, Chow Kit,
+Titiwangsa and Kampung Baru, almost the full circle, some 20 stops. The Blue Line stop heading
+towards Bukit Bintang is called "Hotel Concorde" and sits 450 metres away. The Green Line barely
+has this problem: its loop is small, four stops from "Renaissance Hotel" to Pavilion, and if you
+stay seated it comes back past your starting point via Suria KLCC at the Petronas Towers. That
+makes it the more useful of the two for visitors, even though the Blue Line stop is closer.
+
 ---
 
 ## Batu Caves
