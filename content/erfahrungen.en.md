@@ -996,6 +996,34 @@ last updated in December 2025.
 <!-- werkstatt: telegram=2026-08-23T08:46 -->
 <!-- ort: kuala-lumpur -->
 
+**✓ From Jalan Hang Kasturi, Merdeka 118 stands at the end of the street (23 Aug).** At Central
+Market the street runs straight at the tower, and because only two- and three-storey shophouses
+stand in front of it, you get the whole thing into one frame, base to spire, with the old town in
+front. On the left a yellow guesthouse with Chinese characters, on the right the market buildings
+and a green bus, and between them the pale blue glass needle. The tower is a good kilometre away
+and still fills half the picture. You cannot take that shot at the Petronas Towers, because there
+you are standing right underneath them.
+<!-- werkstatt: telegram=2026-08-23T09:25 -->
+<!-- ort: kuala-lumpur -->
+
+![Looking down Jalan Hang Kasturi: a yellow guesthouse with Chinese characters on the left, market buildings and a green bus on the right, and the pale blue glass tower Merdeka 118 at the end of the street.](foto:2026-08-23_092549.jpg)
+
+**○ Merdeka 118 is the second-tallest building in the world, and you still cannot go up.** The
+tower measures 678.9 metres and has 118 floors; only the Burj Khalifa in Dubai is taller. It
+stands on Jalan Hang Jebat next to Stadium Merdeka, where Malaysia declared its independence on
+31 August 1957. That is where the name comes from, because "merdeka" means independence, and the
+diamond-patterned glass facade picks up the raised hand of Tunku Abdul Rahman at that very
+moment. The building was finished in November 2023 and inaugurated in January 2024. The
+observation deck "The View at 118" on level 116, at roughly 519 metres, is still not open to
+visitors in August 2026, and the operator gives no date. The shopping centre at the foot of the
+tower is missing too: in May the word was August 2026, now it is November. The only part open is
+the Park Hyatt from level 75 upwards, and all of its restaurants sit on that floor; whether you
+can ride up without a room, we could not establish. If you want to go anyway: from Central Market
+it is a good kilometre on foot along Jalan Hang Jebat, about fifteen minutes. By rail, take the
+MRT to Merdeka station on the Kajang line, exit A, and walk about ten minutes from there.
+<!-- werkstatt: telegram=2026-08-23T09:25 -->
+<!-- ort: kuala-lumpur -->
+
 ---
 
 ## Batu Caves

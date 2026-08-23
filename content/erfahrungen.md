@@ -1021,6 +1021,35 @@ Kuala Lumpur; kostenlos für Android und iPhone, zuletzt im Dezember 2025 aktual
 <!-- werkstatt: telegram=2026-08-23T08:46 -->
 <!-- ort: kuala-lumpur -->
 
+**✓ Von der Jalan Hang Kasturi steht Merdeka 118 am Ende der Straße (23.08.).** Am Central Market
+läuft die Straße genau auf den Turm zu, und weil davor nur zwei- und dreistöckige Ladenhäuser
+stehen, bekommt man ihn hier vom Sockel bis zur Spitze ins Bild — mit der Altstadt davor. Links
+ein gelbes Gästehaus mit chinesischen Schriftzeichen, rechts die Marktgebäude und ein grüner Bus,
+dazwischen die hellblaue Glasnadel. Der Turm ist gut einen Kilometer entfernt und füllt trotzdem
+das halbe Bild. An den Petronas Towers gelingt so eine Aufnahme nicht, weil man dort direkt
+davorsteht.
+<!-- werkstatt: telegram=2026-08-23T09:25 -->
+<!-- ort: kuala-lumpur -->
+
+![Blick die Jalan Hang Kasturi hinunter: links ein gelbes Gästehaus mit chinesischen Schriftzeichen, rechts Marktgebäude und ein grüner Bus, am Ende der Straße der hellblaue Glasturm Merdeka 118.](foto:2026-08-23_092549.jpg)
+
+**○ Merdeka 118 ist das zweithöchste Gebäude der Welt, und hinauf kommt man trotzdem nicht.** Der
+Turm misst 678,9 Meter und hat 118 Stockwerke; höher ist weltweit nur der Burj Khalifa in Dubai.
+Er steht an der Jalan Hang Jebat neben dem Stadion Merdeka, in dem Malaysia am 31. August 1957
+seine Unabhängigkeit ausrief. Daher der Name, denn „merdeka" heißt Unabhängigkeit, und die
+rautenförmige Glasfassade nimmt die erhobene Hand von Tunku Abdul Rahman bei genau diesem Ruf
+auf. Fertig war der Bau im November 2023, eingeweiht wurde er im Januar 2024. Die
+Aussichtsplattform „The View at 118" auf Ebene 116 in rund 519 Metern ist im August 2026 noch
+nicht für Besucher geöffnet, und einen Termin nennt der Betreiber nicht. Auch das Einkaufszentrum
+am Fuß des Turms fehlt noch: im Mai hieß es August 2026, inzwischen ist von November die Rede.
+Geöffnet hat allein das Park Hyatt ab Ebene 75, dessen Restaurants alle auf dieser Etage liegen;
+ob man ohne Zimmer hinauffahren darf, konnten wir nicht klären. Wer trotzdem hin will: vom
+Central Market sind es zu Fuß gut einen Kilometer über die Jalan Hang Jebat, ungefähr eine
+Viertelstunde. Mit der Bahn fährt man zur MRT-Station Merdeka auf der Kajang-Linie, Ausgang A,
+und geht von dort noch etwa zehn Minuten.
+<!-- werkstatt: telegram=2026-08-23T09:25 -->
+<!-- ort: kuala-lumpur -->
+
 
 ---
 
