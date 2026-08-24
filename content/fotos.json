@@ -633,5 +633,39 @@
         0.135
       ]
     ]
+  },
+  "2026-08-24_060659.jpg": {
+    "name": "kl-bukit-bintang-fahrenheit88",
+    "_zuschnitt": "Strassenaufnahme mit ueber zwanzig fremden Gesichtern aus der Naehe. Die Aussage steht ueber den Koepfen — Fassade, Anzeigetafel, Springbrunnen, Flaggen. Weggeschnitten statt zwanzigmal verwischt: was nicht mehr da ist, kann kein vergessener Kasten freilassen.",
+    "zuschnitt": [
+      0.0,
+      0.0,
+      0.875,
+      0.618
+    ]
+  },
+  "2026-08-24_060704.jpg": {
+    "name": "kl-klcc-park-teich",
+    "_blur": "Frau mit Kappe rechts im Vordergrund, Gesicht klar erkennbar",
+    "blur": [
+      [
+        0.855,
+        0.83,
+        0.072,
+        0.125
+      ]
+    ]
+  },
+  "2026-08-24_060726.jpg": {
+    "name": "kl-flussweg-klang",
+    "_blur": "Mann an der Mauer oben rechts, Gesicht erkennbar",
+    "blur": [
+      [
+        0.918,
+        0.316,
+        0.032,
+        0.048
+      ]
+    ]
   }
 }

@@ -1158,6 +1158,8 @@ welchem sie sind, denn von außen sieht man das nicht.
 <!-- werkstatt: telegram=2026-08-24T06:06 -->
 <!-- ort: kuala-lumpur -->
 
+![Blick über die Kreuzung an der Bukit Bintang: links der Springbrunnen vor der Facettenfassade der Starhill Gallery, gegenüber das Einkaufszentrum fahrenheit88 mit großer Anzeigetafel, dazwischen malaysische Flaggen an Masten.](foto:2026-08-24_060659.jpg)
+
 **✓ Im Einkaufszentrum saß ein Falter von der Größe einer Hand (24.08.).** Erst auf dem
 polierten Boden zwischen den Läden, dann draußen auf der Fußmatte am Eingang: braungrau, mit
 einem hellen Band quer über beide Flügel und kurzen Zacken am Flügelrand. Er blieb sitzen,
@@ -1173,6 +1175,28 @@ etwa 16 cm breit, ist nachtaktiv und tritt in Malaysia und Singapur saisonal in 
 meist zwischen Mai und August, wenn die Tiere massenhaft an beleuchteten Gebäuden landen. Das
 erklärt, warum einer mitten am Tag in einem Einkaufszentrum sitzt. Bestimmt haben wir ihn nicht,
 das ist nachgeschlagen.
+
+**✓ Im Teich des Parks hinter Suria KLCC stehen Skulpturen im Wasser (24.08.).** Ein
+Buckelwal steht senkrecht im flachen Wasser, den Kopf nach unten, daneben zwei Delfine und eine
+verspiegelte Kugel. Dahinter liegt ein hellblaues, flaches Becken, in das Kinder hineinwaten
+können. Der Blick geht über die Baumkronen auf die Hochhäuser ringsum, am Dach lesbar Traders
+Hotel und Lexis. Es ist derselbe Park, aus dem die Türme ganz aufs Bild passen — nur in die
+andere Richtung geschaut.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Der Teich im Park hinter Suria KLCC: eine Buckelwal-Skulptur steht senkrecht im Wasser, daneben Delfine und eine verspiegelte Kugel; dahinter ein hellblaues flaches Becken, Palmen und die Hochhäuser des Viertels.](foto:2026-08-24_060704.jpg)
+
+**✓ Am Fluss führt ein Steg durch die Innenstadt, ohne Verkehr und ohne Ampeln (24.08.).** Der
+Fluss läuft dort in einem betonierten Bett und führte wenig Wasser; auf dem rechten Ufer liegt
+ein schmaler Holzsteg mit Metallgeländer, an den Rändern dicht bepflanzt, und er läuft geradeaus
+auf eine blaue Stahlbrücke zu. Über das andere Ufer hinweg stehen die Türme der Innenstadt, und
+zwischen ihnen eine weiße Kuppel. Wer im Zentrum ein Stück zu Fuß gehen will, kommt hier weiter,
+ohne an einer Kreuzung zu warten.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Ein schmaler Holzsteg mit Metallgeländer am Ufer eines betonierten Flussbetts, dicht bepflanzt; voraus eine blaue Stahlbrücke, dahinter Hochhäuser und eine weiße Kuppel.](foto:2026-08-24_060726.jpg)
 
 **✓ Der Bahnsteig einer Hochbahn-Station ist ein kostenloser Aussichtsplatz, und abends fällt
 die Sonne genau hinein (24.08.).** Die Station am Hauptsitz der POS Malaysia liegt über der

@@ -1001,6 +1001,143 @@ class TestBildgewicht(TestFotos):
                             "der Sperrkasten hat die kleine Fassung nicht erreicht")
 
 
+class TestZuschnitt(unittest.TestCase):
+    """Wegschneiden ist der staerkere Schutz, und manchmal der einzig ehrliche.
+
+    Am 24.08. lagen 5 von 16 Bildern aus Kuala Lumpur ungenutzt herum, weil auf
+    jedem ueber zwanzig fremde Gesichter aus der Naehe zu sehen sind. Zwanzig
+    von Hand gepflegte Sperrkaesten sind genau der Schutz, der wie Schutz
+    aussieht und keiner ist — es genuegt, einen zu vergessen. Auf dem Bild vom
+    Fahrenheit 88 steht die Aussage ueber den Koepfen: Fassade, Anzeigetafel,
+    Springbrunnen, Flaggen. Ein Zuschnitt nimmt die Bildpunkte weg, statt sie
+    zu verwischen — was nicht mehr da ist, kann kein Kasten verfehlen.
+    """
+
+    def setUp(self):
+        build.SPRACHE = "de"
+        self.tmp = tempfile.mkdtemp()
+        self.quelle = Path(self.tmp) / "quelle"
+        self.ziel = Path(self.tmp) / "fotos"
+        self.quelle.mkdir()
+        self.ziel.mkdir()
+        self._alt = (build.FOTO_QUELLE, build.FOTO_ZIEL, dict(build.FOTO_DATEN))
+        build.FOTO_QUELLE, build.FOTO_ZIEL = self.quelle, self.ziel
+        build.FOTO_DATEN = {}
+
+    def tearDown(self):
+        build.FOTO_QUELLE, build.FOTO_ZIEL, build.FOTO_DATEN = self._alt
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def _jpeg(self, name="bild.jpg", groesse=(1200, 800)):
+        """Oben eine ruhige Flaeche, unten Rauschen. So laesst sich messen,
+        ob wirklich der obere Teil uebrig geblieben ist."""
+        bild = Image.new("RGB", groesse, (200, 200, 200))
+        for x in range(groesse[0]):
+            for y in range(groesse[1] // 2, groesse[1]):
+                bild.putpixel((x, y), ((x * 7) % 256, (y * 13) % 256, 90))
+        pfad = self.quelle / name
+        bild.save(pfad, "JPEG", quality=95)
+        return pfad
+
+    @staticmethod
+    def _streuung(bild) -> float:
+        werte = list(bild.convert("L").getdata())
+        mittel = sum(werte) / len(werte)
+        return (sum((w - mittel) ** 2 for w in werte) / len(werte)) ** 0.5
+
+    def test_zuschnitt_nimmt_den_rest_weg(self):
+        """Der Kern: die weggeschnittenen Bildpunkte sind weg, nicht verwischt."""
+        self._jpeg("platz.jpg", groesse=(1200, 800))
+        build.FOTO_DATEN = {"platz.jpg": {"zuschnitt": [0.0, 0.0, 1.0, 0.5]}}
+        ziel = build.verarbeite_foto("platz.jpg")
+        with Image.open(ziel) as bild:
+            self.assertEqual(bild.size, (1200, 400), "der Zuschnitt hat nicht gegriffen")
+            self.assertLess(self._streuung(bild), 5,
+                            "die untere, verrauschte Haelfte steht noch im Bild")
+
+    def test_zuschnitt_ist_relativ_und_ueberlebt_das_verkleinern(self):
+        """Dieselbe Begruendung wie beim Sperrkasten: absolute Bildpunkte
+        zeigen nach dem Skalieren woanders hin, und zwar lautlos."""
+        self._jpeg("gross.jpg", groesse=(2000, 1000))
+        build.FOTO_DATEN = {"gross.jpg": {"zuschnitt": [0.25, 0.0, 0.5, 0.4]}}
+        ziel = build.verarbeite_foto("gross.jpg")
+        with Image.open(ziel) as bild:
+            # 2000x1000 -> Ausschnitt 1000x400 -> unter FOTO_MAX_BREITE, bleibt
+            self.assertEqual(bild.size, (1000, 400))
+
+    def test_sperrkasten_zaehlt_im_zugeschnittenen_bild(self):
+        """Sonst muesste ich beim Setzen eines Kastens im Kopf zurueckrechnen —
+        und ein Kasten, der falsch sitzt, sieht auf der Seite aus wie Schutz."""
+        self._jpeg("beides.jpg", groesse=(1200, 800))
+        build.FOTO_DATEN = {"beides.jpg": {
+            "zuschnitt": [0.0, 0.5, 1.0, 0.5],       # die verrauschte Haelfte
+            "blur": [[0.0, 0.0, 0.5, 1.0]],          # deren linke Haelfte
+        }}
+        ziel = build.verarbeite_foto("beides.jpg")
+        with Image.open(ziel) as bild:
+            b, h = bild.size
+            links = bild.crop((int(0.10 * b), int(0.3 * h), int(0.35 * b), int(0.7 * h)))
+            rechts = bild.crop((int(0.65 * b), int(0.3 * h), int(0.90 * b), int(0.7 * h)))
+        self.assertLess(self._streuung(links), self._streuung(rechts) / 2,
+                        "der Kasten wurde auf die Vorlage statt auf den Ausschnitt gelegt")
+
+    def test_geaenderter_zuschnitt_erzwingt_neubau(self):
+        """Der Zwischenspeicher darf keinen Zuschnitt verschlucken. Sonst
+        bleibt genau die Fassung mit den Gesichtern liegen, waehrend die
+        fotos.json sagt, sie waeren weggeschnitten."""
+        self._jpeg("cache.jpg", groesse=(1200, 800))
+        build.verarbeite_foto("cache.jpg")
+        vorher = (self.ziel / "cache.jpg").read_bytes()
+        build.FOTO_DATEN = {"cache.jpg": {"zuschnitt": [0.0, 0.0, 1.0, 0.5]}}
+        build.verarbeite_foto("cache.jpg")
+        self.assertNotEqual(vorher, (self.ziel / "cache.jpg").read_bytes(),
+                            "der Zuschnitt hat die ausgelieferte Datei nicht erreicht")
+
+    def test_zuschnitt_ausserhalb_des_bildes_bricht_ab(self):
+        """Nicht zurechtbiegen. Ein stillschweigend gekappter Kasten schneidet
+        woanders als beabsichtigt — und niemand sieht es dem Bild an."""
+        self._jpeg("daneben.jpg")
+        for kasten in ([0.5, 0.0, 0.8, 0.5], [-0.1, 0.0, 0.5, 0.5], [0.0, 0.0, 0.0, 0.5]):
+            with self.subTest(kasten=kasten):
+                build.FOTO_DATEN = {"daneben.jpg": {"zuschnitt": kasten}}
+                with self.assertRaises(build.FotoDatenException):
+                    build.verarbeite_foto("daneben.jpg")
+
+    def test_unbekannter_schluessel_bricht_ab(self):
+        """Ein Tippfehler in fotos.json (`zuschneiden` statt `zuschnitt`) waere
+        sonst still: das Bild erscheint ungeschnitten, der Build ist gruen, und
+        die Datei behauptet das Gegenteil. Genau die Bauform, gegen die dieses
+        Repo seine Sperrkaesten von Hand pflegt."""
+        self._jpeg("tippfehler.jpg")
+        build.FOTO_DATEN = {"tippfehler.jpg": {"zuschneiden": [0.0, 0.0, 1.0, 0.5]}}
+        with self.assertRaises(build.FotoDatenException):
+            build.verarbeite_foto("tippfehler.jpg")
+
+    def test_unterstrich_schluessel_bleiben_erlaubt(self):
+        """`_zuschnitt` und `_blur` tragen die Begruendung neben dem Wert.
+        Gegenprobe zum Test darueber, sonst verbietet die Pruefung die Notizen."""
+        self._jpeg("notiz.jpg")
+        build.FOTO_DATEN = {"notiz.jpg": {
+            "name": "notiz", "_zuschnitt": "warum hier geschnitten wird",
+            "zuschnitt": [0.0, 0.0, 1.0, 0.5]}}
+        self.assertIsNotNone(build.verarbeite_foto("notiz.jpg"))
+
+    def test_kaputte_fotos_json_bricht_ab_statt_ohne_sperrkaesten_zu_bauen(self):
+        """Der teuerste Fall in dieser Datei: ein Komma zu viel, und
+        `lade_foto_daten` gab {} zurueck — jedes Foto erschien dann OHNE seine
+        Sperrkaesten, mit gruenem Build. Ein Schutz, der bei einem Syntaxfehler
+        lautlos abschaltet, ist keiner."""
+        pfad = Path(self.tmp) / "kaputt.json"
+        pfad.write_text('{"a.jpg": {"blur": [[0.1, 0.1, 0.2, 0.2]],}}', encoding="utf-8")
+        with self.assertRaises(build.FotoDatenException):
+            build.lade_foto_daten(pfad)
+
+    def test_fehlende_fotos_json_bleibt_erlaubt(self):
+        """Gegenprobe: keine Datei ist keine kaputte Datei — sonst baut das
+        Repo nicht mehr, bevor das erste Foto eingetragen ist."""
+        self.assertEqual(build.lade_foto_daten(Path(self.tmp) / "gibtsnicht.json"), {})
+
+
 class TestAusgelieferteFotos(unittest.TestCase):
     """Gemessen wird am Artefakt auf der Platte, nicht am Generator.
 

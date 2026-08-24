@@ -146,13 +146,27 @@ FOTO_FORMATE = (
 FOTO_SIZES_EINZELN = "(max-width: 46rem) 92vw, 640px"
 FOTO_SIZES_GRUPPE = "(max-width: 560px) 92vw, 220px"
 
-# dateiname -> {"name": slug, "blur": [[x, y, b, h], ...]}. Die Kaesten sind
-# RELATIV (0..1), damit sie das Verkleinern ueberleben; absolute Pixel zeigen
-# nach dem Skalieren woanders hin, und zwar lautlos.
+# dateiname -> {"name": slug, "zuschnitt": [x, y, b, h], "blur": [[x, y, b, h], ...],
+# "position": "top"}. Kaesten und Zuschnitt sind RELATIV (0..1), damit sie das
+# Verkleinern ueberleben; absolute Pixel zeigen nach dem Skalieren woanders hin,
+# und zwar lautlos.
 #
 # Von Hand gepflegt, und das ist Absicht: ein Erkenner, der ein Kennzeichen von
 # vier findet, liest sich wie Schutz und ist keiner. Eine Liste, die ich gegen
 # das gerenderte Bild pruefen kann, ist ehrlicher.
+#
+# `zuschnitt` ist der staerkere der beiden Wege und laeuft ZUERST: er nimmt die
+# Bildpunkte weg, statt sie zu verwischen. Was nicht mehr da ist, kann kein
+# vergessener Kasten freilassen. Auf einer Strassenaufnahme mit zwanzig fremden
+# Gesichtern ist er darum nicht die bequemere, sondern die ehrlichere Loesung.
+# `blur` zaehlt danach im ZUGESCHNITTENEN Bild — sonst muesste man beim Setzen
+# eines Kastens im Kopf zurueckrechnen, und ein falsch sitzender Kasten sieht
+# auf der Seite aus wie Schutz.
+#
+# Schluessel mit `_` davor sind Notizen (`_zuschnitt`, `_blur`, `_position`) und
+# stehen bewusst neben dem Wert: die Begruendung altert sonst getrennt von ihm.
+FOTO_SCHLUESSEL = frozenset({"name", "blur", "zuschnitt", "position"})
+
 FOTO_DATEN: dict[str, dict] = {}
 
 # ---------------------------------------------------------------- Datenschutz
@@ -262,6 +276,18 @@ def pruefe_privat(text: str) -> None:
 
 
 # --------------------------------------------------------- Fremde Ressourcen
+
+class FotoDatenException(Exception):
+    """`content/fotos.json` sagt etwas anderes, als das Bild zeigen wird.
+
+    Bis zum 24.08. gab `lade_foto_daten` bei einem Syntaxfehler stillschweigend
+    `{}` zurueck: ein Komma zu viel, und JEDES Foto erschien ohne seine
+    Sperrkaesten — mit gruenem Build und ohne eine Zeile Ausgabe. Ein Schutz,
+    der bei einem Tippfehler lautlos abschaltet, ist keiner. Dasselbe gilt fuer
+    einen unbekannten Schluessel: `zuschneiden` statt `zuschnitt` waere ein
+    ungeschnittenes Bild, das laut Datei geschnitten ist.
+    """
+
 
 class ExternException(Exception):
     """Die Seite wuerde beim Leser etwas von fremden Servern laden."""
@@ -567,12 +593,48 @@ FOTO = re.compile(r"^!\[(?P<text>[^\]]*)\]\(foto:(?P<datei>[^)\s]+)\)$")
 
 
 def lade_foto_daten(pfad: Path = None) -> dict:
-    """Liest content/fotos.json. Fehlt sie, gibt es keine Sperrkaesten."""
+    """Liest content/fotos.json.
+
+    **Fehlt die Datei, ist das kein Fehler** — das Repo muss bauen, bevor das
+    erste Foto eingetragen ist. **Ist sie da und unlesbar, bricht der Build ab.**
+    Der Unterschied ist der ganze Punkt: unlesbar hiess frueher `{}`, und `{}`
+    heisst „keine Sperrkaesten", nicht „keine Datei".
+    """
     pfad = Path(pfad) if pfad else FOTO_DATEN_DATEI
-    try:
-        return json.loads(pfad.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
+    if not pfad.exists():
         return {}
+    try:
+        daten = json.loads(pfad.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        raise FotoDatenException(f"{pfad} ist nicht lesbar: {e}") from e
+    if not isinstance(daten, dict):
+        raise FotoDatenException(f"{pfad} enthaelt kein Objekt.")
+    return daten
+
+
+def pruefe_foto_daten(datei: str, daten: dict) -> None:
+    """Ein Eintrag muss halten, was er behauptet — sonst Abbruch, nie Zurechtbiegen.
+
+    Ein stillschweigend gekappter Zuschnitt schneidet woanders als beabsichtigt,
+    und niemand sieht es dem fertigen Bild an.
+    """
+    fremd = sorted(k for k in daten if not k.startswith("_") and k not in FOTO_SCHLUESSEL)
+    if fremd:
+        raise FotoDatenException(
+            f"{datei}: unbekannte(r) Schluessel {', '.join(fremd)} "
+            f"(erlaubt: {', '.join(sorted(FOTO_SCHLUESSEL))}, Notizen mit `_` davor)")
+
+    kaesten = [("zuschnitt", daten["zuschnitt"])] if "zuschnitt" in daten else []
+    kaesten += [("blur", k) for k in daten.get("blur", [])]
+    for feld, kasten in kaesten:
+        if len(kasten) != 4 or not all(isinstance(w, (int, float)) for w in kasten):
+            raise FotoDatenException(f"{datei}: {feld} braucht vier Zahlen [x, y, b, h].")
+        x, y, b, h = kasten
+        if b <= 0 or h <= 0:
+            raise FotoDatenException(f"{datei}: {feld} hat Breite oder Hoehe 0.")
+        if x < 0 or y < 0 or x + b > 1 or y + h > 1:
+            raise FotoDatenException(
+                f"{datei}: {feld} {kasten} liegt ausserhalb des Bildes (0..1).")
 
 
 def verarbeite_foto(datei: str) -> Path | None:
@@ -595,6 +657,7 @@ def verarbeite_foto(datei: str) -> Path | None:
 
     quelle = FOTO_QUELLE / datei
     daten = FOTO_DATEN.get(datei, {})
+    pruefe_foto_daten(datei, daten)
     name = daten.get("name") or Path(datei).stem
     ziel = FOTO_ZIEL / f"{name}.jpg"
 
@@ -610,6 +673,11 @@ def verarbeite_foto(datei: str) -> Path | None:
 
     with Image.open(quelle) as bild:
         bild = bild.convert("RGB")
+        if "zuschnitt" in daten:
+            x, y, b, h = daten["zuschnitt"]
+            breite, hoehe = bild.size
+            bild = bild.crop((int(x * breite), int(y * hoehe),
+                              int((x + b) * breite), int((y + h) * hoehe)))
         breite, hoehe = bild.size
         for x, y, b, h in daten.get("blur", []):
             kasten = (int(x * breite), int(y * hoehe),
@@ -654,11 +722,13 @@ def fassungs_pfad(name: str, breite: int, endung: str, basis: int) -> Path:
 
 def _foto_stempel(quelle: Path, daten: dict) -> str:
     """Alles, was das Ergebnis aendern darf, in einer Zeile. Der Zwischen-
-    speicher darf keinen Sperrkasten verschlucken: die Kaesten stehen deshalb
-    im Stempel, nicht nur die Datei."""
+    speicher darf keinen Sperrkasten und keinen Zuschnitt verschlucken: beide
+    stehen deshalb im Stempel, nicht nur die Datei. Sonst bliebe genau die
+    Fassung mit den Gesichtern liegen, waehrend die fotos.json sagt, sie seien
+    weggeschnitten."""
     inhalt = quelle.read_bytes()
     beschreibung = json.dumps(
-        [daten.get("blur", []), list(FOTO_BREITEN),
+        [daten.get("blur", []), daten.get("zuschnitt"), list(FOTO_BREITEN),
          [(e, o) for e, _, o in FOTO_FORMATE]], sort_keys=True)
     return hashlib.sha256(inhalt + beschreibung.encode()).hexdigest()
 

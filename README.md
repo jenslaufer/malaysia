@@ -197,6 +197,36 @@ keiner. Nach jeder Änderung das Bild ansehen, nicht nur den Test — am 17.08.
 lagen drei von vier Kästen zu tief und ein ganzer Satz Roller-Kennzeichen war
 übersehen, sichtbar erst mit eingezeichneten Rahmen über dem Original.
 
+`zuschnitt` ist ein **einzelner** relativer Kasten `[x, y, breite, höhe]` und läuft
+**vor allem anderen**: er schneidet die Vorlage zu, bevor Sperrkästen gesetzt und
+Fassungen geschrieben werden. Die Sperrkästen zählen danach im **zugeschnittenen**
+Bild — sonst müsste man beim Setzen im Kopf zurückrechnen.
+
+Er ist der stärkere der beiden Wege, und manchmal der einzig ehrliche. Am 24.08.
+lagen fünf von sechzehn Bildern aus Kuala Lumpur ungenutzt herum, weil auf jedem
+über zwanzig fremde Gesichter aus der Nähe zu sehen sind; zwanzig von Hand
+gepflegte Kästen sind genau der Schutz, der wie Schutz aussieht und keiner ist —
+es genügt, einen zu vergessen. Auf dem Bild von der Bukit Bintang steht die
+Aussage über den Köpfen: Fassade, Anzeigetafel, Springbrunnen, Flaggen. Der
+Zuschnitt nimmt die Bildpunkte weg, statt sie zu verwischen. **Was nicht mehr da
+ist, kann kein vergessener Kasten freilassen.**
+
+Drei Dinge brechen den Build ab, statt sich zurechtbiegen zu lassen — jedes davon
+wäre sonst ein Bild, das anders aussieht, als die Datei behauptet:
+
+| Fall | Warum Abbruch |
+|---|---|
+| unbekannter Schlüssel (`zuschneiden` statt `zuschnitt`) | das Bild erschiene ungeschnitten, der Build grün, die Datei sagt das Gegenteil |
+| Kasten außerhalb 0..1 oder mit Breite 0 | ein stillschweigend gekappter Kasten schneidet woanders, und niemand sieht es dem Bild an |
+| `content/fotos.json` vorhanden, aber nicht lesbar | bis zum 24.08. gab ein Komma zu viel `{}` zurück — **jedes** Foto erschien dann ohne seine Sperrkästen |
+
+Eine **fehlende** `fotos.json` bleibt erlaubt: das Repo muss bauen, bevor das
+erste Foto eingetragen ist. Unlesbar ist nicht dasselbe wie nicht vorhanden.
+
+`zuschnitt` steht im selben Stempel wie `blur` (`_foto_stempel`). Ohne das hielte
+der Zwischenspeicher genau die Fassung mit den Gesichtern am Leben, während die
+`fotos.json` sagt, sie seien weggeschnitten.
+
 `position: "top"` steuert den Bildausschnitt in der Gruppe. Beim hochkanten Foto
 des Geldautomaten steht die Aussage — die laufende Abfrage auf dem Schirm —
 oben; mittig zugeschnitten war das Bild noch da und sein Inhalt weg.

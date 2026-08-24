@@ -1132,6 +1132,8 @@ because you cannot tell from outside.
 <!-- werkstatt: telegram=2026-08-24T06:06 -->
 <!-- ort: kuala-lumpur -->
 
+![View across the junction on Bukit Bintang: on the left the fountain in front of the faceted facade of Starhill Gallery, opposite the fahrenheit88 mall with a large display screen, Malaysian flags on poles between them.](foto:2026-08-24_060659.jpg)
+
 **✓ A moth the size of a hand was sitting inside the shopping centre (24 Aug).** First on the
 polished floor between the shops, then outside on the doormat at the entrance: grey-brown, with
 a pale band across both wings and short points along the wing edges. It stayed put while people
@@ -1146,6 +1148,27 @@ walked past it, and let itself be photographed from half a metre away.
 across, is nocturnal, and appears seasonally in large numbers in Malaysia and Singapore — usually
 between May and August, when they settle on lit buildings en masse. That explains one sitting in
 a shopping centre in the middle of the day. We did not identify it ourselves, this is looked up.
+
+**✓ Sculptures stand in the water of the pond in the park behind Suria KLCC (24 Aug).** A
+humpback whale stands upright in the shallow water, head down, with two dolphins and a mirrored
+sphere beside it. Behind them lies a shallow pale-blue basin that children can wade into. The
+view runs over the treetops to the high-rises around, Traders Hotel and Lexis readable on their
+roofs. It is the same park the towers fit into one frame from — just looking the other way.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![The pond in the park behind Suria KLCC: a humpback whale sculpture standing upright in the water, dolphins and a mirrored sphere beside it; behind them a shallow pale-blue basin, palms and the high-rises of the district.](foto:2026-08-24_060704.jpg)
+
+**✓ A walkway runs along the river through the city centre, with no traffic and no lights
+(24 Aug).** The river runs there in a concrete bed and was carrying little water; along the right
+bank lies a narrow wooden walkway with a metal railing, densely planted at the edges, running
+straight towards a blue steel bridge. Across the far bank stand the towers of the centre, and a
+white dome among them. If you want to walk a stretch through the centre, this gets you along
+without waiting at a junction.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![A narrow wooden walkway with a metal railing along the bank of a concrete river bed, densely planted; ahead a blue steel bridge, behind it high-rises and a white dome.](foto:2026-08-24_060726.jpg)
 
 **✓ The platform of an elevated station is a free viewpoint, and in the evening the sun drops
 straight into it (24 Aug).** The station at the POS Malaysia headquarters sits above the road;
