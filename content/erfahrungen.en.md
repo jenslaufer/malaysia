@@ -1089,6 +1089,86 @@ checked by us.
 
 ---
 
+## National Day on 31 August
+
+**✓ In late August the city is full of flags, and at night the towers are lit in the national
+colours (24 Aug).** A single flag hanging the full height of a bank facade, small flags on the
+lamp posts of the shopping streets, rows of them on the office towers. In the evening the
+telecoms tower stood in red, white and blue, Merdeka 118 beside it in blue, yellow and red, and
+fireworks went up over the city — on an ordinary evening, with no ticket and without us knowing
+about it beforehand. If you do not know the date, you take it for coincidence.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![An office high-rise with a large Malaysian flag hanging down its entire glass facade, a wide road with a bus and a motorbike in front of it.](foto:2026-08-24_060717.jpg)
+![Night view over Kuala Lumpur: the telecoms tower lit in red, white and blue, Merdeka 118 to its right in blue, yellow and red, fireworks above.](foto:2026-08-24_060719.jpg)
+
+**○ The reason is Hari Merdeka, independence day.** On 31 August 1957 the Federation of Malaya
+became independent from Britain; the day is a national holiday. The decorations go up weeks
+ahead, and there are parade rehearsals in the days before. So anyone in Kuala Lumpur in the
+second third of August sees the city decorated without having planned for it. Looked up, not
+verified by us — we only saw what was hanging and what was lit.
+
+---
+
+## Kuala Lumpur on foot
+
+**✓ The Petronas Towers only fit into one frame from a distance (24 Aug).** From the park behind
+the shopping centre both towers stand complete in the frame, with the skybridge between them and
+the flat roof of Suria KLCC below; in front lies a pool that reflects the whole thing. Stand at
+the foot and you get one tower and no sky. That is the same rule for the third time on this trip
+— Merdeka 118 from Jalan Hang Kasturi, the Batu Caves staircase from the forecourt, and here:
+distance makes the picture, not proximity.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Both Petronas Towers at full height with the skybridge between them, the roof of Suria KLCC below and a pool with their reflection.](foto:2026-08-24_060706.jpg)
+
+**✓ On Bukit Bintang the malls stand in a chain at the same junction (24 Aug).** Starhill Gallery
+with its black-and-silver faceted facade, fahrenheit88 opposite, a three-tier fountain between
+them and the entrance to Pavilion — all within two hundred metres. You do not pick one, you walk
+down the street and you are in all of them. If you came for the air conditioning, one is enough
+anyway; if you are looking for particular shops, know in advance which building they are in,
+because you cannot tell from outside.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+**✓ A moth the size of a hand was sitting inside the shopping centre (24 Aug).** First on the
+polished floor between the shops, then outside on the doormat at the entrance: grey-brown, with
+a pale band across both wings and short points along the wing edges. It stayed put while people
+walked past it, and let itself be photographed from half a metre away.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![A large grey-brown moth with a pale cross band on the polished stone floor of a shopping centre.](foto:2026-08-24_060713.jpg)
+![The same moth outside on the ribbed doormat at the shopping centre entrance.](foto:2026-08-24_060715.jpg)
+
+**○ The markings and size fit Lyssa zampa.** The tropical swallowtail moth reaches about 16 cm
+across, is nocturnal, and appears seasonally in large numbers in Malaysia and Singapore — usually
+between May and August, when they settle on lit buildings en masse. That explains one sitting in
+a shopping centre in the middle of the day. We did not identify it ourselves, this is looked up.
+
+**✓ The platform of an elevated station is a free viewpoint, and in the evening the sun drops
+straight into it (24 Aug).** The station at the POS Malaysia headquarters sits above the road;
+across the tracks the view runs over treetops, a minaret and the hills behind, into which the sun
+sets. No observation deck, no ticket beyond the fare, and you can stand there as long as you like
+— the next train is coming anyway.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Sunset over Kuala Lumpur from the platform of an elevated station: the sun just above wooded hills, a minaret on the left, road and tracks below.](foto:2026-08-24_060724.jpg)
+
+**✓ At the gate to Petaling Street, Merdeka 118 stands directly behind the roof (24 Aug).** The
+Chinese gate with its red lettering and lanterns, the market hall roof behind it, and above that,
+with no gap at all, the pointed glass tower. Old and new in one frame, and all you have to do is
+stand under the gate and look up. The rapidKL buses pass right in front of it.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![The Chinese gate to Petaling Street with red lettering and lanterns, the market hall behind it and the pointed glass tower of Merdeka 118 above.](foto:2026-08-24_060728.jpg)
+
+---
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for

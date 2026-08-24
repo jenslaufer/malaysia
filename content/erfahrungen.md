@@ -1116,6 +1116,88 @@ RM 10 bis 15 verkauft. Alles nachgeschlagen, nicht selbst geprüft.
 
 ---
 
+## Der Nationalfeiertag am 31. August
+
+**✓ Ende August hängt die Stadt voller Flaggen, und abends leuchten die Türme in den
+Landesfarben (24.08.).** Eine einzelne Flagge über die ganze Höhe einer Bankfassade, kleine
+Flaggen an den Laternen der Einkaufsstraßen, Reihen davon an den Bürotürmen. Abends stand der
+Fernsehturm in Rot, Weiß und Blau, Merdeka 118 daneben in Blau, Gelb und Rot, und über der Stadt
+ging ein Feuerwerk hoch — an einem gewöhnlichen Abend, ohne Eintritt und ohne dass wir vorher
+davon gewusst hätten. Wer den Termin nicht kennt, hält es für Zufall.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Ein Bürohochhaus, über dessen ganze Glasfassade eine große malaysische Flagge herabhängt, davor eine breite Straße mit Bus und Motorrad.](foto:2026-08-24_060717.jpg)
+![Nachtblick über Kuala Lumpur: der Fernsehturm in Rot, Weiß und Blau angestrahlt, rechts daneben Merdeka 118 in Blau, Gelb und Rot, darüber ein Feuerwerk.](foto:2026-08-24_060719.jpg)
+
+**○ Der Grund ist Hari Merdeka, der Unabhängigkeitstag.** Am 31. August 1957 wurde die
+Föderation Malaya von Großbritannien unabhängig; der Tag ist landesweiter Feiertag. Der Schmuck
+geht Wochen vorher hoch, und in den Tagen davor gibt es Proben für die Parade. Wer im zweiten
+Drittel des August in Kuala Lumpur ist, sieht die Stadt also geschmückt, ohne dafür etwas geplant
+zu haben. Nachgeschlagen, nicht selbst geprüft — wir haben nur gesehen, was hing und leuchtete.
+
+---
+
+## Kuala Lumpur zu Fuß
+
+**✓ Die Petronas Towers bekommt man nur mit Abstand ganz aufs Bild (24.08.).** Vom Park hinter
+dem Einkaufszentrum aus stehen beide Türme vollständig im Bild, mit der Brücke dazwischen und
+dem flachen Dach von Suria KLCC darunter; davor liegt ein Wasserbecken, in dem sich alles
+spiegelt. Wer unten am Fuß steht, hat einen Turm und keinen Himmel. Das ist auf dieser Reise
+zum dritten Mal dieselbe Regel — Merdeka 118 von der Jalan Hang Kasturi, die Treppe von Batu
+Caves vom Vorplatz, und hier: der Abstand macht das Bild, nicht die Nähe.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Die beiden Petronas Towers in voller Höhe mit der Brücke dazwischen, darunter das Dach von Suria KLCC und ein Wasserbecken mit Spiegelung.](foto:2026-08-24_060706.jpg)
+
+**✓ An der Bukit Bintang stehen die Einkaufszentren als Kette an derselben Kreuzung (24.08.).**
+Starhill Gallery mit der schwarz-silbernen Facettenfassade, gegenüber fahrenheit88, dazwischen
+ein dreistufiger Springbrunnen und der Eingang zum Pavilion — alles im Umkreis von zweihundert
+Metern. Man wählt kein Haus aus, man geht die Straße hinunter und ist in allen. Wer wegen der
+Klimaanlage kommt, braucht ohnehin nur eins; wer bestimmte Läden sucht, sollte vorher wissen, in
+welchem sie sind, denn von außen sieht man das nicht.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+**✓ Im Einkaufszentrum saß ein Falter von der Größe einer Hand (24.08.).** Erst auf dem
+polierten Boden zwischen den Läden, dann draußen auf der Fußmatte am Eingang: braungrau, mit
+einem hellen Band quer über beide Flügel und kurzen Zacken am Flügelrand. Er blieb sitzen,
+während die Leute an ihm vorbeigingen, und ließ sich aus einem halben Meter fotografieren.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Ein großer braungrauer Falter mit hellem Querband auf dem polierten Steinboden eines Einkaufszentrums.](foto:2026-08-24_060713.jpg)
+![Derselbe Falter draußen auf der geriffelten Fußmatte am Eingang des Einkaufszentrums.](foto:2026-08-24_060715.jpg)
+
+**○ Zeichnung und Größe passen auf Lyssa zampa.** Der Tropische Schwalbenschwanzfalter wird bis
+etwa 16 cm breit, ist nachtaktiv und tritt in Malaysia und Singapur saisonal in großer Zahl auf —
+meist zwischen Mai und August, wenn die Tiere massenhaft an beleuchteten Gebäuden landen. Das
+erklärt, warum einer mitten am Tag in einem Einkaufszentrum sitzt. Bestimmt haben wir ihn nicht,
+das ist nachgeschlagen.
+
+**✓ Der Bahnsteig einer Hochbahn-Station ist ein kostenloser Aussichtsplatz, und abends fällt
+die Sonne genau hinein (24.08.).** Die Station am Hauptsitz der POS Malaysia liegt über der
+Straße; über die Gleise hinweg geht der Blick auf Baumkronen, ein Minarett und die Hügel
+dahinter, in die die Sonne fällt. Kein Aussichtsturm, kein Ticket außer der Fahrkarte, und man
+steht dort, solange man will — es kommt ohnehin gleich der nächste Zug.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Sonnenuntergang über Kuala Lumpur vom Bahnsteig einer Hochbahn-Station: die Sonne steht knapp über bewaldeten Hügeln, links ein Minarett, unten Straße und Gleise.](foto:2026-08-24_060724.jpg)
+
+**✓ Am Tor zur Petaling Street steht Merdeka 118 direkt hinter dem Dach (24.08.).** Das
+chinesische Tor mit rotem Schriftzug und Laternen, dahinter das Dach der Markthalle, und darüber
+ohne jeden Zwischenraum der spitze Glasturm. Alt und neu in einem Bild, und man muss dafür
+nichts weiter tun als unter dem Tor stehen und nach oben schauen. Die Busse der rapidKL fahren
+genau davor durch.
+<!-- werkstatt: telegram=2026-08-24T06:06 -->
+<!-- ort: kuala-lumpur -->
+
+![Das chinesische Tor zur Petaling Street mit roter Aufschrift und Laternen, dahinter die Markthalle und darüber der spitze Glasturm von Merdeka 118.](foto:2026-08-24_060728.jpg)
+
+---
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein

@@ -602,5 +602,41 @@
         0.012
       ]
     ]
+  },
+  "2026-08-24_060717.jpg": {
+    "name": "kl-merdeka-flagge-bankturm",
+    "position": "top",
+    "_position": "hochkant; die Flagge haengt im oberen Drittel"
+  },
+  "2026-08-24_060719.jpg": {
+    "name": "kl-fernsehturm-merdeka118-feuerwerk"
+  },
+  "2026-08-24_060706.jpg": {
+    "name": "kl-petronas-towers-vom-park",
+    "position": "top",
+    "_position": "hochkant; die Turmspitzen stehen oben"
+  },
+  "2026-08-24_060713.jpg": {
+    "name": "kl-falter-einkaufszentrum"
+  },
+  "2026-08-24_060715.jpg": {
+    "name": "kl-falter-fussmatte"
+  },
+  "2026-08-24_060724.jpg": {
+    "name": "kl-sonnenuntergang-bahnsteig"
+  },
+  "2026-08-24_060728.jpg": {
+    "name": "kl-petaling-street-tor-merdeka118",
+    "position": "top",
+    "_position": "hochkant; Tor und Turm stehen oben",
+    "_blur": "ein Kopf im Vordergrund, im Profil klar erkennbar, dazu das Kennzeichen des Busses darueber",
+    "blur": [
+      [
+        0.44,
+        0.775,
+        0.16,
+        0.135
+      ]
+    ]
   }
 }
