@@ -1133,6 +1133,7 @@ because you cannot tell from outside.
 <!-- ort: kuala-lumpur -->
 
 ![View across the junction on Bukit Bintang: on the left the fountain in front of the faceted facade of Starhill Gallery, opposite the fahrenheit88 mall with a large display screen, Malaysian flags on poles between them.](foto:2026-08-24_060659.jpg)
+![The faceted facade of Starhill Gallery above the junction, on the left the gate reading Bukit Bintang Entrance, on the right the curve of the mall with stalls in front of it.](foto:2026-08-24_060655.jpg)
 
 **✓ A moth the size of a hand was sitting inside the shopping centre (24 Aug).** First on the
 polished floor between the shops, then outside on the doormat at the entrance: grey-brown, with
@@ -1188,6 +1189,20 @@ stand under the gate and look up. The rapidKL buses pass right in front of it.
 <!-- ort: kuala-lumpur -->
 
 ![The Chinese gate to Petaling Street with red lettering and lanterns, the market hall behind it and the pointed glass tower of Merdeka 118 above.](foto:2026-08-24_060728.jpg)
+
+**✓ The Bukit Nanas forest park closes in the evening, and its gate is not the gate to the tower (24 Aug).**
+At 7pm the arch of Taman Eko Rimba KL had a locked steel gate across it, with two signs on the
+leaves: closed during bad weather, and closed on Fridays anyway. The forest shuts at 6pm. KL
+Tower sits on the same hill but has its own entrance on Jalan Puncak, a good 500 metres around
+the hill. Follow the forest and you end up at the wrong barrier.
+<!-- werkstatt: telegram=2026-08-24T10:59 -->
+<!-- ort: kuala-lumpur -->
+
+![The locked steel gate under the wooden arch reading Taman Eko Rimba KL, Hutan Simpan Bukit Nanas; two signs reading Closed on the leaves, the forest path behind.](foto:2026-08-24_105947.jpg)
+
+**○ A free shuttle runs from the Jalan Puncak gate to the tower lobby every 15 minutes, 8am to
+10pm.** The tower itself is open daily 9am to 10pm. The observation deck costs RM 80 per adult
+for non-Malaysians, the higher Sky Terrace RM 140. Looked up, not ridden ourselves.
 
 ---
 

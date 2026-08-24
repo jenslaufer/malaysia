@@ -1219,6 +1219,21 @@ genau davor durch.
 
 ![Das chinesische Tor zur Petaling Street mit roter Aufschrift und Laternen, dahinter die Markthalle und darüber der spitze Glasturm von Merdeka 118.](foto:2026-08-24_060728.jpg)
 
+**✓ Der Waldpark Bukit Nanas hat abends zu, und sein Tor ist nicht das Tor zum Fernsehturm (24.08.).**
+Um 19 Uhr stand am Bogen von Taman Eko Rimba KL ein verschlossenes Gitter, daran zwei Schilder:
+geschlossen bei schlechtem Wetter, und freitags ohnehin. Der Wald schließt um 18 Uhr. Der KL
+Tower steht auf demselben Hügel, hat aber einen eigenen Eingang an der Jalan Puncak, gut 500
+Meter um den Hügel herum. Wer zum Turm will und dem Wald folgt, steht vor der falschen Schranke.
+<!-- werkstatt: telegram=2026-08-24T10:59 -->
+<!-- ort: kuala-lumpur -->
+
+![Das verschlossene Gittertor unter dem Holzbogen mit der Aufschrift Taman Eko Rimba KL, Hutan Simpan Bukit Nanas; an den Flügeln zwei Schilder mit der Aufschrift Closed, dahinter der Waldweg.](foto:2026-08-24_105947.jpg)
+
+**○ Vom Tor an der Jalan Puncak fährt alle 15 Minuten ein kostenloser Shuttle zur Turmlobby, von
+8:00 bis 22:00.** Der Turm selbst hat täglich von 9:00 bis 22:00 offen. Die Aussichtsplattform
+kostet für Ausländer RM 80 pro Erwachsener, die höher gelegene Sky Terrace RM 140.
+Nachgeschlagen, nicht selbst gefahren.
+
 ---
 
 ## Essen
