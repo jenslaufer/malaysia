@@ -1204,6 +1204,11 @@ the hill. Follow the forest and you end up at the wrong barrier.
 10pm.** The tower itself is open daily 9am to 10pm. The observation deck costs RM 80 per adult
 for non-Malaysians, the higher Sky Terrace RM 140. Looked up, not ridden ourselves.
 
+**○ In the evening the forest park is the only one of the city-centre parks that is shut.** KLCC
+Park behind Suria KLCC is open 7am to 10pm, TRX City Park two kilometres further south-east 8am to
+10pm. Bukit Nanas closes at 6pm and is the one that no longer works for an evening walk. If you
+want greenery after the working day, head east rather than up the hill.
+
 ---
 
 ## Eating

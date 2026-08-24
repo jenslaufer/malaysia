@@ -1234,6 +1234,11 @@ Meter um den Hügel herum. Wer zum Turm will und dem Wald folgt, steht vor der f
 kostet für Ausländer RM 80 pro Erwachsener, die höher gelegene Sky Terrace RM 140.
 Nachgeschlagen, nicht selbst gefahren.
 
+**○ Abends hat von den Parks der Innenstadt der Waldpark als einziger zu.** Der KLCC Park hinter
+Suria KLCC ist von 7:00 bis 22:00 offen, der TRX City Park zwei Kilometer weiter südöstlich von
+8:00 bis 22:00. Der Bukit Nanas schließt um 18:00 und ist damit der einzige, der einen Abendspaziergang
+nicht mehr hergibt. Wer nach Feierabend ins Grüne will, geht nach Osten, nicht auf den Hügel.
+
 ---
 
 ## Essen
