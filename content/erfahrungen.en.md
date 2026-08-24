@@ -1091,16 +1091,14 @@ checked by us.
 
 ## National Day on 31 August
 
-**✓ In late August the city is full of flags, and at night the towers are lit in the national
-colours (24 Aug).** A single flag hanging the full height of a bank facade, small flags on the
-lamp posts of the shopping streets, rows of them on the office towers. In the evening the
-telecoms tower stood in red, white and blue, Merdeka 118 beside it in blue, yellow and red, and
-fireworks went up over the city — on an ordinary evening, with no ticket and without us knowing
-about it beforehand. If you do not know the date, you take it for coincidence.
+**✓ In the week before Merdeka the towers are lit in the national colours, and there are
+fireworks for no occasion (24 Aug).** Not floodlit as usual: the telecoms tower stood in red,
+white and blue, Merdeka 118 beside it in blue, yellow and red, and fireworks went up over the
+roofs between them. An ordinary Sunday evening, no ticket, no announcement we could find — seen
+from the window. If you do not have 31 August in mind, you take it for coincidence.
 <!-- werkstatt: telegram=2026-08-24T06:06 -->
 <!-- ort: kuala-lumpur -->
 
-![An office high-rise with a large Malaysian flag hanging down its entire glass facade, a wide road with a bus and a motorbike in front of it.](foto:2026-08-24_060717.jpg)
 ![Night view over Kuala Lumpur: the telecoms tower lit in red, white and blue, Merdeka 118 to its right in blue, yellow and red, fireworks above.](foto:2026-08-24_060719.jpg)
 
 **○ The reason is Hari Merdeka, independence day.** On 31 August 1957 the Federation of Malaya
@@ -1116,7 +1114,8 @@ verified by us — we only saw what was hanging and what was lit.
 **✓ The Petronas Towers only fit into one frame from a distance (24 Aug).** From the park behind
 the shopping centre both towers stand complete in the frame, with the skybridge between them and
 the flat roof of Suria KLCC below; in front lies a pool that reflects the whole thing. Stand at
-the foot and you get one tower and no sky. That is the same rule for the third time on this trip
+the foot and you get one tower and no sky. That answers the view from Jalan Sultan Ismail: it is not the exception, it is
+just the wrong spot. This is the same rule for the third time on this trip
 — Merdeka 118 from Jalan Hang Kasturi, the Batu Caves staircase from the forecourt, and here:
 distance makes the picture, not proximity.
 <!-- werkstatt: telegram=2026-08-24T06:06 -->

@@ -361,6 +361,42 @@
       "veroeffentlicht": "2026-08-23T05:33:28+00:00"
     },
     {
+      "anker": "**✓ Ende August hängt die Stadt voller Flaggen, und abends l",
+      "minuten": 36,
+      "telegram": "2026-08-24T06:06:00+00:00",
+      "veroeffentlicht": "2026-08-24T06:41:44+00:00"
+    },
+    {
+      "anker": "**✓ Die Petronas Towers bekommt man nur mit Abstand ganz auf",
+      "minuten": 36,
+      "telegram": "2026-08-24T06:06:00+00:00",
+      "veroeffentlicht": "2026-08-24T06:41:44+00:00"
+    },
+    {
+      "anker": "**✓ An der Bukit Bintang stehen die Einkaufszentren als Kett",
+      "minuten": 36,
+      "telegram": "2026-08-24T06:06:00+00:00",
+      "veroeffentlicht": "2026-08-24T06:41:44+00:00"
+    },
+    {
+      "anker": "**✓ Im Einkaufszentrum saß ein Falter von der Größe einer Ha",
+      "minuten": 36,
+      "telegram": "2026-08-24T06:06:00+00:00",
+      "veroeffentlicht": "2026-08-24T06:41:44+00:00"
+    },
+    {
+      "anker": "**✓ Der Bahnsteig einer Hochbahn-Station ist ein kostenloser",
+      "minuten": 36,
+      "telegram": "2026-08-24T06:06:00+00:00",
+      "veroeffentlicht": "2026-08-24T06:41:44+00:00"
+    },
+    {
+      "anker": "**✓ Am Tor zur Petaling Street steht Merdeka 118 direkt hint",
+      "minuten": 36,
+      "telegram": "2026-08-24T06:06:00+00:00",
+      "veroeffentlicht": "2026-08-24T06:41:44+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -391,10 +427,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 65,
-  "juengste_minuten": 9,
-  "markiert": 65,
-  "median_minuten": 13,
+  "gemessen": 71,
+  "juengste_minuten": 36,
+  "markiert": 71,
+  "median_minuten": 14,
   "schnellste_minuten": 4,
-  "stand": "2026-08-23"
+  "stand": "2026-08-24"
 }

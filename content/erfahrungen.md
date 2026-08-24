@@ -1118,16 +1118,14 @@ RM 10 bis 15 verkauft. Alles nachgeschlagen, nicht selbst geprüft.
 
 ## Der Nationalfeiertag am 31. August
 
-**✓ Ende August hängt die Stadt voller Flaggen, und abends leuchten die Türme in den
-Landesfarben (24.08.).** Eine einzelne Flagge über die ganze Höhe einer Bankfassade, kleine
-Flaggen an den Laternen der Einkaufsstraßen, Reihen davon an den Bürotürmen. Abends stand der
-Fernsehturm in Rot, Weiß und Blau, Merdeka 118 daneben in Blau, Gelb und Rot, und über der Stadt
-ging ein Feuerwerk hoch — an einem gewöhnlichen Abend, ohne Eintritt und ohne dass wir vorher
-davon gewusst hätten. Wer den Termin nicht kennt, hält es für Zufall.
+**✓ In der Woche vor Merdeka leuchten die Türme in den Landesfarben, und es gibt Feuerwerk ohne
+Anlass (24.08.).** Nicht angestrahlt wie sonst: der Fernsehturm stand in Rot, Weiß und Blau,
+Merdeka 118 daneben in Blau, Gelb und Rot, und über den Dächern dazwischen ging ein Feuerwerk
+hoch. Ein gewöhnlicher Sonntagabend, kein Eintritt, keine Ankündigung, die wir gefunden hätten —
+vom Fenster aus gesehen. Wer den 31. August nicht im Kopf hat, hält das für Zufall.
 <!-- werkstatt: telegram=2026-08-24T06:06 -->
 <!-- ort: kuala-lumpur -->
 
-![Ein Bürohochhaus, über dessen ganze Glasfassade eine große malaysische Flagge herabhängt, davor eine breite Straße mit Bus und Motorrad.](foto:2026-08-24_060717.jpg)
 ![Nachtblick über Kuala Lumpur: der Fernsehturm in Rot, Weiß und Blau angestrahlt, rechts daneben Merdeka 118 in Blau, Gelb und Rot, darüber ein Feuerwerk.](foto:2026-08-24_060719.jpg)
 
 **○ Der Grund ist Hari Merdeka, der Unabhängigkeitstag.** Am 31. August 1957 wurde die
@@ -1143,8 +1141,8 @@ zu haben. Nachgeschlagen, nicht selbst geprüft — wir haben nur gesehen, was h
 **✓ Die Petronas Towers bekommt man nur mit Abstand ganz aufs Bild (24.08.).** Vom Park hinter
 dem Einkaufszentrum aus stehen beide Türme vollständig im Bild, mit der Brücke dazwischen und
 dem flachen Dach von Suria KLCC darunter; davor liegt ein Wasserbecken, in dem sich alles
-spiegelt. Wer unten am Fuß steht, hat einen Turm und keinen Himmel. Das ist auf dieser Reise
-zum dritten Mal dieselbe Regel — Merdeka 118 von der Jalan Hang Kasturi, die Treppe von Batu
+spiegelt. Wer unten am Fuß steht, hat einen Turm und keinen Himmel. Damit ist der Blick von der Jalan Sultan Ismail beantwortet: er ist nicht die Ausnahme,
+er ist nur der falsche Standort. Auf dieser Reise ist das zum dritten Mal dieselbe Regel — Merdeka 118 von der Jalan Hang Kasturi, die Treppe von Batu
 Caves vom Vorplatz, und hier: der Abstand macht das Bild, nicht die Nähe.
 <!-- werkstatt: telegram=2026-08-24T06:06 -->
 <!-- ort: kuala-lumpur -->
