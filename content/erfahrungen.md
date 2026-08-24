@@ -1159,6 +1159,7 @@ welchem sie sind, denn von außen sieht man das nicht.
 <!-- ort: kuala-lumpur -->
 
 ![Blick über die Kreuzung an der Bukit Bintang: links der Springbrunnen vor der Facettenfassade der Starhill Gallery, gegenüber das Einkaufszentrum fahrenheit88 mit großer Anzeigetafel, dazwischen malaysische Flaggen an Masten.](foto:2026-08-24_060659.jpg)
+![Die Facettenfassade der Starhill Gallery über der Kreuzung, links das Tor mit der Aufschrift Bukit Bintang Entrance, rechts die Rundung des Einkaufszentrums mit Ständen davor.](foto:2026-08-24_060655.jpg)
 
 **✓ Im Einkaufszentrum saß ein Falter von der Größe einer Hand (24.08.).** Erst auf dem
 polierten Boden zwischen den Läden, dann draußen auf der Fußmatte am Eingang: braungrau, mit

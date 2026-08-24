@@ -667,5 +667,15 @@
         0.048
       ]
     ]
+  },
+  "2026-08-24_060655.jpg": {
+    "name": "kl-bukit-bintang-starhill-eingang",
+    "_zuschnitt": "Strassenaufnahme, unteres Viertel ist eine dichte Reihe fremder Gesichter aus wenigen Metern. Die Aussage steht darueber: Fassade, Tor mit dem Schriftzug, Rundbau. Weggeschnitten statt vielfach verwischt.",
+    "zuschnitt": [
+      0.0,
+      0.0,
+      1.0,
+      0.75
+    ]
   }
 }
