@@ -409,6 +409,12 @@
       "veroeffentlicht": "2026-08-24T06:41:44+00:00"
     },
     {
+      "anker": "**✓ Der Waldpark Bukit Nanas hat abends zu, und sein Tor ist",
+      "minuten": 13,
+      "telegram": "2026-08-24T10:59:00+00:00",
+      "veroeffentlicht": "2026-08-24T11:11:56+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -439,9 +445,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 73,
-  "juengste_minuten": 38,
-  "markiert": 73,
+  "gemessen": 74,
+  "juengste_minuten": 13,
+  "markiert": 74,
   "median_minuten": 14,
   "schnellste_minuten": 4,
   "stand": "2026-08-24"
