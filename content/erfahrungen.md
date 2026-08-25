@@ -1241,6 +1241,38 @@ nicht mehr hergibt. Wer nach Feierabend ins Grüne will, geht nach Osten, nicht 
 
 ---
 
+## Ankunft in Sandakan
+
+**✓ In Sandakan wird über die Treppe aufs Vorfeld ausgestiegen (25.08.).** Das Empfangsgebäude ist
+eine einzige lange Halle unter einem breiten braunen Vordach, und der Name steht in grünen
+Buchstaben oben auf der Dachkante: „Lapangan Terbang Sandakan". Eine Fluggastbrücke gibt es, unsere
+Maschine hat sie nicht benutzt — die Treppe kam an die Tür, und von dort geht es zu Fuß über den
+Asphalt zur Ankunft. Das sind ein paar Dutzend Meter ohne jeden Schatten, und mittags steht die
+Sonne senkrecht darüber.
+<!-- werkstatt: telegram=2026-08-25T04:44 -->
+<!-- ort: sandakan -->
+
+![Das Empfangsgebäude des Flughafens Sandakan vom Vorfeld aus: ein breites braunes Vordach über einer Glasfront, auf der Dachkante der Name Lapangan Terbang Sandakan in grünen Buchstaben, davor ein Schild mit der Aufschrift AeroDarat.](foto:2026-08-25_044439.jpg)
+
+**✓ Der Schriftzug „I ♥ SANDAKAN" steht am Hafen, und man kommt nicht an ihn heran (25.08.).** Die
+bunten Buchstaben stehen an der Kaikante der Hafenpromenade, dahinter liegen die Bucht und die
+Hügel der Gegenseite. Davor steht allerdings über die ganze Breite eine Reihe schwarzer Gittertore,
+sodass man weder zwischen die Buchstaben treten noch sich davorstellen kann; auf jedem Bild von der
+Promenade aus steht das Gitter mit darin. Wenige Meter rechts daneben hängt ein gelber Bilderrahmen,
+und durch den geht der Blick frei auf die See.
+<!-- werkstatt: telegram=2026-08-25T04:44 -->
+<!-- ort: sandakan -->
+
+![Der bunte Schriftzug SANDAKAN mit einem roten Herz darüber an der Hafenpromenade, davor eine Reihe schwarzer Gittertore, dahinter die Bucht; rechts ein gelber Bilderrahmen mit der Aufschrift The Elopura.](foto:2026-08-25_044437.jpg)
+
+**○ „Elopura" auf dem gelben Rahmen ist der alte Name der Stadt.** Der britische Resident William
+Burges Pryer gründete die Siedlung am 21. Juni 1879 neu und nannte sie Elopura, „schöne Stadt".
+Der Name hielt sich nur wenige Jahre: die einheimische Bevölkerung blieb bei Sandakan, und dabei
+ist es geblieben. Als Name eines Stadtteils lebt Elopura bis heute weiter. Nachgeschlagen, nicht
+vor Ort erfahren.
+
+---
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein

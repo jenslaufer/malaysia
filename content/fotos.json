@@ -680,5 +680,39 @@
   },
   "2026-08-24_105947.jpg": {
     "name": "kuala-lumpur-bukit-nanas-tor-geschlossen"
+  },
+  "2026-08-25_044439.jpg": {
+    "name": "sandakan-flughafen-empfangsgebaeude",
+    "_zuschnitt": "Unteres Viertel weg. Dort laufen rund zwoelf Fluggaeste ueber das Vorfeld, jeder Kopf 6-8 px — ein Satz aus zwoelf Kaesten waere genau der Schutz, der drei von vier trifft. Der Zuschnitt nimmt die ganze Reihe heraus; Dach, Schriftzug und AeroDarat-Schild bleiben.",
+    "zuschnitt": [
+      0.0,
+      0.0,
+      1.0,
+      0.72
+    ]
+  },
+  "2026-08-25_044437.jpg": {
+    "name": "sandakan-schriftzug-hafenpromenade",
+    "_blur": "Drei Kaesten: die Sitzgruppe im Schatten links hinter den Buchstaben (drei Koepfe), die Gruppe hinter dem Gitter in der Mitte (drei Koepfe) und die Frau rechts am Wasser, deren Gesicht klar erkennbar ist.",
+    "blur": [
+      [
+        0.1453,
+        0.5667,
+        0.0719,
+        0.0528
+      ],
+      [
+        0.2781,
+        0.5639,
+        0.0734,
+        0.0556
+      ],
+      [
+        0.9609,
+        0.55,
+        0.025,
+        0.05
+      ]
+    ]
   }
 }

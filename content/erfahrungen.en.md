@@ -1211,6 +1211,36 @@ want greenery after the working day, head east rather than up the hill.
 
 ---
 
+## Arriving in Sandakan
+
+**✓ In Sandakan you walk down the stairs onto the apron (25 Aug).** The terminal is a single long
+hall under a wide brown canopy, with the name spelled out in green letters along the roof edge:
+"Lapangan Terbang Sandakan". There is an air bridge, but our aircraft did not use it — the stairs
+came to the door, and from there it is a walk across the asphalt to arrivals. That is a few dozen
+metres without any shade, and at midday the sun stands straight above it.
+<!-- werkstatt: telegram=2026-08-25T04:44 -->
+<!-- ort: sandakan -->
+
+![The terminal building at Sandakan airport seen from the apron: a wide brown canopy above a glass front, the name Lapangan Terbang Sandakan in green letters along the roof edge, a sign reading AeroDarat in front of it.](foto:2026-08-25_044439.jpg)
+
+**✓ The "I ♥ SANDAKAN" sign stands at the harbour, and you cannot get to it (25 Aug).** The
+colourful letters stand right at the quay edge of the harbour promenade, with the bay and the hills
+on the far side behind them. In front of them, however, runs a row of black steel gates across the
+full width, so you can neither step between the letters nor stand in front of them; in every shot
+taken from the promenade the fence is in the picture. A few metres to the right hangs a yellow
+picture frame, and through that one the view of the sea is clear.
+<!-- werkstatt: telegram=2026-08-25T04:44 -->
+<!-- ort: sandakan -->
+
+![The colourful SANDAKAN lettering with a red heart above it on the harbour promenade, a row of black steel gates in front, the bay behind; to the right a yellow picture frame reading The Elopura.](foto:2026-08-25_044437.jpg)
+
+**○ "Elopura" on the yellow frame is the town's old name.** British Resident William Burges Pryer
+refounded the settlement on 21 June 1879 and called it Elopura, "beautiful city". The name lasted
+only a few years: the local population stuck with Sandakan, and that is what remained. Elopura
+lives on today as the name of a district. Looked up, not learned on the spot.
+
+---
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
