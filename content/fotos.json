@@ -714,5 +714,32 @@
         0.05
       ]
     ]
+  },
+  "2026-08-25_085705.jpg": {
+    "name": "sandakan-tangga-seribu-bemalte-stufen"
+  },
+  "2026-08-25_091232.jpg": {
+    "name": "sandakan-blick-bucht-jalan-istana"
+  },
+  "2026-08-25_091234.jpg": {
+    "name": "sandakan-english-tea-house-torbogen"
+  },
+  "2026-08-25_091237.jpg": {
+    "name": "sandakan-english-tea-house-veranda-wiese",
+    "_blur": "Zwei Kaesten: das Paar, das sich mitten auf der Wiese fotografieren laesst (zwei Koepfe dicht nebeneinander), und der Kellner, der rechts davon ueber die Wiese geht. Beide aus rund 40 m, Kopf je 20-40 px — erkennbar genug fuer einen Bekannten.",
+    "blur": [
+      [
+        0.645,
+        0.478,
+        0.039,
+        0.05
+      ],
+      [
+        0.767,
+        0.472,
+        0.025,
+        0.042
+      ]
+    ]
   }
 }

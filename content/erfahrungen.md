@@ -1271,6 +1271,45 @@ Der Name hielt sich nur wenige Jahre: die einheimische Bevölkerung blieb bei Sa
 ist es geblieben. Als Name eines Stadtteils lebt Elopura bis heute weiter. Nachgeschlagen, nicht
 vor Ort erfahren.
 
+**✓ Die Treppe hinauf zum English Tea House heißt „tausend Stufen" und hat 239 (25.08.).** Am
+Aufgang steht der malaiische Name *Tangga Seribu*, „tausend Stufen"; das englische Schild macht
+daraus „One Hundred Steps". Gezählt sind es **239**. Der Fuß liegt an der Lebuh Empat, oben kommt
+man auf der Jalan Istana heraus, wenige Schritte neben dem Tea House. Über der ganzen Länge liegt
+ein Wellblechdach auf weißen Pfosten — bei einem Nachmittagsschauer ist das der Unterschied
+zwischen nass und trocken oben ankommen. Die Setzstufen sind mit roten Hibiskusblüten und grünen
+Blättern bemalt, die Pfosten tragen violette Ranken. Einen Handlauf gibt es nicht, nur eine
+niedrige Brüstung links und rechts. Zum Wiedererkennen taugt das Dach allein übrigens nicht: im
+Umkreis von 400 Metern sind vier weitere Treppen überdacht.
+<!-- werkstatt: telegram=2026-08-25T08:57 -->
+<!-- ort: sandakan -->
+
+![Die überdachte Tangga Seribu von unten: ein Wellblechdach auf weißen Pfosten über dem Treppenlauf, die Setzstufen mit großen roten Hibiskusblüten und grünen Blättern bemalt, an den Pfosten violette Ranken.](foto:2026-08-25_085705.jpg)
+
+**✓ Oben steht das English Tea House, ein Kolonialbungalow mit Rasen und Pavillons (25.08.).** Ein
+weiß gestrichenes Haus mit langer Veranda unter einem Ziegeldach, davor eine große Rasenfläche,
+darauf offene Pavillons, ebenfalls unter Ziegeln. Zum Weg hin steht ein schmiedeeiserner Torbogen
+mit dem Schriftzug „English Tea House & Restaurant". Die Adresse ist Jalan Istana 2002. Nach eigener
+Darstellung ist das Lokal dem Agnes-Keith-Haus nachempfunden; das liegt 150 Meter weiter und
+schließt um 17:00. Wer beides sehen will, geht deshalb zuerst ins Museum und danach auf die Wiese,
+nicht umgekehrt.
+<!-- werkstatt: telegram=2026-08-25T09:12 -->
+<!-- ort: sandakan -->
+
+![Ein schmiedeeiserner Torbogen mit dem Schriftzug English Tea House & Restaurant und einem ovalen Schild mit der Silhouette einer Bedienung; dahinter Rasen, Büsche mit roten Blüten und die Bucht von Sandakan.](foto:2026-08-25_091234.jpg)
+![Das weiß gestrichene Haupthaus des English Tea House mit langer Veranda unter einem Ziegeldach, davor eine große Rasenfläche, rechts ein offener Pavillon, im Hintergrund der Torbogen und die See.](foto:2026-08-25_091237.jpg)
+
+**○ Den Sonnenuntergang sieht man von dort oben nicht — die Sonne geht hinter dem Hügel unter.**
+Das Grundstück liegt auf 69 Metern am Osthang, und der Blick von der Wiese geht über die Bucht:
+Wasser liegt von Ost über Süd bis Südwest. Die Sonne geht Ende August aber im **Westnordwesten**
+unter, Azimut 281 Grad — genau dort, wo der Hügel weiter ansteigt und anderthalb Kilometer dahinter
+ein Kamm auf 131 Meter zieht. Hinter Kuppe und Baumreihe ist sie deshalb rund eine halbe Stunde vor
+dem rechnerischen Untergang weg. Wer wegen des Abendlichts hochsteigt, sitzt trotzdem richtig: die
+Farbe steht danach über der Bucht, also im Rücken der Sonne, und dorthin schaut die Wiese. Gerechnet
+für den 25.08., nicht vor Ort nachgemessen; Sonnenstand und Geländehöhen aus offenen Daten.
+<!-- ort: sandakan -->
+
+![Blick von der Jalan Istana über Baumkronen auf die Bucht von Sandakan, im Dunst mehrere Frachtschiffe auf der Reede, im Vordergrund ein Geländer und eine Straßenlaterne.](foto:2026-08-25_091232.jpg)
+
 ---
 
 ## Essen

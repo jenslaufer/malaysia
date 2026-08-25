@@ -1239,6 +1239,43 @@ refounded the settlement on 21 June 1879 and called it Elopura, "beautiful city"
 only a few years: the local population stuck with Sandakan, and that is what remained. Elopura
 lives on today as the name of a district. Looked up, not learned on the spot.
 
+**✓ The staircase up to the English Tea House is called "a thousand steps" and has 239 (25 Aug).**
+The Malay name at the foot reads *Tangga Seribu*, "a thousand steps"; the English sign turns that
+into "One Hundred Steps". Counted, there are **239**. The bottom is on Lebuh Empat, the top comes
+out on Jalan Istana a few paces from the Tea House. A corrugated iron roof on white posts runs the
+whole length — in an afternoon downpour that is the difference between arriving up there wet or
+dry. The risers are painted with red hibiscus flowers and green leaves, the posts carry purple
+scrollwork. There is no handrail, only a low parapet on either side. The roof alone is no good for
+recognising it, by the way: four other staircases within 400 metres are covered too.
+<!-- werkstatt: telegram=2026-08-25T08:57 -->
+<!-- ort: sandakan -->
+
+![The covered Tangga Seribu from below: a corrugated iron roof on white posts over the flight of steps, the risers painted with large red hibiscus flowers and green leaves, purple scrollwork on the posts.](foto:2026-08-25_085705.jpg)
+
+**✓ At the top stands the English Tea House, a colonial bungalow with a lawn and gazebos (25 Aug).**
+A white-painted house with a long veranda under a tiled roof, and in front of it a wide lawn with
+open gazebos, tiled as well. A wrought-iron arch facing the path carries the lettering "English Tea
+House & Restaurant". The address is Jalan Istana 2002. By its own account the place is modelled on
+the Agnes Keith House, which sits 150 metres further along and closes at 17:00. Anyone who wants
+both should therefore do the museum first and the lawn afterwards, not the other way round.
+<!-- werkstatt: telegram=2026-08-25T09:12 -->
+<!-- ort: sandakan -->
+
+![A wrought-iron arch with the lettering English Tea House & Restaurant and an oval sign showing the silhouette of a waitress; behind it lawn, shrubs with red flowers and Sandakan Bay.](foto:2026-08-25_091234.jpg)
+![The white-painted main house of the English Tea House with its long veranda under a tiled roof, a wide lawn in front, an open gazebo to the right, the arch and the sea in the background.](foto:2026-08-25_091237.jpg)
+
+**○ You cannot see the sunset from up there — the sun goes down behind the hill.** The grounds sit
+at 69 metres on the eastern slope, and the view from the lawn runs across the bay: water lies from
+east through south to south-west. In late August, though, the sun sets in the **west-north-west**,
+azimuth 281 degrees — exactly where the hill keeps climbing and, a kilometre and a half beyond, a
+ridge runs up to 131 metres. Behind that crest and its tree line the sun is gone about half an hour
+before the calculated sunset. Anyone climbing up for the evening light is still in the right place:
+the colour comes afterwards, over the bay, at the sun's back — and that is the way the lawn faces.
+Calculated for 25 Aug, not verified on site; sun position and terrain heights from open data.
+<!-- ort: sandakan -->
+
+![The view from Jalan Istana over treetops onto Sandakan Bay, several cargo ships at anchor in the haze, a railing and a street lamp in the foreground.](foto:2026-08-25_091232.jpg)
+
 ---
 
 ## Eating
