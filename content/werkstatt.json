@@ -415,6 +415,18 @@
       "veroeffentlicht": "2026-08-24T11:11:56+00:00"
     },
     {
+      "anker": "**✓ In Sandakan wird über die Treppe aufs Vorfeld ausgestieg",
+      "minuten": 10,
+      "telegram": "2026-08-25T04:44:00+00:00",
+      "veroeffentlicht": "2026-08-25T04:54:03+00:00"
+    },
+    {
+      "anker": "**✓ Der Schriftzug „I ♥ SANDAKAN\" steht am Hafen, und man ko",
+      "minuten": 10,
+      "telegram": "2026-08-25T04:44:00+00:00",
+      "veroeffentlicht": "2026-08-25T04:54:03+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -445,9 +457,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 74,
-  "juengste_minuten": 13,
-  "markiert": 74,
+  "gemessen": 76,
+  "juengste_minuten": 10,
+  "markiert": 76,
   "median_minuten": 14,
   "schnellste_minuten": 4,
   "stand": "2026-08-25"
