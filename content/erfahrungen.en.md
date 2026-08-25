@@ -1459,7 +1459,9 @@ a whole travel day hangs on it. The ticket counts, not the order.
 | 17 Aug | Border to Johor Bahru · Larkin Sentral · bus to Mersing | Border · Paying |
 | 18–21 Aug | Tioman | — |
 | 22–24 Aug | Kuala Lumpur | — |
-| 25–28 Aug | Sandakan, Sabah | — |
+| 25–26 Aug | Sandakan, Sabah | — |
+| 26–27 Aug | Sepilok, Sabah | — |
+| 27–29 Aug | Kinabatangan, Sabah | — |
 | 29 Aug – 3 Sep | Kota Kinabalu | — |
 | 4–5 Sep | Kudat, Tip of Borneo | — |
 | 5–7 Sep | Singapore → Bahrain → Frankfurt | — |
