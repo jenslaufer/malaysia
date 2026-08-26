@@ -439,6 +439,42 @@
       "veroeffentlicht": "2026-08-25T09:24:17+00:00"
     },
     {
+      "anker": "**✓ Vom Resort läuft man zum Rainforest Discovery Centre zu ",
+      "minuten": 23,
+      "telegram": "2026-08-26T05:35:00+00:00",
+      "veroeffentlicht": "2026-08-26T05:57:53+00:00"
+    },
+    {
+      "anker": "**✓ Der Canopy Walkway ist eine Stahlkonstruktion auf Gitter",
+      "minuten": 11,
+      "telegram": "2026-08-26T10:58:00+00:00",
+      "veroeffentlicht": "2026-08-26T11:09:23+00:00"
+    },
+    {
+      "anker": "**✓ Am Hornbill Tower steht die Höhe angeschrieben: Plattfor",
+      "minuten": 11,
+      "telegram": "2026-08-26T10:58:00+00:00",
+      "veroeffentlicht": "2026-08-26T11:09:23+00:00"
+    },
+    {
+      "anker": "**✓ Im Wald am RDC sitzt ein Orang-Utan im Baum — ohne Platt",
+      "minuten": 11,
+      "telegram": "2026-08-26T10:58:00+00:00",
+      "veroeffentlicht": "2026-08-26T11:09:23+00:00"
+    },
+    {
+      "anker": "**✓ Vom Steg aus liegt das Kronendach auf Augenhöhe, und es ",
+      "minuten": 11,
+      "telegram": "2026-08-26T10:58:00+00:00",
+      "veroeffentlicht": "2026-08-26T11:09:23+00:00"
+    },
+    {
+      "anker": "**✓ Am RDC liegt ein See mit Seerosenfeldern, und dort ist e",
+      "minuten": 11,
+      "telegram": "2026-08-26T10:58:00+00:00",
+      "veroeffentlicht": "2026-08-26T11:09:23+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -469,9 +505,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 78,
-  "juengste_minuten": 12,
-  "markiert": 78,
+  "gemessen": 84,
+  "juengste_minuten": 11,
+  "markiert": 84,
   "median_minuten": 14,
   "schnellste_minuten": 4,
   "stand": "2026-08-26"
