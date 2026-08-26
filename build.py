@@ -1848,6 +1848,31 @@ def lade_werkstatt() -> tuple[dict, dict]:
     return spuren, summe
 
 
+def verworfene_zeilen(quelle: str, kopie: str) -> list[str]:
+    """Zeilen, die NUR in der Kopie stehen — also beim naechsten Sync verloren gehen.
+
+    `content/erfahrungen*.md` wird bei jedem Lauf aus dem assistant-Repo
+    ueberschrieben. Eine Bearbeitung der Kopie verschwindet damit ohne
+    Fehlermeldung, und `git status` zeigt die Datei danach als unveraendert.
+    Am 26.08. ist genau das zweimal an einem Tag passiert; gefangen hat es
+    beide Male ein Zufall (Dateigroesse, eine Zahl im Buildbericht).
+
+    Gemeldet wird nur diese Richtung. Zeilen, die allein in der QUELLE stehen,
+    sind der Normalfall vor jedem Sync und kein Verlust. Leerzeilen zaehlen
+    nicht — sie verschieben sich beim Umbrechen von Absaetzen staendig.
+    """
+    hat = set()
+    for z in quelle.splitlines():
+        hat.add(z.strip())
+    raus, gesehen = [], set()
+    for z in kopie.splitlines():
+        s = z.strip()
+        if s and s not in hat and s not in gesehen:
+            gesehen.add(s)
+            raus.append(s)
+    return raus
+
+
 def main() -> int:
     global GEHEIME_TOKEN, WERKSTATT, WERKSTATT_SUMME, SPRACHE, FOTO_DATEN
     GEHEIME_TOKEN = lade_sperrliste()
@@ -1864,6 +1889,21 @@ def main() -> int:
         quelle, kopie = QUELLEN[sprache], KOPIEN[sprache]
         if not args.no_sync and quelle.exists():
             kopie.parent.mkdir(parents=True, exist_ok=True)
+            if kopie.exists():
+                verloren = verworfene_zeilen(
+                    quelle.read_text(encoding="utf-8"),
+                    kopie.read_text(encoding="utf-8"))
+                if verloren:
+                    print(f"\n!!! {len(verloren)} Zeile(n) stehen NUR in der Kopie "
+                          f"{kopie} und werden jetzt ueberschrieben.\n"
+                          f"    Bearbeitet wird {quelle}, nie die Kopie.",
+                          file=sys.stderr)
+                    for z in verloren[:10]:
+                        print(f"      {z[:100]}", file=sys.stderr)
+                    if len(verloren) > 10:
+                        print(f"      … und {len(verloren) - 10} weitere",
+                              file=sys.stderr)
+                    print("", file=sys.stderr)
             shutil.copyfile(quelle, kopie)
             print(f"Quelle geholt ({sprache}): {quelle}")
         elif not kopie.exists():

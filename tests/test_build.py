@@ -1970,6 +1970,45 @@ class TestOrtsmarker(unittest.TestCase):
                 "<!-- ort: tiomann -->")
 
 
+class TestVerworfeneBearbeitung(unittest.TestCase):
+    """Wer die Kopie bearbeitet, verliert die Arbeit — dann muss es dastehen.
+
+    `content/erfahrungen*.md` ist eine Kopie. Jeder Lauf ohne `--no-sync`
+    ueberschreibt sie aus `assistant/state/reise-erfahrungen-malaysia-2026*.md`.
+    Eine Bearbeitung der Kopie verschwindet damit **ohne Fehlermeldung**, und
+    `git status` zeigt die Datei danach als unveraendert — die Aenderung nimmt
+    sich selbst zurueck.
+
+    Am 26.08. ist das an einem Tag **zweimal** passiert. Der Vormittag fing es
+    nur am Byte-Vergleich der `index.html`, der Nachmittag nur daran, dass die
+    Stationszahl im Buildbericht nicht sprang, obwohl eine Station dazukam.
+    Beide Male lag der Hinweis schon in `MEMORY.md`. Eine Notiz, die zweimal
+    gegen die Absicht verliert, gehoert in den Code.
+
+    Gemeldet, nicht verhindert: die Kopie darf abweichen, sobald die Quelle
+    weitergeschrieben wurde — das ist der Normalfall vor jedem Sync. Gesucht
+    wird nur, was **allein in der Kopie** steht.
+    """
+
+    def test_nur_in_der_kopie_stehende_zeile_wird_genannt(self):
+        verloren = build.verworfene_zeilen(
+            "**✓ Etwas hat geklappt (17.08.).** Dazu ein Satz.\n",
+            "**✓ Etwas hat geklappt (17.08.).** Dazu ein Satz.\n"
+            "<!-- ort: sepilok -->\n")
+        self.assertEqual(["<!-- ort: sepilok -->"], verloren)
+
+    def test_neue_zeile_in_der_quelle_ist_kein_verlust(self):
+        """Der Normalfall vor jedem Sync — darf nicht melden."""
+        self.assertEqual([], build.verworfene_zeilen(
+            "alt\nneu aus der Quelle\n", "alt\n"))
+
+    def test_gleichstand_meldet_nichts(self):
+        self.assertEqual([], build.verworfene_zeilen("a\nb\n", "a\nb\n"))
+
+    def test_leerzeilen_zaehlen_nicht_als_verlust(self):
+        self.assertEqual([], build.verworfene_zeilen("a\nb\n", "a\n\n  \nb\n"))
+
+
 class TestStationenGegenChronik(unittest.TestCase):
     """Steht in STATIONEN dieselbe Reise wie in der Chronik?
 
