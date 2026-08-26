@@ -1317,7 +1317,6 @@ für den 25.08., nicht vor Ort nachgemessen; Sonnenstand und Geländehöhen aus 
 **✓ Vom Resort läuft man zum Rainforest Discovery Centre zu Fuß die Straße entlang (26.08.).**
 Kein Transfer nötig; die Straße ist asphaltiert, mit Bordstein und Wartehäuschen am Rand, und
 führt zwischen Palmen und Regenwald hindurch.
-
 <!-- werkstatt: telegram=2026-08-26T05:35 -->
 
 ![Eine asphaltierte Straße zwischen dichtem Grün, links Palmen mit roten Blattstielen und ein offenes Wartehäuschen, rechts Regenwald; auf der Fahrbahn ein gelber Richtungspfeil, zwei Personen gehen den Weg entlang.](foto:2026-08-26_053513.jpg)
@@ -1365,7 +1364,6 @@ Der Laufsteg besteht aus Gitterrostplatten, die Geländer aus Streckmetall reich
 und getragen wird alles von Stahlrohrtürmen mit Kreuzverstrebung, die im Abstand von einigen
 Dutzend Metern aus dem Unterholz aufsteigen. Er ist breit genug, dass man stehen bleiben und
 andere vorbeilassen kann — was man auch tut, denn im Gehen sieht man nichts.
-
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
 
 ![Ein grün gestrichener Stahlsteg zieht sich in Höhe der Baumkronen durch den Regenwald, getragen von schlanken Rohrtürmen mit Kreuzverstrebung; das Geländer besteht aus Maschendraht, unter dem Steg fällt der Wald steil ab.](foto:2026-08-26_105828.jpg)
@@ -1380,7 +1378,6 @@ andere vorbeilassen kann — was man auch tut, denn im Gehen sieht man nichts.
 (26.08.).** Auf dem Stützrohr klebt ein Schild „Hornbill Tower — Platform 2. You are 27 m (90 ft)
 above the ground", darunter ein Foto des Rhinoceros Hornbill. Der Turm hat damit mehr als eine
 Plattform, und die Zahl steht dort, wo man sie braucht: oben, nicht im Prospekt.
-
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
 
 ![Ein grün gestrichenes Stützrohr auf einer Turmplattform, darauf ein Schild mit der Aufschrift Hornbill Tower, Platform 2, You are 27 m (90 ft) above the ground und einem Bild eines Rhinoceros Hornbill; ringsum ein Gitterrostboden mit Maschendrahtgeländer und dahinter der Wald.](foto:2026-08-26_105817.jpg)
@@ -1390,7 +1387,6 @@ Das Tier hockt frei im Geäst über dem Weg und hantiert an den Zweigen. Nebenan
 Rehabilitationszentrum stehen die Fütterungen um 10:00 und 15:00 im Programm; hier steht nichts
 im Programm. Zu finden ist so ein Tier nur über die Bewegung — sitzt es still, verschwindet das
 Rotbraun im Gegenlicht fast vollständig zwischen den Blättern.
-
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
 
 ![Ein Orang-Utan sitzt zusammengekauert in einer Astgabel im dichten grünen Blattwerk, das rotbraune Fell hebt sich nur schwach ab, in der Hand ein gelbes Blatt.](foto:2026-08-26_105836.jpg)
@@ -1404,7 +1400,6 @@ Rotbraun im Gegenlicht fast vollständig zwischen den Blättern.
 Hügeln und Löchern, aus der einzelne kahle Riesen herausragen. In der letzten Stunde vor
 Sonnenuntergang wird das Licht flach und warm, danach kippt der Himmel innerhalb weniger Minuten
 ins Graurosa.
-
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
 
 ![Das Kronendach des Regenwaldes im warmen Nachmittagslicht, ein Gewirr aus Grüntönen mit einzelnen abgestorbenen Ästen, dahinter steigt der Wald einen Hang hinauf.](foto:2026-08-26_105841.jpg)
@@ -1419,7 +1414,6 @@ ins Graurosa.
 zwischen bewaldeten Hängen, am Ufer stehen ein hölzerner Pavillon und drüben eine Schutzhütte,
 und die Wasserfläche ist so ruhig, dass sich der ganze Wald darin spiegelt. Der Weg am Ufer heißt
 Lakeside Trail; er ist der flache Gegenpol zum Steg.
-
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
 
 ![Ein von Regenwald umschlossener See mit spiegelglatter Oberfläche, im Vordergrund ein Feld aus Seerosenblättern und Grasbüscheln, am gegenüberliegenden Ufer eine kleine Schutzhütte unter hohen Bäumen, darüber blauer Himmel mit weißen Wolken.](foto:2026-08-26_105843.jpg)
