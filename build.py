@@ -1130,7 +1130,14 @@ STATIONEN = [
      "17–18 Aug · ferry port for Tioman"),
     ("Tioman", 2.8167, 104.1667, "18.–21.08.", "18–21 Aug"),
     ("Kuala Lumpur", 3.1390, 101.6869, "22.–24.08.", "22–24 Aug"),
-    ("Sandakan", 5.8402, 118.1179, "25.–28.08. · Sabah", "25–28 Aug · Sabah"),
+    ("Sandakan", 5.8402, 118.1179, "25.–26.08. · Sabah", "25–26 Aug · Sabah"),
+    # Sepilok: Jens' eigene Standortmeldung (Telegram 26.08. 09:57), nicht der
+    # Ortsmittelpunkt eines Kartendienstes. Kinabatangan: Kampung Bilit, die
+    # Schlafadresse laut Buchung AB26084033, ueber Nominatim aufgeloest — dort
+    # ist niemand mit einem Geraet gewesen, das eine Koordinate meldet.
+    ("Sepilok", 5.8728, 117.9432, "26.–27.08. · Sabah", "26–27 Aug · Sabah"),
+    ("Kinabatangan", 5.4999, 118.2080, "27.–29.08. · Sabah",
+     "27–29 Aug · Sabah"),
     ("Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09.", "29 Aug – 3 Sep"),
     ("Kudat", 6.8837, 116.8378, "04.–05.09. · Tip of Borneo",
      "4–5 Sep · Tip of Borneo"),

@@ -1284,12 +1284,14 @@ Calculated for 25 Aug, not verified on site; sun position and terrain heights fr
 No transfer needed; the road is paved, has a kerb and a roadside shelter, and runs between palms
 and rainforest.
 <!-- werkstatt: telegram=2026-08-26T05:35 -->
+<!-- ort: sepilok -->
 
 ![A paved road between dense greenery, on the left palms with red leaf stalks and an open roadside shelter, on the right rainforest; a yellow direction arrow on the tarmac, two people walking along the road.](foto:2026-08-26_053513.jpg)
 
 **✓ The RDC ticket counter is an open wooden hut at the entrance (26 Aug).** A sign reading
 "Tickets" hangs above the window, next to it a lit "OPEN" sign; at 13:35 local time a tour group
 was queuing.
+<!-- ort: sepilok -->
 
 ![An open wooden hut under a corrugated roof with a Tickets sign above the counter window and a lit OPEN sign, a Malaysian flag in front; on the right a group of visitors walking up the path to the entrance.](foto:2026-08-26_053510.jpg)
 
@@ -1299,6 +1301,7 @@ the Orang Utan Rehabilitation Centre, the Sun Bear Conservation Centre and, at t
 edge, the Mangrove Discovery Centre. The **Kabili Trail** is labelled "17 km from entrance to end
 point" and "16–18 km return way", with three shelters along it (Martyn, Pryer, Bukit Jalil). The
 **Tun Sakaran Trail** is crossed out and marked **"NO ENTRY"**.
+<!-- ort: sepilok -->
 
 ![A satellite map of the Sepilok forest reserve at 1:30,000 screwed to a wooden wall; a yellow arrow labelled You are here points at the Rainforest Discovery Centre, the Kabili Trail is drawn in yellow with three shelters, the Tun Sakaran Trail is crossed out and marked NO ENTRY.](foto:2026-08-26_053508.jpg)
 
@@ -1331,6 +1334,7 @@ thing rests on cross-braced tubular steel towers that rise out of the undergrowt
 metres. It is wide enough to stand still and let others pass — which you do, because you see
 nothing while walking.
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
+<!-- ort: sepilok -->
 
 ![A green-painted steel walkway runs through the rainforest at canopy height, carried by slender cross-braced tubular towers; the railing is wire mesh, and the forest drops away steeply beneath the deck.](foto:2026-08-26_105828.jpg)
 
@@ -1345,6 +1349,7 @@ A sign on the support tube reads "Hornbill Tower — Platform 2. You are 27 m (9
 ground", with a photo of a rhinoceros hornbill below it. So the tower has more than one platform,
 and the number is where you need it: up there, not in a brochure.
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
+<!-- ort: sepilok -->
 
 ![A green-painted support tube on a tower platform carrying a sign that reads Hornbill Tower, Platform 2, You are 27 m (90 ft) above the ground, with a picture of a rhinoceros hornbill; around it a steel grating floor with a wire mesh railing and the forest beyond.](foto:2026-08-26_105817.jpg)
 
@@ -1354,6 +1359,7 @@ Next door at the rehabilitation centre the feedings are on the timetable at 10:0
 nothing is on a timetable. You only find an animal like this by its movement — sitting still, the
 reddish brown all but vanishes among the leaves against the light.
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
+<!-- ort: sepilok -->
 
 ![An orangutan sits hunched in a fork of a branch amid dense green foliage, its reddish-brown coat barely standing out, a yellow leaf in one hand.](foto:2026-08-26_105836.jpg)
 
@@ -1366,6 +1372,7 @@ below the rainforest looks like a roof; from above it is a landscape of hills an
 single bare giants sticking out of it. In the last hour before sunset the light turns low and
 warm, and afterwards the sky tips into grey-pink within a few minutes.
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
+<!-- ort: sepilok -->
 
 ![The rainforest canopy in warm afternoon light, a tangle of greens with a few dead branches, the forest climbing a slope behind.](foto:2026-08-26_105841.jpg)
 
@@ -1380,6 +1387,7 @@ between forested slopes, with a wooden pavilion on one shore and a shelter on th
 the water is still enough to mirror the whole forest. The path along the bank is called the
 Lakeside Trail; it is the flat counterpart to the walkway.
 <!-- werkstatt: telegram=2026-08-26T10:58 -->
+<!-- ort: sepilok -->
 
 ![A lake enclosed by rainforest with a mirror-smooth surface, a field of water lily pads and tufts of grass in the foreground, a small shelter under tall trees on the far bank, blue sky with white clouds above.](foto:2026-08-26_105843.jpg)
 
@@ -1388,6 +1396,7 @@ Lakeside Trail; it is the flat counterpart to the walkway.
 **✓ The resort receives guests in an open hall with ceiling fans and a view into the garden
 (26 Aug).** Reception on the left, space for luggage in front of it; behind it a terrace with
 bamboo blinds and a lawn with banana plants and a brick barbecue.
+<!-- ort: sepilok -->
 
 ![An open reception hall with a wooden floor, ceiling fans and bamboo blinds; on the left the reception counter with notices, in the middle a visitor with a backpack, on the right a water dispenser, in the background a terrace looking into the greenery.](foto:2026-08-26_053517.jpg)
 

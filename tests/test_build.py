@@ -1970,6 +1970,98 @@ class TestOrtsmarker(unittest.TestCase):
                 "<!-- ort: tiomann -->")
 
 
+class TestStationenGegenChronik(unittest.TestCase):
+    """Steht in STATIONEN dieselbe Reise wie in der Chronik?
+
+    Die Chronik ist die gepflegte Liste — Jens meldet einen Ortswechsel, die
+    Tabelle wird nachgezogen. `STATIONEN` ist die zweite Kopie derselben
+    Tatsache, und sie wird von Hand gefuehrt. Zwei Listen sind nach einer Woche
+    zwei Listen.
+
+    Gemessen am 26.08., beide Faelle echt: die Chronik trug seit dem 25.08.
+    `26.-27.08. Sepilok` und `27.-29.08. Kinabatangan`, `STATIONEN` kannte
+    beide nicht — neun ✓-Eintraege aus Sepilok konnten deshalb keinen
+    `<!-- ort: … -->` tragen und fehlten auf der Karte, denn `ORTE` wird aus
+    `STATIONEN` erzeugt und ein unbekannter Schluessel bricht den Build ab. Und
+    `Sandakan` stand weiter auf `25.-28.08.`, obwohl die Buchung (AB26084033)
+    eine einzige Nacht ausweist und die Chronik am 25.08. auf `25.-26.08.`
+    korrigiert wurde. Die Korrektur erreichte die Chronik und `ortszeit.py`,
+    nicht aber diese Liste.
+
+    Gelesen wird die ausgelieferte Chronik, nicht eine Attrappe: ein
+    Datenfehler ist in synthetischen Testdaten nicht sichtbar.
+
+    Nur Zeilen mit **einem** Ort zaehlen. `→` und `·` trennen mehrere Orte in
+    einer Zeile ("Frankfurt → Bahrain → Singapur", "Grenze nach Johor Bahru ·
+    Larkin Sentral · Bus nach Mersing") — das sind Reisetage, keine Stationen,
+    und aus ihnen eine Station abzuleiten hiesse Bahrain auf die Karte zu
+    setzen.
+    """
+
+    QUELLE = Path(__file__).resolve().parent.parent / "content" / "erfahrungen.md"
+
+    @classmethod
+    def setUpClass(cls):
+        cls.zeilen = cls._chronik(cls.QUELLE.read_text(encoding="utf-8"))
+        if not cls.zeilen:
+            raise AssertionError(
+                f"Keine Chronik-Zeile in {cls.QUELLE} gefunden — der Test misst "
+                "dann nichts und waere still gruen.")
+
+    @staticmethod
+    def _chronik(text: str) -> list[tuple[str, str]]:
+        """(Datum, Ort) je Chronik-Zeile mit genau einem Ort.
+
+        Gelesen wird **nur** die Tabelle unter `## Chronik`. Das Dokument
+        enthaelt weitere Tabellen (Faehrzeiten, Packliste); ueber alle Zeilen
+        mit `|` zu laufen holte beim ersten Lauf zehn angebliche Stationen wie
+        "Geld holen" und "Ablegen" herein. Ein Test, der routinemaessig Unsinn
+        meldet, wird nach drei Tagen nicht mehr gelesen.
+        """
+        rumpf = text.split("\n## Chronik", 1)
+        if len(rumpf) != 2:
+            return []
+        rumpf = rumpf[1].split("\n## ", 1)[0]
+        raus = []
+        for zeile in rumpf.splitlines():
+            if not zeile.startswith("|"):
+                continue
+            spalten = [s.strip() for s in zeile.strip("|").split("|")]
+            if len(spalten) < 2:
+                continue
+            datum, wo = spalten[0], spalten[1]
+            if datum in ("Datum", "") or set(datum) <= set("-: "):
+                continue
+            if "→" in wo or "·" in wo:
+                continue
+            raus.append((datum, wo.split(",")[0].strip()))
+        return raus
+
+    def test_jede_chronik_station_steht_in_stationen(self):
+        bekannt = {name for name, *_ in build.STATIONEN}
+        fehlend = sorted({wo for _, wo in self.zeilen if wo not in bekannt})
+        self.assertEqual(
+            [], fehlend,
+            f"Die Chronik nennt {fehlend}, STATIONEN kennt sie nicht. Eintraege "
+            "von dort koennen keinen <!-- ort: … --> tragen und fehlen auf der "
+            "Karte.")
+
+    def test_datumsspanne_der_station_stimmt_mit_der_chronik(self):
+        """Die Notiz an der Station faengt mit der Spanne an, die die Chronik nennt."""
+        nach_ort = {}
+        for datum, wo in self.zeilen:
+            nach_ort.setdefault(wo, []).append(datum)
+        falsch = []
+        for name, _lat, _lon, de, _en in build.STATIONEN:
+            if name not in nach_ort or len(nach_ort[name]) != 1:
+                continue                      # mehrfach besucht -> keine eine Spanne
+            chronik = nach_ort[name][0]
+            if not de.startswith(chronik):
+                falsch.append(f"{name}: Karte {de!r}, Chronik {chronik!r}")
+        self.assertEqual([], falsch, "Station und Chronik widersprechen sich: "
+                                     + "; ".join(falsch))
+
+
 class TestKarteErlebnisse(unittest.TestCase):
     """Die Karte war eine Route. Jetzt ist sie ein zweiter Weg in den Text.
 
