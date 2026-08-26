@@ -1312,6 +1312,48 @@ für den 25.08., nicht vor Ort nachgemessen; Sonnenstand und Geländehöhen aus 
 
 ---
 
+## Sepilok
+
+**✓ Vom Resort läuft man zum Rainforest Discovery Centre zu Fuß die Straße entlang (26.08.).**
+Kein Transfer nötig; die Straße ist asphaltiert, mit Bordstein und Wartehäuschen am Rand, und
+führt zwischen Palmen und Regenwald hindurch.
+
+<!-- werkstatt: telegram=2026-08-26T05:35 -->
+
+![Eine asphaltierte Straße zwischen dichtem Grün, links Palmen mit roten Blattstielen und ein offenes Wartehäuschen, rechts Regenwald; auf der Fahrbahn ein gelber Richtungspfeil, zwei Personen gehen den Weg entlang.](foto:2026-08-26_053513.jpg)
+
+**✓ Der Ticketschalter des RDC ist eine offene Holzhütte am Eingang (26.08.).** Über dem Fenster
+steht „Tickets", daneben ein Leuchtschild „OPEN"; um 13:35 Ortszeit stand eine Reisegruppe an.
+
+![Eine offene Holzhütte unter einem Wellblechdach mit dem Schild Tickets über dem Schalterfenster und einem OPEN-Leuchtschild, davor eine Malaysia-Flagge; rechts geht eine Gruppe von Besuchern den Weg zum Eingang hinauf.](foto:2026-08-26_053510.jpg)
+
+**✓ Am Eingang hängt eine Übersichtskarte des Waldreservats, und ein Weg darauf ist gesperrt
+(26.08.).** Die Karte (Maßstab 1:30.000) zeigt vier Einrichtungen in einem Reservat: das Rainforest
+Discovery Centre, das Orang Utan Rehabilitation Centre, das Sun Bear Conservation Centre und, ganz
+im Süden am Mangrovensaum, das Mangrove Discovery Centre. Der **Kabili Trail** ist mit „17 km from
+entrance to end point" und „16–18 km return way" beschriftet, mit drei Schutzhütten unterwegs
+(Martyn, Pryer, Bukit Jalil). Der **Tun Sakaran Trail** ist quer durchgestrichen und mit **„NO
+ENTRY"** gekennzeichnet.
+
+![Eine an eine Holzwand geschraubte Satellitenkarte des Sepilok-Waldreservats im Maßstab 1:30.000; ein gelber Pfeil mit der Aufschrift You are here zeigt auf das Rainforest Discovery Centre, gelb eingezeichnet der Kabili Trail mit drei Schutzhütten, der Tun Sakaran Trail ist durchgestrichen und mit NO ENTRY beschriftet.](foto:2026-08-26_053508.jpg)
+
+**○ Die Zeiten am RDC entscheiden über den Tag, und drei davon liegen abends (26.08., vor der
+Auskunft an Jens geprüft, nicht vor Ort nachgemessen).** Der Ticketschalter ist 08–17 Uhr offen,
+die Wege bleiben bis 19 Uhr begehbar. Der **Night Walk läuft 18–20 Uhr und nur mit
+Voranmeldung** (rund RM 50 pro Erwachsener) — er muss also am Schalter gebucht werden, solange man
+davorsteht. Gegen 18 Uhr verlassen die Flughörnchen ihre Baumhöhlen und segeln über den
+347 m langen Canopy Walkway. Im Orang-Utan-Zentrum nebenan wird um **10:00 und 15:00** gefüttert,
+das Zentrum schließt um 16:00. Eintritt RDC für Ausländer RM 15 (Erwachsene), RM 5 (5–17 Jahre).
+Die Öffnungszeiten des Sonnenbären-Zentrums sind hier **nicht** belegt.
+
+**✓ Das Resort empfängt in einer offenen Halle mit Deckenventilatoren und Blick in den Garten
+(26.08.).** Rezeption links, davor Platz für das Gepäck; dahinter eine Terrasse mit Bambusrollos
+und ein Rasen mit Bananenstauden und einem gemauerten Grill.
+
+![Eine offene Empfangshalle mit Holzboden, Deckenventilatoren und Bambusrollos; links die Rezeptionstheke mit Aushängen, in der Mitte eine Besucherin mit Rucksack, rechts ein Wasserspender, im Hintergrund eine Terrasse mit Blick ins Grün.](foto:2026-08-26_053517.jpg)
+
+![Ein gepflegter Rasen zwischen dichten Buschreihen, rechts der überdachte Gang eines Gästehauses, im Hintergrund Bananenstauden und ein gemauerter Grill unter hohen Regenwaldbäumen, darüber wolkenloser blauer Himmel.](foto:2026-08-26_053515.jpg)
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
