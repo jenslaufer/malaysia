@@ -1326,6 +1326,71 @@ Tower, the furthest one, back to the entrance is a good **500 m as the crow flie
 walkway and trail. If you stay up for the sunset, be on your way back by **18:40** at the latest.
 On 27 Aug the sun sets at 18:17.
 
+**✓ The canopy walkway is a steel structure on lattice towers, not a suspension bridge (26 Aug).**
+The deck is made of steel grating, the expanded-metal railings reach chest height, and the whole
+thing rests on cross-braced tubular steel towers that rise out of the undergrowth every few dozen
+metres. It is wide enough to stand still and let others pass — which you do, because you see
+nothing while walking.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![A green-painted steel walkway runs through the rainforest at canopy height, carried by slender cross-braced tubular towers; the railing is wire mesh, and the forest drops away steeply beneath the deck.](foto:2026-08-26_105828.jpg)
+
+![View from a tower onto the canopy walkway: the deck curves gently to the right and disappears between the crowns, its supports standing in several tiers in the undergrowth below.](foto:2026-08-26_105823.jpg)
+
+![Visitors on the canopy walkway in low afternoon light; in the foreground a person in a hat stands at the railing, further back two people walk along the deck, and a group waits at a junction in the distance.](foto:2026-08-26_105826.jpg)
+
+![The canopy walkway seen from the side, half hidden by foliage; the deck enters the frame at the lower left, with a dense canopy and a few tall bare branches in front of and behind it.](foto:2026-08-26_105832.jpg)
+
+**✓ The height is posted on the Hornbill Tower: platform 2 is 27 m above the ground (26 Aug).**
+A sign on the support tube reads "Hornbill Tower — Platform 2. You are 27 m (90 ft) above the
+ground", with a photo of a rhinoceros hornbill below it. So the tower has more than one platform,
+and the number is where you need it: up there, not in a brochure.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![A green-painted support tube on a tower platform carrying a sign that reads Hornbill Tower, Platform 2, You are 27 m (90 ft) above the ground, with a picture of a rhinoceros hornbill; around it a steel grating floor with a wire mesh railing and the forest beyond.](foto:2026-08-26_105817.jpg)
+
+**✓ An orangutan sits in a tree in the forest at the RDC — no platform, no scheduled time
+(26 Aug).** The animal crouches freely in the branches above the trail, working at the twigs.
+Next door at the rehabilitation centre the feedings are on the timetable at 10:00 and 15:00; here
+nothing is on a timetable. You only find an animal like this by its movement — sitting still, the
+reddish brown all but vanishes among the leaves against the light.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![An orangutan sits hunched in a fork of a branch amid dense green foliage, its reddish-brown coat barely standing out, a yellow leaf in one hand.](foto:2026-08-26_105836.jpg)
+
+![The same orangutan from slightly below: one arm reaches up into the branches, the head is hidden by leaves, a pale tree trunk on the left of the frame.](foto:2026-08-26_105838.jpg)
+
+![A view into a dense tree crown with the dark silhouette of an orangutan behind branches and leaves at the centre, a vertical trunk in front.](foto:2026-08-26_105834.jpg)
+
+**✓ From the walkway the canopy is at eye level, and it is not a closed surface (26 Aug).** From
+below the rainforest looks like a roof; from above it is a landscape of hills and holes with
+single bare giants sticking out of it. In the last hour before sunset the light turns low and
+warm, and afterwards the sky tips into grey-pink within a few minutes.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![The rainforest canopy in warm afternoon light, a tangle of greens with a few dead branches, the forest climbing a slope behind.](foto:2026-08-26_105841.jpg)
+
+![Tree crowns against a cloudy dusk sky; on the right a tall tree with a pale trunk and wide-spreading branches, dense dark foliage to the left and below.](foto:2026-08-26_105819.jpg)
+
+![A wide view over the crowns shortly after sunset, the sky grey-pink and cloudy, a pale almost leafless tree in the right foreground and forested ridges to the horizon.](foto:2026-08-26_105821.jpg)
+
+![A view straight up from the ground into two tall trunks and their leaf canopy, bright sky light coming through the gaps.](foto:2026-08-26_105814.jpg)
+
+**✓ There is a lake with water lilies at the RDC, and it is quiet there (26 Aug).** The lake lies
+between forested slopes, with a wooden pavilion on one shore and a shelter on the far side, and
+the water is still enough to mirror the whole forest. The path along the bank is called the
+Lakeside Trail; it is the flat counterpart to the walkway.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![A lake enclosed by rainforest with a mirror-smooth surface, a field of water lily pads and tufts of grass in the foreground, a small shelter under tall trees on the far bank, blue sky with white clouds above.](foto:2026-08-26_105843.jpg)
+
+![The same lake from slightly further left: a wooden pavilion with a shingled roof juts over the water at the left edge, a broad field of lily pads in front of it, trees and clouds reflected in the water.](foto:2026-08-26_105845.jpg)
+
 **✓ The resort receives guests in an open hall with ceiling fans and a view into the garden
 (26 Aug).** Reception on the left, space for luggage in front of it; behind it a terrace with
 bamboo blinds and a lawn with banana plants and a brick barbecue.

@@ -741,5 +741,56 @@
         0.042
       ]
     ]
+  },
+  "2026-08-26_105828.jpg": {
+    "name": "sepilok-canopy-walkway-stahlkonstruktion"
+  },
+  "2026-08-26_105823.jpg": {
+    "name": "sepilok-canopy-walkway-vom-turm"
+  },
+  "2026-08-26_105826.jpg": {
+    "name": "sepilok-canopy-walkway-besucher-abendlicht",
+    "_blur": "Ein Kasten, eng auf das Gesicht der Person im Vordergrund rechts, nicht auf den Hut - der erste Versuch deckte Hutkrempe und Stirn und liess das Kinn frei, sichtbar erst am gerenderten Bild. Sie steht 3-4 m vor der Kamera, im Profil, das klarste Gesicht der Seite. Die zwei im Mittelgrund stehen mit dem Ruecken zur Kamera, die Gruppe ganz hinten hat Koepfe von 8 px - unter der Schwelle, ab der ein Kasten schuetzt statt nur so auszusehen.",
+    "blur": [
+      [
+        0.648,
+        0.451,
+        0.053,
+        0.083
+      ]
+    ]
+  },
+  "2026-08-26_105832.jpg": {
+    "name": "sepilok-canopy-walkway-im-kronendach"
+  },
+  "2026-08-26_105817.jpg": {
+    "name": "sepilok-hornbill-tower-hoehenschild-27m"
+  },
+  "2026-08-26_105836.jpg": {
+    "name": "sepilok-orang-utan-im-geaest"
+  },
+  "2026-08-26_105838.jpg": {
+    "name": "sepilok-orang-utan-greift-nach-zweigen"
+  },
+  "2026-08-26_105834.jpg": {
+    "name": "sepilok-orang-utan-baumkrone"
+  },
+  "2026-08-26_105841.jpg": {
+    "name": "sepilok-kronendach-nachmittagslicht"
+  },
+  "2026-08-26_105819.jpg": {
+    "name": "sepilok-kronendach-daemmerung"
+  },
+  "2026-08-26_105821.jpg": {
+    "name": "sepilok-kronendach-nach-sonnenuntergang"
+  },
+  "2026-08-26_105814.jpg": {
+    "name": "sepilok-blick-nach-oben-in-die-kronen"
+  },
+  "2026-08-26_105843.jpg": {
+    "name": "sepilok-see-seerosen"
+  },
+  "2026-08-26_105845.jpg": {
+    "name": "sepilok-see-pavillon"
   }
 }

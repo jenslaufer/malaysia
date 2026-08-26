@@ -1360,6 +1360,72 @@ Hornbill Tower, dem entferntesten, zurück zum Eingang sind es gut **500 m Luftl
 Steg und Weg entsprechend mehr. Wer den Sonnenuntergang oben mitnimmt, sollte spätestens
 **18:40** auf dem Rückweg sein. Am 27.08. geht die Sonne um 18:17 unter.
 
+**✓ Der Canopy Walkway ist eine Stahlkonstruktion auf Gittertürmen, kein Hängesteg (26.08.).**
+Der Laufsteg besteht aus Gitterrostplatten, die Geländer aus Streckmetall reichen bis Brusthöhe,
+und getragen wird alles von Stahlrohrtürmen mit Kreuzverstrebung, die im Abstand von einigen
+Dutzend Metern aus dem Unterholz aufsteigen. Er ist breit genug, dass man stehen bleiben und
+andere vorbeilassen kann — was man auch tut, denn im Gehen sieht man nichts.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![Ein grün gestrichener Stahlsteg zieht sich in Höhe der Baumkronen durch den Regenwald, getragen von schlanken Rohrtürmen mit Kreuzverstrebung; das Geländer besteht aus Maschendraht, unter dem Steg fällt der Wald steil ab.](foto:2026-08-26_105828.jpg)
+
+![Blick von einem Turm auf den Canopy Walkway: der Steg führt in einer leichten Kurve nach rechts und verschwindet zwischen den Kronen, unter ihm stehen die Stützen in mehreren Etagen im Unterholz.](foto:2026-08-26_105823.jpg)
+
+![Besucher auf dem Canopy Walkway im tief stehenden Nachmittagslicht; im Vordergrund steht eine Person mit Hut am Geländer, weiter hinten gehen zwei Personen den Steg entlang, ganz hinten eine Gruppe an einer Abzweigung.](foto:2026-08-26_105826.jpg)
+
+![Der Canopy Walkway von der Seite, halb verdeckt vom Blattwerk; links unten läuft der Steg ins Bild, davor und dahinter steht ein dichtes Kronendach mit einzelnen hohen, kahlen Ästen.](foto:2026-08-26_105832.jpg)
+
+**✓ Am Hornbill Tower steht die Höhe angeschrieben: Plattform 2 liegt 27 m über dem Boden
+(26.08.).** Auf dem Stützrohr klebt ein Schild „Hornbill Tower — Platform 2. You are 27 m (90 ft)
+above the ground", darunter ein Foto des Rhinoceros Hornbill. Der Turm hat damit mehr als eine
+Plattform, und die Zahl steht dort, wo man sie braucht: oben, nicht im Prospekt.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![Ein grün gestrichenes Stützrohr auf einer Turmplattform, darauf ein Schild mit der Aufschrift Hornbill Tower, Platform 2, You are 27 m (90 ft) above the ground und einem Bild eines Rhinoceros Hornbill; ringsum ein Gitterrostboden mit Maschendrahtgeländer und dahinter der Wald.](foto:2026-08-26_105817.jpg)
+
+**✓ Im Wald am RDC sitzt ein Orang-Utan im Baum — ohne Plattform und ohne Uhrzeit (26.08.).**
+Das Tier hockt frei im Geäst über dem Weg und hantiert an den Zweigen. Nebenan im
+Rehabilitationszentrum stehen die Fütterungen um 10:00 und 15:00 im Programm; hier steht nichts
+im Programm. Zu finden ist so ein Tier nur über die Bewegung — sitzt es still, verschwindet das
+Rotbraun im Gegenlicht fast vollständig zwischen den Blättern.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![Ein Orang-Utan sitzt zusammengekauert in einer Astgabel im dichten grünen Blattwerk, das rotbraune Fell hebt sich nur schwach ab, in der Hand ein gelbes Blatt.](foto:2026-08-26_105836.jpg)
+
+![Derselbe Orang-Utan von etwas weiter unten: er greift mit einem Arm nach oben in die Zweige, der Kopf ist vom Laub verdeckt, links im Bild ein heller Baumstamm.](foto:2026-08-26_105838.jpg)
+
+![Blick in eine dichte Baumkrone, in der Bildmitte hinter Zweigen und Blättern die dunkle Silhouette eines Orang-Utans, davor ein senkrechter Baumstamm.](foto:2026-08-26_105834.jpg)
+
+**✓ Vom Steg aus liegt das Kronendach auf Augenhöhe, und es ist keine geschlossene Fläche
+(26.08.).** Von unten sieht der Regenwald aus wie ein Dach; von oben ist er eine Landschaft aus
+Hügeln und Löchern, aus der einzelne kahle Riesen herausragen. In der letzten Stunde vor
+Sonnenuntergang wird das Licht flach und warm, danach kippt der Himmel innerhalb weniger Minuten
+ins Graurosa.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![Das Kronendach des Regenwaldes im warmen Nachmittagslicht, ein Gewirr aus Grüntönen mit einzelnen abgestorbenen Ästen, dahinter steigt der Wald einen Hang hinauf.](foto:2026-08-26_105841.jpg)
+
+![Baumkronen gegen einen bewölkten Dämmerungshimmel; rechts ein hoher Baum mit blassem Stamm und weit ausladenden Ästen, links und unten dichtes dunkles Laub.](foto:2026-08-26_105819.jpg)
+
+![Weiter Blick über die Kronen kurz nach Sonnenuntergang, der Himmel graurosa und bewölkt, im Vordergrund rechts ein heller, fast blattloser Baum, dahinter Waldkuppen bis zum Horizont.](foto:2026-08-26_105821.jpg)
+
+![Blick vom Boden senkrecht nach oben in zwei hohe Stämme und ihr Blätterdach, dazwischen helles Himmelslicht durch die Lücken.](foto:2026-08-26_105814.jpg)
+
+**✓ Am RDC liegt ein See mit Seerosenfeldern, und dort ist es still (26.08.).** Der See liegt
+zwischen bewaldeten Hängen, am Ufer stehen ein hölzerner Pavillon und drüben eine Schutzhütte,
+und die Wasserfläche ist so ruhig, dass sich der ganze Wald darin spiegelt. Der Weg am Ufer heißt
+Lakeside Trail; er ist der flache Gegenpol zum Steg.
+
+<!-- werkstatt: telegram=2026-08-26T10:58 -->
+
+![Ein von Regenwald umschlossener See mit spiegelglatter Oberfläche, im Vordergrund ein Feld aus Seerosenblättern und Grasbüscheln, am gegenüberliegenden Ufer eine kleine Schutzhütte unter hohen Bäumen, darüber blauer Himmel mit weißen Wolken.](foto:2026-08-26_105843.jpg)
+
+![Derselbe See von etwas weiter links: am linken Bildrand ragt ein hölzerner Pavillon mit Schindeldach über das Wasser, davor ein breites Feld aus Seerosenblättern, im Wasser spiegeln sich Bäume und Wolken.](foto:2026-08-26_105845.jpg)
+
 **✓ Das Resort empfängt in einer offenen Halle mit Deckenventilatoren und Blick in den Garten
 (26.08.).** Rezeption links, davor Platz für das Gepäck; dahinter eine Terrasse mit Bambusrollos
 und ein Rasen mit Bananenstauden und einem gemauerten Grill.
