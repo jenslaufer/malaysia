@@ -1312,6 +1312,20 @@ At the neighbouring orangutan centre feeding is at **10:00 and 15:00**, and that
 16:00. RDC entry for foreigners is RM 15 (adults), RM 5 (ages 5–17). The opening hours of the sun
 bear centre are **not** established here.
 
+**○ The towers on the canopy walkway come in a fixed order, and two of them sit off it (26 Aug,
+measured from map data, not walked).** From the ascent the walkway passes the **Sunbird Shed**
+first, then the **Bristlehead Tower**, then the **Trogon Tower**, where it ends. The **Hornbill
+Tower** and the **Broadbill Tower** are **not** on the walkway but about 85 m and 245 m off it on
+the forest trails — to take them in, drop down onto the **Belian Trail** at the end of the walkway.
+The trails around it are called Belian, Kingfisher, Ridge and Lakeside.
+
+**○ The sun sets at 18:18 in late August, and the trails close at 19:00 (26 Aug, computed for
+5.873 N / 117.943 E).** Between sunset and the end of civil twilight at **18:39** there are 21
+minutes in which you can still see without a torch; by about 19:04 it is dark. From the Hornbill
+Tower, the furthest one, back to the entrance is a good **500 m as the crow flies**, and more along
+walkway and trail. If you stay up for the sunset, be on your way back by **18:40** at the latest.
+On 27 Aug the sun sets at 18:17.
+
 **✓ The resort receives guests in an open hall with ceiling fans and a view into the garden
 (26 Aug).** Reception on the left, space for luggage in front of it; behind it a terrace with
 bamboo blinds and a lawn with banana plants and a brick barbecue.

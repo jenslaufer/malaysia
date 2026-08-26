@@ -1346,6 +1346,20 @@ davorsteht. Gegen 18 Uhr verlassen die Flughörnchen ihre Baumhöhlen und segeln
 das Zentrum schließt um 16:00. Eintritt RDC für Ausländer RM 15 (Erwachsene), RM 5 (5–17 Jahre).
 Die Öffnungszeiten des Sonnenbären-Zentrums sind hier **nicht** belegt.
 
+**○ Auf dem Canopy Walkway stehen die Türme in einer festen Reihenfolge, und zwei liegen daneben
+(26.08., aus den Kartendaten gemessen, nicht abgelaufen).** Vom Aufgang aus führt der Steg zuerst
+am **Sunbird Shed** vorbei, dann zum **Bristlehead Tower** und weiter zum **Trogon Tower**; dort
+endet er. Der **Hornbill Tower** und der **Broadbill Tower** stehen **nicht** auf dem Steg, sondern
+rund 85 m und 245 m abseits an den Waldwegen — wer sie mitnehmen will, geht am Ende des Stegs auf
+den **Belian Trail** hinunter. Die Wege ringsum heißen Belian, Kingfisher, Ridge und Lakeside.
+
+**○ Die Sonne geht Ende August um 18:18 unter, und die Wege schließen um 19:00 (26.08., gerechnet
+für 5,873 N / 117,943 O).** Zwischen Sonnenuntergang und dem Ende der bürgerlichen Dämmerung um
+**18:39** bleiben 21 Minuten, in denen man ohne Lampe noch sieht; gegen 19:04 ist es dunkel. Vom
+Hornbill Tower, dem entferntesten, zurück zum Eingang sind es gut **500 m Luftlinie** und über
+Steg und Weg entsprechend mehr. Wer den Sonnenuntergang oben mitnimmt, sollte spätestens
+**18:40** auf dem Rückweg sein. Am 27.08. geht die Sonne um 18:17 unter.
+
 **✓ Das Resort empfängt in einer offenen Halle mit Deckenventilatoren und Blick in den Garten
 (26.08.).** Rezeption links, davor Platz für das Gepäck; dahinter eine Terrasse mit Bambusrollos
 und ein Rasen mit Bananenstauden und einem gemauerten Grill.
