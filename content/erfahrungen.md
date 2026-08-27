@@ -1437,6 +1437,28 @@ und ein Rasen mit Bananenstauden und einem gemauerten Grill.
 
 ![Ein gepflegter Rasen zwischen dichten Buschreihen, rechts der überdachte Gang eines Gästehauses, im Hintergrund Bananenstauden und ein gemauerter Grill unter hohen Regenwaldbäumen, darüber wolkenloser blauer Himmel.](foto:2026-08-26_053515.jpg)
 
+**✓ Auf der Fütterungsplattform des Orang-Utan-Zentrums sitzt ein Tier über dem ausgelegten
+Obst (27.08. geschickt, Besuchstag nicht belegt).** Die Plattform ist ein schwarzer Holzrost auf
+Stelzen, gut mannshoch über dem Boden, dazu Drahtseile, die von den umstehenden Bäumen kommen.
+Das Obst liegt lose darauf, ohne Schale und ohne Behälter. Der Besucherbereich liegt tiefer und
+ein gutes Stück entfernt — im unteren Bildrand schiebt sich die Kappe eines Vordermanns ins
+Bild, das ist der Maßstab für die Entfernung.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: sepilok -->
+
+![Ein rotbrauner Orang-Utan sitzt auf einer schwarzen Holzplattform auf Stelzen im Wald, vor sich ausgelegtes Obst und Blätter; über der Plattform verlaufen Drahtseile zu den umstehenden Bäumen, unten im Bild der Rand einer Besucherkappe.](foto:2026-08-27_104636.jpg)
+
+**✓ Im Sonnenbären-Zentrum sind die Bären unten im Wald, der Steg liegt darüber (27.08.
+geschickt, Besuchstag nicht belegt).** Zwei Tiere waren gleichzeitig zu sehen: eines klettert an
+einem morschen Stumpf, eines liegt am Boden und frisst. Der Blick geht von oben herab, der
+Waldboden ist offen und hell, ein Gitter steht nicht dazwischen — Nähe gibt es trotzdem nicht.
+Links steht ein schwarzer Kunststoffbottich mit Wasser; das ist das einzige Stück Ausstattung
+im Bild.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: sepilok -->
+
+![Blick von oben auf einen offenen Waldboden: links klettert ein schwarzer Malaienbär an einem morschen Baumstumpf, rechts liegt ein zweiter am Boden und frisst; links im Bild ein schwarzer Kunststoffbottich mit Wasser.](foto:2026-08-27_104634.jpg)
+
 ## Kinabatangan
 
 **✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am Weg, und beide Pakete stehen
@@ -1476,6 +1498,54 @@ von dort sind es rund zweieinhalb Stunden Straße nach Sandakan. Zeitlich bleibt
 Luft. Was die Tafel **nicht** sagt: ob die Fahrt vom Flussufer zum Flughafen im Paket steckt
 oder ob sie extra bestellt werden muss. Das ist die eine Frage, die an der Rezeption zu klären
 ist, solange man noch davorsteht.
+
+**✓ Auf der Nachmittagsfahrt stehen Borneo-Zwergelefanten am Ufer (27.08.).** Mindestens drei
+Tiere, eines davon deutlich kleiner, ästen im hohen Gras oberhalb der Uferkante, während das
+Boot auf dem Fluss stand; sie ließen sich davon nicht stören und blieben, wo sie waren. Die
+Uferkante ist an der Stelle frisch abgebrochen: eine nackte Lehmwand, darüber ein Streifen
+Gras, dahinter geschlossener Wald. **Auf der Tafel steht das nicht.** Angekündigt ist eine
+Bootsfahrt, keine Tierart — die Elefanten sind Glück, kein Programmpunkt.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![Zwei graue Borneo-Zwergelefanten stehen im hohen Gras auf einer abgebrochenen Lehmkante über einem lehmbraunen Fluss, dahinter dichter grüner Regenwald.](foto:2026-08-27_104614.jpg)
+
+![Dieselbe Uferstelle mit drei Elefanten: links ein ausgewachsenes Tier, in der Mitte ein deutlich kleineres Jungtier, rechts ein großes Tier mit gesenktem Kopf im Gras.](foto:2026-08-27_104616.jpg)
+
+**✓ Ein Krokodil liegt im flachen Wasser direkt am Ufer, und zu sehen ist fast nichts (27.08.).**
+Über der Wasserlinie steht nur der schmale Kopf, und er trägt dieselbe Farbe wie der Schlamm
+dahinter; der Rest ist unter Wasser. Auf dem Foto findet man ihn erst, wenn man weiß, wo er
+liegt — das auffälligere Ding im Bild ist die blühende Wasserhyazinthe daneben. Wer vom Boot
+aus selbst sucht, sucht also nach einer Linie im Uferschlamm, nicht nach einem Tier.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![Am schlammigen Ufer eines braunen Flusses liegt ein Krokodil fast vollständig unter Wasser, nur der schmale Kopf ragt heraus; rechts daneben eine blühende Wasserhyazinthe, oben trockenes Astwerk.](foto:2026-08-27_104627.jpg)
+
+**✓ Ein rotbraunes Tier sitzt hoch in einem fruchtenden Baum — und mehr gibt das Foto nicht her
+(27.08.).** Der Baum steht am Ufer und trägt runde Früchte, das Tier sitzt weit oben zwischen
+den Zweigen gegen den hellen Himmel. Vom Boot aus war es zu sehen, auf dem Bild ist es ein
+Fleck. **Das ist der ehrliche Unterschied zur Fütterungsplattform:** dort sitzt das Tier auf
+Augenhöhe und in Ruhe, hier entscheidet die Entfernung — und die Art ist aus dem Foto allein
+nicht zu bestimmen, denn Orang-Utan und Rotlangur sind beide rotbraun und beide hier zu Hause.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![Blick von unten in einen hohen Baum mit runden Früchten vor blauem Himmel; rechts oben zwischen den Zweigen die undeutliche rotbraune Gestalt eines Tieres.](foto:2026-08-27_104638.jpg)
+
+![Derselbe Baum aus anderem Winkel, dichtes Geäst gegen den Himmel, in der Bildmitte rechts ein rotbrauner Fleck zwischen den Blättern.](foto:2026-08-27_104631.jpg)
+
+**✓ Die Nachmittagsfahrt läuft bis in die Dämmerung (27.08.).** Start ist laut Tafel 16:00,
+Abendessen 18:30 — dazwischen geht die Sonne unter. Auf der Rückfahrt liegt der Fluss schon im
+Restlicht, der Wald am Ufer ist nur noch Silhouette. Praktisch heißt das zweierlei: die letzte
+halbe Stunde ist kühl und windig auf dem fahrenden Boot, und wer fotografieren will, hat sein
+Licht vorher. Die Fahrt endet nicht, weil es dunkel wird, sondern weil das Essen wartet.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![Weiter Blick über den Kinabatangan gegen die tief stehende Sonne, die hinter einer Wolkenbank steht; rechts der dunkle Waldrand als Silhouette, links unten die Gischt des Bootes.](foto:2026-08-27_104622.jpg)
+
+![Lehmbrauner Fluss mit dichtem grünem Uferwald, aus dem Wasser ragen abgestorbene Äste und ein Baumstumpf.](foto:2026-08-27_104629.jpg)
 
 ## Essen
 

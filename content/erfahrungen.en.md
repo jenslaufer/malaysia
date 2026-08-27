@@ -1402,6 +1402,28 @@ bamboo blinds and a lawn with banana plants and a brick barbecue.
 
 ![A mown lawn between dense rows of shrubs, on the right the covered walkway of a guest house, in the background banana plants and a brick barbecue under tall rainforest trees, cloudless blue sky above.](foto:2026-08-26_053515.jpg)
 
+**✓ On the feeding platform of the orangutan centre an animal sits over the fruit that has been
+put out (sent 27 Aug, day of the visit not established).** The platform is a black timber deck
+on posts, a good head-height above the ground, with steel cables running to the surrounding
+trees. The fruit lies loose on it, in no bowl and no container. The visitor area is lower down
+and a fair way off — the brim of the cap of the person in front creeps into the bottom of the
+frame, and that is the measure of the distance.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: sepilok -->
+
+![A reddish-brown orangutan sits on a black timber platform on posts in the forest, fruit and leaves spread in front of it; steel cables run from the platform to the surrounding trees, the edge of a visitor's cap at the bottom of the picture.](foto:2026-08-27_104636.jpg)
+
+**✓ At the sun bear centre the bears are down in the forest and the walkway is above them (sent
+27 Aug, day of the visit not established).** Two animals were in view at the same time: one
+climbing a rotten stump, one lying on the ground and feeding. The view goes down from above,
+the forest floor is open and light, and there is no mesh in between — which still does not make
+it close. A black plastic tub of water stands on the left; it is the only piece of equipment in
+the frame.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: sepilok -->
+
+![Looking down onto an open forest floor: on the left a black sun bear climbs a rotten tree stump, on the right a second lies on the ground feeding; a black plastic water tub at the left of the frame.](foto:2026-08-27_104634.jpg)
+
 ## Kinabatangan
 
 **✓ The lodge's daily schedule is written on a whiteboard by the path, and both packages are
@@ -1440,6 +1462,55 @@ from there it is a good two and a half hours by road to Sandakan. Time is not th
 the board does **not** say is whether the ride from the river to the airport is part of the
 package or has to be ordered separately. That is the one question to settle at reception while
 you are still standing in front of it.
+
+**✓ Borneo pygmy elephants stand on the bank during the afternoon cruise (27 Aug).** At least
+three animals, one of them clearly smaller, were feeding in the tall grass above the bank while
+the boat sat out on the river; they took no notice and stayed where they were. The bank has
+broken away freshly at that spot: a bare wall of clay, a strip of grass on top, closed forest
+behind it. **None of this is on the board.** What is announced is a boat trip, not a species —
+the elephants are luck, not a scheduled item.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![Two grey Borneo pygmy elephants stand in tall grass on a broken clay bank above a muddy brown river, dense green rainforest behind them.](foto:2026-08-27_104614.jpg)
+
+![The same stretch of bank with three elephants: an adult on the left, a distinctly smaller calf in the middle, a large animal on the right with its head down in the grass.](foto:2026-08-27_104616.jpg)
+
+**✓ A crocodile lies in the shallows right at the bank, and there is almost nothing to see
+(27 Aug).** Only the narrow head breaks the waterline, and it is the same colour as the mud
+behind it; the rest is under water. In the photograph you find it only once you know where it
+is — the more conspicuous thing in the frame is the flowering water hyacinth beside it. So
+anyone scanning from the boat is looking for a line in the mud, not for an animal.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![At the muddy edge of a brown river a crocodile lies almost fully submerged, only the narrow head showing; a flowering water hyacinth to the right, dry branches above.](foto:2026-08-27_104627.jpg)
+
+**✓ A reddish-brown animal sits high in a fruiting tree — and that is all the photograph gives
+you (27 Aug).** The tree stands on the bank and carries round fruit; the animal sits far up
+among the branches against a bright sky. From the boat it was visible, in the picture it is a
+smudge. **That is the honest difference from the feeding platform:** there the animal sits at
+eye level and at rest, here the distance decides — and the species cannot be settled from the
+photo alone, because orangutan and maroon langur are both reddish-brown and both at home here.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![Looking up into a tall fruiting tree against blue sky; top right, indistinct among the branches, the reddish-brown shape of an animal.](foto:2026-08-27_104638.jpg)
+
+![The same tree from another angle, dense branches against the sky, a reddish-brown patch among the leaves right of centre.](foto:2026-08-27_104631.jpg)
+
+**✓ The afternoon cruise runs into dusk (27 Aug).** The board has it starting at 4:00 pm and
+dinner at 6:30 pm — the sun goes down in between. On the way back the river already lies in the
+last of the light and the forest on the bank is only a silhouette. Two practical consequences:
+the final half hour is cool and windy on a moving boat, and anyone who wants photographs has
+their light earlier. The trip does not end because it gets dark, it ends because dinner is
+waiting.
+<!-- werkstatt: telegram=2026-08-27T10:46 -->
+<!-- ort: kinabatangan -->
+
+![A wide view across the Kinabatangan into the low sun behind a bank of cloud; the dark treeline stands as a silhouette on the right, the boat's spray bottom left.](foto:2026-08-27_104622.jpg)
+
+![Muddy brown river with dense green forest along the bank, dead branches and a tree stump breaking the surface.](foto:2026-08-27_104629.jpg)
 
 ## Eating
 
