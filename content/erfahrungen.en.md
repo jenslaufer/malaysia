@@ -1402,6 +1402,45 @@ bamboo blinds and a lawn with banana plants and a brick barbecue.
 
 ![A mown lawn between dense rows of shrubs, on the right the covered walkway of a guest house, in the background banana plants and a brick barbecue under tall rainforest trees, cloudless blue sky above.](foto:2026-08-26_053515.jpg)
 
+## Kinabatangan
+
+**✓ The lodge's daily schedule is written on a whiteboard by the path, and both packages are
+on it (27 Aug).** Heading: "2D1N & 3D2N Basic Itinerary" — one plan for two programmes. Guests
+staying one night and guests staying two read the same day 1; the split comes on the second
+morning. **Day 1:** 3:30 pm tea, 3:45 pm wildlife briefing, 4:00 pm afternoon river cruise,
+6:30 pm dinner, 8:00 pm night walk, 9:00 pm end of activities. The briefing comes **before**
+the first boat, not after it — turn up at the jetty and you have missed it.
+<!-- werkstatt: telegram=2026-08-27T08:07 -->
+<!-- ort: kinabatangan -->
+
+![A white outdoor whiteboard under a canopy, handwritten in red and blue with the heading 2D1N and 3D2N Basic Itinerary and the schedules for days 1 to 3; raindrops stand on the board, wet leaf litter at the bottom of the picture.](foto:2026-08-27_080729.jpg)
+
+**✓ The full day holds two boat trips, and it starts at 5:30 am (27 Aug, from the board).**
+Day 2 as posted: 5:30 am coffee and tea, 6:00 am morning cruise, 7:00 am breakfast (one hour),
+9:00 am day jungle walk, 12:00 pm lunch, 3:30 pm tea, 4:00 pm afternoon cruise, 6:30 pm dinner,
+8:00 pm night walk, 9:00 pm end of activities. The two cruises sit at the edges of the day, the
+walk in between — that is the order of the whole stay, and it repeats unchanged.
+<!-- werkstatt: telegram=2026-08-27T08:07 -->
+<!-- ort: kinabatangan -->
+
+**✓ The departure morning is over at 8:30, and the boat leaves at 8:15 (27 Aug, from the
+board).** Marked with a red asterisk and identical for both packages: 5:30 am coffee, 6:00 am
+morning cruise, 7:00 am breakfast, then **8:00 am check out, return the room key at reception,
+settle the bill**, 8:15 am transfer across the river, 8:30 am end of activities. So the morning
+cruise comes **before** the packing, not after it — take it, and you have to be packed first.
+One-night guests run that same sequence at 8:00 am on the second morning, while the others set
+off on the jungle walk at 9:00.
+<!-- werkstatt: telegram=2026-08-27T08:07 -->
+<!-- ort: kinabatangan -->
+
+**○ The departure morning fits the flight to Kota Kinabalu, but the ride to the airport is not
+on the board (27 Aug, checked against our own bookings, not asked on site).** AK 6497 leaves
+Sandakan at 3:15 pm on 29 Aug. The board releases you at 8:30 am on the far bank of the river;
+from there it is a good two and a half hours by road to Sandakan. Time is not the problem. What
+the board does **not** say is whether the ride from the river to the airport is part of the
+package or has to be ordered separately. That is the one question to settle at reception while
+you are still standing in front of it.
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
@@ -1585,7 +1624,7 @@ a whole travel day hangs on it. The ticket counts, not the order.
 | 22–24 Aug | Kuala Lumpur | — |
 | 25–26 Aug | Sandakan, Sabah | — |
 | 26–27 Aug | Sepilok, Sabah | — |
-| 27–29 Aug | Kinabatangan, Sabah | — |
+| 27–29 Aug | Kinabatangan, Sabah | Kinabatangan |
 | 29 Aug – 3 Sep | Kota Kinabalu | — |
 | 4–5 Sep | Kudat, Tip of Borneo | — |
 | 5–7 Sep | Singapore → Bahrain → Frankfurt | — |

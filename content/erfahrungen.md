@@ -1437,6 +1437,46 @@ und ein Rasen mit Bananenstauden und einem gemauerten Grill.
 
 ![Ein gepflegter Rasen zwischen dichten Buschreihen, rechts der überdachte Gang eines Gästehauses, im Hintergrund Bananenstauden und ein gemauerter Grill unter hohen Regenwaldbäumen, darüber wolkenloser blauer Himmel.](foto:2026-08-26_053515.jpg)
 
+## Kinabatangan
+
+**✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am Weg, und beide Pakete stehen
+darauf (27.08.).** Überschrift „2D1N & 3D2N Basic Itinerary" — ein Plan für zwei Programme.
+Wer eine Nacht bleibt und wer zwei bleibt, liest denselben Tag 1; getrennt wird erst am
+zweiten Morgen. **Tag 1:** 15:30 Tee, 15:45 Wildlife-Briefing, 16:00 Nachmittagsfahrt auf
+dem Fluss, 18:30 Abendessen, 20:00 Nachtwanderung, 21:00 Ende. Das Briefing steht **vor**
+der ersten Bootsfahrt, nicht dahinter — wer erst zum Boot kommt, hat es verpasst.
+<!-- werkstatt: telegram=2026-08-27T08:07 -->
+<!-- ort: kinabatangan -->
+
+![Eine weiße Whiteboard-Tafel im Freien unter einem Vordach, in Rot und Blau von Hand beschriftet mit der Überschrift 2D1N und 3D2N Basic Itinerary und den Tagesabläufen für Tag 1 bis Tag 3; auf der Tafel stehen Regentropfen, unten im Bild feuchtes Laub.](foto:2026-08-27_080729.jpg)
+
+**✓ Der volle Tag hat zwei Bootsfahrten, und er beginnt um 5:30 (27.08., von der Tafel).**
+Tag 2 laut Tafel: 5:30 Kaffee und Tee, 6:00 Morgenfahrt, 7:00 Frühstück (eine Stunde),
+9:00 Dschungelwanderung bei Tag, 12:00 Mittagessen, 15:30 Tee, 16:00 Nachmittagsfahrt,
+18:30 Abendessen, 20:00 Nachtwanderung, 21:00 Ende. Die beiden Fahrten liegen an den
+Tagesrändern, dazwischen liegt die Wanderung — das ist die Ordnung des ganzen Aufenthalts,
+und sie wiederholt sich unverändert.
+<!-- werkstatt: telegram=2026-08-27T08:07 -->
+<!-- ort: kinabatangan -->
+
+**✓ Der Abreisemorgen ist um 8:30 vorbei, und das Boot fährt um 8:15 (27.08., von der Tafel).**
+Mit rotem Sternchen hervorgehoben, für beide Pakete gleich: 5:30 Kaffee, 6:00 Morgenfahrt,
+7:00 Frühstück, dann **8:00 auschecken, Zimmerschlüssel an der Rezeption abgeben, Rechnung
+begleichen**, 8:15 Transfer über den Fluss, 8:30 Ende. Die Morgenfahrt liegt also **vor** dem
+Packen, nicht danach — wer sie mitnimmt, muss vorher gepackt haben. Wer eine Nacht bleibt,
+hat denselben Ablauf am zweiten Morgen um 8:00, während die anderen um 9:00 zur Wanderung
+aufbrechen.
+<!-- werkstatt: telegram=2026-08-27T08:07 -->
+<!-- ort: kinabatangan -->
+
+**○ Der Abreisemorgen passt zum Flug nach Kota Kinabalu, aber die Fahrt zum Flughafen steht
+nicht auf der Tafel (27.08., gegen die eigenen Buchungen geprüft, nicht vor Ort gefragt).**
+AK 6497 geht am 29.08. um 15:15 in Sandakan. Die Tafel entlässt um 8:30 am anderen Flussufer;
+von dort sind es rund zweieinhalb Stunden Straße nach Sandakan. Zeitlich bleibt also reichlich
+Luft. Was die Tafel **nicht** sagt: ob die Fahrt vom Flussufer zum Flughafen im Paket steckt
+oder ob sie extra bestellt werden muss. Das ist die eine Frage, die an der Rezeption zu klären
+ist, solange man noch davorsteht.
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
@@ -1627,7 +1667,7 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
 | 22.–24.08. | Kuala Lumpur | — |
 | 25.–26.08. | Sandakan, Sabah | — |
 | 26.–27.08. | Sepilok, Sabah | — |
-| 27.–29.08. | Kinabatangan, Sabah | — |
+| 27.–29.08. | Kinabatangan, Sabah | Kinabatangan |
 | 29.08.–03.09. | Kota Kinabalu | — |
 | 04.–05.09. | Kudat, Tip of Borneo | — |
 | 05.–07.09. | Singapur → Bahrain → Frankfurt | — |
