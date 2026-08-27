@@ -475,6 +475,24 @@
       "veroeffentlicht": "2026-08-26T11:09:23+00:00"
     },
     {
+      "anker": "**✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am",
+      "minuten": 6,
+      "telegram": "2026-08-27T08:07:00+00:00",
+      "veroeffentlicht": "2026-08-27T08:12:40+00:00"
+    },
+    {
+      "anker": "**✓ Der volle Tag hat zwei Bootsfahrten, und er beginnt um 5",
+      "minuten": 6,
+      "telegram": "2026-08-27T08:07:00+00:00",
+      "veroeffentlicht": "2026-08-27T08:12:40+00:00"
+    },
+    {
+      "anker": "**✓ Der Abreisemorgen ist um 8:30 vorbei, und das Boot fährt",
+      "minuten": 6,
+      "telegram": "2026-08-27T08:07:00+00:00",
+      "veroeffentlicht": "2026-08-27T08:12:40+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -505,10 +523,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 84,
-  "juengste_minuten": 11,
-  "markiert": 84,
-  "median_minuten": 14,
+  "gemessen": 87,
+  "juengste_minuten": 6,
+  "markiert": 87,
+  "median_minuten": 13,
   "schnellste_minuten": 4,
   "stand": "2026-08-27"
 }
