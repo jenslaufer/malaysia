@@ -475,6 +475,18 @@
       "veroeffentlicht": "2026-08-26T11:09:23+00:00"
     },
     {
+      "anker": "**✓ Auf der Fütterungsplattform des Orang-Utan-Zentrums sitz",
+      "minuten": 8,
+      "telegram": "2026-08-27T10:46:00+00:00",
+      "veroeffentlicht": "2026-08-27T10:54:10+00:00"
+    },
+    {
+      "anker": "**✓ Im Sonnenbären-Zentrum sind die Bären unten im Wald, der",
+      "minuten": 8,
+      "telegram": "2026-08-27T10:46:00+00:00",
+      "veroeffentlicht": "2026-08-27T10:54:10+00:00"
+    },
+    {
       "anker": "**✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am",
       "minuten": 6,
       "telegram": "2026-08-27T08:07:00+00:00",
@@ -491,6 +503,30 @@
       "minuten": 6,
       "telegram": "2026-08-27T08:07:00+00:00",
       "veroeffentlicht": "2026-08-27T08:12:40+00:00"
+    },
+    {
+      "anker": "**✓ Auf der Nachmittagsfahrt stehen Borneo-Zwergelefanten am",
+      "minuten": 8,
+      "telegram": "2026-08-27T10:46:00+00:00",
+      "veroeffentlicht": "2026-08-27T10:54:10+00:00"
+    },
+    {
+      "anker": "**✓ Ein Krokodil liegt im flachen Wasser direkt am Ufer, und",
+      "minuten": 8,
+      "telegram": "2026-08-27T10:46:00+00:00",
+      "veroeffentlicht": "2026-08-27T10:54:10+00:00"
+    },
+    {
+      "anker": "**✓ Ein rotbraunes Tier sitzt hoch in einem fruchtenden Baum",
+      "minuten": 8,
+      "telegram": "2026-08-27T10:46:00+00:00",
+      "veroeffentlicht": "2026-08-27T10:54:10+00:00"
+    },
+    {
+      "anker": "**✓ Die Nachmittagsfahrt läuft bis in die Dämmerung (27.08.)",
+      "minuten": 8,
+      "telegram": "2026-08-27T10:46:00+00:00",
+      "veroeffentlicht": "2026-08-27T10:54:10+00:00"
     },
     {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
@@ -523,10 +559,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 87,
-  "juengste_minuten": 6,
-  "markiert": 87,
-  "median_minuten": 13,
+  "gemessen": 93,
+  "juengste_minuten": 8,
+  "markiert": 93,
+  "median_minuten": 12,
   "schnellste_minuten": 4,
   "stand": "2026-08-27"
 }
