@@ -1530,6 +1530,21 @@ grasping arms can pinch hard if you handle it. Nocturnal, hunting insects, spide
 by day it sits under bark and leaf litter. In Southeast Asia mostly of the genus
 *Thelyphonus*, body without the tail about 3 to 6 cm.
 
+**✓ On the same night walk a house centipede runs across a trunk (28 Aug).** A centipede with
+15 pairs of legs that grow longer towards the back; the rearmost pair is longer than the body,
+and together with the long antennae at the front you cannot tell at a glance which end is which.
+It sits out in the open on the pale bark, no cover, and shows up instantly in the torch beam.
+<!-- werkstatt: telegram=2026-08-28T13:06 -->
+<!-- ort: kinabatangan -->
+
+![A house centipede with long, thin, dark-banded legs sits out in the open at night on the pale bark of a tree trunk, lit by a torch; the forest around it is dark.](foto:2026-08-28_130637.jpg)
+
+**○ The house centipede is harmless — the giant centipede beside it is not.** It does have venom
+claws, but they are built for insects; handled, it sheds legs and runs rather than bites. The one
+to leave alone in Borneo is a different centipede: *Scolopendra*, flat, powerfully built, dark red
+to brown, short-legged and up to 20 cm long. Its bite hurts for hours. The legs tell them apart —
+long and thin means harmless, short and sturdy means keep your distance.
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for

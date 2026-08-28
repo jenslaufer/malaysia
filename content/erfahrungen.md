@@ -1565,6 +1565,22 @@ Greifarme können kräftig zwicken, wenn man ihn anfasst. Nachtaktiv, jagt Insek
 und Schnecken, tagsüber sitzt er unter Rinde und Laub. In Südostasien meist aus der Gattung
 *Thelyphonus*, Körper ohne den Schwanz etwa 3 bis 6 cm.
 
+**✓ Am selben Nachtgang läuft ein Spinnenläufer über einen Stamm (28.08.).** Ein Hundertfüßer
+mit 15 Beinpaaren, die nach hinten immer länger werden; das hinterste Paar ist länger als der
+Körper, und zusammen mit den langen Fühlern vorn sieht man auf den ersten Blick nicht, wo vorn
+ist. Er sitzt frei auf der hellen Rinde, ohne Deckung, und ist im Lampenlicht sofort da.
+<!-- werkstatt: telegram=2026-08-28T13:06 -->
+<!-- ort: kinabatangan -->
+
+![Ein Spinnenläufer mit langen, dünnen, dunkel geringelten Beinen sitzt nachts frei auf der hellen Rinde eines Baumstamms, angestrahlt von einer Taschenlampe; ringsum liegt der Wald im Dunkeln.](foto:2026-08-28_130637.jpg)
+
+**○ Der Spinnenläufer ist harmlos — der Riesenläufer daneben nicht.** Giftklauen hat der
+Spinnenläufer, sie sind aber auf Insekten ausgelegt; angefasst wirft er Beine ab und rennt,
+statt zu beißen. Die Art, die man in Borneo wirklich in Ruhe lässt, ist ein anderer
+Hundertfüßer: *Scolopendra*, flach, kräftig, dunkelrot bis braun, mit kurzen Beinen und bis
+20 cm lang. Deren Biss tut stundenlang weh. Die beiden sind an den Beinen zu trennen — lang
+und dünn heißt harmlos, kurz und kräftig heißt Abstand.
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein
