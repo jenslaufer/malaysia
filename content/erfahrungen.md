@@ -1547,6 +1547,24 @@ Licht vorher. Die Fahrt endet nicht, weil es dunkel wird, sondern weil das Essen
 
 ![Lehmbrauner Fluss mit dichtem grünem Uferwald, aus dem Wasser ragen abgestorbene Äste und ein Baumstumpf.](foto:2026-08-27_104629.jpg)
 
+**✓ Auf dem Nachtgang sitzt ein Geißelskorpion an einem bemoosten Stamm (28.08., 21:00
+Ortszeit).** Tiefschwarz und regungslos auf dem Moos, gefunden mit der Taschenlampe an einem
+Stamm in Kopfhöhe. Das Tier ist kein Skorpion: hinten sitzt ein dünner, peitschenartiger
+Schwanz statt eines Stachels, vorn stehen zwei schwere Greifarme, und das erste Beinpaar ist
+zu langen Fühlern umgebaut — gelaufen wird deshalb auf sechs Beinen. Die Tafel setzt die
+Nachtwanderung auf 20:00 bis 21:00; das Foto entstand am Ende dieses Fensters.
+<!-- werkstatt: telegram=2026-08-28T13:00 -->
+<!-- ort: kinabatangan -->
+
+![Ein tiefschwarzer Geißelskorpion sitzt nachts auf einem dicht bemoosten Baumstamm im Blitzlicht; deutlich zu sehen sind die schweren Greifarme vorn, der gegliederte Hinterleib und ein langes fadendünnes Beinpaar, das nach vorn tastet.](foto:2026-08-28_130053.jpg)
+
+**○ Der Geißelskorpion hat keinen Giftstachel, er spritzt Essigsäure.** Der ganzen Ordnung
+(Thelyphonida) fehlt das Gift. Bei Gefahr spritzt das Tier aus der Schwanzwurzel eine Säure,
+die nach Essig riecht; sie brennt in den Augen und auf der Haut und ist danach vorbei. Die
+Greifarme können kräftig zwicken, wenn man ihn anfasst. Nachtaktiv, jagt Insekten, Spinnen
+und Schnecken, tagsüber sitzt er unter Rinde und Laub. In Südostasien meist aus der Gattung
+*Thelyphonus*, Körper ohne den Schwanz etwa 3 bis 6 cm.
+
 ## Essen
 
 **✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen RM 6,50 bis RM 11,00, ein

@@ -1512,6 +1512,24 @@ waiting.
 
 ![Muddy brown river with dense green forest along the bank, dead branches and a tree stump breaking the surface.](foto:2026-08-27_104629.jpg)
 
+**✓ A whip scorpion sits on a mossy trunk on the night walk (28 Aug, 9 pm local time).**
+Deep black and motionless on the moss, found with a torch on a trunk at head height. It is not
+a scorpion: at the back sits a thin, whip-like tail instead of a sting, at the front stand two
+heavy grasping arms, and the first pair of legs is rebuilt into long feelers — which is why it
+walks on six legs. The board puts the night walk at 8 to 9 pm; the photo was taken at the end
+of that window.
+<!-- werkstatt: telegram=2026-08-28T13:00 -->
+<!-- ort: kinabatangan -->
+
+![A deep black whip scorpion on a densely mossed tree trunk at night under flash; the heavy grasping arms at the front, the segmented abdomen and one long thread-thin pair of legs feeling ahead are clearly visible.](foto:2026-08-28_130053.jpg)
+
+**○ The whip scorpion has no venomous sting; it sprays acetic acid.** The whole order
+(Thelyphonida) lacks venom. Under threat the animal sprays an acid from the base of its tail
+that smells of vinegar; it burns in the eyes and on the skin and is over afterwards. The
+grasping arms can pinch hard if you handle it. Nocturnal, hunting insects, spiders and snails,
+by day it sits under bark and leaf litter. In Southeast Asia mostly of the genus
+*Thelyphonus*, body without the tail about 3 to 6 cm.
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
