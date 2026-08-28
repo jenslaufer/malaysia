@@ -529,6 +529,12 @@
       "veroeffentlicht": "2026-08-27T10:54:10+00:00"
     },
     {
+      "anker": "**✓ Auf dem Nachtgang sitzt ein Geißelskorpion an einem bemo",
+      "minuten": 7,
+      "telegram": "2026-08-28T13:00:00+00:00",
+      "veroeffentlicht": "2026-08-28T13:07:00+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -559,9 +565,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 93,
-  "juengste_minuten": 8,
-  "markiert": 93,
+  "gemessen": 94,
+  "juengste_minuten": 7,
+  "markiert": 94,
   "median_minuten": 12,
   "schnellste_minuten": 4,
   "stand": "2026-08-28"
