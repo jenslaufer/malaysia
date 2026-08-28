@@ -535,6 +535,12 @@
       "veroeffentlicht": "2026-08-28T13:07:00+00:00"
     },
     {
+      "anker": "**✓ Am selben Nachtgang läuft ein Spinnenläufer über einen S",
+      "minuten": 14,
+      "telegram": "2026-08-28T13:06:00+00:00",
+      "veroeffentlicht": "2026-08-28T13:19:38+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -565,9 +571,9 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 94,
-  "juengste_minuten": 7,
-  "markiert": 94,
+  "gemessen": 95,
+  "juengste_minuten": 14,
+  "markiert": 95,
   "median_minuten": 12,
   "schnellste_minuten": 4,
   "stand": "2026-08-28"
