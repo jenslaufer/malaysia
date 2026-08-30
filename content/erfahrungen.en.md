@@ -1668,6 +1668,36 @@ right, at hand height.
 
 ![A slender pale-brown snake lies at night in several coils on a dense, light-green cushion of ferns, lit by a torch.](foto:2026-08-30_004252.jpg)
 
+## In Kota Kinabalu
+
+**✗ GrabCar Rent is no good for a day trip — right now the app only offers four-hour cars
+(30 Aug, checked in the app).** The product is called "Rent": you hire a car with its driver by
+the hour inside Grab, and the driver stays with you and waits. The price list quoted everywhere
+runs from four hours at RM250 to twelve hours at RM650, and it was exactly the long packages that
+could not be booked. Four hours is enough for the city, but not for Kinabalu Park or Kudat: the
+drive alone eats four hours. If you are planning around this, open the app first rather than
+trusting the price list — that list lives on travel sites, and Grab itself only shows it as an
+image.
+<!-- werkstatt: telegram=2026-08-30T07:44 -->
+<!-- ort: kota-kinabalu -->
+
+**○ Grab's list of covered destinations reaches far beyond the city, but not as far as the Tip of
+Borneo.** Grab's own page names Kundasang, Ranau, Kudat, Kota Belud, Tuaran, Tambunan, Keningau,
+Tenom, Kokol Hill and Lok Kawi Zoo. Kinabalu Park sits between Kundasang and Ranau, so it is
+covered. The Tip of Borneo is not on the list, and Grab writes that areas not named are at the
+driver's discretion and not covered by its terms of service. That would leave the last 20 km or so
+beyond Kudat uncovered.
+<!-- ort: kota-kinabalu -->
+
+**○ The resort at the Tip of Borneo runs its own transfer, and that is the simplest way there.**
+Tommy's Place at the Tip of Borneo lists a shuttle from Kota Kinabalu at RM400 to RM450 each way
+in its property description; a second site quotes RM120 per person. Both figures come from booking
+portals, not from the resort. The condition is the same everywhere: contact the resort at least one
+day ahead and confirm the transfer. Public transport is cheaper — a bus from Bas Bandaran to Kudat,
+RM25 to RM40 per person in three to four hours, then the last 20 km by taxi. But the bus only runs
+at 8 am and 2 pm.
+<!-- ort: kota-kinabalu -->
+
 ## Eating
 
 **✓ A mamak stall in Mersing charges RM 6.50 to RM 11.00 for a full plate, and RM 3.50 for
@@ -1853,7 +1883,8 @@ a whole travel day hangs on it. The ticket counts, not the order.
 | 26–27 Aug | Sepilok, Sabah | Sepilok |
 | 27–29 Aug | Kinabatangan, Sabah | Kinabatangan |
 | 29 Aug – 3 Sep | Kota Kinabalu | — |
-| 4–5 Sep | Kudat, Tip of Borneo | — |
+| 3–4 Sep | Kudat, Tip of Borneo | — |
+| 4–5 Sep | Kota Kinabalu | — |
 | 5–7 Sep | Singapore → Bahrain → Frankfurt | — |
 
 ---
