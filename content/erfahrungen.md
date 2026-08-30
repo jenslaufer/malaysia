@@ -1,4 +1,4 @@
-# Singapur und Malaysia — was funktioniert hat und was nicht
+# Unser Reiseblog: von Singapur bis Borneo
 
 Am Montag kurz nach zwölf standen wir zu viert auf der malaysischen Seite der Grenze,
 mit dem Gepäck für drei Wochen, und suchten den Weg zur Busstation Larkin. Fünf Kilometer,
