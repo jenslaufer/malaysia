@@ -1891,10 +1891,10 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
 | 15.08. | Frankfurt → Bahrain (Zwischenstopp) → Singapur | Strom, Internet, Telefon |
 | 16.08. | Singapur, Little India · Gardens by the Bay | Unterwegs in Singapur |
 | 17.08. | Grenze nach Johor Bahru · Larkin Sentral · Bus nach Mersing | Grenze · Bezahlen |
-| 18.–21.08. | Tioman | — |
-| 22.–24.08. | Kuala Lumpur | — |
-| 25.–26.08. | Sandakan, Sabah | — |
-| 26.–27.08. | Sepilok, Sabah | — |
+| 18.–21.08. | Tioman | Auf Tioman |
+| 22.–24.08. | Kuala Lumpur | In Kuala Lumpur · Batu Caves · Kuala Lumpur zu Fuß |
+| 25.–26.08. | Sandakan, Sabah | Ankunft in Sandakan |
+| 26.–27.08. | Sepilok, Sabah | Sepilok |
 | 27.–29.08. | Kinabatangan, Sabah | Kinabatangan |
 | 29.08.–03.09. | Kota Kinabalu | — |
 | 04.–05.09. | Kudat, Tip of Borneo | — |

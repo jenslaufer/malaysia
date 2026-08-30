@@ -1847,10 +1847,10 @@ a whole travel day hangs on it. The ticket counts, not the order.
 | 15 Aug | Frankfurt → Bahrain (stopover) → Singapore | Power, internet, phone |
 | 16 Aug | Singapore, Little India · Gardens by the Bay | Getting around Singapore |
 | 17 Aug | Border to Johor Bahru · Larkin Sentral · bus to Mersing | Border · Paying |
-| 18–21 Aug | Tioman | — |
-| 22–24 Aug | Kuala Lumpur | — |
-| 25–26 Aug | Sandakan, Sabah | — |
-| 26–27 Aug | Sepilok, Sabah | — |
+| 18–21 Aug | Tioman | On Tioman |
+| 22–24 Aug | Kuala Lumpur | In Kuala Lumpur · Batu Caves · Kuala Lumpur on foot |
+| 25–26 Aug | Sandakan, Sabah | Arriving in Sandakan |
+| 26–27 Aug | Sepilok, Sabah | Sepilok |
 | 27–29 Aug | Kinabatangan, Sabah | Kinabatangan |
 | 29 Aug – 3 Sep | Kota Kinabalu | — |
 | 4–5 Sep | Kudat, Tip of Borneo | — |
