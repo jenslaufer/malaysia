@@ -1434,6 +1434,20 @@ not on it. A single coconut lies on the boards.
 
 ![An orangutan female hangs one-armed from a taut cable above a dark wooden platform in the rainforest, an infant clinging to her back; a coconut lies on the boards in the foreground.](foto:2026-08-30_004315.jpg)
 
+**✓ The feeding platform is a wooden deck in the forest, and the rope is the way to it (sent
+30.08., date taken not established).** A rectangular deck on stilts, a good two metres above the
+ground, planked, with a narrow ladder at the side. A rope runs across it from tree to tree, and
+that is how the animals arrive: in one picture an orangutan hangs in the middle of the rope above
+the platform, in the other two sit at the fruit. On the boards lie bananas and peeled greens,
+nothing else. Closed forest all around, no cage and no barrier — the animals come when they come,
+and the audience stands on the ground in front.
+<!-- werkstatt: telegram=2026-08-30T00:43 -->
+<!-- ort: sepilok -->
+
+![A wooden feeding platform on stilts in the middle of the rainforest, bananas lying on the boards; two red-brown orangutans sit at the fruit, and a rope is strung across the platform between the trees.](foto:2026-08-30_004308.jpg)
+
+![The same platform from further back: one orangutan hangs in the middle of the strung rope above the deck, a second sits on the boards in front of a bunch of bananas, dense green forest all around.](foto:2026-08-30_004310.jpg)
+
 ## Kinabatangan
 
 **✓ The lodge's daily schedule is written on a whiteboard by the path, and both packages are
@@ -1583,6 +1597,76 @@ exposed strip of mud is the surface where things show themselves during the day.
 <!-- ort: kinabatangan -->
 
 ![A large pale-banded monitor lizard walks across an exposed mudbank at the river's edge, between driftwood and roots; the brown river water in the foreground, bank grass above.](foto:2026-08-30_004243.jpg)
+
+**✓ By day the crocodiles lie out in the open on the mud, not only in the water (sent 30.08.,
+date taken not established).** The batch holds five pictures of crocodiles on land, all of them
+on the exposed strip of mud between the waterline and the bank edge. The sizes vary widely: one
+animal spans half the frame, another is barely a metre long and palely marked. This completes
+the entry further up, where only the head showed above the water — both are true, and the water
+level makes the difference. With the mud exposed you see a whole animal from a distance; with
+the water high you are looking for a line.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![A large crocodile lies on wet mud at the foot of a steep clay bank, half in the brown river water; its armoured back and serrated tail run across half the frame.](foto:2026-08-30_004116.jpg)
+
+![A young, palely banded crocodile lies stretched out on wet bank mud between thin twigs, head turned towards the camera, legs splayed to the sides.](foto:2026-08-30_004247.jpg)
+
+**○ The open mouth is not a threat, it is cooling.** In one of the pictures a crocodile lies on
+a driftwood log with its jaws wide open. Crocodiles do not sweat; they shed heat through the
+lining of the mouth and lie there gaping to do it. So a gaping mouth seen from the boat is a
+resting animal, not an agitated one.
+<!-- ort: kinabatangan -->
+
+![A crocodile lies with its mouth wide open on a pale driftwood log at the muddy bank; the clay-brown water in front, dead branches all around.](foto:2026-08-30_004123.jpg)
+
+**✓ The macaques sit on the same strip of mud where the crocodiles lie (sent 30.08., date taken
+not established).** Two long-tailed macaques on the cracked dry surface close to the water, one
+grooming the other's neck, both sitting calmly. Other pictures in the same batch show crocodiles
+in exactly that place. From the boat this strip is the surface where anything shows itself at
+all during the day — monkeys, monitor lizards and crocodiles share it.
+<!-- werkstatt: telegram=2026-08-30T00:42 -->
+<!-- ort: kinabatangan -->
+
+![Two long-tailed macaques sit on a cracked, dried-out clay surface at the river's edge; the right-hand animal leans against the left one and grooms its neck, with dense green bank scrub behind.](foto:2026-08-30_004245.jpg)
+
+**✓ The oil palms stand right at the bank edge (sent 30.08., date taken not established).** On
+the right of the picture tall broadleaf forest runs down to the water; immediately to the left
+stands a row of oil palms, not thirty metres from the river, with only a band of grass and scrub
+between. That is the Kinabatangan corridor in one frame: along much of the river the forest is a
+narrow strip in front of the plantation. It is why what you see gathers at the water — not
+because the river is especially rich, but because nothing else is left standing beside it.
+<!-- werkstatt: telegram=2026-08-30T00:43 -->
+<!-- ort: kinabatangan -->
+
+![A riverbank of green grass and scrub, tall broadleaf forest behind on the right, and on the left a row of oil palms with their feathered fronds against a blue sky.](foto:2026-08-30_004305.jpg)
+
+**✓ On the night walk a small blue-and-white bird sits asleep on a thin twig (sent 30.08., date
+taken not established).** It sits out in the open on a slender green shoot, upperside a bright
+blue, breast white, and it stays put in the torchlight instead of flying off. That is exactly
+why the night produces birds you never get in front of a lens by day: they sleep on bare, thin
+twigs, because a swaying branch gives away any climber.
+<!-- werkstatt: telegram=2026-08-30T00:42 -->
+<!-- ort: kinabatangan -->
+
+![Night shot in flashlight: a small bird with a bright blue back and white breast sits on a slender green shoot, surrounded by dark foliage and the trunks of the forest.](foto:2026-08-30_004254.jpg)
+
+**○ The species cannot be settled from the photo.** A blue upperside, a white breast and a bare
+thin twig fit a kingfisher, and the blue-eared kingfisher is the commonest find of such night
+trips on the Kinabatangan. But the bill is not sharp in the pictures, and the identification
+hangs on it: a kingfisher's bill is long and dagger-shaped, a flycatcher's is short. Without the
+bill it stays "small blue bird".
+<!-- ort: kinabatangan -->
+
+**✓ A small snake lies coiled in a cushion of ferns at night (sent 30.08., date taken not
+established).** Pale brown, smooth, in several coils across the fronds, barely thicker than a
+finger. It lies out in the open in the greenery and does not move in the torchlight. For walking
+in the dark that means the torch belongs not only on the ground but in the scrub to the left and
+right, at hand height.
+<!-- werkstatt: telegram=2026-08-30T00:42 -->
+<!-- ort: kinabatangan -->
+
+![A slender pale-brown snake lies at night in several coils on a dense, light-green cushion of ferns, lit by a torch.](foto:2026-08-30_004252.jpg)
 
 ## Eating
 

@@ -1469,6 +1469,20 @@ Plattform hinaus. Auf den Brettern liegt eine einzelne Kokosnuss.
 
 ![Ein Orang-Utan-Weibchen hängt einarmig an einem gespannten Drahtseil über einer dunklen Holzplattform im Regenwald, auf ihrem Rücken klammert sich ein Jungtier; vorne auf den Brettern liegt eine Kokosnuss.](foto:2026-08-30_004315.jpg)
 
+**✓ Die Fütterungsplattform ist ein Holzpodest im Wald, und das Seil ist der Weg dorthin (30.08.
+geschickt, Aufnahmetag nicht belegt).** Ein rechteckiges Podest auf Stelzen, gut zwei Meter über
+dem Boden, Bretterbelag, eine schmale Leiter an der Seite. Quer darüber läuft ein gespanntes
+Seil von Baum zu Baum, und daran kommen die Tiere: Auf dem einen Bild hängt ein Orang-Utan
+mitten im Seil über der Plattform, auf dem anderen sitzen zwei am Obst. Auf den Brettern liegen
+Bananen und geschältes Grünzeug, sonst nichts. Ringsum steht geschlossener Wald, kein Gitter und
+keine Absperrung — die Tiere kommen, wenn sie kommen, und das Publikum steht auf dem Boden davor.
+<!-- werkstatt: telegram=2026-08-30T00:43 -->
+<!-- ort: sepilok -->
+
+![Eine hölzerne Fütterungsplattform auf Stelzen mitten im Regenwald, auf den Brettern liegen Bananen; zwei rotbraune Orang-Utans sitzen am Obst, über die Plattform spannt sich ein Seil zwischen den Bäumen.](foto:2026-08-30_004308.jpg)
+
+![Dieselbe Plattform aus etwas größerer Entfernung: ein Orang-Utan hängt mitten im gespannten Seil über dem Podest, ein zweiter sitzt auf den Brettern vor einem Bündel Bananen, ringsum dichter grüner Wald.](foto:2026-08-30_004310.jpg)
+
 ## Kinabatangan
 
 **✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am Weg, und beide Pakete stehen
@@ -1620,6 +1634,76 @@ freigelegte Band aus Schlamm ist die Fläche, auf der sich am Tag etwas zeigt.
 <!-- ort: kinabatangan -->
 
 ![Ein großer hell gebänderter Waran läuft über eine freigelegte Schlammbank am Flussufer, zwischen Treibholz und Wurzeln; im Vordergrund das braune Wasser des Flusses, oben Ufergras.](foto:2026-08-30_004243.jpg)
+
+**✓ Am Tag liegen Krokodile frei auf dem Schlamm, nicht nur im Wasser (30.08. geschickt,
+Aufnahmetag nicht belegt).** Im Stapel stecken fünf Aufnahmen von Krokodilen an Land, alle auf
+dem freigelegten Schlammband zwischen Wasserlinie und Uferkante. Die Größen gehen weit
+auseinander: ein Tier reicht über die halbe Bildbreite, ein anderes ist kaum einen Meter lang
+und hell gefleckt. Das ergänzt den Eintrag weiter oben, in dem nur der Kopf aus dem Wasser
+stand — beides stimmt, und den Unterschied macht der Wasserstand. Liegt der Schlamm frei, sieht
+man ein ganzes Tier von weitem; steht das Wasser hoch, sucht man eine Linie.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![Ein großes Krokodil liegt am Fuß einer steilen Lehmwand auf nassem Schlamm, halb im braunen Flusswasser; der gepanzerte Rücken und der gezackte Schwanz ziehen sich über die halbe Bildbreite.](foto:2026-08-30_004116.jpg)
+
+![Ein junges, hell gebändertes Krokodil liegt ausgestreckt auf nassem Uferschlamm zwischen dünnen Zweigen, den Kopf zur Kamera gedreht, die Beine seitlich abgespreizt.](foto:2026-08-30_004247.jpg)
+
+**○ Das offene Maul ist keine Drohung, sondern Kühlung.** Auf einem der Bilder liegt ein
+Krokodil mit weit aufgesperrtem Rachen auf einem Treibholzstamm. Krokodile schwitzen nicht; sie
+geben Wärme über die Schleimhaut im Maul ab und liegen dafür mit offenem Rachen da. Wer vom Boot
+aus ein aufgerissenes Maul sieht, sieht ein ruhendes Tier, kein gereiztes.
+<!-- ort: kinabatangan -->
+
+![Ein Krokodil liegt mit weit geöffnetem Maul auf einem hellen Treibholzstamm am schlammigen Ufer; davor das lehmbraune Wasser, ringsum abgestorbene Äste.](foto:2026-08-30_004123.jpg)
+
+**✓ Die Makaken sitzen auf demselben Schlammband, auf dem die Krokodile liegen (30.08.
+geschickt, Aufnahmetag nicht belegt).** Zwei Langschwanzmakaken auf der aufgerissenen
+Trockenfläche dicht am Wasser, das eine laust dem anderen den Nacken, beide sitzen ruhig. Auf
+anderen Bildern desselben Stapels liegen genau dort Krokodile. Vom Boot aus ist dieses Band die
+Fläche, auf der sich am Tag überhaupt etwas zeigt — Affen, Warane und Krokodile teilen es sich.
+<!-- werkstatt: telegram=2026-08-30T00:42 -->
+<!-- ort: kinabatangan -->
+
+![Zwei Langschwanzmakaken sitzen auf einer rissigen, trockengefallenen Lehmfläche am Flussufer; das rechte Tier lehnt sich an das linke und laust ihm den Nacken, dahinter dichtes grünes Ufergestrüpp.](foto:2026-08-30_004245.jpg)
+
+**✓ Die Ölpalmen stehen direkt an der Uferkante (30.08. geschickt, Aufnahmetag nicht belegt).**
+Rechts im Bild steht hoher Laubwald bis ans Wasser, links daneben eine Reihe Ölpalmen, keine
+dreißig Meter vom Fluss entfernt, dazwischen nur ein Streifen Gras und Gebüsch. Das ist der
+Kinabatangan-Korridor in einem Bild: Der Wald am Fluss ist an vielen Stellen ein schmales Band
+vor der Plantage. Deshalb sammelt sich am Wasser, was man dort sieht — nicht weil der Fluss
+besonders reich wäre, sondern weil daneben nichts mehr steht.
+<!-- werkstatt: telegram=2026-08-30T00:43 -->
+<!-- ort: kinabatangan -->
+
+![Flussufer mit grünem Gras und Buschwerk, dahinter rechts hoher Laubwald, links im Bild eine Reihe Ölpalmen mit gefiederten Wedeln vor blauem Himmel.](foto:2026-08-30_004305.jpg)
+
+**✓ Auf dem Nachtgang sitzt ein kleiner blau-weißer Vogel schlafend auf einem dünnen Zweig
+(30.08. geschickt, Aufnahmetag nicht belegt).** Er sitzt frei auf einem dünnen grünen Trieb,
+Oberseite leuchtend blau, Brust weiß, und er bleibt im Lampenlicht sitzen, ohne aufzufliegen.
+Genau darum zeigt die Nacht Vögel, die man am Tag nicht vor die Linse bekommt: Sie schlafen auf
+freien, dünnen Zweigen, weil ein schwankender Ast jeden Kletterer verrät.
+<!-- werkstatt: telegram=2026-08-30T00:42 -->
+<!-- ort: kinabatangan -->
+
+![Nachtaufnahme im Blitzlicht: ein kleiner Vogel mit leuchtend blauem Rücken und weißer Brust sitzt auf einem dünnen grünen Trieb, ringsum dunkles Blattwerk und die Stämme des Waldes.](foto:2026-08-30_004254.jpg)
+
+**○ Die Art ist aus dem Foto nicht sicher zu bestimmen.** Blaue Oberseite, weiße Brust und ein
+dünner freier Zweig passen auf einen Eisvogel, und der Blauohr-Eisvogel ist am Kinabatangan der
+häufigste Fund solcher Nachtfahrten. Auf den Bildern ist der Schnabel aber nicht scharf, und
+daran hängt die Bestimmung: Ein Eisvogelschnabel ist lang und dolchförmig, ein Schnäpperschnabel
+kurz. Ohne den Schnabel bleibt es bei „kleiner blauer Vogel".
+<!-- ort: kinabatangan -->
+
+**✓ Eine kleine Schlange liegt nachts aufgerollt in einem Farnpolster (30.08. geschickt,
+Aufnahmetag nicht belegt).** Hellbraun, glatt, in mehreren Windungen auf den Wedeln, kaum dicker
+als ein Finger. Sie liegt frei im Grün und rührt sich im Lampenlicht nicht. Für den Weg im
+Dunkeln heißt das: Die Lampe gehört nicht nur auf den Boden, sondern auch in das Gebüsch links
+und rechts auf Griffhöhe.
+<!-- werkstatt: telegram=2026-08-30T00:42 -->
+<!-- ort: kinabatangan -->
+
+![Eine schlanke hellbraune Schlange liegt nachts in mehreren Windungen auf einem dichten, hellgrünen Farnpolster, angestrahlt von einer Taschenlampe.](foto:2026-08-30_004252.jpg)
 
 ## Essen
 

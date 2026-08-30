@@ -813,5 +813,50 @@
   },
   "2026-08-30_004315.jpg": {
     "name": "sepilok-orang-utan-mit-jungtier"
+  },
+  "2026-08-30_004116.jpg": {
+    "name": "kinabatangan-krokodil-an-der-lehmwand"
+  },
+  "2026-08-30_004247.jpg": {
+    "name": "kinabatangan-junges-krokodil-im-schlamm"
+  },
+  "2026-08-30_004123.jpg": {
+    "name": "kinabatangan-krokodil-offenes-maul"
+  },
+  "2026-08-30_004245.jpg": {
+    "name": "kinabatangan-makaken-auf-der-schlammbank"
+  },
+  "2026-08-30_004305.jpg": {
+    "name": "kinabatangan-oelpalmen-am-ufer"
+  },
+  "2026-08-30_004254.jpg": {
+    "name": "kinabatangan-blauer-vogel-bei-nacht"
+  },
+  "2026-08-30_004252.jpg": {
+    "name": "kinabatangan-schlange-im-farn"
+  },
+  "2026-08-30_004308.jpg": {
+    "name": "sepilok-fuetterungsplattform",
+    "_blur": "ein Kasten: Kopf eines fremden Besuchers rechts unten im Anschnitt, dicht vor der Kamera. Ohr, Wange und Kieferlinie sind im Profil zu sehen - unscharf, aber ueber der Schwelle.",
+    "blur": [
+      [
+        0.94,
+        0.64,
+        0.06,
+        0.36
+      ]
+    ]
+  },
+  "2026-08-30_004310.jpg": {
+    "name": "sepilok-orang-utan-am-seil",
+    "_blur": "ein Kasten: Hinterkopf eines fremden Besuchers rechts unten, formatfuellend im Anschnitt. Kein Gesicht zu sehen, nur Haar - der Kasten steht trotzdem, weil die Person dicht vor der Kamera ist und der Anschnitt bei einer Bewegung mehr zeigen wuerde.",
+    "blur": [
+      [
+        0.8,
+        0.74,
+        0.2,
+        0.26
+      ]
+    ]
   }
 }
