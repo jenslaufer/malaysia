@@ -1424,6 +1424,16 @@ the frame.
 
 ![Looking down onto an open forest floor: on the left a black sun bear climbs a rotten tree stump, on the right a second lies on the ground feeding; a black plastic water tub at the left of the frame.](foto:2026-08-27_104634.jpg)
 
+**✓ Above the feeding platform a female hangs from the cable with an infant (sent 30.08.,
+date taken not established).** The young one clings to its mother's back while she moves
+one-armed along the cable. The cables are the route to the platform, not the trees — the
+animal arrives from above and from outside, so the place to look is beyond the platform,
+not on it. A single coconut lies on the boards.
+<!-- werkstatt: telegram=2026-08-30T00:43 -->
+<!-- ort: sepilok -->
+
+![An orangutan female hangs one-armed from a taut cable above a dark wooden platform in the rainforest, an infant clinging to her back; a coconut lies on the boards in the foreground.](foto:2026-08-30_004315.jpg)
+
 ## Kinabatangan
 
 **✓ The lodge's daily schedule is written on a whiteboard by the path, and both packages are
@@ -1544,6 +1554,35 @@ claws, but they are built for insects; handled, it sheds legs and runs rather th
 to leave alone in Borneo is a different centipede: *Scolopendra*, flat, powerfully built, dark red
 to brown, short-legged and up to 20 cm long. Its bite hurts for hours. The legs tell them apart —
 long and thin means harmless, short and sturdy means keep your distance.
+
+**✓ The chalets branch off the main path along a wooden walkway, with the forest right beside
+it (sent 30.08., date taken not established).** A narrow boardwalk with a rope handrail on
+wooden posts runs between the buildings, roofs of green corrugated iron, walls of dark timber.
+Between walkway and wall there is no lawn but standing bush: leaf litter covers the boards and
+the foliage reaches the handrail. A single solar lamp on a post is all the lighting visible in
+the picture — so for the walk back after the 21:00 night walk, carry the torch.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![A narrow wooden walkway with a rope handrail leads through dense greenery towards two chalets with green corrugated-iron roofs and dark timber walls; yellow leaf litter covers the boards and a small solar lamp stands on the left-hand post.](foto:2026-08-30_004106.jpg)
+
+**✓ The monkeys along the river sit in the crowns, not down by the water (sent 30.08., date
+taken not established).** In the picture three animals sit on a bare horizontal branch high up,
+a fourth further to the right. The branch lies clear above the canopy — from the boat that is
+the height to search, and the reason binoculars beat a zoom lens.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![Looking up into the treetops on the riverbank: three brownish monkeys sit on a bare horizontal branch, another sits to the right on a neighbouring branch, surrounded by dense green foliage and blue sky.](foto:2026-08-30_004113.jpg)
+
+**✓ A monitor lizard walks across the exposed mud on the bank (sent 30.08., date taken not
+established).** A full-grown animal, a good metre and a half including tail, pale banded, out
+in the open between driftwood and roots. The water level sits visibly below the bank edge: that
+exposed strip of mud is the surface where things show themselves during the day.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![A large pale-banded monitor lizard walks across an exposed mudbank at the river's edge, between driftwood and roots; the brown river water in the foreground, bank grass above.](foto:2026-08-30_004243.jpg)
 
 ## Eating
 

@@ -1459,6 +1459,16 @@ im Bild.
 
 ![Blick von oben auf einen offenen Waldboden: links klettert ein schwarzer Malaienbär an einem morschen Baumstumpf, rechts liegt ein zweiter am Boden und frisst; links im Bild ein schwarzer Kunststoffbottich mit Wasser.](foto:2026-08-27_104634.jpg)
 
+**✓ Über der Fütterungsplattform hängt ein Weibchen mit Jungtier am Drahtseil (30.08.
+geschickt, Aufnahmetag nicht belegt).** Das Junge klammert sich am Rücken der Mutter fest,
+während sie sich einarmig am Seil bewegt. Die Seile sind der Weg zur Plattform, nicht die
+Bäume — das Tier kommt von oben und von außerhalb, und der Blick gehört deshalb über die
+Plattform hinaus. Auf den Brettern liegt eine einzelne Kokosnuss.
+<!-- werkstatt: telegram=2026-08-30T00:43 -->
+<!-- ort: sepilok -->
+
+![Ein Orang-Utan-Weibchen hängt einarmig an einem gespannten Drahtseil über einer dunklen Holzplattform im Regenwald, auf ihrem Rücken klammert sich ein Jungtier; vorne auf den Brettern liegt eine Kokosnuss.](foto:2026-08-30_004315.jpg)
+
 ## Kinabatangan
 
 **✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am Weg, und beide Pakete stehen
@@ -1580,6 +1590,36 @@ statt zu beißen. Die Art, die man in Borneo wirklich in Ruhe lässt, ist ein an
 Hundertfüßer: *Scolopendra*, flach, kräftig, dunkelrot bis braun, mit kurzen Beinen und bis
 20 cm lang. Deren Biss tut stundenlang weh. Die beiden sind an den Beinen zu trennen — lang
 und dünn heißt harmlos, kurz und kräftig heißt Abstand.
+
+**✓ Vom Hauptweg gehen die Chalets über einen Holzsteg ab, und der Wald steht direkt daneben
+(30.08. geschickt, Aufnahmetag nicht belegt).** Ein schmaler Bretterweg mit Seilgeländer an
+Holzpfosten führt zwischen den Häusern hindurch, Dächer aus grünem Wellblech, Wände aus dunklem
+Holz. Zwischen Steg und Wand liegt kein Rasen, sondern gewachsener Busch: Laub liegt auf den
+Brettern, und die Blätter reichen bis ans Geländer. Eine einzelne Solarleuchte am Pfosten ist die
+ganze Beleuchtung, die auf dem Bild zu sehen ist — für den Rückweg nach der Nachtwanderung um
+21:00 gehört die Taschenlampe also an den Mann.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![Ein schmaler Holzsteg mit Seilgeländer führt zwischen dichtem Grün auf zwei Chalets mit grünen Wellblechdächern und dunklen Holzwänden zu; auf den Brettern liegt gelbes Laub, links am Pfosten steht eine kleine Solarleuchte.](foto:2026-08-30_004106.jpg)
+
+**✓ Die Affen am Fluss sitzen in den Kronen, nicht am Wasser (30.08. geschickt, Aufnahmetag
+nicht belegt).** Auf dem Bild sitzen drei Tiere auf einem kahlen, waagerechten Ast weit oben,
+ein viertes weiter rechts. Der Ast liegt frei über dem Blätterdach — vom Boot aus ist das die
+Höhe, in der man suchen muss, und der Grund, warum ein Fernglas mehr bringt als ein Zoom.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![Blick von unten in die Baumkronen am Flussufer: auf einem kahlen, waagerechten Ast sitzen drei bräunliche Affen, ein weiterer sitzt rechts davon auf einem Nachbarast, ringsum dichtes grünes Laub und blauer Himmel.](foto:2026-08-30_004113.jpg)
+
+**✓ Am Ufer läuft ein Waran über den trockengefallenen Schlamm (30.08. geschickt, Aufnahmetag
+nicht belegt).** Ein ausgewachsenes Tier, gut anderthalb Meter mit Schwanz, hell gebändert, im
+Freien zwischen Treibholz und Wurzeln. Der Wasserstand liegt sichtbar unter der Uferkante: das
+freigelegte Band aus Schlamm ist die Fläche, auf der sich am Tag etwas zeigt.
+<!-- werkstatt: telegram=2026-08-30T00:41 -->
+<!-- ort: kinabatangan -->
+
+![Ein großer hell gebänderter Waran läuft über eine freigelegte Schlammbank am Flussufer, zwischen Treibholz und Wurzeln; im Vordergrund das braune Wasser des Flusses, oben Ufergras.](foto:2026-08-30_004243.jpg)
 
 ## Essen
 
