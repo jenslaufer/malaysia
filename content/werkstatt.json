@@ -487,6 +487,18 @@
       "veroeffentlicht": "2026-08-27T10:54:10+00:00"
     },
     {
+      "anker": "**✓ Über der Fütterungsplattform hängt ein Weibchen mit Jung",
+      "minuten": 190,
+      "telegram": "2026-08-30T00:43:00+00:00",
+      "veroeffentlicht": "2026-08-30T03:53:16+00:00"
+    },
+    {
+      "anker": "**✓ Die Fütterungsplattform ist ein Holzpodest im Wald, und ",
+      "minuten": 272,
+      "telegram": "2026-08-30T00:43:00+00:00",
+      "veroeffentlicht": "2026-08-30T05:14:50+00:00"
+    },
+    {
       "anker": "**✓ Der Ablauf der Lodge steht auf einer Whiteboard-Tafel am",
       "minuten": 6,
       "telegram": "2026-08-27T08:07:00+00:00",
@@ -541,6 +553,60 @@
       "veroeffentlicht": "2026-08-28T13:19:38+00:00"
     },
     {
+      "anker": "**✓ Vom Hauptweg gehen die Chalets über einen Holzsteg ab, u",
+      "minuten": 192,
+      "telegram": "2026-08-30T00:41:00+00:00",
+      "veroeffentlicht": "2026-08-30T03:53:16+00:00"
+    },
+    {
+      "anker": "**✓ Die Affen am Fluss sitzen in den Kronen, nicht am Wasser",
+      "minuten": 192,
+      "telegram": "2026-08-30T00:41:00+00:00",
+      "veroeffentlicht": "2026-08-30T03:53:16+00:00"
+    },
+    {
+      "anker": "**✓ Am Ufer läuft ein Waran über den trockengefallenen Schla",
+      "minuten": 192,
+      "telegram": "2026-08-30T00:41:00+00:00",
+      "veroeffentlicht": "2026-08-30T03:53:16+00:00"
+    },
+    {
+      "anker": "**✓ Am Tag liegen Krokodile frei auf dem Schlamm, nicht nur ",
+      "minuten": 274,
+      "telegram": "2026-08-30T00:41:00+00:00",
+      "veroeffentlicht": "2026-08-30T05:14:50+00:00"
+    },
+    {
+      "anker": "**✓ Die Makaken sitzen auf demselben Schlammband, auf dem di",
+      "minuten": 273,
+      "telegram": "2026-08-30T00:42:00+00:00",
+      "veroeffentlicht": "2026-08-30T05:14:50+00:00"
+    },
+    {
+      "anker": "**✓ Die Ölpalmen stehen direkt an der Uferkante (30.08. gesc",
+      "minuten": 272,
+      "telegram": "2026-08-30T00:43:00+00:00",
+      "veroeffentlicht": "2026-08-30T05:14:50+00:00"
+    },
+    {
+      "anker": "**✓ Auf dem Nachtgang sitzt ein kleiner blau-weißer Vogel sc",
+      "minuten": 273,
+      "telegram": "2026-08-30T00:42:00+00:00",
+      "veroeffentlicht": "2026-08-30T05:14:50+00:00"
+    },
+    {
+      "anker": "**✓ Eine kleine Schlange liegt nachts aufgerollt in einem Fa",
+      "minuten": 273,
+      "telegram": "2026-08-30T00:42:00+00:00",
+      "veroeffentlicht": "2026-08-30T05:14:50+00:00"
+    },
+    {
+      "anker": "**✗ GrabCar Rent taugt nicht für einen Tagesausflug — in der",
+      "minuten": 7,
+      "telegram": "2026-08-30T07:44:00+00:00",
+      "veroeffentlicht": "2026-08-30T07:50:32+00:00"
+    },
+    {
       "anker": "**✓ Ein Mamak-Stand in Mersing verlangt für ein volles Essen",
       "minuten": 24,
       "telegram": "2026-08-17T11:19:00+00:00",
@@ -571,10 +637,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 95,
-  "juengste_minuten": 14,
-  "markiert": 95,
-  "median_minuten": 12,
+  "gemessen": 106,
+  "juengste_minuten": 7,
+  "markiert": 106,
+  "median_minuten": 14,
   "schnellste_minuten": 4,
-  "stand": "2026-08-28"
+  "stand": "2026-08-31"
 }

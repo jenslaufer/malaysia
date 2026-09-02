@@ -1670,6 +1670,28 @@ right, at hand height.
 
 ## In Kota Kinabalu
 
+**✓ The Jesselton Point terminal is a single hall, and every counter sits inside it
+(2 Sep).** On the left a row of ticket counters side by side, each with its own price board
+above the window; on the right the barriers to the departure jetty. A ceiling sign lists the
+four places you need: Easybook counter, departure gate, arrival gate, information counter.
+Fees, tickets and boarding are therefore all within sight of each other — you never have to
+leave the building in between. The hall is not air-conditioned, it is full of ceiling fans,
+and there are only a few benches along the wall. If you plan an hour of buffer with children,
+plan it standing up.
+<!-- werkstatt: telegram=2026-09-02T00:27 -->
+<!-- ort: kota-kinabalu -->
+
+**✓ One of the marine park islands was overcrowded on 1 Sep (reported by Jens; his message
+does not clearly name the island).** So the crowding is not a paper risk — it happened on an
+ordinary Tuesday. The next day the family went to **Sapi** instead, on a mid-morning boat
+rather than the first one at 07:30. That matches what the guides say about the rhythm: the
+day tours from the city land in one block in the late morning, and on a small island you
+notice it in the water immediately. If you go out on two consecutive days, pick the second
+island by what the crowd did yesterday, not by which name you know.
+<!-- werkstatt: telegram=2026-09-02T00:27 -->
+<!-- ort: kota-kinabalu -->
+
+
 **✗ GrabCar Rent is no good for a day trip — right now the app only offers four-hour cars
 (30 Aug, checked in the app).** The product is called "Rent": you hire a car with its driver by
 the hour inside Grab, and the driver stays with you and waits. The price list quoted everywhere
@@ -1696,6 +1718,58 @@ portals, not from the resort. The condition is the same everywhere: contact the 
 day ahead and confirm the transfer. Public transport is cheaper — a bus from Bas Bandaran to Kudat,
 RM25 to RM40 per person in three to four hours, then the last 20 km by taxi. But the bus only runs
 at 8 am and 2 pm.
+<!-- ort: kota-kinabalu -->
+
+**○ Of the marine park's five islands, Mamutik is the best one for snorkelling — not the
+best-known one.** Tunku Abdul Rahman Marine Park lies a 20-minute boat ride off the city and
+holds five islands: Gaya, Sapi, Manukan, Mamutik and Sulug. The famous and crowded ones are Sapi
+and Manukan. **Mamutik** has healthy patches of coral right off the beach, markedly fewer people,
+and the best odds of turtles and small reef sharks; a reef-fish specialist counted 63 species
+there in 45 minutes. **Sapi** has the clearest water and puts you on the reef straight from the
+sand, but it is the busiest island. **Manukan** has the best facilities — restaurant, toilets, a
+shallow sandy entry — but its coral is visibly dead; anyone coming for the fish is on the wrong
+island. **Sulug** is the quietest and needs confident swimmers: landing without permission is
+illegal, there are no facilities, and you have to find a boatman willing to run to its north
+side. That also reorders the obvious booking: a two-island ticket costs only ten ringgit more
+than a one-island ticket, so go to Mamutik early and move to Sapi at midday.
+<!-- ort: kota-kinabalu -->
+
+**○ The boat fares quoted all over the web, RM17 to RM47, are out of date — they are RM35 to
+RM65.** The fare from Jesselton Point depends on the number of islands, not the distance:
+**one island RM35** for adults and RM30 for children, **two islands RM45 / RM40**, three
+RM55 / RM50, four RM65 / RM60. The terminal fee of RM7.20 and RM3.60 is already inside that.
+Several well-regarded travel sites still carry the old list of RM17 / 27 / 37 / 47 plus a separate
+terminal fee; budget from that and a family of four is short by roughly half. **Not included, and
+payable on the island itself, is the Sabah Parks conservation fee: RM20 for adult foreigners and
+RM15 for children** (Malaysians pay RM5 and RM3). For a family of four on two islands that is
+RM170 for the boat plus RM70 in fees, so **about RM240**, roughly €48. Snorkelling gear is rented
+out on the islands; on Mamutik the shop sits next to the Koktas Café.
+<!-- ort: kota-kinabalu -->
+
+**○ The first boat leaves at 07:30 and the last one back is at 17:00 — and the early boat is the
+actual advice.** Departures run from Jesselton Point between 07:30 and 16:30, with returns from
+the islands hourly from 13:00 to 17:00. The crossing takes about 20 minutes. The reason to take
+the early boat is not the heat but the crush: the day tours out of the city all land in a block
+in the late morning, and on an island as small as Mamutik or Sapi you feel that in the water
+immediately. The season is on your side — from March to September the sea is calmer and
+visibility better; from October runoff clouds the water.
+<!-- ort: kota-kinabalu -->
+
+**○ A zip line runs between Gaya and Sapi, and you can book it on the island.** The *Coral Flyer*
+crosses the strait from Gaya to Sapi, has two parallel lines so two people ride together, and is
+billed as the world's longest island-to-island zip line. It runs from 09:30 to 15:30 and costs
+foreigners **RM92** (Malaysians RM68), with a 120 kg limit. No advance booking is needed: tickets
+are sold on Sapi and on Gaya, and the boat ride between the two islands is included for riders.
+So it fits into an island day without any planning of its own.
+<!-- ort: kota-kinabalu -->
+
+**○ Mantanani has the better water, but it is a whole day and about five times the price.**
+Anyone travelling purely for the snorkelling will find the better reefs not in the city marine
+park but off Mantanani to the north. Getting there is the catch: about 1.5 hours by road to the
+jetty at Kota Belud, then some 40 minutes by boat. Day trips run roughly 65 to 85 US dollars a
+head depending on operator, so for four people about **RM1,300** against RM240 in the marine park.
+They have to be booked at least a day ahead. The island itself holds nothing but two restaurants
+and a few toilets — it is worth it for the water, not for the stay.
 <!-- ort: kota-kinabalu -->
 
 ## Eating

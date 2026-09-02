@@ -567,7 +567,7 @@ DuitNow-Code scannt man mit einer malaysischen Bank-App, nicht mit einer deutsch
 Brücke, die es dafür gab, ist zu: die App *My TouristPay*, mit der Fremde ihre Visa oder
 Mastercard hinterlegen und damit DuitNow-Codes scannen konnten, wurde **zum 31. Dezember 2024
 eingestellt** — Anleitungen dazu stehen weiter im Netz und lesen sich wie aktuell. Und die
-Alipay+-Kopplung verbindet nur asiatische Geldbörsen (AlipayHK, GCash, Kakao Pay, TrueMoney),
+Alipay+-Kopplung verbindet nur asiatische Geldbörsen (AlipayHK, GCash, Kakao Pay, TrüMoney),
 keine europäischen. Für uns bleiben deshalb zwei Wege: Kartenterminals, wo es welche gibt, und
 der eine Geldautomat in Tekek. Wer die Schlagzeile liest und daraufhin weniger Bargeld
 einpackt, zieht genau den falschen Schluss.
@@ -1707,6 +1707,29 @@ und rechts auf Griffhöhe.
 
 ## In Kota Kinabalu
 
+**✓ Das Terminal Jesselton Point ist eine einzige Halle, und die Schalter stehen alle
+darin (02.09.).** Links eine Reihe Ticketschalter nebeneinander, jeder mit einem eigenen
+Preisaushang über dem Fenster; rechts die Sperren zum Abfahrtssteg. Ein Schild an der Decke
+führt die vier Anlaufstellen auf: Easybook-Schalter, Abfahrtsgate, Ankunftsgate,
+Informationsschalter. Gebühren, Ticketkauf und Einlass liegen damit in Sichtweite
+voneinander — man muss das Gebäude zwischendurch nicht verlassen. Gekühlt ist die Halle
+nicht, sie hängt voller Deckenventilatoren, und zum Sitzen gibt es nur wenige Bänke an der
+Wand. Wer mit Kindern eine Stunde Vorlauf einplant, plant sie im Stehen.
+<!-- werkstatt: telegram=2026-09-02T00:27 -->
+<!-- ort: kota-kinabalu -->
+
+**✓ Eine der Meerespark-Inseln war am 01.09. überlaufen (von Jens berichtet, die Insel steht
+in seiner Nachricht nicht eindeutig).** Der Andrang ist also kein Papierrisiko, sondern an
+einem gewöhnlichen Dienstag eingetreten. Am Tag darauf ging es stattdessen nach **Sapi**,
+mit einem Boot am frühen Vormittag statt mit dem ersten um 07:30. Das passt zu dem, was
+über den Ablauf zu lesen ist: die Tagestouren aus der Stadt landen gebündelt am späten
+Vormittag, und auf einer kleinen Insel ist das sofort im Wasser zu merken. Wer zwei Tage
+hintereinander rausfährt, sollte die zweite Insel nicht nach Bekanntheit wählen, sondern
+nach dem, was am Vortag los war.
+<!-- werkstatt: telegram=2026-09-02T00:27 -->
+<!-- ort: kota-kinabalu -->
+
+
 **✗ GrabCar Rent taugt nicht für einen Tagesausflug — in der App gibt es zurzeit nur Wagen für
 vier Stunden (30.08., in der App nachgesehen).** Das Produkt heißt „Rent" und vermietet im Grab
 einen Wagen samt Fahrer stundenweise; der Fahrer bleibt dabei und wartet. Die überall zitierte
@@ -1733,6 +1756,61 @@ Buchungsportalen, nicht vom Resort. Bedingung ist überall dieselbe: mindestens 
 beim Resort melden und den Transfer bestätigen. Öffentlich geht es billiger — Bus ab Bas Bandaran
 nach Kudat, 25 bis 40 RM pro Person in drei bis vier Stunden, danach die letzten 20 km mit dem
 Taxi. Der Bus fährt aber nur um 8 und um 14 Uhr.
+<!-- ort: kota-kinabalu -->
+
+**○ Von den fünf Inseln des Meeresparks ist Mamutik die beste zum Schnorcheln, nicht die
+bekannteste.** Der Tunku Abdul Rahman Marine Park liegt 20 Bootsminuten vor der Stadt und hat
+fünf Inseln: Gaya, Sapi, Manukan, Mamutik und Sulug. Bekannt und voll sind Sapi und Manukan.
+**Mamutik** hat gesunde Korallenflecken direkt am Strand, deutlich weniger Betrieb und die
+höchste Chance auf Schildkröten und kleine Riffhaie; ein Rifffischkundler hat dort 63 Arten in
+45 Minuten gezählt. **Sapi** hat das klarste Wasser und man ist vom Strand aus sofort im Riff,
+ist dafür die vollste Insel. **Manukan** hat die beste Ausstattung — Restaurant, Toiletten,
+flacher Sandeinstieg — aber die Korallen sind dort erkennbar kaputt; wer wegen der Fische
+kommt, ist falsch. **Sulug** ist die ruhigste und braucht sichere Schwimmer: Anlanden ohne
+Genehmigung ist verboten, es gibt keine Einrichtungen, und man muss einen Bootsmann finden,
+der die Nordseite anfährt. Das ordnet auch die naheliegende Buchung um: Das Zwei-Insel-Ticket
+kostet nur zehn Ringgit mehr als eines, also früh nach Mamutik und mittags nach Sapi.
+<!-- ort: kota-kinabalu -->
+
+**○ Die überall zitierten Bootspreise von RM 17 bis RM 47 sind veraltet — es sind RM 35 bis
+RM 65.** Der Fahrpreis ab Jesselton Point richtet sich nach der Zahl der Inseln, nicht nach der
+Entfernung: **eine Insel RM 35** für Erwachsene und RM 30 für Kinder, **zwei Inseln RM 45 /
+RM 40**, drei RM 55 / RM 50, vier RM 65 / RM 60. Die Terminalgebühr von RM 7,20 beziehungsweise
+RM 3,60 steckt schon darin. Mehrere gut aufgestellte Reiseseiten führen weiter die alte Liste
+von RM 17 / 27 / 37 / 47 plus getrennter Terminalgebühr; wer damit rechnet, plant für vier
+Personen rund die Hälfte zu wenig ein. **Nicht enthalten und erst auf der Insel fällig ist die
+Naturschutzgebühr von Sabah Parks: RM 20 für erwachsene Ausländer und RM 15 für Kinder**
+(Malaysier zahlen RM 5 und RM 3). Für eine vierköpfige Familie auf zwei Inseln sind das RM 170
+Boot plus RM 70 Gebühr, zusammen **rund RM 240** oder etwa 48 Euro. Schnorchelausrüstung wird
+auf den Inseln vermietet, auf Mamutik im Laden neben dem Koktas Café.
+<!-- ort: kota-kinabalu -->
+
+**○ Das erste Boot fährt um 07:30, das letzte zurück um 17:00 — und die frühe Fahrt ist die
+eigentliche Empfehlung.** Abfahrten laufen ab Jesselton Point von 07:30 bis 16:30, die Rückfahrt
+ab den Inseln stündlich von 13:00 bis 17:00. Die Überfahrt dauert etwa 20 Minuten. Der Grund für
+das frühe Boot ist nicht die Hitze, sondern der Andrang: Die Tagestouren aus der Stadt landen
+gebündelt am späten Vormittag, und auf einer kleinen Insel wie Mamutik oder Sapi ist das im
+Wasser sofort zu merken. Die Jahreszeit spricht dafür — von März bis September ist die See
+ruhiger und die Sicht besser, ab Oktober trübt der Regenabfluss das Wasser ein.
+<!-- ort: kota-kinabalu -->
+
+**○ Zwischen Gaya und Sapi hängt eine Seilrutsche, und sie ist von der Insel aus buchbar.**
+Der *Coral Flyer* führt über die Meerenge von Gaya nach Sapi, hat zwei Leitungen nebeneinander,
+sodass zwei Personen zusammen fahren, und wird als längste Insel-zu-Insel-Seilrutsche der Welt
+geführt. Er läuft von 09:30 bis 15:30 und kostet Ausländer **RM 92** (Malaysier RM 68), Grenze
+120 kg. Man muss ihn nicht vorher buchen: Tickets gibt es auf Sapi und auf Gaya, und die
+Bootsfahrt zwischen den beiden Inseln ist für Fahrer im Preis enthalten. Damit passt er ohne
+eigene Planung in einen Inseltag.
+<!-- ort: kota-kinabalu -->
+
+**○ Mantanani hat das bessere Wasser, ist aber ein ganzer Tag und rund fünfmal so teuer.**
+Wer nur wegen des Schnorchelns fährt, findet die besseren Riffe nicht im Stadtmeerespark,
+sondern vor Mantanani im Norden. Der Weg dorthin ist der Haken: rund 1,5 Stunden Fahrt bis zum
+Anleger in Kota Belud, dann etwa 40 Minuten Boot. Tagestouren kosten je nach Anbieter etwa
+65 bis 85 US-Dollar pro Person, für vier Personen also grob **RM 1.300** gegen RM 240 im
+Meerespark. Sie müssen mindestens einen Tag vorher gebucht werden. Auf der Insel selbst gibt es
+ausser zwei Restaurants und wenigen Toiletten nichts — sie lohnt für das Wasser, nicht für den
+Aufenthalt.
 <!-- ort: kota-kinabalu -->
 
 ## Essen
@@ -1936,8 +2014,8 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
 <!--
 PFLEGE — für die Sitzung, nicht für den Leser.
 
-Dieses Dokument waechst mit der Reise. Meldet Jens etwas aus dem Urlaub ("hat geklappt",
-"war teurer", "ging nicht"), gehoert es hier hinein, BEVOR es im Journal verschwindet:
+Dieses Dokument wächst mit der Reise. Meldet Jens etwas aus dem Urlaub ("hat geklappt",
+"war teurer", "ging nicht"), gehört es hier hinein, BEVOR es im Journal verschwindet:
 das Journal wird nach sieben Tagen archiviert, dieses Dokument bleibt.
 
 Regeln beim Eintragen:
@@ -1948,22 +2026,22 @@ Regeln beim Eintragen:
    Nachricht, dann steht sie auch hier nicht — lieber "offen, kommt noch".
 4. Wird aus einem ○ durch Erleben ein ✓, den Satz umschreiben statt einen zweiten
    danebenzustellen.
-5. Belege (Buchungsnummern, Drive-IDs, Adressen) gehoeren NICHT hierhin, sondern in
+5. Belege (Buchungsnummern, Drive-IDs, Adressen) gehören NICHT hierhin, sondern in
    state/memory/reise-malaysia-dokumente.md. Dieses Dokument geht an Fremde.
-6. HERKUNFT: unter jeden Eintrag, den Jens selbst gemeldet hat, gehoert direkt
+6. HERKUNFT: unter jeden Eintrag, den Jens selbst gemeldet hat, gehört direkt
    unter den Absatz und OHNE Leerzeile davor:
 
        <!-- werkstatt: telegram=YYYY-MM-DDTHH:MM -->
 
    Die Zeit ist der Zeitstempel SEINER Nachricht aus state/inbox.md, in UTC.
    Daraus misst tools/reise-werkstatt.py, wie lange es von der Nachricht bis zur
-   veroeffentlichten Seite gedauert hat — das ist die Verbindung zwischen dieser
+   veröffentlichten Seite gedauert hat — das ist die Verbindung zwischen dieser
    Seite und /otto/, und beide lesen dieselbe Messung.
-   NUR an gemeldete Eintraege. Ein abgeleiteter Wert (die 33 MRT-Minuten sind aus
+   NUR an gemeldete Einträge. Ein abgeleiteter Wert (die 33 MRT-Minuten sind aus
    zwei Zeitstempeln gerechnet, nicht berichtet) bekommt KEINEN Marker, sonst
    misst die Zahl die eigene Rechenzeit statt der Reaktionszeit.
-   Kamen zwei Nachrichten, gilt die, die den Eintrag ausgeloest hat — nicht die
-   spaetere, die ihn vervollstaendigt hat; sonst faellt die Zahl zu guenstig aus.
+   Kamen zwei Nachrichten, gilt die, die den Eintrag ausgelöst hat — nicht die
+   spätere, die ihn vervollständigt hat; sonst fällt die Zahl zu günstig aus.
 
 Rendern als PDF (erst auf Ansage von Jens): tools/pdf-slim.py, siehe CLAUDE.md.
 -->

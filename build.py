@@ -1139,8 +1139,8 @@ STATIONEN = [
     ("Kinabatangan", 5.4999, 118.2080, "27.–29.08. · Sabah",
      "27–29 Aug · Sabah"),
     ("Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09.", "29 Aug – 3 Sep"),
-    ("Kudat", 6.8837, 116.8378, "04.–05.09. · Tip of Borneo",
-     "4–5 Sep · Tip of Borneo"),
+    ("Kudat", 6.8837, 116.8378, "03.–04.09. · Tip of Borneo",
+     "3–4 Sep · Tip of Borneo"),
 ]
 
 # Der Schluessel, den ein `<!-- ort: … -->` nennen darf. Aus STATIONEN erzeugt,
