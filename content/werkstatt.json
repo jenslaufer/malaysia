@@ -601,6 +601,18 @@
       "veroeffentlicht": "2026-08-30T05:14:50+00:00"
     },
     {
+      "anker": "**✓ Das Terminal Jesselton Point ist eine einzige Halle, und",
+      "minuten": 7,
+      "telegram": "2026-09-02T00:27:00+00:00",
+      "veroeffentlicht": "2026-09-02T00:34:02+00:00"
+    },
+    {
+      "anker": "**✓ Eine der Meerespark-Inseln war am 01.09. überlaufen (von",
+      "minuten": 7,
+      "telegram": "2026-09-02T00:27:00+00:00",
+      "veroeffentlicht": "2026-09-02T00:34:02+00:00"
+    },
+    {
       "anker": "**✗ GrabCar Rent taugt nicht für einen Tagesausflug — in der",
       "minuten": 7,
       "telegram": "2026-08-30T07:44:00+00:00",
@@ -637,10 +649,10 @@
       "veroeffentlicht": "2026-08-17T11:02:11+00:00"
     }
   ],
-  "gemessen": 106,
+  "gemessen": 108,
   "juengste_minuten": 7,
-  "markiert": 106,
-  "median_minuten": 14,
+  "markiert": 108,
+  "median_minuten": 13,
   "schnellste_minuten": 4,
-  "stand": "2026-08-31"
+  "stand": "2026-09-02"
 }
