@@ -1681,13 +1681,14 @@ plan it standing up.
 <!-- werkstatt: telegram=2026-09-02T00:27 -->
 <!-- ort: kota-kinabalu -->
 
-**✓ One of the marine park islands was overcrowded on 1 Sep (reported by Jens; his message
-does not clearly name the island).** So the crowding is not a paper risk — it happened on an
-ordinary Tuesday. The next day the family went to **Sapi** instead, on a mid-morning boat
-rather than the first one at 07:30. That matches what the guides say about the rhythm: the
-day tours from the city land in one block in the late morning, and on a small island you
-notice it in the water immediately. If you go out on two consecutive days, pick the second
-island by what the crowd did yesterday, not by which name you know.
+**✓ Mamutik was overcrowded on 1 Sep — the very island the travel sites call the quiet one
+(reported by Jens).** So the crowding is not a paper risk: it happened on an ordinary Tuesday
+in early September, and it hit the island everyone promises has "markedly fewer people". The
+next day the family went to **Sapi** instead, on a mid-morning boat rather than the first one
+at 07:30. Two things follow. An island's reputation tells you nothing about the day you are
+on it — the day tours from the city land in one block in the late morning, and on a small
+island you notice it in the water immediately. And if you go out on two consecutive days,
+pick the second island by what the crowd did yesterday, not by which name you know.
 <!-- werkstatt: telegram=2026-09-02T00:27 -->
 <!-- ort: kota-kinabalu -->
 
@@ -1720,18 +1721,18 @@ RM25 to RM40 per person in three to four hours, then the last 20 km by taxi. But
 at 8 am and 2 pm.
 <!-- ort: kota-kinabalu -->
 
-**○ Of the marine park's five islands, Mamutik is the best one for snorkelling — not the
-best-known one.** Tunku Abdul Rahman Marine Park lies a 20-minute boat ride off the city and
-holds five islands: Gaya, Sapi, Manukan, Mamutik and Sulug. The famous and crowded ones are Sapi
-and Manukan. **Mamutik** has healthy patches of coral right off the beach, markedly fewer people,
-and the best odds of turtles and small reef sharks; a reef-fish specialist counted 63 species
-there in 45 minutes. **Sapi** has the clearest water and puts you on the reef straight from the
-sand, but it is the busiest island. **Manukan** has the best facilities — restaurant, toilets, a
-shallow sandy entry — but its coral is visibly dead; anyone coming for the fish is on the wrong
-island. **Sulug** is the quietest and needs confident swimmers: landing without permission is
-illegal, there are no facilities, and you have to find a boatman willing to run to its north
-side. That also reorders the obvious booking: a two-island ticket costs only ten ringgit more
-than a one-island ticket, so go to Mamutik early and move to Sapi at midday.
+**○ Of the marine park's five islands, Mamutik has the best coral for snorkelling — but the
+crowding claims are no basis for planning.** Tunku Abdul Rahman Marine Park lies a 20-minute boat
+ride off the city and holds five islands: Gaya, Sapi, Manukan, Mamutik and Sulug. **Mamutik** has
+healthy patches of coral right off the beach and the best odds of turtles and small reef sharks;
+a reef-fish specialist counted 63 species there in 45 minutes. **Sapi** has the clearest water
+and puts you on the reef straight from the sand. **Manukan** has the best facilities —
+restaurant, toilets, a shallow sandy entry — but its coral is visibly dead; anyone coming for the
+fish is on the wrong island. **Sulug** is the quietest and needs confident swimmers: landing
+without permission is illegal, there are no facilities, and you have to find a boatman willing to
+run to its north side. **The ranking repeated everywhere — "Sapi and Manukan are crowded, Mamutik
+is quiet" — did not hold: Mamutik was overcrowded on 1 Sep** (entry above). So pick your hour,
+not your island. A two-island ticket costs only ten ringgit more than a one-island ticket.
 <!-- ort: kota-kinabalu -->
 
 **○ The boat fares quoted all over the web, RM17 to RM47, are out of date — they are RM35 to

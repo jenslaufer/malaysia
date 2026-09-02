@@ -1718,14 +1718,15 @@ Wand. Wer mit Kindern eine Stunde Vorlauf einplant, plant sie im Stehen.
 <!-- werkstatt: telegram=2026-09-02T00:27 -->
 <!-- ort: kota-kinabalu -->
 
-**✓ Eine der Meerespark-Inseln war am 01.09. überlaufen (von Jens berichtet, die Insel steht
-in seiner Nachricht nicht eindeutig).** Der Andrang ist also kein Papierrisiko, sondern an
-einem gewöhnlichen Dienstag eingetreten. Am Tag darauf ging es stattdessen nach **Sapi**,
-mit einem Boot am frühen Vormittag statt mit dem ersten um 07:30. Das passt zu dem, was
-über den Ablauf zu lesen ist: die Tagestouren aus der Stadt landen gebündelt am späten
-Vormittag, und auf einer kleinen Insel ist das sofort im Wasser zu merken. Wer zwei Tage
-hintereinander rausfährt, sollte die zweite Insel nicht nach Bekanntheit wählen, sondern
-nach dem, was am Vortag los war.
+**✓ Mamutik war am 01.09. überlaufen — ausgerechnet die Insel, die auf den Reiseseiten als
+die ruhige gilt (von Jens berichtet).** Der Andrang ist also kein Papierrisiko, sondern an
+einem gewöhnlichen Dienstag Anfang September eingetreten, und er traf die Insel, für die
+überall „deutlich weniger Betrieb" versprochen wird. Am Tag darauf ging es stattdessen nach
+**Sapi**, mit einem Boot am frühen Vormittag statt mit dem ersten um 07:30. Zwei Schlüsse
+daraus: Der Ruf einer Insel sagt nichts über den Tag, an dem man dort ist — die Tagestouren
+aus der Stadt landen gebündelt am späten Vormittag, und auf einer kleinen Insel ist das
+sofort im Wasser zu merken. Und wer zwei Tage hintereinander rausfährt, wählt die zweite
+Insel nach dem, was am Vortag los war, nicht nach Bekanntheit.
 <!-- werkstatt: telegram=2026-09-02T00:27 -->
 <!-- ort: kota-kinabalu -->
 
@@ -1758,18 +1759,19 @@ nach Kudat, 25 bis 40 RM pro Person in drei bis vier Stunden, danach die letzten
 Taxi. Der Bus fährt aber nur um 8 und um 14 Uhr.
 <!-- ort: kota-kinabalu -->
 
-**○ Von den fünf Inseln des Meeresparks ist Mamutik die beste zum Schnorcheln, nicht die
-bekannteste.** Der Tunku Abdul Rahman Marine Park liegt 20 Bootsminuten vor der Stadt und hat
-fünf Inseln: Gaya, Sapi, Manukan, Mamutik und Sulug. Bekannt und voll sind Sapi und Manukan.
-**Mamutik** hat gesunde Korallenflecken direkt am Strand, deutlich weniger Betrieb und die
-höchste Chance auf Schildkröten und kleine Riffhaie; ein Rifffischkundler hat dort 63 Arten in
-45 Minuten gezählt. **Sapi** hat das klarste Wasser und man ist vom Strand aus sofort im Riff,
-ist dafür die vollste Insel. **Manukan** hat die beste Ausstattung — Restaurant, Toiletten,
-flacher Sandeinstieg — aber die Korallen sind dort erkennbar kaputt; wer wegen der Fische
-kommt, ist falsch. **Sulug** ist die ruhigste und braucht sichere Schwimmer: Anlanden ohne
-Genehmigung ist verboten, es gibt keine Einrichtungen, und man muss einen Bootsmann finden,
-der die Nordseite anfährt. Das ordnet auch die naheliegende Buchung um: Das Zwei-Insel-Ticket
-kostet nur zehn Ringgit mehr als eines, also früh nach Mamutik und mittags nach Sapi.
+**○ Von den fünf Inseln des Meeresparks hat Mamutik die besten Korallen zum Schnorcheln — die
+Angaben zum Andrang taugen dagegen nicht zur Planung.** Der Tunku Abdul Rahman Marine Park liegt
+20 Bootsminuten vor der Stadt und hat fünf Inseln: Gaya, Sapi, Manukan, Mamutik und Sulug.
+**Mamutik** hat gesunde Korallenflecken direkt am Strand und die höchste Chance auf Schildkröten
+und kleine Riffhaie; ein Rifffischkundler hat dort 63 Arten in 45 Minuten gezählt. **Sapi** hat
+das klarste Wasser und man ist vom Strand aus sofort im Riff. **Manukan** hat die beste
+Ausstattung — Restaurant, Toiletten, flacher Sandeinstieg — aber die Korallen sind dort
+erkennbar kaputt; wer wegen der Fische kommt, ist falsch. **Sulug** ist die ruhigste und braucht
+sichere Schwimmer: Anlanden ohne Genehmigung ist verboten, es gibt keine Einrichtungen, und man
+muss einen Bootsmann finden, der die Nordseite anfährt. **Die überall wiederholte Reihenfolge
+„Sapi und Manukan sind voll, Mamutik ist ruhig" hat sich nicht gehalten: am 01.09. war Mamutik
+überlaufen** (Eintrag oben). Wer Ruhe sucht, wählt darum die Uhrzeit und nicht die Insel. Das
+Zwei-Insel-Ticket kostet nur zehn Ringgit mehr als eines.
 <!-- ort: kota-kinabalu -->
 
 **○ Die überall zitierten Bootspreise von RM 17 bis RM 47 sind veraltet — es sind RM 35 bis
