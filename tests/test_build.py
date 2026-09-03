@@ -248,7 +248,8 @@ class TestSeite(unittest.TestCase):
 
     def test_karte_hat_alle_stationen(self):
         for ort in ("Singapur", "Johor Bahru", "Mersing", "Tioman",
-                    "Kuala Lumpur", "Sandakan", "Kota Kinabalu", "Kudat"):
+                    "Kuala Lumpur", "Sandakan", "Kota Kinabalu",
+                    "Kokol (Kota Kinabalu)"):
             self.assertIn(ort, self.seite, f"Station fehlt auf der Karte: {ort}")
 
     def test_keine_karte_ohne_javascript_bleibt_erklaert(self):

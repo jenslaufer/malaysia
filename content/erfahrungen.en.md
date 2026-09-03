@@ -1958,8 +1958,7 @@ a whole travel day hangs on it. The ticket counts, not the order.
 | 26–27 Aug | Sepilok, Sabah | Sepilok |
 | 27–29 Aug | Kinabatangan, Sabah | Kinabatangan |
 | 29 Aug – 3 Sep | Kota Kinabalu | — |
-| 3–4 Sep | Kudat, Tip of Borneo | — |
-| 4–5 Sep | Kota Kinabalu | — |
+| 3–5 Sep | Kokol (Kota Kinabalu) | — |
 | 5–7 Sep | Singapore → Bahrain → Frankfurt | — |
 
 ---

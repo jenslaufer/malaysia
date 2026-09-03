@@ -1139,8 +1139,12 @@ STATIONEN = [
     ("Kinabatangan", 5.4999, 118.2080, "27.–29.08. · Sabah",
      "27–29 Aug · Sabah"),
     ("Kota Kinabalu", 5.9804, 116.0735, "29.08.–03.09.", "29 Aug – 3 Sep"),
-    ("Kudat", 6.8837, 116.8378, "03.–04.09. · Tip of Borneo",
-     "3–4 Sep · Tip of Borneo"),
+    # Kokol: statt Kudat/Tip of Borneo — Booking.com 5602972371 (Kokol Haven
+    # Resort, 10 km Jalan Kokol Poring-Poring, Likas), Strasse und Kokol Hill
+    # ueber Nominatim aufgeloest; wie Kinabatangan die Schlafadresse laut
+    # Buchung, keine Geraetemeldung.
+    ("Kokol (Kota Kinabalu)", 6.0010, 116.2036,
+     "03.–05.09. · Kokol Haven Resort, Likas", "3–5 Sep · Kokol Haven Resort, Likas"),
 ]
 
 # Der Schluessel, den ein `<!-- ort: … -->` nennen darf. Aus STATIONEN erzeugt,

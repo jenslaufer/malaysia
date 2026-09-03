@@ -2007,8 +2007,7 @@ Bundesstaaten, und ein ganzer Reisetag hängt daran. Es gilt das Ticket, nicht d
 | 26.–27.08. | Sepilok, Sabah | Sepilok |
 | 27.–29.08. | Kinabatangan, Sabah | Kinabatangan |
 | 29.08.–03.09. | Kota Kinabalu | — |
-| 03.–04.09. | Kudat, Tip of Borneo | — |
-| 04.–05.09. | Kota Kinabalu | — |
+| 03.–05.09. | Kokol (Kota Kinabalu) | — |
 | 05.–07.09. | Singapur → Bahrain → Frankfurt | — |
 
 ---
