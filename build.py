@@ -1654,6 +1654,8 @@ def rendere_recht(art: str, sprache: str = "de", stand: str = None) -> str:
     werte = {
         "SPRACHE": sprache,
         "SPRACHE_LABEL": worte["sprache_label"],
+        "MENUE_LABEL": "Menü" if sprache == "de" else "Menu",
+        "SPRACHORDNER": "" if sprache == "de" else "en/",
         "TITEL": titel,
         "BESCHREIBUNG": beschreibung,
         "KICKER": kicker,
