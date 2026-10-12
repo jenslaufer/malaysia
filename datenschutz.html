@@ -682,15 +682,27 @@ a { color: var(--erlebt); }
    wer die Seite in seiner Sprache aufmacht, soll nicht zuerst eine Sprachwahl
    lesen muessen. */
 
-.sprachwechsel {
-  position: absolute;
-  top: 0; right: 0;
-  display: flex; gap: 0.9rem;
+/* Kopfzeile des Blogs (jenslaufer.com): Name zur Startseite, dasselbe Menue.
+   Vorher fuehrte nur der Sprachwechsel von der Seite weg (Erik Heinz, 11.10.). */
+.kopfzeile {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0.4rem 1.4rem;
   padding: 1rem 1.4rem;
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--linie);
+}
+.kopfzeile-name { font-weight: 600; color: var(--tinte); text-decoration: none; }
+.kopfzeile-menue { display: flex; flex-wrap: wrap; gap: 0.3rem 1.1rem; }
+.kopfzeile-menue, .sprachwechsel {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.kopfzeile-menue a { color: var(--erlebt); text-decoration: none; border-bottom: 1px solid transparent; }
+.kopfzeile-menue a:hover { border-bottom-color: var(--erlebt); }
+.kopfzeile-menue a[aria-current] { color: var(--tinte-leise); }
+
+.sprachwechsel { display: flex; gap: 0.9rem; margin-left: auto; }
 .sprachwechsel span { color: #8a8377; }
 .sprachwechsel a { color: #2f6b4f; text-decoration: none; border-bottom: 1px solid transparent; }
 .sprachwechsel a:hover { border-bottom-color: #2f6b4f; }
@@ -754,7 +766,11 @@ a { color: var(--erlebt); }
 </head>
 <body>
 
-<nav class="sprachwechsel" aria-label="Sprache"><span aria-current="true">Deutsch</span><a href="en/privacy.html" hreflang="en" lang="en">English</a></nav>
+<header class="kopfzeile">
+  <a class="kopfzeile-name" href="/">Jens Laufer</a>
+  <nav class="kopfzeile-menue" aria-label="Menü"><a href="/menu/about.html">About</a><a href="/menu/writing.html">Writing</a><a href="/menu/contact.html">Contact</a><a href="/otto/">Otto</a><a href="/malaysia/">Malaysia</a></nav>
+  <nav class="sprachwechsel" aria-label="Sprache"><span aria-current="true">Deutsch</span><a href="en/privacy.html" hreflang="en" lang="en">English</a></nav>
+</header>
 
 <header class="kopf">
   <p class="kicker">Art. 13 DSGVO</p>
@@ -847,7 +863,7 @@ a { color: var(--erlebt); }
 </main>
 
 <footer class="fuss">
-  <p class="klein">Stand 2026-09-03. · <a href="index.html">Zu den Reisenotizen</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
+  <p class="klein">Stand 2026-10-12. · <a href="index.html">Zu den Reisenotizen</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
 </footer>
 
 </body>
